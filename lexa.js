@@ -251,54 +251,54 @@ const botNumber = Lxa.user.jid
 
 if (isVerify && isCmd) {
     try {
-    var _money = JSON.parse(fs.readFileSync(`./data/user/${sender.split("@")[0]}/money.json`));
-    var money = _money[0]	//--- money	
-    var _xp = JSON.parse(fs.readFileSync(`./data/user/${sender.split("@")[0]}/xp.json`));
-    var xp = _xp[0]	//--- xp	
-    var _status = JSON.parse(fs.readFileSync(`./data/user/${sender.split("@")[0]}/status.json`));
-    var status = _status[0]	//--- status	
-    var _stickerpack = JSON.parse(fs.readFileSync(`./data/user/${sender.split("@")[0]}/stickerpack.json`));
-    var stickerpack = _stickerpack[0]	//--- stickerpack
-    var _pushnames = JSON.parse(fs.readFileSync(`./data/user/${sender.split("@")[0]}/pushname.json`));
-    var pushnames = _pushnames[0]	//--- pushname		
-    var _username = JSON.parse(fs.readFileSync(`./data/user/${sender.split("@")[0]}/username.json`));
-    var username = _username[0]	//--- username	
-    var _age = JSON.parse(fs.readFileSync(`./data/user/${sender.split("@")[0]}/age.json`));
-    var age = _age[0]	//--- age	
-    var _emojie = JSON.parse(fs.readFileSync(`./data/user/${sender.split("@")[0]}/emojie.json`));
-    var emojie = _emojie[0]	//--- emojie
-    var _id = JSON.parse(fs.readFileSync(`./data/user/${sender.split("@")[0]}/id.json`));
-    var id = _id[0]	//--- id		
-    var _design = JSON.parse(fs.readFileSync(`./data/user/${sender.split("@")[0]}/design.json`));
-    var design = _design[0]	//--- design	
-    var _email = JSON.parse(fs.readFileSync(`./data/user/${sender.split("@")[0]}/email.json`));
-    var email = _email[0]	//--- email
-    var _version = JSON.parse(fs.readFileSync(`./data/user/${sender.split("@")[0]}/version.json`));
-    var version = _version[0]	//--- version		
-    var _password = JSON.parse(fs.readFileSync(`./data/user/${sender.split("@")[0]}/password.json`));
-    var password = _password[0]	//--- password		
-    var _songs = JSON.parse(fs.readFileSync(`./data/user/${sender.split("@")[0]}/songs.json`));
-    var songs = _songs[0]	//--- songs	
-    var _pictures = JSON.parse(fs.readFileSync(`./data/user/${sender.split("@")[0]}/pictures.json`));
-    var pictures = _pictures[0]	//--- pictures
-    var _userhit = JSON.parse(fs.readFileSync(`./data/user/${sender.split("@")[0]}/userhit.json`));
-    var userhit = _userhit[0]	//--- userhit
-    var _messages = JSON.parse(fs.readFileSync(`./data/user/${sender.split("@")[0]}/messages.json`));
-    var messages = _messages[0]	//--- messages
-    var _messagesnumber = JSON.parse(fs.readFileSync(`./data/user/${sender.split("@")[0]}/messagesnumber.json`));
-    var messagesnumber = _messagesnumber[0]	//--- messagesnumber
-    var _userlocation = JSON.parse(fs.readFileSync(`./data/user/${sender.split("@")[0]}/location.json`));
-    var userlocation = _userlocation[0]	//--- location
-    var _accdate = JSON.parse(fs.readFileSync(`./data/user/${sender.split("@")[0]}/accdate.json`));
-    var accdate = _accdate[0]	//--- accdate
-    var _claim = JSON.parse(fs.readFileSync(`./data/user/${sender.split("@")[0]}/claim.json`));
-    var claim = _claim[0]	//--- claim
-    var _bday = JSON.parse(fs.readFileSync(`./data/user/${sender.split("@")[0]}/bday.json`));
-    var bday = _bday[0]	//--- birth date
-    var _tickets = JSON.parse(fs.readFileSync(`./data/user/${sender.split("@")[0]}/tickets.json`));
-    var tickets = _tickets[0]	//--- tickets
-    var _mood = JSON.parse(fs.readFileSync(`./data/user/${sender.split("@")[0]}/mood.json`));
-    var mood = _mood[0]	//--- mood
+		var _money = JSON.parse(fs.readFileSync(`./data/users/${sender.split("@")[0]}/money.json`));
+		var money = _money[0]	//--- money	
+		var _xp = JSON.parse(fs.readFileSync(`./data/users/${sender.split("@")[0]}/xp.json`));
+		var xp = _xp[0]	//--- xp	
+		var _status = JSON.parse(fs.readFileSync(`./data/users/${sender.split("@")[0]}/status.json`));
+		var status = _status[0]	//--- status	
+		var _stickerpack = JSON.parse(fs.readFileSync(`./data/users/${sender.split("@")[0]}/stickerpack.json`));
+		var stickerpack = _stickerpack[0]	//--- stickerpack
+		var _pushnames = JSON.parse(fs.readFileSync(`./data/users/${sender.split("@")[0]}/pushname.json`));
+		var pushnames = _pushnames[0]	//--- pushname		
+		var _username = JSON.parse(fs.readFileSync(`./data/users/${sender.split("@")[0]}/username.json`));
+		var username = _username[0]	//--- usersname	
+		var _age = JSON.parse(fs.readFileSync(`./data/users/${sender.split("@")[0]}/age.json`));
+		var age = _age[0]	//--- age	
+		var _emojie = JSON.parse(fs.readFileSync(`./data/users/${sender.split("@")[0]}/emojie.json`));
+		var emojie = _emojie[0]	//--- emojie
+		var _id = JSON.parse(fs.readFileSync(`./data/users/${sender.split("@")[0]}/id.json`));
+		var id = _id[0]	//--- id		
+		var _design = JSON.parse(fs.readFileSync(`./data/users/${sender.split("@")[0]}/design.json`));
+		var design = _design[0]	//--- design	
+		var _email = JSON.parse(fs.readFileSync(`./data/users/${sender.split("@")[0]}/email.json`));
+		var email = _email[0]	//--- email
+		var _version = JSON.parse(fs.readFileSync(`./data/users/${sender.split("@")[0]}/version.json`));
+		var version = _version[0]	//--- version		
+		var _password = JSON.parse(fs.readFileSync(`./data/users/${sender.split("@")[0]}/password.json`));
+		var password = _password[0]	//--- password		
+		var _songs = JSON.parse(fs.readFileSync(`./data/users/${sender.split("@")[0]}/songs.json`));
+		var songs = _songs[0]	//--- songs	
+		var _pictures = JSON.parse(fs.readFileSync(`./data/users/${sender.split("@")[0]}/pictures.json`));
+		var pictures = _pictures[0]	//--- pictures
+		var _usershit = JSON.parse(fs.readFileSync(`./data/users/${sender.split("@")[0]}/usershit.json`));
+		var usershit = _usershit[0]	//--- usershit
+		var _messages = JSON.parse(fs.readFileSync(`./data/users/${sender.split("@")[0]}/messages.json`));
+		var messages = _messages[0]	//--- messages
+		var _messagesnumber = JSON.parse(fs.readFileSync(`./data/users/${sender.split("@")[0]}/messagesnumber.json`));
+		var messagesnumber = _messagesnumber[0]	//--- messagesnumber
+		var _userslocation = JSON.parse(fs.readFileSync(`./data/users/${sender.split("@")[0]}/location.json`));
+		var userslocation = _userslocation[0]	//--- location
+		var _accdate = JSON.parse(fs.readFileSync(`./data/users/${sender.split("@")[0]}/accdate.json`));
+		var accdate = _accdate[0]	//--- accdate
+		var _claim = JSON.parse(fs.readFileSync(`./data/users/${sender.split("@")[0]}/claim.json`));
+		var claim = _claim[0]	//--- claim
+		var _bday = JSON.parse(fs.readFileSync(`./data/users/${sender.split("@")[0]}/bday.json`));
+		var bday = _bday[0]	//--- birth date
+		var _tickets = JSON.parse(fs.readFileSync(`./data/users/${sender.split("@")[0]}/tickets.json`));
+		var tickets = _tickets[0]	//--- tickets
+		var _mood = JSON.parse(fs.readFileSync(`./data/users/${sender.split("@")[0]}/mood.json`));
+		var mood = _mood[0]	//--- mood
       } catch {
 console.log(color(`Not registered.`,`aqua`))
       }
@@ -399,10 +399,10 @@ var AntiLink_ = 'Off'
 //--- Total command user
 //const usercmd = () => {
 //	userhit[0].totalcmd += 1
-//	fs.writeFileSync(`./data/user/${sender.split("@")[0]}/userhit.json`, JSON.stringify(userhit))
+//	fs.writeFileSync(`./data/users/${sender.split("@")[0]}/userhit.json`, JSON.stringify(userhit))
 //}
 // if (isCmd) usercmd()
-// const sreqcmd = JSON.parse(fs.readFileSync(`./data/user/${sender.split("@")[0]}/userhit.json`))[0].totalcmd
+// const sreqcmd = JSON.parse(fs.readFileSync(`./data/users/${sender.split("@")[0]}/userhit.json`))[0].totalcmd
 //--- Total command
 //const cmdadd = () => {
 //	hit[0].totalcmd += 1
@@ -809,8 +809,10 @@ case 'register':
 			    break
                 fs.appendFile(`./data/users/${sender.split("@")[0]}/mood.json`, `["Happy"]`, function (err) {				
                 if (err) throw err;
-                });						
+                });	
+				console.log('finished'); 					
 			    break
+
 //--- Devare account message
 case 'devaremyaccount':
 case 'devareaccount':
@@ -1047,10 +1049,10 @@ case 'sticker': case 'stickergif': case 'sgif':
 				var cost = Number(10);
 				var newmoney = money1 - cost; 
 
-				fs.readFile(`./data/user/${sender.split("@")[0]}/money.json`, 'utf-8', function(err, data) {
+				fs.readFile(`./data/users/${sender.split("@")[0]}/money.json`, 'utf-8', function(err, data) {
 					if (err) throw err;
 					var newValue = data.replace(`${money1}`, newmoney);
-					fs.writeFile(`./data/user/${sender.split("@")[0]}/money.json`, newValue, 'utf-8', function(err, data) {
+					fs.writeFile(`./data/users/${sender.split("@")[0]}/money.json`, newValue, 'utf-8', function(err, data) {
 						if (err) throw err;
 					})
 				})
@@ -1163,10 +1165,10 @@ case 'brightness':
 			var cost = Number(10);
 			var newmoney = money1 - cost; 
 
-			fs.readFile(`./data/user/${sender.split("@")[0]}/money.json`, 'utf-8', function(err, data) {
+			fs.readFile(`./data/users/${sender.split("@")[0]}/money.json`, 'utf-8', function(err, data) {
 				if (err) throw err;
 				var newValue = data.replace(`${money1}`, newmoney);
-				fs.writeFile(`./data/user/${sender.split("@")[0]}/money.json`, newValue, 'utf-8', function(err, data) {
+				fs.writeFile(`./data/users/${sender.split("@")[0]}/money.json`, newValue, 'utf-8', function(err, data) {
 					if (err) throw err;
 				})
 			})
@@ -1196,10 +1198,10 @@ case 'saturation':
 			var cost = Number(10);
 			var newmoney = money1 - cost; 
 
-			fs.readFile(`./data/user/${sender.split("@")[0]}/money.json`, 'utf-8', function(err, data) {
+			fs.readFile(`./data/users/${sender.split("@")[0]}/money.json`, 'utf-8', function(err, data) {
 				if (err) throw err;
 				var newValue = data.replace(`${money1}`, newmoney);
-				fs.writeFile(`./data/user/${sender.split("@")[0]}/money.json`, newValue, 'utf-8', function(err, data) {
+				fs.writeFile(`./data/users/${sender.split("@")[0]}/money.json`, newValue, 'utf-8', function(err, data) {
 					if (err) throw err;
 				})
 			})
@@ -1232,10 +1234,10 @@ case 'flip':
 	var cost = Number(10);
 	var newmoney = money1 - cost; 
 
-	fs.readFile(`./data/user/${sender.split("@")[0]}/money.json`, 'utf-8', function(err, data) {
+	fs.readFile(`./data/users/${sender.split("@")[0]}/money.json`, 'utf-8', function(err, data) {
 		if (err) throw err;
 		var newValue = data.replace(`${money1}`, newmoney);
-		fs.writeFile(`./data/user/${sender.split("@")[0]}/money.json`, newValue, 'utf-8', function(err, data) {
+		fs.writeFile(`./data/users/${sender.split("@")[0]}/money.json`, newValue, 'utf-8', function(err, data) {
 			if (err) throw err;
 		})
 	})
@@ -1266,10 +1268,10 @@ case 'blackwhite':
 	var cost = Number(10);
 	var newmoney = money1 - cost; 
 
-	fs.readFile(`./data/user/${sender.split("@")[0]}/money.json`, 'utf-8', function(err, data) {
+	fs.readFile(`./data/users/${sender.split("@")[0]}/money.json`, 'utf-8', function(err, data) {
 		if (err) throw err;
 		var newValue = data.replace(`${money1}`, newmoney);
-		fs.writeFile(`./data/user/${sender.split("@")[0]}/money.json`, newValue, 'utf-8', function(err, data) {
+		fs.writeFile(`./data/users/${sender.split("@")[0]}/money.json`, newValue, 'utf-8', function(err, data) {
 			if (err) throw err;
 		})
 	})
@@ -1299,10 +1301,10 @@ case 'filter':
 	var cost = Number(10);
 	var newmoney = money1 - cost; 
 
-	fs.readFile(`./data/user/${sender.split("@")[0]}/money.json`, 'utf-8', function(err, data) {
+	fs.readFile(`./data/users/${sender.split("@")[0]}/money.json`, 'utf-8', function(err, data) {
 		if (err) throw err;
 		var newValue = data.replace(`${money1}`, newmoney);
-		fs.writeFile(`./data/user/${sender.split("@")[0]}/money.json`, newValue, 'utf-8', function(err, data) {
+		fs.writeFile(`./data/users/${sender.split("@")[0]}/money.json`, newValue, 'utf-8', function(err, data) {
 			if (err) throw err;
 		})
 	})
@@ -1330,10 +1332,10 @@ case 'sound':
 		var cost = Number(10);
 		var newmoney = money1 - cost; 
 	
-		fs.readFile(`./data/user/${sender.split("@")[0]}/money.json`, 'utf-8', function(err, data) {
+		fs.readFile(`./data/users/${sender.split("@")[0]}/money.json`, 'utf-8', function(err, data) {
 			if (err) throw err;
 			var newValue = data.replace(`${money1}`, newmoney);
-			fs.writeFile(`./data/user/${sender.split("@")[0]}/money.json`, newValue, 'utf-8', function(err, data) {
+			fs.writeFile(`./data/users/${sender.split("@")[0]}/money.json`, newValue, 'utf-8', function(err, data) {
 				if (err) throw err;
 			})
 		})
@@ -1376,10 +1378,10 @@ case 'cover':
 		 var cost = Number(10);
 		 var newmoney = money1 - cost; 
 	 
-		 fs.readFile(`./data/user/${sender.split("@")[0]}/money.json`, 'utf-8', function(err, data) {
+		 fs.readFile(`./data/users/${sender.split("@")[0]}/money.json`, 'utf-8', function(err, data) {
 			 if (err) throw err;
 			 var newValue = data.replace(`${money1}`, newmoney);
-			 fs.writeFile(`./data/user/${sender.split("@")[0]}/money.json`, newValue, 'utf-8', function(err, data) {
+			 fs.writeFile(`./data/users/${sender.split("@")[0]}/money.json`, newValue, 'utf-8', function(err, data) {
 				 if (err) throw err;
 			 })
 		 })
@@ -1410,10 +1412,10 @@ case 'stardash':
 		var cost = Number(10);
 		var newmoney = money1 - cost; 
 	
-		fs.readFile(`./data/user/${sender.split("@")[0]}/money.json`, 'utf-8', function(err, data) {
+		fs.readFile(`./data/users/${sender.split("@")[0]}/money.json`, 'utf-8', function(err, data) {
 			if (err) throw err;
 			var newValue = data.replace(`${money1}`, newmoney);
-			fs.writeFile(`./data/user/${sender.split("@")[0]}/money.json`, newValue, 'utf-8', function(err, data) {
+			fs.writeFile(`./data/users/${sender.split("@")[0]}/money.json`, newValue, 'utf-8', function(err, data) {
 				if (err) throw err;
 			})
 		})
@@ -1443,10 +1445,10 @@ var money1 = Number(money);
 var cost = Number(5);
 var newmoney = money1 - cost; 
 
-fs.readFile(`./data/user/${sender.split("@")[0]}/money.json`, 'utf-8', function(err, data) {
+fs.readFile(`./data/users/${sender.split("@")[0]}/money.json`, 'utf-8', function(err, data) {
 	if (err) throw err;
 	var newValue = data.replace(`${money1}`, newmoney);
-	fs.writeFile(`./data/user/${sender.split("@")[0]}/money.json`, newValue, 'utf-8', function(err, data) {
+	fs.writeFile(`./data/users/${sender.split("@")[0]}/money.json`, newValue, 'utf-8', function(err, data) {
 		if (err) throw err;
 	})
 })
@@ -1476,10 +1478,10 @@ var money1 = Number(money);
 var cost = Number(10);
 var newmoney = money1 - cost; 
 
-fs.readFile(`./data/user/${sender.split("@")[0]}/money.json`, 'utf-8', function(err, data) {
+fs.readFile(`./data/users/${sender.split("@")[0]}/money.json`, 'utf-8', function(err, data) {
 	if (err) throw err;
 	var newValue = data.replace(`${money1}`, newmoney);
-	fs.writeFile(`./data/user/${sender.split("@")[0]}/money.json`, newValue, 'utf-8', function(err, data) {
+	fs.writeFile(`./data/users/${sender.split("@")[0]}/money.json`, newValue, 'utf-8', function(err, data) {
 		if (err) throw err;
 	})
 })
@@ -1507,10 +1509,10 @@ var money1 = Number(money);
 var cost = Number(10);
 var newmoney = money1 - cost; 
 
-fs.readFile(`./data/user/${sender.split("@")[0]}/money.json`, 'utf-8', function(err, data) {
+fs.readFile(`./data/users/${sender.split("@")[0]}/money.json`, 'utf-8', function(err, data) {
 	if (err) throw err;
 	var newValue = data.replace(`${money1}`, newmoney);
-	fs.writeFile(`./data/user/${sender.split("@")[0]}/money.json`, newValue, 'utf-8', function(err, data) {
+	fs.writeFile(`./data/users/${sender.split("@")[0]}/money.json`, newValue, 'utf-8', function(err, data) {
 		if (err) throw err;
 	})
 })
@@ -1539,10 +1541,10 @@ var money1 = Number(money);
 var cost = Number(10);
 var newmoney = money1 - cost; 
 
-fs.readFile(`./data/user/${sender.split("@")[0]}/money.json`, 'utf-8', function(err, data) {
+fs.readFile(`./data/users/${sender.split("@")[0]}/money.json`, 'utf-8', function(err, data) {
 	if (err) throw err;
 	var newValue = data.replace(`${money1}`, newmoney);
-	fs.writeFile(`./data/user/${sender.split("@")[0]}/money.json`, newValue, 'utf-8', function(err, data) {
+	fs.writeFile(`./data/users/${sender.split("@")[0]}/money.json`, newValue, 'utf-8', function(err, data) {
 		if (err) throw err;
 	})
 })
@@ -1640,10 +1642,10 @@ case 'send':
     var cost = Number(10);
     var newmoney = money1 - cost; 
 
-    fs.readFile(`./data/user/${sender.split("@")[0]}/money.json`, 'utf-8', function(err, data) {
+    fs.readFile(`./data/users/${sender.split("@")[0]}/money.json`, 'utf-8', function(err, data) {
         if (err) throw err;
         var newValue = data.replace(`${money1}`, newmoney);
-        fs.writeFile(`./data/user/${sender.split("@")[0]}/money.json`, newValue, 'utf-8', function(err, data) {
+        fs.writeFile(`./data/users/${sender.split("@")[0]}/money.json`, newValue, 'utf-8', function(err, data) {
             if (err) throw err;
         })
     })
@@ -1670,10 +1672,10 @@ case 'ytbsong':
        var cost = Number(5);
        var newmoney = money1 - cost; 
    
-       fs.readFile(`./data/user/${sender.split("@")[0]}/money.json`, 'utf-8', function(err, data) {
+       fs.readFile(`./data/users/${sender.split("@")[0]}/money.json`, 'utf-8', function(err, data) {
            if (err) throw err;
            var newValue = data.replace(`${money1}`, newmoney);
-           fs.writeFile(`./data/user/${sender.split("@")[0]}/money.json`, newValue, 'utf-8', function(err, data) {
+           fs.writeFile(`./data/users/${sender.split("@")[0]}/money.json`, newValue, 'utf-8', function(err, data) {
                if (err) throw err;
            })
        })
@@ -1693,10 +1695,10 @@ case 'ytbsong':
         var gain = Number(5);
         var newxp = xp + gain; 
 
-        fs.readFile(`./data/user/${sender.split("@")[0]}/xp.json`, 'utf-8', function(err, data) {
+        fs.readFile(`./data/users/${sender.split("@")[0]}/xp.json`, 'utf-8', function(err, data) {
             if (err) throw err;
             var newValue = data.replace(`${xp}`, newxp);
-            fs.writeFile(`./data/user/${sender.split("@")[0]}/xp.json`, newValue, 'utf-8', function(err, data) {
+            fs.writeFile(`./data/users/${sender.split("@")[0]}/xp.json`, newValue, 'utf-8', function(err, data) {
                 if (err) throw err;
             })
         })			 
@@ -1749,10 +1751,10 @@ case 'weather':
     var cost = Number(10);
     var newmoney = money1 - cost; 
 
-    fs.readFile(`./data/user/${sender.split("@")[0]}/money.json`, 'utf-8', function(err, data) {
+    fs.readFile(`./data/users/${sender.split("@")[0]}/money.json`, 'utf-8', function(err, data) {
         if (err) throw err;
         var newValue = data.replace(`${money1}`, newmoney);
-        fs.writeFile(`./data/user/${sender.split("@")[0]}/money.json`, newValue, 'utf-8', function(err, data) {
+        fs.writeFile(`./data/users/${sender.split("@")[0]}/money.json`, newValue, 'utf-8', function(err, data) {
             if (err) throw err;
         })
     })
@@ -1861,10 +1863,10 @@ if 	(claim === `${tanggal()}`) {
 }
 else {
 var claimnow = `${tanggal()}`;
-fs.readFile(`./data/user/${sender.split("@")[0]}/claim.json`, 'utf-8', function(err, data) {
+fs.readFile(`./data/users/${sender.split("@")[0]}/claim.json`, 'utf-8', function(err, data) {
 	if (err) throw err;
 	var newValue = data.replace(`${claim}`, claimnow);
-	fs.writeFile(`./data/user/${sender.split("@")[0]}/claim.json`, newValue, 'utf-8', function(err, data) {
+	fs.writeFile(`./data/users/${sender.split("@")[0]}/claim.json`, newValue, 'utf-8', function(err, data) {
 		if (err) throw err;
 	})
 })
@@ -1873,10 +1875,10 @@ var money1 = Number(money);
 var cost = Number(25);
 var newmoney = money1 + cost; 
 
-fs.readFile(`./data/user/${sender.split("@")[0]}/money.json`, 'utf-8', function(err, data) {
+fs.readFile(`./data/users/${sender.split("@")[0]}/money.json`, 'utf-8', function(err, data) {
 	if (err) throw err;
 	var newValue = data.replace(`${money1}`, newmoney);
-	fs.writeFile(`./data/user/${sender.split("@")[0]}/money.json`, newValue, 'utf-8', function(err, data) {
+	fs.writeFile(`./data/users/${sender.split("@")[0]}/money.json`, newValue, 'utf-8', function(err, data) {
 		if (err) throw err;
 	})
 })
@@ -1886,10 +1888,10 @@ var tickets1 = Number(tickets)
 var plus = Number(10);
 var newtickets = tickets1 + plus; 
 
-fs.readFile(`./data/user/${sender.split("@")[0]}/tickets.json`, 'utf-8', function(err, data) {
+fs.readFile(`./data/users/${sender.split("@")[0]}/tickets.json`, 'utf-8', function(err, data) {
 	if (err) throw err;
 	var newValue = data.replace(`${tickets1}`, newtickets);
-	fs.writeFile(`./data/user/${sender.split("@")[0]}/tickets.json`, newValue, 'utf-8', function(err, data) {
+	fs.writeFile(`./data/users/${sender.split("@")[0]}/tickets.json`, newValue, 'utf-8', function(err, data) {
 		if (err) throw err;
 	})
 })
@@ -1913,10 +1915,10 @@ case 'saveimage':
   var cost = Number(22);
   var newmoney = money1 - cost; 
 
-  fs.readFile(`./data/user/${sender.split("@")[0]}/money.json`, 'utf-8', function(err, data) {
+  fs.readFile(`./data/users/${sender.split("@")[0]}/money.json`, 'utf-8', function(err, data) {
 	  if (err) throw err;
 	  var newValue = data.replace(`${money1}`, newmoney);
-	  fs.writeFile(`./data/user/${sender.split("@")[0]}/money.json`, newValue, 'utf-8', function(err, data) {
+	  fs.writeFile(`./data/users/${sender.split("@")[0]}/money.json`, newValue, 'utf-8', function(err, data) {
 		  if (err) throw err;
 	  })
   })
@@ -1925,8 +1927,8 @@ case 'saveimage':
 					encmedia = JSON.parse(JSON.stringify(mek).replace('quotedM','m')).message.extendedTextMessage.contextInfo
 					media = await Lxa.downloadAndSaveMediaMessage(encmedia)
 			
-				exec(`rm -rf ./data/user/${sender.split("@")[0]}/sticker.webp`)
-				exec(`ffmpeg -i ${media} ./data/user/${sender.split("@")[0]}/sticker.webp`, (err) => {
+				exec(`rm -rf ./data/users/${sender.split("@")[0]}/sticker.webp`)
+				exec(`ffmpeg -i ${media} ./data/users/${sender.split("@")[0]}/sticker.webp`, (err) => {
 							
 				fs.unlinkSync(media)
 						if (err) return reply(`${design} 𝐸𝑟𝑟𝑜𝑟`)
@@ -1951,10 +1953,10 @@ case 'addsong':
   var cost = Number(22);
   var newmoney = money1 - cost; 
 
-  fs.readFile(`./data/user/${sender.split("@")[0]}/money.json`, 'utf-8', function(err, data) {
+  fs.readFile(`./data/users/${sender.split("@")[0]}/money.json`, 'utf-8', function(err, data) {
 	  if (err) throw err;
 	  var newValue = data.replace(`${money1}`, newmoney);
-	  fs.writeFile(`./data/user/${sender.split("@")[0]}/money.json`, newValue, 'utf-8', function(err, data) {
+	  fs.writeFile(`./data/users/${sender.split("@")[0]}/money.json`, newValue, 'utf-8', function(err, data) {
 		  if (err) throw err;
 	  })
   })
@@ -1963,11 +1965,11 @@ case 'addsong':
 					encmedia = JSON.parse(JSON.stringify(mek).replace('quotedM','m')).message.extendedTextMessage.contextInfo
 					media = await Lxa.downloadAndSaveMediaMessage(encmedia)
 							
-				exec(`rm -rf ./data/user/${sender.split("@")[0]}/song.opus`)
-				exec(`rm -rf ./data/user/${sender.split("@")[0]}/song.mp3`)
-				exec(`rm -rf ./data/user/${sender.split("@")[0]}/song.wav`)
+				exec(`rm -rf ./data/users/${sender.split("@")[0]}/song.opus`)
+				exec(`rm -rf ./data/users/${sender.split("@")[0]}/song.mp3`)
+				exec(`rm -rf ./data/users/${sender.split("@")[0]}/song.wav`)
 	
-				exec(`mv ${media} ./data/user/${sender.split("@")[0]}/song.opus`)
+				exec(`mv ${media} ./data/users/${sender.split("@")[0]}/song.opus`)
 				await delay(1000) /// waiting 1 second.					
 
   reply(`${design} 𝑆𝑎𝑣𝑒𝑑 𝑠𝑢𝑐𝑐𝑒𝑠𝑠𝑓𝑢𝑙𝑙𝑦.\n𝐺𝑒𝑡 𝑢𝑟 𝑠𝑎𝑣𝑒𝑑 𝑠𝑜𝑛𝑔 𝑤𝑖𝑡ℎ .𝑚𝑦𝑠𝑜𝑛𝑔\n-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-\n𝑀𝑜𝑛𝑒𝑦 𝑙𝑒𝑓𝑡 ${newmoney}$\n-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-\n❎ 𝑋623 𝑆𝑜𝑛𝑔𝑠`) 
@@ -2010,10 +2012,10 @@ case 'slot':
     var plus = Number(1);
     var newtickets = tickets1 - plus; 
 
-    fs.readFile(`./data/user/${sender.split("@")[0]}/tickets.json`, 'utf-8', function(err, data) {
+    fs.readFile(`./data/users/${sender.split("@")[0]}/tickets.json`, 'utf-8', function(err, data) {
         if (err) throw err;
         var newValue = data.replace(`${tickets1}`, newtickets);
-        fs.writeFile(`./data/user/${sender.split("@")[0]}/tickets.json`, newValue, 'utf-8', function(err, data) {
+        fs.writeFile(`./data/users/${sender.split("@")[0]}/tickets.json`, newValue, 'utf-8', function(err, data) {
             if (err) throw err;
         })
     })
@@ -2024,10 +2026,10 @@ case 'slot':
 if ((slot1 == slot2) && slot2 == slot3) {	
         var price = Number(250);
         var newcash = price + cash; 
-        fs.readFile(`./data/user/${sender.split("@")[0]}/money.json`, 'utf-8', function(err, data) {
+        fs.readFile(`./data/users/${sender.split("@")[0]}/money.json`, 'utf-8', function(err, data) {
             if (err) throw err;
             var newValue = data.replace(`${money}`, newcash);
-            fs.writeFile(`./data/user/${sender.split("@")[0]}/money.json`, newValue, 'utf-8', function(err, data) {
+            fs.writeFile(`./data/users/${sender.split("@")[0]}/money.json`, newValue, 'utf-8', function(err, data) {
                 if (err) throw err;
                 console.log('Done!');
             })
@@ -2038,10 +2040,10 @@ if ((slot1 == slot2) && slot2 == slot3) {
         var addxp = Number(50);
         var newxp = oldxp + addxp; 
 
-        fs.readFile(`./data/user/${sender.split("@")[0]}/xp.json`, 'utf-8', function(err, data) {
+        fs.readFile(`./data/users/${sender.split("@")[0]}/xp.json`, 'utf-8', function(err, data) {
             if (err) throw err;
             var newValue = data.replace(`${xp}`, newxp); 
-            fs.writeFile(`./data/user/${sender.split("@")[0]}/xp.json`, newValue, 'utf-8', function(err, data) {
+            fs.writeFile(`./data/users/${sender.split("@")[0]}/xp.json`, newValue, 'utf-8', function(err, data) {
                 if (err) throw err;
             })
         })
@@ -2053,10 +2055,10 @@ else if (slot1 == slot2) {
 
 	var price = Number(15);
 	var newcash = price + cash; 
-	fs.readFile(`./data/user/${sender.split("@")[0]}/money.json`, 'utf-8', function(err, data) {
+	fs.readFile(`./data/users/${sender.split("@")[0]}/money.json`, 'utf-8', function(err, data) {
 		if (err) throw err;
 		var newValue = data.replace(`${money}`, newcash);
-		fs.writeFile(`./data/user/${sender.split("@")[0]}/money.json`, newValue, 'utf-8', function(err, data) {
+		fs.writeFile(`./data/users/${sender.split("@")[0]}/money.json`, newValue, 'utf-8', function(err, data) {
 			if (err) throw err;
 			console.log('Done!');
 		})
@@ -2066,10 +2068,10 @@ else if (slot1 == slot2) {
 	var addxp = Number(10);
 	var newxp = oldxp + addxp; 
 
-	fs.readFile(`./data/user/${sender.split("@")[0]}/xp.json`, 'utf-8', function(err, data) {
+	fs.readFile(`./data/users/${sender.split("@")[0]}/xp.json`, 'utf-8', function(err, data) {
 		if (err) throw err;
 		var newValue = data.replace(`${xp}`, newxp); 
-		fs.writeFile(`./data/user/${sender.split("@")[0]}/xp.json`, newValue, 'utf-8', function(err, data) {
+		fs.writeFile(`./data/users/${sender.split("@")[0]}/xp.json`, newValue, 'utf-8', function(err, data) {
 			if (err) throw err;
 		})
 	})
@@ -2081,10 +2083,10 @@ else if (slot2 == slot3) {
 
 	var price = Number(15);
 	var newcash = price + cash; 
-	fs.readFile(`./data/user/${sender.split("@")[0]}/money.json`, 'utf-8', function(err, data) {
+	fs.readFile(`./data/users/${sender.split("@")[0]}/money.json`, 'utf-8', function(err, data) {
 		if (err) throw err;
 		var newValue = data.replace(`${money}`, newcash);
-		fs.writeFile(`./data/user/${sender.split("@")[0]}/money.json`, newValue, 'utf-8', function(err, data) {
+		fs.writeFile(`./data/users/${sender.split("@")[0]}/money.json`, newValue, 'utf-8', function(err, data) {
 			if (err) throw err;
 			console.log('Done!');
 		})
@@ -2094,10 +2096,10 @@ else if (slot2 == slot3) {
 	var addxp = Number(10);
 	var newxp = oldxp + addxp; 
 
-	fs.readFile(`./data/user/${sender.split("@")[0]}/xp.json`, 'utf-8', function(err, data) {
+	fs.readFile(`./data/users/${sender.split("@")[0]}/xp.json`, 'utf-8', function(err, data) {
 		if (err) throw err;
 		var newValue = data.replace(`${xp}`, newxp); 
-		fs.writeFile(`./data/user/${sender.split("@")[0]}/xp.json`, newValue, 'utf-8', function(err, data) {
+		fs.writeFile(`./data/users/${sender.split("@")[0]}/xp.json`, newValue, 'utf-8', function(err, data) {
 			if (err) throw err;
 		})
 	})
@@ -2109,10 +2111,10 @@ else if (slot1 == slot3) {
 
 	var price = Number(15);
 	var newcash = price + cash; 
-	fs.readFile(`./data/user/${sender.split("@")[0]}/money.json`, 'utf-8', function(err, data) {
+	fs.readFile(`./data/users/${sender.split("@")[0]}/money.json`, 'utf-8', function(err, data) {
 		if (err) throw err;
 		var newValue = data.replace(`${money}`, newcash);
-		fs.writeFile(`./data/user/${sender.split("@")[0]}/money.json`, newValue, 'utf-8', function(err, data) {
+		fs.writeFile(`./data/users/${sender.split("@")[0]}/money.json`, newValue, 'utf-8', function(err, data) {
 			if (err) throw err;
 			console.log('Done!');
 		})
@@ -2122,10 +2124,10 @@ else if (slot1 == slot3) {
 	var addxp = Number(10);
 	var newxp = oldxp + addxp; 
 
-	fs.readFile(`./data/user/${sender.split("@")[0]}/xp.json`, 'utf-8', function(err, data) {
+	fs.readFile(`./data/users/${sender.split("@")[0]}/xp.json`, 'utf-8', function(err, data) {
 		if (err) throw err;
 		var newValue = data.replace(`${xp}`, newxp); 
-		fs.writeFile(`./data/user/${sender.split("@")[0]}/xp.json`, newValue, 'utf-8', function(err, data) {
+		fs.writeFile(`./data/users/${sender.split("@")[0]}/xp.json`, newValue, 'utf-8', function(err, data) {
 			if (err) throw err;
 		})
 	})
@@ -2135,10 +2137,10 @@ else if (slot1 == slot3) {
 else {	
 	var addxp = Number(2);
 	var newxp = oldxp + addxp; 
-	fs.readFile(`./data/user/${sender.split("@")[0]}/xp.json`, 'utf-8', function(err, data) {
+	fs.readFile(`./data/users/${sender.split("@")[0]}/xp.json`, 'utf-8', function(err, data) {
 		if (err) throw err;
 		var newValue = data.replace(`${xp}`, newxp); 
-		fs.writeFile(`./data/user/${sender.split("@")[0]}/xp.json`, newValue, 'utf-8', function(err, data) {
+		fs.writeFile(`./data/users/${sender.split("@")[0]}/xp.json`, newValue, 'utf-8', function(err, data) {
 			if (err) throw err;
 		})
 	})	 
@@ -2433,12 +2435,12 @@ case 'donate':
 				var taxes = Number(5);
 				var transferamount = mymon - myam - taxes; 
 
-				fs.readFile(`./data/user/${sender.split("@")[0]}/money.json`, 'utf-8', function(err, data) {
+				fs.readFile(`./data/users/${sender.split("@")[0]}/money.json`, 'utf-8', function(err, data) {
 					if (err) throw err;
 					
 					var newValue = data.replace(`${mytransfermoney}`, transferamount);
 					
-					fs.writeFile(`./data/user/${sender.split("@")[0]}/money.json`, newValue, 'utf-8', function(err, data) {
+					fs.writeFile(`./data/users/${sender.split("@")[0]}/money.json`, newValue, 'utf-8', function(err, data) {
 						if (err) throw err;
 					})
 				})
@@ -2460,10 +2462,10 @@ case 'donate':
   var gain = Number(5);
   var newxp = xp + gain; 
 
-  fs.readFile(`./data/user/${sender.split("@")[0]}/xp.json`, 'utf-8', function(err, data) {
+  fs.readFile(`./data/users/${sender.split("@")[0]}/xp.json`, 'utf-8', function(err, data) {
 	  if (err) throw err;
 	  var newValue = data.replace(`${xp}`, newxp);
-	  fs.writeFile(`./data/user/${sender.split("@")[0]}/xp.json`, newValue, 'utf-8', function(err, data) {
+	  fs.writeFile(`./data/users/${sender.split("@")[0]}/xp.json`, newValue, 'utf-8', function(err, data) {
 		  if (err) throw err;
 	  })
   })	
@@ -2619,10 +2621,10 @@ var xpn = Number(xp);
 var upxp = Number(1);
 var newxp = upxp + xpn; 
 
-fs.readFile(`./data/user/${sender.split("@")[0]}/xp.json`, 'utf-8', function(err, data) {
+fs.readFile(`./data/users/${sender.split("@")[0]}/xp.json`, 'utf-8', function(err, data) {
 	if (err) throw err;	
 	var newValue = data.replace(`${xp}`, newxp);	
-	fs.writeFile(`./data/user/${sender.split("@")[0]}/xp.json`, newValue, 'utf-8', function(err, data) {
+	fs.writeFile(`./data/users/${sender.split("@")[0]}/xp.json`, newValue, 'utf-8', function(err, data) {
 		if (err) throw err;
 		console.log('Gained xp!');
 	})
@@ -2739,10 +2741,10 @@ case 'name':
 		var cost = Number(30);
 		var newmoney = money1 - cost; 
 	
-		fs.readFile(`./data/user/${sender.split("@")[0]}/money.json`, 'utf-8', function(err, data) {
+		fs.readFile(`./data/users/${sender.split("@")[0]}/money.json`, 'utf-8', function(err, data) {
 			if (err) throw err;
 			var newValue = data.replace(`${money1}`, newmoney);
-			fs.writeFile(`./data/user/${sender.split("@")[0]}/money.json`, newValue, 'utf-8', function(err, data) {
+			fs.writeFile(`./data/users/${sender.split("@")[0]}/money.json`, newValue, 'utf-8', function(err, data) {
 				if (err) throw err;
 			})
 		})
@@ -2750,12 +2752,12 @@ case 'name':
 			
 					var newname = args[0];
 
-					fs.readFile(`./data/user/${sender.split("@")[0]}/name.json`, 'utf-8', function(err, data) {
+					fs.readFile(`./data/users/${sender.split("@")[0]}/name.json`, 'utf-8', function(err, data) {
 						if (err) throw err;
 						
 						var newValue = data.replace(`${name}`, newname);
 						
-						fs.writeFile(`./data/user/${sender.split("@")[0]}/name.json`, newValue, 'utf-8', function(err, data) {
+						fs.writeFile(`./data/users/${sender.split("@")[0]}/name.json`, newValue, 'utf-8', function(err, data) {
 							if (err) throw err;
 						})
 					})
@@ -2773,10 +2775,10 @@ case 'age':
 		var cost = Number(5);
 		var newmoney = money1 - cost; 
 	
-		fs.readFile(`./data/user/${sender.split("@")[0]}/money.json`, 'utf-8', function(err, data) {
+		fs.readFile(`./data/users/${sender.split("@")[0]}/money.json`, 'utf-8', function(err, data) {
 			if (err) throw err;
 			var newValue = data.replace(`${money1}`, newmoney);
-			fs.writeFile(`./data/user/${sender.split("@")[0]}/money.json`, newValue, 'utf-8', function(err, data) {
+			fs.writeFile(`./data/users/${sender.split("@")[0]}/money.json`, newValue, 'utf-8', function(err, data) {
 				if (err) throw err;
 			})
 		})
@@ -2784,10 +2786,10 @@ case 'age':
 										
 					var newage = args[0];
 
-					fs.readFile(`./data/user/${sender.split("@")[0]}/age.json`, 'utf-8', function(err, data) {
+					fs.readFile(`./data/users/${sender.split("@")[0]}/age.json`, 'utf-8', function(err, data) {
 						if (err) throw err;	
 						var newValue = data.replace(`${age}`, newage);	
-					fs.writeFile(`./data/user/${sender.split("@")[0]}/age.json`, newValue, 'utf-8', function(err, data) {
+					fs.writeFile(`./data/users/${sender.split("@")[0]}/age.json`, newValue, 'utf-8', function(err, data) {
 							if (err) throw err;
 						})
 					})
@@ -2803,12 +2805,12 @@ case 'email':
 	if (args.length < 1) return reply(`${design} 𝑃𝑙𝑒𝑎𝑠𝑒 𝑒𝑛𝑡𝑒𝑟 𝑛𝑒𝑤 𝑒𝑚𝑎𝑖𝑙 𝑎𝑑𝑟𝑒𝑠𝑠𝑒. \𝑛𝐸𝑥𝑎𝑚𝑝𝑙𝑒: .𝑒𝑚𝑎𝑖𝑙 𝑥𝑎𝑐𝑐𝑜𝑢𝑛𝑡@𝑔𝑚𝑎𝑖𝑙.𝑐𝑜𝑚`)
 	if (args.length > 1) return reply(`${design} 𝑃𝑙𝑒𝑎𝑠𝑒 𝑒𝑛𝑡𝑒𝑟 𝑛𝑒𝑤 𝑒𝑚𝑎𝑖𝑙 𝑎𝑑𝑟𝑒𝑠𝑠𝑒. \𝑛𝐸𝑥𝑎𝑚𝑝𝑙𝑒: .𝑒𝑚𝑎𝑖𝑙 𝑥𝑎𝑐𝑐𝑜𝑢𝑛𝑡@𝑔𝑚𝑎𝑖𝑙.𝑐𝑜𝑚`)
 					var newemail = args[0];
-					fs.readFile(`./data/user/${sender.split("@")[0]}/email.json`, 'utf-8', function(err, data) {
+					fs.readFile(`./data/users/${sender.split("@")[0]}/email.json`, 'utf-8', function(err, data) {
 						if (err) throw err;
 						
 						var newValue = data.replace(`${oldemail}`, newemail);
 						
-						fs.writeFile(`./data/user/${sender.split("@")[0]}/email.json`, newValue, 'utf-8', function(err, data) {
+						fs.writeFile(`./data/users/${sender.split("@")[0]}/email.json`, newValue, 'utf-8', function(err, data) {
 							if (err) throw err;
 						})
 					})
@@ -2857,19 +2859,19 @@ case 'changedesign':
 	var money1 = Number(money);
 	var cost = Number(25);
 	var newmoney = money1 - cost; 
-	fs.readFile(`./data/user/${sender.split("@")[0]}/money.json`, 'utf-8', function(err, data) {
+	fs.readFile(`./data/users/${sender.split("@")[0]}/money.json`, 'utf-8', function(err, data) {
 		if (err) throw err;
 		var newValue = data.replace(`${money1}`, newmoney);
-		fs.writeFile(`./data/user/${sender.split("@")[0]}/money.json`, newValue, 'utf-8', function(err, data) {
+		fs.writeFile(`./data/users/${sender.split("@")[0]}/money.json`, newValue, 'utf-8', function(err, data) {
 			if (err) throw err;
 		})
 	})
 	await delay(1000) /// waiting 1 second.
 					var newdesign = args[0];
-				fs.readFile(`./data/user/${sender.split("@")[0]}/design.json`, 'utf-8', function(err, data) {
+				fs.readFile(`./data/users/${sender.split("@")[0]}/design.json`, 'utf-8', function(err, data) {
 					if (err) throw err;					
 					var newValue = data.replace(`${design}`, newdesign);					
-					fs.writeFile(`./data/user/${sender.split("@")[0]}/design.json`, newValue, 'utf-8', function(err, data) {
+					fs.writeFile(`./data/users/${sender.split("@")[0]}/design.json`, newValue, 'utf-8', function(err, data) {
 						if (err) throw err;
 					})
 				})
@@ -2887,19 +2889,19 @@ case 'setemojie':
 	var money1 = Number(money);
 	var cost = Number(25);
 	var newmoney = money1 - cost; 
-	fs.readFile(`./data/user/${sender.split("@")[0]}/money.json`, 'utf-8', function(err, data) {
+	fs.readFile(`./data/users/${sender.split("@")[0]}/money.json`, 'utf-8', function(err, data) {
 		if (err) throw err;
 		var newValue = data.replace(`${money1}`, newmoney);
-		fs.writeFile(`./data/user/${sender.split("@")[0]}/money.json`, newValue, 'utf-8', function(err, data) {
+		fs.writeFile(`./data/users/${sender.split("@")[0]}/money.json`, newValue, 'utf-8', function(err, data) {
 			if (err) throw err;
 		})
 	})
 	await delay(1000) /// waiting 1 second.
 				var newemojie = args[0];
-				fs.readFile(`./data/user/${sender.split("@")[0]}/emojie.json`, 'utf-8', function(err, data) {
+				fs.readFile(`./data/users/${sender.split("@")[0]}/emojie.json`, 'utf-8', function(err, data) {
 					if (err) throw err;					
 					var newValue = data.replace(`${emojie}`, newemojie);					
-					fs.writeFile(`./data/user/${sender.split("@")[0]}/emojie.json`, newValue, 'utf-8', function(err, data) {
+					fs.writeFile(`./data/users/${sender.split("@")[0]}/emojie.json`, newValue, 'utf-8', function(err, data) {
 						if (err) throw err;
 					})
 				})
@@ -2916,10 +2918,10 @@ var xp1 = Number(xp);
 var gain = Number(5);
 var newxp = xp + gain; 
 
-fs.readFile(`./data/user/${sender.split("@")[0]}/xp.json`, 'utf-8', function(err, data) {
+fs.readFile(`./data/users/${sender.split("@")[0]}/xp.json`, 'utf-8', function(err, data) {
 	if (err) throw err;
 	var newValue = data.replace(`${xp}`, newxp);
-	fs.writeFile(`./data/user/${sender.split("@")[0]}/xp.json`, newValue, 'utf-8', function(err, data) {
+	fs.writeFile(`./data/users/${sender.split("@")[0]}/xp.json`, newValue, 'utf-8', function(err, data) {
 		if (err) throw err;
 	})
 })
