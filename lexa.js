@@ -1841,8 +1841,8 @@ case 'tl':
 			translate(`${value.slice(3)}`, {to: `${args[0]}`}).then(res => {
 				console.log(res)
 				reply(`${design} 𝑇𝑟𝑎𝑛𝑠𝑙𝑎𝑡𝑖𝑜𝑛
-		-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-		
-		${res}`)
+-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-		
+${res}`)
 			}).catch(err => {
 				
 				translate(`${value}`, {to: `en`}).then(res => {
@@ -1936,15 +1936,17 @@ await ffmpeg(`./weather.gif`)
   })
 	.on('end', function () {
 		console.log('Finish')
-		exec(`webpmux -set exif ${addMetadata(`X623`, "Weather")} ${ran} -o ${ran}`, async (error) => {
+		exec(`webpmux -set exif ${addMetadata('Your', "Weather")} ${ran} -o ${ran}`, async (error) => {
 			if (error) return reply(stick())
 			Lxa.sendMessage(from, fs.readFileSync(ran), sticker, {quoted: mek})			
 			fs.unlinkSync(ran)
 		})
 	})
-	.addOutputOptions([`-vcodec`,`libwebp`,`-vf`,`scale='min(320,iw)':min'(320,ih)':force_original_aspect_ratio=decrease,fps=15, pad=320:320:-1:-1:color=white@0.0, split [a][b]; [a] pavartegen=reserve_transparent=on:transparency_color=ffffff [p]; [b][p] pavarteuse`])
+	.addOutputOptions([`-vcodec`,`libwebp`,`-vf`,`scale='min(320,iw)':min'(320,ih)':force_original_aspect_ratio=decrease,fps=15, pad=320:320:-1:-1:color=white@0.0, split [a][b]; [a] palettegen=reserve_transparent=on:transparency_color=ffffff [p]; [b][p] paletteuse`])
 	.toFormat('webp')
 	.save(ran)
+
+break
 break
 //---X623-Whatsapp-Bot------------------------------------------------------------------------------------------------------------------------// 
 //-- claim money
