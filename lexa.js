@@ -2257,7 +2257,7 @@ else if (slot1 == slot3) {
 		})
 	})
 
-	reply(`${design} 𝚂𝚕𝚘𝚝\n\n${slot4}${slot5}${slot6}\n- - - - - - - - - \n${slot1}${slot2}${slot3} ☜︎ 𝚂𝚖𝚊𝚕𝚕 𝚠𝚒𝚗 ♕︎\n- - - - - - - - - \n${slot7}${slot8}${slot9}\n\n𝑀𝑜𝑛𝑒𝑦 𝑙𝑒𝑓𝑡 ${newcash}$\n𝑇𝑖𝑐𝑘𝑒𝑡𝑠 𝑙𝑒𝑓𝑡 ${newxp}`)  
+	reply(`${design} 𝚂𝚕𝚘𝚝\n\n${slot4}${slot5}${slot6}\n- - - - - - - - - \n${slot1}${slot2}${slot3} ☜︎ 𝚂𝚖𝚊𝚕𝚕 𝚠𝚒𝚗 ♕︎\n- - - - - - - - - \n${slot7}${slot8}${slot9}\n\n𝑀𝑜𝑛𝑒𝑦 𝑙𝑒𝑓𝑡 ${newcash}$\n𝑇𝑖𝑐𝑘𝑒𝑡𝑠 𝑙𝑒𝑓𝑡 ${newtickets}`)  
 }
 else {	
 	var addxp = Number(2);
