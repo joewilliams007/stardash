@@ -1247,7 +1247,7 @@ case 'flip':
 				ran= getRandom('.png')
 				exec(`gm convert -flop ${media} ${ran} `, (err) => {
 						fs.unlinkSync(media)
-						if (err) return reply('𝐸𝑟𝑟𝑜𝑟.)
+						if (err) return reply(`${design} 𝐸𝑟𝑟𝑜𝑟`)
 						buffer = fs.readFileSync(ran)
 						Lxa.sendMessage(from, buffer, image, {quoted:mek, caption: `${design} 𝑀𝑎𝑑𝑒 𝑓𝑜𝑟 ${pushname}\n-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-\n✅ 𝑋623 𝐸𝑓𝑓𝑒𝑐𝑡𝑠`})
 						fs.unlinkSync(ran)
