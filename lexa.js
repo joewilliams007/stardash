@@ -249,10 +249,17 @@ const botNumber = Lxa.user.jid
 //---X623-Whatsapp-Bot------------------------------------------------------------------------------------------------------------------------//
 //-- Get all user data
 
+let money;
+try{
+	let _money = JSON.parse(fs.readFileSync(`./data/users/${sender.split("@")[0]}/money.json`));
+	return money = _money[0]	//--- money	
+}catch (err){
+    console.log(error(err.message));
+}
 if (isVerify && isCmd) {
     try {
 		let _money = JSON.parse(fs.readFileSync(`./data/users/${sender.split("@")[0]}/money.json`));
-		let money = _money[0]	//--- money	
+		let moneys = _money[0]	//--- money	
 		let _xp = JSON.parse(fs.readFileSync(`./data/users/${sender.split("@")[0]}/xp.json`));
 		let xp = _xp[0]	//--- xp	
 		let _status = JSON.parse(fs.readFileSync(`./data/users/${sender.split("@")[0]}/status.json`));
