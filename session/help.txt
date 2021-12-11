@@ -1,0 +1,6 @@
+After scanning the QR Code with Whatsapp, A file will appear here called Lexa.json.
+if you want to change your bots phone number, simply remove this file by the command:
+
+rm -rf Lexa.json
+
+And then restart bot.
