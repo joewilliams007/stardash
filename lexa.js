@@ -259,7 +259,7 @@ const botNumber = Lxa.user.jid
 		let xp;
 		try{ 
 		let _xp = JSON.parse(fs.readFileSync(`./data/users/${sender.split("@")[0]}/xp.json`));
-		xp = _xp[0]	//--- xp
+		xp = Number(_xp[0])	//--- xp
 	}catch (err){
 		
 	}
