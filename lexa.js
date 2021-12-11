@@ -104,7 +104,7 @@ const _dog = JSON.parse(fs.readFileSync('./result/ranswer/dog.json'));
 const _dashtype = JSON.parse(fs.readFileSync('./result/games/dashtype.json'));
 const _shiny = JSON.parse(fs.readFileSync('./result/games/shiny.json'));
 const _wishes = JSON.parse(fs.readFileSync('./help/wishes.json'));
-const _notes = JSON.parse(fs.readFileSync('./help/games/notes.json'));
+const _notes = JSON.parse(fs.readFileSync('./help/notes.json'));
 //---X623-Whatsapp-Bot------------------------------------------------------------------------------------------------------------------------//
 //-- Get all user data
 
