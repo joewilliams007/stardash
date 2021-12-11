@@ -105,65 +105,7 @@ const _dashtype = JSON.parse(fs.readFileSync('./result/games/dashtype.json'));
 const _shiny = JSON.parse(fs.readFileSync('./result/games/shiny.json'));
 const _wishes = JSON.parse(fs.readFileSync('./help/wishes.json'));
 const _notes = JSON.parse(fs.readFileSync('./help/notes.json'));
-//---X623-Whatsapp-Bot------------------------------------------------------------------------------------------------------------------------//
-//-- Get all user data
 
-if (isVerify && isCmd) {
-    try {
-    var _money = JSON.parse(fs.readFileSync(`./data/user/${sender.split("@")[0]}/money.json`));
-    var money = _money[0]	//--- money	
-    var _xp = JSON.parse(fs.readFileSync(`./data/user/${sender.split("@")[0]}/xp.json`));
-    var xp = _xp[0]	//--- xp	
-    var _status = JSON.parse(fs.readFileSync(`./data/user/${sender.split("@")[0]}/status.json`));
-    var status = _status[0]	//--- status	
-    var _stickerpack = JSON.parse(fs.readFileSync(`./data/user/${sender.split("@")[0]}/stickerpack.json`));
-    var stickerpack = _stickerpack[0]	//--- stickerpack
-    var _pushname = JSON.parse(fs.readFileSync(`./data/user/${sender.split("@")[0]}/pushname.json`));
-    var pushname = _pushname[0]	//--- pushname		
-    var _username = JSON.parse(fs.readFileSync(`./data/user/${sender.split("@")[0]}/username.json`));
-    var username = _username[0]	//--- username	
-    var _age = JSON.parse(fs.readFileSync(`./data/user/${sender.split("@")[0]}/age.json`));
-    var age = _age[0]	//--- age	
-    var _emojie = JSON.parse(fs.readFileSync(`./data/user/${sender.split("@")[0]}/emojie.json`));
-    var emojie = _emojie[0]	//--- emojie
-    var _id = JSON.parse(fs.readFileSync(`./data/user/${sender.split("@")[0]}/id.json`));
-    var id = _id[0]	//--- id		
-    var _design = JSON.parse(fs.readFileSync(`./data/user/${sender.split("@")[0]}/design.json`));
-    var design = _design[0]	//--- design	
-    var _email = JSON.parse(fs.readFileSync(`./data/user/${sender.split("@")[0]}/email.json`));
-    var email = _email[0]	//--- email
-    var _version = JSON.parse(fs.readFileSync(`./data/user/${sender.split("@")[0]}/version.json`));
-    var version = _version[0]	//--- version		
-    var _password = JSON.parse(fs.readFileSync(`./data/user/${sender.split("@")[0]}/password.json`));
-    var password = _password[0]	//--- password		
-    var _songs = JSON.parse(fs.readFileSync(`./data/user/${sender.split("@")[0]}/songs.json`));
-    var songs = _songs[0]	//--- songs	
-    var _pictures = JSON.parse(fs.readFileSync(`./data/user/${sender.split("@")[0]}/pictures.json`));
-    var pictures = _pictures[0]	//--- pictures
-    var _userhit = JSON.parse(fs.readFileSync(`./data/user/${sender.split("@")[0]}/userhit.json`));
-    var userhit = _userhit[0]	//--- userhit
-    var _messages = JSON.parse(fs.readFileSync(`./data/user/${sender.split("@")[0]}/messages.json`));
-    var messages = _messages[0]	//--- messages
-    var _messagesnumber = JSON.parse(fs.readFileSync(`./data/user/${sender.split("@")[0]}/messagesnumber.json`));
-    var messagesnumber = _messagesnumber[0]	//--- messagesnumber
-    var _location = JSON.parse(fs.readFileSync(`./data/user/${sender.split("@")[0]}/location.json`));
-    var location = _location[0]	//--- location
-    var _accdate = JSON.parse(fs.readFileSync(`./data/user/${sender.split("@")[0]}/accdate.json`));
-    var accdate = _accdate[0]	//--- accdate
-    var _claim = JSON.parse(fs.readFileSync(`./data/user/${sender.split("@")[0]}/claim.json`));
-    var claim = _claim[0]	//--- claim
-    var _bday = JSON.parse(fs.readFileSync(`./data/user/${sender.split("@")[0]}/bday.json`));
-    var bday = _bday[0]	//--- birth date
-    var _tickets = JSON.parse(fs.readFileSync(`./data/user/${sender.split("@")[0]}/tickets.json`));
-    var tickets = _tickets[0]	//--- tickets
-    var _mood = JSON.parse(fs.readFileSync(`./data/user/${sender.split("@")[0]}/mood.json`));
-    var mood = _mood[0]	//--- mood
-      } catch {
-console.log(color(`Not registered.`,`aqua`))
-      }
-    }
-
-    if (isCmd) Lxa.chatRead(from)
 //---X623-Whatsapp-Bot------------------------------------------------------------------------------------------------------------------------//
 //-- Help
 const { updates, updatesold} = require('./help/updates');
@@ -304,9 +246,6 @@ const botNumber = Lxa.user.jid
   const groupAdmins = isGroup ? getGroupAdmins(groupMembers) : ''
   const isOwner = ownerNumber.includes(sender)
   const isVerify = _user.includes(sender)
-  const isFridge = _fridge.includes(sender)  
-  const isHaspet = _Haspet.includes(sender)    
-  const isUpdate = _isUpdate.includes(sender)   
   const isPrem = premium.includes(sender) || isOwner
   const isBan = blocked.includes(sender)
   const isBotGroupAdmins = groupAdmins.includes(botNumber) || false
@@ -314,6 +253,65 @@ const botNumber = Lxa.user.jid
   const isWelcom = isGroup ? _welcom.includes(from) : false
   const isAnti = isGroup ? _antilink.includes(from) : false
   const pushname = Lxa.contacts[sender] != undefined ? Lxa.contacts[sender].vname || Lxa.contacts[sender].notify: undefined 
+//---X623-Whatsapp-Bot------------------------------------------------------------------------------------------------------------------------//
+//-- Get all user data
+
+if (isVerify && isCmd) {
+    try {
+    var _money = JSON.parse(fs.readFileSync(`./data/user/${sender.split("@")[0]}/money.json`));
+    var money = _money[0]	//--- money	
+    var _xp = JSON.parse(fs.readFileSync(`./data/user/${sender.split("@")[0]}/xp.json`));
+    var xp = _xp[0]	//--- xp	
+    var _status = JSON.parse(fs.readFileSync(`./data/user/${sender.split("@")[0]}/status.json`));
+    var status = _status[0]	//--- status	
+    var _stickerpack = JSON.parse(fs.readFileSync(`./data/user/${sender.split("@")[0]}/stickerpack.json`));
+    var stickerpack = _stickerpack[0]	//--- stickerpack
+    var _pushname = JSON.parse(fs.readFileSync(`./data/user/${sender.split("@")[0]}/pushname.json`));
+    var pushname = _pushname[0]	//--- pushname		
+    var _username = JSON.parse(fs.readFileSync(`./data/user/${sender.split("@")[0]}/username.json`));
+    var username = _username[0]	//--- username	
+    var _age = JSON.parse(fs.readFileSync(`./data/user/${sender.split("@")[0]}/age.json`));
+    var age = _age[0]	//--- age	
+    var _emojie = JSON.parse(fs.readFileSync(`./data/user/${sender.split("@")[0]}/emojie.json`));
+    var emojie = _emojie[0]	//--- emojie
+    var _id = JSON.parse(fs.readFileSync(`./data/user/${sender.split("@")[0]}/id.json`));
+    var id = _id[0]	//--- id		
+    var _design = JSON.parse(fs.readFileSync(`./data/user/${sender.split("@")[0]}/design.json`));
+    var design = _design[0]	//--- design	
+    var _email = JSON.parse(fs.readFileSync(`./data/user/${sender.split("@")[0]}/email.json`));
+    var email = _email[0]	//--- email
+    var _version = JSON.parse(fs.readFileSync(`./data/user/${sender.split("@")[0]}/version.json`));
+    var version = _version[0]	//--- version		
+    var _password = JSON.parse(fs.readFileSync(`./data/user/${sender.split("@")[0]}/password.json`));
+    var password = _password[0]	//--- password		
+    var _songs = JSON.parse(fs.readFileSync(`./data/user/${sender.split("@")[0]}/songs.json`));
+    var songs = _songs[0]	//--- songs	
+    var _pictures = JSON.parse(fs.readFileSync(`./data/user/${sender.split("@")[0]}/pictures.json`));
+    var pictures = _pictures[0]	//--- pictures
+    var _userhit = JSON.parse(fs.readFileSync(`./data/user/${sender.split("@")[0]}/userhit.json`));
+    var userhit = _userhit[0]	//--- userhit
+    var _messages = JSON.parse(fs.readFileSync(`./data/user/${sender.split("@")[0]}/messages.json`));
+    var messages = _messages[0]	//--- messages
+    var _messagesnumber = JSON.parse(fs.readFileSync(`./data/user/${sender.split("@")[0]}/messagesnumber.json`));
+    var messagesnumber = _messagesnumber[0]	//--- messagesnumber
+    var _location = JSON.parse(fs.readFileSync(`./data/user/${sender.split("@")[0]}/location.json`));
+    var location = _location[0]	//--- location
+    var _accdate = JSON.parse(fs.readFileSync(`./data/user/${sender.split("@")[0]}/accdate.json`));
+    var accdate = _accdate[0]	//--- accdate
+    var _claim = JSON.parse(fs.readFileSync(`./data/user/${sender.split("@")[0]}/claim.json`));
+    var claim = _claim[0]	//--- claim
+    var _bday = JSON.parse(fs.readFileSync(`./data/user/${sender.split("@")[0]}/bday.json`));
+    var bday = _bday[0]	//--- birth date
+    var _tickets = JSON.parse(fs.readFileSync(`./data/user/${sender.split("@")[0]}/tickets.json`));
+    var tickets = _tickets[0]	//--- tickets
+    var _mood = JSON.parse(fs.readFileSync(`./data/user/${sender.split("@")[0]}/mood.json`));
+    var mood = _mood[0]	//--- mood
+      } catch {
+console.log(color(`Not registered.`,`aqua`))
+      }
+    }
+
+    if (isCmd) Lxa.chatRead(from)  
 //-- other
   const isUrl = (url) => {
 			    return url.match(new RegExp(/https?:\/\/(www\.)?[-a-zA-Z0-9@:%._+~#=]{1,256}\.[a-zA-Z0-9()]{1,6}\b([-a-zA-Z0-9()@:%_+.~#?&/=]*)/, 'gi'))
