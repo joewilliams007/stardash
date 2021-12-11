@@ -2557,12 +2557,12 @@ case 'donate':
 				var mymon = Number(money);
 				var myam = Number(args[0]);
 				var taxes = Number(5);
-				var transferamount = mymon - myam - taxes; 
+				var mynewmon = mymon - myam - taxes; 
 
 				fs.readFile(`./data/users/${sender.split("@")[0]}/money.json`, 'utf-8', function(err, data) {
 					if (err) throw err;
 					
-					var newValue = data.replace(`${mytransfermoney}`, transferamount);
+					var newValue = data.replace(`${mytransfermoney}`, mynewmon);
 					
 					fs.writeFile(`./data/users/${sender.split("@")[0]}/money.json`, newValue, 'utf-8', function(err, data) {
 						if (err) throw err;
@@ -2571,17 +2571,17 @@ case 'donate':
 				await delay(1000) /// waiting 1 second.	
 				var hismon = Number(hismoney);
 				var hisam = Number(args[0]);
-				var histransferamount = hismon + hisam; 
+				var hisnewmon = hismon + hisam; 
 				fs.readFile(`./data/users${args[1].replace('@','/')}/money.json`, 'utf-8', function(err, data) {
 					if (err) throw err;	
-					var newValue = data.replace(`${hismoney}`, histransferamount);
+					var newValue = data.replace(`${hismoney}`, hisnewmon);
 					fs.writeFile(`./data/users${args[1].replace('@','/')}/money.json`, newValue, 'utf-8', function(err, data) {
 						if (err) throw err;
 						console.log('Done!');
 					})
 				})
 				await delay(1000) /// waiting 1 second.					
-  reply(`${design} 𝑇𝑟𝑎𝑛𝑠𝑓𝑒𝑟𝑟𝑒𝑑 *${args[0]}$* 𝑡𝑜 *${hisname}* \n-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-\n𝐵𝑜𝑡 𝑠𝑡𝑜𝑙𝑒 5$\n-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-\n𝑌𝑜𝑢𝑟 𝑚𝑜𝑛𝑒𝑦 𝑙𝑒𝑓𝑡: ${transferamount}$\n𝐻𝑖𝑠/ℎ𝑒𝑟 𝑚𝑜𝑛𝑒𝑦 𝑙𝑒𝑓𝑡: ${histransferamount}$\n-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-\n✅  𝑋623 𝑇𝑟𝑎𝑛𝑠𝑓𝑒𝑟𝑠`)
+  reply(`${design} 𝑇𝑟𝑎𝑛𝑠𝑓𝑒𝑟𝑟𝑒𝑑 *${args[0]}$* 𝑡𝑜 *${hisname}* \n-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-\n𝐵𝑜𝑡 𝑠𝑡𝑜𝑙𝑒 5$\n-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-\n𝑌𝑜𝑢𝑟 𝑚𝑜𝑛𝑒𝑦 𝑙𝑒𝑓𝑡: ${mynewmon}$\n𝐻𝑖𝑠/ℎ𝑒𝑟 𝑚𝑜𝑛𝑒𝑦 𝑙𝑒𝑓𝑡: ${hisnewmon}$\n-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-\n✅  𝑋623 𝑇𝑟𝑎𝑛𝑠𝑓𝑒𝑟𝑠`)
   var xp1 = Number(xp);
   var gain = Number(5);
   var newxp = xp + gain; 
