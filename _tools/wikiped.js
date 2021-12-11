@@ -41,7 +41,7 @@ const mywikidesign = _mywiki[0]	//-- account design Emojie
             let request = https.get(`${wiki_url}?action=query&prop=extracts&exintro&explaintext&format=json&titles=${pageName}`, (res) => {
               
               console.log("test")
-              console.log(`$gathering info from: {wiki_url}?action=query&prop=extracts&exintro&explaintext&format=json&titles=${pageName}`);
+              console.log(`gathering info from: {wiki_url}?action=query&prop=extracts&exintro&explaintext&format=json&titles=${pageName}`);
               
               if (res.statusCode !== 200) {
                 console.error(`Did not get an OK from the server. Code: ${res.statusCode}`);
@@ -65,7 +65,7 @@ const mywikidesign = _mywiki[0]	//-- account design Emojie
 
                 console.log('Retrieved page data');
                 
-                complete(`${mywikidesign} *${title}*` + "\n\n" + extract + "\n-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-\n" + pageLink);
+                complete(`${mywikidesign} *${title}*` + "\n\n" + extract + pageLink);
 
               });
           });
