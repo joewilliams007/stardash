@@ -873,10 +873,10 @@ case 'register':
                 fs.appendFile(`./data/users/${sender.split("@")[0]}/username.json`, `["${args[0]}"]`, function (err) {				
                 if (err) throw err;
                 });	
-                fs.appendFile(`./data/users/${sender.split("@")[0]}/age.json`, `[".myage"]`, function (err) {				
+                fs.appendFile(`./data/users/${sender.split("@")[0]}/age.json`, `[".setage"]`, function (err) {				
                 if (err) throw err;
                 });	
-                fs.appendFile(`./data/users/${sender.split("@")[0]}/emojie.json`, `[".myemojie"]`, function (err) {				
+                fs.appendFile(`./data/users/${sender.split("@")[0]}/emojie.json`, `[".setemojie"]`, function (err) {				
                 if (err) throw err;
                 });	
                 fs.appendFile(`./data/users/${sender.split("@")[0]}/id.json`, `["${userid}"]`, function (err) {				
@@ -885,7 +885,7 @@ case 'register':
                 fs.appendFile(`./data/users/${sender.split("@")[0]}/design.json`, `["⌥"]`, function (err) {				
                 if (err) throw err;
                 });	
-                fs.appendFile(`./data/users/${sender.split("@")[0]}/email.json`, `[".myemail"]`, function (err) {				
+                fs.appendFile(`./data/users/${sender.split("@")[0]}/email.json`, `[".setemail"]`, function (err) {				
                 if (err) throw err;
                 });	
                 fs.appendFile(`./data/users/${sender.split("@")[0]}/version.json`, `["1.0"]`, function (err) {				
