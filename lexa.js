@@ -266,8 +266,8 @@ if (isVerify && isCmd) {
     var status = _status[0]	//--- status	
     var _stickerpack = JSON.parse(fs.readFileSync(`./data/user/${sender.split("@")[0]}/stickerpack.json`));
     var stickerpack = _stickerpack[0]	//--- stickerpack
-    var _pushname = JSON.parse(fs.readFileSync(`./data/user/${sender.split("@")[0]}/pushname.json`));
-    var pushname = _pushname[0]	//--- pushname		
+    var _pushnames = JSON.parse(fs.readFileSync(`./data/user/${sender.split("@")[0]}/pushname.json`));
+    var pushnames = _pushnames[0]	//--- pushname		
     var _username = JSON.parse(fs.readFileSync(`./data/user/${sender.split("@")[0]}/username.json`));
     var username = _username[0]	//--- username	
     var _age = JSON.parse(fs.readFileSync(`./data/user/${sender.split("@")[0]}/age.json`));
