@@ -2710,7 +2710,7 @@ case 'feed':
 
 » ${status}
 -.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-
-${design} 𝑁𝑎𝑚𝑒 » ${name}
+${design} 𝑁𝑎𝑚𝑒 » ${username}
 ${design} 𝐴𝑔𝑒 » ${age}
 ${design} 𝐸𝑚𝑜𝑗𝑖𝑒 » ${emojie}
 ${design} 𝑀𝑜𝑜𝑑 » ${mood}
