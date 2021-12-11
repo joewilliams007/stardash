@@ -927,7 +927,6 @@ case 'register':
                 fs.appendFile(`./data/users/${sender.split("@")[0]}/tickets.json`, `["10"]`, function (err) {				
                 if (err) throw err;
                 });						
-			    break
                 fs.appendFile(`./data/users/${sender.split("@")[0]}/mood.json`, `["Happy"]`, function (err) {				
                 if (err) throw err;
                 });	
