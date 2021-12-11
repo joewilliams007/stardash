@@ -2571,10 +2571,10 @@ case 'donate':
 				var hismon = Number(hismoney);
 				var hisam = Number(args[0]);
 				var histransferamount = hismon + hisam; 
-				fs.readFile(`./data/users/${args[1].replace('@','./')}/money.json`, 'utf-8', function(err, data) {
+				fs.readFile(`./data/users/${args[1].replace('@')[0]}/money.json`, 'utf-8', function(err, data) {
 					if (err) throw err;	
 					var newValue = data.replace(`${hismoney}`, histransferamount);
-					fs.writeFile(`./data/users/${args[1].replace('@','./')}/money.json`, newValue, 'utf-8', function(err, data) {
+					fs.writeFile(`./data/users/${args[1].replace('@')[0]}/money.json`, newValue, 'utf-8', function(err, data) {
 						if (err) throw err;
 						console.log('Done!');
 					})
