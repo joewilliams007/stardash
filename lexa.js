@@ -247,7 +247,62 @@ const botNumber = Lxa.user.jid
   const isAnti = isGroup ? _antilink.includes(from) : false
   const pushname = Lxa.contacts[sender] != undefined ? Lxa.contacts[sender].vname || Lxa.contacts[sender].notify: undefined 
 //---X623-Whatsapp-Bot------------------------------------------------------------------------------------------------------------------------//
+//-- Get all user data
 
+if (isVerify && isCmd) {
+    try {
+		let _money = JSON.parse(fs.readFileSync(`./data/users/${sender.split("@")[0]}/money.json`));
+		let money = _money[0]	//--- money	
+		let _xp = JSON.parse(fs.readFileSync(`./data/users/${sender.split("@")[0]}/xp.json`));
+		let xp = _xp[0]	//--- xp	
+		let _status = JSON.parse(fs.readFileSync(`./data/users/${sender.split("@")[0]}/status.json`));
+		let status = _status[0]	//--- status	
+		let _stickerpack = JSON.parse(fs.readFileSync(`./data/users/${sender.split("@")[0]}/stickerpack.json`));
+		let stickerpack = _stickerpack[0]	//--- stickerpack
+		let _pushnames = JSON.parse(fs.readFileSync(`./data/users/${sender.split("@")[0]}/pushname.json`));
+		let pushnames = _pushnames[0]	//--- pushname		
+		let _username = JSON.parse(fs.readFileSync(`./data/users/${sender.split("@")[0]}/username.json`));
+		let username = _username[0]	//--- usersname	
+		let _age = JSON.parse(fs.readFileSync(`./data/users/${sender.split("@")[0]}/age.json`));
+		let age = _age[0]	//--- age	
+		let _emojie = JSON.parse(fs.readFileSync(`./data/users/${sender.split("@")[0]}/emojie.json`));
+		let emojie = _emojie[0]	//--- emojie
+		let _id = JSON.parse(fs.readFileSync(`./data/users/${sender.split("@")[0]}/id.json`));
+		let id = _id[0]	//--- id		
+		let _design = JSON.parse(fs.readFileSync(`./data/users/${sender.split("@")[0]}/design.json`));
+		let design = _design[0]	//--- design	
+		let _email = JSON.parse(fs.readFileSync(`./data/users/${sender.split("@")[0]}/email.json`));
+		let email = _email[0]	//--- email
+		let _version = JSON.parse(fs.readFileSync(`./data/users/${sender.split("@")[0]}/version.json`));
+		let version = _version[0]	//--- version		
+		let _password = JSON.parse(fs.readFileSync(`./data/users/${sender.split("@")[0]}/password.json`));
+		let password = _password[0]	//--- password		
+		let _songs = JSON.parse(fs.readFileSync(`./data/users/${sender.split("@")[0]}/songs.json`));
+		let songs = _songs[0]	//--- songs	
+		let _pictures = JSON.parse(fs.readFileSync(`./data/users/${sender.split("@")[0]}/pictures.json`));
+		let pictures = _pictures[0]	//--- pictures
+		let _usershit = JSON.parse(fs.readFileSync(`./data/users/${sender.split("@")[0]}/usershit.json`));
+		let usershit = _usershit[0]	//--- usershit
+		let _messages = JSON.parse(fs.readFileSync(`./data/users/${sender.split("@")[0]}/messages.json`));
+		let messages = _messages[0]	//--- messages
+		let _messagesnumber = JSON.parse(fs.readFileSync(`./data/users/${sender.split("@")[0]}/messagesnumber.json`));
+		let messagesnumber = _messagesnumber[0]	//--- messagesnumber
+		let _userslocation = JSON.parse(fs.readFileSync(`./data/users/${sender.split("@")[0]}/location.json`));
+		let userslocation = _userslocation[0]	//--- location
+		let _accdate = JSON.parse(fs.readFileSync(`./data/users/${sender.split("@")[0]}/accdate.json`));
+		let accdate = _accdate[0]	//--- accdate
+		let _claim = JSON.parse(fs.readFileSync(`./data/users/${sender.split("@")[0]}/claim.json`));
+		let claim = _claim[0]	//--- claim
+		let _bday = JSON.parse(fs.readFileSync(`./data/users/${sender.split("@")[0]}/bday.json`));
+		let bday = _bday[0]	//--- birth date
+		let _tickets = JSON.parse(fs.readFileSync(`./data/users/${sender.split("@")[0]}/tickets.json`));
+		let tickets = _tickets[0]	//--- tickets
+		let _mood = JSON.parse(fs.readFileSync(`./data/users/${sender.split("@")[0]}/mood.json`));
+		let mood = _mood[0]	//--- mood
+      } catch {
+console.log(color(`Not registered.`,`aqua`))
+      }
+    }
 
     if (isCmd) Lxa.chatRead(from)  
 //-- other
@@ -443,59 +498,6 @@ switch(is) { case '.🇦🇫': reply('⌯ ﹝𝚝𝚑𝚒𝚜 𝚏𝚕𝚊𝚐 �
 //---X623-Whatsapp-Bot------------------------------------------------------------------------------------------------------------------------//
 const newLocal = 'upslot';
 //-- Command
-//-- Get all user data
-
-if (isVerify && isCmd) {
-    try {
-		const _money = JSON.parse(fs.readFileSync(`./data/users/${sender.split("@")[0]}/money.json`));
-		const money = _money[0]	//--- money	
-		const _xp = JSON.parse(fs.readFileSync(`./data/users/${sender.split("@")[0]}/xp.json`));
-		const xp = _xp[0]	//--- xp	
-		const _status = JSON.parse(fs.readFileSync(`./data/users/${sender.split("@")[0]}/status.json`));
-		const status = _status[0]	//--- status	
-		const _stickerpack = JSON.parse(fs.readFileSync(`./data/users/${sender.split("@")[0]}/stickerpack.json`));
-		const stickerpack = _stickerpack[0]	//--- stickerpack
-		const _pushnames = JSON.parse(fs.readFileSync(`./data/users/${sender.split("@")[0]}/pushname.json`));
-		const pushnames = _pushnames[0]	//--- pushname		
-		const _username = JSON.parse(fs.readFileSync(`./data/users/${sender.split("@")[0]}/username.json`));
-		const username = _username[0]	//--- usersname	
-		const _age = JSON.parse(fs.readFileSync(`./data/users/${sender.split("@")[0]}/age.json`));
-		const age = _age[0]	//--- age	
-		const _emojie = JSON.parse(fs.readFileSync(`./data/users/${sender.split("@")[0]}/emojie.json`));
-		const emojie = _emojie[0]	//--- emojie
-		const _id = JSON.parse(fs.readFileSync(`./data/users/${sender.split("@")[0]}/id.json`));
-		const id = _id[0]	//--- id		
-		const _design = JSON.parse(fs.readFileSync(`./data/users/${sender.split("@")[0]}/design.json`));
-		const design = _design[0]	//--- design	
-		const _email = JSON.parse(fs.readFileSync(`./data/users/${sender.split("@")[0]}/email.json`));
-		const email = _email[0]	//--- email
-		const _version = JSON.parse(fs.readFileSync(`./data/users/${sender.split("@")[0]}/version.json`));
-		const version = _version[0]	//--- version		
-		const _password = JSON.parse(fs.readFileSync(`./data/users/${sender.split("@")[0]}/password.json`));
-		const password = _password[0]	//--- password		
-		const _songs = JSON.parse(fs.readFileSync(`./data/users/${sender.split("@")[0]}/songs.json`));
-		const songs = _songs[0]	//--- songs	
-		const _pictures = JSON.parse(fs.readFileSync(`./data/users/${sender.split("@")[0]}/pictures.json`));
-		const pictures = _pictures[0]	//--- pictures
-		const _usershit = JSON.parse(fs.readFileSync(`./data/users/${sender.split("@")[0]}/usershit.json`));
-		const usershit = _usershit[0]	//--- usershit
-		const _messages = JSON.parse(fs.readFileSync(`./data/users/${sender.split("@")[0]}/messages.json`));
-		const messages = _messages[0]	//--- messages
-		const _messagesnumber = JSON.parse(fs.readFileSync(`./data/users/${sender.split("@")[0]}/messagesnumber.json`));
-		const messagesnumber = _messagesnumber[0]	//--- messagesnumber
-		const _userslocation = JSON.parse(fs.readFileSync(`./data/users/${sender.split("@")[0]}/location.json`));
-		const userslocation = _userslocation[0]	//--- location
-		const _accdate = JSON.parse(fs.readFileSync(`./data/users/${sender.split("@")[0]}/accdate.json`));
-		const accdate = _accdate[0]	//--- accdate
-		const _claim = JSON.parse(fs.readFileSync(`./data/users/${sender.split("@")[0]}/claim.json`));
-		const claim = _claim[0]	//--- claim
-		const _bday = JSON.parse(fs.readFileSync(`./data/users/${sender.split("@")[0]}/bday.json`));
-		const bday = _bday[0]	//--- birth date
-		const _tickets = JSON.parse(fs.readFileSync(`./data/users/${sender.split("@")[0]}/tickets.json`));
-		const tickets = _tickets[0]	//--- tickets
-		const _mood = JSON.parse(fs.readFileSync(`./data/users/${sender.split("@")[0]}/mood.json`));
-		const mood = _mood[0]	//--- mood
-
 switch(command) {	//---X623-Whatsapp-Bot------------------------------------------------------------------------------------------------------------------------//
 //-- Menu
 case 'menu':
@@ -3029,12 +3031,6 @@ var res = await fetchText(teks)
 reply(res)
 break
 				default:
-					break
-					
-				} catch {
-					console.log(color(`Not registered.`,`aqua`))
-						  }
-						}
 }
 	})
 }
