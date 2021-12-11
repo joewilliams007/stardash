@@ -2936,7 +2936,7 @@ case 'email':
 					fs.readFile(`./data/users/${sender.split("@")[0]}/email.json`, 'utf-8', function(err, data) {
 						if (err) throw err;
 						
-						var newValue = data.replace(`${oldemail}`, newemail);
+						var newValue = data.replace(`${email}`, newemail);
 						
 						fs.writeFile(`./data/users/${sender.split("@")[0]}/email.json`, newValue, 'utf-8', function(err, data) {
 							if (err) throw err;
@@ -3005,7 +3005,7 @@ case 'changedesign':
 				})
 				await delay(1000) /// waiting 1 second.
  
-					reply(`${design} 𝐶ℎ𝑎𝑛𝑔𝑒𝑑 𝑑𝑒𝑠𝑖𝑔𝑛 𝑓𝑟𝑜𝑚  *${changedesign}* 𝑡𝑜 *${value}*\n-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-\n𝑀𝑜𝑛𝑒𝑦 𝑙𝑒𝑓𝑡 ${newmoney}$\n-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-\n✅ 𝑋623 𝑆𝑒𝑡𝑡𝑖𝑛𝑔𝑠`)					
+					reply(`${design} 𝐶ℎ𝑎𝑛𝑔𝑒𝑑 𝑑𝑒𝑠𝑖𝑔𝑛 𝑓𝑟𝑜𝑚  *${design}* 𝑡𝑜 *${value}*\n-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-\n𝑀𝑜𝑛𝑒𝑦 𝑙𝑒𝑓𝑡 ${newmoney}$\n-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-\n✅ 𝑋623 𝑆𝑒𝑡𝑡𝑖𝑛𝑔𝑠`)					
 		break
 //-- changeemojie
 case 'changeemojie': 
@@ -3034,7 +3034,7 @@ case 'setemojie':
 					})
 				})
 				await delay(1000) /// waiting 1 second.
-				reply(`${design} 𝐶ℎ𝑎𝑛𝑔𝑒𝑑 𝑒𝑚𝑜𝑗𝑖𝑒 𝑓𝑟𝑜𝑚 *${changeemojie}* 𝑡𝑜 *${value}*\n-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-\n𝑀𝑜𝑛𝑒𝑦 𝑙𝑒𝑓𝑡 ${newmoney}$\n-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-\n✅ 𝑋623 𝑆𝑒𝑡𝑡𝑖𝑛𝑔𝑠`)  
+				reply(`${design} 𝐶ℎ𝑎𝑛𝑔𝑒𝑑 𝑒𝑚𝑜𝑗𝑖𝑒 𝑓𝑟𝑜𝑚 *${emojie}* 𝑡𝑜 *${value}*\n-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-\n𝑀𝑜𝑛𝑒𝑦 𝑙𝑒𝑓𝑡 ${newmoney}$\n-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-\n✅ 𝑋623 𝑆𝑒𝑡𝑡𝑖𝑛𝑔𝑠`)  
 	break
 //---X623-Whatsapp-Bot------------------------------------------------------------------------------------------------------------------------// 
 // -- Leaderboard
