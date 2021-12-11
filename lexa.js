@@ -252,7 +252,7 @@ const botNumber = Lxa.user.jid
 let money;
 try{
 	let _money = JSON.parse(fs.readFileSync(`./data/users/${sender.split("@")[0]}/money.json`));
-	return money = _money[0]	//--- money	
+	money = _money[0]	//--- money	
 }catch (err){
     console.log(error(err.message));
 }
