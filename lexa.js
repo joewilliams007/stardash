@@ -620,6 +620,7 @@ case 'premium':
     if (!isVerify) return reply(userB(prefix))
 
     reply(`𝑀𝑒𝑛𝑢 🌫️
+-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.- 
 » ${pushname}
 » ${id}
 -.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.- 
@@ -641,6 +642,7 @@ case 'games':
     if (!isVerify) return reply(userB(prefix))
 
     reply(`𝐺𝑎𝑚𝑒𝑠 🃏
+-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.- 
 » ${pushname}
 » ${id}
 -.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-    
@@ -670,6 +672,7 @@ case 'tools':
     if (!isVerify) return reply(userB(prefix))
 
     reply(`𝑇𝑜𝑜𝑙𝑠 ⚓
+-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.- 
 » ${pushname}
 » ${id}
 -.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-    
@@ -693,6 +696,7 @@ case 'edit':
     if (!isVerify) return reply(userB(prefix))
 
     reply(`𝐸𝑑𝑖𝑡 📼
+-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.- 
 » ${pushname}
 » ${id}
 -.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-    
@@ -725,6 +729,7 @@ case 'setting':
     if (!isVerify) return reply(userB(prefix))
 
 reply(`𝑆𝑒𝑡𝑡𝑖𝑛𝑔𝑠 ⚙️
+-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.- 
 » ${pushname}
 » ${id}
 -.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-    
@@ -761,6 +766,7 @@ case 'admin':
      if (!isBotGroupAdmins) return reply(`${design} 𝑂𝑛𝑙𝑦𝐹𝑜𝑟𝐴𝑑𝑚𝑖𝑛𝑠`)
 
 reply(`𝐴𝑑𝑚𝑖𝑛 📡
+-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.- 
 » ${pushname}
 » ${id}
 -.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-    
@@ -784,6 +790,7 @@ case 'owners':
      if (!isOwner) return reply(ownerB())
 
 reply(`𝑂𝑤𝑛𝑒𝑟 🛠️
+-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.- 
 » ${pushname}
 » ${id}
 -.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-    
