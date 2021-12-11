@@ -631,7 +631,7 @@ ${design} .edit
 ${design} .settings
 -.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.- 
 ${design} .admin
-${design} .owner
+${design} .owners
 -.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.- 
 _𝑌𝑜𝑢𝑟 𝑀𝑜𝑛𝑒𝑦 » ${money}$_
 `)
@@ -779,7 +779,7 @@ ${design} .listadmin
 _𝑌𝑜𝑢𝑟 𝑀𝑜𝑛𝑒𝑦 » ${money}$_
 `)
 	 break      
-case 'owner':
+case 'owners':
      if (!isVerify) return reply(userB(prefix))
      if (!isOwner) return reply(ownerB())
 
@@ -2700,23 +2700,22 @@ case 'feed':
 					let isclaim;
 					try{	
 						if (claim === `${tanggal()}`) { 
-							isclaim = ``
+							isclaim = `𝐴𝑙𝑟𝑒𝑎𝑑𝑦 𝑐𝑙𝑎𝑖𝑚𝑒𝑑 𝑡𝑜𝑑𝑎𝑦.`
 						} 
 						else { 
 							
-							isclaim = `𝐶𝑙𝑎𝑖𝑚 𝑑𝑎𝑖𝑙𝑦 𝑐𝑎𝑠ℎ 🎁 \n» .𝑐𝑙𝑎𝑖𝑚 «`
+							isclaim = `𝐶𝑙𝑎𝑖𝑚 𝑑𝑎𝑖𝑙𝑦 𝑐𝑎𝑠ℎ. 🎁 \n» .𝑐𝑙𝑎𝑖𝑚 «`
 							} 
 						}catch (err){
 						
 						}
 
 	if (!isVerify) return reply(userB())
-
-    nomor = '4917626388837@s.whatsapp.net'
-    owner = await fs.readFileSync('./images/mrf.jpeg').toString('base64')
-    capt = `${design} 𝑁𝑒𝑤𝑠 𝑓𝑒𝑒𝑑`
-    const been1 = {
-		
+	
+nomor = '4917626388837@s.whatsapp.net'
+owner = await fs.readFileSync('./images/menu.jpg').toString('base64')
+capt = `${design} 𝑁𝑒𝑤𝑠 𝑓𝑒𝑒𝑑`
+const been1 = {
 
     text: `» ${pushname}
 » ${status}
@@ -2738,11 +2737,13 @@ ${design} 𝑋𝑝 » ${xp}
 𝑠𝑖𝑛𝑐𝑒 ${accdate}
 
 ${isclaim}`,
-  contextInfo: {
+
+contextInfo: {
 mentionedJid: [nomor]
-  }
 }
-replyimg(been1, text, capt)
+}
+replyimg(been1, text, capt, owner)
+
 
 var xpn = Number(xp);
 var upxp = Number(1);
