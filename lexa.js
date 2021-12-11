@@ -2552,7 +2552,7 @@ case 'donate':
 
 		var _hismoney = JSON.parse(fs.readFileSync(`./data/users${args[1].replace('@','/')}/money.json`));	
 		var hismoney = _hismoney[0]	//--- money his
-		var _hisname = JSON.parse(fs.readFileSync(`./data/users${args[1].replace('@','/')}//name.json`));	
+		var _hisname = JSON.parse(fs.readFileSync(`./data/users${args[1].replace('@','/')}/name.json`));	
 		var hisname = _hisname[0]	//--- name
 				var mymon = Number(money);
 				var myam = Number(args[0]);
