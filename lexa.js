@@ -2839,12 +2839,12 @@ case 'setstickerpack':
 	if (args.length < 1) return reply(`${design} 𝑃𝑙𝑒𝑎𝑠𝑒 𝑒𝑛𝑡𝑒𝑟 𝑆𝑡𝑖𝑐𝑘𝑒𝑟𝑃𝑎𝑐𝑘 𝑛𝑎𝑚𝑒.`)
 
 var stickernow = args[0];
-fs.readFile(`./data/xp/${sender.split("@")[0]}/stickerpack.json`, 'utf-8', function(err, data) {
+fs.readFile(`./data/users/${sender.split("@")[0]}/stickerpack.json`, 'utf-8', function(err, data) {
     if (err) throw err;
 	
     var newValue = data.replace(`${stickerpack}`, stickernow);
 	
-    fs.writeFile(`./data/xp/${sender.split("@")[0]}/stickerpack.json`, newValue, 'utf-8', function(err, data) {
+    fs.writeFile(`./data/users/${sender.split("@")[0]}/stickerpack.json`, newValue, 'utf-8', function(err, data) {
         if (err) throw err;
     })
 })
@@ -2856,7 +2856,7 @@ case 'setmood':
 	if (!isVerify) return reply(userB())
 	if (args.length < 1) return reply(`${design} 𝑃𝑙𝑒𝑎𝑠𝑒 𝑒𝑛𝑡𝑒𝑟 𝑚𝑜𝑜𝑑.`)	
 var moodnow = args[0];
-fs.readFile(`./data/xp/${sender.split("@")[0]}/mood.json`, 'utf-8', function(err, data) {
+fs.readFile(`./data/users/${sender.split("@")[0]}/mood.json`, 'utf-8', function(err, data) {
     if (err) throw err;
 	
     var newValue = data.replace(`${mood}`, moodnow);
