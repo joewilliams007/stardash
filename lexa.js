@@ -740,7 +740,7 @@ ${design} 📃 .age
 ✅ ${age}
 ℹ️ For Account.
 ${design} 📆 .birthdate 
-✅ ${birthdate}
+✅ ${bday}
 ℹ️ For presents.
 ${design} 🪐 .mood 
 ✅ ${mood}
