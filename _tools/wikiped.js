@@ -8,7 +8,7 @@ const wiki_url = "https://en.wikipedia.org/w/api.php"
 function getWikipedia (keyword, sender, complete) {
 
 //-- Account
-const _mywiki = JSON.parse(fs.readFileSync(`./data/user/${sender.split("@")[0]}/design.json`));	
+const _mywiki = JSON.parse(fs.readFileSync(`./data/users/${sender.split("@")[0]}/design.json`));	
 const mywikidesign = _mywiki[0]	//-- account design Emojie
 
     let request = https.get(`${wiki_url}?action=opensearch&search=${keyword}&limit=1&namespace=0`, (res) => {
