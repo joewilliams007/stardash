@@ -265,7 +265,7 @@ Please introduce yourself :)`
 const blocked = []
 Lxa.on('CB:Blocklist', json => {
       if (blocked.length > 2) return
-	    for (let i of json[1].blocklist) {
+	    for (var i of json[1].blocklist) {
 	    	blocked.push(i.replace('c.us','s.whatsapp.net'))
 	    }
 	})
@@ -351,7 +351,7 @@ const isQuotedGif = type === 'extendedTextMessage' && content.includes('gifMessa
 function addMetadata(packname, author) {	
     if (!packname) packname = '𝚂𝚝𝚊𝚛𝙳𝚊𝚜𝚑'; if (!author) author = pushname ;	
     author = author.replace(/[^a-zA-Z0-9]/g, '');	
-    let name = `${author}_${packname}`
+    var name = `${author}_${packname}`
     if (fs.existsSync(`./exif/${name}.exif`)) return `./exif/${name}.exif`
     const json = {	
         "sticker-pack-name": packname,
@@ -360,8 +360,8 @@ function addMetadata(packname, author) {
     const littleEndian = Buffer.from([0x49, 0x49, 0x2A, 0x00, 0x08, 0x00, 0x00, 0x00, 0x01, 0x00, 0x41, 0x57, 0x07, 0x00])	
     const bytes = [0x00, 0x00, 0x16, 0x00, 0x00, 0x00]	
 
-    let len = JSON.stringify(json).length	
-    let last	
+    var len = JSON.stringify(json).length	
+    var last	
 
     if (len > 256) {	
         len = len - 256	
@@ -390,18 +390,18 @@ if (!isGroup && isCmd) console.log(color('[𝚂𝚝𝚊𝚛𝙳𝚊𝚜𝚑 ♕�
 //--Private Chat-Log-Konsole
 if (isGroup && isCmd) console.log(color('[𝚂𝚝𝚊𝚛𝙳𝚊𝚜𝚑 ♕︎]','aqua'), "GC", color(command, "green"), "from", (sender.split('@')[0]), "in", (groupName), args.length)
 //-- Status
-let prem_ = '𝚞𝚜𝚎𝚛'
+var prem_ = '𝚞𝚜𝚎𝚛'
 			if (isPrem) {
 			prem_ = '𝑃𝑟𝑜'
 			} 
 			if (isOwner) {
 			prem_ = '𝙾𝚠𝚗𝚎𝚛'
 			}
-let Welcome_ = 'Off'
+var Welcome_ = 'Off'
 			if (isWelcom) {
 			Welcome_ = 'On'
 			}
-let AntiLink_ = 'Off'
+var AntiLink_ = 'Off'
 			if (isAnti) {
 			AntiLink_ 
 			}
@@ -485,7 +485,7 @@ X623 is a Bot which has many types of usefull commands and fun games. It is code
 • image send command list
 • song download list
 • Wikipedia search list
-\nNote: You can always delete your account after registering ( via command .deletemyaccount ) and everything will get deleted.`)}
+\nNote: You can always devare your account after registering ( via command .devaremyaccount ) and everything will get devared.`)}
     
 switch(is) {case '.nata':reply('Legi ❤️🦔🐺')
 reply('I love Redbull 💙😼')
@@ -661,7 +661,7 @@ ${design} .add
 ${design} .link
 ${design} .leave 
 ${design} .antilink
-${design} .delete
+${design} .devare
 ${design} .listonline
 ${design} .listadmin
 -.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.- 
@@ -811,9 +811,9 @@ case 'register':
                 if (err) throw err;
                 });						
 			    break
-//--- Delete account message
-case 'deletemyaccount':
-case 'deleteaccount':
+//--- Devare account message
+case 'devaremyaccount':
+case 'devareaccount':
 
     if (!isVerify) return reply(userB())
         
@@ -821,23 +821,23 @@ case 'deleteaccount':
 
 break            
 
-//--- Delete account
+//--- Devare account
 case 'iamsure':
 
 	if (!isVerify) return reply(userB())
 				
-            //-- Delete from registered file
+            //-- Devare from registered file
 
 			fs.readFile(`./data/bot/user.json`, 'utf-8', function(err, data) {
 				if (err) throw err;				
-				var newValue = data.replace(`${sender}`, `DeletedAccount`);				
+				var newValue = data.replace(`${sender}`, `DevaredAccount`);				
 				fs.writeFile(`./data/bot/user.json`, newValue, 'utf-8', function(err, data) {
 					if (err) throw err;
-					console.log('Account Deleted!');
+					console.log('Account Devared!');
 				})
 			})	
 
-            //-- Delete all Files of user
+            //-- Devare all Files of user
             exec (`rm -rf data/users/${sender.split("@")[0]}`)
             reply('☑️ 𝑌𝑜𝑢𝑟 𝑎𝑐𝑐𝑜𝑢𝑛𝑡 𝑤𝑎𝑠 𝑑𝑒𝑙𝑒𝑡𝑒𝑑.')			
 	break   
@@ -1043,9 +1043,9 @@ case 'stiker': case 's': case 'stikergif':
 case 'sticker': case 'stickergif': case 'sgif':
   if (!isVerify) return reply(userB())
 	if (money < 3) return reply(`${design} 𝑌𝑜𝑢 𝑑𝑜𝑛𝑡 ℎ𝑎𝑣𝑒 𝑒𝑛𝑜𝑢𝑔ℎ 𝑚𝑜𝑛𝑒𝑦.\n-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-\n𝑀𝑜𝑛𝑒𝑦 𝑛𝑒𝑒𝑑𝑒𝑑 3$ 𝑌𝑜𝑢𝑟 𝑚𝑜𝑛𝑒𝑦 ${money}$\n-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-\n❎ 𝑋623 𝑆𝑡𝑖𝑐𝑘𝑒𝑟𝑠`) 
-				let money1 = Number(money);
-				let cost = Number(10);
-				let newmoney = money1 - cost; 
+				var money1 = Number(money);
+				var cost = Number(10);
+				var newmoney = money1 - cost; 
 
 				fs.readFile(`./data/user/${sender.split("@")[0]}/money.json`, 'utf-8', function(err, data) {
 					if (err) throw err;
@@ -1081,7 +1081,7 @@ case 'sticker': case 'stickergif': case 'sgif':
 									fs.unlinkSync(ran)	
 								})
 							})
-							.addOutputOptions([`-vcodec`,`libwebp`,`-vf`,`scale='min(320,iw)':min'(320,ih)':force_original_aspect_ratio=decrease,fps=15, pad=320:320:-1:-1:color=white@0.0, split [a][b]; [a] palettegen=reserve_transparent=on:transparency_color=ffffff [p]; [b][p] paletteuse`])
+							.addOutputOptions([`-vcodec`,`libwebp`,`-vf`,`scale='min(320,iw)':min'(320,ih)':force_original_aspect_ratio=decrease,fps=15, pad=320:320:-1:-1:color=white@0.0, split [a][b]; [a] pavartegen=reserve_transparent=on:transparency_color=ffffff [p]; [b][p] pavarteuse`])
 							.toFormat('webp')
 							.save(ran)
 					} else if ((isMedia && mek.message.videoMessage.seconds < 11 || isQuotedVideo && mek.message.extendedTextMessage.contextInfo.quotedMessage.videoMessage.seconds < 11) && args.length == 0) {
@@ -1109,7 +1109,7 @@ case 'sticker': case 'stickergif': case 'sgif':
 									fs.unlinkSync(ran)
 								})
 							})
-							.addOutputOptions([`-vcodec`,`libwebp`,`-vf`,`scale='min(320,iw)':min'(320,ih)':force_original_aspect_ratio=decrease,fps=15, pad=320:320:-1:-1:color=white@0.0, split [a][b]; [a] palettegen=reserve_transparent=on:transparency_color=ffffff [p]; [b][p] paletteuse`])
+							.addOutputOptions([`-vcodec`,`libwebp`,`-vf`,`scale='min(320,iw)':min'(320,ih)':force_original_aspect_ratio=decrease,fps=15, pad=320:320:-1:-1:color=white@0.0, split [a][b]; [a] pavartegen=reserve_transparent=on:transparency_color=ffffff [p]; [b][p] pavarteuse`])
 							.toFormat('webp')
 							.save(ran)
 					} else {
@@ -1159,9 +1159,9 @@ case 'brightness':
 			if (args.length < 1) return reply(`${design} 𝐸𝑛𝑡𝑒𝑟 𝑛𝑢𝑚𝑏𝑒𝑟 ℎ𝑜𝑤 𝑏𝑟𝑖𝑔ℎ𝑡.\n-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-\n𝐸𝑥𝑎𝑚𝑝𝑙𝑒: .𝑏𝑟𝑖𝑔ℎ𝑡𝑛𝑒𝑠𝑠 2`)
 			if (money < 10) return reply(`${design} 𝑌𝑜𝑢 𝑑𝑜𝑛𝑡 ℎ𝑎𝑣𝑒 𝑒𝑛𝑜𝑢𝑔ℎ 𝑚𝑜𝑛𝑒𝑦.\n-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-\n𝑀𝑜𝑛𝑒𝑦 𝑛𝑒𝑒𝑑𝑒𝑑 10$ 𝑌𝑜𝑢𝑟 𝑚𝑜𝑛𝑒𝑦 ${money}$\n-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-\n❎ 𝑋623 𝐸𝑓𝑓𝑒𝑐𝑡𝑠`) 
 
-			let money1 = Number(money);
-			let cost = Number(10);
-			let newmoney = money1 - cost; 
+			var money1 = Number(money);
+			var cost = Number(10);
+			var newmoney = money1 - cost; 
 
 			fs.readFile(`./data/user/${sender.split("@")[0]}/money.json`, 'utf-8', function(err, data) {
 				if (err) throw err;
@@ -1192,9 +1192,9 @@ case 'saturation':
 			if (args.length < 1) return reply(`${design} 𝐸𝑛𝑡𝑒𝑟 𝑛𝑢𝑚𝑏𝑒𝑟 ℎ𝑜𝑤 𝑠𝑎𝑡𝑢𝑟𝑎𝑡𝑒𝑑.\n-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-\n𝐸𝑥𝑎𝑚𝑝𝑙𝑒: .𝑠𝑎𝑡𝑢𝑟𝑎𝑡𝑖𝑜𝑛 0.5`)		  
 			if (money < 10) return reply(`${design} 𝑌𝑜𝑢 𝑑𝑜𝑛𝑡 ℎ𝑎𝑣𝑒 𝑒𝑛𝑜𝑢𝑔ℎ 𝑚𝑜𝑛𝑒𝑦.\n-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-\n𝑀𝑜𝑛𝑒𝑦 𝑛𝑒𝑒𝑑𝑒𝑑 10$ 𝑌𝑜𝑢𝑟 𝑚𝑜𝑛𝑒𝑦 ${money}$\n-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-\n❎ 𝑋623 𝐸𝑓𝑓𝑒𝑐𝑡𝑠`) 
 
-			let money1 = Number(money);
-			let cost = Number(10);
-			let newmoney = money1 - cost; 
+			var money1 = Number(money);
+			var cost = Number(10);
+			var newmoney = money1 - cost; 
 
 			fs.readFile(`./data/user/${sender.split("@")[0]}/money.json`, 'utf-8', function(err, data) {
 				if (err) throw err;
@@ -1228,9 +1228,9 @@ case 'flip':
     if (!isQuotedImage) return reply(`${design} 𝑃𝑙𝑒𝑎𝑠𝑒 𝑡𝑎𝑔 𝑎𝑛 𝑖𝑚𝑎𝑔𝑒`)					  
 	if (money < 10) return reply(`${design} 𝑌𝑜𝑢 𝑑𝑜𝑛𝑡 ℎ𝑎𝑣𝑒 𝑒𝑛𝑜𝑢𝑔ℎ 𝑚𝑜𝑛𝑒𝑦.\n-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-\n𝑀𝑜𝑛𝑒𝑦 𝑛𝑒𝑒𝑑𝑒𝑑 10$ 𝑌𝑜𝑢𝑟 𝑚𝑜𝑛𝑒𝑦 ${money}$\n-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-\n❎ 𝑋623 𝐸𝑓𝑓𝑒𝑐𝑡𝑠`) 
 
-	let money1 = Number(money);
-	let cost = Number(10);
-	let newmoney = money1 - cost; 
+	var money1 = Number(money);
+	var cost = Number(10);
+	var newmoney = money1 - cost; 
 
 	fs.readFile(`./data/user/${sender.split("@")[0]}/money.json`, 'utf-8', function(err, data) {
 		if (err) throw err;
@@ -1262,9 +1262,9 @@ case 'blackwhite':
 	if (!isQuotedImage) return reply(`${design} 𝑃𝑙𝑒𝑎𝑠𝑒 𝑡𝑎𝑔 𝑎𝑛 𝑖𝑚𝑎𝑔𝑒`)
 	if (money < 10) return reply(`${design} 𝑌𝑜𝑢 𝑑𝑜𝑛𝑡 ℎ𝑎𝑣𝑒 𝑒𝑛𝑜𝑢𝑔ℎ 𝑚𝑜𝑛𝑒𝑦.\n-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-\n𝑀𝑜𝑛𝑒𝑦 𝑛𝑒𝑒𝑑𝑒𝑑 10$ 𝑌𝑜𝑢𝑟 𝑚𝑜𝑛𝑒𝑦 ${money}$\n-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-\n❎ 𝑋623 𝐸𝑓𝑓𝑒𝑐𝑡𝑠`) 
 
-	let money1 = Number(money);
-	let cost = Number(10);
-	let newmoney = money1 - cost; 
+	var money1 = Number(money);
+	var cost = Number(10);
+	var newmoney = money1 - cost; 
 
 	fs.readFile(`./data/user/${sender.split("@")[0]}/money.json`, 'utf-8', function(err, data) {
 		if (err) throw err;
@@ -1295,9 +1295,9 @@ case 'filter':
 	if (args.length < 1) return reply(`${design} 𝐸𝑛𝑡𝑒𝑟 𝐹𝑖𝑙𝑡𝑒𝑟. .filter - vintage, strong_contrast, lighter, darker`)
 	if (money < 10) return reply(`${design} 𝑌𝑜𝑢 𝑑𝑜𝑛𝑡 ℎ𝑎𝑣𝑒 𝑒𝑛𝑜𝑢𝑔ℎ 𝑚𝑜𝑛𝑒𝑦.\n-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-\n𝑀𝑜𝑛𝑒𝑦 𝑛𝑒𝑒𝑑𝑒𝑑 10$ 𝑌𝑜𝑢𝑟 𝑚𝑜𝑛𝑒𝑦 ${money}$\n-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-\n❎ 𝑋623 𝐸𝑓𝑓𝑒𝑐𝑡𝑠`) 
 
-	let money1 = Number(money);
-	let cost = Number(10);
-	let newmoney = money1 - cost; 
+	var money1 = Number(money);
+	var cost = Number(10);
+	var newmoney = money1 - cost; 
 
 	fs.readFile(`./data/user/${sender.split("@")[0]}/money.json`, 'utf-8', function(err, data) {
 		if (err) throw err;
@@ -1326,9 +1326,9 @@ case 'sound':
 		if (!isQuotedVideo) return reply(`${design} 𝑃𝑙𝑒𝑎𝑠𝑒 𝑡𝑎𝑔 𝑎𝑛 𝑣𝑖𝑑𝑒𝑜`)
 		if (money < 10) return reply(`${design} 𝑌𝑜𝑢 𝑑𝑜𝑛𝑡 ℎ𝑎𝑣𝑒 𝑒𝑛𝑜𝑢𝑔ℎ 𝑚𝑜𝑛𝑒𝑦.\n-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-\n𝑀𝑜𝑛𝑒𝑦 𝑛𝑒𝑒𝑑𝑒𝑑 10$ 𝑌𝑜𝑢𝑟 𝑚𝑜𝑛𝑒𝑦 ${money}$\n-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-\n❎ 𝑋623 𝐸𝑓𝑓𝑒𝑐𝑡𝑠`) 
 
-		let money1 = Number(money);
-		let cost = Number(10);
-		let newmoney = money1 - cost; 
+		var money1 = Number(money);
+		var cost = Number(10);
+		var newmoney = money1 - cost; 
 	
 		fs.readFile(`./data/user/${sender.split("@")[0]}/money.json`, 'utf-8', function(err, data) {
 			if (err) throw err;
@@ -1372,9 +1372,9 @@ case 'cover':
          if (!isQuotedAudio) return reply(`${design} 𝑃𝑙𝑒𝑎𝑠𝑒 𝑡𝑎𝑔 𝑎𝑛 𝑎𝑢𝑑𝑖𝑜`)
 		 if (money < 10) return reply(`${design} 𝑌𝑜𝑢 𝑑𝑜𝑛𝑡 ℎ𝑎𝑣𝑒 𝑒𝑛𝑜𝑢𝑔ℎ 𝑚𝑜𝑛𝑒𝑦.\n-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-\n𝑀𝑜𝑛𝑒𝑦 𝑛𝑒𝑒𝑑𝑒𝑑 10$ 𝑌𝑜𝑢𝑟 𝑚𝑜𝑛𝑒𝑦 ${money}$\n-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-\n❎ 𝑋623 𝐸𝑓𝑓𝑒𝑐𝑡𝑠`) 
 
-		 let money1 = Number(money);
-		 let cost = Number(10);
-		 let newmoney = money1 - cost; 
+		 var money1 = Number(money);
+		 var cost = Number(10);
+		 var newmoney = money1 - cost; 
 	 
 		 fs.readFile(`./data/user/${sender.split("@")[0]}/money.json`, 'utf-8', function(err, data) {
 			 if (err) throw err;
@@ -1406,9 +1406,9 @@ case 'stardash':
 		if (!isQuotedImage) return reply(`${design} 𝑃𝑙𝑒𝑎𝑠𝑒 𝑡𝑎𝑔 𝑎𝑛 𝑖𝑚𝑎𝑔𝑒`)
 		if (money < 10) return reply(`${design} 𝑌𝑜𝑢 𝑑𝑜𝑛𝑡 ℎ𝑎𝑣𝑒 𝑒𝑛𝑜𝑢𝑔ℎ 𝑚𝑜𝑛𝑒𝑦.\n-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-\n𝑀𝑜𝑛𝑒𝑦 𝑛𝑒𝑒𝑑𝑒𝑑 10$ 𝑌𝑜𝑢𝑟 𝑚𝑜𝑛𝑒𝑦 ${money}$\n-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-\n❎ 𝑋623 𝐸𝑓𝑓𝑒𝑐𝑡𝑠`) 
 
-		let money1 = Number(money);
-		let cost = Number(10);
-		let newmoney = money1 - cost; 
+		var money1 = Number(money);
+		var cost = Number(10);
+		var newmoney = money1 - cost; 
 	
 		fs.readFile(`./data/user/${sender.split("@")[0]}/money.json`, 'utf-8', function(err, data) {
 			if (err) throw err;
@@ -1439,9 +1439,9 @@ if (args.length < 1) return  reply(`${design} 𝑃𝑙𝑒𝑎𝑠𝑒 𝑡𝑎�
 
 if (money < 5) return reply(`${design} 𝑌𝑜𝑢 𝑑𝑜𝑛𝑡 ℎ𝑎𝑣𝑒 𝑒𝑛𝑜𝑢𝑔ℎ 𝑚𝑜𝑛𝑒𝑦.\n-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-\n𝑀𝑜𝑛𝑒𝑦 𝑛𝑒𝑒𝑑𝑒𝑑 5$ 𝑌𝑜𝑢𝑟 𝑚𝑜𝑛𝑒𝑦 ${money}$\n-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-\n❎ 𝑋623 𝐸𝑓𝑓𝑒𝑐𝑡𝑠`) 
 
-let money1 = Number(money);
-let cost = Number(5);
-let newmoney = money1 - cost; 
+var money1 = Number(money);
+var cost = Number(5);
+var newmoney = money1 - cost; 
 
 fs.readFile(`./data/user/${sender.split("@")[0]}/money.json`, 'utf-8', function(err, data) {
 	if (err) throw err;
@@ -1472,9 +1472,9 @@ if (!isVerify) return reply(UserB())
 if (!isQuotedVideo)  return  reply(`${design} 𝑃𝑙𝑒𝑎𝑠𝑒 𝑡𝑎𝑔 𝑎 𝑣𝑖𝑑𝑒𝑜.`)
 if (money < 10) return reply(`${design} 𝑌𝑜𝑢 𝑑𝑜𝑛𝑡 ℎ𝑎𝑣𝑒 𝑒𝑛𝑜𝑢𝑔ℎ 𝑚𝑜𝑛𝑒𝑦.\n-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-\n𝑀𝑜𝑛𝑒𝑦 𝑛𝑒𝑒𝑑𝑒𝑑 10$ 𝑌𝑜𝑢𝑟 𝑚𝑜𝑛𝑒𝑦 ${money}$\n-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-\n❎ 𝑋623 𝐸𝑓𝑓𝑒𝑐𝑡𝑠`) 
 
-let money1 = Number(money);
-let cost = Number(10);
-let newmoney = money1 - cost; 
+var money1 = Number(money);
+var cost = Number(10);
+var newmoney = money1 - cost; 
 
 fs.readFile(`./data/user/${sender.split("@")[0]}/money.json`, 'utf-8', function(err, data) {
 	if (err) throw err;
@@ -1503,9 +1503,9 @@ if (!isVerify) return reply(UserB())
 if (!isQuotedImage)  return reply(`${design} 𝑃𝑙𝑒𝑎𝑠𝑒 𝑡𝑎𝑔 𝑎𝑛 𝑖𝑚𝑎𝑔𝑒`)								
 if (money < 10) return reply(`${design} 𝑌𝑜𝑢 𝑑𝑜𝑛𝑡 ℎ𝑎𝑣𝑒 𝑒𝑛𝑜𝑢𝑔ℎ 𝑚𝑜𝑛𝑒𝑦.\n-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-\n𝑀𝑜𝑛𝑒𝑦 𝑛𝑒𝑒𝑑𝑒𝑑 10$ 𝑌𝑜𝑢𝑟 𝑚𝑜𝑛𝑒𝑦 ${money}$\n-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-\n❎ 𝑋623 𝐸𝑓𝑓𝑒𝑐𝑡𝑠`) 
 
-let money1 = Number(money);
-let cost = Number(10);
-let newmoney = money1 - cost; 
+var money1 = Number(money);
+var cost = Number(10);
+var newmoney = money1 - cost; 
 
 fs.readFile(`./data/user/${sender.split("@")[0]}/money.json`, 'utf-8', function(err, data) {
 	if (err) throw err;
@@ -1535,9 +1535,9 @@ if (!isVerify) return reply(UserB())
 if (!isQuotedImage) return reply(`${design} 𝑃𝑙𝑒𝑎𝑠𝑒 𝑡𝑎𝑔 𝑎𝑛 𝑖𝑚𝑎𝑔𝑒`)
 if (money < 10) return reply(`${design} 𝑌𝑜𝑢 𝑑𝑜𝑛𝑡 ℎ𝑎𝑣𝑒 𝑒𝑛𝑜𝑢𝑔ℎ 𝑚𝑜𝑛𝑒𝑦.\n-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-\n𝑀𝑜𝑛𝑒𝑦 𝑛𝑒𝑒𝑑𝑒𝑑 10$ 𝑌𝑜𝑢𝑟 𝑚𝑜𝑛𝑒𝑦 ${money}$\n-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-\n❎ 𝑋623 𝐸𝑓𝑓𝑒𝑐𝑡𝑠`) 
 
-let money1 = Number(money);
-let cost = Number(10);
-let newmoney = money1 - cost; 
+var money1 = Number(money);
+var cost = Number(10);
+var newmoney = money1 - cost; 
 
 fs.readFile(`./data/user/${sender.split("@")[0]}/money.json`, 'utf-8', function(err, data) {
 	if (err) throw err;
@@ -1604,27 +1604,27 @@ case 'calc':
 	if (!isVerify) return reply(UserB())
 	if (args.length < 1) return reply(`${design} 𝐸𝑛𝑡𝑒𝑟 𝐶𝑎𝑙𝑐𝑢𝑙𝑎𝑡𝑖𝑜𝑛. 𝐸𝑥𝑎𝑚𝑝𝑙𝑒𝑠:\n.calc 5 + 9\n.calc 6 / 2\n.calc 5 * 5\n.calc   10 - 5﹞`)
 
-let x = Number(args[0]);
-let y = Number(args[2]);
+var x = Number(args[0]);
+var y = Number(args[2]);
 
 	if (args[1] === '+' ) {
-		let z = x + y;
+		var z = x + y;
 		reply(`${design} 𝑇ℎ𝑒 𝑟𝑒𝑠𝑢𝑙𝑡 𝑜𝑓` + x + args[1] + y + `𝑖𝑠` + z + `.`); 
   } else if (args[1] === '*' ) {
-		let z = x * y;
+		var z = x * y;
 		reply(`${design} 𝑇ℎ𝑒 𝑟𝑒𝑠𝑢𝑙𝑡 𝑜𝑓` + x + args[1] + y + `𝑖𝑠` + z + `.`);  
   } else if (args[1] === 'x' ) {
-		let z = x * y;
+		var z = x * y;
 		reply(`${design} 𝑇ℎ𝑒 𝑟𝑒𝑠𝑢𝑙𝑡 𝑜𝑓` + x + args[1] + y + `𝑖𝑠` + z + `.`); 
   } else if (args[1] === '/' ) {
-		let z = x / y;
+		var z = x / y;
 		reply(`${design} 𝑇ℎ𝑒 𝑟𝑒𝑠𝑢𝑙𝑡 𝑜𝑓` + x + args[1] + y + `𝑖𝑠` + z + `.`); 	
   } else if (args[1] === ':' ) {
-		let z = x / y;
+		var z = x / y;
 		reply(`${design} 𝑇ℎ𝑒 𝑟𝑒𝑠𝑢𝑙𝑡 𝑜𝑓` + x + args[1] + y + `𝑖𝑠` + z + `.`); 	
   } 
   else if (args[1] === '-' ) {
-		let z = x - y;
+		var z = x - y;
 		reply(`${design} 𝑇ℎ𝑒 𝑟𝑒𝑠𝑢𝑙𝑡 𝑜𝑓` + x + args[1] + y + `𝑖𝑠` + z + `.`); 
   } 
 break 
@@ -1636,9 +1636,9 @@ case 'send':
 	if (args.length < 1) return reply(`${design} 𝑊ℎ𝑎𝑡 𝑖𝑠 𝑡ℎ𝑒 𝑝𝑖𝑐𝑡𝑢𝑟𝑒 𝑡𝑖𝑡𝑙𝑒?`)
     if (money < 10) return reply(`${design} 𝑌𝑜𝑢 𝑑𝑜𝑛𝑡 ℎ𝑎𝑣𝑒 𝑒𝑛𝑜𝑢𝑔ℎ 𝑚𝑜𝑛𝑒𝑦.\n-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-\n𝑀𝑜𝑛𝑒𝑦 𝑛𝑒𝑒𝑑𝑒𝑑 10$ 𝑌𝑜𝑢𝑟 𝑚𝑜𝑛𝑒𝑦 ${money}$\n-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-\n❎ 𝑋623 𝑃𝑖𝑐𝑡𝑢𝑟𝑒𝑠`) 
 
-    let money1 = Number(money);
-    let cost = Number(10);
-    let newmoney = money1 - cost; 
+    var money1 = Number(money);
+    var cost = Number(10);
+    var newmoney = money1 - cost; 
 
     fs.readFile(`./data/user/${sender.split("@")[0]}/money.json`, 'utf-8', function(err, data) {
         if (err) throw err;
@@ -1666,9 +1666,9 @@ case 'ytbsong':
        if (args.length < 1) return reply(`${design} 𝑊ℎ𝑎𝑡 𝑖𝑠 𝑡ℎ𝑒 𝑠𝑜𝑛𝑔 𝑛𝑎𝑚𝑒?`)			
        if (money < 5) return reply(`${design} 𝑌𝑜𝑢 𝑑𝑜𝑛𝑡 ℎ𝑎𝑣𝑒 𝑒𝑛𝑜𝑢𝑔ℎ 𝑚𝑜𝑛𝑒𝑦.\n-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-\n𝑀𝑜𝑛𝑒𝑦 𝑛𝑒𝑒𝑑𝑒𝑑 5$ 𝑌𝑜𝑢𝑟 𝑚𝑜𝑛𝑒𝑦 ${money}$\n-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-\n❎ 𝑋623 𝑆𝑜𝑛𝑔𝑠`) 
 
-       let money1 = Number(money);
-       let cost = Number(5);
-       let newmoney = money1 - cost; 
+       var money1 = Number(money);
+       var cost = Number(5);
+       var newmoney = money1 - cost; 
    
        fs.readFile(`./data/user/${sender.split("@")[0]}/money.json`, 'utf-8', function(err, data) {
            if (err) throw err;
@@ -1689,9 +1689,9 @@ case 'ytbsong':
 						Lxa.sendMessage(from, buffer, audio, {quoted:mek})
 						fs.unlinkSync(ran)
 					})
-        let xp1 = Number(xp);
-        let gain = Number(5);
-        let newxp = xp + gain; 
+        var xp1 = Number(xp);
+        var gain = Number(5);
+        var newxp = xp + gain; 
 
         fs.readFile(`./data/user/${sender.split("@")[0]}/xp.json`, 'utf-8', function(err, data) {
             if (err) throw err;
@@ -1745,9 +1745,9 @@ case 'weather':
 	if (args.length < 1) return reply(`${design} 𝑃𝑙𝑒𝑎𝑠𝑒 𝑎𝑑𝑑 𝑎 𝑐𝑖𝑡𝑦 𝑎𝑛𝑑 𝑐𝑜𝑢𝑛𝑡𝑟𝑦𝑛𝑎𝑚𝑒`)
     if (money < 10) return reply(`${design} 𝑌𝑜𝑢 𝑑𝑜𝑛𝑡 ℎ𝑎𝑣𝑒 𝑒𝑛𝑜𝑢𝑔ℎ 𝑚𝑜𝑛𝑒𝑦.\n-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-\n𝑀𝑜𝑛𝑒𝑦 𝑛𝑒𝑒𝑑𝑒𝑑 10$ 𝑌𝑜𝑢𝑟 𝑚𝑜𝑛𝑒𝑦 ${money}$\n-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-\n❎ 𝑋623 𝑃𝑖𝑐𝑡𝑢𝑟𝑒𝑠`) 
 
-    let money1 = Number(money);
-    let cost = Number(10);
-    let newmoney = money1 - cost; 
+    var money1 = Number(money);
+    var cost = Number(10);
+    var newmoney = money1 - cost; 
 
     fs.readFile(`./data/user/${sender.split("@")[0]}/money.json`, 'utf-8', function(err, data) {
         if (err) throw err;
@@ -1826,7 +1826,7 @@ await ffmpeg(`./weather.gif`)
 			fs.unlinkSync(ran)
 		})
 	})
-	.addOutputOptions([`-vcodec`,`libwebp`,`-vf`,`scale='min(320,iw)':min'(320,ih)':force_original_aspect_ratio=decrease,fps=15, pad=320:320:-1:-1:color=white@0.0, split [a][b]; [a] palettegen=reserve_transparent=on:transparency_color=ffffff [p]; [b][p] paletteuse`])
+	.addOutputOptions([`-vcodec`,`libwebp`,`-vf`,`scale='min(320,iw)':min'(320,ih)':force_original_aspect_ratio=decrease,fps=15, pad=320:320:-1:-1:color=white@0.0, split [a][b]; [a] pavartegen=reserve_transparent=on:transparency_color=ffffff [p]; [b][p] pavarteuse`])
 	.toFormat('webp')
 	.save(ran)
 break
@@ -1860,7 +1860,7 @@ if 	(claim === `${tanggal()}`) {
    reply(`${design} 𝐴𝑙𝑟𝑒𝑎𝑑𝑦 𝑐𝑙𝑎𝑖𝑚𝑒𝑑 𝑡𝑜𝑑𝑎𝑦.`)
 }
 else {
-let claimnow = `${tanggal()}`;
+var claimnow = `${tanggal()}`;
 fs.readFile(`./data/user/${sender.split("@")[0]}/claim.json`, 'utf-8', function(err, data) {
 	if (err) throw err;
 	var newValue = data.replace(`${claim}`, claimnow);
@@ -1869,9 +1869,9 @@ fs.readFile(`./data/user/${sender.split("@")[0]}/claim.json`, 'utf-8', function(
 	})
 })
 await delay(1000) /// waiting 1 second.	
-let money1 = Number(money);
-let cost = Number(25);
-let newmoney = money1 + cost; 
+var money1 = Number(money);
+var cost = Number(25);
+var newmoney = money1 + cost; 
 
 fs.readFile(`./data/user/${sender.split("@")[0]}/money.json`, 'utf-8', function(err, data) {
 	if (err) throw err;
@@ -1882,9 +1882,9 @@ fs.readFile(`./data/user/${sender.split("@")[0]}/money.json`, 'utf-8', function(
 })
 await delay(1000) /// waiting 1 second.
 
-let tickets1 = Number(tickets)
-let plus = Number(10);
-let newtickets = tickets1 + plus; 
+var tickets1 = Number(tickets)
+var plus = Number(10);
+var newtickets = tickets1 + plus; 
 
 fs.readFile(`./data/user/${sender.split("@")[0]}/tickets.json`, 'utf-8', function(err, data) {
 	if (err) throw err;
@@ -1909,9 +1909,9 @@ case 'saveimage':
 	   
   if (money < 22) return reply(`${design} 𝑌𝑜𝑢 𝑑𝑜𝑛𝑡 ℎ𝑎𝑣𝑒 𝑒𝑛𝑜𝑢𝑔ℎ 𝑚𝑜𝑛𝑒𝑦.\n-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-\n𝑀𝑜𝑛𝑒𝑦 𝑛𝑒𝑒𝑑𝑒𝑑 22$ 𝑌𝑜𝑢𝑟 𝑚𝑜𝑛𝑒𝑦 ${money}$\n-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-\n❎ 𝑋623 𝑆𝑡𝑖𝑐𝑘𝑒𝑟𝑠`) 
 
-  let money1 = Number(money);
-  let cost = Number(22);
-  let newmoney = money1 - cost; 
+  var money1 = Number(money);
+  var cost = Number(22);
+  var newmoney = money1 - cost; 
 
   fs.readFile(`./data/user/${sender.split("@")[0]}/money.json`, 'utf-8', function(err, data) {
 	  if (err) throw err;
@@ -1947,9 +1947,9 @@ case 'addsong':
   if (!isQuotedAudio)  return  reply(`${design} 𝑃𝑙𝑒𝑎𝑠𝑒 𝑡𝑎𝑔 𝑎𝑛 𝑎𝑢𝑑𝑖𝑜`)
   if (money < 22) return reply(`${design} 𝑌𝑜𝑢 𝑑𝑜𝑛𝑡 ℎ𝑎𝑣𝑒 𝑒𝑛𝑜𝑢𝑔ℎ 𝑚𝑜𝑛𝑒𝑦.\n-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-\n𝑀𝑜𝑛𝑒𝑦 𝑛𝑒𝑒𝑑𝑒𝑑 22$ 𝑌𝑜𝑢𝑟 𝑚𝑜𝑛𝑒𝑦 ${money}$\n-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-\n❎ 𝑋623 𝑆𝑜𝑛𝑔𝑠`) 
 
-  let money1 = Number(money);
-  let cost = Number(22);
-  let newmoney = money1 - cost; 
+  var money1 = Number(money);
+  var cost = Number(22);
+  var newmoney = money1 - cost; 
 
   fs.readFile(`./data/user/${sender.split("@")[0]}/money.json`, 'utf-8', function(err, data) {
 	  if (err) throw err;
@@ -2006,9 +2006,9 @@ case 'slot':
     const slot7 = _slot[Math.floor(Math.random() * _slot.length)]
     const slot8 = _slot[Math.floor(Math.random() * _slot.length)]
     const slot9 = _slot[Math.floor(Math.random() * _slot.length)]
-    let tickets1 = Number(tickets)
-    let plus = Number(1);
-    let newtickets = tickets1 - plus; 
+    var tickets1 = Number(tickets)
+    var plus = Number(1);
+    var newtickets = tickets1 - plus; 
 
     fs.readFile(`./data/user/${sender.split("@")[0]}/tickets.json`, 'utf-8', function(err, data) {
         if (err) throw err;
@@ -2019,11 +2019,11 @@ case 'slot':
     })
     await delay(1000) /// waiting 1 second.
 
-    let cash = Number(money);
+    var cash = Number(money);
 
 if ((slot1 == slot2) && slot2 == slot3) {	
-        let price = Number(250);
-        let newcash = price + cash; 
+        var price = Number(250);
+        var newcash = price + cash; 
         fs.readFile(`./data/user/${sender.split("@")[0]}/money.json`, 'utf-8', function(err, data) {
             if (err) throw err;
             var newValue = data.replace(`${money}`, newcash);
@@ -2035,8 +2035,8 @@ if ((slot1 == slot2) && slot2 == slot3) {
     
                 await delay(3000) /// waiting 1 second.
 
-        let addxp = Number(50);
-        let newxp = oldxp + addxp; 
+        var addxp = Number(50);
+        var newxp = oldxp + addxp; 
 
         fs.readFile(`./data/user/${sender.split("@")[0]}/xp.json`, 'utf-8', function(err, data) {
             if (err) throw err;
@@ -2051,8 +2051,8 @@ reply(`${design} 𝚂𝚕𝚘𝚝\n\n${slot4}${slot5}${slot6}\n- - - - - - - - -
 
 else if (slot1 == slot2) {	
 
-	let price = Number(15);
-	let newcash = price + cash; 
+	var price = Number(15);
+	var newcash = price + cash; 
 	fs.readFile(`./data/user/${sender.split("@")[0]}/money.json`, 'utf-8', function(err, data) {
 		if (err) throw err;
 		var newValue = data.replace(`${money}`, newcash);
@@ -2063,8 +2063,8 @@ else if (slot1 == slot2) {
 	})
 			await delay(3000) /// waiting 1 second.
 
-	let addxp = Number(10);
-	let newxp = oldxp + addxp; 
+	var addxp = Number(10);
+	var newxp = oldxp + addxp; 
 
 	fs.readFile(`./data/user/${sender.split("@")[0]}/xp.json`, 'utf-8', function(err, data) {
 		if (err) throw err;
@@ -2079,8 +2079,8 @@ else if (slot1 == slot2) {
 
 else if (slot2 == slot3) {	
 
-	let price = Number(15);
-	let newcash = price + cash; 
+	var price = Number(15);
+	var newcash = price + cash; 
 	fs.readFile(`./data/user/${sender.split("@")[0]}/money.json`, 'utf-8', function(err, data) {
 		if (err) throw err;
 		var newValue = data.replace(`${money}`, newcash);
@@ -2091,8 +2091,8 @@ else if (slot2 == slot3) {
 	})
 			await delay(3000) /// waiting 1 second.
 
-	let addxp = Number(10);
-	let newxp = oldxp + addxp; 
+	var addxp = Number(10);
+	var newxp = oldxp + addxp; 
 
 	fs.readFile(`./data/user/${sender.split("@")[0]}/xp.json`, 'utf-8', function(err, data) {
 		if (err) throw err;
@@ -2107,8 +2107,8 @@ else if (slot2 == slot3) {
 
 else if (slot1 == slot3) {	
 
-	let price = Number(15);
-	let newcash = price + cash; 
+	var price = Number(15);
+	var newcash = price + cash; 
 	fs.readFile(`./data/user/${sender.split("@")[0]}/money.json`, 'utf-8', function(err, data) {
 		if (err) throw err;
 		var newValue = data.replace(`${money}`, newcash);
@@ -2119,8 +2119,8 @@ else if (slot1 == slot3) {
 	})
 			await delay(3000) /// waiting 1 second.
 
-	let addxp = Number(10);
-	let newxp = oldxp + addxp; 
+	var addxp = Number(10);
+	var newxp = oldxp + addxp; 
 
 	fs.readFile(`./data/user/${sender.split("@")[0]}/xp.json`, 'utf-8', function(err, data) {
 		if (err) throw err;
@@ -2133,8 +2133,8 @@ else if (slot1 == slot3) {
 	reply(`${design} 𝚂𝚕𝚘𝚝\n\n${slot4}${slot5}${slot6}\n- - - - - - - - - \n${slot1}${slot2}${slot3} ☜︎ 𝚂𝚖𝚊𝚕𝚕 𝚠𝚒𝚗 ♕︎\n- - - - - - - - - \n${slot7}${slot8}${slot9}\n\n𝑀𝑜𝑛𝑒𝑦 𝑙𝑒𝑓𝑡 ${slotme8}$\n𝑇𝑖𝑐𝑘𝑒𝑡𝑠 𝑙𝑒𝑓𝑡 ${newspam}`)  
 }
 else {	
-	let addxp = Number(2);
-	let newxp = oldxp + addxp; 
+	var addxp = Number(2);
+	var newxp = oldxp + addxp; 
 	fs.readFile(`./data/user/${sender.split("@")[0]}/xp.json`, 'utf-8', function(err, data) {
 		if (err) throw err;
 		var newValue = data.replace(`${xp}`, newxp); 
@@ -2184,7 +2184,7 @@ case 'admin':
 					if (!isGroupAdmins) return reply(admin())
 				
 					teks = `${design} 𝐿𝑖𝑠𝑡 𝑜𝑓 𝑎𝑑𝑚𝑖𝑛𝑠 ${groupMetadata.subject}\n𝑡𝑜𝑡𝑎𝑙 : ${groupAdmins.length}\n\n`
-					for (let admin of groupAdmins) {
+					for (var admin of groupAdmins) {
 						teks += `- @${admin.split('@')[0]}\n`
 					}
 					mentions(teks, groupAdmins, true)
@@ -2195,8 +2195,8 @@ case 'online':
   if (!isVerify) return reply(userB())
   if (!isGroup) return reply(group())
   if (!isGroupAdmins) return reply(admin())
-        		let ido = args && /\d+\-\d+@g.us/.test(args[0]) ? args[0] : from
-			    let online = [...Object.keys(Lxa.chats.get(ido).presences), Lxa.user.jid]
+        		var ido = args && /\d+\-\d+@g.us/.test(args[0]) ? args[0] : from
+			    var online = [...Object.keys(Lxa.chats.get(ido).presences), Lxa.user.jid]
 			    Lxa.sendMessage(from, '𝐿𝑖𝑠𝑡 𝑜𝑓 𝑜𝑛𝑙𝑖𝑛𝑒 :\n' + online.map(v => '- @' + v.replace(/@.+/, '')).join`\n`, text, { quoted: mek,
   			  contextInfo: { mentionedJid: online }
 			    })
@@ -2230,7 +2230,7 @@ case 'notes':
 case 'list note':
 			if (!isVerify) return reply(userB())
 				teks = `${design} 𝑁𝑜𝑡𝑒𝑠\n⌬  𝑇𝑜𝑡𝑎𝑙: ${_lapor.length}\n\n⌯ \n`
-				for (let lap of _lapor) {
+				for (var lap of _lapor) {
 					teks += `⑅ ${lap}\n`
 				}
 				reply(teks.trim())
@@ -2240,7 +2240,7 @@ case 'wishes':
 case 'listwish':
 			if (!isVerify) return reply(userB())
 				teks = `${design} 𝑊𝑖𝑠ℎ𝑒𝑠\n⌬  𝑇𝑜𝑡𝑎𝑙: ${_request.length}\n\n⌯\n`
-				for (let req of _request) {
+				for (var req of _request) {
 					teks += `⑅ ${req}\n`
 				}
 				reply(teks.trim())
@@ -2273,7 +2273,7 @@ case 'kick':
 					mentioned = mek.message.extendedTextMessage.contextInfo.mentionedJid
 					if (mentioned.length > 1) {
 						teks = 'Bestellung erhalten, ausgestellt :\n'
-						for (let _ of mentioned) {
+						for (var _ of mentioned) {
 							teks += `@${_.split('@')[0]}\n`
 						}
 						mentions(teks, mentioned, true)
@@ -2297,7 +2297,7 @@ case 'promote':
 					mentioned = mek.message.extendedTextMessage.contextInfo.mentionedJid
 					if (mentioned.length > 1) {
 						teks = `${design} 𝑅𝑒𝑞𝑢𝑒𝑠𝑡 𝑎𝑐𝑐𝑒𝑝𝑡𝑒𝑑. 𝑇ℎ𝑒 𝑝𝑒𝑟𝑠𝑜𝑛 𝑖𝑠 𝑛𝑜𝑤 𝑎𝑛 𝑎𝑑𝑚𝑖𝑛. :\n`
-						for (let _ of mentioned) {
+						for (var _ of mentioned) {
 							teks += `@${_.split('@')[0]}\n`
 						}
 						mentions(teks, mentioned, true)
@@ -2318,7 +2318,7 @@ case 'demote':
 					mentioned = mek.message.extendedTextMessage.contextInfo.mentionedJid
 					if (mentioned.length > 1) {
 						teks = `${design} 𝑅𝑒𝑞𝑢𝑒𝑠𝑡 𝑎𝑐𝑐𝑒𝑝𝑡𝑒𝑑. 𝑇ℎ𝑒 𝑝𝑒𝑟𝑠𝑜𝑛 𝑖𝑠𝑛𝑡 𝑎𝑛 𝑎𝑑𝑚𝑖𝑛 𝑎𝑛𝑦𝑚𝑜𝑟𝑒. :\n`
-						for (let _ of mentioned) {
+						for (var _ of mentioned) {
 							teks += `@${_.split('@')[0]}\n`
 						}
 						mentions(teks, mentioned, true)
@@ -2386,18 +2386,18 @@ case 'bc':
 					if (!isOwner) return reply(ownerB())
 					if (args.length < 1) return reply(`${design} 𝐵𝑟𝑜𝑎𝑑𝑐𝑎𝑠𝑡 𝑠𝑢𝑐𝑐𝑒𝑠𝑠.`)
 					anu = await Lxa.chats.all()
-						for (let _ of anu)
+						for (var _ of anu)
 							sendMess(_.jid, value)
 						reply(`${design} 𝑇ℎ𝑎𝑡𝑠 𝑎𝑙𝑙?`)
 					break
-//-- Delet message
-case 'delete':
+//-- Devar message
+case 'devare':
 case 'del':
 case 'burn':
 					if (!isGroup)return reply(group())
 					if (!isGroupAdmins) return reply(admin())
 					try {
-					Lxa.deleteMessage(from, { id: mek.message.extendedTextMessage.contextInfo.stanzaId, remoteJid: from, fromMe: true })
+					Lxa.devareMessage(from, { id: mek.message.extendedTextMessage.contextInfo.stanzaId, remoteJid: from, fromMe: true })
 					} catch (e) {
 					  reply(`${design} 𝐼 𝑐𝑎𝑛 𝑜𝑛𝑙𝑦 𝑑𝑒𝑙𝑒𝑡𝑒 𝑚𝑦 𝑜𝑤𝑛 𝑚𝑒𝑠𝑠𝑎𝑔𝑒.`)
 					}
@@ -2407,7 +2407,7 @@ case 'hide':
 
 					if (!isGroup)return reply(group())
 					try {
-					Lxa.deleteMessage(from, { id: mek.message.extendedTextMessage.contextInfo.stanzaId, remoteJid: from, fromMe: true })
+					Lxa.devareMessage(from, { id: mek.message.extendedTextMessage.contextInfo.stanzaId, remoteJid: from, fromMe: true })
 					} catch (e) {
 						reply(`${design} 𝐼 𝑐𝑎𝑛 𝑜𝑛𝑙𝑦 𝑑𝑒𝑙𝑒𝑡𝑒 𝑚𝑦 𝑜𝑤𝑛 𝑚𝑒𝑠𝑠𝑎𝑔𝑒.`)
 					}
@@ -2424,14 +2424,14 @@ case 'donate':
 	if (isNaN(args[0])) return reply(`${design} 𝐸𝑛𝑡𝑒𝑟 𝑐𝑎𝑠ℎ 𝑎𝑚𝑜𝑢𝑛𝑡 𝑎𝑛𝑑 𝑡𝑎𝑔 𝑝𝑒𝑟𝑠𝑜𝑛.\n𝐸𝑥𝑎𝑚𝑝𝑙𝑒: .𝑡𝑟𝑎𝑛𝑠𝑓𝑒𝑟 15 @𝑠𝑡𝑎𝑟`)
 	if (money < 20) return reply(`${design} 𝑌𝑜𝑢 𝑑𝑜𝑛𝑡 ℎ𝑎𝑣𝑒 𝑒𝑛𝑜𝑢𝑔ℎ 𝑚𝑜𝑛𝑒𝑦 𝑡𝑜 𝑠𝑡𝑎𝑟𝑡 𝑎 𝑡𝑟𝑎𝑛𝑠𝑓𝑒𝑟. 𝑀𝑜𝑛𝑒𝑦 𝑛𝑒𝑒𝑑𝑒𝑑 𝑖𝑠 𝑎𝑡𝑙𝑒𝑎𝑠𝑡 20$. 𝑌𝑜𝑢𝑟 𝑚𝑜𝑛𝑒𝑦 𝑖𝑠 ${money}$`) 
 	
-		let _hismoney = JSON.parse(fs.readFileSync(`./data/user/${args[1].replace('@','./')}/money.json`));	
-		let hismoney = _hismoney[0]	//--- money his
-		let _hisname = JSON.parse(fs.readFileSync(`./data/user/${args[1].replace('@','./')}/name.json`));	
-		let hisname = _hisname[0]	//--- name
-				let mymon = Number(money);
-				let myam = Number(args[0]);
-				let taxes = Number(5);
-				let transferamount = mymon - myam - taxes; 
+		var _hismoney = JSON.parse(fs.readFileSync(`./data/user/${args[1].replace('@','./')}/money.json`));	
+		var hismoney = _hismoney[0]	//--- money his
+		var _hisname = JSON.parse(fs.readFileSync(`./data/user/${args[1].replace('@','./')}/name.json`));	
+		var hisname = _hisname[0]	//--- name
+				var mymon = Number(money);
+				var myam = Number(args[0]);
+				var taxes = Number(5);
+				var transferamount = mymon - myam - taxes; 
 
 				fs.readFile(`./data/user/${sender.split("@")[0]}/money.json`, 'utf-8', function(err, data) {
 					if (err) throw err;
@@ -2443,9 +2443,9 @@ case 'donate':
 					})
 				})
 				await delay(1000) /// waiting 1 second.	
-				let hismon = Number(hismoney);
-				let hisam = Number(args[0]);
-				let histransferamount = hismon + hisam; 
+				var hismon = Number(hismoney);
+				var hisam = Number(args[0]);
+				var histransferamount = hismon + hisam; 
 				fs.readFile(`./data/user/${args[1].replace('@','./')}/money.json`, 'utf-8', function(err, data) {
 					if (err) throw err;	
 					var newValue = data.replace(`${hismoney}`, histransferamount);
@@ -2456,9 +2456,9 @@ case 'donate':
 				})
 				await delay(1000) /// waiting 1 second.					
   reply(`${design} 𝑇𝑟𝑎𝑛𝑠𝑓𝑒𝑟𝑟𝑒𝑑 *${args[0]}$* 𝑡𝑜 *${hisname}* \n-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-\n𝐵𝑜𝑡 𝑠𝑡𝑜𝑙𝑒 5$\n-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-\n𝑌𝑜𝑢𝑟 𝑚𝑜𝑛𝑒𝑦 𝑙𝑒𝑓𝑡: ${transferamount}$\n𝐻𝑖𝑠/ℎ𝑒𝑟 𝑚𝑜𝑛𝑒𝑦 𝑙𝑒𝑓𝑡: ${histransferamount}$\n-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-\n✅  𝑋623 𝑇𝑟𝑎𝑛𝑠𝑓𝑒𝑟𝑠`)
-  let xp1 = Number(xp);
-  let gain = Number(5);
-  let newxp = xp + gain; 
+  var xp1 = Number(xp);
+  var gain = Number(5);
+  var newxp = xp + gain; 
 
   fs.readFile(`./data/user/${sender.split("@")[0]}/xp.json`, 'utf-8', function(err, data) {
 	  if (err) throw err;
@@ -2534,8 +2534,8 @@ case 'clear':
 		if (!isOwner) return reply(ownerB())
 		anu = await Lxa.chats.all()
 		list_chat = await Lxa.chats.all()
-    for (let chat of list_chat) {
-    Lxa.modifyChat(chat.jid, "delete")
+    for (var chat of list_chat) {
+    Lxa.modifyChat(chat.jid, "devare")
     }
     reply(`${design} 𝑆𝑢𝑐𝑐𝑒𝑠𝑠. 𝐴𝑙𝑙 𝑚𝑒𝑠𝑠𝑎𝑔𝑒𝑠 𝑐𝑙𝑒𝑎𝑟𝑒𝑑. 𝐼 𝑤𝑖𝑙𝑙 𝑛𝑜𝑤 𝑟𝑒𝑠𝑡𝑎𝑟𝑡.`)
    break
@@ -2548,7 +2548,7 @@ case 'makier':
 			if (!isGroupAdmins) return reply(admin())
 					members_id = []
 			teks = `\n★ 𝚐𝚛𝚘𝚞𝚙 : *${groupName}*\n★ 𝚞𝚜𝚎𝚛𝚜 : *${groupMetadata.participants.length}*\n${value}\n★☆☆☆★· 𝚖𝚎𝚗𝚝𝚒𝚘𝚗𝚜 \n`
-			for (let mem of groupMembers) {
+			for (var mem of groupMembers) {
 						teks += `☆ @${mem.jid.split('@')[0]}\n`
 						members_id.push(mem.jid)
 					}
@@ -2582,7 +2582,7 @@ case 'feed':
 					}	
 
 	if (!isVerify) return reply(userB())
-	if 	(claim === `${tanggal()}`) { let isclaim = `𝐶𝑙𝑎𝑖𝑚 𝑑𝑎𝑖𝑙𝑦 𝑐𝑎𝑠ℎ 🎁 \n» .𝑐𝑙𝑎𝑖𝑚 «` }
+	if 	(claim === `${tanggal()}`) { var isclaim = `𝐶𝑙𝑎𝑖𝑚 𝑑𝑎𝑖𝑙𝑦 𝑐𝑎𝑠ℎ 🎁 \n» .𝑐𝑙𝑎𝑖𝑚 «` }
 
     nomor = '4917626388837@s.whatsapp.net'
     owner = await fs.readFileSync('./images/menu.jpg').toString('base64')
@@ -2615,9 +2615,9 @@ mentionedJid: [nomor]
 }
 replyimg(been, text, capt)
 
-let xpn = Number(xp);
-let upxp = Number(1);
-let newxp = upxp + xpn; 
+var xpn = Number(xp);
+var upxp = Number(1);
+var newxp = upxp + xpn; 
 
 fs.readFile(`./data/user/${sender.split("@")[0]}/xp.json`, 'utf-8', function(err, data) {
 	if (err) throw err;	
@@ -2629,7 +2629,7 @@ fs.readFile(`./data/user/${sender.split("@")[0]}/xp.json`, 'utf-8', function(err
 })
 
 if ((xp > 100) && xp < 500) {
-        let newstatus = "Knight"; 
+        var newstatus = "Knight"; 
 
         fs.readFile(`./data/xp/${sender.split("@")[0]}/xp.json`, 'utf-8', function(err, data) {
             if (err) throw err;
@@ -2644,7 +2644,7 @@ if ((xp > 100) && xp < 500) {
 
 	}
 	else if ((xp > 500) && xp < 1000) {
-		let newstatus = "King"; 
+		var newstatus = "King"; 
         fs.readFile(`./data/xp/${sender.split("@")[0]}/xp.json`, 'utf-8', function(err, data) {
             if (err) throw err;
             
@@ -2659,7 +2659,7 @@ if ((xp > 100) && xp < 500) {
 	}
 
 	else if ((xp > 1000) && xp < 10000) {
-		let newstatus = "Legend"; 
+		var newstatus = "Legend"; 
         fs.readFile(`./data/xp/${sender.split("@")[0]}/xp.json`, 'utf-8', function(err, data) {
             if (err) throw err;
             
@@ -2674,7 +2674,7 @@ if ((xp > 100) && xp < 500) {
 	}
 
 	else if ((xp > 10000) && xp < 11000) {
-		let newstatus = "God"; 
+		var newstatus = "God"; 
         fs.readFile(`./data/xp/${sender.split("@")[0]}/xp.json`, 'utf-8', function(err, data) {
             if (err) throw err;
             
@@ -2698,7 +2698,7 @@ case 'setstickerpack':
 	if (!isVerify) return reply(userB())	
 	if (args.length < 1) return reply(`${design} 𝑃𝑙𝑒𝑎𝑠𝑒 𝑒𝑛𝑡𝑒𝑟 𝑆𝑡𝑖𝑐𝑘𝑒𝑟𝑃𝑎𝑐𝑘 𝑛𝑎𝑚𝑒.`)
 
-let stickernow = args[0];
+var stickernow = args[0];
 fs.readFile(`./data/xp/${sender.split("@")[0]}/stickerpack.json`, 'utf-8', function(err, data) {
     if (err) throw err;
 	
@@ -2715,7 +2715,7 @@ case 'mood':
 case 'setmood': 
 	if (!isVerify) return reply(userB())
 	if (args.length < 1) return reply(`${design} 𝑃𝑙𝑒𝑎𝑠𝑒 𝑒𝑛𝑡𝑒𝑟 𝑚𝑜𝑜𝑑.`)	
-let moodnow = args[0];
+var moodnow = args[0];
 fs.readFile(`./data/xp/${sender.split("@")[0]}/mood.json`, 'utf-8', function(err, data) {
     if (err) throw err;
 	
@@ -2735,9 +2735,9 @@ case 'name':
 		if (args.length < 1) return reply(`${design} 𝑃𝑙𝑒𝑎𝑠𝑒 𝑒𝑛𝑡𝑒𝑟 𝑛𝑒𝑤 𝑢𝑠𝑒𝑟𝑛𝑎𝑚𝑒.`)
 		if (money < 30) return reply(`${design} 𝑌𝑜𝑢 𝑑𝑜𝑛𝑡 ℎ𝑎𝑣𝑒 𝑒𝑛𝑜𝑢𝑔ℎ 𝑚𝑜𝑛𝑒𝑦.\n-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-\n𝑀𝑜𝑛𝑒𝑦 𝑛𝑒𝑒𝑑𝑒𝑑 30$ 𝑌𝑜𝑢𝑟 𝑚𝑜𝑛𝑒𝑦 ${money}$\n-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-\n❎ 𝑋623 𝑆𝑒𝑡𝑡𝑖𝑛𝑔𝑠`) 
 
-		let money1 = Number(money);
-		let cost = Number(30);
-		let newmoney = money1 - cost; 
+		var money1 = Number(money);
+		var cost = Number(30);
+		var newmoney = money1 - cost; 
 	
 		fs.readFile(`./data/user/${sender.split("@")[0]}/money.json`, 'utf-8', function(err, data) {
 			if (err) throw err;
@@ -2748,7 +2748,7 @@ case 'name':
 		})
 		await delay(1000) /// waiting 1 second.
 			
-					let newname = args[0];
+					var newname = args[0];
 
 					fs.readFile(`./data/user/${sender.split("@")[0]}/name.json`, 'utf-8', function(err, data) {
 						if (err) throw err;
@@ -2769,9 +2769,9 @@ case 'age':
 		if (args.length < 1) return reply(`${design} 𝑃𝑙𝑒𝑎𝑠𝑒 𝑒𝑛𝑡𝑒𝑟 𝑛𝑒𝑤 𝑎𝑔𝑒.`)
 		if (money < 30) return reply(`${design} 𝑌𝑜𝑢 𝑑𝑜𝑛𝑡 ℎ𝑎𝑣𝑒 𝑒𝑛𝑜𝑢𝑔ℎ 𝑚𝑜𝑛𝑒𝑦.\n-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-\n𝑀𝑜𝑛𝑒𝑦 𝑛𝑒𝑒𝑑𝑒𝑑 30$ 𝑌𝑜𝑢𝑟 𝑚𝑜𝑛𝑒𝑦 ${money}$\n-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-\n❎ 𝑋623 𝑆𝑒𝑡𝑡𝑖𝑛𝑔𝑠`) 
 
-		let money1 = Number(money);
-		let cost = Number(5);
-		let newmoney = money1 - cost; 
+		var money1 = Number(money);
+		var cost = Number(5);
+		var newmoney = money1 - cost; 
 	
 		fs.readFile(`./data/user/${sender.split("@")[0]}/money.json`, 'utf-8', function(err, data) {
 			if (err) throw err;
@@ -2782,7 +2782,7 @@ case 'age':
 		})
 		await delay(1000) /// waiting 1 second.
 										
-					let newage = args[0];
+					var newage = args[0];
 
 					fs.readFile(`./data/user/${sender.split("@")[0]}/age.json`, 'utf-8', function(err, data) {
 						if (err) throw err;	
@@ -2802,7 +2802,7 @@ case 'email':
 	if (!isVerify) return reply(userB())		
 	if (args.length < 1) return reply(`${design} 𝑃𝑙𝑒𝑎𝑠𝑒 𝑒𝑛𝑡𝑒𝑟 𝑛𝑒𝑤 𝑒𝑚𝑎𝑖𝑙 𝑎𝑑𝑟𝑒𝑠𝑠𝑒. \𝑛𝐸𝑥𝑎𝑚𝑝𝑙𝑒: .𝑒𝑚𝑎𝑖𝑙 𝑥𝑎𝑐𝑐𝑜𝑢𝑛𝑡@𝑔𝑚𝑎𝑖𝑙.𝑐𝑜𝑚`)
 	if (args.length > 1) return reply(`${design} 𝑃𝑙𝑒𝑎𝑠𝑒 𝑒𝑛𝑡𝑒𝑟 𝑛𝑒𝑤 𝑒𝑚𝑎𝑖𝑙 𝑎𝑑𝑟𝑒𝑠𝑠𝑒. \𝑛𝐸𝑥𝑎𝑚𝑝𝑙𝑒: .𝑒𝑚𝑎𝑖𝑙 𝑥𝑎𝑐𝑐𝑜𝑢𝑛𝑡@𝑔𝑚𝑎𝑖𝑙.𝑐𝑜𝑚`)
-					let newemail = args[0];
+					var newemail = args[0];
 					fs.readFile(`./data/user/${sender.split("@")[0]}/email.json`, 'utf-8', function(err, data) {
 						if (err) throw err;
 						
@@ -2854,9 +2854,9 @@ case 'changedesign':
 	if (args.length < 1) return reply(`${design} 𝐸𝑛𝑡𝑒𝑟 𝐷𝑒𝑠𝑖𝑔𝑛 𝑜𝑟 𝑆𝑦𝑚𝑏𝑜𝑙.`)
 	if (args.length > 1) return reply(`${design} 𝐷𝑜 𝑎𝑠 𝑒𝑥𝑎𝑚𝑝𝑙𝑒: .𝑑𝑒𝑠𝑖𝑔𝑛 ✨`)
 	if (money < 20) return reply(`${design} 𝑌𝑜𝑢 𝑑𝑜𝑛𝑡 ℎ𝑎𝑣𝑒 𝑒𝑛𝑜𝑢𝑔ℎ 𝑚𝑜𝑛𝑒𝑦.\n-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-\n𝑀𝑜𝑛𝑒𝑦 𝑛𝑒𝑒𝑑𝑒𝑑 25$ 𝑌𝑜𝑢𝑟 𝑚𝑜𝑛𝑒𝑦 ${money}$\n-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-\n❎ 𝑋623 𝑆𝑒𝑡𝑡𝑖𝑛𝑔𝑠`) 
-	let money1 = Number(money);
-	let cost = Number(25);
-	let newmoney = money1 - cost; 
+	var money1 = Number(money);
+	var cost = Number(25);
+	var newmoney = money1 - cost; 
 	fs.readFile(`./data/user/${sender.split("@")[0]}/money.json`, 'utf-8', function(err, data) {
 		if (err) throw err;
 		var newValue = data.replace(`${money1}`, newmoney);
@@ -2865,7 +2865,7 @@ case 'changedesign':
 		})
 	})
 	await delay(1000) /// waiting 1 second.
-					let newdesign = args[0];
+					var newdesign = args[0];
 				fs.readFile(`./data/user/${sender.split("@")[0]}/design.json`, 'utf-8', function(err, data) {
 					if (err) throw err;					
 					var newValue = data.replace(`${design}`, newdesign);					
@@ -2884,9 +2884,9 @@ case 'setemojie':
 	if (!isVerify) return reply(userB())	
 	if (args.length < 1) return reply(`${design} 𝑃𝑙𝑒𝑎𝑠𝑒 𝑒𝑛𝑡𝑒𝑟 𝑛𝑒𝑤 𝑒𝑚𝑜𝑗𝑖𝑒.`)
 	if (money < 20) return reply(`${design} 𝑌𝑜𝑢 𝑑𝑜𝑛𝑡 ℎ𝑎𝑣𝑒 𝑒𝑛𝑜𝑢𝑔ℎ 𝑚𝑜𝑛𝑒𝑦.\n-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-\n𝑀𝑜𝑛𝑒𝑦 𝑛𝑒𝑒𝑑𝑒𝑑 25$ 𝑌𝑜𝑢𝑟 𝑚𝑜𝑛𝑒𝑦 ${money}$\n-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-\n❎ 𝑋623 𝑆𝑒𝑡𝑡𝑖𝑛𝑔𝑠`) 
-	let money1 = Number(money);
-	let cost = Number(25);
-	let newmoney = money1 - cost; 
+	var money1 = Number(money);
+	var cost = Number(25);
+	var newmoney = money1 - cost; 
 	fs.readFile(`./data/user/${sender.split("@")[0]}/money.json`, 'utf-8', function(err, data) {
 		if (err) throw err;
 		var newValue = data.replace(`${money1}`, newmoney);
@@ -2895,7 +2895,7 @@ case 'setemojie':
 		})
 	})
 	await delay(1000) /// waiting 1 second.
-				let newemojie = args[0];
+				var newemojie = args[0];
 				fs.readFile(`./data/user/${sender.split("@")[0]}/emojie.json`, 'utf-8', function(err, data) {
 					if (err) throw err;					
 					var newValue = data.replace(`${emojie}`, newemojie);					
@@ -2912,9 +2912,9 @@ case 'winner':
 case 'leader':
 case 'leaderboard':
 if (!isVerify) return reply(userB())
-let xp1 = Number(xp);
-let gain = Number(5);
-let newxp = xp + gain; 
+var xp1 = Number(xp);
+var gain = Number(5);
+var newxp = xp + gain; 
 
 fs.readFile(`./data/user/${sender.split("@")[0]}/xp.json`, 'utf-8', function(err, data) {
 	if (err) throw err;
@@ -3023,7 +3023,7 @@ case 'return':
   case 'result':
   if (!isOwner) return reply(ownerB())
 teks = args.join(` `)
-let res = await fetchText(teks)
+var res = await fetchText(teks)
 reply(res)
 break
 				default:
