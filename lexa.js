@@ -459,7 +459,7 @@ switch(is) { case '.symbol': reply(`✅ 𝑌𝑜𝑢 𝑐𝑎𝑛 𝑐ℎ𝑜�
 switch(is) { case '.mimi': reply('I wana live in Korea😭💜') 
 reply('Taes wifey💜💍✨😫') 
 reply('🤕💜')}
- 
+
 switch(is) {
 case '🖇️':
 reply(`☑️ 𝑇𝑒𝑟𝑚𝑠 𝑜𝑓 𝑆𝑒𝑟𝑣𝑖𝑐𝑒\n-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-\n» What is X623?\n
@@ -487,7 +487,9 @@ X623 is a Bot which has many types of usefull commands and fun games. It is code
 • Wikipedia search list
 \nNote: You can always delete your account after registering ( via command .deletemyaccount ) and everything will get deleted.`)}
     
-switch(is) {case '.nata':reply('Legi ❤️🦔🐺')reply('I love Redbull 💙😼')reply('🍉🍉🍉')}
+switch(is) {case '.nata':reply('Legi ❤️🦔🐺')
+reply('I love Redbull 💙😼')
+reply('🍉🍉🍉')}
 switch(is) {case 'ily':reply('ily2')}	
 switch(is) {case '.stars':case '.sterne':reply('★✰✯☆✩✵✫𖣔۞⍟✪')}	
 switch(is) {case '.textmojie':case '.textemojie':reply('ʕ•ᴥ•ʔ ฅ^•ﻌ•^ฅ ʕ •́؈•̀ ₎ ༼ つ ◕◡◕ ༽つ  ♡´･ᴗ･`♡')}	
