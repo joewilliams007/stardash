@@ -299,7 +299,10 @@ if (isVerify && isCmd) {
 		const tickets = _tickets[0]	//--- tickets
 		const _mood = JSON.parse(fs.readFileSync(`./data/users/${sender.split("@")[0]}/mood.json`));
 		const mood = _mood[0]	//--- mood
-
+      } catch {
+console.log(color(`Not registered.`,`aqua`))
+      }
+    }
 
     if (isCmd) Lxa.chatRead(from)  
 //-- other
@@ -2557,7 +2560,6 @@ case 'makier':
 //---X623-Whatsapp-Bot------------------------------------------------------------------------------------------------------------------------// 
 //--- Feed
 case 'feed':
-case 'me':
 					function kyun(seconds){
 						function pad(s){
 						return (s < 10 ? '0' : '') + s;
@@ -3013,8 +3015,6 @@ or
 	}
 break
 //----------------------------------------------------------------------------------------------------------------------------------------------------
-
-		
 //---
 case 'return':
   if (!isOwner) return reply(ownerB())
@@ -3035,5 +3035,5 @@ break
 	})
 }
 starts()
-}
+
 //-- More ? Füge dich hinzu
