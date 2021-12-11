@@ -294,8 +294,8 @@ if (isVerify && isCmd) {
     var messages = _messages[0]	//--- messages
     var _messagesnumber = JSON.parse(fs.readFileSync(`./data/user/${sender.split("@")[0]}/messagesnumber.json`));
     var messagesnumber = _messagesnumber[0]	//--- messagesnumber
-    var _location = JSON.parse(fs.readFileSync(`./data/user/${sender.split("@")[0]}/location.json`));
-    var location = _location[0]	//--- location
+    var _userlocation = JSON.parse(fs.readFileSync(`./data/user/${sender.split("@")[0]}/location.json`));
+    var userlocation = _userlocation[0]	//--- location
     var _accdate = JSON.parse(fs.readFileSync(`./data/user/${sender.split("@")[0]}/accdate.json`));
     var accdate = _accdate[0]	//--- accdate
     var _claim = JSON.parse(fs.readFileSync(`./data/user/${sender.split("@")[0]}/claim.json`));
