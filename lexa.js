@@ -458,7 +458,7 @@ reply('Taes wifey💜💍✨😫')
 reply('🤕💜')}
 
 switch(is) {
-case '🖇️':
+case '.tos':
 reply(`☑️ 𝑇𝑒𝑟𝑚𝑠 𝑜𝑓 𝑆𝑒𝑟𝑣𝑖𝑐𝑒\n-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-\n» What is X623?\n
 X623 is a Bot which has many types of usefull commands and fun games. It is coded by the developer joewilliams007 whom you can find on Github
 \n» What happens when i register?\n\nWhen you register to our Bot, an Account file is created. At the start it includes:\n
@@ -694,7 +694,7 @@ case 'registrieren':
 case 'register':
 
 				if (isVerify) return reply('✅ 𝑌𝑜𝑢 𝑎𝑟𝑒 𝑎𝑙𝑟𝑒𝑎𝑑𝑦 𝑟𝑒𝑔𝑖𝑠𝑡𝑒𝑟𝑒𝑑.') 
-				if (args.length < 1) return reply(`☑️  𝑅𝑒𝑔𝑖𝑠𝑡𝑟𝑎𝑡𝑖𝑜𝑛\n𝐵𝑦 𝑟𝑒𝑔𝑖𝑠𝑡𝑒𝑟𝑖𝑛𝑔 𝑦𝑜𝑢 𝑎𝑔𝑟𝑒𝑒 𝑡𝑜 𝑡ℎ𝑒 𝑏𝑜𝑡𝑠 𝑇𝑜𝑆. 𝑉𝑖𝑒𝑤 𝑡ℎ𝑒𝑚 𝑏𝑦 𝑠𝑒𝑛𝑑𝑖𝑛𝑔 𝑡ℎ𝑒 𝑒𝑚𝑜𝑗𝑖𝑒 » ✉️ «\n-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-\nℹ️ 𝐻𝑜𝑤 𝑡𝑜 𝑟𝑒𝑔𝑖𝑠𝑡𝑒𝑟\n.𝑟𝑒𝑔𝑖𝑠𝑡𝑒𝑟 𝑆𝑡𝑎𝑟`)
+				if (args.length < 1) return reply(`☑️  𝑅𝑒𝑔𝑖𝑠𝑡𝑟𝑎𝑡𝑖𝑜𝑛\n𝐵𝑦 𝑟𝑒𝑔𝑖𝑠𝑡𝑒𝑟𝑖𝑛𝑔 𝑦𝑜𝑢 𝑎𝑔𝑟𝑒𝑒 𝑡𝑜 𝑡ℎ𝑒 𝑏𝑜𝑡𝑠 𝑇𝑜𝑆. 𝑉𝑖𝑒𝑤 𝑡ℎ𝑒𝑚 𝑏𝑦 𝑠𝑒𝑛𝑑𝑖𝑛𝑔 » .tos «\n-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-\nℹ️ 𝐻𝑜𝑤 𝑡𝑜 𝑟𝑒𝑔𝑖𝑠𝑡𝑒𝑟\n.𝑟𝑒𝑔𝑖𝑠𝑡𝑒𝑟 𝑆𝑡𝑎𝑟`)
 			    if (args.length > 1) return reply(`☑️  𝑅𝑒𝑔𝑖𝑠𝑡𝑟𝑎𝑡𝑖𝑜𝑛\n-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-\nℹ️ 𝑃𝑙𝑒𝑎𝑠𝑒 𝑜𝑛𝑙𝑦 𝑢𝑠𝑒 𝑜𝑛𝑒 𝑛𝑎𝑚𝑒. 𝐸𝑥𝑎𝑚𝑝𝑙𝑒 𝑔𝑖𝑣𝑒𝑛: .𝑟𝑒𝑔𝑖𝑠𝑡𝑒𝑟 𝑆𝑡𝑎𝑟`) 
 			
                         function kyun(seconds){
@@ -729,6 +729,9 @@ case 'register':
 
             //-- Create Files for user with random id
             const userid = Math.floor(Math.random() * 10000000)
+
+			exec(`mkdir ./data/users/${sender.split("@")[0]}`)
+			await delay(1000) /// waiting 1 second.
 									
                 fs.appendFile(`./data/users/${sender.split("@")[0]}/money.json`, `["100"]`, function (err) {				
                 if (err) throw err;
