@@ -2940,7 +2940,7 @@ fs.appendFile(`./session/winner2.json`, `["${xp}", "${pushname}", "${status}"]`,
   });
 }
 
-else if ((Number(xp) >= Number(winner3))  {						
+else if ((Number(xp) >= Number(winner3)))  {						
     exec(`rm -rf ./session/winner2.json`)
     await delay(3000) /// waiting 1 second.
 fs.appendFile(`./session/winner2.json`, `["${xp}", "${pushname}", "${status}"]`, function (err) {				
