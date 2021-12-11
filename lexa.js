@@ -2259,7 +2259,7 @@ else if (slot1 == slot3) {
 }
 else {	
 	var addxp = Number(2);
-	var newxp = oldxp + addxp; 
+	var newxp = xp + addxp; 
 	fs.readFile(`./data/users/${sender.split("@")[0]}/xp.json`, 'utf-8', function(err, data) {
 		if (err) throw err;
 		var newValue = data.replace(`${xp}`, newxp); 
