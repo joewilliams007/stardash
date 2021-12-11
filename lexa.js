@@ -2584,7 +2584,9 @@ case 'feed':
 					}	
 
 	if (!isVerify) return reply(userB())
-	if 	(claim === `${tanggal()}`) { var isclaim = `𝐶𝑙𝑎𝑖𝑚 𝑑𝑎𝑖𝑙𝑦 𝑐𝑎𝑠ℎ 🎁 \n» .𝑐𝑙𝑎𝑖𝑚 «` }
+	if (claim === `${tanggal()}`) { 
+		var isclaim = `𝐶𝑙𝑎𝑖𝑚 𝑑𝑎𝑖𝑙𝑦 𝑐𝑎𝑠ℎ 🎁 \n» .𝑐𝑙𝑎𝑖𝑚 «` 
+	}
 
     nomor = '4917626388837@s.whatsapp.net'
     owner = await fs.readFileSync('./images/menu.jpg').toString('base64')
