@@ -402,7 +402,7 @@ const usercmd = () => {
 	fs.writeFileSync(`./data/user/${sender.split("@")[0]}/userhit.json`, JSON.stringify(userhit))
 }
   if (isCmd) cmdadd()
-  const reqcmd = JSON.parse(fs.readFileSync(`./data/user/${sender.split("@")[0]}/userhit.json`))[0].totalcmd
+  const sreqcmd = JSON.parse(fs.readFileSync(`./data/user/${sender.split("@")[0]}/userhit.json`))[0].totalcmd
 //--- Total command
 const cmdadd = () => {
 	hit[0].totalcmd += 1
