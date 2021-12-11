@@ -2700,10 +2700,11 @@ case 'feed':
 					let isclaim;
 					try{	
 						if (claim === `${tanggal()}`) { 
-						isclaim = `𝐶𝑙𝑎𝑖𝑚 𝑑𝑎𝑖𝑙𝑦 𝑐𝑎𝑠ℎ 🎁 \n» .𝑐𝑙𝑎𝑖𝑚 «` 
+							isclaim = ``
 						} 
 						else { 
-							isclaim = `` 
+							
+							isclaim = `𝐶𝑙𝑎𝑖𝑚 𝑑𝑎𝑖𝑙𝑦 𝑐𝑎𝑠ℎ 🎁 \n» .𝑐𝑙𝑎𝑖𝑚 «`
 							} 
 						}catch (err){
 						
