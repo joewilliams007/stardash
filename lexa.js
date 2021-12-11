@@ -2161,7 +2161,7 @@ if ((slot1 == slot2) && slot2 == slot3) {
                 await delay(3000) /// waiting 1 second.
 
         var addxp = Number(50);
-        var newxp = oldxp + addxp; 
+        var newxp = xp + addxp; 
 
         fs.readFile(`./data/users/${sender.split("@")[0]}/xp.json`, 'utf-8', function(err, data) {
             if (err) throw err;
@@ -2189,7 +2189,7 @@ else if (slot1 == slot2) {
 			await delay(3000) /// waiting 1 second.
 
 	var addxp = Number(10);
-	var newxp = oldxp + addxp; 
+	var newxp = xp + addxp; 
 
 	fs.readFile(`./data/users/${sender.split("@")[0]}/xp.json`, 'utf-8', function(err, data) {
 		if (err) throw err;
@@ -2217,7 +2217,7 @@ else if (slot2 == slot3) {
 			await delay(3000) /// waiting 1 second.
 
 	var addxp = Number(10);
-	var newxp = oldxp + addxp; 
+	var newxp = xp + addxp; 
 
 	fs.readFile(`./data/users/${sender.split("@")[0]}/xp.json`, 'utf-8', function(err, data) {
 		if (err) throw err;
@@ -2245,7 +2245,7 @@ else if (slot1 == slot3) {
 			await delay(3000) /// waiting 1 second.
 
 	var addxp = Number(10);
-	var newxp = oldxp + addxp; 
+	var newxp = xp + addxp; 
 
 	fs.readFile(`./data/users/${sender.split("@")[0]}/xp.json`, 'utf-8', function(err, data) {
 		if (err) throw err;
