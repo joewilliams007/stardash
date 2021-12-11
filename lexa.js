@@ -404,10 +404,10 @@ const usercmd = () => {
   if (isCmd) usercmd()
   const sreqcmd = JSON.parse(fs.readFileSync(`./data/user/${sender.split("@")[0]}/userhit.json`))[0].totalcmd
 //--- Total command
-const cmdadd = () => {
-	hit[0].totalcmd += 1
-	fs.writeFileSync('./data/totalhit.json', JSON.stringify(hit))
-}
+//const cmdadd = () => {
+//	hit[0].totalcmd += 1
+//	fs.writeFileSync('./data/totalhit.json', JSON.stringify(hit))
+//}
   if (isCmd) cmdadd()
   const reqcmd = JSON.parse(fs.readFileSync('./data/totalhit.json'))[0].totalcmd
 //--Member limit
