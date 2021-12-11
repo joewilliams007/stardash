@@ -284,10 +284,10 @@ const botNumber = Lxa.user.jid
 	}catch (err){
 		console.log(error(err.message));
 	}
-		let ;
+		let username;
 		try{			
 		let _username = JSON.parse(fs.readFileSync(`./data/users/${sender.split("@")[0]}/username.json`));
-		let username = _username[0]	//--- usersname	
+		username = _username[0]	//--- usersname	
 	}catch (err){
 		console.log(error(err.message));
 	}
@@ -361,10 +361,10 @@ const botNumber = Lxa.user.jid
 	}catch (err){
 		console.log(error(err.message));
 	}
-		let ;
+		let messages;
 		try{	
 		let _messages = JSON.parse(fs.readFileSync(`./data/users/${sender.split("@")[0]}/messages.json`));
-		let messages = _messages[0]	//--- messages
+		messages = _messages[0]	//--- messages
 	}catch (err){
 		console.log(error(err.message));
 	}
