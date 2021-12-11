@@ -2549,9 +2549,9 @@ case 'donate':
 	if (isNaN(args[0])) return reply(`${design} 𝐸𝑛𝑡𝑒𝑟 𝑐𝑎𝑠ℎ 𝑎𝑚𝑜𝑢𝑛𝑡 𝑎𝑛𝑑 𝑡𝑎𝑔 𝑝𝑒𝑟𝑠𝑜𝑛.\n𝐸𝑥𝑎𝑚𝑝𝑙𝑒: .𝑡𝑟𝑎𝑛𝑠𝑓𝑒𝑟 15 @𝑠𝑡𝑎𝑟`)
 	if (money < 20) return reply(`${design} 𝑌𝑜𝑢 𝑑𝑜𝑛𝑡 ℎ𝑎𝑣𝑒 𝑒𝑛𝑜𝑢𝑔ℎ 𝑚𝑜𝑛𝑒𝑦 𝑡𝑜 𝑠𝑡𝑎𝑟𝑡 𝑎 𝑡𝑟𝑎𝑛𝑠𝑓𝑒𝑟. 𝑀𝑜𝑛𝑒𝑦 𝑛𝑒𝑒𝑑𝑒𝑑 𝑖𝑠 𝑎𝑡𝑙𝑒𝑎𝑠𝑡 20$. 𝑌𝑜𝑢𝑟 𝑚𝑜𝑛𝑒𝑦 𝑖𝑠 ${money}$`) 
 	
-		var _hismoney = JSON.parse(fs.readFileSync(`./data/users/${args[1].replace('@','./')}/money.json`));	
+		var _hismoney = JSON.parse(fs.readFileSync(`./data/users/${args[1].replace('@')[0]}/money.json`));	
 		var hismoney = _hismoney[0]	//--- money his
-		var _hisname = JSON.parse(fs.readFileSync(`./data/users/${args[1].replace('@','./')}/name.json`));	
+		var _hisname = JSON.parse(fs.readFileSync(`./data/users/${args[1].replace('@')[0]}/name.json`));	
 		var hisname = _hisname[0]	//--- name
 				var mymon = Number(money);
 				var myam = Number(args[0]);
