@@ -2697,28 +2697,25 @@ case 'feed':
 								return `${day}. ${myMonths[bulan]} ${year}`
 					}	
 
+					let isclaim;
+					try{	
+						if (claim === `${tanggal()}`) { 
+						isclaim = `𝐶𝑙𝑎𝑖𝑚 𝑑𝑎𝑖𝑙𝑦 𝑐𝑎𝑠ℎ 🎁 \n» .𝑐𝑙𝑎𝑖𝑚 «` 
+						} 
+						else { 
+							isclaim = `` 
+							} 
+						}catch (err){
+						
+						}
+
 	if (!isVerify) return reply(userB())
-	if (claim === `${tanggal()}`) { 
-		var isclaim = `𝐶𝑙𝑎𝑖𝑚 𝑑𝑎𝑖𝑙𝑦 𝑐𝑎𝑠ℎ 🎁 \n» .𝑐𝑙𝑎𝑖𝑚 «` 
-	}
 
     nomor = '4917626388837@s.whatsapp.net'
     owner = await fs.readFileSync('./images/mrf.jpeg').toString('base64')
     capt = `${design} 𝑁𝑒𝑤𝑠 𝑓𝑒𝑒𝑑`
     const been1 = {
 		
-
-		let isclaim;
-		try{	
-			if (claim === `${tanggal()}`) { 
-			isclaim = `𝐶𝑙𝑎𝑖𝑚 𝑑𝑎𝑖𝑙𝑦 𝑐𝑎𝑠ℎ 🎁 \n» .𝑐𝑙𝑎𝑖𝑚 «` 
-			} 
-			else { 
-				isclaim = `` 
-				} 
-			}catch (err){
-			
-			}
 
     text: `» ${pushname}
 » ${status}
