@@ -1174,64 +1174,64 @@ case 'sticker': case 'stickergif': case 'sgif':
  
 				reply(`${design} 𝐶𝑟𝑒𝑎𝑡𝑖𝑛𝑔 𝑆𝑡𝑖𝑐𝑘𝑒𝑟 . . . 1/1\n-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-\n𝑀𝑜𝑛𝑒𝑦 𝑙𝑒𝑓𝑡 ${newmoney}$\n-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-\n_Tipp: ${tipp}_\n-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-\n❇️ 𝑋623 𝑆𝑡𝑖𝑐𝑘𝑒𝑟𝑠`)
 
-					if ((isMedia && !mek.message.videoMessage || isQuotedImage) && args.length == 0) {
-						const encmedia = isQuotedImage ? JSON.parse(JSON.stringify(mek).replace('quotedM','m')).message.extendedTextMessage.contextInfo : mek
-						const media = await Lxa.downloadAndSaveMediaMessage(encmedia)
-						ran = getRandom('.webp')
-						await ffmpeg(`./${media}`)
-							.input(media)
-							.on('start', function (cmd) {
-								console.log(`Started : ${cmd}`)
+				if ((isMedia && !mek.message.videoMessage || isQuotedImage) && args.length == 0) {
+					const encmedia = isQuotedImage ? JSON.parse(JSON.stringify(mek).replace('quotedM','m')).message.extendedTextMessage.contextInfo : mek
+					const media = await Lxa.downloadAndSaveMediaMessage(encmedia)
+					ran = getRandom('.webp')
+					await ffmpeg(`./${media}`)
+						.input(media)
+						.on('start', function (cmd) {
+							console.log(`Started : ${cmd}`)
+						})
+						.on('error', function (err) {
+							console.log(`Error : ${err}`)
+							fs.unlinkSync(media)
+							reply(stick)
+						})
+						.on('end', function () {
+							console.log('Finish')
+							exec(`webpmux -set exif ${addMetadata('StarDash', stickerpack)} ${ran} -o ${ran}`, async (error) => {
+								if (error) return reply(stick())
+								Lxa.sendMessage(from, fs.readFileSync(ran), sticker, {quoted: mek})
+								fs.unlinkSync(media)	
+								fs.unlinkSync(ran)	
 							})
-							.on('error', function (err) {
-								console.log(`Error : ${err}`)
+						})
+						.addOutputOptions([`-vcodec`,`libwebp`,`-vf`,`scale='min(320,iw)':min'(320,ih)':force_original_aspect_ratio=decrease,fps=15, pad=320:320:-1:-1:color=white@0.0, split [a][b]; [a] palettegen=reserve_transparent=on:transparency_color=ffffff [p]; [b][p] paletteuse`])
+						.toFormat('webp')
+						.save(ran)
+				} else if ((isMedia && mek.message.videoMessage.seconds < 11 || isQuotedVideo && mek.message.extendedTextMessage.contextInfo.quotedMessage.videoMessage.seconds < 11) && args.length == 0) {
+					const encmedia = isQuotedVideo ? JSON.parse(JSON.stringify(mek).replace('quotedM','m')).message.extendedTextMessage.contextInfo : mek
+					const media = await Lxa.downloadAndSaveMediaMessage(encmedia)
+					const tippsticker = _tipps[Math.floor(Math.random() * _tipps.length)]
+					ran = getRandom('.webp')
+					await ffmpeg(`./${media}`)
+						.inputFormat(media.split('.')[1])
+						.on('start', function (cmd) {
+							console.log(`Started : ${cmd}`)
+						})
+						.on('error', function (err) {
+							console.log(`Error : ${err}`)
+							fs.unlinkSync(media)
+							tipe = media.endsWith('.mp4') ? 'video' : 'gif'
+							reply(`falsch`)
+					  })
+						.on('end', function () {
+							console.log('Finish')
+							exec(`webpmux -set exif ${addMetadata('StarDash', stickerpack)} ${ran} -o ${ran}`, async (error) => {
+								if (error) return reply(stick())
+								Lxa.sendMessage(from, fs.readFileSync(ran), sticker, {quoted: mek})			
 								fs.unlinkSync(media)
-								reply(stick)
+								fs.unlinkSync(ran)
 							})
-							.on('end', function () {
-								console.log('Finish')
-								exec(`webpmux -set exif ${addMetadata('StarDash', stickerpack)} ${ran} -o ${ran}`, async (error) => {
-									if (error) return reply(stick())
-									Lxa.sendMessage(from, fs.readFileSync(ran), sticker, {quoted: mek})
-									fs.unlinkSync(media)	
-									fs.unlinkSync(ran)	
-								})
-							})
-							.addOutputOptions([`-vcodec`,`libwebp`,`-vf`,`scale='min(320,iw)':min'(320,ih)':force_original_aspect_ratio=decrease,fps=15, pad=320:320:-1:-1:color=white@0.0, split [a][b]; [a] pavartegen=reserve_transparent=on:transparency_color=ffffff [p]; [b][p] pavarteuse`])
-							.toFormat('webp')
-							.save(ran)
-					} else if ((isMedia && mek.message.videoMessage.seconds < 11 || isQuotedVideo && mek.message.extendedTextMessage.contextInfo.quotedMessage.videoMessage.seconds < 11) && args.length == 0) {
-						const encmedia = isQuotedVideo ? JSON.parse(JSON.stringify(mek).replace('quotedM','m')).message.extendedTextMessage.contextInfo : mek
-						const media = await Lxa.downloadAndSaveMediaMessage(encmedia)
-						const tippsticker = _tipps[Math.floor(Math.random() * _tipps.length)]
-						ran = getRandom('.webp')
-						await ffmpeg(`./${media}`)
-							.inputFormat(media.split('.')[1])
-							.on('start', function (cmd) {
-								console.log(`Started : ${cmd}`)
-							})
-							.on('error', function (err) {
-								console.log(`Error : ${err}`)
-								fs.unlinkSync(media)
-								tipe = media.endsWith('.mp4') ? 'video' : 'gif'
-								reply(`falsch`)
-						  })
-							.on('end', function () {
-								console.log('Finish')
-								exec(`webpmux -set exif ${addMetadata('StarDash', stickerpack)} ${ran} -o ${ran}`, async (error) => {
-									if (error) return reply(stick())
-									Lxa.sendMessage(from, fs.readFileSync(ran), sticker, {quoted: mek})			
-									fs.unlinkSync(media)
-									fs.unlinkSync(ran)
-								})
-							})
-							.addOutputOptions([`-vcodec`,`libwebp`,`-vf`,`scale='min(320,iw)':min'(320,ih)':force_original_aspect_ratio=decrease,fps=15, pad=320:320:-1:-1:color=white@0.0, split [a][b]; [a] pavartegen=reserve_transparent=on:transparency_color=ffffff [p]; [b][p] pavarteuse`])
-							.toFormat('webp')
-							.save(ran)
-					} else {
-						reply(`${design} 𝑃𝑙𝑒𝑎𝑠𝑒 𝑡𝑎𝑔 𝑎 𝑝𝑖𝑐𝑡𝑢𝑟𝑒.`)
-					}
-					break
+						})
+						.addOutputOptions([`-vcodec`,`libwebp`,`-vf`,`scale='min(320,iw)':min'(320,ih)':force_original_aspect_ratio=decrease,fps=15, pad=320:320:-1:-1:color=white@0.0, split [a][b]; [a] palettegen=reserve_transparent=on:transparency_color=ffffff [p]; [b][p] paletteuse`])
+						.toFormat('webp')
+						.save(ran)
+				} else {
+					reply(`⌯   ﹝𝙿𝚕𝚎𝚊𝚜𝚎 𝚝𝚊𝚐 𝚊 𝚙𝚒𝚌𝚝𝚞𝚛𝚎.﹞`)
+				}
+				break
 //---X623-Whatsapp-Bot------------------------------------------------------------------------------------------------------------------------//
 //-- stiker to image
 case 'toimg':
