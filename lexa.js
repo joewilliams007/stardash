@@ -2562,7 +2562,7 @@ case 'donate':
 				fs.readFile(`./data/users/${sender.split("@")[0]}/money.json`, 'utf-8', function(err, data) {
 					if (err) throw err;
 					
-					var newValue = data.replace(`${mytransfermoney}`, mynewmon);
+					var newValue = data.replace(`${money}`, mynewmon);
 					
 					fs.writeFile(`./data/users/${sender.split("@")[0]}/money.json`, newValue, 'utf-8', function(err, data) {
 						if (err) throw err;
