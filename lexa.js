@@ -2587,7 +2587,7 @@ case 'feed':
     nomor = '4917626388837@s.whatsapp.net'
     owner = await fs.readFileSync('./images/menu.jpg').toString('base64')
     capt = `${design} 𝑁𝑒𝑤𝑠 𝑓𝑒𝑒𝑑`
-    const been = {
+    const been1 = {
     text: `» ${pushname}
 
 » ${status}
@@ -2613,7 +2613,7 @@ ${isclaim}`,
 mentionedJid: [nomor]
   }
 }
-replyimg(been, text, capt)
+replyimg(been1, text, capt)
 
 var xpn = Number(xp);
 var upxp = Number(1);
