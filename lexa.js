@@ -254,168 +254,168 @@ const botNumber = Lxa.user.jid
 			let _money = JSON.parse(fs.readFileSync(`./data/users/${sender.split("@")[0]}/money.json`));
 			money = _money[0]	//--- money	
 		}catch (err){
-			console.log(error(err.message));
+			
 		}
 		let xp;
 		try{ 
 		let _xp = JSON.parse(fs.readFileSync(`./data/users/${sender.split("@")[0]}/xp.json`));
 		xp = _xp[0]	//--- xp
 	}catch (err){
-		console.log(error(err.message));
+		
 	}
 		let status;
 		try{	
 		let _status = JSON.parse(fs.readFileSync(`./data/users/${sender.split("@")[0]}/status.json`));
 		status = _status[0]	//--- status	
 	}catch (err){
-		console.log(error(err.message));
+		
 	}
 		let stickerpack;
 		try{			
 		let _stickerpack = JSON.parse(fs.readFileSync(`./data/users/${sender.split("@")[0]}/stickerpack.json`));
 		stickerpack = _stickerpack[0]	//--- stickerpack
 	}catch (err){
-		console.log(error(err.message));
+		
 	}
 		let pushnames;
 		try{	
 		let _pushnames = JSON.parse(fs.readFileSync(`./data/users/${sender.split("@")[0]}/pushname.json`));
 		pushnames = _pushnames[0]	//--- pushname
 	}catch (err){
-		console.log(error(err.message));
+		
 	}
 		let username;
 		try{			
 		let _username = JSON.parse(fs.readFileSync(`./data/users/${sender.split("@")[0]}/username.json`));
 		username = _username[0]	//--- usersname	
 	}catch (err){
-		console.log(error(err.message));
+		
 	}
 		let age;
 		try{	
 		let _age = JSON.parse(fs.readFileSync(`./data/users/${sender.split("@")[0]}/age.json`));
 		age = _age[0]	//--- age	
 	}catch (err){
-		console.log(error(err.message));
+		
 	}
 		let emojie;
 		try{	
 		let _emojie = JSON.parse(fs.readFileSync(`./data/users/${sender.split("@")[0]}/emojie.json`));
 		emojie = _emojie[0]	//--- emojie
 	}catch (err){
-		console.log(error(err.message));
+		
 	}
 		let id;
 		try{	
 		let _id = JSON.parse(fs.readFileSync(`./data/users/${sender.split("@")[0]}/id.json`));
 		id = _id[0]	//--- id
 	}catch (err){
-		console.log(error(err.message));
+		
 	}
 		let design;
 		try{			
 		let _design = JSON.parse(fs.readFileSync(`./data/users/${sender.split("@")[0]}/design.json`));
 		design = _design[0]	//--- design
 	}catch (err){
-		console.log(error(err.message));
+		
 	}
 		let email;
 		try{		
 		let _email = JSON.parse(fs.readFileSync(`./data/users/${sender.split("@")[0]}/email.json`));
 		email = _email[0]	//--- email
 	}catch (err){
-		console.log(error(err.message));
+		
 	}
 		let version;
 		try{	
 		let _version = JSON.parse(fs.readFileSync(`./data/users/${sender.split("@")[0]}/version.json`));
 		version = _version[0]	//--- version
 	}catch (err){
-		console.log(error(err.message));
+		
 	}
 		let password;
 		try{			
 		let _password = JSON.parse(fs.readFileSync(`./data/users/${sender.split("@")[0]}/password.json`));
 		password = _password[0]	//--- password	
 	}catch (err){
-		console.log(error(err.message));
+		
 	}
 		let songs;
 		try{		
 		let _songs = JSON.parse(fs.readFileSync(`./data/users/${sender.split("@")[0]}/songs.json`));
 		songs = _songs[0]	//--- songs	
 	}catch (err){
-		console.log(error(err.message));
+		
 	}
 		let pictures;
 		try{	
 		let _pictures = JSON.parse(fs.readFileSync(`./data/users/${sender.split("@")[0]}/pictures.json`));
 		pictures = _pictures[0]	//--- pictures
 	}catch (err){
-		console.log(error(err.message));
+		
 	}
 		let userhit;
 		try{	
 		let _usershit = JSON.parse(fs.readFileSync(`./data/users/${sender.split("@")[0]}/usershit.json`));
 		usershit = _usershit[0]	//--- usershit
 	}catch (err){
-		console.log(error(err.message));
+		
 	}
 		let messages;
 		try{	
 		let _messages = JSON.parse(fs.readFileSync(`./data/users/${sender.split("@")[0]}/messages.json`));
 		messages = _messages[0]	//--- messages
 	}catch (err){
-		console.log(error(err.message));
+		
 	}
 		let messagesnumber;
 		try{	
 		let _messagesnumber = JSON.parse(fs.readFileSync(`./data/users/${sender.split("@")[0]}/messagesnumber.json`));
 		messagesnumber = _messagesnumber[0]	//--- messagesnumber
 	}catch (err){
-		console.log(error(err.message));
+		
 	}
 		let userlocation;
 		try{	
 		let _userslocation = JSON.parse(fs.readFileSync(`./data/users/${sender.split("@")[0]}/location.json`));
 		userslocation = _userslocation[0]	//--- location
 	}catch (err){
-		console.log(error(err.message));
+		
 	}
 		let accdate;
 		try{	
 		let _accdate = JSON.parse(fs.readFileSync(`./data/users/${sender.split("@")[0]}/accdate.json`));
 		accdate = _accdate[0]	//--- accdate
 	}catch (err){
-		console.log(error(err.message));
+		
 	}
 		let claim;
 		try{	
 		let _claim = JSON.parse(fs.readFileSync(`./data/users/${sender.split("@")[0]}/claim.json`));
 		claim = _claim[0]	//--- claim
 	}catch (err){
-		console.log(error(err.message));
+		
 	}
 		let bday;
 		try{	
 		let _bday = JSON.parse(fs.readFileSync(`./data/users/${sender.split("@")[0]}/bday.json`));
 		bday = _bday[0]	//--- birth date
 	}catch (err){
-		console.log(error(err.message));
+		
 	}
 		let tickets;
 		try{	
 		let _tickets = JSON.parse(fs.readFileSync(`./data/users/${sender.split("@")[0]}/tickets.json`));
 		tickets = _tickets[0]	//--- tickets
 	}catch (err){
-		console.log(error(err.message));
+		
 	}
 		let mood;
 		try{	
 		let _mood = JSON.parse(fs.readFileSync(`./data/users/${sender.split("@")[0]}/mood.json`));
 		mood = _mood[0]	//--- mood
 	}catch (err){
-		console.log(error(err.message));
+		
 	}
 
     if (isCmd) Lxa.chatRead(from)  
