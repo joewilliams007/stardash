@@ -397,19 +397,19 @@ var AntiLink_ = 'Off'
 			AntiLink_ 
 			}
 //--- Total command user
-const usercmd = () => {
-	userhit[0].totalcmd += 1
-	fs.writeFileSync(`./data/user/${sender.split("@")[0]}/userhit.json`, JSON.stringify(userhit))
-}
-  if (isCmd) usercmd()
-  const sreqcmd = JSON.parse(fs.readFileSync(`./data/user/${sender.split("@")[0]}/userhit.json`))[0].totalcmd
+//const usercmd = () => {
+//	userhit[0].totalcmd += 1
+//	fs.writeFileSync(`./data/user/${sender.split("@")[0]}/userhit.json`, JSON.stringify(userhit))
+//}
+// if (isCmd) usercmd()
+// const sreqcmd = JSON.parse(fs.readFileSync(`./data/user/${sender.split("@")[0]}/userhit.json`))[0].totalcmd
 //--- Total command
 //const cmdadd = () => {
 //	hit[0].totalcmd += 1
 //	fs.writeFileSync('./data/totalhit.json', JSON.stringify(hit))
 //}
-  if (isCmd) cmdadd()
-  const reqcmd = JSON.parse(fs.readFileSync('./data/totalhit.json'))[0].totalcmd
+//  if (isCmd) cmdadd()
+//  const reqcmd = JSON.parse(fs.readFileSync('./data/totalhit.json'))[0].totalcmd
 //--Member limit
 if (isGroup) {
   try {
