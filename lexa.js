@@ -2703,11 +2703,24 @@ case 'feed':
 	}
 
     nomor = '4917626388837@s.whatsapp.net'
-    owner = await fs.readFileSync('./images/menu.jpg').toString('base64')
+    owner = await fs.readFileSync('./images/mrf.jpeg').toString('base64')
     capt = `${design} 𝑁𝑒𝑤𝑠 𝑓𝑒𝑒𝑑`
     const been1 = {
-    text: `» ${pushname}
+		
 
+		let isclaim;
+		try{	
+			if (claim === `${tanggal()}`) { 
+			isclaim = `𝐶𝑙𝑎𝑖𝑚 𝑑𝑎𝑖𝑙𝑦 𝑐𝑎𝑠ℎ 🎁 \n» .𝑐𝑙𝑎𝑖𝑚 «` 
+			} 
+			else { 
+				isclaim = `` 
+				} 
+			}catch (err){
+			
+			}
+
+    text: `» ${pushname}
 » ${status}
 -.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-
 ${design} 𝑁𝑎𝑚𝑒 » ${username}
