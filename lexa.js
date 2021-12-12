@@ -1131,7 +1131,7 @@ const ai = new alexa();
 
 // [] represents context, since it's an array
 ai.getReply(`${value}`, [], "english", "O_o").then((reply) => {
-  reply(reply);
+ 
   console.log(reply);
   //Do your stuffs with the reply
 });
