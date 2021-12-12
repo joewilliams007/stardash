@@ -1126,19 +1126,25 @@ case 'simi':
 if (!isVerify) return reply(userB())
 		if (args.length < 1) return reply(`Hai ${pushname}`)
 		else {
+
+		let botansw;
+		try{
 const alexa = require("alexa-bot-api-v4");
 const ai = new alexa();
 
 // [] represents context, since it's an array
-ai.getReply(`${value}`, [], "english", "O_o").then((replys) => {
+ai.getReply(`${value}`, [], "english", "O_o").then((reply) => {
  
-  console.log(replys);
+  console.log(reply);
   //Do your stuffs with the reply
 });
+	
+	}catch (err){
+		
+	}
 
-reply(replys)
-		}
-
+	reply(botansw)
+}
 break
   
 //-- information
