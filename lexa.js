@@ -1126,7 +1126,7 @@ case 'simi':
 if (!isVerify) return reply(userB())
 		if (args.length < 1) return reply(`Hai ${pushname}`)
 		else {
-const alexa = require("alexa-bot-api-v3");
+const alexa = require("alexa-bot-api-v4");
 const ai = new alexa();
 
 // [] represents context, since it's an array
