@@ -561,20 +561,8 @@ const linkwa = 'http'
 	}
 //---X623-Whatsapp-Bot------------------------------------------------------------------------------------------------------------------------//
 //--Auto response
-const alexa = require("alexa-bot-api-v3");
-const ai = new alexa();
 
-switch(is) { 
-	
-	case `${value}`:
-// [] represents context, since it's an array
-ai.getReply(`${value}`, [], "english", "O_o").then((reply) => {
-  reply(reply);
-  //Do your stuffs with the reply
-});
-
-}
-
+  
 switch(is) { case '/menu': reply('☑️ 𝑃𝑙𝑒𝑎𝑠𝑒 𝑢𝑠𝑒 .𝑚𝑒𝑛𝑢')}
 switch(is) { case '#menu': reply('☑️ 𝑃𝑙𝑒𝑎𝑠𝑒 𝑢𝑠𝑒 .𝑚𝑒𝑛𝑢')}
 switch(is) { case '*menu': reply('☑️ 𝑃𝑙𝑒𝑎𝑠𝑒 𝑢𝑠𝑒 .𝑚𝑒𝑛𝑢')}
@@ -1137,6 +1125,17 @@ case 'bot':
 case 'simi':
 if (!isVerify) return reply(userB())
 		if (args.length < 1) return reply(`Hai ${pushname}`)
+		else {
+const alexa = require("alexa-bot-api-v3");
+const ai = new alexa();
+
+// [] represents context, since it's an array
+ai.getReply(`${value}`, [], "english", "O_o").then((reply) => {
+  reply(reply);
+  console.log(reply);
+  //Do your stuffs with the reply
+});
+		}
 break
   
 //-- information
