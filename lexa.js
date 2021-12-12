@@ -2774,7 +2774,7 @@ fs.readFile(`./data/users/${sender.split("@")[0]}/xp.json`, 'utf-8', function(er
 if ((xp > 100) && xp < 500) {
         var newstatus = "Knight"; 
 
-        fs.readFile(`./data/xp/${sender.split("@")[0]}/status.json`, 'utf-8', function(err, data) {
+        fs.readFile(`./data/users/${sender.split("@")[0]}/status.json`, 'utf-8', function(err, data) {
             if (err) throw err;
             
             var newValue = data.replace(`${status}`, newstatus);
