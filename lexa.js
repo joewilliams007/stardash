@@ -2881,12 +2881,12 @@ case 'name':
 			
 					var newname = args[0];
 
-					fs.readFile(`./data/users/${sender.split("@")[0]}/name.json`, 'utf-8', function(err, data) {
+					fs.readFile(`./data/users/${sender.split("@")[0]}/username.json`, 'utf-8', function(err, data) {
 						if (err) throw err;
 						
 						var newValue = data.replace(`${name}`, newname);
 						
-						fs.writeFile(`./data/users/${sender.split("@")[0]}/name.json`, newValue, 'utf-8', function(err, data) {
+						fs.writeFile(`./data/users/${sender.split("@")[0]}/username.json`, newValue, 'utf-8', function(err, data) {
 							if (err) throw err;
 						})
 					})
