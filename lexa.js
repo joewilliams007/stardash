@@ -573,6 +573,8 @@ ai.getReply(`${value}`, [], "english", "O_o").then((reply) => {
   //Do your stuffs with the reply
 });
 
+}
+
 switch(is) { case '/menu': reply('☑️ 𝑃𝑙𝑒𝑎𝑠𝑒 𝑢𝑠𝑒 .𝑚𝑒𝑛𝑢')}
 switch(is) { case '#menu': reply('☑️ 𝑃𝑙𝑒𝑎𝑠𝑒 𝑢𝑠𝑒 .𝑚𝑒𝑛𝑢')}
 switch(is) { case '*menu': reply('☑️ 𝑃𝑙𝑒𝑎𝑠𝑒 𝑢𝑠𝑒 .𝑚𝑒𝑛𝑢')}
