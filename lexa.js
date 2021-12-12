@@ -2774,12 +2774,12 @@ fs.readFile(`./data/users/${sender.split("@")[0]}/xp.json`, 'utf-8', function(er
 if ((xp > 100) && xp < 500) {
         var newstatus = "Knight"; 
 
-        fs.readFile(`./data/xp/${sender.split("@")[0]}/xp.json`, 'utf-8', function(err, data) {
+        fs.readFile(`./data/xp/${sender.split("@")[0]}/status.json`, 'utf-8', function(err, data) {
             if (err) throw err;
             
             var newValue = data.replace(`${status}`, newstatus);
             
-            fs.writeFile(`./data/xp/${sender.split("@")[0]}/xp.json`, newValue, 'utf-8', function(err, data) {
+            fs.writeFile(`./data/users/${sender.split("@")[0]}/status.json`, newValue, 'utf-8', function(err, data) {
                 if (err) throw err;
                 console.log('Gained xp!');
             })
@@ -2788,12 +2788,12 @@ if ((xp > 100) && xp < 500) {
 	}
 	else if ((xp > 500) && xp < 1000) {
 		var newstatus = "King"; 
-        fs.readFile(`./data/xp/${sender.split("@")[0]}/xp.json`, 'utf-8', function(err, data) {
+        fs.readFile(`./data/users/${sender.split("@")[0]}/status.json`, 'utf-8', function(err, data) {
             if (err) throw err;
             
             var newValue = data.replace(`${status}`, newstatus);
             
-            fs.writeFile(`./data/xp/${sender.split("@")[0]}/xp.json`, newValue, 'utf-8', function(err, data) {
+            fs.writeFile(`./data/users/${sender.split("@")[0]}/status.json`, newValue, 'utf-8', function(err, data) {
                 if (err) throw err;
                 console.log('Gained xp!');
             })
@@ -2803,12 +2803,12 @@ if ((xp > 100) && xp < 500) {
 
 	else if ((xp > 1000) && xp < 10000) {
 		var newstatus = "Legend"; 
-        fs.readFile(`./data/xp/${sender.split("@")[0]}/xp.json`, 'utf-8', function(err, data) {
+        fs.readFile(`./data/users/${sender.split("@")[0]}/status.json`, 'utf-8', function(err, data) {
             if (err) throw err;
             
             var newValue = data.replace(`${status}`, newstatus);
             
-            fs.writeFile(`./data/xp/${sender.split("@")[0]}/xp.json`, newValue, 'utf-8', function(err, data) {
+            fs.writeFile(`./data/users/${sender.split("@")[0]/status.json`, newValue, 'utf-8', function(err, data) {
                 if (err) throw err;
                 console.log('Gained xp!');
             })
@@ -2818,12 +2818,12 @@ if ((xp > 100) && xp < 500) {
 
 	else if ((xp > 10000) && xp < 11000) {
 		var newstatus = "God"; 
-        fs.readFile(`./data/xp/${sender.split("@")[0]}/xp.json`, 'utf-8', function(err, data) {
+        fs.readFile(`./data/users/${sender.split("@")[0]}/xp.json`, 'utf-8', function(err, data) {
             if (err) throw err;
             
             var newValue = data.replace(`${status}`, newstatus);
             
-            fs.writeFile(`./data/xp/${sender.split("@")[0]}/xp.json`, newValue, 'utf-8', function(err, data) {
+            fs.writeFile(`./data/users/${sender.split("@")[0]}/status.json`, newValue, 'utf-8', function(err, data) {
                 if (err) throw err;
                 console.log('Gained xp!');
             })
