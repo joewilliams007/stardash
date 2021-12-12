@@ -2801,23 +2801,11 @@ if ((xp > 100) && xp < 500) {
 
 	}
 
-	else if ((xp > 1000) && xp < 10000) {
+
+
+
+	else if ((xp > 1000) && xp < 11000) {
 		var newstatus = "Legend"; 
-        fs.readFile(`./data/users/${sender.split("@")[0]}/status.json`, 'utf-8', function(err, data) {
-            if (err) throw err;
-            
-            var newValue = data.replace(`${status}`, newstatus);
-            
-            fs.writeFile(`./data/users/${sender.split("@")[0]/status.json`, newValue, 'utf-8', function(err, data) {
-                if (err) throw err;
-                console.log('Gained xp!');
-            })
-        })
-
-	}
-
-	else if ((xp > 10000) && xp < 11000) {
-		var newstatus = "God"; 
         fs.readFile(`./data/users/${sender.split("@")[0]}/xp.json`, 'utf-8', function(err, data) {
             if (err) throw err;
             
