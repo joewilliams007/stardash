@@ -624,7 +624,7 @@ case 'premium':
 » ${pushname}
 » ${id}
 -.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.- 
-${design} .myfeed
+${design} .feed
 -.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-    
 ${design} .games
 ${design} .tools
@@ -3087,12 +3087,12 @@ const winner11 = _winner11[0]	//--- xp
 const winner11name = _winner11[1]	//--- name
 const winner11status = _winner11[2]	//--- status
 
-const _winner22 = JSON.parse(fs.readFileSync(`./session/winner1.json`));	
+const _winner22 = JSON.parse(fs.readFileSync(`./session/winner2.json`));	
 const winner22 = _winner22[0]	//--- xp 
 const winner22name = _winner22[1]	//--- name
 const winner22status = _winner22[2]	//--- status
 
-const _winner33 = JSON.parse(fs.readFileSync(`./session/winner1.json`));	
+const _winner33 = JSON.parse(fs.readFileSync(`./session/winner3.json`));	
 const winner33 = _winner33[0]	//--- xp 
 const winner33name = _winner33[1]	//--- name
 const winner33status = _winner33[2]	//--- status
