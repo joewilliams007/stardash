@@ -1135,7 +1135,10 @@ ai.getReply(`${value}`, [], "english", "O_o").then((reply) => {
   console.log(reply);
   //Do your stuffs with the reply
 });
+
+reply(reply)
 		}
+
 break
   
 //-- information
