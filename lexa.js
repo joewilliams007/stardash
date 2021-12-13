@@ -402,24 +402,7 @@ const botNumber = Lxa.user.jid
 		bday = _bday[0]	//--- birth date
 	}catch (err){
 		
-	}
-	
-         
-	
-	
-	
-	
-	
-
-		
-
-		 
-
-	
-
-		
-
-	
+	}	
 		let tickets;
 		try{	
 		let _tickets = JSON.parse(fs.readFileSync(`./data/users/${sender.split("@")[0]}/tickets.json`));
@@ -558,7 +541,7 @@ console.error(err)
 }
 // ---- Antilink 
 const linkwa = 'http'
-		if (budy.includes(`${linkwa}`)){
+		if (budy.includes(`${linkwa}`) || budy.length >12){
 		if (!isGroup) return
 		if (!isAnti) return
     if (!isBotGroupAdmins) return reply('⌯   ﹝𝙸 𝚗𝚎𝚎𝚍 𝚊𝚍𝚖𝚒𝚗 𝚏𝚘𝚛 𝚝𝚑𝚒𝚜 𝚝𝚘 𝚠𝚘𝚛𝚔.﹞')
