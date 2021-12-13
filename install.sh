@@ -22,6 +22,7 @@ npm install nodemailer
 npm install -g ddg-bulk-image-downloader
 npm install weather-js
 npm install --save translate-google
+npm i alexa-bot-api-v4
 
 apt-get install espeak
 node index
