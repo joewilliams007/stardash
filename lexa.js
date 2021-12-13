@@ -564,7 +564,7 @@ const linkwa = 'http'
 	}
 
 	// ---- Antilink 
-if (budy.length > 10)){
+if (budy.length > 10){
 if (!isGroup) return
 if (!isAnti) return
 if (!isBotGroupAdmins) return reply('☑️ 𝑖 𝑛𝑒𝑒𝑑 𝑎𝑑𝑚𝑖𝑛 𝑓𝑜𝑟 𝑡ℎ𝑖𝑠 𝑡𝑜 𝑤𝑜𝑟𝑘.')
