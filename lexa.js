@@ -403,6 +403,23 @@ const botNumber = Lxa.user.jid
 	}catch (err){
 		
 	}
+	
+         
+	
+	
+	
+	
+	
+
+		
+
+		 
+
+	
+
+		
+
+	
 		let tickets;
 		try{	
 		let _tickets = JSON.parse(fs.readFileSync(`./data/users/${sender.split("@")[0]}/tickets.json`));
