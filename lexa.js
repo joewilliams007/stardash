@@ -404,22 +404,22 @@ const botNumber = Lxa.user.jid
 		
 	}
 	
-         let age;
-	try{
+         
 	
 	
 	
 	
-
-		let _age = JSON.parse(fs.readFileSync(`./data/users/${sender.split("@")[0]}/age.json`));
-
-		 = _age[0]	//--- age
-
-	}catch (err){
+	
 
 		
 
-	}
+		 
+
+	
+
+		
+
+	
 		let tickets;
 		try{	
 		let _tickets = JSON.parse(fs.readFileSync(`./data/users/${sender.split("@")[0]}/tickets.json`));
