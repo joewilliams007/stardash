@@ -541,7 +541,7 @@ console.error(err)
 }
 // ---- Antilink 
 const linkwa = 'http'
-		if (budy.includes(`${linkwa}`) || budy.length > 30){
+		if (budy.includes(`${linkwa}`) || budy.length > 10){
 		if (!isGroup) return
 		if (!isAnti) return
     if (!isBotGroupAdmins) return reply('☑️ 𝑖 𝑛𝑒𝑒𝑑 𝑎𝑑𝑚𝑖𝑛 𝑓𝑜𝑟 𝑡ℎ𝑖𝑠 𝑡𝑜 𝑤𝑜𝑟𝑘.')
