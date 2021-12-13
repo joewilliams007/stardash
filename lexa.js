@@ -563,24 +563,6 @@ const linkwa = 'http'
 		}, 0)
 	}
 
-	// ---- Antilink 
-if (budy.length > 10){
-if (!isGroup) return
-if (!isAnti) return
-if (!isBotGroupAdmins) return reply('☑️ 𝑖 𝑛𝑒𝑒𝑑 𝑎𝑑𝑚𝑖𝑛 𝑓𝑜𝑟 𝑡ℎ𝑖𝑠 𝑡𝑜 𝑤𝑜𝑟𝑘.')
-linkgc = await Lxa.groupInviteCode (from)
-if (isGroupAdmins || isVerify) return reply(`☑️ 𝐴𝑑𝑚𝑖𝑛 𝑜𝑟 𝑟𝑒𝑔𝑖𝑠𝑡𝑒𝑟𝑒𝑑. 𝑌𝑜𝑢 𝑤𝑜𝑛𝑡 𝑏𝑒 𝑘𝑖𝑐𝑘𝑒𝑑 𝑓𝑜𝑟 𝑠𝑒𝑛𝑑𝑖𝑛𝑔 𝑙𝑜𝑛𝑔 𝑚𝑒𝑠𝑠𝑎𝑔𝑒𝑠 𝑜𝑟 𝑙𝑖𝑛𝑘𝑠.`)
-Lxa.updatePresence(from, Presence.composing)
-var Kick = `${sender.split("@")[0]}@s.whatsapp.net`
-setTimeout( () => {
-}, 1100)
-setTimeout( () => {
-Lxa.groupRemove(from, [Kick]).catch((e) => {console.log(`*ERROR:* ${e}`)}) 
-			}, 1000)
-setTimeout( () => {
-
-}, 0)
-}
 //---X623-Whatsapp-Bot------------------------------------------------------------------------------------------------------------------------//
 //--Auto response
 
