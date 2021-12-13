@@ -402,7 +402,10 @@ const botNumber = Lxa.user.jid
 		bday = _bday[0]	//--- birth date
 	}catch (err){
 		
-	}	
+	}
+	
+
+	
 		let tickets;
 		try{	
 		let _tickets = JSON.parse(fs.readFileSync(`./data/users/${sender.split("@")[0]}/tickets.json`));
@@ -541,13 +544,13 @@ console.error(err)
 }
 // ---- Antilink 
 const linkwa = 'http'
-		if (budy.includes(`${linkwa}`) || budy.length > 10){
+		if (budy.includes(`${linkwa}` || budy.length > 10)){
 		if (!isGroup) return
 		if (!isAnti) return
-    if (!isBotGroupAdmins) return reply('☑️ 𝑖 𝑛𝑒𝑒𝑑 𝑎𝑑𝑚𝑖𝑛 𝑓𝑜𝑟 𝑡ℎ𝑖𝑠 𝑡𝑜 𝑤𝑜𝑟𝑘.')
+    if (!isBotGroupAdmins) return reply('⌯   ﹝𝙸 𝚗𝚎𝚎𝚍 𝚊𝚍𝚖𝚒𝚗 𝚏𝚘𝚛 𝚝𝚑𝚒𝚜 𝚝𝚘 𝚠𝚘𝚛𝚔.﹞')
     linkgc = await Lxa.groupInviteCode (from)
-    if (budy.includes(`${linkwa}${linkgc}`)) return reply('☑️ 𝑖 𝑛𝑒𝑒𝑑 𝑎𝑑𝑚𝑖𝑛 𝑓𝑜𝑟 𝑡ℎ𝑖𝑠 𝑡𝑜 𝑤𝑜𝑟𝑘.')
-		if (isGroupAdmins) return reply(`☑️ 𝐴𝑑𝑚𝑖𝑛 𝑜𝑟 𝑟𝑒𝑔𝑖𝑠𝑡𝑒𝑟𝑒𝑑. 𝑌𝑜𝑢 𝑤𝑜𝑛𝑡 𝑏𝑒 𝑘𝑖𝑐𝑘𝑒𝑑 𝑓𝑜𝑟 𝑠𝑒𝑛𝑑𝑖𝑛𝑔 𝑙𝑜𝑛𝑔 𝑚𝑒𝑠𝑠𝑎𝑔𝑒𝑠 𝑜𝑟 𝑙𝑖𝑛𝑘𝑠.`)
+    if (budy.includes(`${linkwa}${linkgc}`)) return reply('⌯   ﹝𝙸 𝚗𝚎𝚎𝚍 𝚊𝚍𝚖𝚒𝚗 𝚏𝚘𝚛 𝚝𝚑𝚒𝚜 𝚝𝚘 𝚠𝚘𝚛𝚔.﹞')
+		if (isGroupAdmins) return reply(`⌯   ﹝𝙰𝚍𝚖𝚒𝚗.﹞`)
 		Lxa.updatePresence(from, Presence.composing)
 		var Kick = `${sender.split("@")[0]}@s.whatsapp.net`
 		setTimeout( () => {
