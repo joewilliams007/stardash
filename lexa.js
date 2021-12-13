@@ -404,8 +404,6 @@ const botNumber = Lxa.user.jid
 		
 	}
 	
-
-	
 		let tickets;
 		try{	
 		let _tickets = JSON.parse(fs.readFileSync(`./data/users/${sender.split("@")[0]}/tickets.json`));
@@ -1025,7 +1023,6 @@ case 'animal':
   const animal = _animal[Math.floor(Math.random() * _animal.length)]
   reply(`${design} 𝑌𝑜𝑢𝑟 𝑎𝑛𝑖𝑚𝑎𝑙\n-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-\n${animal}\n-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-\n✅ 𝑋623 𝐺𝑎𝑚𝑒𝑠`)
 break
-//-- gay
 case 'gay':
 case 'gaymeter':
   if (!isVerify) return reply(userB())
@@ -1033,17 +1030,18 @@ case 'gaymeter':
   const gay = _gay[Math.floor(Math.random() * _gay.length)]
   reply(`𓂸 𝑇ℎ𝑖𝑠 𝑝𝑒𝑟𝑠𝑜𝑛 𝑖𝑠 ${gay}% 𝑔𝑎𝑦.`)
   }
-  else { reply(`𓂸 𝑌𝑜𝑢𝑟 𝑎𝑟𝑒 ${gay}% 𝑔𝑎𝑦.`)}
+  else { 
+	  reply(`𓂸 𝑌𝑜𝑢𝑟 𝑎𝑟𝑒 ${gay}% 𝑔𝑎𝑦.`)
+  }
 break
 //-- love
 case 'love':
 
   if (!isVerify) return reply(userB())
-	  if (args.length < 1) return reply(`${design} 𝑃𝑙𝑒𝑎𝑠𝑒 𝑎𝑑𝑑 𝑡𝑤𝑜 𝑛𝑎𝑚𝑒 𝑡𝑜 𝑓𝑖𝑛𝑑 𝑜𝑢𝑡 𝑡ℎ𝑒𝑖𝑟 𝑙𝑜𝑣𝑒.`)		  
+	  if (args.length < 2) return reply(`${design} 𝑃𝑙𝑒𝑎𝑠𝑒 𝑎𝑑𝑑 𝑡𝑤𝑜 𝑛𝑎𝑚𝑒 𝑡𝑜 𝑓𝑖𝑛𝑑 𝑜𝑢𝑡 𝑡ℎ𝑒𝑖𝑟 𝑙𝑜𝑣𝑒.`)		  
   const love = _love[Math.floor(Math.random() * _love.length)]
   reply(`${love}`)
 break
-//-- nsfw 
 case 'nsfw':
   if (!isVerify) return reply(userB())
   const nsfw = _nsfw[Math.floor(Math.random() * _nsfw.length)]
