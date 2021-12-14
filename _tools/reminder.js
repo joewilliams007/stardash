@@ -1,7 +1,7 @@
 
 const fs = require('fs');
 const { success } = require('../fs/functions');
-const filePath = '../data/reminder/reminder_events.json';
+const filePath = './data/reminder/reminder_events.json';
 
 //hours to add to London timezone (Berlin = 1)
 const timezone = 1
