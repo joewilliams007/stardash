@@ -27,11 +27,11 @@ function load(callbackFunc){
         var missedEvents = "Missed reminder events: \n"
 
         for (event in events){
-            if (event.date > date){
-                setTimeout(remind, event.date - date)
+            if (Date(event.date) > date){
+                setTimeout(remind, Date(event.date) - date)
             }
             else{
-                missedEvents += `-> missed at ${event.date.toString()}: ${event.message}\n`
+                missedEvents += `-> missed at ${event.date}: ${event.message}\n`
             }
             return missedEvents;
         }
