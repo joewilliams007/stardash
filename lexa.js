@@ -1728,7 +1728,7 @@ case 'mysp':
 }
 
 buffer = fs.readFileSync(`./data/users/${sender.split("@")[0]}/starpicture.jpg`)
-Lxa.sendMessage(from, buffer, image, {quoted:mek, caption: `${username}\n${age} 𝑦𝑜\n${money}$\n${xp} 𝑥𝑝\n\n${mybio}`})
+Lxa.sendMessage(from, buffer, image, {quoted:mek, caption: `${design} ${username}\n${design} ${age} 𝑦𝑜\n${design} ${money}$\n${design} ${xp} 𝑥𝑝\n\n${mybio}`})
 break
 
 //-- sp
