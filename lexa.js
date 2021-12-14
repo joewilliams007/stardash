@@ -33,6 +33,7 @@ const {fetchJson, fetchText} = require('./fs/fetcher');
 const {recognize} = require('./fs/ocr');
 const {_wait, getBuffer, h2k, generateMessageID, getGroupAdmins, getRandom, start, success, close } = require('./fs/functions');
 
+
 //-- Modules
 const fs = require('fs');
 const moment = require('moment-timezone');
@@ -105,6 +106,14 @@ const _dashtype = JSON.parse(fs.readFileSync('./result/games/dashtype.json'));
 const _shiny = JSON.parse(fs.readFileSync('./result/games/shiny.json'));
 const _wishes = JSON.parse(fs.readFileSync('./help/wishes.json'));
 const _notes = JSON.parse(fs.readFileSync('./help/notes.json'));
+
+//---X623-Whatsapp-Bot------------------------------------------------------------------------------------------------------------------------//
+//--Auto response
+
+//REMINDER PLUGIN LADEN.......s
+var reminder = require("./_tools/reminder")
+//Beim Laden des Reminder-plugins wird mitgegeben, was an den Erinnerungsterminen gemacht werden soll:
+console.log( reminder.load(function (event) {reply(`@${event.usernum}, i shall remind you of something! ${event.message}`)}));
 
 //---X623-Whatsapp-Bot------------------------------------------------------------------------------------------------------------------------//
 //-- Help
@@ -560,14 +569,6 @@ const linkwa = 'http'
 		
 		}, 0)
 	}
-
-//---X623-Whatsapp-Bot------------------------------------------------------------------------------------------------------------------------//
-//--Auto response
-
-//REMINDER PLUGIN LADEN.......s
-var reminder = require("./_tools/reminder")
-//Beim Laden des Reminder-plugins wird mitgegeben, was an den Erinnerungsterminen gemacht werden soll:
-reply(reminder.load(function (event) {reply(`@${event.usernum}, i shall remind you of something! ${event.message}`)}));
   
 
 //---X623-Whatsapp-Bot------------------------------------------------------------------------------------------------------------------------//
