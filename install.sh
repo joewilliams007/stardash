@@ -1,8 +1,10 @@
 #!/usr/bin/bash
 
 apt-get install nodejs
+echo "Installed Node-JS"
 apt-get install libwebp
 apt-get install ffmpeg
+echo "Installed ffmpeg for amazing filters"
 apt-get install wget
 apt-get install curl
 apt-get install tesseract
@@ -20,11 +22,15 @@ npm i
 pip install -U yt-dlp
 npm install nodemailer
 npm install -g ddg-bulk-image-downloader
+echo "Installed Bing image search"
 npm install weather-js
+echo "Installed weather Api"
 npm install --save translate-google
+echo "Installed google translator"
 npm i alexa-bot-api-v4
-
+echo "Installed ai"
 apt-get install espeak
+echo "Everything installed. Starting now."
 node index
 
 

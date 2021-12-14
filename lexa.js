@@ -1676,7 +1676,33 @@ encmedia = JSON.parse(JSON.stringify(mek).replace('quotedM','m')).message.extend
 						fs.unlinkSync(ran)
 					})	
 			break
+//-- ai
+case 'ai':
+if (!isVerify) return reply(UserB())
+if (!isQuotedImage)  return reply(`${design} 𝑃𝑙𝑒𝑎𝑠𝑒 𝑡𝑎𝑔 𝑎𝑛 𝑖𝑚𝑎𝑔𝑒`)	
+					encmedia = JSON.parse(JSON.stringify(mek).replace('quotedM','m')).message.extendedTextMessage.contextInfo
+					media = await Lxa.downloadAndSaveMediaMessage(encmedia)
+
+					var ocr = require('ocr');
+
+					// Set default values. 
+					var params = {
+						input: `${media}`,
+						output: './out.txt',
+						format: 'text'
+					};
 						
+					// OCR the input image and output result to text file given by params.output
+					ocr.recognize(params, function(err, document){
+						if(err)
+							console.error(err);
+						else{        
+							//output the document object: 
+							console.log(document); 
+						}
+					});
+
+			  break
 //-- watermark 
 case 'watermarkimage':
 if (!isVerify) return reply(UserB())
