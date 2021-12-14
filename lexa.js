@@ -1738,41 +1738,41 @@ case 'sp':
 
   let spmoney;
   try{
-	  let _spmoney = JSON.parse(fs.readFileSync(`./data/users/${args[1].split("@")[0]}/money.json`));
+	  let _spmoney = JSON.parse(fs.readFileSync(`./data/users/${args[0].split("@")[0]}/money.json`));
 	  spmoney = _spmoney[0]	//--- money	
   }catch (err){
 	  
   }
   let spxp;
   try{ 
-  let _spxp = JSON.parse(fs.readFileSync(`./data/users/${args[1].split("@")[0]}/xp.json`));
+  let _spxp = JSON.parse(fs.readFileSync(`./data/users/${args[0].split("@")[0]}/xp.json`));
   spxp = Number(_spxp[0])	//--- xp
 }catch (err){
   
 }
 let spusername;
 try{			
-let _spusername = JSON.parse(fs.readFileSync(`./data/users/${args[1].split("@")[0]}/username.json`));
+let _spusername = JSON.parse(fs.readFileSync(`./data/users/${args[0].split("@")[0]}/username.json`));
 spusername = _spusername[0]	//--- usersname	
 }catch (err){
 
 }
 let spage;
 try{	
-let _spage = JSON.parse(fs.readFileSync(`./data/users/${args[1].split("@")[0]}/age.json`));
+let _spage = JSON.parse(fs.readFileSync(`./data/users/${args[0].split("@")[0]}/age.json`));
 spage = _spage[0]	//--- age	
 }catch (err){
 
 }
   let spbio;
   try{	
-  let _spbio = JSON.parse(fs.readFileSync(`./data/users/${args[1].split("@")[0]}/starpicture.json`));
+  let _spbio = JSON.parse(fs.readFileSync(`./data/users/${args[0].split("@")[0]}/starpicture.json`));
   spbio = _spbio[0]	//--- bio
 }catch (err){
 	reply(`${design} 𝑆𝑜𝑟𝑟𝑦. 𝑇ℎ𝑖𝑠 𝑢𝑠𝑒𝑟 ℎ𝑎𝑠 𝑛𝑜𝑡 𝑢𝑝𝑙𝑜𝑎𝑑𝑒𝑑 𝑎 𝑝𝑖𝑐𝑡𝑢𝑟𝑒 𝑦𝑒𝑡.`)
 }
 
-buffer = fs.readFileSync(`./data/users/${args[1].split("@")[0]}/starpicture.jpg`)
+buffer = fs.readFileSync(`./data/users/${args[0].split("@")[0]}/starpicture.jpg`)
 Lxa.sendMessage(from, buffer, image, {quoted:mek, caption: `${design} ${spusername}, ${spage} 𝑦𝑜\n${design} ${spmoney}, ${spxp} 𝑥𝑝\n\n${spbio}`})
 break
 
