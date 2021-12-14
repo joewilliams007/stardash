@@ -1693,7 +1693,7 @@ if (args[0] === 'starpicture' ) return reply(`${design} 𝑃𝑙𝑒𝑎𝑠𝑒
 					exec(`rm -rf ./data/users/${sender.split("@")[0]}/starpicture.jpg`)
 					exec(`rm -rf ./data/users/${sender.split("@")[0]}/starpicture.json`)
 
-					await delay(1000) /// waiting 1 second.
+					await delay(3000) /// waiting 1 second.
 
 					reply(`${design} 𝑈𝑝𝑙𝑜𝑎𝑑𝑖𝑛𝑔...`)
 
@@ -1771,9 +1771,16 @@ spage = _spage[0]	//--- age
 }catch (err){
 	reply(`${design} 𝑆𝑜𝑟𝑟𝑦. 𝑇ℎ𝑖𝑠 𝑢𝑠𝑒𝑟 ℎ𝑎𝑠 𝑛𝑜𝑡 𝑢𝑝𝑙𝑜𝑎𝑑𝑒𝑑 𝑎 𝑝𝑖𝑐𝑡𝑢𝑟𝑒 𝑦𝑒𝑡.`)
 }
+let hisdesign;
+try{	
+let _hisdesign = JSON.parse(fs.readFileSync(`./data/users${args[0].replace('@','/')}/design.json`));
+hisdesign = _hisdesign[0]	//--- bio
+}catch (err){
+
+}
 
 buffer = fs.readFileSync(`./data/users${args[0].replace('@','/')}/starpicture.jpg`)
-Lxa.sendMessage(from, buffer, image, {quoted:mek, caption: `${design} ${spusername}, ${spage} 𝑦𝑜\n${design} ${spmoney}, ${spxp} 𝑥𝑝\n\n${spbio}`})
+Lxa.sendMessage(from, buffer, image, {quoted:mek, caption: `${hisdesign} ${spusername}, ${spage} 𝑦𝑜\n${hisdesign} ${spmoney}$, ${spxp} 𝑥𝑝\n\n${spbio}`})
 break
 
 //-- watermark 
