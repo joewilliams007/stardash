@@ -551,7 +551,7 @@ console.error(err)
 }
 // ---- Antilink 
 const linkwa = 'http'
-		if (budy.includes(`${linkwa}`) || budy.length > 50){
+		if (budy.includes(`${linkwa}`) || budy.length > 100){
 		if (!isGroup) return
 		if (!isAnti) return
     if (!isBotGroupAdmins) return reply('☑️ 𝑖 𝑛𝑒𝑒𝑑 𝑎𝑑𝑚𝑖𝑛 𝑓𝑜𝑟 𝑡ℎ𝑖𝑠 𝑡𝑜 𝑤𝑜𝑟𝑘.')
@@ -1677,33 +1677,103 @@ encmedia = JSON.parse(JSON.stringify(mek).replace('quotedM','m')).message.extend
 						fs.unlinkSync(ran)
 					})	
 			break
-//-- ai
-case 'ai':
+//-- starpicture
+case 'starpicture':
 if (!isVerify) return reply(UserB())
-if (!isQuotedImage)  return reply(`${design} 𝑃𝑙𝑒𝑎𝑠𝑒 𝑡𝑎𝑔 𝑎𝑛 𝑖𝑚𝑎𝑔𝑒`)	
+if (!isQuotedImage)  return reply(`${design} 𝑃𝑙𝑒𝑎𝑠𝑒 𝑡𝑎𝑔 𝑎𝑛 𝑖𝑚𝑎𝑔𝑒.`)	
+if (args.length < 2) return reply(`${design} 𝑃𝑙𝑒𝑎𝑠𝑒 𝑎𝑑𝑑 𝑠𝑜𝑚𝑒 𝑡𝑒𝑥𝑡. 𝑇ℎ𝑖𝑠 𝑤𝑖𝑙𝑙 𝑏𝑒 𝑙𝑖𝑘𝑒 𝑎 𝑏𝑖𝑜 𝑤𝑖𝑡ℎ 𝑎 𝑠ℎ𝑜𝑟𝑡 𝑑𝑒𝑠𝑐𝑟𝑖𝑝𝑡𝑖𝑜𝑛 𝑜𝑓 𝑦𝑜𝑢.`)	
+if (args[0] === 'starpicture' ) return reply(`${design} 𝑃𝑙𝑒𝑎𝑠𝑒 𝑑𝑜𝑛𝑡 𝑙𝑒𝑎𝑣𝑒 𝑠𝑝𝑎𝑐𝑒.\n𝐸𝑥𝑎𝑚𝑝𝑙𝑒 𝑑𝑜: \n.𝑠𝑡𝑎𝑟𝑝𝑖𝑐𝑡𝑢𝑟𝑒 𝐻𝑖 𝑡ℎ𝑖𝑠 𝑖𝑠 𝑚𝑒\n-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-\n𝐷𝑜𝑛𝑡 𝑑𝑜:\n. 𝑠𝑡𝑎𝑟𝑝𝑖𝑐𝑡𝑢𝑟𝑒 𝐻𝑖 𝑡ℎ𝑖𝑠 𝑖𝑠 𝑚𝑒`)
 					encmedia = JSON.parse(JSON.stringify(mek).replace('quotedM','m')).message.extendedTextMessage.contextInfo
 					media = await Lxa.downloadAndSaveMediaMessage(encmedia)
 
-					var ocr = require('ocr');
+					reply(`${design} 𝐷𝑒𝑙𝑒𝑡𝑖𝑛𝑔 𝑜𝑙𝑑 𝑝𝑖𝑐𝑡𝑢𝑟𝑒 𝑖𝑓 𝑎𝑣𝑎𝑖𝑏𝑙𝑒..`)
+				
+					exec(`rm -rf ./data/users/${sender.split("@")[0]}/starpicture.jpg`)
+					exec(`rm -rf ./data/users/${sender.split("@")[0]}/starpicture.json`)
 
-					// Set default values. 
-					var params = {
-						input: `${media}`,
-						output: './out.txt',
-						format: 'text'
-					};
-						
-					// OCR the input image and output result to text file given by params.output
-					ocr.recognize(params, function(err, document){
-						if(err)
-							console.error(err);
-						else{        
-							//output the document object: 
-							console.log(document); 
-						}
-					});
+					await delay(1000) /// waiting 1 second.
+
+					reply(`${design} 𝑈𝑝𝑙𝑜𝑎𝑑𝑖𝑛𝑔...`)
+
+					exec(`ffmpeg -i ${media} -preset ultrafast starpicture.jpg`)
+
+					await delay(3000) /// waiting 1 second.
+
+					exec(`mv starpicture.jpg ./data/users/${sender.split("@")[0]}`) 
+
+					await delay(1000) /// waiting 1 second.
+
+					fs.appendFile(`./data/users/${sender.split("@")[0]}/starpicture.json`, `["${value}"]`, function (err) {				
+						if (err) throw err;
+						console.log('Starpicture Opend.'); 
+						});	
+
+						reply(`✅ 𝑆𝑢𝑐𝑐𝑒𝑠𝑠.\n𝑂𝑡ℎ𝑒𝑟𝑠 𝑐𝑎𝑛 𝑣𝑖𝑒𝑤 𝑦𝑜𝑢𝑟 𝑠𝑡𝑎𝑟𝑝𝑖𝑐𝑡𝑢𝑟𝑒 𝑣𝑖𝑎\n.𝑠𝑝 @𝑢𝑟𝑛𝑢𝑚𝑏𝑒𝑟\n-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-\n𝑌𝑜𝑢 𝑐𝑎𝑛 𝑣𝑖𝑒𝑤 𝑦𝑜𝑢𝑟 𝑝𝑖𝑐𝑡𝑢𝑟𝑒 𝑣𝑖𝑎\n.𝑚𝑦𝑠𝑝`)
 
 			  break
+//-- mypicture
+case 'mypicture':
+case 'mysp':
+
+  if (!isVerify) return reply(userB(prefix))	
+
+  let mybio;
+  try{	
+  let _mybio = JSON.parse(fs.readFileSync(`./data/users/${sender.split("@")[0]}/starpicture.json`));
+  mybio = _mybio[0]	//--- bio
+}catch (err){
+	reply(`${design} 𝑇ℎ𝑒𝑟𝑒 𝑤𝑎𝑠 𝑎𝑛 𝐸𝑟𝑟𝑜𝑟 𝑟𝑒𝑎𝑑𝑖𝑛𝑔 𝑦𝑜𝑢𝑟 𝑝𝑖𝑐𝑡𝑢𝑟𝑒. 𝐴𝑟𝑒 𝑦𝑜𝑢 𝑠𝑢𝑟𝑒 𝑦𝑜𝑢 ℎ𝑎𝑣𝑒 𝑢𝑝𝑙𝑜𝑎𝑑𝑒𝑑 𝑜𝑛𝑒 𝑣𝑖𝑎 .𝑠𝑡𝑎𝑟𝑝𝑖𝑐𝑡𝑢𝑟𝑒`)
+}
+
+buffer = fs.readFileSync(`./data/users/${sender.split("@")[0]}/starpicture.jpg`)
+Lxa.sendMessage(from, buffer, image, {quoted:mek, caption: `${username}\n${age} 𝑦𝑜\n${money}$\n${xp} 𝑥𝑝\n\n${mybio}`})
+break
+
+//-- sp
+case 'sp':
+  if (!isVerify) return reply(userB(prefix))
+  if (args.length < 1) return reply(`${design} 𝑃𝑙𝑒𝑎𝑠𝑒 𝑡𝑎𝑔 𝑡ℎ𝑒 𝑝𝑒𝑟𝑠𝑜𝑛.`)
+
+  let spmoney;
+  try{
+	  let _spmoney = JSON.parse(fs.readFileSync(`./data/users${args[1].replace('@','/')}/money.json`));
+	  spmoney = _spmoney[0]	//--- money	
+  }catch (err){
+	  
+  }
+  let spxp;
+  try{ 
+  let _spxp = JSON.parse(fs.readFileSync(`./data/users${args[1].replace('@','/')}/xp.json`));
+  spxp = Number(_spxp[0])	//--- xp
+}catch (err){
+  
+}
+let spusername;
+try{			
+let _spusername = JSON.parse(fs.readFileSync(`./data/users${args[1].replace('@','/')}/username.json`));
+spusername = _spusername[0]	//--- usersname	
+}catch (err){
+
+}
+let spage;
+try{	
+let _spage = JSON.parse(fs.readFileSync(`./data/users${args[1].replace('@','/')}/age.json`));
+spage = _spage[0]	//--- age	
+}catch (err){
+
+}
+  let spbio;
+  try{	
+  let _spbio = JSON.parse(fs.readFileSync(`./data/users${args[1].replace('@','/')}/starpicture.json`));
+  spbio = _spbio[0]	//--- bio
+}catch (err){
+	reply(`${design} 𝑆𝑜𝑟𝑟𝑦. 𝑇ℎ𝑖𝑠 𝑢𝑠𝑒𝑟 ℎ𝑎𝑠 𝑛𝑜𝑡 𝑢𝑝𝑙𝑜𝑎𝑑𝑒𝑑 𝑎 𝑝𝑖𝑐𝑡𝑢𝑟𝑒 𝑦𝑒𝑡.`)
+}
+
+buffer = fs.readFileSync(`./data/users${args[1].replace('@','/')}/starpicture.jpg`)
+Lxa.sendMessage(from, buffer, image, {quoted:mek, caption: `${design} ${spusername}\n${design} ${spage} 𝑦𝑜\n${design} ${spmoney}$\n${design} ${spxp} 𝑥𝑝\n\n${spbio}`})
+break
+
 //-- watermark 
 case 'watermarkimage':
 if (!isVerify) return reply(UserB())
