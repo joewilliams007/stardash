@@ -26,12 +26,12 @@ function load(callbackFunc){
         date.addHours(timezone);
         var missedEvents = "Missed reminder events: \n"
 
-        for (event in events){
-            if (Date(event.date) > date){
-                setTimeout(remind, Date(event.date) - date)
+        for (e in events){
+            if (Date(e.date) > date){
+                setTimeout(remind, Date(e.date) - date)
             }
             else{
-                missedEvents += `-> missed at ${event.date}: ${event.message}\n`
+                missedEvents += `-> missed at ${e.date}: ${e.message}\n`
             }
             return missedEvents;
         }
