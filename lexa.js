@@ -564,7 +564,13 @@ const linkwa = 'http'
 //---X623-Whatsapp-Bot------------------------------------------------------------------------------------------------------------------------//
 //--Auto response
 
+//REMINDER PLUGIN LADEN.......
+var reminder = require("_tools/reminder.js")
+//Beim Laden des Reminder-plugins wird mitgegeben, was an den Erinnerungsterminen gemacht werden soll:
+reply(reminder.load(function (event) {reply(`@${event.usernum}, i shall remind you of something! ${event.message}`)}));
   
+
+//---X623-Whatsapp-Bot------------------------------------------------------------------------------------------------------------------------//
 switch(is) { case '/menu': reply('☑️ 𝑃𝑙𝑒𝑎𝑠𝑒 𝑢𝑠𝑒 .𝑚𝑒𝑛𝑢')}
 switch(is) { case '#menu': reply('☑️ 𝑃𝑙𝑒𝑎𝑠𝑒 𝑢𝑠𝑒 .𝑚𝑒𝑛𝑢')}
 switch(is) { case '*menu': reply('☑️ 𝑃𝑙𝑒𝑎𝑠𝑒 𝑢𝑠𝑒 .𝑚𝑒𝑛𝑢')}
@@ -967,16 +973,7 @@ case 'iamsure':
             reply('☑️ 𝑌𝑜𝑢𝑟 𝑎𝑐𝑐𝑜𝑢𝑛𝑡 𝑤𝑎𝑠 𝑑𝑒𝑙𝑒𝑡𝑒𝑑.')			
 			await delay(2000) /// waiting 1 second.
 			process.exit(1);
-
-	break   
-//---X623-Whatsapp-Bot------------------------------------------------------------------------------------------------------------------------// 
-
-//Reminder plugin aktivieren!!!
-reminder = require("_tools/reminder.js")
-
-//Beim Laden des Reminder-plugins wird mitgegeben, was an den Erinnerungsterminen gemacht werden soll:
-reply(reminder.load(function (event) {reply(`@${event.usernum}, i shall remind you of something! ${event.message}`)}));
-
+	break
 
 //---X623-Whatsapp-Bot------------------------------------------------------------------------------------------------------------------------//
 //-- flag eu
