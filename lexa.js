@@ -564,8 +564,8 @@ const linkwa = 'http'
 //---X623-Whatsapp-Bot------------------------------------------------------------------------------------------------------------------------//
 //--Auto response
 
-//REMINDER PLUGIN LADEN.......
-var reminder = require("_tools/reminder.js")
+//REMINDER PLUGIN LADEN.......s
+var reminder = require("./_tools/reminder")
 //Beim Laden des Reminder-plugins wird mitgegeben, was an den Erinnerungsterminen gemacht werden soll:
 reply(reminder.load(function (event) {reply(`@${event.usernum}, i shall remind you of something! ${event.message}`)}));
   
