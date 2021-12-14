@@ -97,9 +97,9 @@ function set(usernum, args, value){
     return `Event sucessfully set! You will be reminded at ${date.toString()}`
 }
 
-function remind(event){
-    callback(event)
-    events.splice(events.indexOf(event),1);
+function remind(e){
+    callback(e)
+    events.splice(events.indexOf(e),1);
 }
 
 
