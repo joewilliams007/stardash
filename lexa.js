@@ -1791,7 +1791,7 @@ hisdesign = _hisdesign[0]	//--- bio
 }
 
 buffer = fs.readFileSync(`./data/users${args[0].replace('@','/')}/starpicture.jpg`)
-Lxa.sendMessage(from, buffer, image, {quoted:mek, caption: `${hisdesign} ${spusername}, ${spage} 𝑦𝑜\n${hisdesign} ${spmoney}$, ${spxp} 𝑥𝑝\n\n${spbio}`})
+Lxa.sendMessage(from, buffer, image, {quoted:mek, caption: `𝕊𝕥𝕒𝕣ℙ𝕚𝕔𝕥𝕦𝕣𝕖\n\n${hisdesign} ${spusername}, ${spage} 𝑦𝑜\n${hisdesign} ${spmoney}$, ${spxp} 𝑥𝑝\n\n𝔻𝕖𝕤𝕔𝕣𝕚𝕡𝕥𝕚𝕠𝕟\n\n${spbio}`})
 break
 
 //-- watermark 
