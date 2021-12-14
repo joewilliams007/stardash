@@ -633,11 +633,11 @@ case 'premium':
 
     reply(`𝑀𝑒𝑛𝑢 🌫️
 -.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.- 
-» ${pushname}
-» ${id}
+${pushname}
 -.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.- 
 ${design} .feed
--.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-    
+-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-  
+${design} .star  
 ${design} .games
 ${design} .tools
 ${design} .edit
@@ -649,14 +649,27 @@ ${design} .owners
 𝑌𝑜𝑢𝑟 𝑀𝑜𝑛𝑒𝑦 » _${money}$_
 `)
 break
+case 'star':
+    if (!isVerify) return reply(userB(prefix))
 
+    reply(`𝑆𝑡𝑎𝑟𝑃𝑖𝑐𝑡𝑢𝑟𝑒 ✨
+-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.- 
+${pushname}
+-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-    
+${design} .starpicture
+-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.- 
+${design} .sp
+${design} .mysp
+-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.- 
+_𝑌𝑜𝑢𝑟 𝑀𝑜𝑛𝑒𝑦 » ${money}$_
+`)
+	 break
 case 'games':
     if (!isVerify) return reply(userB(prefix))
 
     reply(`𝐺𝑎𝑚𝑒𝑠 🃏
 -.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.- 
 » ${pushname}
-» ${id}
 -.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-    
 ${design} .slot
 ${design} .truth
@@ -686,7 +699,6 @@ case 'tools':
     reply(`𝑇𝑜𝑜𝑙𝑠 ⚓
 -.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.- 
 » ${pushname}
-» ${id}
 -.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-    
 ${design} .song
 ${design} .send
@@ -710,7 +722,6 @@ case 'edit':
     reply(`𝐸𝑑𝑖𝑡 📼
 -.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.- 
 » ${pushname}
-» ${id}
 -.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-    
 ${design} .sticker
 ${design} .image
@@ -1728,7 +1739,7 @@ case 'mysp':
 }
 
 buffer = fs.readFileSync(`./data/users/${sender.split("@")[0]}/starpicture.jpg`)
-Lxa.sendMessage(from, buffer, image, {quoted:mek, caption: `${design} ${username}, ${age} 𝑦𝑜\n${design} ${money}, ${xp} 𝑥𝑝\n\n${mybio}`})
+Lxa.sendMessage(from, buffer, image, {quoted:mek, caption: `${design} ${username}, ${age} 𝑦𝑜\n${design} ${money}$, ${xp} 𝑥𝑝\n\n${mybio}`})
 break
 
 //-- sp

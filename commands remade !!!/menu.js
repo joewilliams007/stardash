@@ -11,6 +11,7 @@ case 'premium':
 -.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.- 
 ${design} .myfeed
 -.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-    
+${design} .star
 ${design} .games
 ${design} .tools
 ${design} .edit
@@ -22,6 +23,22 @@ ${design} .owner
 _𝑌𝑜𝑢𝑟 𝑀𝑜𝑛𝑒𝑦 » ${money}$_
 `)
 break
+
+case 'star':
+    if (!isVerify) return reply(userB(prefix))
+
+    reply(`𝑆𝑡𝑎𝑟𝑃𝑖𝑐𝑡𝑢𝑟𝑒 ✨
+» ${pushname}
+» ${id}
+-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-    
+${design} .starpicture
+-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.- 
+${design} .sp
+${design} .mysp
+-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.- 
+_𝑌𝑜𝑢𝑟 𝑀𝑜𝑛𝑒𝑦 » ${money}$_
+`)
+	 break
 
 case 'games':
     if (!isVerify) return reply(userB(prefix))
@@ -51,6 +68,7 @@ ${design} .nsfw
 _𝑌𝑜𝑢𝑟 𝑀𝑜𝑛𝑒𝑦 » ${money}$_
 `)
 	 break
+
 
 case 'tools':
     if (!isVerify) return reply(userB(prefix))
