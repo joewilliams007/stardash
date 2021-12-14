@@ -31,7 +31,7 @@ function load(callbackFunc){
                 setTimeout(remind, event.date - date)
             }
             else{
-                missedEvents += `-> missed at ${event.date.toString()}: ${event.message}\n`
+      //          missedEvents += `-> missed at ${event.date.toString()}: ${event.message}\n`
             }
             return missedEvents;
         }
