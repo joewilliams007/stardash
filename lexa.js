@@ -108,14 +108,6 @@ const _wishes = JSON.parse(fs.readFileSync('./help/wishes.json'));
 const _notes = JSON.parse(fs.readFileSync('./help/notes.json'));
 
 //---X623-Whatsapp-Bot------------------------------------------------------------------------------------------------------------------------//
-//--Auto response
-
-//REMINDER PLUGIN LADEN.......s
-var reminder = require("./_tools/reminder")
-//Beim Laden des Reminder-plugins wird mitgegeben, was an den Erinnerungsterminen gemacht werden soll:
-console.log( reminder.load(function (event) {reply(`@${event.usernum}, i shall remind you of something! ${event.message}`)}));
-
-//---X623-Whatsapp-Bot------------------------------------------------------------------------------------------------------------------------//
 //-- Help
 const { updates, updatesold} = require('./help/updates');
 const { wait, stick, err, group, ban, ownerB, userP, premi, userB, admin, Badmin } = require('./help/respon');
@@ -454,6 +446,16 @@ const botNumber = Lxa.user.jid
 "fileLength": "201809",
 "jpegThumbnail": `${rep2}` } } }})
       }			
+
+//---X623-Whatsapp-Bot------------------------------------------------------------------------------------------------------------------------//
+
+//REMINDER PLUGIN LADEN.......s
+var reminder = require("./_tools/reminder")
+//Beim Laden des Reminder-plugins wird mitgegeben, was an den Erinnerungsterminen gemacht werden soll:
+console.log( reminder.load(function (event) {reply(`@${event.usernum}, i shall remind you of something! ${event.message}`)}));
+
+//---X623-Whatsapp-Bot------------------------------------------------------------------------------------------------------------------------//
+
 //--MessageType
 const isMedia = (type === 'imageMessage' || type === 'videoMessage')
 const isQuotedText = type === 'extendedTextMessage' && content.includes('textMessage')

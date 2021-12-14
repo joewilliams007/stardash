@@ -4,7 +4,7 @@ const { success } = require('../fs/functions');
 const filePath = './data/reminder/reminder_events.json';
 
 //hours to add to London timezone (Berlin = 1)
-const timezone = 1
+const timezone = 0
 
 var callback;
 
@@ -26,12 +26,12 @@ function load(callbackFunc){
         date.addHours(timezone);
         var missedEvents = "Missed reminder events: \n"
 
-        for (event in events){
-            if (Date(event.date) > date){
-                setTimeout(remind, Date(event.date) - date)
+        for (e in events){
+            if (Date(e.date) > date){
+                setTimeout(remind, Date(e.date) - date)
             }
             else{
-                missedEvents += `-> missed at ${event.date}: ${event.message}\n`
+                missedEvents += `-> missed at ${e.date}: ${e.message}\n`
             }
             return missedEvents;
         }
@@ -97,9 +97,9 @@ function set(usernum, args, value){
     return `Event sucessfully set! You will be reminded at ${date.toString()}`
 }
 
-function remind(event){
-    callback(event)
-    events.splice(events.indexOf(event),1);
+function remind(e){
+    callback(e)
+    events.splice(events.indexOf(e),1);
 }
 
 
