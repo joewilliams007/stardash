@@ -1,4 +1,5 @@
 //--
+const fs = require('fs');
 const up = JSON.parse(fs.readFileSync('./data/bot/setting.json'));
 const prefix = up.prefix
 const body = (type === 'conversation' && mek.message.conversation.startsWith(prefix)) ? mek.message.conversation : (type == 'imageMessage') && mek.message.imageMessage.caption.startsWith(prefix) ? mek.message.imageMessage.caption : (type == 'videoMessage') && mek.message.videoMessage.caption.startsWith(prefix) ? mek.message.videoMessage.caption : (type == 'extendedTextMessage') && mek.message.extendedTextMessage.text.startsWith(prefix) ? mek.message.extendedTextMessage.text : ''
@@ -7,7 +8,7 @@ const command = body.slice(1).trim().split(/ +/).shift().toLowerCase()
 const is = budy.slice(0).trim().split(/ +/).shift().toLowerCase()
 const args = body.trim().split(/ +/).slice(1)
 
-const fs = require('fs');
+
 const { success } = require('../fs/functions');
 const filePath = '../data/reminder/reminder_events.json';
 
