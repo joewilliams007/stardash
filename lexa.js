@@ -1739,7 +1739,7 @@ case 'mysp':
 }
 
 buffer = fs.readFileSync(`./data/users/${sender.split("@")[0]}/starpicture.jpg`)
-Lxa.sendMessage(from, buffer, image, {quoted:mek, caption: `${design} ${username}, ${age} 𝑦𝑜\n${design} ${money}$, ${xp} 𝑥𝑝\n\n${mybio}`})
+Lxa.sendMessage(from, buffer, image, {quoted:mek, caption: `${design} ${username} ${age} 𝑦𝑜\n${design} ${money}$s ${xp} 𝑥𝑝\n\n${mybio}`})
 break
 
 //-- sp
@@ -1791,7 +1791,7 @@ hisdesign = _hisdesign[0]	//--- bio
 }
 
 buffer = fs.readFileSync(`./data/users${args[0].replace('@','/')}/starpicture.jpg`)
-Lxa.sendMessage(from, buffer, image, {quoted:mek, caption: `${hisdesign} ${spusername}, ${spage} 𝑦𝑜\n${hisdesign} ${spmoney}$, ${spxp} 𝑥𝑝\n\n${spbio}`})
+Lxa.sendMessage(from, buffer, image, {quoted:mek, caption: `${hisdesign} ${spusername} ${spage} 𝑦𝑜\n${hisdesign} ${spmoney}$ ${spxp} 𝑥𝑝\n\n${spbio}`})
 break
 
 //-- watermark 
