@@ -2415,7 +2415,7 @@ reply(`${design} 𝚂𝚕𝚘𝚝\n\n${slot4}${slot5}${slot6}\n- - - - - - - - -
 
 //---- Set winner
 
-if (((Number(xp) >= Number(winner1)) && (Number(xp) > Number(winner2)) && (Number(xp) > Number(winner3))))  {						
+if (((Number(xp) > Number(winner1)) && (Number(xp) > Number(winner2)) && (Number(xp) > Number(winner3))))  {						
     exec(`rm -rf ./session/winner1.json`)
     await delay(3000) /// waiting 1 second.
 fs.appendFile(`./session/winner1.json`, `["${xp}", "${pushname}", "${status}"]`, function (err) {				
@@ -2423,7 +2423,7 @@ fs.appendFile(`./session/winner1.json`, `["${xp}", "${pushname}", "${status}"]`,
   });
 }
 
-else if (((Number(xp) >= Number(winner2)) && (Number(xp) > Number(winner3))))  {						
+else if (((Number(xp) > Number(winner2)) && (Number(xp) > Number(winner3))))  {						
     exec(`rm -rf ./session/winner2.json`)
     await delay(3000) /// waiting 1 second.
 fs.appendFile(`./session/winner2.json`, `["${xp}", "${pushname}", "${status}"]`, function (err) {				
@@ -2431,7 +2431,7 @@ fs.appendFile(`./session/winner2.json`, `["${xp}", "${pushname}", "${status}"]`,
   });
 }
 
-else if ((Number(xp) >= Number(winner3)))  {						
+else if ((Number(xp) > Number(winner3)))  {						
     exec(`rm -rf ./session/winner3.json`)
     await delay(3000) /// waiting 1 second.
 fs.appendFile(`./session/winner3.json`, `["${xp}", "${pushname}", "${status}"]`, function (err) {				
@@ -3185,7 +3185,7 @@ case 'leader':
 case 'leaderboard':
 if (!isVerify) return reply(userB())
 var xp1 = Number(xp);
-var gain = Number(5);
+var gain = Number(1);
 var newxp = xp + gain; 
 
 fs.readFile(`./data/users/${sender.split("@")[0]}/xp.json`, 'utf-8', function(err, data) {
@@ -3196,7 +3196,7 @@ fs.readFile(`./data/users/${sender.split("@")[0]}/xp.json`, 'utf-8', function(er
 	})
 })
 await delay(1000) /// waiting 1 second.		
-if (((Number(xp) >= Number(winner1)) && (Number(xp) > Number(winner2)) && (Number(xp) > Number(winner3))))  {						
+if (((Number(xp) > Number(winner1)) && (Number(xp) > Number(winner2)) && (Number(xp) > Number(winner3))))  {						
     exec(`rm -rf ./session/winner1.json`)
     await delay(2000) /// waiting 1 second.
 fs.appendFile(`./session/winner1.json`, `["${xp}", "${pushname}", "${status}"]`, function (err) {				
@@ -3204,7 +3204,7 @@ fs.appendFile(`./session/winner1.json`, `["${xp}", "${pushname}", "${status}"]`,
   });
 }
 
-else if ((Number(xp) >= Number(winner2)) && (Number(xp) > Number(winner3))) {						
+else if ((Number(xp) > Number(winner2)) && (Number(xp) > Number(winner3))) {						
     exec(`rm -rf ./session/winner2.json`)
     await delay(2000) /// waiting 1 second.
 fs.appendFile(`./session/winner2.json`, `["${xp}", "${pushname}", "${status}"]`, function (err) {				
@@ -3212,7 +3212,7 @@ fs.appendFile(`./session/winner2.json`, `["${xp}", "${pushname}", "${status}"]`,
   });
 }
 
-else if ((Number(xp) >= Number(winner3)))  {						
+else if ((Number(xp) > Number(winner3)))  {						
     exec(`rm -rf ./session/winner3.json`)
     await delay(2000) /// waiting 1 second.
 fs.appendFile(`./session/winner3.json`, `["${xp}", "${pushname}", "${status}"]`, function (err) {				
