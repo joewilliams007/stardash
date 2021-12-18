@@ -42,7 +42,7 @@ Scan Qr Code with ur Whatsapp
 ### Bot
 Contact me for Questions
 <p>
-<a href="https://wa.me/4917626388837?text=x623Help" target="blank"><img src="https://img.shields.io/badge/WhatsApp StarDash Bot v3-30302f?style=flat&logo=whatsapp" /></a>
+<a href="https://wa.me/4917626388837?text=x623Help" target="blank"><img src="https://img.shields.io/badge/WhatsApp x623 Bot-30302f?style=flat&logo=whatsapp" /></a>
 </p>
 
 
