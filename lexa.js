@@ -2416,7 +2416,7 @@ try{
 }catch (err){
 	
 }
-let winner3;
+var winner3;
 try{
 	var _winner3 = JSON.parse(fs.readFileSync(`./session/winner3.json`));	
 	winner3 = _winner3[0]	//--- xp 
@@ -3210,7 +3210,7 @@ try{
 }catch (err){
 	
 }
-let winner3;
+var winner3;
 try{
 	var _winner3 = JSON.parse(fs.readFileSync(`./session/winner3.json`));	
 	winner3 = _winner3[0]	//--- xp 
