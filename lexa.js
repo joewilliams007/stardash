@@ -2877,15 +2877,15 @@ case 'feed':
 						
 						}
 
-nomor = '4917626388837@s.whatsapp.net'
-owner = await fs.readFileSync('./images/menu.jpg').toString('base64')
-capt = `${design} 𝑁𝑒𝑤𝑠 𝑓𝑒𝑒𝑑`
 
 	weather.find({search: `${location}`, degreeType: 'c'}, function(err, result) {
 		if(err) console.log(err);
+		var cityName = result[0].location.name
 		var temperature = result[0].current.temperature
 		var skytext = result[0].current.skytext
-
+		var winddisplay = result[0].current.winddisplay
+		var imageurl = result[0].current.imageUrl
+	  
 			  var request = require('request');
 	  
 			  var download = function(uri, filename, callback){
@@ -2907,8 +2907,11 @@ capt = `${design} 𝑁𝑒𝑤𝑠 𝑓𝑒𝑒𝑑`
 		  else  {
 			  var tempSymbol = "🔥"
 			  }
+			}
 	
-
+nomor = '4917626388837@s.whatsapp.net'
+owner = await fs.readFileSync('./images/menu.jpg').toString('base64')
+capt = `${design} 𝑁𝑒𝑤𝑠 𝑓𝑒𝑒𝑑`
 const been1 = {
 
     text: `» ${pushname}
@@ -2940,7 +2943,6 @@ mentionedJid: [nomor]
 }
 replyimg(been1, text, capt, owner)
 
-	
 
 var xpn = Number(xp);
 var upxp = Number(1);
