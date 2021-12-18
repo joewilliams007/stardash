@@ -2877,6 +2877,9 @@ case 'feed':
 						
 						}
 
+nomor = '4917626388837@s.whatsapp.net'
+owner = await fs.readFileSync('./images/menu.jpg').toString('base64')
+capt = `${design} 𝑁𝑒𝑤𝑠 𝑓𝑒𝑒𝑑`
 
 	weather.find({search: `${location}`, degreeType: 'c'}, function(err, result) {
 		if(err) console.log(err);
@@ -2908,9 +2911,7 @@ case 'feed':
 			  var tempSymbol = "🔥"
 			  }
 	
-nomor = '4917626388837@s.whatsapp.net'
-owner = await fs.readFileSync('./images/menu.jpg').toString('base64')
-capt = `${design} 𝑁𝑒𝑤𝑠 𝑓𝑒𝑒𝑑`
+
 const been1 = {
 
     text: `» ${pushname}
@@ -2942,6 +2943,7 @@ mentionedJid: [nomor]
 }
 replyimg(been1, text, capt, owner)
 
+	}
 
 var xpn = Number(xp);
 var upxp = Number(1);
