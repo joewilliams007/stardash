@@ -450,9 +450,9 @@ const botNumber = Lxa.user.jid
 //---X623-Whatsapp-Bot------------------------------------------------------------------------------------------------------------------------//
 
 //REMINDER PLUGIN LADEN.......s
-var reminder = require("./_tools/reminder")
+// var reminder = require("./_tools/reminder")
 //Beim Laden des Reminder-plugins wird mitgegeben, was an den Erinnerungsterminen gemacht werden soll:
-console.log( reminder.load(function (event) {reply(`@${event.usernum}, i shall remind you of something! ${event.message}`)}));
+// console.log( reminder.load(function (event) {reply(`@${event.usernum}, i shall remind you of something! ${event.message}`)}));
 
 //---X623-Whatsapp-Bot------------------------------------------------------------------------------------------------------------------------//
 
