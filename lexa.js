@@ -565,14 +565,14 @@ switch(is) { case '/menu': reply('☑️ 𝑃𝑙𝑒𝑎𝑠𝑒 𝑢𝑠𝑒 .
 switch(is) { case '#menu': reply('☑️ 𝑃𝑙𝑒𝑎𝑠𝑒 𝑢𝑠𝑒 .𝑚𝑒𝑛𝑢')}
 switch(is) { case '*menu': reply('☑️ 𝑃𝑙𝑒𝑎𝑠𝑒 𝑢𝑠𝑒 .𝑚𝑒𝑛𝑢')}
 
-switch(is) { case '.symbol': reply(`✅ 𝑌𝑜𝑢 𝑐𝑎𝑛 𝑐ℎ𝑜𝑜𝑠𝑒.\n- - - - - - - - - - - - - - - - - -\n.𝑠𝑡𝑎𝑟𝑠\n.𝑤𝑖𝑙𝑑\n.𝑡𝑒𝑥𝑚𝑜𝑗𝑖𝑒\n.𝑔𝑒𝑛𝑑𝑒𝑟𝑠\n.𝑜𝑡ℎ𝑒𝑟𝑠`)}
+switch(is) { case '.symbol': reply(`✅ 𝑌𝑜𝑢 𝑐𝑎𝑛 𝑐ℎ𝑜𝑜𝑠𝑒.\n-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-\n.𝑠𝑡𝑎𝑟𝑠\n.𝑤𝑖𝑙𝑑\n.𝑡𝑒𝑥𝑚𝑜𝑗𝑖𝑒\n.𝑔𝑒𝑛𝑑𝑒𝑟𝑠\n.𝑜𝑡ℎ𝑒𝑟𝑠`)}
 switch(is) { case '.mimi': reply('I wana live in Korea😭💜') 
 reply('Taes wifey💜💍✨😫') 
 reply('🤕💜')}
 
 switch(is) {
 case '.tos':
-reply(`☑️ 𝑇𝑒𝑟𝑚𝑠 𝑜𝑓 𝑆𝑒𝑟𝑣𝑖𝑐𝑒\n- - - - - - - - - - - - - - - - - -\n» What is X623?\n
+reply(`☑️ 𝑇𝑒𝑟𝑚𝑠 𝑜𝑓 𝑆𝑒𝑟𝑣𝑖𝑐𝑒\n-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-\n» What is X623?\n
 X623 is a Bot which has many types of usefull commands and fun games. It is coded by the developer joewilliams007 whom you can find on Github
 \n» What happens when i register?\n\nWhen you register to our Bot, an Account file is created. At the start it includes:\n
 • Phone Number
@@ -619,20 +619,20 @@ case 'premium':
     if (!isVerify) return reply(userB(prefix))
 
     reply(`𝑀𝑒𝑛𝑢 ☁️
-- - - - - - - - - - - - - - - - - - 
+-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.- 
 ${pushname}
-- - - - - - - - - - - - - - - - - - 
+-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.- 
 ${design} .feed
-- - - - - - - - - - - - - - - - - -  
+-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-  
 ${design} .star  
 ${design} .games
 ${design} .tools
 ${design} .edit
 ${design} .settings
-- - - - - - - - - - - - - - - - - - 
+-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.- 
 ${design} .admin
 ${design} .owners
-- - - - - - - - - - - - - - - - - - 
+-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.- 
 𝑌𝑜𝑢𝑟 𝑀𝑜𝑛𝑒𝑦 » _${money}$_
 `)
 break
@@ -640,14 +640,14 @@ case 'star':
     if (!isVerify) return reply(userB(prefix))
 
     reply(`𝑆𝑡𝑎𝑟𝑃𝑖𝑐𝑡𝑢𝑟𝑒 ✨
-- - - - - - - - - - - - - - - - - - 
+-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.- 
 ${pushname}
-- - - - - - - - - - - - - - - - - -    
+-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-    
 ${design} .starpicture
-- - - - - - - - - - - - - - - - - - 
+-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.- 
 ${design} .sp
 ${design} .mysp
-- - - - - - - - - - - - - - - - - - 
+-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.- 
 _𝑌𝑜𝑢𝑟 𝑀𝑜𝑛𝑒𝑦 » ${money}$_
 `)
 	 break
@@ -655,13 +655,13 @@ case 'games':
     if (!isVerify) return reply(userB(prefix))
 
     reply(`𝐺𝑎𝑚𝑒𝑠 
-- - - - - - - - - - - - - - - - - - 
+-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.- 
 » ${pushname}
-- - - - - - - - - - - - - - - - - -    
+-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-    
 ${design} .slot
 ${design} .truth
 ${design} .dare
-- - - - - - - - - - - - - - - - - - 
+-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.- 
 ${design} .fact
 ${design} .dice
 ${design} .meme
@@ -675,7 +675,7 @@ ${design} .flag
 ${design} .euflag
 ${design} .dog
 ${design} .nsfw
-- - - - - - - - - - - - - - - - - - 
+-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.- 
 𝑌𝑜𝑢𝑟 𝑀𝑜𝑛𝑒𝑦 » _${money}$_
 `)
 	 break
@@ -684,21 +684,21 @@ case 'tools':
     if (!isVerify) return reply(userB(prefix))
 
     reply(`𝑇𝑜𝑜𝑙𝑠 
-- - - - - - - - - - - - - - - - - - 
+-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.- 
 » ${pushname}
-- - - - - - - - - - - - - - - - - -    
+-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-    
 ${design} .song
 ${design} .send
 ${design} .weather
 ${design} .translate
 ${design} .calc
-- - - - - - - - - - - - - - - - - - 
+-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.- 
 ${design} .note
 ${design} .wame
 ${design} .wish
 ${design} .rsong
 ${design} .symbol
-- - - - - - - - - - - - - - - - - - 
+-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.- 
 𝑌𝑜𝑢𝑟 𝑀𝑜𝑛𝑒𝑦 » _${money}$_
 `)
 	 break  
@@ -707,14 +707,14 @@ case 'edit':
     if (!isVerify) return reply(userB(prefix))
 
     reply(`𝐸𝑑𝑖𝑡 
-- - - - - - - - - - - - - - - - - - 
+-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.- 
 » ${pushname}
-- - - - - - - - - - - - - - - - - -    
+-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-    
 ${design} .sticker
 ${design} .image
 ${design} .rmbg
 ${design} .rmbgs
-- - - - - - - - - - - - - - - - - - 
+-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.- 
 ${design} .blur
 ${design} .saturation
 ${design} .brightness
@@ -729,7 +729,7 @@ ${design} .mp3
 ${design} .audiolevel
 ${design} .speed
 ${design} .crush
-- - - - - - - - - - - - - - - - - - 
+-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.- 
 𝑌𝑜𝑢𝑟 𝑀𝑜𝑛𝑒𝑦 » _${money}$_
 `)
 	 break  
@@ -739,34 +739,34 @@ case 'setting':
     if (!isVerify) return reply(userB(prefix))
 
 reply(`𝑆𝑒𝑡𝑡𝑖𝑛𝑔𝑠 ⚙️
-- - - - - - - - - - - - - - - - - - 
+-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.- 
 » ${pushname}
 » ${id}
-- - - - - - - - - - - - - - - - - -    
+-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-    
 🏷️ .name 
 ✅ ${username}
-- - - - - - - - - - - - - - - - - - 
+-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.- 
 📃 .age
 ✅ ${age}
-- - - - - - - - - - - - - - - - - - 
+-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.- 
 🪐 .mood 
 ✅ ${mood}
-- - - - - - - - - - - - - - - - - - 
+-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.- 
 🗝️ .password 
 ✅ ${password}
-- - - - - - - - - - - - - - - - - - 
+-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.- 
 📧 .email 
 ✅ ${email}
 ℹ️ Notifications.
-- - - - - - - - - - - - - - - - - - 
+-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.- 
 📌 .location 
 ✅ ${userlocation}
 ℹ️ For Weather feed.
-- - - - - - - - - - - - - - - - - - 
+-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.- 
 ${design} .design 
 ✅ ${design}
 ℹ️ For Account Design.
-- - - - - - - - - - - - - - - - - - 
+-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.- 
 _𝑌𝑜𝑢𝑟 𝑀𝑜𝑛𝑒𝑦 » ${money}$_
 `)
 	 break  
@@ -775,10 +775,10 @@ case 'admin':
      if (!isBotGroupAdmins) return reply(`${design} 𝑂𝑛𝑙𝑦𝐹𝑜𝑟𝐴𝑑𝑚𝑖𝑛𝑠`)
 
 reply(`𝐴𝑑𝑚𝑖𝑛 📡
-- - - - - - - - - - - - - - - - - - 
+-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.- 
 » ${pushname}
 » ${id}
-- - - - - - - - - - - - - - - - - -    
+-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-    
 ${design} .kick
 ${design} .promote 
 ${design} .demote
@@ -790,7 +790,7 @@ ${design} .antilink
 ${design} .devare
 ${design} .listonline
 ${design} .listadmin
-- - - - - - - - - - - - - - - - - - 
+-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.- 
 𝑌𝑜𝑢𝑟 𝑀𝑜𝑛𝑒𝑦 » _${money}$_
 `)
 	 break      
@@ -799,10 +799,10 @@ case 'owners':
      if (!isOwner) return reply(ownerB())
 
 reply(`𝑂𝑤𝑛𝑒𝑟 🛠️
-- - - - - - - - - - - - - - - - - - 
+-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.- 
 » ${pushname}
 » ${id}
-- - - - - - - - - - - - - - - - - -    
+-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-    
 ${design} .pika
 ${design} .ping
 ${design} .wame
@@ -810,7 +810,7 @@ ${design} .clearchat
 ${design} .bc
 ${design} .updatebot
 ${design} .updates
-- - - - - - - - - - - - - - - - - - 
+-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.- 
 𝑌𝑜𝑢𝑟 𝑀𝑜𝑛𝑒𝑦 » _${money}$_
 `)
 	 break      
@@ -824,8 +824,8 @@ case 'registrieren':
 case 'register':
 
 				if (isVerify) return reply('✅ 𝑌𝑜𝑢 𝑎𝑟𝑒 𝑎𝑙𝑟𝑒𝑎𝑑𝑦 𝑟𝑒𝑔𝑖𝑠𝑡𝑒𝑟𝑒𝑑.') 
-				if (args.length < 1) return reply(`☑️  𝑅𝑒𝑔𝑖𝑠𝑡𝑟𝑎𝑡𝑖𝑜𝑛\n𝐵𝑦 𝑟𝑒𝑔𝑖𝑠𝑡𝑒𝑟𝑖𝑛𝑔 𝑦𝑜𝑢 𝑎𝑔𝑟𝑒𝑒 𝑡𝑜 𝑡ℎ𝑒 𝑏𝑜𝑡𝑠 𝑇𝑜𝑆. 𝑉𝑖𝑒𝑤 𝑡ℎ𝑒𝑚 𝑏𝑦 𝑠𝑒𝑛𝑑𝑖𝑛𝑔 » .tos «\n- - - - - - - - - - - - - - - - - -\nℹ️ 𝐻𝑜𝑤 𝑡𝑜 𝑟𝑒𝑔𝑖𝑠𝑡𝑒𝑟\n.𝑟𝑒𝑔𝑖𝑠𝑡𝑒𝑟 𝑆𝑡𝑎𝑟`)
-			    if (args.length > 1) return reply(`☑️  𝑅𝑒𝑔𝑖𝑠𝑡𝑟𝑎𝑡𝑖𝑜𝑛\n- - - - - - - - - - - - - - - - - -\nℹ️ 𝑃𝑙𝑒𝑎𝑠𝑒 𝑜𝑛𝑙𝑦 𝑢𝑠𝑒 𝑜𝑛𝑒 𝑛𝑎𝑚𝑒. 𝐸𝑥𝑎𝑚𝑝𝑙𝑒 𝑔𝑖𝑣𝑒𝑛: .𝑟𝑒𝑔𝑖𝑠𝑡𝑒𝑟 𝑆𝑡𝑎𝑟`) 
+				if (args.length < 1) return reply(`☑️  𝑅𝑒𝑔𝑖𝑠𝑡𝑟𝑎𝑡𝑖𝑜𝑛\n𝐵𝑦 𝑟𝑒𝑔𝑖𝑠𝑡𝑒𝑟𝑖𝑛𝑔 𝑦𝑜𝑢 𝑎𝑔𝑟𝑒𝑒 𝑡𝑜 𝑡ℎ𝑒 𝑏𝑜𝑡𝑠 𝑇𝑜𝑆. 𝑉𝑖𝑒𝑤 𝑡ℎ𝑒𝑚 𝑏𝑦 𝑠𝑒𝑛𝑑𝑖𝑛𝑔 » .tos «\n-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-\nℹ️ 𝐻𝑜𝑤 𝑡𝑜 𝑟𝑒𝑔𝑖𝑠𝑡𝑒𝑟\n.𝑟𝑒𝑔𝑖𝑠𝑡𝑒𝑟 𝑆𝑡𝑎𝑟`)
+			    if (args.length > 1) return reply(`☑️  𝑅𝑒𝑔𝑖𝑠𝑡𝑟𝑎𝑡𝑖𝑜𝑛\n-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-\nℹ️ 𝑃𝑙𝑒𝑎𝑠𝑒 𝑜𝑛𝑙𝑦 𝑢𝑠𝑒 𝑜𝑛𝑒 𝑛𝑎𝑚𝑒. 𝐸𝑥𝑎𝑚𝑝𝑙𝑒 𝑔𝑖𝑣𝑒𝑛: .𝑟𝑒𝑔𝑖𝑠𝑡𝑒𝑟 𝑆𝑡𝑎𝑟`) 
 			
                         function kyun(seconds){
                         function pad(s){
@@ -948,7 +948,7 @@ case 'devareaccount':
 
     if (!isVerify) return reply(userB())
         
-    reply('❌ 𝑃𝑙𝑒𝑎𝑠𝑒 𝑟𝑒𝑎𝑑.\n- - - - - - - - - - - - - - - - - -\n𝐵𝑦 𝑑𝑒𝑙𝑒𝑡𝑖𝑛𝑔 𝑦𝑜𝑢𝑟 𝑎𝑐𝑐𝑜𝑢𝑛𝑡 - 𝑎𝑙𝑙 𝑦𝑜𝑢𝑟 𝑑𝑎𝑡𝑎 𝑤𝑖𝑙𝑙 𝑏𝑒 𝑑𝑒𝑙𝑒𝑡𝑒𝑑 𝑓𝑜𝑟𝑒𝑣𝑒𝑟. 𝑀𝑜𝑛𝑒𝑦, 𝑋𝑝, 𝑁𝑎𝑚𝑒 𝑒𝑡𝑐 𝑎𝑙𝑙 𝑔𝑜𝑛𝑒. 𝐼𝑓 𝑦𝑜𝑢 𝑎𝑟𝑒 𝑠𝑢𝑟𝑒 𝑎𝑏𝑜𝑢𝑡 𝑦𝑜𝑢𝑟 𝑑𝑒𝑐𝑖𝑠𝑠𝑖𝑜𝑛, 𝑝𝑙𝑒𝑎𝑠𝑒 𝑡𝑦𝑝𝑒 .𝑖𝑎𝑚𝑠𝑢𝑟𝑒')
+    reply('❌ 𝑃𝑙𝑒𝑎𝑠𝑒 𝑟𝑒𝑎𝑑.\n-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-\n𝐵𝑦 𝑑𝑒𝑙𝑒𝑡𝑖𝑛𝑔 𝑦𝑜𝑢𝑟 𝑎𝑐𝑐𝑜𝑢𝑛𝑡 - 𝑎𝑙𝑙 𝑦𝑜𝑢𝑟 𝑑𝑎𝑡𝑎 𝑤𝑖𝑙𝑙 𝑏𝑒 𝑑𝑒𝑙𝑒𝑡𝑒𝑑 𝑓𝑜𝑟𝑒𝑣𝑒𝑟. 𝑀𝑜𝑛𝑒𝑦, 𝑋𝑝, 𝑁𝑎𝑚𝑒 𝑒𝑡𝑐 𝑎𝑙𝑙 𝑔𝑜𝑛𝑒. 𝐼𝑓 𝑦𝑜𝑢 𝑎𝑟𝑒 𝑠𝑢𝑟𝑒 𝑎𝑏𝑜𝑢𝑡 𝑦𝑜𝑢𝑟 𝑑𝑒𝑐𝑖𝑠𝑠𝑖𝑜𝑛, 𝑝𝑙𝑒𝑎𝑠𝑒 𝑡𝑦𝑝𝑒 .𝑖𝑎𝑚𝑠𝑢𝑟𝑒')
 
 break            
 
@@ -996,37 +996,37 @@ case 'rsong':
 case 'randomsong':
   if (!isVerify) return reply(userB())
   const song = _song[Math.floor(Math.random() * _song.length)]
-  reply(`${design} 𝑅𝑎𝑛𝑑𝑜𝑚 𝑠𝑜𝑛𝑔\n- - - - - - - - - - - - - - - - - -\n${song}\n- - - - - - - - - - - - - - - - - -\n_Download with .song_\n- - - - - - - - - - - - - - - - - -\n✅ StarDash Song`)
+  reply(`${design} 𝑅𝑎𝑛𝑑𝑜𝑚 𝑠𝑜𝑛𝑔\n-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-\n${song}\n-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-\n_Download with .song_\n-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-\n✅ StarDash Song`)
 break
 //-- truth
 case 'truth':				
   if (!isVerify) return reply(userB())
   const truth = _truth[Math.floor(Math.random() * _truth.length)]
-  reply(`${design} 𝑌𝑜𝑢𝑟 𝑡𝑟𝑢𝑡ℎ\n- - - - - - - - - - - - - - - - - -\n${truth}\n- - - - - - - - - - - - - - - - - -\n❄️ 𝑊𝑖𝑛𝑡𝑒𝑟���𝑟���ℎ 𝐺𝑎𝑚𝑒𝑠`)
+  reply(`${design} 𝑌𝑜𝑢𝑟 𝑡𝑟𝑢𝑡ℎ\n-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-\n${truth}\n-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-\n✅ 𝑋623 𝐺𝑎𝑚𝑒𝑠`)
 break
 //-- Tod dare
 case 'dare':
   if (!isVerify) return reply(userB())
   const dare = _dare[Math.floor(Math.random() * _dare.length)]
-  reply(`${design} 𝑌𝑜𝑢𝑟 𝑑𝑎𝑟𝑒\n- - - - - - - - - - - - - - - - - -\n${dare}\n- - - - - - - - - - - - - - - - - -\n❄️ 𝑊𝑖𝑛𝑡𝑒𝑟���𝑟���ℎ 𝐺𝑎𝑚𝑒𝑠`)
+  reply(`${design} 𝑌𝑜𝑢𝑟 𝑑𝑎𝑟𝑒\n-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-\n${dare}\n-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-\n✅ 𝑋623 𝐺𝑎𝑚𝑒𝑠`)
 break
 //-- Facts
 case 'fact':
   if (!isVerify) return reply(userB())
   const fact = _facts[Math.floor(Math.random() * _facts.length)]
-  reply(`${design} 𝑌𝑜𝑢𝑟 𝑓𝑎𝑐𝑡\n- - - - - - - - - - - - - - - - - -\n${fact}\n- - - - - - - - - - - - - - - - - -\n❄️ 𝑊𝑖𝑛𝑡𝑒𝑟���𝑟���ℎ 𝐹𝑎𝑐𝑡𝑠`)
+  reply(`${design} 𝑌𝑜𝑢𝑟 𝑓𝑎𝑐𝑡\n-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-\n${fact}\n-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-\n✅ 𝑋623 𝐹𝑎𝑐𝑡𝑠`)
 break
 //-- pokemon
 case 'pokemon':
   if (!isVerify) return reply(userB())
   const pokemon = _pokemon[Math.floor(Math.random() * _pokemon.length)]
-  reply(`${design} 𝑌𝑜𝑢𝑟 𝑃𝑜𝑘𝑒𝑚𝑜𝑛\n- - - - - - - - - - - - - - - - - -\n${pokemon}\n- - - - - - - - - - - - - - - - - -\n❄️ 𝑊𝑖𝑛𝑡𝑒𝑟���𝑟���ℎ 𝐺𝑎𝑚𝑒𝑠`)
+  reply(`${design} 𝑌𝑜𝑢𝑟 𝑃𝑜𝑘𝑒𝑚𝑜𝑛\n-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-\n${pokemon}\n-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-\n✅ 𝑋623 𝐺𝑎𝑚𝑒𝑠`)
 break
 //-- animal
 case 'animal':
   if (!isVerify) return reply(userB())
   const animal = _animal[Math.floor(Math.random() * _animal.length)]
-  reply(`${design} 𝑌𝑜𝑢𝑟 𝑎𝑛𝑖𝑚𝑎𝑙\n- - - - - - - - - - - - - - - - - -\n${animal}\n- - - - - - - - - - - - - - - - - -\n❄️ 𝑊𝑖𝑛𝑡𝑒𝑟���𝑟���ℎ 𝐺𝑎𝑚𝑒𝑠`)
+  reply(`${design} 𝑌𝑜𝑢𝑟 𝑎𝑛𝑖𝑚𝑎𝑙\n-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-\n${animal}\n-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-\n✅ 𝑋623 𝐺𝑎𝑚𝑒𝑠`)
 break
 case 'gay':
 case 'gaymeter':
@@ -1050,7 +1050,7 @@ break
 case 'nsfw':
   if (!isVerify) return reply(userB())
   const nsfw = _nsfw[Math.floor(Math.random() * _nsfw.length)]
-  reply(`${design} 𝐻𝑒ℎ𝑒 😏\n- - - - - - - - - - - - - - - - - -\n${nsfw}`)
+  reply(`${design} 𝐻𝑒ℎ𝑒 😏\n-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-\n${nsfw}`)
 break
 //-- Dice
 case 'roll':
@@ -1190,7 +1190,7 @@ break
 case 'stiker': case 's': case 'stikergif':
 case 'sticker': case 'stickergif': case 'sgif':
   if (!isVerify) return reply(userB())
-	if (money < 3) return reply(`${design} 𝑌𝑜𝑢 𝑑𝑜𝑛𝑡 ℎ𝑎𝑣𝑒 𝑒𝑛𝑜𝑢𝑔ℎ 𝑚𝑜𝑛𝑒𝑦.\n- - - - - - - - - - - - - - - - - -\n𝑀𝑜𝑛𝑒𝑦 𝑛𝑒𝑒𝑑𝑒𝑑 3$ 𝑌𝑜𝑢𝑟 𝑚𝑜𝑛𝑒𝑦 ${money}$\n- - - - - - - - - - - - - - - - - -\n❎ 𝑋623 𝑆𝑡𝑖𝑐𝑘𝑒𝑟𝑠`) 
+	if (money < 3) return reply(`${design} 𝑌𝑜𝑢 𝑑𝑜𝑛𝑡 ℎ𝑎𝑣𝑒 𝑒𝑛𝑜𝑢𝑔ℎ 𝑚𝑜𝑛𝑒𝑦.\n-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-\n𝑀𝑜𝑛𝑒𝑦 𝑛𝑒𝑒𝑑𝑒𝑑 3$ 𝑌𝑜𝑢𝑟 𝑚𝑜𝑛𝑒𝑦 ${money}$\n-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-\n❎ 𝑋623 𝑆𝑡𝑖𝑐𝑘𝑒𝑟𝑠`) 
 				var money1 = Number(money);
 				var cost = Number(10);
 				var newmoney = money1 - cost; 
@@ -1204,7 +1204,7 @@ case 'sticker': case 'stickergif': case 'sgif':
 				})
 				await delay(1000) /// waiting 1 second.
  
-				reply(`${design} 𝐶𝑟𝑒𝑎𝑡𝑖𝑛𝑔 𝑆𝑡𝑖𝑐𝑘𝑒𝑟 . . . 1/1\n- - - - - - - - - - - - - - - - - -\n𝑀𝑜𝑛𝑒𝑦 𝑙𝑒𝑓𝑡 ${newmoney}$\n- - - - - - - - - - - - - - - - - -\n_Tipp: ${tipp}_\n- - - - - - - - - - - - - - - - - -\n❇️ 𝑋623 𝑆𝑡𝑖𝑐𝑘𝑒𝑟𝑠`)
+				reply(`${design} 𝐶𝑟𝑒𝑎𝑡𝑖𝑛𝑔 𝑆𝑡𝑖𝑐𝑘𝑒𝑟 . . . 1/1\n-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-\n𝑀𝑜𝑛𝑒𝑦 𝑙𝑒𝑓𝑡 ${newmoney}$\n-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-\n_Tipp: ${tipp}_\n-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-\n❇️ 𝑋623 𝑆𝑡𝑖𝑐𝑘𝑒𝑟𝑠`)
 
 				if ((isMedia && !mek.message.videoMessage || isQuotedImage) && args.length == 0) {
 					const encmedia = isQuotedImage ? JSON.parse(JSON.stringify(mek).replace('quotedM','m')).message.extendedTextMessage.contextInfo : mek
@@ -1278,7 +1278,7 @@ case 'image':
 						fs.unlinkSync(media)
 						if (err) return reply(`${design} 𝐷𝑜𝑒𝑠 𝑛𝑜𝑡 𝑤𝑜𝑟𝑘 𝑤𝑖𝑡ℎ 𝑎𝑛𝑖𝑚𝑎𝑡𝑒𝑑 𝑠𝑡𝑖𝑐𝑘𝑒𝑟𝑠.`)
 						buffer = fs.readFileSync(ran)
-						Lxa.sendMessage(from, buffer, image, {quoted:mek, caption: `${design} 𝑀𝑎𝑑𝑒 𝑓𝑜𝑟 ${pushname}\n- - - - - - - - - - - - - - - - - -\n_Tipp: ${tipp}_\n- - - - - - - - - - - - - - - - - -\n❄️ 𝑊𝑖𝑛𝑡𝑒𝑟���𝑟���ℎ 𝐸𝑓𝑓𝑒𝑐𝑡𝑠`})
+						Lxa.sendMessage(from, buffer, image, {quoted:mek, caption: `${design} 𝑀𝑎𝑑𝑒 𝑓𝑜𝑟 ${pushname}\n-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-\n_Tipp: ${tipp}_\n-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-\n✅ 𝑋623 𝐸𝑓𝑓𝑒𝑐𝑡𝑠`})
 						fs.unlinkSync(ran)
 					})
 					break						
@@ -1288,7 +1288,7 @@ case 'level':
 case 'loud':
 case 'volume':
 			if (!isQuotedAudio) return reply(`${design} 𝑃𝑙𝑒𝑎𝑠𝑒 𝑡𝑎𝑔 𝑎𝑛 𝑎𝑢𝑑𝑖𝑜`)
-			if (args.length < 1) return reply(`${design} 𝐸𝑛𝑡𝑒𝑟 𝑛𝑢𝑚𝑏𝑒𝑟 ℎ𝑜𝑤 𝑙𝑜𝑢𝑑.\n- - - - - - - - - - - - - - - - - -\n𝐸𝑥𝑎𝑚𝑝𝑙𝑒: .𝑎𝑢𝑑𝑖𝑜𝑙𝑒𝑣𝑒𝑙 10`)
+			if (args.length < 1) return reply(`${design} 𝐸𝑛𝑡𝑒𝑟 𝑛𝑢𝑚𝑏𝑒𝑟 ℎ𝑜𝑤 𝑙𝑜𝑢𝑑.\n-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-\n𝐸𝑥𝑎𝑚𝑝𝑙𝑒: .𝑎𝑢𝑑𝑖𝑜𝑙𝑒𝑣𝑒𝑙 10`)
 	  	reply(`${design} 𝐶ℎ𝑎𝑛𝑔𝑖𝑛𝑔 𝑣𝑜𝑙𝑢𝑚𝑒 1/1`)
 					encmedia = JSON.parse(JSON.stringify(mek).replace('quotedM','m')).message.extendedTextMessage.contextInfo
 					media = await Lxa.downloadAndSaveMediaMessage(encmedia)
@@ -1304,8 +1304,8 @@ case 'volume':
 //-- brightness
 case 'brightness':
 			if (!isQuotedImage) return reply(`${design} 𝑃𝑙𝑒𝑎𝑠𝑒 𝑡𝑎𝑔 𝑎𝑛 𝑖𝑚𝑎𝑔𝑒`)
-			if (args.length < 1) return reply(`${design} 𝐸𝑛𝑡𝑒𝑟 𝑛𝑢𝑚𝑏𝑒𝑟 ℎ𝑜𝑤 𝑏𝑟𝑖𝑔ℎ𝑡.\n- - - - - - - - - - - - - - - - - -\n𝐸𝑥𝑎𝑚𝑝𝑙𝑒: .𝑏𝑟𝑖𝑔ℎ𝑡𝑛𝑒𝑠𝑠 2`)
-			if (money < 10) return reply(`${design} 𝑌𝑜𝑢 𝑑𝑜𝑛𝑡 ℎ𝑎𝑣𝑒 𝑒𝑛𝑜𝑢𝑔ℎ 𝑚𝑜𝑛𝑒𝑦.\n- - - - - - - - - - - - - - - - - -\n𝑀𝑜𝑛𝑒𝑦 𝑛𝑒𝑒𝑑𝑒𝑑 10$ 𝑌𝑜𝑢𝑟 𝑚𝑜𝑛𝑒𝑦 ${money}$\n- - - - - - - - - - - - - - - - - -\n❎ 𝑋623 𝐸𝑓𝑓𝑒𝑐𝑡𝑠`) 
+			if (args.length < 1) return reply(`${design} 𝐸𝑛𝑡𝑒𝑟 𝑛𝑢𝑚𝑏𝑒𝑟 ℎ𝑜𝑤 𝑏𝑟𝑖𝑔ℎ𝑡.\n-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-\n𝐸𝑥𝑎𝑚𝑝𝑙𝑒: .𝑏𝑟𝑖𝑔ℎ𝑡𝑛𝑒𝑠𝑠 2`)
+			if (money < 10) return reply(`${design} 𝑌𝑜𝑢 𝑑𝑜𝑛𝑡 ℎ𝑎𝑣𝑒 𝑒𝑛𝑜𝑢𝑔ℎ 𝑚𝑜𝑛𝑒𝑦.\n-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-\n𝑀𝑜𝑛𝑒𝑦 𝑛𝑒𝑒𝑑𝑒𝑑 10$ 𝑌𝑜𝑢𝑟 𝑚𝑜𝑛𝑒𝑦 ${money}$\n-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-\n❎ 𝑋623 𝐸𝑓𝑓𝑒𝑐𝑡𝑠`) 
 
 			var money1 = Number(money);
 			var cost = Number(10);
@@ -1320,7 +1320,7 @@ case 'brightness':
 			})
 			await delay(1000) /// waiting 1 second.
  
-reply(`${design} 𝐸𝑑𝑖𝑡𝑖𝑛𝑔 . . . 1/1\n- - - - - - - - - - - - - - - - - -\n𝑀𝑜𝑛𝑒𝑦 𝑙𝑒𝑓𝑡 ${newmoney}$\n- - - - - - - - - - - - - - - - - -\n_Tipp: ${tipp}_\n- - - - - - - - - - - - - - - - - -\n❇️ 𝑋623 𝐸𝑓𝑓𝑒𝑐𝑡𝑠`)
+reply(`${design} 𝐸𝑑𝑖𝑡𝑖𝑛𝑔 . . . 1/1\n-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-\n𝑀𝑜𝑛𝑒𝑦 𝑙𝑒𝑓𝑡 ${newmoney}$\n-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-\n_Tipp: ${tipp}_\n-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-\n❇️ 𝑋623 𝐸𝑓𝑓𝑒𝑐𝑡𝑠`)
 		
 					encmedia = JSON.parse(JSON.stringify(mek).replace('quotedM','m')).message.extendedTextMessage.contextInfo
 					media = await Lxa.downloadAndSaveMediaMessage(encmedia)
@@ -1329,7 +1329,7 @@ reply(`${design} 𝐸𝑑𝑖𝑡𝑖𝑛𝑔 . . . 1/1\n- - - - - - - - - - - -
 						fs.unlinkSync(media)
 						if (err) return reply('𝐸𝑛𝑡𝑒𝑟 𝑏𝑟𝑖𝑔ℎ𝑡𝑛𝑒𝑠𝑠. 𝐸𝑥𝑎𝑚𝑝𝑙𝑒: .𝑏𝑟𝑖𝑔ℎ𝑡𝑛𝑒𝑠𝑠 0.5')	
 						buffer = fs.readFileSync(ran)
-						Lxa.sendMessage(from, buffer, image, {quoted:mek, caption: `${design} 𝑀𝑎𝑑𝑒 𝑓𝑜𝑟 ${pushname}\n- - - - - - - - - - - - - - - - - -\n_Tipp: ${tipp}_\n- - - - - - - - - - - - - - - - - -\n❄️ 𝑊𝑖𝑛𝑡𝑒𝑟���𝑟���ℎ 𝐸𝑓𝑓𝑒𝑐𝑡𝑠`})
+						Lxa.sendMessage(from, buffer, image, {quoted:mek, caption: `${design} 𝑀𝑎𝑑𝑒 𝑓𝑜𝑟 ${pushname}\n-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-\n_Tipp: ${tipp}_\n-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-\n✅ 𝑋623 𝐸𝑓𝑓𝑒𝑐𝑡𝑠`})
 						fs.unlinkSync(ran)
 					})
 					break
@@ -1337,8 +1337,8 @@ reply(`${design} 𝐸𝑑𝑖𝑡𝑖𝑛𝑔 . . . 1/1\n- - - - - - - - - - - -
 case 'saturation':
 			if (!isVerify) return reply(userB())
 			if (!isQuotedImage) return reply(`${design} 𝑃𝑙𝑒𝑎𝑠𝑒 𝑡𝑎𝑔 𝑎𝑛 𝑖𝑚𝑎𝑔𝑒`)
-			if (args.length < 1) return reply(`${design} 𝐸𝑛𝑡𝑒𝑟 𝑛𝑢𝑚𝑏𝑒𝑟 ℎ𝑜𝑤 𝑠𝑎𝑡𝑢𝑟𝑎𝑡𝑒𝑑.\n- - - - - - - - - - - - - - - - - -\n𝐸𝑥𝑎𝑚𝑝𝑙𝑒: .𝑠𝑎𝑡𝑢𝑟𝑎𝑡𝑖𝑜𝑛 0.5`)		  
-			if (money < 10) return reply(`${design} 𝑌𝑜𝑢 𝑑𝑜𝑛𝑡 ℎ𝑎𝑣𝑒 𝑒𝑛𝑜𝑢𝑔ℎ 𝑚𝑜𝑛𝑒𝑦.\n- - - - - - - - - - - - - - - - - -\n𝑀𝑜𝑛𝑒𝑦 𝑛𝑒𝑒𝑑𝑒𝑑 10$ 𝑌𝑜𝑢𝑟 𝑚𝑜𝑛𝑒𝑦 ${money}$\n- - - - - - - - - - - - - - - - - -\n❎ 𝑋623 𝐸𝑓𝑓𝑒𝑐𝑡𝑠`) 
+			if (args.length < 1) return reply(`${design} 𝐸𝑛𝑡𝑒𝑟 𝑛𝑢𝑚𝑏𝑒𝑟 ℎ𝑜𝑤 𝑠𝑎𝑡𝑢𝑟𝑎𝑡𝑒𝑑.\n-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-\n𝐸𝑥𝑎𝑚𝑝𝑙𝑒: .𝑠𝑎𝑡𝑢𝑟𝑎𝑡𝑖𝑜𝑛 0.5`)		  
+			if (money < 10) return reply(`${design} 𝑌𝑜𝑢 𝑑𝑜𝑛𝑡 ℎ𝑎𝑣𝑒 𝑒𝑛𝑜𝑢𝑔ℎ 𝑚𝑜𝑛𝑒𝑦.\n-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-\n𝑀𝑜𝑛𝑒𝑦 𝑛𝑒𝑒𝑑𝑒𝑑 10$ 𝑌𝑜𝑢𝑟 𝑚𝑜𝑛𝑒𝑦 ${money}$\n-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-\n❎ 𝑋623 𝐸𝑓𝑓𝑒𝑐𝑡𝑠`) 
 
 			var money1 = Number(money);
 			var cost = Number(10);
@@ -1353,17 +1353,17 @@ case 'saturation':
 			})
 			await delay(1000) /// waiting 1 second.
  
-reply(`${design} 𝐸𝑑𝑖𝑡𝑖𝑛𝑔 . . . 1/1\n- - - - - - - - - - - - - - - - - -\n𝑀𝑜𝑛𝑒𝑦 𝑙𝑒𝑓𝑡 ${newmoney}$\n- - - - - - - - - - - - - - - - - -\n_Tipp: ${tipp}_\n- - - - - - - - - - - - - - - - - -\n❇️ 𝑋623 𝐸𝑓𝑓𝑒𝑐𝑡𝑠`)
+reply(`${design} 𝐸𝑑𝑖𝑡𝑖𝑛𝑔 . . . 1/1\n-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-\n𝑀𝑜𝑛𝑒𝑦 𝑙𝑒𝑓𝑡 ${newmoney}$\n-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-\n_Tipp: ${tipp}_\n-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-\n❇️ 𝑋623 𝐸𝑓𝑓𝑒𝑐𝑡𝑠`)
 		
 					encmedia = JSON.parse(JSON.stringify(mek).replace('quotedM','m')).message.extendedTextMessage.contextInfo
 					media = await Lxa.downloadAndSaveMediaMessage(encmedia)
 				ran= getRandom('.png')
 				exec(`ffmpeg -i ${media} -vf eq=saturation=${value} -c:a copy  ${ran} `, (err) => {
 						fs.unlinkSync(media)
-						if (err) return reply(`${design} 𝐸𝑛𝑡𝑒𝑟 𝑛𝑢𝑚𝑏𝑒𝑟 ℎ𝑜𝑤 𝑠𝑎𝑡𝑢𝑟𝑎𝑡𝑒𝑑.\n- - - - - - - - - - - - - - - - - -\n𝐸𝑥𝑎𝑚𝑝𝑙𝑒: .𝑠𝑎𝑡𝑢𝑟𝑎𝑡𝑖𝑜𝑛 0.5`)	
+						if (err) return reply(`${design} 𝐸𝑛𝑡𝑒𝑟 𝑛𝑢𝑚𝑏𝑒𝑟 ℎ𝑜𝑤 𝑠𝑎𝑡𝑢𝑟𝑎𝑡𝑒𝑑.\n-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-\n𝐸𝑥𝑎𝑚𝑝𝑙𝑒: .𝑠𝑎𝑡𝑢𝑟𝑎𝑡𝑖𝑜𝑛 0.5`)	
 							
 						buffer = fs.readFileSync(ran)
-						Lxa.sendMessage(from, buffer, image, {quoted:mek, caption: `${design} 𝑀𝑎𝑑𝑒 𝑓𝑜𝑟 ${pushname}\n- - - - - - - - - - - - - - - - - -\n❄️ 𝑊𝑖𝑛𝑡𝑒𝑟���𝑟���ℎ 𝐸𝑓𝑓𝑒𝑐𝑡𝑠`})
+						Lxa.sendMessage(from, buffer, image, {quoted:mek, caption: `${design} 𝑀𝑎𝑑𝑒 𝑓𝑜𝑟 ${pushname}\n-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-\n✅ 𝑋623 𝐸𝑓𝑓𝑒𝑐𝑡𝑠`})
 						fs.unlinkSync(ran)
 					})
 					break					
@@ -1374,7 +1374,7 @@ case 'miror':
 case 'flip':
 	if (!isVerify) return reply(userB())
     if (!isQuotedImage) return reply(`${design} 𝑃𝑙𝑒𝑎𝑠𝑒 𝑡𝑎𝑔 𝑎𝑛 𝑖𝑚𝑎𝑔𝑒`)					  
-	if (money < 10) return reply(`${design} 𝑌𝑜𝑢 𝑑𝑜𝑛𝑡 ℎ𝑎𝑣𝑒 𝑒𝑛𝑜𝑢𝑔ℎ 𝑚𝑜𝑛𝑒𝑦.\n- - - - - - - - - - - - - - - - - -\n𝑀𝑜𝑛𝑒𝑦 𝑛𝑒𝑒𝑑𝑒𝑑 10$ 𝑌𝑜𝑢𝑟 𝑚𝑜𝑛𝑒𝑦 ${money}$\n- - - - - - - - - - - - - - - - - -\n❎ 𝑋623 𝐸𝑓𝑓𝑒𝑐𝑡𝑠`) 
+	if (money < 10) return reply(`${design} 𝑌𝑜𝑢 𝑑𝑜𝑛𝑡 ℎ𝑎𝑣𝑒 𝑒𝑛𝑜𝑢𝑔ℎ 𝑚𝑜𝑛𝑒𝑦.\n-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-\n𝑀𝑜𝑛𝑒𝑦 𝑛𝑒𝑒𝑑𝑒𝑑 10$ 𝑌𝑜𝑢𝑟 𝑚𝑜𝑛𝑒𝑦 ${money}$\n-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-\n❎ 𝑋623 𝐸𝑓𝑓𝑒𝑐𝑡𝑠`) 
 
 	var money1 = Number(money);
 	var cost = Number(10);
@@ -1388,7 +1388,7 @@ case 'flip':
 		})
 	})
 	await delay(1000) /// waiting 1 second.
-	reply(`${design} 𝐸𝑑𝑖𝑡𝑖𝑛𝑔 . . . 1/1\n- - - - - - - - - - - - - - - - - -\n𝑀𝑜𝑛𝑒𝑦 𝑙𝑒𝑓𝑡 ${newmoney}$\n- - - - - - - - - - - - - - - - - -\n_Tipp: ${tipp}_\n- - - - - - - - - - - - - - - - - -\n❇️ 𝑋623 𝐸𝑓𝑓𝑒𝑐𝑡𝑠`)
+	reply(`${design} 𝐸𝑑𝑖𝑡𝑖𝑛𝑔 . . . 1/1\n-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-\n𝑀𝑜𝑛𝑒𝑦 𝑙𝑒𝑓𝑡 ${newmoney}$\n-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-\n_Tipp: ${tipp}_\n-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-\n❇️ 𝑋623 𝐸𝑓𝑓𝑒𝑐𝑡𝑠`)
 		
 					encmedia = JSON.parse(JSON.stringify(mek).replace('quotedM','m')).message.extendedTextMessage.contextInfo
 					media = await Lxa.downloadAndSaveMediaMessage(encmedia)
@@ -1397,7 +1397,7 @@ case 'flip':
 						fs.unlinkSync(media)
 						if (err) return reply(`${design} 𝐸𝑟𝑟𝑜𝑟`)
 						buffer = fs.readFileSync(ran)
-						Lxa.sendMessage(from, buffer, image, {quoted:mek, caption: `${design} 𝑀𝑎𝑑𝑒 𝑓𝑜𝑟 ${pushname}\n- - - - - - - - - - - - - - - - - -\n❄️ 𝑊𝑖𝑛𝑡𝑒𝑟���𝑟���ℎ 𝐸𝑓𝑓𝑒𝑐𝑡𝑠`})
+						Lxa.sendMessage(from, buffer, image, {quoted:mek, caption: `${design} 𝑀𝑎𝑑𝑒 𝑓𝑜𝑟 ${pushname}\n-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-\n✅ 𝑋623 𝐸𝑓𝑓𝑒𝑐𝑡𝑠`})
 						fs.unlinkSync(ran)
 					})
 					break	
@@ -1408,7 +1408,7 @@ case 'blackwhite':
   
 	if (!isVerify) return reply(userB())
 	if (!isQuotedImage) return reply(`${design} 𝑃𝑙𝑒𝑎𝑠𝑒 𝑡𝑎𝑔 𝑎𝑛 𝑖𝑚𝑎𝑔𝑒`)
-	if (money < 10) return reply(`${design} 𝑌𝑜𝑢 𝑑𝑜𝑛𝑡 ℎ𝑎𝑣𝑒 𝑒𝑛𝑜𝑢𝑔ℎ 𝑚𝑜𝑛𝑒𝑦.\n- - - - - - - - - - - - - - - - - -\n𝑀𝑜𝑛𝑒𝑦 𝑛𝑒𝑒𝑑𝑒𝑑 10$ 𝑌𝑜𝑢𝑟 𝑚𝑜𝑛𝑒𝑦 ${money}$\n- - - - - - - - - - - - - - - - - -\n❎ 𝑋623 𝐸𝑓𝑓𝑒𝑐𝑡𝑠`) 
+	if (money < 10) return reply(`${design} 𝑌𝑜𝑢 𝑑𝑜𝑛𝑡 ℎ𝑎𝑣𝑒 𝑒𝑛𝑜𝑢𝑔ℎ 𝑚𝑜𝑛𝑒𝑦.\n-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-\n𝑀𝑜𝑛𝑒𝑦 𝑛𝑒𝑒𝑑𝑒𝑑 10$ 𝑌𝑜𝑢𝑟 𝑚𝑜𝑛𝑒𝑦 ${money}$\n-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-\n❎ 𝑋623 𝐸𝑓𝑓𝑒𝑐𝑡𝑠`) 
 
 	var money1 = Number(money);
 	var cost = Number(10);
@@ -1422,7 +1422,7 @@ case 'blackwhite':
 		})
 	})
 	await delay(1000) /// waiting 1 second.
-	reply(`${design} 𝐸𝑑𝑖𝑡𝑖𝑛𝑔 . . . 1/1\n- - - - - - - - - - - - - - - - - -\n𝑀𝑜𝑛𝑒𝑦 𝑙𝑒𝑓𝑡 ${newmoney}$\n- - - - - - - - - - - - - - - - - -\n_Tipp: ${tipp}_\n- - - - - - - - - - - - - - - - - -\n❇️ 𝑋623 𝐸𝑓𝑓𝑒𝑐𝑡𝑠`)
+	reply(`${design} 𝐸𝑑𝑖𝑡𝑖𝑛𝑔 . . . 1/1\n-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-\n𝑀𝑜𝑛𝑒𝑦 𝑙𝑒𝑓𝑡 ${newmoney}$\n-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-\n_Tipp: ${tipp}_\n-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-\n❇️ 𝑋623 𝐸𝑓𝑓𝑒𝑐𝑡𝑠`)
 	
 					encmedia = JSON.parse(JSON.stringify(mek).replace('quotedM','m')).message.extendedTextMessage.contextInfo
 					media = await Lxa.downloadAndSaveMediaMessage(encmedia)
@@ -1431,7 +1431,7 @@ case 'blackwhite':
 						fs.unlinkSync(media)
 						if (err) return reply(`${design} 𝐸𝑟𝑟𝑜𝑟`)
 						buffer = fs.readFileSync(ran)
-						Lxa.sendMessage(from, buffer, image, {quoted:mek, caption: `${design} 𝑀𝑎𝑑𝑒 𝑓𝑜𝑟 ${pushname}\n- - - - - - - - - - - - - - - - - -\n❄️ 𝑊𝑖𝑛𝑡𝑒𝑟���𝑟���ℎ 𝐸𝑓𝑓𝑒𝑐𝑡𝑠`})
+						Lxa.sendMessage(from, buffer, image, {quoted:mek, caption: `${design} 𝑀𝑎𝑑𝑒 𝑓𝑜𝑟 ${pushname}\n-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-\n✅ 𝑋623 𝐸𝑓𝑓𝑒𝑐𝑡𝑠`})
 						fs.unlinkSync(ran)
 					})
 					break	
@@ -1441,7 +1441,7 @@ case 'filter':
 	if (!isVerify) return reply(userB())
 	if (!isQuotedImage) return reply(`${design} 𝑃𝑙𝑒𝑎𝑠𝑒 𝑡𝑎𝑔 𝑎𝑛 𝑖𝑚𝑎𝑔𝑒`)
 	if (args.length < 1) return reply(`${design} 𝐸𝑛𝑡𝑒𝑟 𝐹𝑖𝑙𝑡𝑒𝑟. .filter - vintage, strong_contrast, lighter, darker`)
-	if (money < 10) return reply(`${design} 𝑌𝑜𝑢 𝑑𝑜𝑛𝑡 ℎ𝑎𝑣𝑒 𝑒𝑛𝑜𝑢𝑔ℎ 𝑚𝑜𝑛𝑒𝑦.\n- - - - - - - - - - - - - - - - - -\n𝑀𝑜𝑛𝑒𝑦 𝑛𝑒𝑒𝑑𝑒𝑑 10$ 𝑌𝑜𝑢𝑟 𝑚𝑜𝑛𝑒𝑦 ${money}$\n- - - - - - - - - - - - - - - - - -\n❎ 𝑋623 𝐸𝑓𝑓𝑒𝑐𝑡𝑠`) 
+	if (money < 10) return reply(`${design} 𝑌𝑜𝑢 𝑑𝑜𝑛𝑡 ℎ𝑎𝑣𝑒 𝑒𝑛𝑜𝑢𝑔ℎ 𝑚𝑜𝑛𝑒𝑦.\n-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-\n𝑀𝑜𝑛𝑒𝑦 𝑛𝑒𝑒𝑑𝑒𝑑 10$ 𝑌𝑜𝑢𝑟 𝑚𝑜𝑛𝑒𝑦 ${money}$\n-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-\n❎ 𝑋623 𝐸𝑓𝑓𝑒𝑐𝑡𝑠`) 
 
 	var money1 = Number(money);
 	var cost = Number(10);
@@ -1455,7 +1455,7 @@ case 'filter':
 		})
 	})
 	await delay(1000) /// waiting 1 second.
-	reply(`${design} 𝐸𝑑𝑖𝑡𝑖𝑛𝑔 . . . 1/1\n- - - - - - - - - - - - - - - - - -\n𝑀𝑜𝑛𝑒𝑦 𝑙𝑒𝑓𝑡 ${newmoney}$\n- - - - - - - - - - - - - - - - - -\n_Tipp: ${tipp}_\n- - - - - - - - - - - - - - - - - -\n❇️ 𝑋623 𝐸𝑓𝑓𝑒𝑐𝑡𝑠`)
+	reply(`${design} 𝐸𝑑𝑖𝑡𝑖𝑛𝑔 . . . 1/1\n-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-\n𝑀𝑜𝑛𝑒𝑦 𝑙𝑒𝑓𝑡 ${newmoney}$\n-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-\n_Tipp: ${tipp}_\n-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-\n❇️ 𝑋623 𝐸𝑓𝑓𝑒𝑐𝑡𝑠`)
 					encmedia = JSON.parse(JSON.stringify(mek).replace('quotedM','m')).message.extendedTextMessage.contextInfo
 					media = await Lxa.downloadAndSaveMediaMessage(encmedia)
 				ran= getRandom('.png')
@@ -1463,7 +1463,7 @@ case 'filter':
 						fs.unlinkSync(media)
 						if (err) return reply(`${design} 𝐸𝑟𝑟𝑜𝑟`)
 						buffer = fs.readFileSync(ran)
-						Lxa.sendMessage(from, buffer, image, {quoted:mek, caption: `${design} 𝑀𝑎𝑑𝑒 𝑓𝑜𝑟 ${pushname}\n- - - - - - - - - - - - - - - - - -\n❄️ 𝑊𝑖𝑛𝑡𝑒𝑟���𝑟���ℎ 𝐸𝑓𝑓𝑒𝑐𝑡𝑠`})
+						Lxa.sendMessage(from, buffer, image, {quoted:mek, caption: `${design} 𝑀𝑎𝑑𝑒 𝑓𝑜𝑟 ${pushname}\n-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-\n✅ 𝑋623 𝐸𝑓𝑓𝑒𝑐𝑡𝑠`})
 						fs.unlinkSync(ran)
 					})
 					break							
@@ -1472,7 +1472,7 @@ case 'mp3':
 case 'sound':
 		if (!isVerify) return reply(UserB())
 		if (!isQuotedVideo) return reply(`${design} 𝑃𝑙𝑒𝑎𝑠𝑒 𝑡𝑎𝑔 𝑎𝑛 𝑣𝑖𝑑𝑒𝑜`)
-		if (money < 10) return reply(`${design} 𝑌𝑜𝑢 𝑑𝑜𝑛𝑡 ℎ𝑎𝑣𝑒 𝑒𝑛𝑜𝑢𝑔ℎ 𝑚𝑜𝑛𝑒𝑦.\n- - - - - - - - - - - - - - - - - -\n𝑀𝑜𝑛𝑒𝑦 𝑛𝑒𝑒𝑑𝑒𝑑 10$ 𝑌𝑜𝑢𝑟 𝑚𝑜𝑛𝑒𝑦 ${money}$\n- - - - - - - - - - - - - - - - - -\n❎ 𝑋623 𝐸𝑓𝑓𝑒𝑐𝑡𝑠`) 
+		if (money < 10) return reply(`${design} 𝑌𝑜𝑢 𝑑𝑜𝑛𝑡 ℎ𝑎𝑣𝑒 𝑒𝑛𝑜𝑢𝑔ℎ 𝑚𝑜𝑛𝑒𝑦.\n-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-\n𝑀𝑜𝑛𝑒𝑦 𝑛𝑒𝑒𝑑𝑒𝑑 10$ 𝑌𝑜𝑢𝑟 𝑚𝑜𝑛𝑒𝑦 ${money}$\n-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-\n❎ 𝑋623 𝐸𝑓𝑓𝑒𝑐𝑡𝑠`) 
 
 		var money1 = Number(money);
 		var cost = Number(10);
@@ -1486,7 +1486,7 @@ case 'sound':
 			})
 		})
 		await delay(1000) /// waiting 1 second.
-		reply(`${design} 𝐸𝑑𝑖𝑡𝑖𝑛𝑔 . . . 1/1\n- - - - - - - - - - - - - - - - - -\n𝑀𝑜𝑛𝑒𝑦 𝑙𝑒𝑓𝑡 ${newmoney}$\n- - - - - - - - - - - - - - - - - -\n_Tipp: ${tipp}_\n- - - - - - - - - - - - - - - - - -\n❇️ 𝑋623 𝐸𝑓𝑓𝑒𝑐𝑡𝑠`)
+		reply(`${design} 𝐸𝑑𝑖𝑡𝑖𝑛𝑔 . . . 1/1\n-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-\n𝑀𝑜𝑛𝑒𝑦 𝑙𝑒𝑓𝑡 ${newmoney}$\n-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-\n_Tipp: ${tipp}_\n-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-\n❇️ 𝑋623 𝐸𝑓𝑓𝑒𝑐𝑡𝑠`)
 			
 					encmedia = JSON.parse(JSON.stringify(mek).replace('quotedM','m')).message.extendedTextMessage.contextInfo
 					media = await Lxa.downloadAndSaveMediaMessage(encmedia)
@@ -1495,7 +1495,7 @@ case 'sound':
 						fs.unlinkSync(media)
 						if (err) return reply(`${design} 𝐸𝑟𝑟𝑜𝑟`)
 						buffer = fs.readFileSync(ran)
-						Lxa.sendMessage(from, buffer, audio, {quoted:mek, caption: `${design} 𝑀𝑎𝑑𝑒 𝑓𝑜𝑟 ${pushname}\n- - - - - - - - - - - - - - - - - -\n❄️ 𝑊𝑖𝑛𝑡𝑒𝑟���𝑟���ℎ 𝐸𝑓𝑓𝑒𝑐𝑡𝑠`})
+						Lxa.sendMessage(from, buffer, audio, {quoted:mek, caption: `${design} 𝑀𝑎𝑑𝑒 𝑓𝑜𝑟 ${pushname}\n-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-\n✅ 𝑋623 𝐸𝑓𝑓𝑒𝑐𝑡𝑠`})
 						fs.unlinkSync(ran)
 					})
 					break
@@ -1518,7 +1518,7 @@ if (!isQuotedAudio)  return reply(`${design} 𝑃𝑙𝑒𝑎𝑠𝑒 𝑡𝑎�
 case 'cover':
          if (!isVerify) return reply(UserB())
          if (!isQuotedAudio) return reply(`${design} 𝑃𝑙𝑒𝑎𝑠𝑒 𝑡𝑎𝑔 𝑎𝑛 𝑎𝑢𝑑𝑖𝑜`)
-		 if (money < 10) return reply(`${design} 𝑌𝑜𝑢 𝑑𝑜𝑛𝑡 ℎ𝑎𝑣𝑒 𝑒𝑛𝑜𝑢𝑔ℎ 𝑚𝑜𝑛𝑒𝑦.\n- - - - - - - - - - - - - - - - - -\n𝑀𝑜𝑛𝑒𝑦 𝑛𝑒𝑒𝑑𝑒𝑑 10$ 𝑌𝑜𝑢𝑟 𝑚𝑜𝑛𝑒𝑦 ${money}$\n- - - - - - - - - - - - - - - - - -\n❎ 𝑋623 𝐸𝑓𝑓𝑒𝑐𝑡𝑠`) 
+		 if (money < 10) return reply(`${design} 𝑌𝑜𝑢 𝑑𝑜𝑛𝑡 ℎ𝑎𝑣𝑒 𝑒𝑛𝑜𝑢𝑔ℎ 𝑚𝑜𝑛𝑒𝑦.\n-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-\n𝑀𝑜𝑛𝑒𝑦 𝑛𝑒𝑒𝑑𝑒𝑑 10$ 𝑌𝑜𝑢𝑟 𝑚𝑜𝑛𝑒𝑦 ${money}$\n-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-\n❎ 𝑋623 𝐸𝑓𝑓𝑒𝑐𝑡𝑠`) 
 
 		 var money1 = Number(money);
 		 var cost = Number(10);
@@ -1532,7 +1532,7 @@ case 'cover':
 			 })
 		 })
 		 await delay(1000) /// waiting 1 second.
-		 reply(`${design} 𝐸𝑑𝑖𝑡𝑖𝑛𝑔 . . . 1/1\n- - - - - - - - - - - - - - - - - -\n𝑀𝑜𝑛𝑒𝑦 𝑙𝑒𝑓𝑡 ${newmoney}$\n- - - - - - - - - - - - - - - - - -\n_Tipp: ${tipp}_\n- - - - - - - - - - - - - - - - - -\n❇️ 𝑋623 𝐸𝑓𝑓𝑒𝑐𝑡𝑠`)
+		 reply(`${design} 𝐸𝑑𝑖𝑡𝑖𝑛𝑔 . . . 1/1\n-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-\n𝑀𝑜𝑛𝑒𝑦 𝑙𝑒𝑓𝑡 ${newmoney}$\n-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-\n_Tipp: ${tipp}_\n-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-\n❇️ 𝑋623 𝐸𝑓𝑓𝑒𝑐𝑡𝑠`)
 			
 					encmedia = JSON.parse(JSON.stringify(mek).replace('quotedM','m')).message.extendedTextMessage.contextInfo
 					media = await Lxa.downloadAndSaveMediaMessage(encmedia)
@@ -1541,7 +1541,7 @@ case 'cover':
 						fs.unlinkSync(media)
 						if (err) return reply(`${design} 𝐸𝑟𝑟𝑜𝑟`)
 						buffer = fs.readFileSync(ran)
-						Lxa.sendMessage(from, buffer, video, {quoted:mek, caption: `${design} 𝑀𝑎𝑑𝑒 𝑓𝑜𝑟 ${pushname}\n- - - - - - - - - - - - - - - - - -\n❄️ 𝑊𝑖𝑛𝑡𝑒𝑟���𝑟���ℎ 𝐸𝑓𝑓𝑒𝑐𝑡𝑠`})
+						Lxa.sendMessage(from, buffer, video, {quoted:mek, caption: `${design} 𝑀𝑎𝑑𝑒 𝑓𝑜𝑟 ${pushname}\n-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-\n✅ 𝑋623 𝐸𝑓𝑓𝑒𝑐𝑡𝑠`})
 						fs.unlinkSync(ran)
 					})
 				
@@ -1552,7 +1552,7 @@ case 'intro':
 case 'stardash':
 		if (!isVerify) return reply(UserB())
 		if (!isQuotedImage) return reply(`${design} 𝑃𝑙𝑒𝑎𝑠𝑒 𝑡𝑎𝑔 𝑎𝑛 𝑖𝑚𝑎𝑔𝑒`)
-		if (money < 10) return reply(`${design} 𝑌𝑜𝑢 𝑑𝑜𝑛𝑡 ℎ𝑎𝑣𝑒 𝑒𝑛𝑜𝑢𝑔ℎ 𝑚𝑜𝑛𝑒𝑦.\n- - - - - - - - - - - - - - - - - -\n𝑀𝑜𝑛𝑒𝑦 𝑛𝑒𝑒𝑑𝑒𝑑 10$ 𝑌𝑜𝑢𝑟 𝑚𝑜𝑛𝑒𝑦 ${money}$\n- - - - - - - - - - - - - - - - - -\n❎ 𝑋623 𝐸𝑓𝑓𝑒𝑐𝑡𝑠`) 
+		if (money < 10) return reply(`${design} 𝑌𝑜𝑢 𝑑𝑜𝑛𝑡 ℎ𝑎𝑣𝑒 𝑒𝑛𝑜𝑢𝑔ℎ 𝑚𝑜𝑛𝑒𝑦.\n-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-\n𝑀𝑜𝑛𝑒𝑦 𝑛𝑒𝑒𝑑𝑒𝑑 10$ 𝑌𝑜𝑢𝑟 𝑚𝑜𝑛𝑒𝑦 ${money}$\n-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-\n❎ 𝑋623 𝐸𝑓𝑓𝑒𝑐𝑡𝑠`) 
 
 		var money1 = Number(money);
 		var cost = Number(10);
@@ -1566,7 +1566,7 @@ case 'stardash':
 			})
 		})
 		await delay(1000) /// waiting 1 second.
-		reply(`${design} 𝐸𝑑𝑖𝑡𝑖𝑛𝑔 . . . 1/1\n- - - - - - - - - - - - - - - - - -\n𝑀𝑜𝑛𝑒𝑦 𝑙𝑒𝑓𝑡 ${newmoney}$\n- - - - - - - - - - - - - - - - - -\n_Tipp: ${tipp}_\n- - - - - - - - - - - - - - - - - -\n❇️ 𝑋623 𝐸𝑓𝑓𝑒𝑐𝑡𝑠`)
+		reply(`${design} 𝐸𝑑𝑖𝑡𝑖𝑛𝑔 . . . 1/1\n-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-\n𝑀𝑜𝑛𝑒𝑦 𝑙𝑒𝑓𝑡 ${newmoney}$\n-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-\n_Tipp: ${tipp}_\n-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-\n❇️ 𝑋623 𝐸𝑓𝑓𝑒𝑐𝑡𝑠`)
 		
 					encmedia = JSON.parse(JSON.stringify(mek).replace('quotedM','m')).message.extendedTextMessage.contextInfo
 					media = await Lxa.downloadAndSaveMediaMessage(encmedia)
@@ -1575,7 +1575,7 @@ case 'stardash':
 						fs.unlinkSync(media)
 						if (err) return reply(`${design} 𝐸𝑟𝑟𝑜𝑟`)
 						buffer = fs.readFileSync(ran)
-						Lxa.sendMessage(from, buffer, video, {quoted:mek, caption: `${design} 𝑀𝑎𝑑𝑒 𝑓𝑜𝑟 ${pushname}\n- - - - - - - - - - - - - - - - - -\n❄️ 𝑊𝑖𝑛𝑡𝑒𝑟���𝑟���ℎ 𝐸𝑓𝑓𝑒𝑐𝑡𝑠`})
+						Lxa.sendMessage(from, buffer, video, {quoted:mek, caption: `${design} 𝑀𝑎𝑑𝑒 𝑓𝑜𝑟 ${pushname}\n-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-\n✅ 𝑋623 𝐸𝑓𝑓𝑒𝑐𝑡𝑠`})
 						fs.unlinkSync(ran)
 					})
 					break
@@ -1585,7 +1585,7 @@ case 'fast':
 if (!isVerify) return reply(UserB())
 if (args.length < 1) return  reply(`${design} 𝑃𝑙𝑒𝑎𝑠𝑒 𝑡𝑎𝑔 𝑎 𝑣𝑖𝑑𝑒𝑜 𝑎𝑛𝑑 𝑒𝑛𝑡𝑒𝑟 ℎ𝑜𝑤 𝑓𝑎𝑠𝑡. 𝐹𝑟𝑜𝑚 0.5 - 2. 𝐸𝑥𝑎𝑚𝑝𝑙𝑒: .𝑠𝑝𝑒𝑒𝑑 0.5`)
 
-if (money < 5) return reply(`${design} 𝑌𝑜𝑢 𝑑𝑜𝑛𝑡 ℎ𝑎𝑣𝑒 𝑒𝑛𝑜𝑢𝑔ℎ 𝑚𝑜𝑛𝑒𝑦.\n- - - - - - - - - - - - - - - - - -\n𝑀𝑜𝑛𝑒𝑦 𝑛𝑒𝑒𝑑𝑒𝑑 5$ 𝑌𝑜𝑢𝑟 𝑚𝑜𝑛𝑒𝑦 ${money}$\n- - - - - - - - - - - - - - - - - -\n❎ 𝑋623 𝐸𝑓𝑓𝑒𝑐𝑡𝑠`) 
+if (money < 5) return reply(`${design} 𝑌𝑜𝑢 𝑑𝑜𝑛𝑡 ℎ𝑎𝑣𝑒 𝑒𝑛𝑜𝑢𝑔ℎ 𝑚𝑜𝑛𝑒𝑦.\n-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-\n𝑀𝑜𝑛𝑒𝑦 𝑛𝑒𝑒𝑑𝑒𝑑 5$ 𝑌𝑜𝑢𝑟 𝑚𝑜𝑛𝑒𝑦 ${money}$\n-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-\n❎ 𝑋623 𝐸𝑓𝑓𝑒𝑐𝑡𝑠`) 
 
 var money1 = Number(money);
 var cost = Number(5);
@@ -1599,7 +1599,7 @@ fs.readFile(`./data/users/${sender.split("@")[0]}/money.json`, 'utf-8', function
 	})
 })
 await delay(1000) /// waiting 1 second.
-reply(`${design} 𝐸𝑑𝑖𝑡𝑖𝑛𝑔 . . . 1/1\n- - - - - - - - - - - - - - - - - -\n𝑀𝑜𝑛𝑒𝑦 𝑙𝑒𝑓𝑡 ${newmoney}$\n- - - - - - - - - - - - - - - - - -\n_Tipp: ${tipp}_\n- - - - - - - - - - - - - - - - - -\n❇️ 𝑋623 𝐸𝑓𝑓𝑒𝑐𝑡𝑠`)
+reply(`${design} 𝐸𝑑𝑖𝑡𝑖𝑛𝑔 . . . 1/1\n-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-\n𝑀𝑜𝑛𝑒𝑦 𝑙𝑒𝑓𝑡 ${newmoney}$\n-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-\n_Tipp: ${tipp}_\n-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-\n❇️ 𝑋623 𝐸𝑓𝑓𝑒𝑐𝑡𝑠`)
 		
 
 					encmedia = JSON.parse(JSON.stringify(mek).replace('quotedM','m')).message.extendedTextMessage.contextInfo
@@ -1618,7 +1618,7 @@ reply(`${design} 𝐸𝑑𝑖𝑡𝑖𝑛𝑔 . . . 1/1\n- - - - - - - - - - - -
 case 'watermarkvideo':
 if (!isVerify) return reply(UserB())
 if (!isQuotedVideo)  return  reply(`${design} 𝑃𝑙𝑒𝑎𝑠𝑒 𝑡𝑎𝑔 𝑎 𝑣𝑖𝑑𝑒𝑜.`)
-if (money < 10) return reply(`${design} 𝑌𝑜𝑢 𝑑𝑜𝑛𝑡 ℎ𝑎𝑣𝑒 𝑒𝑛𝑜𝑢𝑔ℎ 𝑚𝑜𝑛𝑒𝑦.\n- - - - - - - - - - - - - - - - - -\n𝑀𝑜𝑛𝑒𝑦 𝑛𝑒𝑒𝑑𝑒𝑑 10$ 𝑌𝑜𝑢𝑟 𝑚𝑜𝑛𝑒𝑦 ${money}$\n- - - - - - - - - - - - - - - - - -\n❎ 𝑋623 𝐸𝑓𝑓𝑒𝑐𝑡𝑠`) 
+if (money < 10) return reply(`${design} 𝑌𝑜𝑢 𝑑𝑜𝑛𝑡 ℎ𝑎𝑣𝑒 𝑒𝑛𝑜𝑢𝑔ℎ 𝑚𝑜𝑛𝑒𝑦.\n-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-\n𝑀𝑜𝑛𝑒𝑦 𝑛𝑒𝑒𝑑𝑒𝑑 10$ 𝑌𝑜𝑢𝑟 𝑚𝑜𝑛𝑒𝑦 ${money}$\n-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-\n❎ 𝑋623 𝐸𝑓𝑓𝑒𝑐𝑡𝑠`) 
 
 var money1 = Number(money);
 var cost = Number(10);
@@ -1632,7 +1632,7 @@ fs.readFile(`./data/users/${sender.split("@")[0]}/money.json`, 'utf-8', function
 	})
 })
 await delay(1000) /// waiting 1 second.
-reply(`${design} 𝐸𝑑𝑖𝑡𝑖𝑛𝑔 . . . 1/1\n- - - - - - - - - - - - - - - - - -\n𝑀𝑜𝑛𝑒𝑦 𝑙𝑒𝑓𝑡 ${newmoney}$\n- - - - - - - - - - - - - - - - - -\n_Tipp: ${tipp}_\n- - - - - - - - - - - - - - - - - -\n❇️ 𝑋623 𝐸𝑓𝑓𝑒𝑐𝑡𝑠`)
+reply(`${design} 𝐸𝑑𝑖𝑡𝑖𝑛𝑔 . . . 1/1\n-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-\n𝑀𝑜𝑛𝑒𝑦 𝑙𝑒𝑓𝑡 ${newmoney}$\n-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-\n_Tipp: ${tipp}_\n-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-\n❇️ 𝑋623 𝐸𝑓𝑓𝑒𝑐𝑡𝑠`)
 					encmedia = JSON.parse(JSON.stringify(mek).replace('quotedM','m')).message.extendedTextMessage.contextInfo
 					media = await Lxa.downloadAndSaveMediaMessage(encmedia)
 				ran= getRandom('.mp4')
@@ -1640,7 +1640,7 @@ reply(`${design} 𝐸𝑑𝑖𝑡𝑖𝑛𝑔 . . . 1/1\n- - - - - - - - - - - -
 						fs.unlinkSync(media)
 						if (err) return reply(`${design} 𝐸𝑟𝑟𝑜𝑟`)
 						buffer = fs.readFileSync(ran)
-						Lxa.sendMessage(from, buffer, video, {quoted:mek, caption: `${design} 𝑀𝑎𝑑𝑒 𝑓𝑜𝑟 ${pushname}\n- - - - - - - - - - - - - - - - - -\n❄️ 𝑊𝑖𝑛𝑡𝑒𝑟���𝑟���ℎ 𝐸𝑓𝑓𝑒𝑐𝑡𝑠`})
+						Lxa.sendMessage(from, buffer, video, {quoted:mek, caption: `${design} 𝑀𝑎𝑑𝑒 𝑓𝑜𝑟 ${pushname}\n-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-\n✅ 𝑋623 𝐸𝑓𝑓𝑒𝑐𝑡𝑠`})
 						fs.unlinkSync(ran)
 					})
 					
@@ -1649,7 +1649,7 @@ reply(`${design} 𝐸𝑑𝑖𝑡𝑖𝑛𝑔 . . . 1/1\n- - - - - - - - - - - -
 case 'blur':
 if (!isVerify) return reply(UserB())
 if (!isQuotedImage)  return reply(`${design} 𝑃𝑙𝑒𝑎𝑠𝑒 𝑡𝑎𝑔 𝑎𝑛 𝑖𝑚𝑎𝑔𝑒`)								
-if (money < 10) return reply(`${design} 𝑌𝑜𝑢 𝑑𝑜𝑛𝑡 ℎ𝑎𝑣𝑒 𝑒𝑛𝑜𝑢𝑔ℎ 𝑚𝑜𝑛𝑒𝑦.\n- - - - - - - - - - - - - - - - - -\n𝑀𝑜𝑛𝑒𝑦 𝑛𝑒𝑒𝑑𝑒𝑑 10$ 𝑌𝑜𝑢𝑟 𝑚𝑜𝑛𝑒𝑦 ${money}$\n- - - - - - - - - - - - - - - - - -\n❎ 𝑋623 𝐸𝑓𝑓𝑒𝑐𝑡𝑠`) 
+if (money < 10) return reply(`${design} 𝑌𝑜𝑢 𝑑𝑜𝑛𝑡 ℎ𝑎𝑣𝑒 𝑒𝑛𝑜𝑢𝑔ℎ 𝑚𝑜𝑛𝑒𝑦.\n-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-\n𝑀𝑜𝑛𝑒𝑦 𝑛𝑒𝑒𝑑𝑒𝑑 10$ 𝑌𝑜𝑢𝑟 𝑚𝑜𝑛𝑒𝑦 ${money}$\n-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-\n❎ 𝑋623 𝐸𝑓𝑓𝑒𝑐𝑡𝑠`) 
 
 var money1 = Number(money);
 var cost = Number(10);
@@ -1663,7 +1663,7 @@ fs.readFile(`./data/users/${sender.split("@")[0]}/money.json`, 'utf-8', function
 	})
 })
 await delay(1000) /// waiting 1 second.
-reply(`${design} 𝐸𝑑𝑖𝑡𝑖𝑛𝑔 . . . 1/1\n- - - - - - - - - - - - - - - - - -\n𝑀𝑜𝑛𝑒𝑦 𝑙𝑒𝑓𝑡 ${newmoney}$\n- - - - - - - - - - - - - - - - - -\n_Tipp: ${tipp}_\n- - - - - - - - - - - - - - - - - -\n❇️ 𝑋623 𝐸𝑓𝑓𝑒𝑐𝑡𝑠`)
+reply(`${design} 𝐸𝑑𝑖𝑡𝑖𝑛𝑔 . . . 1/1\n-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-\n𝑀𝑜𝑛𝑒𝑦 𝑙𝑒𝑓𝑡 ${newmoney}$\n-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-\n_Tipp: ${tipp}_\n-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-\n❇️ 𝑋623 𝐸𝑓𝑓𝑒𝑐𝑡𝑠`)
 		
 encmedia = JSON.parse(JSON.stringify(mek).replace('quotedM','m')).message.extendedTextMessage.contextInfo
 					media = await Lxa.downloadAndSaveMediaMessage(encmedia)
@@ -1672,7 +1672,7 @@ encmedia = JSON.parse(JSON.stringify(mek).replace('quotedM','m')).message.extend
 						fs.unlinkSync(media)
 						if (err) return reply(`${design} 𝐸𝑟𝑟𝑜𝑟`)
 						buffer = fs.readFileSync(ran)
-						Lxa.sendMessage(from, buffer, image, {quoted:mek, caption: `${design} 𝑀𝑎𝑑𝑒 𝑓𝑜𝑟 ${pushname}\n- - - - - - - - - - - - - - - - - -\n❄️ 𝑊𝑖𝑛𝑡𝑒𝑟���𝑟���ℎ 𝐸𝑓𝑓𝑒𝑐𝑡𝑠`})
+						Lxa.sendMessage(from, buffer, image, {quoted:mek, caption: `${design} 𝑀𝑎𝑑𝑒 𝑓𝑜𝑟 ${pushname}\n-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-\n✅ 𝑋623 𝐸𝑓𝑓𝑒𝑐𝑡𝑠`})
 						fs.unlinkSync(ran)
 					})	
 			break
@@ -1681,7 +1681,7 @@ case 'starpicture':
 if (!isVerify) return reply(UserB())
 if (!isQuotedImage)  return reply(`${design} 𝑃𝑙𝑒𝑎𝑠𝑒 𝑡𝑎𝑔 𝑎𝑛 𝑖𝑚𝑎𝑔𝑒.`)	
 if (args.length < 2) return reply(`${design} 𝑃𝑙𝑒𝑎𝑠𝑒 𝑎𝑑𝑑 𝑠𝑜𝑚𝑒 𝑡𝑒𝑥𝑡. 𝑇ℎ𝑖𝑠 𝑤𝑖𝑙𝑙 𝑏𝑒 𝑙𝑖𝑘𝑒 𝑎 𝑏𝑖𝑜 𝑤𝑖𝑡ℎ 𝑎 𝑠ℎ𝑜𝑟𝑡 𝑑𝑒𝑠𝑐𝑟𝑖𝑝𝑡𝑖𝑜𝑛 𝑜𝑓 𝑦𝑜𝑢.`)	
-if (args[0] === 'starpicture' ) return reply(`${design} 𝑃𝑙𝑒𝑎𝑠𝑒 𝑑𝑜𝑛𝑡 𝑙𝑒𝑎𝑣𝑒 𝑠𝑝𝑎𝑐𝑒.\n𝐸𝑥𝑎𝑚𝑝𝑙𝑒 𝑑𝑜: \n.𝑠𝑡𝑎𝑟𝑝𝑖𝑐𝑡𝑢𝑟𝑒 𝐻𝑖 𝑡ℎ𝑖𝑠 𝑖𝑠 𝑚𝑒\n- - - - - - - - - - - - - - - - - -\n𝐷𝑜𝑛𝑡 𝑑𝑜:\n. 𝑠𝑡𝑎𝑟𝑝𝑖𝑐𝑡𝑢𝑟𝑒 𝐻𝑖 𝑡ℎ𝑖𝑠 𝑖𝑠 𝑚𝑒`)
+if (args[0] === 'starpicture' ) return reply(`${design} 𝑃𝑙𝑒𝑎𝑠𝑒 𝑑𝑜𝑛𝑡 𝑙𝑒𝑎𝑣𝑒 𝑠𝑝𝑎𝑐𝑒.\n𝐸𝑥𝑎𝑚𝑝𝑙𝑒 𝑑𝑜: \n.𝑠𝑡𝑎𝑟𝑝𝑖𝑐𝑡𝑢𝑟𝑒 𝐻𝑖 𝑡ℎ𝑖𝑠 𝑖𝑠 𝑚𝑒\n-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-\n𝐷𝑜𝑛𝑡 𝑑𝑜:\n. 𝑠𝑡𝑎𝑟𝑝𝑖𝑐𝑡𝑢𝑟𝑒 𝐻𝑖 𝑡ℎ𝑖𝑠 𝑖𝑠 𝑚𝑒`)
 					encmedia = JSON.parse(JSON.stringify(mek).replace('quotedM','m')).message.extendedTextMessage.contextInfo
 					media = await Lxa.downloadAndSaveMediaMessage(encmedia)
 
@@ -1707,7 +1707,7 @@ if (args[0] === 'starpicture' ) return reply(`${design} 𝑃𝑙𝑒𝑎𝑠𝑒
 						console.log('Starpicture Opend.'); 
 						});	
 
-						reply(`✅ 𝑆𝑢𝑐𝑐𝑒𝑠𝑠.\n𝑂𝑡ℎ𝑒𝑟𝑠 𝑐𝑎𝑛 𝑣𝑖𝑒𝑤 𝑦𝑜𝑢𝑟 𝑠𝑡𝑎𝑟𝑝𝑖𝑐𝑡𝑢𝑟𝑒 𝑣𝑖𝑎\n.𝑠𝑝 @𝑢𝑟𝑛𝑢𝑚𝑏𝑒𝑟\n- - - - - - - - - - - - - - - - - -\n𝑌𝑜𝑢 𝑐𝑎𝑛 𝑣𝑖𝑒𝑤 𝑦𝑜𝑢𝑟 𝑝𝑖𝑐𝑡𝑢𝑟𝑒 𝑣𝑖𝑎\n.𝑚𝑦𝑠𝑝`)
+						reply(`✅ 𝑆𝑢𝑐𝑐𝑒𝑠𝑠.\n𝑂𝑡ℎ𝑒𝑟𝑠 𝑐𝑎𝑛 𝑣𝑖𝑒𝑤 𝑦𝑜𝑢𝑟 𝑠𝑡𝑎𝑟𝑝𝑖𝑐𝑡𝑢𝑟𝑒 𝑣𝑖𝑎\n.𝑠𝑝 @𝑢𝑟𝑛𝑢𝑚𝑏𝑒𝑟\n-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-\n𝑌𝑜𝑢 𝑐𝑎𝑛 𝑣𝑖𝑒𝑤 𝑦𝑜𝑢𝑟 𝑝𝑖𝑐𝑡𝑢𝑟𝑒 𝑣𝑖𝑎\n.𝑚𝑦𝑠𝑝`)
 
 			  break
 //-- mypicture
@@ -1784,7 +1784,7 @@ break
 case 'watermarkimage':
 if (!isVerify) return reply(UserB())
 if (!isQuotedImage) return reply(`${design} 𝑃𝑙𝑒𝑎𝑠𝑒 𝑡𝑎𝑔 𝑎𝑛 𝑖𝑚𝑎𝑔𝑒`)
-if (money < 10) return reply(`${design} 𝑌𝑜𝑢 𝑑𝑜𝑛𝑡 ℎ𝑎𝑣𝑒 𝑒𝑛𝑜𝑢𝑔ℎ 𝑚𝑜𝑛𝑒𝑦.\n- - - - - - - - - - - - - - - - - -\n𝑀𝑜𝑛𝑒𝑦 𝑛𝑒𝑒𝑑𝑒𝑑 10$ 𝑌𝑜𝑢𝑟 𝑚𝑜𝑛𝑒𝑦 ${money}$\n- - - - - - - - - - - - - - - - - -\n❎ 𝑋623 𝐸𝑓𝑓𝑒𝑐𝑡𝑠`) 
+if (money < 10) return reply(`${design} 𝑌𝑜𝑢 𝑑𝑜𝑛𝑡 ℎ𝑎𝑣𝑒 𝑒𝑛𝑜𝑢𝑔ℎ 𝑚𝑜𝑛𝑒𝑦.\n-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-\n𝑀𝑜𝑛𝑒𝑦 𝑛𝑒𝑒𝑑𝑒𝑑 10$ 𝑌𝑜𝑢𝑟 𝑚𝑜𝑛𝑒𝑦 ${money}$\n-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-\n❎ 𝑋623 𝐸𝑓𝑓𝑒𝑐𝑡𝑠`) 
 
 var money1 = Number(money);
 var cost = Number(10);
@@ -1798,7 +1798,7 @@ fs.readFile(`./data/users/${sender.split("@")[0]}/money.json`, 'utf-8', function
 	})
 })
 await delay(1000) /// waiting 1 second.
-reply(`${design} 𝐸𝑑𝑖𝑡𝑖𝑛𝑔 . . . 1/1\n- - - - - - - - - - - - - - - - - -\n𝑀𝑜𝑛𝑒𝑦 𝑙𝑒𝑓𝑡 ${newmoney}$\n- - - - - - - - - - - - - - - - - -\n_Tipp: ${tipp}_\n- - - - - - - - - - - - - - - - - -\n❇️ 𝑋623 𝐸𝑓𝑓𝑒𝑐𝑡𝑠`)
+reply(`${design} 𝐸𝑑𝑖𝑡𝑖𝑛𝑔 . . . 1/1\n-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-\n𝑀𝑜𝑛𝑒𝑦 𝑙𝑒𝑓𝑡 ${newmoney}$\n-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-\n_Tipp: ${tipp}_\n-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-\n❇️ 𝑋623 𝐸𝑓𝑓𝑒𝑐𝑡𝑠`)
 	
 					encmedia = JSON.parse(JSON.stringify(mek).replace('quotedM','m')).message.extendedTextMessage.contextInfo
 					media = await Lxa.downloadAndSaveMediaMessage(encmedia)
@@ -1807,7 +1807,7 @@ reply(`${design} 𝐸𝑑𝑖𝑡𝑖𝑛𝑔 . . . 1/1\n- - - - - - - - - - - -
 						fs.unlinkSync(media)
 						if (err) return reply(`${design} 𝐸𝑟𝑟𝑜𝑟`)
 						buffer = fs.readFileSync(ran)
-						Lxa.sendMessage(from, buffer, image, {quoted:mek, caption: `${design} 𝑀𝑎𝑑𝑒 𝑓𝑜𝑟 ${pushname}\n- - - - - - - - - - - - - - - - - -\n❄️ 𝑊𝑖𝑛𝑡𝑒𝑟���𝑟���ℎ 𝐸𝑓𝑓𝑒𝑐𝑡𝑠`})
+						Lxa.sendMessage(from, buffer, image, {quoted:mek, caption: `${design} 𝑀𝑎𝑑𝑒 𝑓𝑜𝑟 ${pushname}\n-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-\n✅ 𝑋623 𝐸𝑓𝑓𝑒𝑐𝑡𝑠`})
 						fs.unlinkSync(ran)
 					})								
 			break
@@ -1818,7 +1818,7 @@ case 'rmbgs':
 
   				if (!isVerify) return reply(UserB())
 				if (args.length < 1) return reply(`${design} 𝑇𝑎𝑔 𝑎𝑛 𝑖𝑚𝑎𝑔𝑒 𝑜𝑟 𝑠𝑡𝑖𝑐𝑘𝑒𝑟 𝑎𝑛𝑑 𝑐ℎ𝑜𝑜𝑠𝑒 𝑐𝑜𝑙𝑜𝑟. 𝐸𝑥𝑎𝑚𝑝𝑙𝑒: .𝑛𝑜𝑏𝑔𝑠 𝑏𝑙𝑎𝑐𝑘`)
-				reply(`${design} 𝐸𝑑𝑖𝑡𝑖𝑛𝑔 . . . 1/1\n- - - - - - - - - - - - - - - - - -\n_Tipp: ${tipp}_\n- - - - - - - - - - - - - - - - - -\n❇️ 𝑋623 𝐸𝑓𝑓𝑒𝑐𝑡𝑠`)
+				reply(`${design} 𝐸𝑑𝑖𝑡𝑖𝑛𝑔 . . . 1/1\n-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-\n_Tipp: ${tipp}_\n-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-\n❇️ 𝑋623 𝐸𝑓𝑓𝑒𝑐𝑡𝑠`)
 					encmedia = JSON.parse(JSON.stringify(mek).replace('quotedM','m')).message.extendedTextMessage.contextInfo
 					media = await Lxa.downloadAndSaveMediaMessage(encmedia)
 				ran= getRandom('.webp')
@@ -1837,7 +1837,7 @@ case 'nobg':
   if (!isVerify) return reply(UserB())  
   if (!isQuotedImage)  return reply(`${design} 𝑇𝑎𝑔 𝑎𝑛 𝑖𝑚𝑎𝑔𝑒 𝑜𝑟 𝑠𝑡𝑖𝑐𝑘𝑒𝑟 𝑎𝑛𝑑 𝑐ℎ𝑜𝑜𝑠𝑒 𝑐𝑜𝑙𝑜𝑟. 𝐸𝑥𝑎𝑚𝑝𝑙𝑒: .𝑛𝑜𝑏𝑔 𝑏𝑙𝑎𝑐𝑘`)  
   if (args.length < 1) return reply(`${design} 𝑇𝑎𝑔 𝑎𝑛 𝑖𝑚𝑎𝑔𝑒 𝑜𝑟 𝑠𝑡𝑖𝑐𝑘𝑒𝑟 𝑎𝑛𝑑 𝑐ℎ𝑜𝑜𝑠𝑒 𝑐𝑜𝑙𝑜𝑟. 𝐸𝑥𝑎𝑚𝑝𝑙𝑒: .𝑛𝑜𝑏𝑔𝑠 𝑏𝑙𝑎𝑐𝑘`)
-  reply(`${design} 𝐸𝑑𝑖𝑡𝑖𝑛𝑔 . . . 1/1\n- - - - - - - - - - - - - - - - - -\n_Tipp: ${tipp}_\n- - - - - - - - - - - - - - - - - -\n❇️ 𝑋623 𝐸𝑓𝑓𝑒𝑐𝑡𝑠`)
+  reply(`${design} 𝐸𝑑𝑖𝑡𝑖𝑛𝑔 . . . 1/1\n-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-\n_Tipp: ${tipp}_\n-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-\n❇️ 𝑋623 𝐸𝑓𝑓𝑒𝑐𝑡𝑠`)
 					encmedia = JSON.parse(JSON.stringify(mek).replace('quotedM','m')).message.extendedTextMessage.contextInfo
 					media = await Lxa.downloadAndSaveMediaMessage(encmedia)
 				ran= getRandom('.png')
@@ -1845,7 +1845,7 @@ case 'nobg':
 						fs.unlinkSync(media)
 						if (err) return reply(`${design} 𝐶ℎ𝑜𝑜𝑠𝑒 𝑎 𝑟𝑒𝑎𝑙 𝑐𝑜𝑙𝑜𝑟 𝑜𝑟 𝐻𝐸𝑋 𝐶𝑜𝑑𝑒`)
 						buffer = fs.readFileSync(ran)
-						Lxa.sendMessage(from, buffer, image, {quoted:mek, caption: `${design} 𝑀𝑎𝑑𝑒 𝑓𝑜𝑟 ${pushname}\n- - - - - - - - - - - - - - - - - -\n❄️ 𝑊𝑖𝑛𝑡𝑒𝑟���𝑟���ℎ 𝐸𝑓𝑓𝑒𝑐𝑡𝑠`})
+						Lxa.sendMessage(from, buffer, image, {quoted:mek, caption: `${design} 𝑀𝑎𝑑𝑒 𝑓𝑜𝑟 ${pushname}\n-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-\n✅ 𝑋623 𝐸𝑓𝑓𝑒𝑐𝑡𝑠`})
 						fs.unlinkSync(ran)
 					})				
 			break            
@@ -1885,7 +1885,7 @@ case 'imagedownload':
 case 'send':
 	if (!isVerify) return reply(UserB())
 	if (args.length < 1) return reply(`${design} 𝑊ℎ𝑎𝑡 𝑖𝑠 𝑡ℎ𝑒 𝑝𝑖𝑐𝑡𝑢𝑟𝑒 𝑡𝑖𝑡𝑙𝑒?`)
-    if (money < 10) return reply(`${design} 𝑌𝑜𝑢 𝑑𝑜𝑛𝑡 ℎ𝑎𝑣𝑒 𝑒𝑛𝑜𝑢𝑔ℎ 𝑚𝑜𝑛𝑒𝑦.\n- - - - - - - - - - - - - - - - - -\n𝑀𝑜𝑛𝑒𝑦 𝑛𝑒𝑒𝑑𝑒𝑑 10$ 𝑌𝑜𝑢𝑟 𝑚𝑜𝑛𝑒𝑦 ${money}$\n- - - - - - - - - - - - - - - - - -\n❎ 𝑋623 𝑃𝑖𝑐𝑡𝑢𝑟𝑒𝑠`) 
+    if (money < 10) return reply(`${design} 𝑌𝑜𝑢 𝑑𝑜𝑛𝑡 ℎ𝑎𝑣𝑒 𝑒𝑛𝑜𝑢𝑔ℎ 𝑚𝑜𝑛𝑒𝑦.\n-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-\n𝑀𝑜𝑛𝑒𝑦 𝑛𝑒𝑒𝑑𝑒𝑑 10$ 𝑌𝑜𝑢𝑟 𝑚𝑜𝑛𝑒𝑦 ${money}$\n-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-\n❎ 𝑋623 𝑃𝑖𝑐𝑡𝑢𝑟𝑒𝑠`) 
 
     var money1 = Number(money);
     var cost = Number(10);
@@ -1900,11 +1900,11 @@ case 'send':
     })
     await delay(1000) /// waiting 1 second.	
   
-    reply(`${design} 𝐷𝑜𝑤𝑛𝑙𝑜𝑎𝑑𝑖𝑛𝑔...\n- - - - - - - - - - - - - - - - - -\n𝑀𝑜𝑛𝑒𝑦 𝑙𝑒𝑓𝑡 ${newmoney}$\n- - - - - - - - - - - - - - - - - -\n_Tipp: ${tipp}_\n- - - - - - - - - - - - - - - - - -\n❇️ 𝑋623 𝐸𝑓𝑓𝑒𝑐𝑡𝑠`)
+    reply(`${design} 𝐷𝑜𝑤𝑛𝑙𝑜𝑎𝑑𝑖𝑛𝑔...\n-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-\n𝑀𝑜𝑛𝑒𝑦 𝑙𝑒𝑓𝑡 ${newmoney}$\n-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-\n_Tipp: ${tipp}_\n-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-\n❇️ 𝑋623 𝐸𝑓𝑓𝑒𝑐𝑡𝑠`)
 exec(`ddg-download "${value} jpg" -l 1`, (err) => {
 if (err) return reply(`${design} 𝐸𝑟𝑟𝑜𝑟`)
 buffer = fs.readFileSync(`${value} jpg_0.jpg`)
-Lxa.sendMessage(from, buffer, image, {quoted:mek, caption: `${design} 𝑆𝑒𝑛𝑑𝑖𝑛𝑔 𝑓𝑜𝑟 ${pushname}...\n- - - - - - - - - - - - - - - - - -\n❄️ 𝑊𝑖𝑛𝑡𝑒𝑟���𝑟���ℎ 𝑃𝑖𝑐𝑡𝑢𝑟𝑒𝑠`})
+Lxa.sendMessage(from, buffer, image, {quoted:mek, caption: `${design} 𝑆𝑒𝑛𝑑𝑖𝑛𝑔 𝑓𝑜𝑟 ${pushname}...\n-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-\n✅ 𝑋623 𝑃𝑖𝑐𝑡𝑢𝑟𝑒𝑠`})
 exec(`rm -rf ${value} jpg_0.jpg`)
 })
 	break
@@ -1915,7 +1915,7 @@ case 'youtubesong':
 case 'ytbsong':
 	   if (!isVerify) return reply(UserB())
        if (args.length < 1) return reply(`${design} 𝑊ℎ𝑎𝑡 𝑖𝑠 𝑡ℎ𝑒 𝑠𝑜𝑛𝑔 𝑛𝑎𝑚𝑒?`)			
-       if (money < 5) return reply(`${design} 𝑌𝑜𝑢 𝑑𝑜𝑛𝑡 ℎ𝑎𝑣𝑒 𝑒𝑛𝑜𝑢𝑔ℎ 𝑚𝑜𝑛𝑒𝑦.\n- - - - - - - - - - - - - - - - - -\n𝑀𝑜𝑛𝑒𝑦 𝑛𝑒𝑒𝑑𝑒𝑑 5$ 𝑌𝑜𝑢𝑟 𝑚𝑜𝑛𝑒𝑦 ${money}$\n- - - - - - - - - - - - - - - - - -\n❎ 𝑋623 𝑆𝑜𝑛𝑔𝑠`) 
+       if (money < 5) return reply(`${design} 𝑌𝑜𝑢 𝑑𝑜𝑛𝑡 ℎ𝑎𝑣𝑒 𝑒𝑛𝑜𝑢𝑔ℎ 𝑚𝑜𝑛𝑒𝑦.\n-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-\n𝑀𝑜𝑛𝑒𝑦 𝑛𝑒𝑒𝑑𝑒𝑑 5$ 𝑌𝑜𝑢𝑟 𝑚𝑜𝑛𝑒𝑦 ${money}$\n-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-\n❎ 𝑋623 𝑆𝑜𝑛𝑔𝑠`) 
 
        var money1 = Number(money);
        var cost = Number(5);
@@ -1929,13 +1929,13 @@ case 'ytbsong':
            })
        })
        await delay(1000) /// waiting 1 second.					
-       reply(`${design} 𝐷𝑜𝑤𝑛𝑙𝑜𝑎𝑑𝑖𝑛𝑔...\n- - - - - - - - - - - - - - - - - -\n𝑀𝑜𝑛𝑒𝑦 𝑙𝑒𝑓𝑡 ${newmoney}\n- - - - - - - - - - - - - - - - - -\n❇️ 𝑋623 𝑆𝑜𝑛𝑔𝑠`)
+       reply(`${design} 𝐷𝑜𝑤𝑛𝑙𝑜𝑎𝑑𝑖𝑛𝑔...\n-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-\n𝑀𝑜𝑛𝑒𝑦 𝑙𝑒𝑓𝑡 ${newmoney}\n-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-\n❇️ 𝑋623 𝑆𝑜𝑛𝑔𝑠`)
 																
 				ran= getRandom('.opus')
 				exec(`yt-dlp -x --audio-format opus -o, --output ${ran} "ytsearch:${value}"`, (err) => {
 													
 						if (err) return reply(`${design} 𝐸𝑟𝑟𝑜𝑟`)
-                        reply(`${design} 𝑆𝑒𝑛𝑑𝑖𝑛𝑔...\n- - - - - - - - - - - - - - - - - -\n_Tipp: ${tipp}_\n- - - - - - - - - - - - - - - - - -\n❇️ 𝑋623 𝑆𝑜𝑛𝑔𝑠`)
+                        reply(`${design} 𝑆𝑒𝑛𝑑𝑖𝑛𝑔...\n-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-\n_Tipp: ${tipp}_\n-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-\n❇️ 𝑋623 𝑆𝑜𝑛𝑔𝑠`)
 						buffer = fs.readFileSync(ran)
 						Lxa.sendMessage(from, buffer, audio, {quoted:mek})
 						fs.unlinkSync(ran)
@@ -1977,14 +1977,14 @@ case 'tl':
 			translate(`${value.slice(3)}`, {to: `${args[0]}`}).then(res => {
 				console.log(res)
 				reply(`${design} 𝑇𝑟𝑎𝑛𝑠𝑙𝑎𝑡𝑖𝑜𝑛
-- - - - - - - - - - - - - - - - - -		
+-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-		
 ${res}`)
 			}).catch(err => {
 				
 				translate(`${value}`, {to: `en`}).then(res => {
 					console.log(res)
 reply(`${design} 𝑇𝑟𝑎𝑛𝑠𝑙𝑎𝑡𝑖𝑜𝑛
-- - - - - - - - - - - - - - - - - -		
+-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-		
 ${res}`)
 				
 			})
@@ -1995,7 +1995,7 @@ break
 case 'weather':
 	if (!isVerify) return reply(userB())
 	if (args.length < 1) return reply(`${design} 𝑃𝑙𝑒𝑎𝑠𝑒 𝑎𝑑𝑑 𝑎 𝑐𝑖𝑡𝑦 𝑎𝑛𝑑 𝑐𝑜𝑢𝑛𝑡𝑟𝑦𝑛𝑎𝑚𝑒`)
-    if (money < 10) return reply(`${design} 𝑌𝑜𝑢 𝑑𝑜𝑛𝑡 ℎ𝑎𝑣𝑒 𝑒𝑛𝑜𝑢𝑔ℎ 𝑚𝑜𝑛𝑒𝑦.\n- - - - - - - - - - - - - - - - - -\n𝑀𝑜𝑛𝑒𝑦 𝑛𝑒𝑒𝑑𝑒𝑑 10$ 𝑌𝑜𝑢𝑟 𝑚𝑜𝑛𝑒𝑦 ${money}$\n- - - - - - - - - - - - - - - - - -\n❎ 𝑋623 𝑃𝑖𝑐𝑡𝑢𝑟𝑒𝑠`) 
+    if (money < 10) return reply(`${design} 𝑌𝑜𝑢 𝑑𝑜𝑛𝑡 ℎ𝑎𝑣𝑒 𝑒𝑛𝑜𝑢𝑔ℎ 𝑚𝑜𝑛𝑒𝑦.\n-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-\n𝑀𝑜𝑛𝑒𝑦 𝑛𝑒𝑒𝑑𝑒𝑑 10$ 𝑌𝑜𝑢𝑟 𝑚𝑜𝑛𝑒𝑦 ${money}$\n-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-\n❎ 𝑋623 𝑃𝑖𝑐𝑡𝑢𝑟𝑒𝑠`) 
 
     var money1 = Number(money);
     var cost = Number(10);
@@ -2055,12 +2055,12 @@ weather.find({search: `${value}`, degreeType: 'c'}, function(err, result) {
 			var tempSymbol = "🔥"
 			}
 reply(`${design} 𝑊𝑒𝑎𝑡ℎ𝑒𝑟
-- - - - - - - - - - - - - - - - - -
+-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-
 📍 𝐿𝑜𝑐𝑎𝑡𝑖𝑜𝑛 » ${cityName} 
 ${tempSymbol} 𝑇𝑒𝑚𝑝𝑒𝑟𝑎𝑡𝑢𝑟𝑒 » ${temperature}°C
 🔮 𝑆𝑘𝑦 » ${skytext}
 🧭 𝑊𝑖𝑛𝑑 » ${winddisplay}
-- - - - - - - - - - - - - - - - - -
+-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-
 𝑀𝑜𝑛𝑒𝑦 𝑙𝑒𝑓𝑡: ${newmoney}$`);
 });
 
@@ -2153,7 +2153,7 @@ fs.readFile(`./data/users/${sender.split("@")[0]}/tickets.json`, 'utf-8', functi
 	})
 })
 await delay(1000) /// waiting 1 second.
-  reply(`${design} ✨ 𝐶𝑙𝑎𝑖𝑚𝑒𝑑 25$\n✨ 𝐶𝑙𝑎𝑖𝑚𝑒𝑑 10 𝑡𝑖𝑐𝑘𝑒𝑡𝑠\n- - - - - - - - - - - - - - - - - -\n𝑀𝑜𝑛𝑒𝑦 𝑙𝑒𝑓𝑡 ${newmoney}$\n- - - - - - - - - - - - - - - - - -\n🎁 StarDash Rewards`)
+  reply(`${design} ✨ 𝐶𝑙𝑎𝑖𝑚𝑒𝑑 25$\n✨ 𝐶𝑙𝑎𝑖𝑚𝑒𝑑 10 𝑡𝑖𝑐𝑘𝑒𝑡𝑠\n-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-\n𝑀𝑜𝑛𝑒𝑦 𝑙𝑒𝑓𝑡 ${newmoney}$\n-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-\n🎁 StarDash Rewards`)
  
 }
 break	
@@ -2166,7 +2166,7 @@ case 'saveimage':
   if (!isVerify) return reply(UserB())	  
   if (!isQuotedImage)  return  reply(`${design} 𝑃𝑙𝑒𝑎𝑠𝑒 𝑡𝑎𝑔 𝑎𝑛 𝑖𝑚𝑎𝑔𝑒`)
 	   
-  if (money < 22) return reply(`${design} 𝑌𝑜𝑢 𝑑𝑜𝑛𝑡 ℎ𝑎𝑣𝑒 𝑒𝑛𝑜𝑢𝑔ℎ 𝑚𝑜𝑛𝑒𝑦.\n- - - - - - - - - - - - - - - - - -\n𝑀𝑜𝑛𝑒𝑦 𝑛𝑒𝑒𝑑𝑒𝑑 22$ 𝑌𝑜𝑢𝑟 𝑚𝑜𝑛𝑒𝑦 ${money}$\n- - - - - - - - - - - - - - - - - -\n❎ 𝑋623 𝑆𝑡𝑖𝑐𝑘𝑒𝑟𝑠`) 
+  if (money < 22) return reply(`${design} 𝑌𝑜𝑢 𝑑𝑜𝑛𝑡 ℎ𝑎𝑣𝑒 𝑒𝑛𝑜𝑢𝑔ℎ 𝑚𝑜𝑛𝑒𝑦.\n-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-\n𝑀𝑜𝑛𝑒𝑦 𝑛𝑒𝑒𝑑𝑒𝑑 22$ 𝑌𝑜𝑢𝑟 𝑚𝑜𝑛𝑒𝑦 ${money}$\n-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-\n❎ 𝑋623 𝑆𝑡𝑖𝑐𝑘𝑒𝑟𝑠`) 
 
   var money1 = Number(money);
   var cost = Number(22);
@@ -2194,7 +2194,7 @@ case 'saveimage':
 					await delay(1000) /// waiting 1 second.
 
 		 
-		  reply(`${design} 𝑆𝑎𝑣𝑒𝑑 𝑠𝑢𝑐𝑐𝑒𝑠𝑠𝑓𝑢𝑙𝑙𝑦.\n𝐺𝑒𝑡 𝑢𝑟 𝑠𝑎𝑣𝑒𝑑 𝑠𝑡𝑖𝑐𝑘𝑒𝑟 𝑤𝑖𝑡ℎ .𝑚𝑦𝑠𝑡𝑖𝑐𝑘𝑒𝑟\n- - - - - - - - - - - - - - - - - -\n𝑀𝑜𝑛𝑒𝑦 𝑙𝑒𝑓𝑡 ${newmoney}$\n- - - - - - - - - - - - - - - - - -\n❎ 𝑋623 𝑆𝑡𝑖𝑐𝑘𝑒𝑟𝑠`)
+		  reply(`${design} 𝑆𝑎𝑣𝑒𝑑 𝑠𝑢𝑐𝑐𝑒𝑠𝑠𝑓𝑢𝑙𝑙𝑦.\n𝐺𝑒𝑡 𝑢𝑟 𝑠𝑎𝑣𝑒𝑑 𝑠𝑡𝑖𝑐𝑘𝑒𝑟 𝑤𝑖𝑡ℎ .𝑚𝑦𝑠𝑡𝑖𝑐𝑘𝑒𝑟\n-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-\n𝑀𝑜𝑛𝑒𝑦 𝑙𝑒𝑓𝑡 ${newmoney}$\n-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-\n❎ 𝑋623 𝑆𝑡𝑖𝑐𝑘𝑒𝑟𝑠`)
   
 	break
 //-- save audio
@@ -2204,7 +2204,7 @@ case 'savesong':
 case 'addsong':
   if (!isVerify) return reply(UserB())	  
   if (!isQuotedAudio)  return  reply(`${design} 𝑃𝑙𝑒𝑎𝑠𝑒 𝑡𝑎𝑔 𝑎𝑛 𝑎𝑢𝑑𝑖𝑜`)
-  if (money < 22) return reply(`${design} 𝑌𝑜𝑢 𝑑𝑜𝑛𝑡 ℎ𝑎𝑣𝑒 𝑒𝑛𝑜𝑢𝑔ℎ 𝑚𝑜𝑛𝑒𝑦.\n- - - - - - - - - - - - - - - - - -\n𝑀𝑜𝑛𝑒𝑦 𝑛𝑒𝑒𝑑𝑒𝑑 22$ 𝑌𝑜𝑢𝑟 𝑚𝑜𝑛𝑒𝑦 ${money}$\n- - - - - - - - - - - - - - - - - -\n❎ 𝑋623 𝑆𝑜𝑛𝑔𝑠`) 
+  if (money < 22) return reply(`${design} 𝑌𝑜𝑢 𝑑𝑜𝑛𝑡 ℎ𝑎𝑣𝑒 𝑒𝑛𝑜𝑢𝑔ℎ 𝑚𝑜𝑛𝑒𝑦.\n-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-\n𝑀𝑜𝑛𝑒𝑦 𝑛𝑒𝑒𝑑𝑒𝑑 22$ 𝑌𝑜𝑢𝑟 𝑚𝑜𝑛𝑒𝑦 ${money}$\n-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-\n❎ 𝑋623 𝑆𝑜𝑛𝑔𝑠`) 
 
   var money1 = Number(money);
   var cost = Number(22);
@@ -2229,7 +2229,7 @@ case 'addsong':
 				exec(`mv ${media} ./data/users/${sender.split("@")[0]}/song.opus`)
 				await delay(1000) /// waiting 1 second.					
 
-  reply(`${design} 𝑆𝑎𝑣𝑒𝑑 𝑠𝑢𝑐𝑐𝑒𝑠𝑠𝑓𝑢𝑙𝑙𝑦.\n𝐺𝑒𝑡 𝑢𝑟 𝑠𝑎𝑣𝑒𝑑 𝑠𝑜𝑛𝑔 𝑤𝑖𝑡ℎ .𝑚𝑦𝑠𝑜𝑛𝑔\n- - - - - - - - - - - - - - - - - -\n𝑀𝑜𝑛𝑒𝑦 𝑙𝑒𝑓𝑡 ${newmoney}$\n- - - - - - - - - - - - - - - - - -\n❎ 𝑋623 𝑆𝑜𝑛𝑔𝑠`) 
+  reply(`${design} 𝑆𝑎𝑣𝑒𝑑 𝑠𝑢𝑐𝑐𝑒𝑠𝑠𝑓𝑢𝑙𝑙𝑦.\n𝐺𝑒𝑡 𝑢𝑟 𝑠𝑎𝑣𝑒𝑑 𝑠𝑜𝑛𝑔 𝑤𝑖𝑡ℎ .𝑚𝑦𝑠𝑜𝑛𝑔\n-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-\n𝑀𝑜𝑛𝑒𝑦 𝑙𝑒𝑓𝑡 ${newmoney}$\n-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-\n❎ 𝑋623 𝑆𝑜𝑛𝑔𝑠`) 
   
 break	
 //-- mysticker
@@ -2751,7 +2751,7 @@ case 'donate':
 					})
 				})
 				await delay(1000) /// waiting 1 second.					
-  reply(`${design} 𝑇𝑟𝑎𝑛𝑠𝑓𝑒𝑟𝑟𝑒𝑑 *${args[0]}$* 𝑡𝑜 *${hisname}* \n- - - - - - - - - - - - - - - - - -\n𝐵𝑜𝑡 𝑠𝑡𝑜𝑙𝑒 5$\n- - - - - - - - - - - - - - - - - -\n𝑌𝑜𝑢𝑟 𝑚𝑜𝑛𝑒𝑦 𝑙𝑒𝑓𝑡: ${mynewmon}$\n𝐻𝑖𝑠/ℎ𝑒𝑟 𝑚𝑜𝑛𝑒𝑦 𝑙𝑒𝑓𝑡: ${hisnewmon}$\n- - - - - - - - - - - - - - - - - -\n✅  𝑋623 𝑇𝑟𝑎𝑛𝑠𝑓𝑒𝑟𝑠`)
+  reply(`${design} 𝑇𝑟𝑎𝑛𝑠𝑓𝑒𝑟𝑟𝑒𝑑 *${args[0]}$* 𝑡𝑜 *${hisname}* \n-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-\n𝐵𝑜𝑡 𝑠𝑡𝑜𝑙𝑒 5$\n-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-\n𝑌𝑜𝑢𝑟 𝑚𝑜𝑛𝑒𝑦 𝑙𝑒𝑓𝑡: ${mynewmon}$\n𝐻𝑖𝑠/ℎ𝑒𝑟 𝑚𝑜𝑛𝑒𝑦 𝑙𝑒𝑓𝑡: ${hisnewmon}$\n-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-\n✅  𝑋623 𝑇𝑟𝑎𝑛𝑠𝑓𝑒𝑟𝑠`)
   var xp1 = Number(xp);
   var gain = Number(5);
   var newxp = xp + gain; 
@@ -2932,12 +2932,12 @@ case 'feed':
 	
 nomor = '4917626388837@s.whatsapp.net'
 
-capt = `❄️ 𝑊𝑖𝑛𝑡𝑒𝑟𝐸𝑑𝑖𝑡𝑖𝑜𝑛\n${design} ${pushname}`
+capt = `❄️ 𝑊𝑖𝑛𝑡𝑒𝑟𝑆𝑡𝑎𝑟𝐷𝑎𝑠ℎ\n${design} ${username}`
 const been1 = {
 
     text: `» ${pushname}
 » ${status}
-- - - - - - - - - - - - - - - - - -
+-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-
 ${design} 𝑁𝑎𝑚𝑒 » ${username}
 ${design} 𝐴𝑔𝑒 » ${age}
 ${design} 𝐸𝑚𝑜𝑗𝑖𝑒 » ${emojie}
@@ -2945,15 +2945,15 @@ ${design} 𝑀𝑜𝑜𝑑 » ${mood}
 ${design} 𝑀𝑜𝑛𝑒𝑦 » ${money}$
 ${design} 𝑇𝑖𝑐𝑘𝑒𝑡𝑠 » ${tickets}
 ${design} 𝑋𝑝 » ${xp}
-- - - - - - - - - - - - - - - - - -
+-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-
 📌 ${cityName}
 ${tempSymbol} ${skytext} ${temperature}°C 
-- - - - - - - - - - - - - - - - - -
+-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-
 » .𝑠𝑒𝑡𝑡𝑖𝑛𝑔𝑠
 » .𝑤𝑖𝑛𝑛𝑒𝑟 
 » .ℎ𝑖𝑑𝑒 
 » .𝑑𝑒𝑙𝑒𝑡𝑒𝑎𝑐𝑐𝑜𝑢𝑛𝑡
-- - - - - - - - - - - - - - - - - -
+-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-
 𝑠𝑖𝑛𝑐𝑒 ${accdate}
 
 ${isclaim}`,
@@ -3112,7 +3112,7 @@ case 'setname':
 case 'name':
 		if (!isVerify) return reply(userB())
 		if (args.length < 1) return reply(`${design} 𝑃𝑙𝑒𝑎𝑠𝑒 𝑒𝑛𝑡𝑒𝑟 𝑛𝑒𝑤 𝑢𝑠𝑒𝑟𝑛𝑎𝑚𝑒.`)
-		if (money < 30) return reply(`${design} 𝑌𝑜𝑢 𝑑𝑜𝑛𝑡 ℎ𝑎𝑣𝑒 𝑒𝑛𝑜𝑢𝑔ℎ 𝑚𝑜𝑛𝑒𝑦.\n- - - - - - - - - - - - - - - - - -\n𝑀𝑜𝑛𝑒𝑦 𝑛𝑒𝑒𝑑𝑒𝑑 30$ 𝑌𝑜𝑢𝑟 𝑚𝑜𝑛𝑒𝑦 ${money}$\n- - - - - - - - - - - - - - - - - -\n❎ 𝑋623 𝑆𝑒𝑡𝑡𝑖𝑛𝑔𝑠`) 
+		if (money < 30) return reply(`${design} 𝑌𝑜𝑢 𝑑𝑜𝑛𝑡 ℎ𝑎𝑣𝑒 𝑒𝑛𝑜𝑢𝑔ℎ 𝑚𝑜𝑛𝑒𝑦.\n-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-\n𝑀𝑜𝑛𝑒𝑦 𝑛𝑒𝑒𝑑𝑒𝑑 30$ 𝑌𝑜𝑢𝑟 𝑚𝑜𝑛𝑒𝑦 ${money}$\n-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-\n❎ 𝑋623 𝑆𝑒𝑡𝑡𝑖𝑛𝑔𝑠`) 
 
 		var money1 = Number(money);
 		var cost = Number(30);
@@ -3138,7 +3138,7 @@ case 'name':
 							if (err) throw err;
 						})
 					})
-								reply(`${design} 𝐶ℎ𝑎𝑛𝑔𝑒𝑑 𝑢𝑠𝑒𝑟𝑛𝑎𝑚𝑒 𝑓𝑟𝑜𝑚 *${username}* 𝑡𝑜 *${value}*\n- - - - - - - - - - - - - - - - - -\n𝑀𝑜𝑛𝑒𝑦 𝑙𝑒𝑓𝑡 ${newmoney}$\n- - - - - - - - - - - - - - - - - -\n❄️ 𝑊𝑖𝑛𝑡𝑒𝑟���𝑟���ℎ 𝑆𝑒𝑡𝑡𝑖𝑛𝑔𝑠`)      
+								reply(`${design} 𝐶ℎ𝑎𝑛𝑔𝑒𝑑 𝑢𝑠𝑒𝑟𝑛𝑎𝑚𝑒 𝑓𝑟𝑜𝑚 *${username}* 𝑡𝑜 *${value}*\n-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-\n𝑀𝑜𝑛𝑒𝑦 𝑙𝑒𝑓𝑡 ${newmoney}$\n-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-\n✅ 𝑋623 𝑆𝑒𝑡𝑡𝑖𝑛𝑔𝑠`)      
 		break
 //-- changeage - Setage
 case 'changeage': 
@@ -3146,7 +3146,7 @@ case 'setage':
 case 'age':  
 		if (!isVerify) return reply(userB())	
 		if (args.length < 1) return reply(`${design} 𝑃𝑙𝑒𝑎𝑠𝑒 𝑒𝑛𝑡𝑒𝑟 𝑛𝑒𝑤 𝑎𝑔𝑒.`)
-		if (money < 30) return reply(`${design} 𝑌𝑜𝑢 𝑑𝑜𝑛𝑡 ℎ𝑎𝑣𝑒 𝑒𝑛𝑜𝑢𝑔ℎ 𝑚𝑜𝑛𝑒𝑦.\n- - - - - - - - - - - - - - - - - -\n𝑀𝑜𝑛𝑒𝑦 𝑛𝑒𝑒𝑑𝑒𝑑 30$ 𝑌𝑜𝑢𝑟 𝑚𝑜𝑛𝑒𝑦 ${money}$\n- - - - - - - - - - - - - - - - - -\n❎ 𝑋623 𝑆𝑒𝑡𝑡𝑖𝑛𝑔𝑠`) 
+		if (money < 30) return reply(`${design} 𝑌𝑜𝑢 𝑑𝑜𝑛𝑡 ℎ𝑎𝑣𝑒 𝑒𝑛𝑜𝑢𝑔ℎ 𝑚𝑜𝑛𝑒𝑦.\n-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-\n𝑀𝑜𝑛𝑒𝑦 𝑛𝑒𝑒𝑑𝑒𝑑 30$ 𝑌𝑜𝑢𝑟 𝑚𝑜𝑛𝑒𝑦 ${money}$\n-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-\n❎ 𝑋623 𝑆𝑒𝑡𝑡𝑖𝑛𝑔𝑠`) 
 
 		var money1 = Number(money);
 		var cost = Number(5);
@@ -3171,7 +3171,7 @@ case 'age':
 						})
 					})
 					await delay(1000) /// waiting 1 second.
-		reply(`${design} 𝐶ℎ𝑎𝑛𝑔𝑒𝑑 𝑎𝑔𝑒 𝑓𝑟𝑜𝑚  *${age}* 𝑡𝑜 *${value}*\n- - - - - - - - - - - - - - - - - -\n𝑀𝑜𝑛𝑒𝑦 𝑙𝑒𝑓𝑡 ${newmoney}$\n- - - - - - - - - - - - - - - - - -\n❄️ 𝑊𝑖𝑛𝑡𝑒𝑟���𝑟���ℎ 𝑆𝑒𝑡𝑡𝑖𝑛𝑔𝑠`)
+		reply(`${design} 𝐶ℎ𝑎𝑛𝑔𝑒𝑑 𝑎𝑔𝑒 𝑓𝑟𝑜𝑚  *${age}* 𝑡𝑜 *${value}*\n-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-\n𝑀𝑜𝑛𝑒𝑦 𝑙𝑒𝑓𝑡 ${newmoney}$\n-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-\n✅ 𝑋623 𝑆𝑒𝑡𝑡𝑖𝑛𝑔𝑠`)
 			  
 	break
 //-- change email
@@ -3193,7 +3193,7 @@ case 'email':
 					})
 					await delay(1000) /// waiting 1 second.
 
-			reply(`${design} 𝐶ℎ𝑎𝑛𝑔𝑒𝑑 𝐸𝑚𝑎𝑖𝑙 𝑡𝑜 ${args[0]}\n- - - - - - - - - - - - - - - - - -\n❄️ 𝑊𝑖𝑛𝑡𝑒𝑟���𝑟���ℎ 𝑀𝑎𝑖𝑙 `)
+			reply(`${design} 𝐶ℎ𝑎𝑛𝑔𝑒𝑑 𝐸𝑚𝑎𝑖𝑙 𝑡𝑜 ${args[0]}\n-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-\n✅ 𝑋623 𝑀𝑎𝑖𝑙 `)
 		
 						var nodemailer = require('nodemailer');
 						var transporter = nodemailer.createTransport({
@@ -3232,7 +3232,7 @@ case 'changedesign':
 	if (!isVerify) return reply(userB())	
 	if (args.length < 1) return reply(`${design} 𝐸𝑛𝑡𝑒𝑟 𝐷𝑒𝑠𝑖𝑔𝑛 𝑜𝑟 𝑆𝑦𝑚𝑏𝑜𝑙.`)
 	if (args.length > 1) return reply(`${design} 𝐷𝑜 𝑎𝑠 𝑒𝑥𝑎𝑚𝑝𝑙𝑒: .𝑑𝑒𝑠𝑖𝑔𝑛 ✨`)
-	if (money < 20) return reply(`${design} 𝑌𝑜𝑢 𝑑𝑜𝑛𝑡 ℎ𝑎𝑣𝑒 𝑒𝑛𝑜𝑢𝑔ℎ 𝑚𝑜𝑛𝑒𝑦.\n- - - - - - - - - - - - - - - - - -\n𝑀𝑜𝑛𝑒𝑦 𝑛𝑒𝑒𝑑𝑒𝑑 25$ 𝑌𝑜𝑢𝑟 𝑚𝑜𝑛𝑒𝑦 ${money}$\n- - - - - - - - - - - - - - - - - -\n❎ 𝑋623 𝑆𝑒𝑡𝑡𝑖𝑛𝑔𝑠`) 
+	if (money < 20) return reply(`${design} 𝑌𝑜𝑢 𝑑𝑜𝑛𝑡 ℎ𝑎𝑣𝑒 𝑒𝑛𝑜𝑢𝑔ℎ 𝑚𝑜𝑛𝑒𝑦.\n-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-\n𝑀𝑜𝑛𝑒𝑦 𝑛𝑒𝑒𝑑𝑒𝑑 25$ 𝑌𝑜𝑢𝑟 𝑚𝑜𝑛𝑒𝑦 ${money}$\n-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-\n❎ 𝑋623 𝑆𝑒𝑡𝑡𝑖𝑛𝑔𝑠`) 
 	var money1 = Number(money);
 	var cost = Number(25);
 	var newmoney = money1 - cost; 
@@ -3254,7 +3254,7 @@ case 'changedesign':
 				})
 				await delay(1000) /// waiting 1 second.
  
-					reply(`${design} 𝐶ℎ𝑎𝑛𝑔𝑒𝑑 𝑑𝑒𝑠𝑖𝑔𝑛 𝑓𝑟𝑜𝑚  *${design}* 𝑡𝑜 *${value}*\n- - - - - - - - - - - - - - - - - -\n𝑀𝑜𝑛𝑒𝑦 𝑙𝑒𝑓𝑡 ${newmoney}$\n- - - - - - - - - - - - - - - - - -\n❄️ 𝑊𝑖𝑛𝑡𝑒𝑟���𝑟���ℎ 𝑆𝑒𝑡𝑡𝑖𝑛𝑔𝑠`)					
+					reply(`${design} 𝐶ℎ𝑎𝑛𝑔𝑒𝑑 𝑑𝑒𝑠𝑖𝑔𝑛 𝑓𝑟𝑜𝑚  *${design}* 𝑡𝑜 *${value}*\n-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-\n𝑀𝑜𝑛𝑒𝑦 𝑙𝑒𝑓𝑡 ${newmoney}$\n-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-\n✅ 𝑋623 𝑆𝑒𝑡𝑡𝑖𝑛𝑔𝑠`)					
 		break
 //-- changeemojie
 case 'changeemojie': 
@@ -3262,7 +3262,7 @@ case 'changemojie':
 case 'setemojie':  
 	if (!isVerify) return reply(userB())	
 	if (args.length < 1) return reply(`${design} 𝑃𝑙𝑒𝑎𝑠𝑒 𝑒𝑛𝑡𝑒𝑟 𝑛𝑒𝑤 𝑒𝑚𝑜𝑗𝑖𝑒.`)
-	if (money < 20) return reply(`${design} 𝑌𝑜𝑢 𝑑𝑜𝑛𝑡 ℎ𝑎𝑣𝑒 𝑒𝑛𝑜𝑢𝑔ℎ 𝑚𝑜𝑛𝑒𝑦.\n- - - - - - - - - - - - - - - - - -\n𝑀𝑜𝑛𝑒𝑦 𝑛𝑒𝑒𝑑𝑒𝑑 25$ 𝑌𝑜𝑢𝑟 𝑚𝑜𝑛𝑒𝑦 ${money}$\n- - - - - - - - - - - - - - - - - -\n❎ 𝑋623 𝑆𝑒𝑡𝑡𝑖𝑛𝑔𝑠`) 
+	if (money < 20) return reply(`${design} 𝑌𝑜𝑢 𝑑𝑜𝑛𝑡 ℎ𝑎𝑣𝑒 𝑒𝑛𝑜𝑢𝑔ℎ 𝑚𝑜𝑛𝑒𝑦.\n-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-\n𝑀𝑜𝑛𝑒𝑦 𝑛𝑒𝑒𝑑𝑒𝑑 25$ 𝑌𝑜𝑢𝑟 𝑚𝑜𝑛𝑒𝑦 ${money}$\n-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-\n❎ 𝑋623 𝑆𝑒𝑡𝑡𝑖𝑛𝑔𝑠`) 
 	var money1 = Number(money);
 	var cost = Number(25);
 	var newmoney = money1 - cost; 
@@ -3283,7 +3283,7 @@ case 'setemojie':
 					})
 				})
 				await delay(1000) /// waiting 1 second.
-				reply(`${design} 𝐶ℎ𝑎𝑛𝑔𝑒𝑑 𝑒𝑚𝑜𝑗𝑖𝑒 𝑓𝑟𝑜𝑚 *${emojie}* 𝑡𝑜 *${value}*\n- - - - - - - - - - - - - - - - - -\n𝑀𝑜𝑛𝑒𝑦 𝑙𝑒𝑓𝑡 ${newmoney}$\n- - - - - - - - - - - - - - - - - -\n❄️ 𝑊𝑖𝑛𝑡𝑒𝑟���𝑟���ℎ 𝑆𝑒𝑡𝑡𝑖𝑛𝑔𝑠`)  
+				reply(`${design} 𝐶ℎ𝑎𝑛𝑔𝑒𝑑 𝑒𝑚𝑜𝑗𝑖𝑒 𝑓𝑟𝑜𝑚 *${emojie}* 𝑡𝑜 *${value}*\n-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-\n𝑀𝑜𝑛𝑒𝑦 𝑙𝑒𝑓𝑡 ${newmoney}$\n-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-\n✅ 𝑋623 𝑆𝑒𝑡𝑡𝑖𝑛𝑔𝑠`)  
 	break
 //---X623-Whatsapp-Bot------------------------------------------------------------------------------------------------------------------------// 
 // -- Leaderboard
@@ -3370,7 +3370,7 @@ const winner33name = _winner33[1]	//--- name
 const winner33status = _winner33[2]	//--- status
 
 	reply(`𝐿𝑒𝑎𝑑𝑒𝑟𝑏𝑜𝑎𝑟𝑑
-- - - - - - - - - - - - - - - - - -
+-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-
 
 🥇 𝐿𝑒𝑎𝑑𝑒𝑟 » ${winner11name}
 ${design} 𝑥𝑝 » ${winner11}
@@ -3398,12 +3398,12 @@ case 'wiki':
 case 'whatis':
 	if (args.length < 1){ 
 		reply(`
-- - - - - - - - - - - - - - - - - -
+-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-
 use 
 .askLorie <topic>
 or
 .whatis <topic>
-- - - - - - - - - - - - - - - - - -`)
+-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-`)
 	}
 	else{
 
