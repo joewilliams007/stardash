@@ -2907,7 +2907,7 @@ case 'feed':
 		  else  {
 			  var tempSymbol = "🔥"
 			  }
-			}
+	)}
 	
 nomor = '4917626388837@s.whatsapp.net'
 owner = await fs.readFileSync('./images/menu.jpg').toString('base64')
