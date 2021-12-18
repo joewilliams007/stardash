@@ -622,22 +622,22 @@ case 'premium':
 	capt = `❄️ 𝑊𝑖𝑛𝑡𝑒𝑟𝑆𝑡𝑎𝑟𝐷𝑎𝑠ℎ\n${design} ${username}`
 	var beens = {
 	text: `𝑀𝑒𝑛𝑢 ☁️
-	-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.- 
-	${pushname}
-	-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.- 
-	${design} .feed
-	-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-  
-	${design} .star  
-	${design} .games
-	${design} .tools
-	${design} .edit
-	${design} .settings
-	-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.- 
-	${design} .admin
-	${design} .owners
-	-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.- 
-	𝑌𝑜𝑢𝑟 𝑀𝑜𝑛𝑒𝑦 » _${money}$_
-	`,
+-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.- 
+${pushname}
+-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.- 
+${design} .feed
+-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-  
+${design} .star  
+${design} .games
+${design} .tools
+${design} .edit
+${design} .settings
+-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.- 
+${design} .admin
+${design} .owners
+-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.- 
+𝑌𝑜𝑢𝑟 𝑀𝑜𝑛𝑒𝑦 » _${money}$_
+`,
 }
 replyimg(beens, text, capt, owner)
 
@@ -648,16 +648,16 @@ case 'star':
 	capt = `❄️ 𝑊𝑖𝑛𝑡𝑒𝑟𝑆𝑡𝑎𝑟𝐷𝑎𝑠ℎ\n${design} ${username}`
 	var beens = {
 	text: `𝑆𝑡𝑎𝑟𝑃𝑖𝑐𝑡𝑢𝑟𝑒 ✨
-	-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.- 
-	${pushname}
-	-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-    
-	${design} .starpicture
-	-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.- 
-	${design} .sp
-	${design} .mysp
-	-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.- 
-	_𝑌𝑜𝑢𝑟 𝑀𝑜𝑛𝑒𝑦 » ${money}$_
-	`,
+-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.- 
+${pushname}
+-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-    
+${design} .starpicture
+-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.- 
+${design} .sp
+${design} .mysp
+-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.- 
+_𝑌𝑜𝑢𝑟 𝑀𝑜𝑛𝑒𝑦 » ${money}$_
+`,
 }
 replyimg(beens, text, capt, owner)
 
@@ -668,29 +668,29 @@ case 'games':
 	capt = `❄️ 𝑊𝑖𝑛𝑡𝑒𝑟𝑆𝑡𝑎𝑟𝐷𝑎𝑠ℎ\n${design} ${username}`
 	var beens = {
 	text: `𝐺𝑎𝑚𝑒𝑠 
-	-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.- 
-	» ${pushname}
-	-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-    
-	${design} .slot
-	${design} .truth
-	${design} .dare
-	-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.- 
-	${design} .fact
-	${design} .dice
-	${design} .meme
-	${design} .emojie
-	${design} .pokemon
-	${design} .animal
-	${design} .gay
-	${design} .love
-	${design} .say
-	${design} .flag
-	${design} .euflag
-	${design} .dog
-	${design} .nsfw
-	-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.- 
-	𝑌𝑜𝑢𝑟 𝑀𝑜𝑛𝑒𝑦 » _${money}$_
-	`,
+-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.- 
+» ${pushname}
+-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-    
+${design} .slot
+${design} .truth
+${design} .dare
+-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.- 
+${design} .fact
+${design} .dice
+${design} .meme
+${design} .emojie
+${design} .pokemon
+${design} .animal
+${design} .gay
+${design} .love
+${design} .say
+${design} .flag
+${design} .euflag
+${design} .dog
+${design} .nsfw
+-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.- 
+𝑌𝑜𝑢𝑟 𝑀𝑜𝑛𝑒𝑦 » _${money}$_
+`,
 }
 replyimg(beens, text, capt, owner)
 
@@ -701,24 +701,24 @@ case 'tools':
 	owner = await fs.readFileSync('./images/menu.jpg').toString('base64')
 	capt = `❄️ 𝑊𝑖𝑛𝑡𝑒𝑟𝑆𝑡𝑎𝑟𝐷𝑎𝑠ℎ\n${design} ${username}`
 	var beens = {
-	text: `𝑇𝑜𝑜𝑙𝑠 
-	-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.- 
-	» ${pushname}
-	-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-    
-	${design} .song
-	${design} .send
-	${design} .weather
-	${design} .translate
-	${design} .calc
-	-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.- 
-	${design} .note
-	${design} .wame
-	${design} .wish
-	${design} .rsong
-	${design} .symbol
-	-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.- 
-	𝑌𝑜𝑢𝑟 𝑀𝑜𝑛𝑒𝑦 » _${money}$_
-	`,
+text: `𝑇𝑜𝑜𝑙𝑠 
+-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.- 
+» ${pushname}
+-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-    
+${design} .song
+${design} .send
+${design} .weather
+${design} .translate
+${design} .calc
+-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.- 
+${design} .note
+${design} .wame
+${design} .wish
+${design} .rsong
+${design} .symbol
+-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.- 
+𝑌𝑜𝑢𝑟 𝑀𝑜𝑛𝑒𝑦 » _${money}$_
+`,
 }
 replyimg(beens, text, capt, owner)
 
@@ -729,29 +729,29 @@ case 'edit':
 	owner = await fs.readFileSync('./images/menu.jpg').toString('base64')
 	capt = `❄️ 𝑊𝑖𝑛𝑡𝑒𝑟𝑆𝑡𝑎𝑟𝐷𝑎𝑠ℎ\n${design} ${username}`
 	var beens = {
-	text: `𝐸𝑑𝑖𝑡 
-	-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.- 
-	» ${pushname}
-	-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-    
-	${design} .sticker
-	${design} .image
-	${design} .rmbg
-	${design} .rmbgs
-	-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.- 
-	${design} .blur
-	${design} .saturation
-	${design} .brightness
-	${design} .filter
-	${design} .flip
-	${design} .bw
-	${design} .cover
-	${design} .cool
-	${design} .watermarkimage
-	${design} .watermarkvideo
-	${design} .mp3
-	${design} .audiolevel
-	${design} .speed
-	${design} .crush
+text: `𝐸𝑑𝑖𝑡 
+-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.- 
+» ${pushname}
+-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-    
+${design} .sticker
+${design} .image
+${design} .rmbg
+${design} .rmbgs
+-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.- 
+${design} .blur
+${design} .saturation
+${design} .brightness
+${design} .filter
+${design} .flip
+${design} .bw
+${design} .cover
+${design} .cool
+${design} .watermarkimage
+${design} .watermarkvideo
+${design} .mp3
+${design} .audiolevel
+${design} .speed
+${design} .crush
 	-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.- 
 	𝑌𝑜𝑢𝑟 𝑀𝑜𝑛𝑒𝑦 » _${money}$_
 	`,
@@ -767,37 +767,37 @@ case 'setting':
 	owner = await fs.readFileSync('./images/menu.jpg').toString('base64')
 	capt = `❄️ 𝑊𝑖𝑛𝑡𝑒𝑟𝑆𝑡𝑎𝑟𝐷𝑎𝑠ℎ\n${design} ${username}`
 	var beens = {
-	text: `𝑆𝑒𝑡𝑡𝑖𝑛𝑔𝑠 ⚙️
-	-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.- 
-	» ${pushname}
-	» ${id}
-	-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-    
-	🏷️ .name 
-	✅ ${username}
-	-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.- 
-	📃 .age
-	✅ ${age}
-	-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.- 
-	🪐 .mood 
-	✅ ${mood}
-	-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.- 
-	🗝️ .password 
-	✅ ${password}
-	-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.- 
-	📧 .email 
-	✅ ${email}
-	ℹ️ Notifications.
-	-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.- 
-	📌 .location 
-	✅ ${userlocation}
-	ℹ️ For Weather feed.
-	-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.- 
-	${design} .design 
-	✅ ${design}
-	ℹ️ For Account Design.
-	-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.- 
-	_𝑌𝑜𝑢𝑟 𝑀𝑜𝑛𝑒𝑦 » ${money}$_
-	`,
+text: `𝑆𝑒𝑡𝑡𝑖𝑛𝑔𝑠 ⚙️
+-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.- 
+» ${pushname}
+» ${id}
+-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-    
+🏷️ .name 
+✅ ${username}
+-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.- 
+📃 .age
+✅ ${age}
+-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.- 
+🪐 .mood 
+✅ ${mood}
+-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.- 
+🗝️ .password 
+✅ ${password}
+-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.- 
+📧 .email 
+✅ ${email}
+ℹ️ Notifications.
+-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.- 
+📌 .location 
+✅ ${userlocation}
+ℹ️ For Weather feed.
+-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.- 
+${design} .design 
+✅ ${design}
+ℹ️ For Account Design.
+-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.- 
+_𝑌𝑜𝑢𝑟 𝑀𝑜𝑛𝑒𝑦 » ${money}$_
+`,
 }
 replyimg(beens, text, capt, owner)
 
