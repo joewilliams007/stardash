@@ -3051,7 +3051,7 @@ fs.readFile(`./data/users/${sender.split("@")[0]}/stickerpack.json`, 'utf-8', fu
 case 'location': 
 	if (!isVerify) return reply(userB())	
 	if (args.length < 1) return reply(`${design} 𝑃𝑙𝑒𝑎𝑠𝑒 𝑒𝑛𝑡𝑒𝑟 𝑙𝑜𝑐𝑎𝑡𝑖𝑜𝑛.`)
-var now = args[0];
+var now = value;
 fs.readFile(`./data/users/${sender.split("@")[0]}/location.json`, 'utf-8', function(err, data) {
     if (err) throw err;
     var newValue = data.replace(`${userlocation}`, now);
