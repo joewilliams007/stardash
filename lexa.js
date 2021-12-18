@@ -760,7 +760,7 @@ reply(`𝑆𝑒𝑡𝑡𝑖𝑛𝑔𝑠 ⚙️
 ℹ️ Notifications.
 -.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.- 
 📌 .location 
-✅ ${location}
+✅ ${userlocation}
 ℹ️ For Weather feed.
 -.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.- 
 ${design} .design 
