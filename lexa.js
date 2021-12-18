@@ -365,8 +365,8 @@ const botNumber = Lxa.user.jid
 	}
 		let userlocation;
 		try{	
-		let _userslocation = JSON.parse(fs.readFileSync(`./data/users/${sender.split("@")[0]}/location.json`));
-		userslocation = _userslocation[0]	//--- location
+		let _userlocation = JSON.parse(fs.readFileSync(`./data/users/${sender.split("@")[0]}/location.json`));
+		userlocation = _userlocation[0]	//--- location
 	}catch (err){
 		
 	}
@@ -2878,7 +2878,7 @@ case 'feed':
 						}
 						owner = await fs.readFileSync('./images/menu.jpg').toString('base64')
 
-	weather.find({search: `${location}`, degreeType: 'c'}, function(err, result) {
+	weather.find({search: `${userlocation}`, degreeType: 'c'}, function(err, result) {
 		if(err) console.log(err);
 		var cityName = result[0].location.name
 		var temperature = result[0].current.temperature
