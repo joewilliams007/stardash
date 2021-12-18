@@ -743,32 +743,31 @@ reply(`𝑆𝑒𝑡𝑡𝑖𝑛𝑔𝑠 ⚙️
 » ${pushname}
 » ${id}
 -.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-    
-${design} 🏷️ .name 
+🏷️ .name 
 ✅ ${username}
-ℹ️ For Account.
-${design} 📃 .age
+-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.- 
+📃 .age
 ✅ ${age}
-ℹ️ For Account.
-${design} 📆 .birthdate 
-✅ ${bday}
-ℹ️ For presents.
-${design} 🪐 .mood 
+-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.- 
+🪐 .mood 
 ✅ ${mood}
-ℹ️ For Account.
-${design} 🗝️ .password 
+-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.- 
+🗝️ .password 
 ✅ ${password}
-ℹ️ Security. 
-${design} 📧 .email 
+-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.- 
+📧 .email 
 ✅ ${email}
 ℹ️ Notifications.
-${design} 📌 .location 
-✅ ${userlocation}
+-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.- 
+📌 .location 
+✅ ${location}
 ℹ️ For Weather feed.
-${design} 🔥 .design 
+-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.- 
+${design} .design 
 ✅ ${design}
 ℹ️ For Account Design.
 -.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.- 
-𝑌𝑜𝑢𝑟 𝑀𝑜𝑛𝑒𝑦 » _${money}$_
+_𝑌𝑜𝑢𝑟 𝑀𝑜𝑛𝑒𝑦 » ${money}$_
 `)
 	 break  
 case 'admin':
@@ -2408,6 +2407,7 @@ reply(`${design} 𝚂𝚕𝚘𝚝\n\n${slot4}${slot5}${slot6}\n- - - - - - - - -
 //---- Set winner
 
 //-- Winner
+//-- Winner
 var winner1;
 try{
 	var _winner1 = JSON.parse(fs.readFileSync(`./session/winner1.json`));	
@@ -2430,18 +2430,29 @@ try{
 	
 }
 
+var xp1 = Number(xp);
+var gain = Number(1);
+var newxp = xp + gain; 
 
-if (((Number(xp) > Number(winner1)) && (Number(xp) > Number(winner2)) && (Number(xp) > Number(winner3))))  {						
+fs.readFile(`./data/users/${sender.split("@")[0]}/xp.json`, 'utf-8', function(err, data) {
+	if (err) throw err;
+	var newValue = data.replace(`${xp}`, newxp);
+	fs.writeFile(`./data/users/${sender.split("@")[0]}/xp.json`, newValue, 'utf-8', function(err, data) {
+		if (err) throw err;
+	})
+})
+await delay(1000) /// waiting 1 second.		
+if (Number(xp) > Number(winner1)) {						
     exec(`rm -rf ./session/winner1.json`)
-    await delay(3000) /// waiting 1 second.
+    await delay(2000) /// waiting 1 second.
 fs.appendFile(`./session/winner1.json`, `["${xp}", "${pushname}", "${status}"]`, function (err) {				
     if (err) throw err;
   });
 }
 
-else if (Number(xp) > Number(winner2))  {						
+else if (Number(xp) > Number(winner2)) {  
     exec(`rm -rf ./session/winner2.json`)
-    await delay(3000) /// waiting 1 second.
+    await delay(2000) /// waiting 1 second.
 fs.appendFile(`./session/winner2.json`, `["${xp}", "${pushname}", "${status}"]`, function (err) {				
     if (err) throw err;
   });
@@ -2449,7 +2460,7 @@ fs.appendFile(`./session/winner2.json`, `["${xp}", "${pushname}", "${status}"]`,
 
 else if (Number(xp) > Number(winner3))  {						
     exec(`rm -rf ./session/winner3.json`)
-    await delay(3000) /// waiting 1 second.
+    await delay(2000) /// waiting 1 second.
 fs.appendFile(`./session/winner3.json`, `["${xp}", "${pushname}", "${status}"]`, function (err) {				
     if (err) throw err;
   });
@@ -2999,11 +3010,9 @@ if ((xp > 100) && xp < 500) {
 	}
 
 
-
-
 	else if ((xp > 1000) && xp < 11000) {
 		var newstatus = "Legend"; 
-        fs.readFile(`./data/users/${sender.split("@")[0]}/xp.json`, 'utf-8', function(err, data) {
+        fs.readFile(`./data/users/${sender.split("@")[0]}/status.json`, 'utf-8', function(err, data) {
             if (err) throw err;
             
             var newValue = data.replace(`${status}`, newstatus);
