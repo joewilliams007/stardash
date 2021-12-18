@@ -1711,7 +1711,7 @@ if (args[0] === 'starpicture' ) return reply(`${design} 𝑃𝑙𝑒𝑎𝑠𝑒
 							})
 							.on('end', function () {
 								console.log('Finish')
-								exec(`webpmux -set exif ${addMetadata('StarDash', stickerpack)} ./data/users${args[0].replace('@','/')}/starpicture.webp -o ./data/users${args[0].replace('@','/')}/starpicture.webp`, async (error) => {
+								exec(`webpmux -set exif ${addMetadata('StarDash', stickerpack)} starpicture.webp -o starpicture.webp`, async (error) => {
 									if (error) return reply(stick())
 							
 									fs.unlinkSync(media)	
@@ -1739,7 +1739,7 @@ if (args[0] === 'starpicture' ) return reply(`${design} 𝑃𝑙𝑒𝑎𝑠𝑒
 						  })
 							.on('end', function () {
 								console.log('Finish')
-								exec(`webpmux -set exif ${addMetadata('StarDash', stickerpack)} ./data/users${args[0].replace('@','/')}/starpicture.webp -o ./data/users${args[0].replace('@','/')}/starpicture.webp`, async (error) => {
+								exec(`webpmux -set exif ${addMetadata('StarDash', stickerpack)} starpicture.webp -o starpicture.webp`, async (error) => {
 									if (error) return reply(stick())
 									
 									fs.unlinkSync(media)
