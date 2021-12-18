@@ -2083,7 +2083,6 @@ await ffmpeg(`./weather.gif`)
 	.save(ran)
 
 break
-break
 //---X623-Whatsapp-Bot------------------------------------------------------------------------------------------------------------------------// 
 //-- claim money
 case 'claim': 
@@ -2941,6 +2940,7 @@ mentionedJid: [nomor]
 }
 replyimg(been1, text, capt, owner)
 
+});
 
 var xpn = Number(xp);
 var upxp = Number(1);
