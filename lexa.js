@@ -2932,7 +2932,7 @@ case 'feed':
 	
 nomor = '4917626388837@s.whatsapp.net'
 
-capt = `${design} ❄️ 𝑊𝑖𝑛𝑡𝑒𝑟𝐸𝑑𝑖𝑡𝑖𝑜𝑛`
+capt = `❄️ 𝑊𝑖𝑛𝑡𝑒𝑟𝐸𝑑𝑖𝑡𝑖𝑜𝑛\n\n\n\n\n${pushname}`
 const been1 = {
 
     text: `» ${pushname}
