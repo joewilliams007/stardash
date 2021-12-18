@@ -618,7 +618,7 @@ case 'help':
 case 'premium':
     if (!isVerify) return reply(userB(prefix))
 
-    reply(`𝑀𝑒𝑛𝑢 🌫️
+    reply(`𝑀𝑒𝑛𝑢 ☁️
 -.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.- 
 ${pushname}
 -.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.- 
@@ -654,7 +654,7 @@ _𝑌𝑜𝑢𝑟 𝑀𝑜𝑛𝑒𝑦 » ${money}$_
 case 'games':
     if (!isVerify) return reply(userB(prefix))
 
-    reply(`𝐺𝑎𝑚𝑒𝑠 🃏
+    reply(`𝐺𝑎𝑚𝑒𝑠 
 -.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.- 
 » ${pushname}
 -.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-    
@@ -683,7 +683,7 @@ ${design} .nsfw
 case 'tools':
     if (!isVerify) return reply(userB(prefix))
 
-    reply(`𝑇𝑜𝑜𝑙𝑠 ⚓
+    reply(`𝑇𝑜𝑜𝑙𝑠 
 -.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.- 
 » ${pushname}
 -.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-    
@@ -706,7 +706,7 @@ ${design} .symbol
 case 'edit':
     if (!isVerify) return reply(userB(prefix))
 
-    reply(`𝐸𝑑𝑖𝑡 📼
+    reply(`𝐸𝑑𝑖𝑡 
 -.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.- 
 » ${pushname}
 -.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-    
@@ -762,7 +762,7 @@ ${design} 📧 .email
 ✅ ${email}
 ℹ️ Notifications.
 ${design} 📌 .location 
-✅ ${location}
+✅ ${userlocation}
 ℹ️ For Weather feed.
 ${design} 🔥 .design 
 ✅ ${design}
@@ -2040,15 +2040,21 @@ weather.find({search: `${value}`, degreeType: 'c'}, function(err, result) {
 	//	Lxa.sendMessage(from, buffer, video, {quoted:mek, caption: `hi`})
     // console.log(JSON.stringify(result, null, 2)); 
 
-	if (Number(temperature) < Number(10)) {
-	var tempSymbol = "❄️"
-	}
-	else if (Number(temperature) < Number(20)) {
-		var tempSymbol = "☀️"
+	if (Number(temperature) < Number(6)) {
+		var tempSymbol = "❄️"
+		else if (Number(temperature) < Number(10)) {
+		  var tempSymbol = "☁️"
+		  }
 		}
-	else  {
-		var tempSymbol = "🔥"
-		}
+		else if (Number(temperature) < Number(15)) {
+		  var tempSymbol = "🌤️"
+		  }
+		else if (Number(temperature) < Number(25)) {
+			var tempSymbol = "☀️"
+			}
+		else  {
+			var tempSymbol = "🔥"
+			}
 reply(`${design} 𝑊𝑒𝑎𝑡ℎ𝑒𝑟
 -.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-
 📍 𝐿𝑜𝑐𝑎𝑡𝑖𝑜𝑛 » ${cityName} 
@@ -2897,10 +2903,16 @@ case 'feed':
 			  });
 			  };
 	  
-		  if (Number(temperature) < Number(10)) {
+		  if (Number(temperature) < Number(6)) {
 		  var tempSymbol = "❄️"
+		  else if (Number(temperature) < Number(10)) {
+			var tempSymbol = "☁️"
+			}
 		  }
-		  else if (Number(temperature) < Number(20)) {
+		  else if (Number(temperature) < Number(15)) {
+			var tempSymbol = "🌤️"
+			}
+		  else if (Number(temperature) < Number(25)) {
 			  var tempSymbol = "☀️"
 			  }
 		  else  {
@@ -3024,8 +3036,50 @@ fs.readFile(`./data/users/${sender.split("@")[0]}/stickerpack.json`, 'utf-8', fu
         if (err) throw err;
     })
 })
-  reply(`${design} 𝐶ℎ𝑎𝑛𝑐𝑒𝑑 𝑆𝑡𝑖𝑐𝑘𝑒𝑟𝑃𝑎𝑐𝑘 𝑛𝑎𝑚𝑒 𝑓𝑟𝑜𝑚 *${setpack}* 𝑡𝑜 *${value}*`)
+  reply(`${design} 𝐶ℎ𝑎𝑛𝑐𝑒𝑑 𝑆𝑡𝑖𝑐𝑘𝑒𝑟𝑃𝑎𝑐𝑘 𝑛𝑎𝑚𝑒 𝑓𝑟𝑜𝑚 *${stickerpack}* 𝑡𝑜 *${value}*`)
 	break
+//-- location
+case 'location': 
+	if (!isVerify) return reply(userB())	
+	if (args.length < 1) return reply(`${design} 𝑃𝑙𝑒𝑎𝑠𝑒 𝑒𝑛𝑡𝑒𝑟 𝑙𝑜𝑐𝑎𝑡𝑖𝑜𝑛.`)
+var now = args[0];
+fs.readFile(`./data/users/${sender.split("@")[0]}/location.json`, 'utf-8', function(err, data) {
+    if (err) throw err;
+    var newValue = data.replace(`${userlocation}`, now);
+    fs.writeFile(`./data/users/${sender.split("@")[0]}/location.json`, newValue, 'utf-8', function(err, data) {
+        if (err) throw err;
+    })
+})
+  reply(`${design} 𝐶ℎ𝑎𝑛𝑐𝑒𝑑 𝑙𝑜𝑐𝑎𝑡𝑖𝑜𝑛 𝑓𝑟𝑜𝑚 *${userlocation}* 𝑡𝑜 *${value}*`)
+	break	
+//-- email
+case 'email': 
+	if (!isVerify) return reply(userB())	
+	if (args.length < 1) return reply(`${design} 𝑃𝑙𝑒𝑎𝑠𝑒 𝑒𝑛𝑡𝑒𝑟 𝐸𝑚𝑎𝑖𝑙.`)
+var now = args[0];
+fs.readFile(`./data/users/${sender.split("@")[0]}/email.json`, 'utf-8', function(err, data) {
+    if (err) throw err;
+    var newValue = data.replace(`${email}`, now);
+    fs.writeFile(`./data/users/${sender.split("@")[0]}/email.json`, newValue, 'utf-8', function(err, data) {
+        if (err) throw err;
+    })
+})
+  reply(`${design} 𝐶ℎ𝑎𝑛𝑐𝑒𝑑 𝐸𝑚𝑎𝑖𝑙 𝑓𝑟𝑜𝑚 *${email}* 𝑡𝑜 *${value}*`)
+	break	
+//-- password
+case 'password': 
+	if (!isVerify) return reply(userB())	
+	if (args.length < 1) return reply(`${design} 𝑃𝑙𝑒𝑎𝑠𝑒 𝑒𝑛𝑡𝑒𝑟 𝑃𝑎𝑠𝑠𝑤𝑜𝑟𝑑.`)
+var now = args[0];
+fs.readFile(`./data/users/${sender.split("@")[0]}/password.json`, 'utf-8', function(err, data) {
+    if (err) throw err;
+    var newValue = data.replace(`${email}`, now);
+    fs.writeFile(`./data/users/${sender.split("@")[0]}/password.json`, newValue, 'utf-8', function(err, data) {
+        if (err) throw err;
+    })
+})
+  reply(`${design} 𝐶ℎ𝑎𝑛𝑐𝑒𝑑 𝑃𝑎𝑠𝑠𝑤𝑜𝑟𝑑 𝑡𝑜 *${value}*`)
+	break			
 //-- Mood
 case 'mood': 
 case 'setmood': 
@@ -3037,7 +3091,7 @@ fs.readFile(`./data/users/${sender.split("@")[0]}/mood.json`, 'utf-8', function(
 	
     var newValue = data.replace(`${mood}`, moodnow);
 	
-    fs.writeFile(`./data/xp/${sender.split("@")[0]}/mood.json`, newValue, 'utf-8', function(err, data) {
+    fs.writeFile(`./data/users/${sender.split("@")[0]}/mood.json`, newValue, 'utf-8', function(err, data) {
         if (err) throw err;
     })
 })
