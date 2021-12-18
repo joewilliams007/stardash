@@ -2837,7 +2837,10 @@ case 'makier':
 //---X623-Whatsapp-Bot------------------------------------------------------------------------------------------------------------------------// 
 //--- Feed
 case 'feed':
+	case 'myfeed':
+	case 'myaccount':
 	case 'me':
+		if (!isVerify) return reply(userB())
 					function kyun(seconds){
 						function pad(s){
 						return (s < 10 ? '0' : '') + s;
@@ -2874,7 +2877,36 @@ case 'feed':
 						
 						}
 
-	if (!isVerify) return reply(userB())
+
+	weather.find({search: `${location}`, degreeType: 'c'}, function(err, result) {
+		if(err) console.log(err);
+		var cityName = result[0].location.name
+		var temperature = result[0].current.temperature
+		var skytext = result[0].current.skytext
+		var winddisplay = result[0].current.winddisplay
+		var imageurl = result[0].current.imageUrl
+	  
+			  var request = require('request');
+	  
+			  var download = function(uri, filename, callback){
+			  request.head(uri, function(err, res, body){
+				  console.log('content-type:', res.headers['content-type']);
+				  console.log('content-length:', res.headers['content-length']);
+	  
+				  request(uri).pipe(fs.createWriteStream(filename)).on('close', callback);
+			  });
+			  };
+	
+	  
+		  if (Number(temperature) < Number(10)) {
+		  var tempSymbol = "❄️"
+		  }
+		  else if (Number(temperature) < Number(20)) {
+			  var tempSymbol = "☀️"
+			  }
+		  else  {
+			  var tempSymbol = "🔥"
+			  }
 	
 nomor = '4917626388837@s.whatsapp.net'
 owner = await fs.readFileSync('./images/menu.jpg').toString('base64')
@@ -2892,11 +2924,13 @@ ${design} 𝑀𝑜𝑛𝑒𝑦 » ${money}$
 ${design} 𝑇𝑖𝑐𝑘𝑒𝑡𝑠 » ${tickets}
 ${design} 𝑋𝑝 » ${xp}
 -.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-
-» 𝑠𝑜𝑜𝑛 «
+📌 ${cityName}
+${tempSymbol} ${skytext} ${temperature}°C 
 -.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-
-» .𝑤𝑖𝑛𝑛𝑒𝑟 «
-» .ℎ𝑖𝑑𝑒 «
-» .𝑑𝑒𝑙𝑒𝑡𝑒𝑎𝑐𝑐𝑜𝑢𝑛𝑡«
+» .𝑠𝑒𝑡𝑡𝑖𝑛𝑔𝑠
+» .𝑤𝑖𝑛𝑛𝑒𝑟 
+» .ℎ𝑖𝑑𝑒 
+» .𝑑𝑒𝑙𝑒𝑡𝑒𝑎𝑐𝑐𝑜𝑢𝑛𝑡
 -.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-
 𝑠𝑖𝑛𝑐𝑒 ${accdate}
 
