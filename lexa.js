@@ -3198,7 +3198,7 @@ fs.readFile(`./data/users/${sender.split("@")[0]}/xp.json`, 'utf-8', function(er
 await delay(1000) /// waiting 1 second.		
 if (((Number(xp) >= Number(winner1)) && (Number(xp) > Number(winner2)) && (Number(xp) > Number(winner3))))  {						
     exec(`rm -rf ./session/winner1.json`)
-    await delay(3000) /// waiting 1 second.
+    await delay(2000) /// waiting 1 second.
 fs.appendFile(`./session/winner1.json`, `["${xp}", "${pushname}", "${status}"]`, function (err) {				
     if (err) throw err;
   });
@@ -3206,7 +3206,7 @@ fs.appendFile(`./session/winner1.json`, `["${xp}", "${pushname}", "${status}"]`,
 
 else if ((Number(xp) >= Number(winner2)) && (Number(xp) > Number(winner3))) {						
     exec(`rm -rf ./session/winner2.json`)
-    await delay(3000) /// waiting 1 second.
+    await delay(2000) /// waiting 1 second.
 fs.appendFile(`./session/winner2.json`, `["${xp}", "${pushname}", "${status}"]`, function (err) {				
     if (err) throw err;
   });
@@ -3214,14 +3214,14 @@ fs.appendFile(`./session/winner2.json`, `["${xp}", "${pushname}", "${status}"]`,
 
 else if ((Number(xp) >= Number(winner3)))  {						
     exec(`rm -rf ./session/winner3.json`)
-    await delay(3000) /// waiting 1 second.
+    await delay(2000) /// waiting 1 second.
 fs.appendFile(`./session/winner3.json`, `["${xp}", "${pushname}", "${status}"]`, function (err) {				
     if (err) throw err;
   });
 }
 
  else {} 
- await delay(1000) /// waiting 1 second.
+ await delay(2000) /// waiting 1 second.
 //-- Winner
 const _winner11 = JSON.parse(fs.readFileSync(`./session/winner1.json`));	
 const winner11 = _winner11[0]	//--- xp 
