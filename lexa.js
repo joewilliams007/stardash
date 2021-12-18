@@ -3155,7 +3155,7 @@ case 'name':
 					fs.readFile(`./data/users/${sender.split("@")[0]}/username.json`, 'utf-8', function(err, data) {
 						if (err) throw err;
 						
-						var newValue = data.replace(`${name}`, newname);
+						var newValue = data.replace(`${username}`, newname);
 						
 						fs.writeFile(`./data/users/${sender.split("@")[0]}/username.json`, newValue, 'utf-8', function(err, data) {
 							if (err) throw err;
