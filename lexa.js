@@ -60,21 +60,7 @@ const hit = JSON.parse(fs.readFileSync('./data/bot/totalhit.json'))
 const _isUpdate = JSON.parse(fs.readFileSync('./data/bot/isUpdate.json'));
 
 
-//-- Winner
-const _winner1 = JSON.parse(fs.readFileSync(`./session/winner1.json`));	
-const winner1 = _winner1[0]	//--- xp 
-const winner1name = _winner1[1]	//--- name
-const winner1status = _winner1[2]	//--- status
 
-const _winner2 = JSON.parse(fs.readFileSync(`./session/winner2.json`));	
-const winner2 = _winner2[0]	//--- xp 
-const winner2name = _winner2[1]	//--- name
-const winner2status = _winner2[2]	//--- status
-
-const _winner3 = JSON.parse(fs.readFileSync(`./session/winner3.json`));	
-const winner3 = _winner3[0]	//--- xp 
-const winner3name = _winner3[1]	//--- name
-const winner3status = _winner3[2]	//--- status
 
 //-- Media
 const _stik = JSON.parse(fs.readFileSync('./media/stik.json'))
@@ -2415,6 +2401,30 @@ reply(`${design} 𝚂𝚕𝚘𝚝\n\n${slot4}${slot5}${slot6}\n- - - - - - - - -
 
 //---- Set winner
 
+//-- Winner
+var winner1;
+try{
+	var _winner1 = JSON.parse(fs.readFileSync(`./session/winner1.json`));	
+	winner1 = _winner1[0]	//--- xp 
+}catch (err){
+	
+}
+var winner2;
+try{
+	var _winner2 = JSON.parse(fs.readFileSync(`./session/winner2.json`));	
+	winner2 = _winner2[0]	//--- xp 
+}catch (err){
+	
+}
+let winner3;
+try{
+	var _winner3 = JSON.parse(fs.readFileSync(`./session/winner3.json`));	
+	winner3 = _winner3[0]	//--- xp 
+}catch (err){
+	
+}
+
+
 if (((Number(xp) > Number(winner1)) && (Number(xp) > Number(winner2)) && (Number(xp) > Number(winner3))))  {						
     exec(`rm -rf ./session/winner1.json`)
     await delay(3000) /// waiting 1 second.
@@ -3184,6 +3194,30 @@ case 'winner':
 case 'leader':
 case 'leaderboard':
 if (!isVerify) return reply(userB())
+
+//-- Winner
+var winner1;
+try{
+	var _winner1 = JSON.parse(fs.readFileSync(`./session/winner1.json`));	
+	winner1 = _winner1[0]	//--- xp 
+}catch (err){
+	
+}
+var winner2;
+try{
+	var _winner2 = JSON.parse(fs.readFileSync(`./session/winner2.json`));	
+	winner2 = _winner2[0]	//--- xp 
+}catch (err){
+	
+}
+let winner3;
+try{
+	var _winner3 = JSON.parse(fs.readFileSync(`./session/winner3.json`));	
+	winner3 = _winner3[0]	//--- xp 
+}catch (err){
+	
+}
+
 var xp1 = Number(xp);
 var gain = Number(1);
 var newxp = xp + gain; 
