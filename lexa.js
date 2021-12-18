@@ -49,6 +49,7 @@ const axios = require('axios');
 const path = require('path');
 const {removeBackgroundFromImageFile} = require('remove.bg');
 var nodemailer = require('nodemailer');
+var weather = require('weather-js');
 
 //-- Data
 const up = JSON.parse(fs.readFileSync('./data/bot/setting.json'));
@@ -2009,7 +2010,7 @@ case 'weather':
         })
     })
     await delay(1000) /// waiting 1 second.							
-	var weather = require('weather-js');
+
 // Options:
 // search:     location name or zipcode
 // degreeType: F or C
