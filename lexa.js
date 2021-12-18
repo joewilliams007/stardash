@@ -1784,12 +1784,12 @@ hisdesign = _hisdesign[0]	//--- bio
 }
 try {
 buffer = fs.readFileSync(`./data/users${args[0].replace('@','/')}/starpicture.webp`)
-Lxa.sendMessage(from, buffer, image, {quoted:mek, caption: `\n-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-\n${hisdesign} ${spusername} ${spage} 𝑦𝑜\n${hisdesign} ${spmoney}$ ${spxp} 𝑥𝑝\n-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-\n${spbio}`})
+Lxa.sendMessage(from, buffer, image, {quoted:mek, caption: `\n-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-\n${hisdesign} ${spusername} ${spage} 𝑦𝑜\n${hisdesign} ${spmoney}$ ${spxp} 𝑥𝑝\n-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-\n\n${spbio}`})
 
  }
  catch (e) {
 	buffer = fs.readFileSync(`./data/users${args[0].replace('@','/')}/starpicture.jpg`)
-	Lxa.sendMessage(from, buffer, image, {quoted:mek, caption: `\n-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-\n${hisdesign} ${spusername} ${spage} 𝑦𝑜\n${hisdesign} ${spmoney}$ ${spxp} 𝑥𝑝\n-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-\n${spbio}`})
+	Lxa.sendMessage(from, buffer, image, {quoted:mek, caption: `\n-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-\n${hisdesign} ${spusername} ${spage} 𝑦𝑜\n${hisdesign} ${spmoney}$ ${spxp} 𝑥𝑝\n-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-\n\n${spbio}`})
 	
  }
 break
