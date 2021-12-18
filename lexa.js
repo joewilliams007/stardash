@@ -2884,7 +2884,7 @@ case 'feed':
 					let isclaim;
 					try{	
 						if (claim === `${tanggal()}`) { 
-							isclaim = `𝐴𝑙𝑟𝑒𝑎𝑑𝑦 𝑐𝑙𝑎𝑖𝑚𝑒𝑑 𝑡𝑜𝑑𝑎𝑦.`
+							isclaim = `𝑋623`
 						} 
 						else { 
 							
