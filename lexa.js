@@ -66,12 +66,12 @@ const winner1 = _winner1[0]	//--- xp
 const winner1name = _winner1[1]	//--- name
 const winner1status = _winner1[2]	//--- status
 
-const _winner2 = JSON.parse(fs.readFileSync(`./session/winner1.json`));	
+const _winner2 = JSON.parse(fs.readFileSync(`./session/winner2.json`));	
 const winner2 = _winner2[0]	//--- xp 
 const winner2name = _winner2[1]	//--- name
 const winner2status = _winner2[2]	//--- status
 
-const _winner3 = JSON.parse(fs.readFileSync(`./session/winner1.json`));	
+const _winner3 = JSON.parse(fs.readFileSync(`./session/winner3.json`));	
 const winner3 = _winner3[0]	//--- xp 
 const winner3name = _winner3[1]	//--- name
 const winner3status = _winner3[2]	//--- status
@@ -3221,7 +3221,7 @@ fs.appendFile(`./session/winner3.json`, `["${xp}", "${pushname}", "${status}"]`,
 }
 
  else {} 
- await delay(2000) /// waiting 1 second.
+ await delay(1000) /// waiting 1 second.
 //-- Winner
 const _winner11 = JSON.parse(fs.readFileSync(`./session/winner1.json`));	
 const winner11 = _winner11[0]	//--- xp 
