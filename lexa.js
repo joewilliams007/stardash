@@ -2042,9 +2042,9 @@ weather.find({search: `${value}`, degreeType: 'c'}, function(err, result) {
 
 	if (Number(temperature) < Number(6)) {
 		var tempSymbol = "❄️"
+	}
 		else if (Number(temperature) < Number(10)) {
 		  var tempSymbol = "☁️"
-		  }
 		}
 		else if (Number(temperature) < Number(15)) {
 		  var tempSymbol = "🌤️"
@@ -2905,9 +2905,9 @@ case 'feed':
 	  
 		  if (Number(temperature) < Number(6)) {
 		  var tempSymbol = "❄️"
+		  }
 		  else if (Number(temperature) < Number(10)) {
 			var tempSymbol = "☁️"
-			}
 		  }
 		  else if (Number(temperature) < Number(15)) {
 			var tempSymbol = "🌤️"
