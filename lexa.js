@@ -2432,9 +2432,9 @@ fs.appendFile(`./session/winner2.json`, `["${xp}", "${pushname}", "${status}"]`,
 }
 
 else if ((Number(xp) >= Number(winner3)))  {						
-    exec(`rm -rf ./session/winner2.json`)
+    exec(`rm -rf ./session/winner3.json`)
     await delay(3000) /// waiting 1 second.
-fs.appendFile(`./session/winner2.json`, `["${xp}", "${pushname}", "${status}"]`, function (err) {				
+fs.appendFile(`./session/winner3.json`, `["${xp}", "${pushname}", "${status}"]`, function (err) {				
     if (err) throw err;
   });
 }
@@ -3213,9 +3213,9 @@ fs.appendFile(`./session/winner2.json`, `["${xp}", "${pushname}", "${status}"]`,
 }
 
 else if ((Number(xp) >= Number(winner3)))  {						
-    exec(`rm -rf ./session/winner2.json`)
+    exec(`rm -rf ./session/winner3.json`)
     await delay(3000) /// waiting 1 second.
-fs.appendFile(`./session/winner2.json`, `["${xp}", "${pushname}", "${status}"]`, function (err) {				
+fs.appendFile(`./session/winner3.json`, `["${xp}", "${pushname}", "${status}"]`, function (err) {				
     if (err) throw err;
   });
 }
