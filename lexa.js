@@ -1732,7 +1732,7 @@ case 'mysp':
 }
 try {
 	buffer = fs.readFileSync(`./data/users${args[0].replace('@','/')}/starpicture.webp`)
-	Lxa.sendMessage(from, buffer, sticker, {quoted:mek, caption: `${design} ${username} ${age} 𝑦𝑜\n${design} ${money}$ ${xp} 𝑥𝑝\n\n${mybio}`})
+	Lxa.sendMessage(from, buffer, sticker, {quoted:mek})
 	reply(`${design} ${username} ${age} 𝑦𝑜\n${design} ${money}$ ${xp} 𝑥𝑝\n\n${mybio}`)
 	 }
 	 catch (e) {
@@ -1791,7 +1791,7 @@ hisdesign = _hisdesign[0]	//--- bio
 }
 try {
 buffer = fs.readFileSync(`./data/users${args[0].replace('@','/')}/starpicture.webp`)
-Lxa.sendMessage(from, buffer, sticker, {quoted:mek, caption: `\n-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-\n${hisdesign} ${spusername} ${spage} 𝑦𝑜\n${hisdesign} ${spmoney}$ ${spxp} 𝑥𝑝\n-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-\n\n${spbio}`})
+Lxa.sendMessage(from, buffer, sticker, {quoted:mek})
 reply(`-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-\n${hisdesign} ${spusername} ${spage} 𝑦𝑜\n${hisdesign} ${spmoney}$ ${spxp} 𝑥𝑝\n-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-\n\n${spbio}`)
  }
  catch (e) {
