@@ -1679,79 +1679,26 @@ encmedia = JSON.parse(JSON.stringify(mek).replace('quotedM','m')).message.extend
 //-- starpicture
 case 'starpicture':
 if (!isVerify) return reply(UserB())
-if (args.length < 2) return reply(`${design} 𝑃𝑙𝑒𝑎𝑠𝑒 𝑎𝑑𝑑 𝑠𝑜𝑚𝑒 𝑡𝑒𝑥𝑡. 𝑃𝑙𝑒𝑎𝑠𝑒 𝑡𝑎𝑔 𝑎𝑛 𝑖𝑚𝑎𝑔𝑒. 𝑇ℎ𝑖𝑠 𝑤𝑖𝑙𝑙 𝑏𝑒 𝑙𝑖𝑘𝑒 𝑎 𝑏𝑖𝑜 𝑤𝑖𝑡ℎ 𝑎 𝑠ℎ𝑜𝑟𝑡 𝑑𝑒𝑠𝑐𝑟𝑖𝑝𝑡𝑖𝑜𝑛 𝑜𝑓 𝑦𝑜𝑢.`)	
+if (!isQuotedImage)  return reply(`${design} 𝑃𝑙𝑒𝑎𝑠𝑒 𝑡𝑎𝑔 𝑎𝑛 𝑖𝑚𝑎𝑔𝑒.`)	
+if (args.length < 2) return reply(`${design} 𝑃𝑙𝑒𝑎𝑠𝑒 𝑎𝑑𝑑 𝑠𝑜𝑚𝑒 𝑡𝑒𝑥𝑡. 𝑇ℎ𝑖𝑠 𝑤𝑖𝑙𝑙 𝑏𝑒 𝑙𝑖𝑘𝑒 𝑎 𝑏𝑖𝑜 𝑤𝑖𝑡ℎ 𝑎 𝑠ℎ𝑜𝑟𝑡 𝑑𝑒𝑠𝑐𝑟𝑖𝑝𝑡𝑖𝑜𝑛 𝑜𝑓 𝑦𝑜𝑢.`)	
 if (args[0] === 'starpicture' ) return reply(`${design} 𝑃𝑙𝑒𝑎𝑠𝑒 𝑑𝑜𝑛𝑡 𝑙𝑒𝑎𝑣𝑒 𝑠𝑝𝑎𝑐𝑒.\n𝐸𝑥𝑎𝑚𝑝𝑙𝑒 𝑑𝑜: \n.𝑠𝑡𝑎𝑟𝑝𝑖𝑐𝑡𝑢𝑟𝑒 𝐻𝑖 𝑡ℎ𝑖𝑠 𝑖𝑠 𝑚𝑒\n-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-\n𝐷𝑜𝑛𝑡 𝑑𝑜:\n. 𝑠𝑡𝑎𝑟𝑝𝑖𝑐𝑡𝑢𝑟𝑒 𝐻𝑖 𝑡ℎ𝑖𝑠 𝑖𝑠 𝑚𝑒`)
 					encmedia = JSON.parse(JSON.stringify(mek).replace('quotedM','m')).message.extendedTextMessage.contextInfo
 					media = await Lxa.downloadAndSaveMediaMessage(encmedia)
 
 					reply(`${design} 𝐷𝑒𝑙𝑒𝑡𝑖𝑛𝑔 𝑜𝑙𝑑 𝑝𝑖𝑐𝑡𝑢𝑟𝑒 𝑖𝑓 𝑎𝑣𝑎𝑖𝑏𝑙𝑒..`)
 				
-					exec(`rm -rf ./data/users/${sender.split("@")[0]}/starpicture.webp`)
+					exec(`rm -rf ./data/users/${sender.split("@")[0]}/starpicture.jpg`)
 					exec(`rm -rf ./data/users/${sender.split("@")[0]}/starpicture.json`)
 
 					await delay(3000) /// waiting 1 second.
 
 					reply(`${design} 𝑈𝑝𝑙𝑜𝑎𝑑𝑖𝑛𝑔...`)
 
-					await delay(1000) /// waiting 1 second.
+					exec(`ffmpeg -i ${media} -preset ultrafast starpicture.jpg`)
 
-					if (isMedia && !mek.message.videoMessage || isQuotedImage)  {
-						const encmedia = isQuotedImage ? JSON.parse(JSON.stringify(mek).replace('quotedM','m')).message.extendedTextMessage.contextInfo : mek
-						const media = await Lxa.downloadAndSaveMediaMessage(encmedia)
-						ran = getRandom('.webp')
-						await ffmpeg(`./${media}`)
-							.input(media)
-							.on('start', function (cmd) {
-								console.log(`Started : ${cmd}`)
-							})
-							.on('error', function (err) {
-								console.log(`Error : ${err}`)
-								fs.unlinkSync(media)
-								reply(stick)
-							})
-							.on('end', function () {
-								console.log('Finish')
-								exec(`webpmux -set exif ${addMetadata('StarDash', stickerpack)} starpicture.webp -o starpicture.webp`, async (error) => {
-									if (error) return reply(stick())
-							
-									fs.unlinkSync(media)	
-						
-								})
-							})
-							.addOutputOptions([`-vcodec`,`libwebp`,`-vf`,`scale='min(320,iw)':min'(320,ih)':force_original_aspect_ratio=decrease,fps=15, pad=320:320:-1:-1:color=white@0.0, split [a][b]; [a] palettegen=reserve_transparent=on:transparency_color=ffffff [p]; [b][p] paletteuse`])
-							.toFormat('webp')
-							.save(ran)
-					} else if (isMedia && mek.message.videoMessage.seconds < 11 || isQuotedVideo && mek.message.extendedTextMessage.contextInfo.quotedMessage.videoMessage.seconds < 11) {
-						const encmedia = isQuotedVideo ? JSON.parse(JSON.stringify(mek).replace('quotedM','m')).message.extendedTextMessage.contextInfo : mek
-						const media = await Lxa.downloadAndSaveMediaMessage(encmedia)
-						const tippsticker = _tipps[Math.floor(Math.random() * _tipps.length)]
-						ran = getRandom('.webp')
-						await ffmpeg(`./${media}`)
-							.inputFormat(media.split('.')[1])
-							.on('start', function (cmd) {
-								console.log(`Started : ${cmd}`)
-							})
-							.on('error', function (err) {
-								console.log(`Error : ${err}`)
-								fs.unlinkSync(media)
-								tipe = media.endsWith('.mp4') ? 'video' : 'gif'
-								reply(`falsch`)
-						  })
-							.on('end', function () {
-								console.log('Finish')
-								exec(`webpmux -set exif ${addMetadata('StarDash', stickerpack)} starpicture.webp -o starpicture.webp`, async (error) => {
-									if (error) return reply(stick())
-									
-									fs.unlinkSync(media)
-							
-								})
-							})
-							.addOutputOptions([`-vcodec`,`libwebp`,`-vf`,`scale='min(320,iw)':min'(320,ih)':force_original_aspect_ratio=decrease,fps=15, pad=320:320:-1:-1:color=white@0.0, split [a][b]; [a] palettegen=reserve_transparent=on:transparency_color=ffffff [p]; [b][p] paletteuse`])
-							.toFormat('webp')
-							.save(ran)
-					} else {
-						reply(`${design} 𝑃𝑙𝑒𝑎𝑠𝑒 𝑡𝑎𝑔 𝑎𝑛 𝑖𝑚𝑎𝑔𝑒.`)
-					}
+					await delay(3000) /// waiting 1 second.
+
+					exec(`mv starpicture.jpg ./data/users/${sender.split("@")[0]}`) 
 
 					await delay(1000) /// waiting 1 second.
 
@@ -1760,7 +1707,7 @@ if (args[0] === 'starpicture' ) return reply(`${design} 𝑃𝑙𝑒𝑎𝑠𝑒
 						console.log('Starpicture Opend.'); 
 						});	
 
-						reply(`✅ 𝑆𝑢𝑐𝑐𝑒𝑠𝑠.\n-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-\n𝑂𝑡ℎ𝑒𝑟𝑠 𝑐𝑎𝑛 𝑣𝑖𝑒𝑤 𝑦𝑜𝑢𝑟 𝑠𝑡𝑎𝑟𝑝𝑖𝑐𝑡𝑢𝑟𝑒 𝑣𝑖𝑎\n.𝑠𝑝 @𝑢𝑟𝑛𝑢𝑚𝑏𝑒𝑟\n-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-\n𝑌𝑜𝑢 𝑐𝑎𝑛 𝑣𝑖𝑒𝑤 𝑦𝑜𝑢𝑟 𝑝𝑖𝑐𝑡𝑢𝑟𝑒 𝑣𝑖𝑎\n.𝑚𝑦𝑠𝑝`)
+						reply(`✅ 𝑆𝑢𝑐𝑐𝑒𝑠𝑠.\n𝑂𝑡ℎ𝑒𝑟𝑠 𝑐𝑎𝑛 𝑣𝑖𝑒𝑤 𝑦𝑜𝑢𝑟 𝑠𝑡𝑎𝑟𝑝𝑖𝑐𝑡𝑢𝑟𝑒 𝑣𝑖𝑎\n.𝑠𝑝 @𝑢𝑟𝑛𝑢𝑚𝑏𝑒𝑟\n-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-\n𝑌𝑜𝑢 𝑐𝑎𝑛 𝑣𝑖𝑒𝑤 𝑦𝑜𝑢𝑟 𝑝𝑖𝑐𝑡𝑢𝑟𝑒 𝑣𝑖𝑎\n.𝑚𝑦𝑠𝑝`)
 
 			  break
 //-- mypicture
@@ -1776,16 +1723,9 @@ case 'mysp':
 }catch (err){
 	reply(`${design} 𝑇ℎ𝑒𝑟𝑒 𝑤𝑎𝑠 𝑎𝑛 𝐸𝑟𝑟𝑜𝑟 𝑟𝑒𝑎𝑑𝑖𝑛𝑔 𝑦𝑜𝑢𝑟 𝑝𝑖𝑐𝑡𝑢𝑟𝑒. 𝐴𝑟𝑒 𝑦𝑜𝑢 𝑠𝑢𝑟𝑒 𝑦𝑜𝑢 ℎ𝑎𝑣𝑒 𝑢𝑝𝑙𝑜𝑎𝑑𝑒𝑑 𝑜𝑛𝑒 𝑣𝑖𝑎 .𝑠𝑡𝑎𝑟𝑝𝑖𝑐𝑡𝑢𝑟𝑒`)
 }
-try {
-	buffer = fs.readFileSync(`./data/users${args[0].replace('@','/')}/starpicture.webp`)
-	Lxa.sendMessage(from, buffer, sticker, {quoted:mek})
-	reply(`${design} ${username} ${age} 𝑦𝑜\n${design} ${money}$ ${xp} 𝑥𝑝\n\n${mybio}`)
-	 }
-	 catch (e) {
-		buffer = fs.readFileSync(`./data/users${args[0].replace('@','/')}/starpicture.jpg`)
-		Lxa.sendMessage(from, buffer, image, {quoted:mek, caption: `${design} ${username} ${age} 𝑦𝑜\n${design} ${money}$ ${xp} 𝑥𝑝\n\n${mybio}`})
-	}
 
+buffer = fs.readFileSync(`./data/users/${sender.split("@")[0]}/starpicture.jpg`)
+Lxa.sendMessage(from, buffer, image, {quoted:mek, caption: `${design} ${username} ${age} 𝑦𝑜\n${design} ${money}$ ${xp} 𝑥𝑝\n\n${mybio}`})
 break
 
 //-- sp
@@ -1835,15 +1775,9 @@ hisdesign = _hisdesign[0]	//--- bio
 }catch (err){
 
 }
-try {
-buffer = fs.readFileSync(`./data/users${args[0].replace('@','/')}/starpicture.webp`)
-Lxa.sendMessage(from, buffer, sticker, {quoted:mek})
-reply(`-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-\n${hisdesign} ${spusername} ${spage} 𝑦𝑜\n${hisdesign} ${spmoney}$ ${spxp} 𝑥𝑝\n-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-\n\n${spbio}`)
- }
- catch (e) {
-	buffer = fs.readFileSync(`./data/users${args[0].replace('@','/')}/starpicture.jpg`)
-	Lxa.sendMessage(from, buffer, image, {quoted:mek, caption: `\n-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-\n${hisdesign} ${spusername} ${spage} 𝑦𝑜\n${hisdesign} ${spmoney}$ ${spxp} 𝑥𝑝\n-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-\n\n${spbio}`})
-}
+
+buffer = fs.readFileSync(`./data/users${args[0].replace('@','/')}/starpicture.jpg`)
+Lxa.sendMessage(from, buffer, image, {quoted:mek, caption: `${hisdesign} ${spusername} ${spage} 𝑦𝑜\n${hisdesign} ${spmoney}$ ${spxp} 𝑥𝑝\n\n${spbio}`})
 break
 
 //-- watermark 
@@ -2950,7 +2884,7 @@ case 'feed':
 					let isclaim;
 					try{	
 						if (claim === `${tanggal()}`) { 
-							isclaim = `𝑋623`
+							isclaim = `. . .`
 						} 
 						else { 
 							
