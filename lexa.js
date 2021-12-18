@@ -2488,8 +2488,8 @@ case 'wunsch':
   yoi = value
   if (args.length < 1) return reply(`${design} 𝐸𝑛𝑡𝑒𝑟 𝑤𝑖𝑠ℎ. 𝐸𝑥𝑎𝑚𝑝𝑙𝑒 .𝑤𝑖𝑠ℎ 𝑡𝑜 𝑏𝑒 ℎ𝑎𝑝𝑝𝑦`)
   if (yoi.length > 200 ) return reply(`${design} 𝑇𝑒𝑥𝑡 𝑖𝑠 𝑡𝑜𝑜 𝑙𝑜𝑛𝑔.`)
-  _request.push(yoi)
-  fs.writeFileSync('./help/wishes.json', JSON.stringify(_request))
+  _wishes.push(yoi)
+  fs.writeFileSync('./help/wishes.json', JSON.stringify(_wishes))
   reply(`${design} 𝐴𝑑𝑑𝑒𝑑 𝑡𝑜 𝑤𝑖𝑠ℎ𝑒𝑠. 𝑉𝑖𝑒𝑤 𝑣𝑖𝑎 .𝑤𝑖𝑠ℎ𝑒𝑠`)
 	break
 //--- Note
@@ -2499,17 +2499,17 @@ case 'type':
   yoi = value
   if (args.length < 1) return reply(`${design} 𝐸𝑛𝑡𝑒𝑟 𝑛𝑜𝑡𝑒. 𝐸𝑥𝑎𝑚𝑙𝑝𝑒 .𝑛𝑜𝑡𝑒 𝑡𝑜𝑑𝑎𝑦 𝑖𝑠 𝑎 𝑔𝑜𝑜𝑑 𝑑𝑎𝑦`)
   if (yoi.length > 100) return reply(`${design} 𝑇𝑒𝑥𝑡 𝑖𝑠 𝑡𝑜𝑜 𝑙𝑜𝑛𝑔.`)
-  _lapor.push(yoi)
-  fs.writeFileSync('./help/notes.json', JSON.stringify(_lapor))
+  _notes.push(yoi)
+  fs.writeFileSync('./help/notes.json', JSON.stringify(_notes))
   reply(`${design} 𝐴𝑑𝑑𝑒𝑑 𝑡𝑜 𝑛𝑜𝑡𝑒𝑠. 𝑉𝑖𝑒𝑤 𝑣𝑖𝑎 .𝑛𝑜𝑡𝑒𝑠`)
 	break
 //-- list Notes
 case 'notes':
 case 'list note':
 			if (!isVerify) return reply(userB())
-				teks = `${design} 𝑁𝑜𝑡𝑒𝑠\n⌬  𝑇𝑜𝑡𝑎𝑙: ${_lapor.length}\n\n⌯ \n`
-				for (var lap of _lapor) {
-					teks += `⑅ ${lap}\n`
+				teks = `${design} 𝑁𝑜𝑡𝑒𝑠\n⌬  𝑇𝑜𝑡𝑎𝑙: ${_notes.length}\n\n⌯ \n`
+				for (var note of _notes) {
+					teks += `⑅ ${note}\n`
 				}
 				reply(teks.trim())
 				break
@@ -2517,9 +2517,9 @@ case 'list note':
 case 'wishes':
 case 'listwish':
 			if (!isVerify) return reply(userB())
-				teks = `${design} 𝑊𝑖𝑠ℎ𝑒𝑠\n⌬  𝑇𝑜𝑡𝑎𝑙: ${_request.length}\n\n⌯\n`
-				for (var req of _request) {
-					teks += `⑅ ${req}\n`
+				teks = `${design} 𝑊𝑖𝑠ℎ𝑒𝑠\n⌬  𝑇𝑜𝑡𝑎𝑙: ${_wishes.length}\n\n⌯\n`
+				for (var wish of _wishes) {
+					teks += `⑅ ${wish}\n`
 				}
 				reply(teks.trim())
 				break
