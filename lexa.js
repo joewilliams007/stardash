@@ -2878,7 +2878,7 @@ case 'feed':
 						}
 
 
-	weather.find({search: `${location}`, degreeType: 'c'}, function(err, result)) {
+	weather.find({search: `${location}`, degreeType: 'c'}, function(err, result) {
 		if(err) console.log(err);
 		var cityName = result[0].location.name
 		var temperature = result[0].current.temperature
@@ -2896,7 +2896,6 @@ case 'feed':
 				  request(uri).pipe(fs.createWriteStream(filename)).on('close', callback);
 			  });
 			  };
-			}
 	  
 		  if (Number(temperature) < Number(10)) {
 		  var tempSymbol = "❄️"
