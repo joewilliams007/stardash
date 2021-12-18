@@ -1002,31 +1002,31 @@ break
 case 'truth':				
   if (!isVerify) return reply(userB())
   const truth = _truth[Math.floor(Math.random() * _truth.length)]
-  reply(`${design} 𝑌𝑜𝑢𝑟 𝑡𝑟𝑢𝑡ℎ\n- - - - - - - - - - - - - - - - - -\n${truth}\n- - - - - - - - - - - - - - - - - -\n♕︎ 𝑊𝑖𝑛𝑡𝑒𝑟𝐸𝑑𝑖𝑡𝑖�𝑛 𝐺𝑎𝑚𝑒𝑠`)
+  reply(`${design} 𝑌𝑜𝑢𝑟 𝑡𝑟𝑢𝑡ℎ\n- - - - - - - - - - - - - - - - - -\n${truth}\n- - - - - - - - - - - - - - - - - -\n❄️ 𝑊𝑖𝑛𝑡𝑒𝑟���𝑟���ℎ 𝐺𝑎𝑚𝑒𝑠`)
 break
 //-- Tod dare
 case 'dare':
   if (!isVerify) return reply(userB())
   const dare = _dare[Math.floor(Math.random() * _dare.length)]
-  reply(`${design} 𝑌𝑜𝑢𝑟 𝑑𝑎𝑟𝑒\n- - - - - - - - - - - - - - - - - -\n${dare}\n- - - - - - - - - - - - - - - - - -\n♕︎ 𝑊𝑖𝑛𝑡𝑒𝑟𝐸𝑑𝑖𝑡𝑖�𝑛 𝐺𝑎𝑚𝑒𝑠`)
+  reply(`${design} 𝑌𝑜𝑢𝑟 𝑑𝑎𝑟𝑒\n- - - - - - - - - - - - - - - - - -\n${dare}\n- - - - - - - - - - - - - - - - - -\n❄️ 𝑊𝑖𝑛𝑡𝑒𝑟���𝑟���ℎ 𝐺𝑎𝑚𝑒𝑠`)
 break
 //-- Facts
 case 'fact':
   if (!isVerify) return reply(userB())
   const fact = _facts[Math.floor(Math.random() * _facts.length)]
-  reply(`${design} 𝑌𝑜𝑢𝑟 𝑓𝑎𝑐𝑡\n- - - - - - - - - - - - - - - - - -\n${fact}\n- - - - - - - - - - - - - - - - - -\n♕︎ 𝑊𝑖𝑛𝑡𝑒𝑟𝐸𝑑𝑖𝑡𝑖�𝑛 𝐹𝑎𝑐𝑡𝑠`)
+  reply(`${design} 𝑌𝑜𝑢𝑟 𝑓𝑎𝑐𝑡\n- - - - - - - - - - - - - - - - - -\n${fact}\n- - - - - - - - - - - - - - - - - -\n❄️ 𝑊𝑖𝑛𝑡𝑒𝑟���𝑟���ℎ 𝐹𝑎𝑐𝑡𝑠`)
 break
 //-- pokemon
 case 'pokemon':
   if (!isVerify) return reply(userB())
   const pokemon = _pokemon[Math.floor(Math.random() * _pokemon.length)]
-  reply(`${design} 𝑌𝑜𝑢𝑟 𝑃𝑜𝑘𝑒𝑚𝑜𝑛\n- - - - - - - - - - - - - - - - - -\n${pokemon}\n- - - - - - - - - - - - - - - - - -\n♕︎ 𝑊𝑖𝑛𝑡𝑒𝑟𝐸𝑑𝑖𝑡𝑖�𝑛 𝐺𝑎𝑚𝑒𝑠`)
+  reply(`${design} 𝑌𝑜𝑢𝑟 𝑃𝑜𝑘𝑒𝑚𝑜𝑛\n- - - - - - - - - - - - - - - - - -\n${pokemon}\n- - - - - - - - - - - - - - - - - -\n❄️ 𝑊𝑖𝑛𝑡𝑒𝑟���𝑟���ℎ 𝐺𝑎𝑚𝑒𝑠`)
 break
 //-- animal
 case 'animal':
   if (!isVerify) return reply(userB())
   const animal = _animal[Math.floor(Math.random() * _animal.length)]
-  reply(`${design} 𝑌𝑜𝑢𝑟 𝑎𝑛𝑖𝑚𝑎𝑙\n- - - - - - - - - - - - - - - - - -\n${animal}\n- - - - - - - - - - - - - - - - - -\n♕︎ 𝑊𝑖𝑛𝑡𝑒𝑟𝐸𝑑𝑖𝑡𝑖�𝑛 𝐺𝑎𝑚𝑒𝑠`)
+  reply(`${design} 𝑌𝑜𝑢𝑟 𝑎𝑛𝑖𝑚𝑎𝑙\n- - - - - - - - - - - - - - - - - -\n${animal}\n- - - - - - - - - - - - - - - - - -\n❄️ 𝑊𝑖𝑛𝑡𝑒𝑟���𝑟���ℎ 𝐺𝑎𝑚𝑒𝑠`)
 break
 case 'gay':
 case 'gaymeter':
@@ -1278,7 +1278,7 @@ case 'image':
 						fs.unlinkSync(media)
 						if (err) return reply(`${design} 𝐷𝑜𝑒𝑠 𝑛𝑜𝑡 𝑤𝑜𝑟𝑘 𝑤𝑖𝑡ℎ 𝑎𝑛𝑖𝑚𝑎𝑡𝑒𝑑 𝑠𝑡𝑖𝑐𝑘𝑒𝑟𝑠.`)
 						buffer = fs.readFileSync(ran)
-						Lxa.sendMessage(from, buffer, image, {quoted:mek, caption: `${design} 𝑀𝑎𝑑𝑒 𝑓𝑜𝑟 ${pushname}\n- - - - - - - - - - - - - - - - - -\n_Tipp: ${tipp}_\n- - - - - - - - - - - - - - - - - -\n♕︎ 𝑊𝑖𝑛𝑡𝑒𝑟𝐸𝑑𝑖𝑡𝑖�𝑛 𝐸𝑓𝑓𝑒𝑐𝑡𝑠`})
+						Lxa.sendMessage(from, buffer, image, {quoted:mek, caption: `${design} 𝑀𝑎𝑑𝑒 𝑓𝑜𝑟 ${pushname}\n- - - - - - - - - - - - - - - - - -\n_Tipp: ${tipp}_\n- - - - - - - - - - - - - - - - - -\n❄️ 𝑊𝑖𝑛𝑡𝑒𝑟���𝑟���ℎ 𝐸𝑓𝑓𝑒𝑐𝑡𝑠`})
 						fs.unlinkSync(ran)
 					})
 					break						
@@ -1329,7 +1329,7 @@ reply(`${design} 𝐸𝑑𝑖𝑡𝑖𝑛𝑔 . . . 1/1\n- - - - - - - - - - - -
 						fs.unlinkSync(media)
 						if (err) return reply('𝐸𝑛𝑡𝑒𝑟 𝑏𝑟𝑖𝑔ℎ𝑡𝑛𝑒𝑠𝑠. 𝐸𝑥𝑎𝑚𝑝𝑙𝑒: .𝑏𝑟𝑖𝑔ℎ𝑡𝑛𝑒𝑠𝑠 0.5')	
 						buffer = fs.readFileSync(ran)
-						Lxa.sendMessage(from, buffer, image, {quoted:mek, caption: `${design} 𝑀𝑎𝑑𝑒 𝑓𝑜𝑟 ${pushname}\n- - - - - - - - - - - - - - - - - -\n_Tipp: ${tipp}_\n- - - - - - - - - - - - - - - - - -\n♕︎ 𝑊𝑖𝑛𝑡𝑒𝑟𝐸𝑑𝑖𝑡𝑖�𝑛 𝐸𝑓𝑓𝑒𝑐𝑡𝑠`})
+						Lxa.sendMessage(from, buffer, image, {quoted:mek, caption: `${design} 𝑀𝑎𝑑𝑒 𝑓𝑜𝑟 ${pushname}\n- - - - - - - - - - - - - - - - - -\n_Tipp: ${tipp}_\n- - - - - - - - - - - - - - - - - -\n❄️ 𝑊𝑖𝑛𝑡𝑒𝑟���𝑟���ℎ 𝐸𝑓𝑓𝑒𝑐𝑡𝑠`})
 						fs.unlinkSync(ran)
 					})
 					break
@@ -1363,7 +1363,7 @@ reply(`${design} 𝐸𝑑𝑖𝑡𝑖𝑛𝑔 . . . 1/1\n- - - - - - - - - - - -
 						if (err) return reply(`${design} 𝐸𝑛𝑡𝑒𝑟 𝑛𝑢𝑚𝑏𝑒𝑟 ℎ𝑜𝑤 𝑠𝑎𝑡𝑢𝑟𝑎𝑡𝑒𝑑.\n- - - - - - - - - - - - - - - - - -\n𝐸𝑥𝑎𝑚𝑝𝑙𝑒: .𝑠𝑎𝑡𝑢𝑟𝑎𝑡𝑖𝑜𝑛 0.5`)	
 							
 						buffer = fs.readFileSync(ran)
-						Lxa.sendMessage(from, buffer, image, {quoted:mek, caption: `${design} 𝑀𝑎𝑑𝑒 𝑓𝑜𝑟 ${pushname}\n- - - - - - - - - - - - - - - - - -\n♕︎ 𝑊𝑖𝑛𝑡𝑒𝑟𝐸𝑑𝑖𝑡𝑖�𝑛 𝐸𝑓𝑓𝑒𝑐𝑡𝑠`})
+						Lxa.sendMessage(from, buffer, image, {quoted:mek, caption: `${design} 𝑀𝑎𝑑𝑒 𝑓𝑜𝑟 ${pushname}\n- - - - - - - - - - - - - - - - - -\n❄️ 𝑊𝑖𝑛𝑡𝑒𝑟���𝑟���ℎ 𝐸𝑓𝑓𝑒𝑐𝑡𝑠`})
 						fs.unlinkSync(ran)
 					})
 					break					
@@ -1397,7 +1397,7 @@ case 'flip':
 						fs.unlinkSync(media)
 						if (err) return reply(`${design} 𝐸𝑟𝑟𝑜𝑟`)
 						buffer = fs.readFileSync(ran)
-						Lxa.sendMessage(from, buffer, image, {quoted:mek, caption: `${design} 𝑀𝑎𝑑𝑒 𝑓𝑜𝑟 ${pushname}\n- - - - - - - - - - - - - - - - - -\n♕︎ 𝑊𝑖𝑛𝑡𝑒𝑟𝐸𝑑𝑖𝑡𝑖�𝑛 𝐸𝑓𝑓𝑒𝑐𝑡𝑠`})
+						Lxa.sendMessage(from, buffer, image, {quoted:mek, caption: `${design} 𝑀𝑎𝑑𝑒 𝑓𝑜𝑟 ${pushname}\n- - - - - - - - - - - - - - - - - -\n❄️ 𝑊𝑖𝑛𝑡𝑒𝑟���𝑟���ℎ 𝐸𝑓𝑓𝑒𝑐𝑡𝑠`})
 						fs.unlinkSync(ran)
 					})
 					break	
@@ -1431,7 +1431,7 @@ case 'blackwhite':
 						fs.unlinkSync(media)
 						if (err) return reply(`${design} 𝐸𝑟𝑟𝑜𝑟`)
 						buffer = fs.readFileSync(ran)
-						Lxa.sendMessage(from, buffer, image, {quoted:mek, caption: `${design} 𝑀𝑎𝑑𝑒 𝑓𝑜𝑟 ${pushname}\n- - - - - - - - - - - - - - - - - -\n♕︎ 𝑊𝑖𝑛𝑡𝑒𝑟𝐸𝑑𝑖𝑡𝑖�𝑛 𝐸𝑓𝑓𝑒𝑐𝑡𝑠`})
+						Lxa.sendMessage(from, buffer, image, {quoted:mek, caption: `${design} 𝑀𝑎𝑑𝑒 𝑓𝑜𝑟 ${pushname}\n- - - - - - - - - - - - - - - - - -\n❄️ 𝑊𝑖𝑛𝑡𝑒𝑟���𝑟���ℎ 𝐸𝑓𝑓𝑒𝑐𝑡𝑠`})
 						fs.unlinkSync(ran)
 					})
 					break	
@@ -1463,7 +1463,7 @@ case 'filter':
 						fs.unlinkSync(media)
 						if (err) return reply(`${design} 𝐸𝑟𝑟𝑜𝑟`)
 						buffer = fs.readFileSync(ran)
-						Lxa.sendMessage(from, buffer, image, {quoted:mek, caption: `${design} 𝑀𝑎𝑑𝑒 𝑓𝑜𝑟 ${pushname}\n- - - - - - - - - - - - - - - - - -\n♕︎ 𝑊𝑖𝑛𝑡𝑒𝑟𝐸𝑑𝑖𝑡𝑖�𝑛 𝐸𝑓𝑓𝑒𝑐𝑡𝑠`})
+						Lxa.sendMessage(from, buffer, image, {quoted:mek, caption: `${design} 𝑀𝑎𝑑𝑒 𝑓𝑜𝑟 ${pushname}\n- - - - - - - - - - - - - - - - - -\n❄️ 𝑊𝑖𝑛𝑡𝑒𝑟���𝑟���ℎ 𝐸𝑓𝑓𝑒𝑐𝑡𝑠`})
 						fs.unlinkSync(ran)
 					})
 					break							
@@ -1495,7 +1495,7 @@ case 'sound':
 						fs.unlinkSync(media)
 						if (err) return reply(`${design} 𝐸𝑟𝑟𝑜𝑟`)
 						buffer = fs.readFileSync(ran)
-						Lxa.sendMessage(from, buffer, audio, {quoted:mek, caption: `${design} 𝑀𝑎𝑑𝑒 𝑓𝑜𝑟 ${pushname}\n- - - - - - - - - - - - - - - - - -\n♕︎ 𝑊𝑖𝑛𝑡𝑒𝑟𝐸𝑑𝑖𝑡𝑖�𝑛 𝐸𝑓𝑓𝑒𝑐𝑡𝑠`})
+						Lxa.sendMessage(from, buffer, audio, {quoted:mek, caption: `${design} 𝑀𝑎𝑑𝑒 𝑓𝑜𝑟 ${pushname}\n- - - - - - - - - - - - - - - - - -\n❄️ 𝑊𝑖𝑛𝑡𝑒𝑟���𝑟���ℎ 𝐸𝑓𝑓𝑒𝑐𝑡𝑠`})
 						fs.unlinkSync(ran)
 					})
 					break
@@ -1541,7 +1541,7 @@ case 'cover':
 						fs.unlinkSync(media)
 						if (err) return reply(`${design} 𝐸𝑟𝑟𝑜𝑟`)
 						buffer = fs.readFileSync(ran)
-						Lxa.sendMessage(from, buffer, video, {quoted:mek, caption: `${design} 𝑀𝑎𝑑𝑒 𝑓𝑜𝑟 ${pushname}\n- - - - - - - - - - - - - - - - - -\n♕︎ 𝑊𝑖𝑛𝑡𝑒𝑟𝐸𝑑𝑖𝑡𝑖�𝑛 𝐸𝑓𝑓𝑒𝑐𝑡𝑠`})
+						Lxa.sendMessage(from, buffer, video, {quoted:mek, caption: `${design} 𝑀𝑎𝑑𝑒 𝑓𝑜𝑟 ${pushname}\n- - - - - - - - - - - - - - - - - -\n❄️ 𝑊𝑖𝑛𝑡𝑒𝑟���𝑟���ℎ 𝐸𝑓𝑓𝑒𝑐𝑡𝑠`})
 						fs.unlinkSync(ran)
 					})
 				
@@ -1575,7 +1575,7 @@ case 'stardash':
 						fs.unlinkSync(media)
 						if (err) return reply(`${design} 𝐸𝑟𝑟𝑜𝑟`)
 						buffer = fs.readFileSync(ran)
-						Lxa.sendMessage(from, buffer, video, {quoted:mek, caption: `${design} 𝑀𝑎𝑑𝑒 𝑓𝑜𝑟 ${pushname}\n- - - - - - - - - - - - - - - - - -\n♕︎ 𝑊𝑖𝑛𝑡𝑒𝑟𝐸𝑑𝑖𝑡𝑖�𝑛 𝐸𝑓𝑓𝑒𝑐𝑡𝑠`})
+						Lxa.sendMessage(from, buffer, video, {quoted:mek, caption: `${design} 𝑀𝑎𝑑𝑒 𝑓𝑜𝑟 ${pushname}\n- - - - - - - - - - - - - - - - - -\n❄️ 𝑊𝑖𝑛𝑡𝑒𝑟���𝑟���ℎ 𝐸𝑓𝑓𝑒𝑐𝑡𝑠`})
 						fs.unlinkSync(ran)
 					})
 					break
@@ -1640,7 +1640,7 @@ reply(`${design} 𝐸𝑑𝑖𝑡𝑖𝑛𝑔 . . . 1/1\n- - - - - - - - - - - -
 						fs.unlinkSync(media)
 						if (err) return reply(`${design} 𝐸𝑟𝑟𝑜𝑟`)
 						buffer = fs.readFileSync(ran)
-						Lxa.sendMessage(from, buffer, video, {quoted:mek, caption: `${design} 𝑀𝑎𝑑𝑒 𝑓𝑜𝑟 ${pushname}\n- - - - - - - - - - - - - - - - - -\n♕︎ 𝑊𝑖𝑛𝑡𝑒𝑟𝐸𝑑𝑖𝑡𝑖�𝑛 𝐸𝑓𝑓𝑒𝑐𝑡𝑠`})
+						Lxa.sendMessage(from, buffer, video, {quoted:mek, caption: `${design} 𝑀𝑎𝑑𝑒 𝑓𝑜𝑟 ${pushname}\n- - - - - - - - - - - - - - - - - -\n❄️ 𝑊𝑖𝑛𝑡𝑒𝑟���𝑟���ℎ 𝐸𝑓𝑓𝑒𝑐𝑡𝑠`})
 						fs.unlinkSync(ran)
 					})
 					
@@ -1672,7 +1672,7 @@ encmedia = JSON.parse(JSON.stringify(mek).replace('quotedM','m')).message.extend
 						fs.unlinkSync(media)
 						if (err) return reply(`${design} 𝐸𝑟𝑟𝑜𝑟`)
 						buffer = fs.readFileSync(ran)
-						Lxa.sendMessage(from, buffer, image, {quoted:mek, caption: `${design} 𝑀𝑎𝑑𝑒 𝑓𝑜𝑟 ${pushname}\n- - - - - - - - - - - - - - - - - -\n♕︎ 𝑊𝑖𝑛𝑡𝑒𝑟𝐸𝑑𝑖𝑡𝑖�𝑛 𝐸𝑓𝑓𝑒𝑐𝑡𝑠`})
+						Lxa.sendMessage(from, buffer, image, {quoted:mek, caption: `${design} 𝑀𝑎𝑑𝑒 𝑓𝑜𝑟 ${pushname}\n- - - - - - - - - - - - - - - - - -\n❄️ 𝑊𝑖𝑛𝑡𝑒𝑟���𝑟���ℎ 𝐸𝑓𝑓𝑒𝑐𝑡𝑠`})
 						fs.unlinkSync(ran)
 					})	
 			break
@@ -1807,7 +1807,7 @@ reply(`${design} 𝐸𝑑𝑖𝑡𝑖𝑛𝑔 . . . 1/1\n- - - - - - - - - - - -
 						fs.unlinkSync(media)
 						if (err) return reply(`${design} 𝐸𝑟𝑟𝑜𝑟`)
 						buffer = fs.readFileSync(ran)
-						Lxa.sendMessage(from, buffer, image, {quoted:mek, caption: `${design} 𝑀𝑎𝑑𝑒 𝑓𝑜𝑟 ${pushname}\n- - - - - - - - - - - - - - - - - -\n♕︎ 𝑊𝑖𝑛𝑡𝑒𝑟𝐸𝑑𝑖𝑡𝑖�𝑛 𝐸𝑓𝑓𝑒𝑐𝑡𝑠`})
+						Lxa.sendMessage(from, buffer, image, {quoted:mek, caption: `${design} 𝑀𝑎𝑑𝑒 𝑓𝑜𝑟 ${pushname}\n- - - - - - - - - - - - - - - - - -\n❄️ 𝑊𝑖𝑛𝑡𝑒𝑟���𝑟���ℎ 𝐸𝑓𝑓𝑒𝑐𝑡𝑠`})
 						fs.unlinkSync(ran)
 					})								
 			break
@@ -1845,7 +1845,7 @@ case 'nobg':
 						fs.unlinkSync(media)
 						if (err) return reply(`${design} 𝐶ℎ𝑜𝑜𝑠𝑒 𝑎 𝑟𝑒𝑎𝑙 𝑐𝑜𝑙𝑜𝑟 𝑜𝑟 𝐻𝐸𝑋 𝐶𝑜𝑑𝑒`)
 						buffer = fs.readFileSync(ran)
-						Lxa.sendMessage(from, buffer, image, {quoted:mek, caption: `${design} 𝑀𝑎𝑑𝑒 𝑓𝑜𝑟 ${pushname}\n- - - - - - - - - - - - - - - - - -\n♕︎ 𝑊𝑖𝑛𝑡𝑒𝑟𝐸𝑑𝑖𝑡𝑖�𝑛 𝐸𝑓𝑓𝑒𝑐𝑡𝑠`})
+						Lxa.sendMessage(from, buffer, image, {quoted:mek, caption: `${design} 𝑀𝑎𝑑𝑒 𝑓𝑜𝑟 ${pushname}\n- - - - - - - - - - - - - - - - - -\n❄️ 𝑊𝑖𝑛𝑡𝑒𝑟���𝑟���ℎ 𝐸𝑓𝑓𝑒𝑐𝑡𝑠`})
 						fs.unlinkSync(ran)
 					})				
 			break            
@@ -1904,7 +1904,7 @@ case 'send':
 exec(`ddg-download "${value} jpg" -l 1`, (err) => {
 if (err) return reply(`${design} 𝐸𝑟𝑟𝑜𝑟`)
 buffer = fs.readFileSync(`${value} jpg_0.jpg`)
-Lxa.sendMessage(from, buffer, image, {quoted:mek, caption: `${design} 𝑆𝑒𝑛𝑑𝑖𝑛𝑔 𝑓𝑜𝑟 ${pushname}...\n- - - - - - - - - - - - - - - - - -\n♕︎ 𝑊𝑖𝑛𝑡𝑒𝑟𝐸𝑑𝑖𝑡𝑖�𝑛 𝑃𝑖𝑐𝑡𝑢𝑟𝑒𝑠`})
+Lxa.sendMessage(from, buffer, image, {quoted:mek, caption: `${design} 𝑆𝑒𝑛𝑑𝑖𝑛𝑔 𝑓𝑜𝑟 ${pushname}...\n- - - - - - - - - - - - - - - - - -\n❄️ 𝑊𝑖𝑛𝑡𝑒𝑟���𝑟���ℎ 𝑃𝑖𝑐𝑡𝑢𝑟𝑒𝑠`})
 exec(`rm -rf ${value} jpg_0.jpg`)
 })
 	break
@@ -3138,7 +3138,7 @@ case 'name':
 							if (err) throw err;
 						})
 					})
-								reply(`${design} 𝐶ℎ𝑎𝑛𝑔𝑒𝑑 𝑢𝑠𝑒𝑟𝑛𝑎𝑚𝑒 𝑓𝑟𝑜𝑚 *${username}* 𝑡𝑜 *${value}*\n- - - - - - - - - - - - - - - - - -\n𝑀𝑜𝑛𝑒𝑦 𝑙𝑒𝑓𝑡 ${newmoney}$\n- - - - - - - - - - - - - - - - - -\n♕︎ 𝑊𝑖𝑛𝑡𝑒𝑟𝐸𝑑𝑖𝑡𝑖�𝑛 𝑆𝑒𝑡𝑡𝑖𝑛𝑔𝑠`)      
+								reply(`${design} 𝐶ℎ𝑎𝑛𝑔𝑒𝑑 𝑢𝑠𝑒𝑟𝑛𝑎𝑚𝑒 𝑓𝑟𝑜𝑚 *${username}* 𝑡𝑜 *${value}*\n- - - - - - - - - - - - - - - - - -\n𝑀𝑜𝑛𝑒𝑦 𝑙𝑒𝑓𝑡 ${newmoney}$\n- - - - - - - - - - - - - - - - - -\n❄️ 𝑊𝑖𝑛𝑡𝑒𝑟���𝑟���ℎ 𝑆𝑒𝑡𝑡𝑖𝑛𝑔𝑠`)      
 		break
 //-- changeage - Setage
 case 'changeage': 
@@ -3171,7 +3171,7 @@ case 'age':
 						})
 					})
 					await delay(1000) /// waiting 1 second.
-		reply(`${design} 𝐶ℎ𝑎𝑛𝑔𝑒𝑑 𝑎𝑔𝑒 𝑓𝑟𝑜𝑚  *${age}* 𝑡𝑜 *${value}*\n- - - - - - - - - - - - - - - - - -\n𝑀𝑜𝑛𝑒𝑦 𝑙𝑒𝑓𝑡 ${newmoney}$\n- - - - - - - - - - - - - - - - - -\n♕︎ 𝑊𝑖𝑛𝑡𝑒𝑟𝐸𝑑𝑖𝑡𝑖�𝑛 𝑆𝑒𝑡𝑡𝑖𝑛𝑔𝑠`)
+		reply(`${design} 𝐶ℎ𝑎𝑛𝑔𝑒𝑑 𝑎𝑔𝑒 𝑓𝑟𝑜𝑚  *${age}* 𝑡𝑜 *${value}*\n- - - - - - - - - - - - - - - - - -\n𝑀𝑜𝑛𝑒𝑦 𝑙𝑒𝑓𝑡 ${newmoney}$\n- - - - - - - - - - - - - - - - - -\n❄️ 𝑊𝑖𝑛𝑡𝑒𝑟���𝑟���ℎ 𝑆𝑒𝑡𝑡𝑖𝑛𝑔𝑠`)
 			  
 	break
 //-- change email
@@ -3193,7 +3193,7 @@ case 'email':
 					})
 					await delay(1000) /// waiting 1 second.
 
-			reply(`${design} 𝐶ℎ𝑎𝑛𝑔𝑒𝑑 𝐸𝑚𝑎𝑖𝑙 𝑡𝑜 ${args[0]}\n- - - - - - - - - - - - - - - - - -\n♕︎ 𝑊𝑖𝑛𝑡𝑒𝑟𝐸𝑑𝑖𝑡𝑖�𝑛 𝑀𝑎𝑖𝑙 `)
+			reply(`${design} 𝐶ℎ𝑎𝑛𝑔𝑒𝑑 𝐸𝑚𝑎𝑖𝑙 𝑡𝑜 ${args[0]}\n- - - - - - - - - - - - - - - - - -\n❄️ 𝑊𝑖𝑛𝑡𝑒𝑟���𝑟���ℎ 𝑀𝑎𝑖𝑙 `)
 		
 						var nodemailer = require('nodemailer');
 						var transporter = nodemailer.createTransport({
@@ -3254,7 +3254,7 @@ case 'changedesign':
 				})
 				await delay(1000) /// waiting 1 second.
  
-					reply(`${design} 𝐶ℎ𝑎𝑛𝑔𝑒𝑑 𝑑𝑒𝑠𝑖𝑔𝑛 𝑓𝑟𝑜𝑚  *${design}* 𝑡𝑜 *${value}*\n- - - - - - - - - - - - - - - - - -\n𝑀𝑜𝑛𝑒𝑦 𝑙𝑒𝑓𝑡 ${newmoney}$\n- - - - - - - - - - - - - - - - - -\n♕︎ 𝑊𝑖𝑛𝑡𝑒𝑟𝐸𝑑𝑖𝑡𝑖�𝑛 𝑆𝑒𝑡𝑡𝑖𝑛𝑔𝑠`)					
+					reply(`${design} 𝐶ℎ𝑎𝑛𝑔𝑒𝑑 𝑑𝑒𝑠𝑖𝑔𝑛 𝑓𝑟𝑜𝑚  *${design}* 𝑡𝑜 *${value}*\n- - - - - - - - - - - - - - - - - -\n𝑀𝑜𝑛𝑒𝑦 𝑙𝑒𝑓𝑡 ${newmoney}$\n- - - - - - - - - - - - - - - - - -\n❄️ 𝑊𝑖𝑛𝑡𝑒𝑟���𝑟���ℎ 𝑆𝑒𝑡𝑡𝑖𝑛𝑔𝑠`)					
 		break
 //-- changeemojie
 case 'changeemojie': 
@@ -3283,7 +3283,7 @@ case 'setemojie':
 					})
 				})
 				await delay(1000) /// waiting 1 second.
-				reply(`${design} 𝐶ℎ𝑎𝑛𝑔𝑒𝑑 𝑒𝑚𝑜𝑗𝑖𝑒 𝑓𝑟𝑜𝑚 *${emojie}* 𝑡𝑜 *${value}*\n- - - - - - - - - - - - - - - - - -\n𝑀𝑜𝑛𝑒𝑦 𝑙𝑒𝑓𝑡 ${newmoney}$\n- - - - - - - - - - - - - - - - - -\n♕︎ 𝑊𝑖𝑛𝑡𝑒𝑟𝐸𝑑𝑖𝑡𝑖�𝑛 𝑆𝑒𝑡𝑡𝑖𝑛𝑔𝑠`)  
+				reply(`${design} 𝐶ℎ𝑎𝑛𝑔𝑒𝑑 𝑒𝑚𝑜𝑗𝑖𝑒 𝑓𝑟𝑜𝑚 *${emojie}* 𝑡𝑜 *${value}*\n- - - - - - - - - - - - - - - - - -\n𝑀𝑜𝑛𝑒𝑦 𝑙𝑒𝑓𝑡 ${newmoney}$\n- - - - - - - - - - - - - - - - - -\n❄️ 𝑊𝑖𝑛𝑡𝑒𝑟���𝑟���ℎ 𝑆𝑒𝑡𝑡𝑖𝑛𝑔𝑠`)  
 	break
 //---X623-Whatsapp-Bot------------------------------------------------------------------------------------------------------------------------// 
 // -- Leaderboard
