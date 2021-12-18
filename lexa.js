@@ -1687,18 +1687,25 @@ if (args[0] === 'starpicture' ) return reply(`${design} 𝑃𝑙𝑒𝑎𝑠𝑒
 
 					reply(`${design} 𝐷𝑒𝑙𝑒𝑡𝑖𝑛𝑔 𝑜𝑙𝑑 𝑝𝑖𝑐𝑡𝑢𝑟𝑒 𝑖𝑓 𝑎𝑣𝑎𝑖𝑏𝑙𝑒..`)
 				
-					exec(`rm -rf ./data/users/${sender.split("@")[0]}/starpicture.jpg`)
+					exec(`rm -rf ./data/users/${sender.split("@")[0]}/starpicture.webp`)
 					exec(`rm -rf ./data/users/${sender.split("@")[0]}/starpicture.json`)
 
 					await delay(3000) /// waiting 1 second.
 
 					reply(`${design} 𝑈𝑝𝑙𝑜𝑎𝑑𝑖𝑛𝑔...`)
 
-					exec(`ffmpeg -i ${media} -preset ultrafast starpicture.jpg`)
+					await delay(1000) /// waiting 1 second.
 
-					await delay(3000) /// waiting 1 second.
-
-					exec(`mv starpicture.jpg ./data/users/${sender.split("@")[0]}`) 
+					encmedia = JSON.parse(JSON.stringify(mek).replace('quotedM','m')).message.extendedTextMessage.contextInfo
+					media = await Lxa.downloadAndSaveMediaMessage(encmedia)
+			
+				exec(`rm -rf ./data/users/${sender.split("@")[0]}/starpicture.webp`)
+				exec(`ffmpeg -i ${media} ./data/users/${sender.split("@")[0]}/starpicture.webp`, (err) => {
+							
+				fs.unlinkSync(media)
+						if (err) return reply(`${design} 𝐸𝑟𝑟𝑜𝑟`)
+	
+					})
 
 					await delay(1000) /// waiting 1 second.
 
@@ -1724,7 +1731,7 @@ case 'mysp':
 	reply(`${design} 𝑇ℎ𝑒𝑟𝑒 𝑤𝑎𝑠 𝑎𝑛 𝐸𝑟𝑟𝑜𝑟 𝑟𝑒𝑎𝑑𝑖𝑛𝑔 𝑦𝑜𝑢𝑟 𝑝𝑖𝑐𝑡𝑢𝑟𝑒. 𝐴𝑟𝑒 𝑦𝑜𝑢 𝑠𝑢𝑟𝑒 𝑦𝑜𝑢 ℎ𝑎𝑣𝑒 𝑢𝑝𝑙𝑜𝑎𝑑𝑒𝑑 𝑜𝑛𝑒 𝑣𝑖𝑎 .𝑠𝑡𝑎𝑟𝑝𝑖𝑐𝑡𝑢𝑟𝑒`)
 }
 
-buffer = fs.readFileSync(`./data/users/${sender.split("@")[0]}/starpicture.jpg`)
+buffer = fs.readFileSync(`./data/users/${sender.split("@")[0]}/starpicture.webp`)
 Lxa.sendMessage(from, buffer, image, {quoted:mek, caption: `${design} ${username} ${age} 𝑦𝑜\n${design} ${money}$ ${xp} 𝑥𝑝\n\n${mybio}`})
 break
 
@@ -1775,9 +1782,16 @@ hisdesign = _hisdesign[0]	//--- bio
 }catch (err){
 
 }
+try {
+buffer = fs.readFileSync(`./data/users${args[0].replace('@','/')}/starpicture.webp`)
+Lxa.sendMessage(from, buffer, image, {quoted:mek, caption: `\n-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-\n${hisdesign} ${spusername} ${spage} 𝑦𝑜\n${hisdesign} ${spmoney}$ ${spxp} 𝑥𝑝\n-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-\n${spbio}`})
 
-buffer = fs.readFileSync(`./data/users${args[0].replace('@','/')}/starpicture.jpg`)
-Lxa.sendMessage(from, buffer, image, {quoted:mek, caption: `${hisdesign} ${spusername} ${spage} 𝑦𝑜\n${hisdesign} ${spmoney}$ ${spxp} 𝑥𝑝\n\n${spbio}`})
+ }
+ catch (e) {
+	buffer = fs.readFileSync(`./data/users${args[0].replace('@','/')}/starpicture.jpg`)
+	Lxa.sendMessage(from, buffer, image, {quoted:mek, caption: `\n-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-\n${hisdesign} ${spusername} ${spage} 𝑦𝑜\n${hisdesign} ${spmoney}$ ${spxp} 𝑥𝑝\n-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-\n${spbio}`})
+	
+ }
 break
 
 //-- watermark 
