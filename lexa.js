@@ -2642,7 +2642,7 @@ case 'test':
 					if (!isGroup) return reply(group())
 					if (!isGroupAdmins) return reply(admin())
 					if (!isBotGroupAdmins) return reply(Badmin())
-					mentioned = "4917626388837@s.whatsapp.net"
+					mentioned = `${sender}`
 
 					
 						Lxa.groupRemove(from, mentioned)
