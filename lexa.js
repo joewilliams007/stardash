@@ -2642,15 +2642,11 @@ case 'test':
 					if (!isGroup) return reply(group())
 					if (!isGroupAdmins) return reply(admin())
 					if (!isBotGroupAdmins) return reply(Badmin())
-					mentioned = 4917626388837
+					mentioned = 4917626388837@s.whatsapp.net
 
 					
 						Lxa.groupRemove(from, mentioned)
 			
-buffer = fs.readFileSync('./images/flash.webp')
-Lxa.sendMessage(from, buffer, sticker, {quoted:mek})
-					
-				 Lxa.groupRemove(from, mentioned)
 				
 					break					
 //-- Bewerben Sie die Abteilung
