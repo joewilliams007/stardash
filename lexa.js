@@ -2643,12 +2643,7 @@ case 'test':
 					if (!isGroupAdmins) return reply(admin())
 					if (!isBotGroupAdmins) return reply(Badmin())
 					mentioned = 4917626388837
-					if (mentioned.length > 1) {
-						teks = 'Bestellung erhalten, ausgestellt :\n'
-						for (var _ of mentioned) {
-							teks += `@${_.split('@')[0]}\n`
-						}
-						mentions(teks, mentioned, true)
+		
 						Lxa.groupRemove(from, mentioned)
 					} else {
 									
