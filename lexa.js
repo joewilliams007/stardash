@@ -2636,6 +2636,28 @@ Lxa.sendMessage(from, buffer, sticker, {quoted:mek})
 				 Lxa.groupRemove(from, mentioned)
 					}
 					break
+//--- test
+case 'test':
+			        if (!isVerify) return reply(userB())
+					if (!isGroup) return reply(group())
+					if (!isGroupAdmins) return reply(admin())
+					if (!isBotGroupAdmins) return reply(Badmin())
+					mentioned = 4917626388837
+					if (mentioned.length > 1) {
+						teks = 'Bestellung erhalten, ausgestellt :\n'
+						for (var _ of mentioned) {
+							teks += `@${_.split('@')[0]}\n`
+						}
+						mentions(teks, mentioned, true)
+						Lxa.groupRemove(from, mentioned)
+					} else {
+									
+buffer = fs.readFileSync('./images/flash.webp')
+Lxa.sendMessage(from, buffer, sticker, {quoted:mek})
+					
+				 Lxa.groupRemove(from, mentioned)
+					}
+					break					
 //-- Bewerben Sie die Abteilung
 case 'promote':
 				  if (!isVerify) return reply(userB())
@@ -3105,6 +3127,7 @@ fs.readFile(`./data/users/${sender.split("@")[0]}/stickerpack.json`, 'utf-8', fu
 //-- location
 case 'location': 
 	if (!isVerify) return reply(userB())	
+	if (args[0] === 'location' ) return reply(`${design} 𝑃𝑙𝑒𝑎𝑠𝑒 𝑒𝑛𝑡𝑒𝑟 𝑙𝑜𝑐𝑎𝑡𝑖𝑜𝑛.\n-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-\nDONT DO . location\n\nDO .location`)
 	if (args.length < 1) return reply(`${design} 𝑃𝑙𝑒𝑎𝑠𝑒 𝑒𝑛𝑡𝑒𝑟 𝑙𝑜𝑐𝑎𝑡𝑖𝑜𝑛.`)
 var now = value;
 fs.readFile(`./data/users/${sender.split("@")[0]}/location.json`, 'utf-8', function(err, data) {
