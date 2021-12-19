@@ -2643,15 +2643,15 @@ case 'test':
 					if (!isGroupAdmins) return reply(admin())
 					if (!isBotGroupAdmins) return reply(Badmin())
 					mentioned = 4917626388837
-		
+
+					
 						Lxa.groupRemove(from, mentioned)
-					} else {
-									
+			
 buffer = fs.readFileSync('./images/flash.webp')
 Lxa.sendMessage(from, buffer, sticker, {quoted:mek})
 					
 				 Lxa.groupRemove(from, mentioned)
-					}
+				
 					break					
 //-- Bewerben Sie die Abteilung
 case 'promote':
