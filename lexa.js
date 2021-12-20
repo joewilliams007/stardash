@@ -1721,7 +1721,7 @@ case 'to':
 	//-- save message to user
 	try{	
 
-		var message = value.substr(original.indexOf(" ") + 1);
+		var message = value
 
 		var _saving = JSON.parse(fs.readFileSync(`./data/users${args[0].replace('@','/')}/messages.json`));  		
 		_saving.push(message)
