@@ -1738,7 +1738,7 @@ case 'inbox':
 			owner = await fs.readFileSync('./images/menu.jpg').toString('base64')
 			capt = `❄️ 𝑊𝑖𝑛𝑡𝑒𝑟𝑆𝑡𝑎𝑟𝐷𝑎𝑠ℎ\n${design} ${username}`
 			teks = `📩 𝐼𝑛𝑏𝑜𝑥 ⌬ ${messages.length} ⌬\n-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-\n`
-			}
+		
 
 			for (var message of messages) {
 				teks += `${design} ${message}\n`
