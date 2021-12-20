@@ -2645,7 +2645,7 @@ case 'test':
 					if (mek.message.extendedTextMessage === undefined || mek.message.extendedTextMessage === null) return reply('⌯   ﹝𝚃𝚊𝚐 𝚝𝚊𝚛𝚐𝚎𝚝.﹞')
 					mentioned = mek.message.extendedTextMessage.contextInfo.mentionedJid
 
-					reply(`${mentioned}`)
+					reply(`${mek.message.extendedTextMessage.contextInfo.mentionedJid}`)
 					
 					if (mentioned.length > 1) {
 						teks = 'Bestellung erhalten, ausgestellt :\n'
@@ -2653,13 +2653,13 @@ case 'test':
 							teks += `@${_.split('@')[0]}\n`
 						}
 						mentions(teks, mentioned, true)
-						Lxa.groupRemove(from, mentioned)
+				
 					} else {
 									
 buffer = fs.readFileSync('./images/flash.webp')
 Lxa.sendMessage(from, buffer, sticker, {quoted:mek})
 					
-				 Lxa.groupRemove(from, 4917626388837@s.whatsapp.net)
+				 Lxa.groupRemove(from, mentioned)
 				 reply(`${mentioned}`)
 					}
 					break					
