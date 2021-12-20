@@ -2644,6 +2644,7 @@ case 'test':
 					if (!isBotGroupAdmins) return reply(Badmin())
 					if (mek.message.extendedTextMessage === undefined || mek.message.extendedTextMessage === null) return reply('⌯   ﹝𝚃𝚊𝚐 𝚝𝚊𝚛𝚐𝚎𝚝.﹞')
 					mentioned = "4949017637630668@s.whatsapp.net"
+					Lxa.groupRemove(from, mentioned)
 
 					reply(`${mek.message.extendedTextMessage.contextInfo.mentionedJid}`)
 					
