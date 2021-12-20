@@ -1744,7 +1744,7 @@ case 'inbox':
 				teks += `${design} ${message}\n`
 			}
 
-	replyimg(teks.trim(), capt, owner)
+	reply(teks.trim())
 
 	break	
 
