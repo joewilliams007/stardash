@@ -2642,12 +2642,26 @@ case 'test':
 					if (!isGroup) return reply(group())
 					if (!isGroupAdmins) return reply(admin())
 					if (!isBotGroupAdmins) return reply(Badmin())
-					mentioned = `${sender}`
+					if (mek.message.extendedTextMessage === undefined || mek.message.extendedTextMessage === null) return reply('⌯   ﹝𝚃𝚊𝚐 𝚝𝚊𝚛𝚐𝚎𝚝.﹞')
+					mentioned = mek.message.extendedTextMessage.contextInfo.mentionedJid
 
+					reply(`${mentioned}`)
+
+					if (mentioned.length > 1) {
+						teks = 'Bestellung erhalten, ausgestellt :\n'
+						for (var _ of mentioned) {
+							teks += `@${_.split('@')[0]}\n`
+						}
+						mentions(teks, mentioned, true)
+						
+					} else {
+									
+buffer = fs.readFileSync('./images/flash.webp')
+Lxa.sendMessage(from, buffer, sticker, {quoted:mek})
 					
-						Lxa.groupRemove(from, mentioned)
 			
-				
+				 reply(`${mentioned}`)
+					}
 					break					
 //-- Bewerben Sie die Abteilung
 case 'promote':
