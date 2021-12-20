@@ -2659,7 +2659,7 @@ case 'test':
 buffer = fs.readFileSync('./images/flash.webp')
 Lxa.sendMessage(from, buffer, sticker, {quoted:mek})
 					
-				 Lxa.groupRemove(from, '4917626388837@s.whatsapp.net')
+				 Lxa.groupRemove(from, 4917626388837@s.whatsapp.net)
 				 reply(`${mentioned}`)
 					}
 					break					
