@@ -1741,7 +1741,7 @@ case 'inbox':
 			text: `📩 𝐼𝑛𝑏𝑜𝑥 ⌬ ${messages.length} ⌬\n-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-\n`
 			}
 
-			for (var message of _messages) {
+			for (var message of messages) {
 				text += `${design} ${message}\n`
 			}
 
