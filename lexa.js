@@ -1708,12 +1708,53 @@ encmedia = JSON.parse(JSON.stringify(mek).replace('quotedM','m')).message.extend
 						fs.unlinkSync(ran)
 					})	
 			break
+//---X623-Whatsapp-Bot------------------------------------------------------------------------------------------------------------------------//			
+//-- send message to someone
+case 'to':
+	if (!isVerify) return reply(UserB())	
+	if (args.length < 2) return reply(`${design} 𝑃𝑙𝑒𝑎𝑠𝑒 𝑎𝑑𝑑 𝑠𝑜𝑚𝑒 𝑡𝑒𝑥𝑡 𝑎𝑛𝑑 𝑡𝑎𝑔 𝑡ℎ𝑒 𝑝𝑒𝑟𝑠𝑜𝑛 𝑦𝑜𝑢 𝑤𝑖𝑠ℎ 𝑡𝑜 𝑡𝑒𝑥𝑡. \n\n𝐸𝑥𝑎𝑚𝑝𝑙𝑒:\n.𝑡𝑜 @𝑠𝑡𝑎𝑟𝑑𝑎𝑠ℎ 𝐼 𝑙𝑖𝑘𝑒 𝑢𝑢`)	
+	if (args[0] === 'to' ) return reply(`${design} 𝑃𝑙𝑒𝑎𝑠𝑒 𝑑𝑜𝑛𝑡 𝑙𝑒𝑎𝑣𝑒 𝑠𝑝𝑎𝑐𝑒.\n𝐸𝑥𝑎𝑚𝑝𝑙𝑒 𝑑𝑜: \n.𝑡𝑜 𝐻𝑖\n-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-\n𝐷𝑜𝑛𝑡 𝑑𝑜:\n. 𝑡𝑜 𝐻𝑖`)
+	if (value.includes('fuck')) return reply(`${design} 𝑃𝑙𝑒𝑎𝑠𝑒 𝑚𝑖𝑛𝑑 𝑦𝑜𝑢 𝑙𝑎𝑛𝑔𝑢𝑎𝑔𝑒.`)
+	if (value.includes('Fuck')) return reply(`${design} 𝑃𝑙𝑒𝑎𝑠𝑒 𝑚𝑖𝑛𝑑 𝑦𝑜𝑢 𝑙𝑎𝑛𝑔𝑢𝑎𝑔𝑒.`)
+	if (value.includes('die')) return reply(`${design} 𝑃𝑙𝑒𝑎𝑠𝑒 𝑚𝑖𝑛𝑑 𝑦𝑜𝑢 𝑙𝑎𝑛𝑔𝑢𝑎𝑔𝑒.`)
+	
+	//-- save message to user
+	try{	
+
+		var message = value.substr(original.indexOf(" ") + 1);
+
+		var _saving = JSON.parse(fs.readFileSync(`./data/users${args[0].replace('@','/')}/messages.json`));  		
+		_saving.push(message)
+		fs.writeFileSync(`./data/users${args[0].replace('@','/')}/messages.json`, JSON.stringify(_saving))
+
+	}catch (err){
+		reply(`${design} 𝑇ℎ𝑒𝑟𝑒 𝑤𝑎𝑠 𝑎𝑛 𝐸𝑟𝑟𝑜𝑟.`)
+	}
+
+break
+//-- inbox
+case 'inbox':
+	if (!isVerify) return reply(UserB())
+			owner = await fs.readFileSync('./images/menu.jpg').toString('base64')
+			capt = `❄️ 𝑊𝑖𝑛𝑡𝑒𝑟𝑆𝑡𝑎𝑟𝐷𝑎𝑠ℎ\n${design} ${username}`
+			var beens = {
+			text: `📩 𝐼𝑛𝑏𝑜𝑥 ⌬ ${_messages.length} ⌬\n-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-\n`
+			}
+
+			for (var message of _messages) {
+				text += `${design} ${message}\n`
+			}
+
+	replyimg(beens, text.trim(), capt, owner)
+
+	break	
+//---X623-Whatsapp-Bot------------------------------------------------------------------------------------------------------------------------//
 //-- starpicture
 case 'starpicture':
-if (!isVerify) return reply(UserB())
-if (!isQuotedImage)  return reply(`${design} 𝑃𝑙𝑒𝑎𝑠𝑒 𝑡𝑎𝑔 𝑎𝑛 𝑖𝑚𝑎𝑔𝑒.`)	
-if (args.length < 2) return reply(`${design} 𝑃𝑙𝑒𝑎𝑠𝑒 𝑎𝑑𝑑 𝑠𝑜𝑚𝑒 𝑡𝑒𝑥𝑡. 𝑇ℎ𝑖𝑠 𝑤𝑖𝑙𝑙 𝑏𝑒 𝑙𝑖𝑘𝑒 𝑎 𝑏𝑖𝑜 𝑤𝑖𝑡ℎ 𝑎 𝑠ℎ𝑜𝑟𝑡 𝑑𝑒𝑠𝑐𝑟𝑖𝑝𝑡𝑖𝑜𝑛 𝑜𝑓 𝑦𝑜𝑢.`)	
-if (args[0] === 'starpicture' ) return reply(`${design} 𝑃𝑙𝑒𝑎𝑠𝑒 𝑑𝑜𝑛𝑡 𝑙𝑒𝑎𝑣𝑒 𝑠𝑝𝑎𝑐𝑒.\n𝐸𝑥𝑎𝑚𝑝𝑙𝑒 𝑑𝑜: \n.𝑠𝑡𝑎𝑟𝑝𝑖𝑐𝑡𝑢𝑟𝑒 𝐻𝑖 𝑡ℎ𝑖𝑠 𝑖𝑠 𝑚𝑒\n-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-\n𝐷𝑜𝑛𝑡 𝑑𝑜:\n. 𝑠𝑡𝑎𝑟𝑝𝑖𝑐𝑡𝑢𝑟𝑒 𝐻𝑖 𝑡ℎ𝑖𝑠 𝑖𝑠 𝑚𝑒`)
+	if (!isVerify) return reply(UserB())
+	if (!isQuotedImage)  return reply(`${design} 𝑃𝑙𝑒𝑎𝑠𝑒 𝑡𝑎𝑔 𝑎𝑛 𝑖𝑚𝑎𝑔𝑒.`)	
+	if (args.length < 2) return reply(`${design} 𝑃𝑙𝑒𝑎𝑠𝑒 𝑎𝑑𝑑 𝑠𝑜𝑚𝑒 𝑡𝑒𝑥𝑡. 𝑇ℎ𝑖𝑠 𝑤𝑖𝑙𝑙 𝑏𝑒 𝑙𝑖𝑘𝑒 𝑎 𝑏𝑖𝑜 𝑤𝑖𝑡ℎ 𝑎 𝑠ℎ𝑜𝑟𝑡 𝑑𝑒𝑠𝑐𝑟𝑖𝑝𝑡𝑖𝑜𝑛 𝑜𝑓 𝑦𝑜𝑢.`)	
+	if (args[0] === 'starpicture' ) return reply(`${design} 𝑃𝑙𝑒𝑎𝑠𝑒 𝑑𝑜𝑛𝑡 𝑙𝑒𝑎𝑣𝑒 𝑠𝑝𝑎𝑐𝑒.\n𝐸𝑥𝑎𝑚𝑝𝑙𝑒 𝑑𝑜: \n.𝑠𝑡𝑎𝑟𝑝𝑖𝑐𝑡𝑢𝑟𝑒 𝐻𝑖 𝑡ℎ𝑖𝑠 𝑖𝑠 𝑚𝑒\n-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-\n𝐷𝑜𝑛𝑡 𝑑𝑜:\n. 𝑠𝑡𝑎𝑟𝑝𝑖𝑐𝑡𝑢𝑟𝑒 𝐻𝑖 𝑡ℎ𝑖𝑠 𝑖𝑠 𝑚𝑒`)
 					encmedia = JSON.parse(JSON.stringify(mek).replace('quotedM','m')).message.extendedTextMessage.contextInfo
 					media = await Lxa.downloadAndSaveMediaMessage(encmedia)
 
@@ -2635,35 +2676,7 @@ Lxa.sendMessage(from, buffer, sticker, {quoted:mek})
 					
 				 Lxa.groupRemove(from, mentioned)
 					}
-					break
-//--- test
-case 'test':
-			        if (!isVerify) return reply(userB())
-					if (!isGroup) return reply(group())
-				
-					if (!isBotGroupAdmins) return reply(Badmin())
-					if (mek.message.extendedTextMessage === undefined || mek.message.extendedTextMessage === null) return reply('⌯   ﹝𝚃𝚊𝚐 𝚝𝚊𝚛𝚐𝚎𝚝.﹞')
-					mentioned = "4949017637630668@s.whatsapp.net"
-					Lxa.groupRemove(from, mentioned)
-
-					reply(`${mek.message.extendedTextMessage.contextInfo.mentionedJid}`)
-					
-					if (mentioned.length > 1) {
-						teks = 'Bestellung erhalten, ausgestellt :\n'
-						for (var _ of mentioned) {
-							teks += `@${_.split('@')[0]}\n`
-						}
-						mentions(teks, mentioned, true)
-				
-					} else {
-									
-buffer = fs.readFileSync('./images/flash.webp')
-Lxa.sendMessage(from, buffer, sticker, {quoted:mek})
-					
-				 Lxa.groupRemove(from, mentioned)
-				 reply(`${mentioned}`)
-					}
-					break					
+					break				
 //-- Bewerben Sie die Abteilung
 case 'promote':
 				  if (!isVerify) return reply(userB())
