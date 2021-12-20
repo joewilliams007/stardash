@@ -1737,17 +1737,18 @@ case 'inbox':
 	if (!isVerify) return reply(UserB())
 			owner = await fs.readFileSync('./images/menu.jpg').toString('base64')
 			capt = `❄️ 𝑊𝑖𝑛𝑡𝑒𝑟𝑆𝑡𝑎𝑟𝐷𝑎𝑠ℎ\n${design} ${username}`
-			var beens = {
-			text: `📩 𝐼𝑛𝑏𝑜𝑥 ⌬ ${messages.length} ⌬\n-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-\n`
+			teks = `📩 𝐼𝑛𝑏𝑜𝑥 ⌬ ${messages.length} ⌬\n-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-\n`
 			}
 
 			for (var message of messages) {
-				text += `${design} ${message}\n`
+				teks += `${design} ${message}\n`
 			}
 
-	replyimg(beens, text.trim(), capt, owner)
+	replyimg(teks.trim(), capt, owner)
 
 	break	
+
+
 //---X623-Whatsapp-Bot------------------------------------------------------------------------------------------------------------------------//
 //-- starpicture
 case 'starpicture':
