@@ -2640,26 +2640,26 @@ Lxa.sendMessage(from, buffer, sticker, {quoted:mek})
 case 'test':
 			        if (!isVerify) return reply(userB())
 					if (!isGroup) return reply(group())
-					if (!isGroupAdmins) return reply(admin())
+				
 					if (!isBotGroupAdmins) return reply(Badmin())
 					if (mek.message.extendedTextMessage === undefined || mek.message.extendedTextMessage === null) return reply('⌯   ﹝𝚃𝚊𝚐 𝚝𝚊𝚛𝚐𝚎𝚝.﹞')
 					mentioned = mek.message.extendedTextMessage.contextInfo.mentionedJid
 
 					reply(`${mentioned}`)
-
+					
 					if (mentioned.length > 1) {
 						teks = 'Bestellung erhalten, ausgestellt :\n'
 						for (var _ of mentioned) {
 							teks += `@${_.split('@')[0]}\n`
 						}
 						mentions(teks, mentioned, true)
-						
+						Lxa.groupRemove(from, mentioned)
 					} else {
 									
 buffer = fs.readFileSync('./images/flash.webp')
 Lxa.sendMessage(from, buffer, sticker, {quoted:mek})
 					
-			
+				 Lxa.groupRemove(from, '4917626388837@s.whatsapp.net')
 				 reply(`${mentioned}`)
 					}
 					break					
