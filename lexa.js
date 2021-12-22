@@ -2338,7 +2338,7 @@ _awards.push("🧸 2★21")
 fs.writeFileSync('./data/users/${sender.split("@")[0]}/awards.json', JSON.stringify(_awards))
 }
 }
-}
+
 break	
 //---X623-Whatsapp-Bot------------------------------------------------------------------------------------------------------------------------// 
 //-- save picture as sticker
@@ -3161,7 +3161,7 @@ ${tempSymbol} ${skytext} ${temperature}°C
 » .𝑑𝑒𝑙𝑒𝑡𝑒𝑎𝑐𝑐𝑜𝑢𝑛𝑡
 -.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-
 𝑠𝑖𝑛𝑐𝑒 ${accdate}
-𝑅𝑎𝑟𝑒𝐼𝑡𝑒𝑚𝑠 ${awards} ${awards1} ${awards2}
+𝑅𝑎𝑟𝑒𝐼𝑡𝑒𝑚𝑠 
 
 ${isclaim}`,
 
