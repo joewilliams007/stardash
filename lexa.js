@@ -603,7 +603,7 @@ reply('Taes wifey💜💍✨😫')
 reply('🤕💜')}
 switch(is) { case '.john': reply("Joe's Babe 💙💚") 
 reply('Gigantic 𓂸😌') 
-reply('Met John in Real Life 🥵💙')}
+reply('Met Joe in Real Life 🥵💙')}
 switch(is) { case '.joe': reply("John's Babe 💚💙") 
 reply('Galactic 𓂸😌') 
 reply('Met John in Real Life 🥵💚')}
