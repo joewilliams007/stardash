@@ -278,6 +278,7 @@ try{
 			fs.appendFile(`./data/users/${sender.split("@")[0]}/awards.json`, `["👻 2᯾21"]`, function (err) {				
 			if (err) throw err;
 		});	
+	}
 		let awards1;
 		try{
 			var _awards = JSON.parse(fs.readFileSync(`./data/users/${sender.split("@")[0]}/awards.json`));	
@@ -3161,7 +3162,7 @@ ${tempSymbol} ${skytext} ${temperature}°C
 » .𝑑𝑒𝑙𝑒𝑡𝑒𝑎𝑐𝑐𝑜𝑢𝑛𝑡
 -.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-
 𝑠𝑖𝑛𝑐𝑒 ${accdate}
-𝑅𝑎𝑟𝑒𝐼𝑡𝑒𝑚𝑠 
+𝑅𝑎𝑟𝑒𝐼𝑡𝑒𝑚𝑠 ${awards} ${awards1} ${awards2}
 
 ${isclaim}`,
 
