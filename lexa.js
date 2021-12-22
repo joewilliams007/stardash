@@ -57,7 +57,7 @@ const _welcom = JSON.parse(fs.readFileSync('./data/bot/welcom.json'));
 const _user = JSON.parse(fs.readFileSync('./data/bot/user.json'));
 const _Haspet = JSON.parse(fs.readFileSync('./data/bot/haspet.json'));
 const _antilink = JSON.parse(fs.readFileSync('./data/bot/antilink.json'));
-const hit = JSON.parse(fs.readFileSync('./data/bot/totalhit.json'))
+const hit = JSON.parse(fs.readFileSync('./data/bot/totalhit.json'));
 const _isUpdate = JSON.parse(fs.readFileSync('./data/bot/isUpdate.json'));
 
 
