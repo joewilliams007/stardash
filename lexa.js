@@ -269,7 +269,15 @@ try{
   });	
 }
 //-- Get all user data
-
+		var awards;
+		try{
+			var _awards = JSON.parse(fs.readFileSync(`./data/users/${sender.split("@")[0]}/awards.json`));	
+			awards = _awards[0]	//--- awards
+		}catch (err){
+			fs.appendFile(`./data/users/${sender.split("@")[0]}/awards.json`, `[]`, function (err) {				
+			if (err) throw err;
+		});	
+		}
 		let money;
 		try{
 			let _money = JSON.parse(fs.readFileSync(`./data/users/${sender.split("@")[0]}/money.json`));
@@ -1203,6 +1211,7 @@ case 'bot':
 case 'simi':
 if (!isVerify) return reply(userB())
 		if (args.length < 1) return reply(`Hai ${pushname}`)
+		if (value === 'does john have a big dick' ) return reply(`${design} yes :( its 69 inches`)
 		else {
 
 const alexa = require("alexa-bot-api-v4");
