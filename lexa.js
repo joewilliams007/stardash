@@ -288,17 +288,23 @@ try{
 			var _awards = JSON.parse(fs.readFileSync(`./data/users/${sender.split("@")[0]}/awards.json`));	
 			awards11 = `\n${_awards[1]}`	//--- awards
 			if (awards11 === "undefined" ) {
-				awards1 = ""
+				awards1 = "‎"
 			}
 			else {
-				awards1 = awars11
+				awards1 = awards11
 			}
 		}catch (err){
 		}
 		let awards2;
 		try{
 			var _awards = JSON.parse(fs.readFileSync(`./data/users/${sender.split("@")[0]}/awards.json`));	
-			awards2 = `\n${_awards[2]}`	//--- awards
+			awards22 = `\n${_awards[2]}`	//--- awards
+			if (awards22 === "undefined" ) {
+				awards2 = "‎"
+			}
+			else {
+				awards2 = awards22
+			}
 		}catch (err){
 		}
 		let money;
@@ -1035,7 +1041,7 @@ case 'register':
                 fs.appendFile(`./data/users/${sender.split("@")[0]}/mood.json`, `["Happy"]`, function (err) {				
                 if (err) throw err;
                 });	
-				fs.appendFile(`./data/users/${sender.split("@")[0]}/awards.json`, `[]`, function (err) {				
+				fs.appendFile(`./data/users/${sender.split("@")[0]}/awards.json`, `["👻 2᯾21"]`, function (err) {				
                 if (err) throw err;
                 });	
 			
@@ -3075,6 +3081,12 @@ case 'feed':
 	case 'myaccount':
 	case 'me':
 		if (!isVerify) return reply(userB())
+
+		exec(`rm -rf ./data/users/${sender.split("@")[0]}/awards.json`)
+		fs.appendFile(`./data/users/${sender.split("@")[0]}/awards.json`, `["👻 2᯾21"]`, function (err) {				
+		if (err) throw err;
+	});	
+
 					function kyun(seconds){
 						function pad(s){
 						return (s < 10 ? '0' : '') + s;
