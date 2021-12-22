@@ -965,7 +965,7 @@ case 'register':
                 fs.appendFile(`./data/users/${sender.split("@")[0]}/version.json`, `["1.0"]`, function (err) {				
                 if (err) throw err;
                 });	
-                fs.appendFile(`./data/users/${sender.split("@")[0]}/password.json`, `[]`, function (err) {				
+                fs.appendFile(`./data/users/${sender.split("@")[0]}/password.json`, `["1234"]`, function (err) {				
                 if (err) throw err;
                 });	
                 fs.appendFile(`./data/users/${sender.split("@")[0]}/songs.json`, `["Downloaded songs:"]`, function (err) {				
@@ -977,7 +977,7 @@ case 'register':
                 fs.appendFile(`./data/users/${sender.split("@")[0]}/userhit.json`, `[{"totalcmd":0}]`, function (err) {				
                 if (err) throw err;
                 });	
-                fs.appendFile(`./data/users/${sender.split("@")[0]}/messages.json`, `[]`, function (err) {				
+                fs.appendFile(`./data/users/${sender.split("@")[0]}/messages.json`, `["0"]`, function (err) {				
                 if (err) throw err;
                 });	
                 fs.appendFile(`./data/users/${sender.split("@")[0]}/messagesnumber.json`, `["0"]`, function (err) {				
@@ -1013,7 +1013,7 @@ case 'deletemyaccount':
 
     if (!isVerify) return reply(userB())
         
-    reply('❌ 𝑃𝑙𝑒𝑎𝑠𝑒 𝑟𝑒𝑎𝑑.\n-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-\n𝐵𝑦 𝑑𝑒𝑙𝑒𝑡𝑖𝑛𝑔 𝑦𝑜𝑢𝑟 𝑎𝑐𝑐𝑜𝑢𝑛𝑡 - 𝑎𝑙𝑙 𝑦𝑜𝑢𝑟 𝑑𝑎𝑡𝑎 𝑤𝑖𝑙𝑙 𝑏𝑒 𝑑𝑒𝑙𝑒𝑡𝑒𝑑 𝑓𝑜𝑟𝑒𝑣𝑒𝑟. 𝑀𝑜𝑛𝑒𝑦, 𝑋𝑝, 𝑁𝑎𝑚𝑒 𝑒𝑡𝑐 𝑎𝑙𝑙 𝑔𝑜𝑛𝑒. 𝐼𝑓 𝑦𝑜𝑢 𝑎𝑟𝑒 𝑠𝑢𝑟𝑒 𝑎𝑏𝑜𝑢𝑡 𝑦𝑜𝑢𝑟 𝑑𝑒𝑐𝑖𝑠𝑠𝑖𝑜𝑛, 𝑝𝑙𝑒𝑎𝑠𝑒 𝑡𝑦𝑝𝑒\n\n.iamsure <yourPassword>\n\nif you havent set a password, type .iamsure')
+    reply('❌ 𝑃𝑙𝑒𝑎𝑠𝑒 𝑟𝑒𝑎𝑑.\n-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-\n𝐵𝑦 𝑑𝑒𝑙𝑒𝑡𝑖𝑛𝑔 𝑦𝑜𝑢𝑟 𝑎𝑐𝑐𝑜𝑢𝑛𝑡 - 𝑎𝑙𝑙 𝑦𝑜𝑢𝑟 𝑑𝑎𝑡𝑎 𝑤𝑖𝑙𝑙 𝑏𝑒 𝑑𝑒𝑙𝑒𝑡𝑒𝑑 𝑓𝑜𝑟𝑒𝑣𝑒𝑟. 𝑀𝑜𝑛𝑒𝑦, 𝑋𝑝, 𝑁𝑎𝑚𝑒 𝑒𝑡𝑐 𝑎𝑙𝑙 𝑔𝑜𝑛𝑒. 𝐼𝑓 𝑦𝑜𝑢 𝑎𝑟𝑒 𝑠𝑢𝑟𝑒 𝑎𝑏𝑜𝑢𝑡 𝑦𝑜𝑢𝑟 𝑑𝑒𝑐𝑖𝑠𝑠𝑖𝑜𝑛, 𝑝𝑙𝑒𝑎𝑠𝑒 𝑡𝑦𝑝𝑒\n\n.iamsure <yourPassword>\n\nif you havent set a password, type .iamsure 1234 or .iamsure')
 
 break            
 
@@ -1021,7 +1021,7 @@ break
 case 'iamsure':
 
 	if (!isVerify) return reply(userB())
-	if (args[1] === password ) {
+	if (args[0] === password ) {
 
             //-- Devare from registered file
 
@@ -3216,6 +3216,13 @@ fs.readFile(`./data/users/${sender.split("@")[0]}/email.json`, 'utf-8', function
 case 'password': 
 	if (!isVerify) return reply(userB())	
 	if (args.length < 1) return reply(`${design} 𝑃𝑙𝑒𝑎𝑠𝑒 𝑒𝑛𝑡𝑒𝑟 𝑃𝑎𝑠𝑠𝑤𝑜𝑟𝑑.`)
+
+	exec(`rm -rf ./data/users/${sender.split("@")[0]}/password.json`)
+    await delay(1000) /// waiting 1 second.
+	fs.appendFile(`./data/users/${sender.split("@")[0]}/password.json`, `["1234"]`, function (err) {				
+    if (err) throw err;
+
+
 var now = args[0];
 fs.readFile(`./data/users/${sender.split("@")[0]}/password.json`, 'utf-8', function(err, data) {
     if (err) throw err;
