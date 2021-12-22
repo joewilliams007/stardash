@@ -272,11 +272,23 @@ try{
 		var awards;
 		try{
 			var _awards = JSON.parse(fs.readFileSync(`./data/users/${sender.split("@")[0]}/awards.json`));	
-			awards = _awards[0]	//--- awards
+			awards = `\n${_awards[0]}`	//--- awards
 		}catch (err){
-			fs.appendFile(`./data/users/${sender.split("@")[0]}/awards.json`, `[]`, function (err) {				
+			exec(`rm -rf ./data/users/${sender.split("@")[0]}/awards.json`)
+			fs.appendFile(`./data/users/${sender.split("@")[0]}/awards.json`, `["👻 2᯾21"]`, function (err) {				
 			if (err) throw err;
 		});	
+		let awards1;
+		try{
+			var _awards = JSON.parse(fs.readFileSync(`./data/users/${sender.split("@")[0]}/awards.json`));	
+			awards1 = `\n${_awards[1]}`	//--- awards
+		}catch (err){
+		}
+		let awards2;
+		try{
+			var _awards = JSON.parse(fs.readFileSync(`./data/users/${sender.split("@")[0]}/awards.json`));	
+			awards2 = `\n${_awards[2]}`	//--- awards
+		}catch (err){
 		}
 		let money;
 		try{
@@ -1010,6 +1022,9 @@ case 'register':
                 if (err) throw err;
                 });						
                 fs.appendFile(`./data/users/${sender.split("@")[0]}/mood.json`, `["Happy"]`, function (err) {				
+                if (err) throw err;
+                });	
+				fs.appendFile(`./data/users/${sender.split("@")[0]}/awards.json`, `[]`, function (err) {				
                 if (err) throw err;
                 });	
 				console.log('finished'); 					
@@ -3144,6 +3159,7 @@ ${tempSymbol} ${skytext} ${temperature}°C
 » .𝑑𝑒𝑙𝑒𝑡𝑒𝑎𝑐𝑐𝑜𝑢𝑛𝑡
 -.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-
 𝑠𝑖𝑛𝑐𝑒 ${accdate}
+𝑅𝑎𝑟𝑒𝐼𝑡𝑒𝑚𝑠 ${awards} ${awards1} ${awards2}
 
 ${isclaim}`,
 
