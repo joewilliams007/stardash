@@ -287,7 +287,7 @@ try{
 		try{
 			var _awards = JSON.parse(fs.readFileSync(`./data/users/${sender.split("@")[0]}/awards.json`));	
 			awards11 = `\n${_awards[1]}`	//--- awards
-			if (awards11 === "undefined" ) {
+			if (awards11 === "" ) {
 				awards1 = "‎"
 			}
 			else {
@@ -299,7 +299,7 @@ try{
 		try{
 			var _awards = JSON.parse(fs.readFileSync(`./data/users/${sender.split("@")[0]}/awards.json`));	
 			awards22 = `\n${_awards[2]}`	//--- awards
-			if (awards22 === "undefined" ) {
+			if (awards22 === "" ) {
 				awards2 = "‎"
 			}
 			else {
