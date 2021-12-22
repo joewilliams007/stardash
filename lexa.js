@@ -1008,7 +1008,7 @@ case 'register':
 			    break
 
 //--- Devare account message
-case 'devaremyaccount':
+case 'deleteaccount':
 case 'deletemyaccount':
 
     if (!isVerify) return reply(userB())
@@ -2822,13 +2822,13 @@ case 'bc':
 						reply(`${design} 𝑇ℎ𝑎𝑡𝑠 𝑎𝑙𝑙?`)
 					break
 //-- Devar message
-case 'devare':
+case 'delare':
 case 'del':
 case 'burn':
 					if (!isGroup)return reply(group())
 					if (!isGroupAdmins) return reply(admin())
 					try {
-					Lxa.devareMessage(from, { id: mek.message.extendedTextMessage.contextInfo.stanzaId, remoteJid: from, fromMe: true })
+					Lxa.deleteMessage(from, { id: mek.message.extendedTextMessage.contextInfo.stanzaId, remoteJid: from, fromMe: true })
 					} catch (e) {
 					  reply(`${design} 𝐼 𝑐𝑎𝑛 𝑜𝑛𝑙𝑦 𝑑𝑒𝑙𝑒𝑡𝑒 𝑚𝑦 𝑜𝑤𝑛 𝑚𝑒𝑠𝑠𝑎𝑔𝑒.`)
 					}
@@ -2838,7 +2838,7 @@ case 'hide':
 
 					if (!isGroup)return reply(group())
 					try {
-					Lxa.devareMessage(from, { id: mek.message.extendedTextMessage.contextInfo.stanzaId, remoteJid: from, fromMe: true })
+					Lxa.deleteMessage(from, { id: mek.message.extendedTextMessage.contextInfo.stanzaId, remoteJid: from, fromMe: true })
 					} catch (e) {
 						reply(`${design} 𝐼 𝑐𝑎𝑛 𝑜𝑛𝑙𝑦 𝑑𝑒𝑙𝑒𝑡𝑒 𝑚𝑦 𝑜𝑤𝑛 𝑚𝑒𝑠𝑠𝑎𝑔𝑒.`)
 					}
