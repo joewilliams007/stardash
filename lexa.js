@@ -1027,6 +1027,7 @@ case 'register':
 				fs.appendFile(`./data/users/${sender.split("@")[0]}/awards.json`, `[]`, function (err) {				
                 if (err) throw err;
                 });	
+			});
 				console.log('finished'); 					
 			    break
 
@@ -3656,7 +3657,7 @@ reply(res)
 break
 				default:
 }
-	}	})
+	})
 }
 starts()
 
