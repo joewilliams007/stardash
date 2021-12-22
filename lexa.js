@@ -3217,6 +3217,7 @@ fs.readFile(`./data/users/${sender.split("@")[0]}/email.json`, 'utf-8', function
 case 'password': 
 	if (!isVerify) return reply(userB())	
 	if (args.length < 1) return reply(`${design} 𝑃𝑙𝑒𝑎𝑠𝑒 𝑒𝑛𝑡𝑒𝑟 𝑃𝑎𝑠𝑠𝑤𝑜𝑟𝑑.`)
+	if (args[0] === 'password' ) return reply(`${design} Please do .password and not . password`)
 
 	exec(`rm -rf ./data/users/${sender.split("@")[0]}/password.json`)
     await delay(1000) /// waiting 1 second.
