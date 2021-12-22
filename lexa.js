@@ -152,7 +152,7 @@ async function starts() {
 	})
 	fs.existsSync('./session/Lexa.json') && Lxa.loadAuthInfo('./session/Lexa.json')
 Lxa.on('connecting', () => {
-		exec(`play start.mp3`)
+	
         const time_connecting = moment.tz('Asia/Jakarta').format('HH:mm:ss')
         console.log(color('[DOGGO]','aqua'), color("Connecting bro...", "yellow"))
 		
@@ -235,6 +235,39 @@ const botNumber = Lxa.user.jid
   const isAnti = isGroup ? _antilink.includes(from) : false
   const pushname = Lxa.contacts[sender] != undefined ? Lxa.contacts[sender].vname || Lxa.contacts[sender].notify: undefined 
 //---X623-Whatsapp-Bot------------------------------------------------------------------------------------------------------------------------//
+var w1;
+try{
+	var _winner1 = JSON.parse(fs.readFileSync(`./session/winner1.json`));	
+	winner1 = _winner1[0]	//--- xp 
+}catch (err){
+	exec(`rm -rf ./session/winner1.json`)
+    await delay(1000) /// waiting 1 second.
+	fs.appendFile(`./session/winner1.json`, `["1", "...", "..."]`, function (err) {				
+    if (err) throw err;
+  });	
+}
+var w2;
+try{
+	var _winner2 = JSON.parse(fs.readFileSync(`./session/winner2.json`));	
+	winner2 = _winner2[0]	//--- xp 
+}catch (err){
+	exec(`rm -rf ./session/winner2.json`)
+    await delay(1000) /// waiting 1 second.
+	fs.appendFile(`./session/winner2.json`, `["1", "...", "..."]`, function (err) {				
+    if (err) throw err;
+  });	
+}
+var w3;
+try{
+	var _winner3 = JSON.parse(fs.readFileSync(`./session/winner3.json`));	
+	winner3 = _winner3[0]	//--- xp 
+}catch (err){
+	exec(`rm -rf ./session/winner3.json`)
+    await delay(1000) /// waiting 1 second.
+	fs.appendFile(`./session/winner3.json`, `["1", "...", "..."]`, function (err) {				
+    if (err) throw err;
+  });	
+}
 //-- Get all user data
 
 		let money;
@@ -976,11 +1009,11 @@ case 'register':
 
 //--- Devare account message
 case 'devaremyaccount':
-case 'devareaccount':
+case 'deletemyaccount':
 
     if (!isVerify) return reply(userB())
         
-    reply('❌ 𝑃𝑙𝑒𝑎𝑠𝑒 𝑟𝑒𝑎𝑑.\n-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-\n𝐵𝑦 𝑑𝑒𝑙𝑒𝑡𝑖𝑛𝑔 𝑦𝑜𝑢𝑟 𝑎𝑐𝑐𝑜𝑢𝑛𝑡 - 𝑎𝑙𝑙 𝑦𝑜𝑢𝑟 𝑑𝑎𝑡𝑎 𝑤𝑖𝑙𝑙 𝑏𝑒 𝑑𝑒𝑙𝑒𝑡𝑒𝑑 𝑓𝑜𝑟𝑒𝑣𝑒𝑟. 𝑀𝑜𝑛𝑒𝑦, 𝑋𝑝, 𝑁𝑎𝑚𝑒 𝑒𝑡𝑐 𝑎𝑙𝑙 𝑔𝑜𝑛𝑒. 𝐼𝑓 𝑦𝑜𝑢 𝑎𝑟𝑒 𝑠𝑢𝑟𝑒 𝑎𝑏𝑜𝑢𝑡 𝑦𝑜𝑢𝑟 𝑑𝑒𝑐𝑖𝑠𝑠𝑖𝑜𝑛, 𝑝𝑙𝑒𝑎𝑠𝑒 𝑡𝑦𝑝𝑒 .𝑖𝑎𝑚𝑠𝑢𝑟𝑒')
+    reply('❌ 𝑃𝑙𝑒𝑎𝑠𝑒 𝑟𝑒𝑎𝑑.\n-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-\n𝐵𝑦 𝑑𝑒𝑙𝑒𝑡𝑖𝑛𝑔 𝑦𝑜𝑢𝑟 𝑎𝑐𝑐𝑜𝑢𝑛𝑡 - 𝑎𝑙𝑙 𝑦𝑜𝑢𝑟 𝑑𝑎𝑡𝑎 𝑤𝑖𝑙𝑙 𝑏𝑒 𝑑𝑒𝑙𝑒𝑡𝑒𝑑 𝑓𝑜𝑟𝑒𝑣𝑒𝑟. 𝑀𝑜𝑛𝑒𝑦, 𝑋𝑝, 𝑁𝑎𝑚𝑒 𝑒𝑡𝑐 𝑎𝑙𝑙 𝑔𝑜𝑛𝑒. 𝐼𝑓 𝑦𝑜𝑢 𝑎𝑟𝑒 𝑠𝑢𝑟𝑒 𝑎𝑏𝑜𝑢𝑡 𝑦𝑜𝑢𝑟 𝑑𝑒𝑐𝑖𝑠𝑠𝑖𝑜𝑛, 𝑝𝑙𝑒𝑎𝑠𝑒 𝑡𝑦𝑝𝑒\n\n.iamsure <yourPassword>\n\nif you havent set a password, type .iamsure')
 
 break            
 
@@ -988,7 +1021,8 @@ break
 case 'iamsure':
 
 	if (!isVerify) return reply(userB())
-				
+	if (args[1] === password ) {
+
             //-- Devare from registered file
 
 			fs.readFile(`./data/bot/user.json`, 'utf-8', function(err, data) {
@@ -1005,6 +1039,11 @@ case 'iamsure':
             reply('☑️ 𝑌𝑜𝑢𝑟 𝑎𝑐𝑐𝑜𝑢𝑛𝑡 𝑤𝑎𝑠 𝑑𝑒𝑙𝑒𝑡𝑒𝑑.')			
 			await delay(2000) /// waiting 1 second.
 			process.exit(1);
+
+		}
+		else { 
+			reply(`${design} wrong password.`)
+		}
 	break
 
 //---X623-Whatsapp-Bot------------------------------------------------------------------------------------------------------------------------//
