@@ -3219,7 +3219,7 @@ case 'password':
 var now = args[0];
 fs.readFile(`./data/users/${sender.split("@")[0]}/password.json`, 'utf-8', function(err, data) {
     if (err) throw err;
-    var newValue = data.replace(`${email}`, now);
+    var newValue = data.replace(`${password}`, now);
     fs.writeFile(`./data/users/${sender.split("@")[0]}/password.json`, newValue, 'utf-8', function(err, data) {
         if (err) throw err;
     })
