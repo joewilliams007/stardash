@@ -1042,7 +1042,7 @@ case 'iamsure':
 
 		}
 		else { 
-			reply(`${design} wrong password.`)
+			reply(`${design} wrong password.\n-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-\nif you havent set a password yet, please type .password (newpassword)`)
 		}
 	break
 
