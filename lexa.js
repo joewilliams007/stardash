@@ -601,6 +601,9 @@ switch(is) { case '.symbol': reply(`✅ 𝑌𝑜𝑢 𝑐𝑎𝑛 𝑐ℎ𝑜�
 switch(is) { case '.mimi': reply('I wana live in Korea😭💜') 
 reply('Taes wifey💜💍✨😫') 
 reply('🤕💜')}
+switch(is) { case '.john': reply("Joe's babe ❤️❤️❤️") 
+reply('Has a big dick 𓂸') 
+reply('Fun fact: Met Joe in real life')}
 
 switch(is) {
 case '.tos':
