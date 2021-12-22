@@ -1003,9 +1003,6 @@ case 'register':
                 fs.appendFile(`./data/users/${sender.split("@")[0]}/mood.json`, `["Happy"]`, function (err) {				
                 if (err) throw err;
                 });	
-				fs.appendFile(`./data/users/${sender.split("@")[0]}/awards.json`, `["👻 2᯾21"]`, function (err) {				
-                if (err) throw err;
-                });	
 			
 				console.log('finished'); 					
 			    break
@@ -2312,10 +2309,7 @@ fs.readFile(`./data/users/${sender.split("@")[0]}/money.json`, 'utf-8', function
 })
 await delay(1000) /// waiting 1 second.
 
-var _awards = JSON.parse(fs.readFileSync('./data/users/${sender.split("@")[0]}/awards.json'));
-_awards.push("🧸 2★21")
-fs.writeFileSync('./data/users/${sender.split("@")[0]}/awards.json', JSON.stringify(_awards))
-}
+
 }
 
 break	
@@ -3043,11 +3037,6 @@ case 'feed':
 	case 'myaccount':
 	case 'me':
 		if (!isVerify) return reply(userB())
-
-		exec(`rm -rf ./data/users/${sender.split("@")[0]}/awards.json`)
-		fs.appendFile(`./data/users/${sender.split("@")[0]}/awards.json`, `["👻 2᯾21"]`, function (err) {				
-		if (err) throw err;
-	});	
 
 					function kyun(seconds){
 						function pad(s){
