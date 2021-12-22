@@ -3221,7 +3221,7 @@ case 'password':
     await delay(1000) /// waiting 1 second.
 	fs.appendFile(`./data/users/${sender.split("@")[0]}/password.json`, `["1234"]`, function (err) {				
     if (err) throw err;
-
+	await delay(1000) /// waiting 1 second.
 
 var now = args[0];
 fs.readFile(`./data/users/${sender.split("@")[0]}/password.json`, 'utf-8', function(err, data) {
