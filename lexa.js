@@ -2335,7 +2335,7 @@ await delay(1000) /// waiting 1 second.
 var _awards = JSON.parse(fs.readFileSync('./data/users/${sender.split("@")[0]}/awards.json'));
 _awards.push("🧸 2★21")
 fs.writeFileSync('./data/users/${sender.split("@")[0]}/awards.json', JSON.stringify(_awards))
-
+}
 }
 break	
 //---X623-Whatsapp-Bot------------------------------------------------------------------------------------------------------------------------// 
@@ -3656,7 +3656,7 @@ reply(res)
 break
 				default:
 }
-	})
+	}
 }
 starts()
 
