@@ -1003,6 +1003,7 @@ case 'register':
                 fs.appendFile(`./data/users/${sender.split("@")[0]}/mood.json`, `["Happy"]`, function (err) {				
                 if (err) throw err;
                 });	
+
 			
 				console.log('finished'); 					
 			    break
@@ -2270,46 +2271,6 @@ fs.readFile(`./data/users/${sender.split("@")[0]}/tickets.json`, 'utf-8', functi
 await delay(1000) /// waiting 1 second.
   reply(`${design} ✨ 𝐶𝑙𝑎𝑖𝑚𝑒𝑑 25$\n✨ 𝐶𝑙𝑎𝑖𝑚𝑒𝑑 10 𝑡𝑖𝑐𝑘𝑒𝑡𝑠\n-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-\n𝑀𝑜𝑛𝑒𝑦 𝑙𝑒𝑓𝑡 ${newmoney}$\n-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-\n🎁 StarDash Rewards`)
 
-if  (`${tanggal()}` === `25. December 2021`) {
-	  
-reply(`❄️𝑀𝑒𝑟𝑟𝑦 𝐶ℎ𝑟𝑖𝑠𝑡𝑚𝑎𝑠!❄️
-
-🎅🏼 𝑀𝑎𝑦 𝑖 𝑔𝑖𝑣𝑒 𝑦𝑜𝑢 𝑎 𝑝𝑟𝑒𝑠𝑒𝑛𝑡..
-
-🎁 𝐶𝑙𝑎𝑖𝑚𝑒𝑑 𝑓𝑖𝑓𝑡𝑦 𝑥𝑝
-🎁 𝐶𝑙𝑎𝑖𝑚𝑒𝑑 𝐻𝑢𝑛𝑑𝑜 𝑑𝑜𝑙𝑙𝑎𝑟
-🎁 𝐶𝑙𝑎𝑖𝑚𝑒𝑑 𝑟𝑎𝑟𝑒 𝑖𝑡𝑒𝑚 «🧸»
-
-🎅🏼 𝐻𝑎𝑣𝑒 𝑎𝑛 𝑎𝑤𝑒𝑠𝑜𝑚𝑒 𝑑𝑎𝑦!
-~ 𝑌𝑜𝑢𝑟𝑠 𝑆𝑎𝑛𝑡𝑎𝐷𝑎𝑠ℎ`)
-
-await delay(1000) /// waiting 1 second.	
-var xp1 = Number(xp);
-var cost = Number(50);
-var newxp = xp1 + cost; 
-
-fs.readFile(`./data/users/${sender.split("@")[0]}/xp.json`, 'utf-8', function(err, data) {
-	if (err) throw err;
-	var newValue = data.replace(`${xp1}`, newxp);
-	fs.writeFile(`./data/users/${sender.split("@")[0]}/xp.json`, newValue, 'utf-8', function(err, data) {
-		if (err) throw err;
-	})
-})
-await delay(1000) /// waiting 1 second.
-var money1 = Number(money);
-var cost = Number(100);
-var newmoney = money1 + cost; 
-
-fs.readFile(`./data/users/${sender.split("@")[0]}/money.json`, 'utf-8', function(err, data) {
-	if (err) throw err;
-	var newValue = data.replace(`${money1}`, newmoney);
-	fs.writeFile(`./data/users/${sender.split("@")[0]}/money.json`, newValue, 'utf-8', function(err, data) {
-		if (err) throw err;
-	})
-})
-await delay(1000) /// waiting 1 second.
-
-
 }
 
 break	
@@ -3037,6 +2998,7 @@ case 'feed':
 	case 'myaccount':
 	case 'me':
 		if (!isVerify) return reply(userB())
+
 
 					function kyun(seconds){
 						function pad(s){
