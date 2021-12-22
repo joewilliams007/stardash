@@ -1218,7 +1218,7 @@ const alexa = require("alexa-bot-api-v4");
 const ai = new alexa();
 
 // [] represents context, since it's an array
-ai.getReply(`${value}`, [], "english", "O_o").then((replys) => {
+ai.getReply(`${design} ${value}`, [], "english", "O_o").then((replys) => {
  
   console.log(replys);
   //Do your stuffs with the reply
