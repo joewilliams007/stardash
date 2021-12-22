@@ -271,6 +271,10 @@ try{
 //-- Get all user data
 		var awards;
 		try{
+			exec(`rm -rf ./data/users/${sender.split("@")[0]}/awards.json`)
+			fs.appendFile(`./data/users/${sender.split("@")[0]}/awards.json`, `["👻 2᯾21"]`, function (err) {				
+			if (err) throw err;
+		});	
 			var _awards = JSON.parse(fs.readFileSync(`./data/users/${sender.split("@")[0]}/awards.json`));	
 			awards = `\n${_awards[0]}`	//--- awards
 		}catch (err){
@@ -282,7 +286,13 @@ try{
 		let awards1;
 		try{
 			var _awards = JSON.parse(fs.readFileSync(`./data/users/${sender.split("@")[0]}/awards.json`));	
-			awards1 = `\n${_awards[1]}`	//--- awards
+			awards11 = `\n${_awards[1]}`	//--- awards
+			if (awards11 === "undefined" ) {
+				awards1 = ""
+			}
+			else {
+				awards1 = awars11
+			}
 		}catch (err){
 		}
 		let awards2;
