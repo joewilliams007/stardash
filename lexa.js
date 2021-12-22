@@ -602,7 +602,7 @@ switch(is) { case '.mimi': reply('I wana live in Korea😭💜')
 reply('Taes wifey💜💍✨😫') 
 reply('🤕💜')}
 switch(is) { case '.john': reply("Joe's babe ❤️❤️❤️") 
-reply('Has a big dick 𓂸') 
+reply('Has a big 𓂸') 
 reply('Fun fact: Met Joe in real life')}
 
 switch(is) {
