@@ -2036,8 +2036,8 @@ case 'nani':
 	const images_api = new API() 
 			
 			images_api.sfw.hug().then(response => {
-				
-				Lxa.sendMessage(from, response.image, image {quoted:mek})
+             buffer = response.image
+				Lxa.sendMessage(from, buffer, image {quoted:mek})
 			}) 
 
 			exec(`ffmpeg -i nani.gif  nani.webp`, (err) => {
