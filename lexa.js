@@ -2035,7 +2035,7 @@ case 'nani':
 			const Anime_Images = require('anime-images-api')
 			const API = new Anime_Images()
 			
-			(async () => {
+			;(async () => {
 				let image = await API.sfw.hentai();
 				image.download('images', 'nani') //Path, Filename
 				.then(() => console.log('Finished Downloading'));
