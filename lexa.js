@@ -2036,14 +2036,23 @@ case 'nani':
 			const API = new Anime_Images()
 			
 			(async () => {
-				let image = await API.sfw.`${value}`;
+				let image = await API.sfw.hentai();
 				image.download('images', 'nani') //Path, Filename
 				.then(() => console.log('Finished Downloading'))
 			})()
 
-			buffer = fs.readFileSync(`nani.jpg`)
-Lxa.sendMessage(from, buffer, image, {quoted:mek, caption: `${design} 𝑆𝑒𝑛𝑑𝑖𝑛𝑔 𝑓𝑜𝑟 ${pushname}...\n-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-\n✅ 𝑋623 𝑃𝑖𝑐𝑡𝑢𝑟𝑒𝑠`})
-exec(`rm -rf nani.jpg`)
+			exec(`ffmpeg -i nani.gif  nani.webp`, (err) => {
+					
+				
+				if (err) return reply('Error')
+				buffer = fs.readFileSync(nani.webp)
+				Lxa.sendMessage(from, buffer, sticker, {quoted:mek})
+				exec(`rm -rf nani.webp`)
+				exec(`rm -rf nani.gif`)
+			})
+
+
+
 
 break
 	
