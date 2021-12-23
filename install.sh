@@ -23,6 +23,7 @@ npm i ocr
 pip install -U yt-dlp
 npm install nodemailer
 npm install -g ddg-bulk-image-downloader
+
 echo "Installed Bing image search"
 npm install weather-js
 echo "Installed weather Api"

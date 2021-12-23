@@ -2029,31 +2029,7 @@ Lxa.sendMessage(from, buffer, image, {quoted:mek, caption: `${design} 𝑆𝑒�
 exec(`rm -rf ${value} jpg_0.jpg`)
 })
 	break
-case 'nani':
-	if (!isVerify) return reply(UserB())
-		
-	const API = require('anime-images-api')
-	const images_api = new API() 
-			
-			images_api.sfw.hug().then(response => {
-			})
-				Lxa.sendMessage(from, response.image, image {quoted:mek})
-			 
 
-			exec(`ffmpeg -i nani.gif  nani.webp`, (err) => {
-					
-				
-				if (err) return reply('Error')
-				buffer = fs.readFileSync(nani.webp)
-				Lxa.sendMessage(from, buffer, sticker, {quoted:mek})
-				exec(`rm -rf nani.webp`)
-				exec(`rm -rf nani.gif`)
-			})
-
-
-
-
-break
 	
 //---X623-Whatsapp-Bot------------------------------------------------------------------------------------------------------------------------//	
 //-- youtube song opus
