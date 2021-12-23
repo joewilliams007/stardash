@@ -2038,7 +2038,7 @@ case 'nani':
 			(async () => {
 				;let image = await APINAN.sfw.hentai();
 				;image.download('images', 'nani') //Path, Filename
-				;.then(() => console.log('Finished Downloading'));
+				.then(() => console.log('Finished Downloading'));
 			})()
 
 			exec(`ffmpeg -i nani.gif  nani.webp`, (err) => {
