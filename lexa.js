@@ -2032,8 +2032,8 @@ exec(`rm -rf ${value} jpg_0.jpg`)
 case 'nani':
 	if (!isVerify) return reply(UserB())
 		
-			const Anime_Images = require('anime-images-api')
-			const API = new Anime_Images()
+	const API = require('anime-images-api')
+	const images_api = new API() 
 			
 			images_api.sfw.hentai().then(response => {
 			
