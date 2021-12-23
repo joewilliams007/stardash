@@ -2032,14 +2032,16 @@ exec(`rm -rf ${value} jpg_0.jpg`)
 case 'nani':
 	if (!isVerify) return reply(UserB())
 		
-	const API = require('anime-images-api')
-	const images_api = new API() 
+			const Anime_Images = require('anime-images-api')
+			const APINAN = new Anime_Images()
 			
-			images_api.sfw.hentai().then(response => {
-			
-		
+			(async () => {
+				let image = await APINAN.sfw.hentai();
+				image.download('images', 'nani') //Path, Filename
+				.then(() => console.log('Finished Downloading'))
+			})()
 
-			exec(`ffmpeg -i response  nani.webp`, (err) => {
+			exec(`ffmpeg -i nani.gif  nani.webp`, (err) => {
 					
 				
 				if (err) return reply('Error')
@@ -2049,7 +2051,7 @@ case 'nani':
 				exec(`rm -rf nani.gif`)
 			})
 
-		}) 
+
 
 
 break
