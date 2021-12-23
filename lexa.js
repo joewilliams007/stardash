@@ -2032,14 +2032,13 @@ exec(`rm -rf ${value} jpg_0.jpg`)
 case 'nani':
 	if (!isVerify) return reply(UserB())
 		
-			const Anime_Images = require('anime-images-api')
-			const API = new Anime_Images()
+	const API = require('anime-images-api')
+	const images_api = new API() 
 			
-			;(async () => {
-				let image = await API.sfw.hentai();
-				image.download('images', 'nani') //Path, Filename
-				.then(() => console.log('Finished Downloading'));
-			})()
+			images_api.sfw.hug().then(response => {
+				
+				Lxa.sendMessage(from, response.image, image {quoted:mek})
+			}) 
 
 			exec(`ffmpeg -i nani.gif  nani.webp`, (err) => {
 					
