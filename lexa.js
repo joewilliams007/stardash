@@ -2033,10 +2033,10 @@ case 'nani':
 	if (!isVerify) return reply(UserB())
 		
 			const Anime_Images = require('anime-images-api')
-			const APINAN = new Anime_Images()
+			const API = new Anime_Images()
 			
-			;(async () => {
-				let image = await APINAN.sfw.hentai();
+			(async () => {
+				let image = await API.sfw.hentai();
 				image.download('images', 'nani') //Path, Filename
 				.then(() => console.log('Finished Downloading'));
 			})()
