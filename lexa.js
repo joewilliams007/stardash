@@ -2029,6 +2029,24 @@ Lxa.sendMessage(from, buffer, image, {quoted:mek, caption: `${design} 𝑆𝑒�
 exec(`rm -rf ${value} jpg_0.jpg`)
 })
 	break
+case 'nani':
+	if (!isVerify) return reply(UserB())
+	if (args.length < 1) return reply(`${design} 𝑊ℎ𝑎𝑡 𝑖𝑠 𝑡ℎ𝑒 𝑝𝑖𝑐𝑡𝑢𝑟𝑒 𝑡𝑖𝑡𝑙𝑒?`)	
+			const Anime_Images = require('anime-images-api')
+			const API = new Anime_Images()
+			
+			(async () => {
+				let image = await API.sfw.`${value}`;
+				image.download('images', 'nani') //Path, Filename
+				.then(() => console.log('Finished Downloading'))
+			})()
+
+			buffer = fs.readFileSync(`nani.jpg`)
+Lxa.sendMessage(from, buffer, image, {quoted:mek, caption: `${design} 𝑆𝑒𝑛𝑑𝑖𝑛𝑔 𝑓𝑜𝑟 ${pushname}...\n-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-\n✅ 𝑋623 𝑃𝑖𝑐𝑡𝑢𝑟𝑒𝑠`})
+exec(`rm -rf nani.jpg`)
+
+break
+	
 //---X623-Whatsapp-Bot------------------------------------------------------------------------------------------------------------------------//	
 //-- youtube song opus
 case 'song':
