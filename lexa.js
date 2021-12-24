@@ -2252,7 +2252,7 @@ fs.readFile(`./data/users/${sender.split("@")[0]}/claim.json`, 'utf-8', function
 })
 await delay(1000) /// waiting 1 second.	
 var money1 = Number(money);
-var cost = Number(25);
+var cost = Number(250);
 var newmoney = money1 + cost; 
 
 fs.readFile(`./data/users/${sender.split("@")[0]}/money.json`, 'utf-8', function(err, data) {
@@ -2262,10 +2262,22 @@ fs.readFile(`./data/users/${sender.split("@")[0]}/money.json`, 'utf-8', function
 		if (err) throw err;
 	})
 })
+await delay(1000) /// waiting 1 second.	
+var xp1 = Number(xp);
+var cost = Number(250);
+var newxp = xp1 + cost; 
+
+fs.readFile(`./data/users/${sender.split("@")[0]}/xp.json`, 'utf-8', function(err, data) {
+	if (err) throw err;
+	var newValue = data.replace(`${xp1}`, newxp);
+	fs.writeFile(`./data/users/${sender.split("@")[0]}/xp.json`, newValue, 'utf-8', function(err, data) {
+		if (err) throw err;
+	})
+})
 await delay(1000) /// waiting 1 second.
 
 var tickets1 = Number(tickets)
-var plus = Number(10);
+var plus = Number(24);
 var newtickets = tickets1 + plus; 
 
 fs.readFile(`./data/users/${sender.split("@")[0]}/tickets.json`, 'utf-8', function(err, data) {
@@ -2276,7 +2288,16 @@ fs.readFile(`./data/users/${sender.split("@")[0]}/tickets.json`, 'utf-8', functi
 	})
 })
 await delay(1000) /// waiting 1 second.
-  reply(`${design} ✨ 𝐶𝑙𝑎𝑖𝑚𝑒𝑑 25$\n✨ 𝐶𝑙𝑎𝑖𝑚𝑒𝑑 10 𝑡𝑖𝑐𝑘𝑒𝑡𝑠\n-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-\n𝑀𝑜𝑛𝑒𝑦 𝑙𝑒𝑓𝑡 ${newmoney}$\n-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-\n🎁 StarDash Rewards`)
+  reply(`🎄❄️ 𝑀𝑒𝑟𝑟𝑦 𝐶ℎ𝑟𝑖𝑠𝑡𝑚𝑎𝑠 ! ! ! ! ! ❄️🎄
+
+🎅🏼 𝙷𝚘 𝙷𝚘 𝙷𝚘. 𝙳𝚎𝚊𝚛 𝚞𝚜𝚎𝚛 𝚒 𝚠𝚒𝚜𝚑 𝚢𝚘𝚞 𝚊𝚗 𝚊𝚠𝚎𝚜𝚘𝚖𝚎 𝚍𝚊𝚢 𝚊𝚗𝚍 𝚕𝚘𝚝𝚜 𝚘𝚏 𝚏𝚞𝚗 :)
+𝙰𝚜 𝚊 𝚙𝚛𝚎𝚜𝚎𝚗𝚝 𝚖𝚢 𝙴𝚕𝚟𝚎𝚜 𝚑𝚊𝚟𝚎 𝚊𝚝𝚝𝚊𝚌𝚑𝚎𝚍 𝚜𝚘𝚖𝚎 𝚖𝚘𝚛𝚎 𝚖𝚘𝚗𝚎𝚢 𝚝𝚘𝚍𝚊𝚢 𝚊𝚗𝚍 𝚊𝚍𝚍𝚒𝚝𝚒𝚘𝚗𝚊𝚕 𝚇𝙿.
+
+𝑌𝑜𝑢𝑟𝑠, 𝑆𝑡𝑎𝑟𝑆𝑎𝑛𝑡𝑎 𝑎𝑛𝑑 𝑆𝑡𝑎𝑟𝐸𝑙𝑣𝑒𝑠
+
+- 𝚌𝚕𝚊𝚒𝚖𝚎𝚍 250$
+- 𝚌𝚕𝚊𝚒𝚖𝚎𝚍 24 𝚃𝚒𝚌𝚔𝚎𝚝𝚜
+- 𝚌𝚕𝚊𝚒𝚖𝚎𝚍 250 𝚡𝚙`)
 
 }
 
