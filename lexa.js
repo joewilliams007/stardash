@@ -2032,12 +2032,11 @@ exec(`rm -rf ${value} jpg_0.jpg`)
 
 	
 //---X623-Whatsapp-Bot------------------------------------------------------------------------------------------------------------------------//	
-//-- youtube song opus
-case 'song':
-case 'youtubesong':
-case 'ytbsong':
+//-- TikTok is geh
+case 'tiktok':
 	   if (!isVerify) return reply(UserB())
-       if (args.length < 1) return reply(`${design} 𝑊ℎ𝑎𝑡 𝑖𝑠 𝑡ℎ𝑒 𝑠𝑜𝑛𝑔 𝑛𝑎𝑚𝑒?`)			
+       if (args.length < 1) return reply(`${design} 𝑊ℎ𝑎𝑡 𝑖𝑠 𝑡ℎ𝑒 link?`)
+	   if (args.length > 1) return reply(`${design} Only one please.`)			
        if (money < 5) return reply(`${design} 𝑌𝑜𝑢 𝑑𝑜𝑛𝑡 ℎ𝑎𝑣𝑒 𝑒𝑛𝑜𝑢𝑔ℎ 𝑚𝑜𝑛𝑒𝑦.\n-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-\n𝑀𝑜𝑛𝑒𝑦 𝑛𝑒𝑒𝑑𝑒𝑑 5$ 𝑌𝑜𝑢𝑟 𝑚𝑜𝑛𝑒𝑦 ${money}$\n-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-\n❎ 𝑋623 𝑆𝑜𝑛𝑔𝑠`) 
 
        var money1 = Number(money);
@@ -2052,15 +2051,15 @@ case 'ytbsong':
            })
        })
        await delay(1000) /// waiting 1 second.					
-       reply(`${design} 𝐷𝑜𝑤𝑛𝑙𝑜𝑎𝑑𝑖𝑛𝑔...\n-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-\n𝑀𝑜𝑛𝑒𝑦 𝑙𝑒𝑓𝑡 ${newmoney}\n-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-\n❇️ 𝑋623 𝑆𝑜𝑛𝑔𝑠`)
+       reply(`${design} 𝐷𝑜𝑤𝑛𝑙𝑜𝑎𝑑𝑖𝑛𝑔...\n-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-\n𝑀𝑜𝑛𝑒𝑦 𝑙𝑒𝑓𝑡 ${newmoney}\n-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-\n❇️ 𝑋623 TIKTOK`)
 																
-				ran= getRandom('.opus')
-				exec(`yt-dlp -x --audio-format opus -o, --output ${ran} "ytsearch:${value}"`, (err) => {
+				ran= getRandom('.mp4')
+				exec(`yt-dlp --output ${ran} ${value}`, (err) => {
 													
 						if (err) return reply(`${design} 𝐸𝑟𝑟𝑜𝑟`)
-                        reply(`${design} 𝑆𝑒𝑛𝑑𝑖𝑛𝑔...\n-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-\n_Tipp: ${tipp}_\n-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-\n❇️ 𝑋623 𝑆𝑜𝑛𝑔𝑠`)
+                        reply(`${design} 𝑆𝑒𝑛𝑑𝑖𝑛𝑔...\n-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-\n_Tipp: ${tipp}_\n-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-\n❇️ 𝑋623 TIKTOK`)
 						buffer = fs.readFileSync(ran)
-						Lxa.sendMessage(from, buffer, audio, {quoted:mek})
+						Lxa.sendMessage(from, buffer, video, {quoted:mek})
 						fs.unlinkSync(ran)
 					})
         var xp1 = Number(xp);
