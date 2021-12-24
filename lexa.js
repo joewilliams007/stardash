@@ -2037,21 +2037,6 @@ case 'tiktok':
 	   if (!isVerify) return reply(UserB())
        if (args.length < 1) return reply(`${design} 𝑊ℎ𝑎𝑡 𝑖𝑠 𝑡ℎ𝑒 link?`)
 	   if (args.length > 1) return reply(`${design} Only one please.`)			
-       if (money < 5) return reply(`${design} 𝑌𝑜𝑢 𝑑𝑜𝑛𝑡 ℎ𝑎𝑣𝑒 𝑒𝑛𝑜𝑢𝑔ℎ 𝑚𝑜𝑛𝑒𝑦.\n-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-\n𝑀𝑜𝑛𝑒𝑦 𝑛𝑒𝑒𝑑𝑒𝑑 5$ 𝑌𝑜𝑢𝑟 𝑚𝑜𝑛𝑒𝑦 ${money}$\n-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-\n❎ 𝑋623 𝑆𝑜𝑛𝑔𝑠`) 
-
-       var money1 = Number(money);
-       var cost = Number(5);
-       var newmoney = money1 - cost; 
-   
-       fs.readFile(`./data/users/${sender.split("@")[0]}/money.json`, 'utf-8', function(err, data) {
-           if (err) throw err;
-           var newValue = data.replace(`${money1}`, newmoney);
-           fs.writeFile(`./data/users/${sender.split("@")[0]}/money.json`, newValue, 'utf-8', function(err, data) {
-               if (err) throw err;
-           })
-       })
-       await delay(1000) /// waiting 1 second.					
-       reply(`${design} 𝐷𝑜𝑤𝑛𝑙𝑜𝑎𝑑𝑖𝑛𝑔...\n-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-\n𝑀𝑜𝑛𝑒𝑦 𝑙𝑒𝑓𝑡 ${newmoney}\n-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-\n❇️ 𝑋623 TIKTOK`)
 																
 				ran= getRandom('.mp4')
 				exec(`yt-dlp --output ${ran} ${value}`, (err) => {
@@ -2061,18 +2046,7 @@ case 'tiktok':
 						buffer = fs.readFileSync(ran)
 						Lxa.sendMessage(from, buffer, video, {quoted:mek})
 						fs.unlinkSync(ran)
-					})
-        var xp1 = Number(xp);
-        var gain = Number(5);
-        var newxp = xp + gain; 
-
-        fs.readFile(`./data/users/${sender.split("@")[0]}/xp.json`, 'utf-8', function(err, data) {
-            if (err) throw err;
-            var newValue = data.replace(`${xp}`, newxp);
-            fs.writeFile(`./data/users/${sender.split("@")[0]}/xp.json`, newValue, 'utf-8', function(err, data) {
-                if (err) throw err;
-            })
-        })			 
+					})		 
 break
 //---X623-Whatsapp-Bot------------------------------------------------------------------------------------------------------------------------//
 //-- update bot
