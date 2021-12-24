@@ -2032,23 +2032,49 @@ exec(`rm -rf ${value} jpg_0.jpg`)
 
 	
 //---X623-Whatsapp-Bot------------------------------------------------------------------------------------------------------------------------//	
-//-- TikTok is geh
-case 'tiktok':
+//-- youtube song opus
+case 'song':
+case 'youtubesong':
+case 'ytbsong':
 	   if (!isVerify) return reply(UserB())
-       if (args.length < 1) return reply(`${design} 𝑊ℎ𝑎𝑡 𝑖𝑠 𝑡ℎ𝑒 link?`)
-	   if (args.length > 1) return reply(`${design} Only one please.`)			
+       if (args.length < 1) return reply(`${design} 𝑊ℎ𝑎𝑡 𝑖𝑠 𝑡ℎ𝑒 𝑠𝑜𝑛𝑔 𝑛𝑎𝑚𝑒?`)			
+       if (money < 5) return reply(`${design} 𝑌𝑜𝑢 𝑑𝑜𝑛𝑡 ℎ𝑎𝑣𝑒 𝑒𝑛𝑜𝑢𝑔ℎ 𝑚𝑜𝑛𝑒𝑦.\n-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-\n𝑀𝑜𝑛𝑒𝑦 𝑛𝑒𝑒𝑑𝑒𝑑 5$ 𝑌𝑜𝑢𝑟 𝑚𝑜𝑛𝑒𝑦 ${money}$\n-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-\n❎ 𝑋623 𝑆𝑜𝑛𝑔𝑠`) 
+
+       let money1 = Number(money);
+       let cost = Number(5);
+       let newmoney = money1 - cost; 
+   
+       fs.readFile(`./data/user/${sender.split("@")[0]}/money.json`, 'utf-8', function(err, data) {
+           if (err) throw err;
+           var newValue = data.replace(`${money1}`, newmoney);
+           fs.writeFile(`./data/user/${sender.split("@")[0]}/money.json`, newValue, 'utf-8', function(err, data) {
+               if (err) throw err;
+           })
+       })
+       await delay(1000) /// waiting 1 second.					
+       reply(`${design} 𝐷𝑜𝑤𝑛𝑙𝑜𝑎𝑑𝑖𝑛𝑔...\n-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-\n𝑀𝑜𝑛𝑒𝑦 𝑙𝑒𝑓𝑡 ${newmoney}$\n-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-\n❇️ 𝑋623 𝑆𝑜𝑛𝑔𝑠`)
 																
-				ran= getRandom('.mp4')
-				exec(`yt-dlp --output ${ran} ${value}`, (err) => {
+				ran= getRandom('.opus')
+				exec(`yt-dlp -x --audio-format opus -o, --output ${ran} "ytsearch:${value}"`, (err) => {
 													
 						if (err) return reply(`${design} 𝐸𝑟𝑟𝑜𝑟`)
-                        reply(`${design} 𝑆𝑒𝑛𝑑𝑖𝑛𝑔...\n-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-\n_Tipp: ${tipp}_\n-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-\n❇️ 𝑋623 TIKTOK`)
+                        reply(`${design} 𝑆𝑒𝑛𝑑𝑖𝑛𝑔...\n-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-\n_Tipp: ${tipp}_\n-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-\n❇️ 𝑋623 𝑆𝑜𝑛𝑔𝑠`)
 						buffer = fs.readFileSync(ran)
-						Lxa.sendMessage(from, buffer, video, {quoted:mek})
+						Lxa.sendMessage(from, buffer, audio, {quoted:mek, caption: `https://youtu.be/WeXE1zcA3z8`})
 						fs.unlinkSync(ran)
-					})		 
+					})
+        let xp1 = Number(xp);
+        let gain = Number(5);
+        let newxp = xp + gain; 
+
+        fs.readFile(`./data/user/${sender.split("@")[0]}/xp.json`, 'utf-8', function(err, data) {
+            if (err) throw err;
+            var newValue = data.replace(`${xp}`, newxp);
+            fs.writeFile(`./data/user/${sender.split("@")[0]}/xp.json`, newValue, 'utf-8', function(err, data) {
+                if (err) throw err;
+            })
+        })			 
 break
-//---X623-Whatsapp-Bot------------------------------------------------------------------------------------------------------------------------//
 //-- update bot
 case 'updatebot':
 if (!isVerify) return reply(UserB())		
