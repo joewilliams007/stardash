@@ -2044,10 +2044,10 @@ case 'ytbsong':
        var cost = Number(5);
        var newmoney = money1 - cost; 
    
-       fs.readFile(`./data/user/${sender.split("@")[0]}/money.json`, 'utf-8', function(err, data) {
+       fs.readFile(`./data/users/${sender.split("@")[0]}/money.json`, 'utf-8', function(err, data) {
            if (err) throw err;
            var newValue = data.replace(`${money1}`, newmoney);
-           fs.writeFile(`./data/user/${sender.split("@")[0]}/money.json`, newValue, 'utf-8', function(err, data) {
+           fs.writeFile(`./data/users/${sender.split("@")[0]}/money.json`, newValue, 'utf-8', function(err, data) {
                if (err) throw err;
            })
        })
@@ -2067,10 +2067,10 @@ case 'ytbsong':
 					var gain = Number(5);
 					var newxp = xp + gain; 
 
-        fs.readFile(`./data/user/${sender.split("@")[0]}/xp.json`, 'utf-8', function(err, data) {
+        fs.readFile(`./data/users/${sender.split("@")[0]}/xp.json`, 'utf-8', function(err, data) {
             if (err) throw err;
             var newValue = data.replace(`${xp}`, newxp);
-            fs.writeFile(`./data/user/${sender.split("@")[0]}/xp.json`, newValue, 'utf-8', function(err, data) {
+            fs.writeFile(`./data/users/${sender.split("@")[0]}/xp.json`, newValue, 'utf-8', function(err, data) {
                 if (err) throw err;
             })
         })			 
