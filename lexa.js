@@ -2040,9 +2040,9 @@ case 'ytbsong':
        if (args.length < 1) return reply(`${design} 𝑊ℎ𝑎𝑡 𝑖𝑠 𝑡ℎ𝑒 𝑠𝑜𝑛𝑔 𝑛𝑎𝑚𝑒?`)			
        if (money < 5) return reply(`${design} 𝑌𝑜𝑢 𝑑𝑜𝑛𝑡 ℎ𝑎𝑣𝑒 𝑒𝑛𝑜𝑢𝑔ℎ 𝑚𝑜𝑛𝑒𝑦.\n-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-\n𝑀𝑜𝑛𝑒𝑦 𝑛𝑒𝑒𝑑𝑒𝑑 5$ 𝑌𝑜𝑢𝑟 𝑚𝑜𝑛𝑒𝑦 ${money}$\n-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-\n❎ 𝑋623 𝑆𝑜𝑛𝑔𝑠`) 
 
-       let money1 = Number(money);
-       let cost = Number(5);
-       let newmoney = money1 - cost; 
+       var money1 = Number(money);
+       var cost = Number(5);
+       var newmoney = money1 - cost; 
    
        fs.readFile(`./data/user/${sender.split("@")[0]}/money.json`, 'utf-8', function(err, data) {
            if (err) throw err;
@@ -2063,9 +2063,9 @@ case 'ytbsong':
 						Lxa.sendMessage(from, buffer, audio, {quoted:mek, caption: `https://youtu.be/WeXE1zcA3z8`})
 						fs.unlinkSync(ran)
 					})
-        let xp1 = Number(xp);
-        let gain = Number(5);
-        let newxp = xp + gain; 
+					var xp1 = Number(xp);
+					var gain = Number(5);
+					var newxp = xp + gain; 
 
         fs.readFile(`./data/user/${sender.split("@")[0]}/xp.json`, 'utf-8', function(err, data) {
             if (err) throw err;
