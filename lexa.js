@@ -2250,10 +2250,7 @@ fs.readFile(`./data/users/${sender.split("@")[0]}/claim.json`, 'utf-8', function
 		if (err) throw err;
 	})
 })
-
-reply(`𝙽𝚊𝚗𝚞... 𝙰 𝙶𝙸𝙵𝚃 ? ? ?`)
-
-await delay(2000) /// waiting 1 second.	
+await delay(1000) /// waiting 1 second.	
 var money1 = Number(money);
 var cost = Number(250);
 var newmoney = money1 + cost; 
@@ -2265,11 +2262,7 @@ fs.readFile(`./data/users/${sender.split("@")[0]}/money.json`, 'utf-8', function
 		if (err) throw err;
 	})
 })
-
-reply(`❄️`)
-
-
-await delay(3000) /// waiting 1 second.	
+await delay(1000) /// waiting 1 second.	
 var xp1 = Number(xp);
 var cost = Number(250);
 var newxp = xp1 + cost; 
@@ -2281,9 +2274,7 @@ fs.readFile(`./data/users/${sender.split("@")[0]}/xp.json`, 'utf-8', function(er
 		if (err) throw err;
 	})
 })
-await delay(3000) /// waiting 1 second.
-
-reply(`❄️`)
+await delay(1000) /// waiting 1 second.
 
 var tickets1 = Number(tickets)
 var plus = Number(24);
@@ -2296,11 +2287,10 @@ fs.readFile(`./data/users/${sender.split("@")[0]}/tickets.json`, 'utf-8', functi
 		if (err) throw err;
 	})
 })
-await delay(3000) /// waiting 1 second.
+await delay(1000) /// waiting 1 second.
   reply(`🎄❄️ 𝑀𝑒𝑟𝑟𝑦 𝐶ℎ𝑟𝑖𝑠𝑡𝑚𝑎𝑠 ! ! ! ! ! ❄️🎄
 
-🎅🏼 𝙷𝚘 𝙷𝚘 𝙷𝚘. 𝙳𝚎𝚊𝚛 ${pushname} 𝚒 𝚠𝚒𝚜𝚑 𝚢𝚘𝚞 𝚊𝚗 𝚊𝚠𝚎𝚜𝚘𝚖𝚎 𝚍𝚊𝚢 𝚊𝚗𝚍 𝚕𝚘𝚝𝚜 𝚘𝚏 𝚓𝚘𝚢 :)
-𝚃𝚑𝚊𝚗𝚔 𝚢𝚘𝚞 𝚏𝚘𝚛 𝚌𝚑𝚎𝚌𝚔𝚒𝚗𝚐 𝚒𝚗 𝚍𝚊𝚒𝚕𝚢 𝚘𝚗 𝚂𝚝𝚊𝚛𝙳𝚊𝚜𝚑 𝚊𝚗𝚍 𝚋𝚎𝚒𝚗𝚐 𝚓𝚞𝚜𝚝 𝚜𝚞𝚌𝚑 𝚊𝚗 𝚊𝚠𝚎𝚜𝚘𝚖𝚎 𝚙𝚎𝚛𝚜𝚘𝚗 ! ! !
+🎅🏼 𝙷𝚘 𝙷𝚘 𝙷𝚘. 𝙳𝚎𝚊𝚛 𝚞𝚜𝚎𝚛 𝚒 𝚠𝚒𝚜𝚑 𝚢𝚘𝚞 𝚊𝚗 𝚊𝚠𝚎𝚜𝚘𝚖𝚎 𝚍𝚊𝚢 𝚊𝚗𝚍 𝚕𝚘𝚝𝚜 𝚘𝚏 𝚏𝚞𝚗 :)
 𝙰𝚜 𝚊 𝚙𝚛𝚎𝚜𝚎𝚗𝚝 𝚖𝚢 𝙴𝚕𝚟𝚎𝚜 𝚑𝚊𝚟𝚎 𝚊𝚝𝚝𝚊𝚌𝚑𝚎𝚍 𝚜𝚘𝚖𝚎 𝚖𝚘𝚛𝚎 𝚖𝚘𝚗𝚎𝚢 𝚝𝚘𝚍𝚊𝚢 𝚊𝚗𝚍 𝚊𝚍𝚍𝚒𝚝𝚒𝚘𝚗𝚊𝚕 𝚇𝙿.
 
 𝑌𝑜𝑢𝑟𝑠, 𝑆𝑡𝑎𝑟𝑆𝑎𝑛𝑡𝑎 𝑎𝑛𝑑 𝑆𝑡𝑎𝑟𝐸𝑙𝑣𝑒𝑠
