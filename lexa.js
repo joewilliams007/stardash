@@ -3093,7 +3093,7 @@ api.batteryStatus()
 			var energy = "ϟ"
 			}
 
-			if (Number(stats.status) === "'DISCHARGING'") {
+			if (Number(stats.status) === 'DISCHARGING') {
 				var charge = "‎"
 				}
 				else  {
