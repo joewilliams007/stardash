@@ -3075,7 +3075,30 @@ api.batteryStatus()
      // ...
 	 console.log(stats)
 
-   
+	 
+
+	 if (Number(stats.percentage) > Number(85)) {
+		var energy = "⚡⚡⚡⚡⚡"
+		}
+		else if (Number(stats.percentage) > Number(65)) {
+		  var energy = "⚡⚡⚡⚡"
+		}
+		else if (Number(stats.percentage) > Number(45)) {
+		  var energy = "⚡⚡⚡"
+		  }
+		else if (Number(stats.percentage) > Number(25)) {
+			var energy = "⚡⚡"
+			}
+		else  {
+			var energy = "⚡"
+			}
+
+			if (Number(stats.status) === "DISCHARGING") {
+				var charge = "‎"
+				}
+				else  {
+				  var charge = "🔌"
+				}
 
 	weather.find({search: `${userlocation}`, degreeType: 'c'}, function(err, result) {
 		if(err) console.log(err);
@@ -3128,8 +3151,7 @@ ${design} 𝑀𝑜𝑛𝑒𝑦 » ${money}$
 ${design} 𝑇𝑖𝑐𝑘𝑒𝑡𝑠 » ${tickets}
 ${design} 𝑋𝑝 » ${xp}
 -.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-
-${stats.percentage}
-${stats.status}
+𝐵𝑜𝑡 ${stats.percentage}% ${energy} ${charge}
 -.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-
 📌 ${cityName}
 ${tempSymbol} ${skytext} ${temperature}°C 
