@@ -2999,7 +2999,6 @@ case 'makier':
 			mentions(teks, members_id, true)
 			break				
 //---X623-Whatsapp-Bot------------------------------------------------------------------------------------------------------------------------//
-case 'bat':
 
 var api = require('termux')
 
@@ -3016,9 +3015,7 @@ api.batteryStatus()
 	 console.log(text)
 
    }) 
-console.log(text)
 
-break
    
 //---X623-Whatsapp-Bot------------------------------------------------------------------------------------------------------------------------//   
 //--- Feed
@@ -3065,6 +3062,20 @@ case 'feed':
 						
 						}
 						owner = await fs.readFileSync('./images/menu.jpg').toString('base64')
+
+var api = require('termux')
+
+api.vibrate()
+   .duration(1000)
+   .run()
+
+api.batteryStatus()
+   .run()
+   .then(function (stats) {
+     // ...
+	 console.log(stats)
+
+   
 
 	weather.find({search: `${userlocation}`, degreeType: 'c'}, function(err, result) {
 		if(err) console.log(err);
@@ -3117,6 +3128,9 @@ ${design} 𝑀𝑜𝑛𝑒𝑦 » ${money}$
 ${design} 𝑇𝑖𝑐𝑘𝑒𝑡𝑠 » ${tickets}
 ${design} 𝑋𝑝 » ${xp}
 -.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-
+${stats.percentage}
+${stats.status}
+-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-
 📌 ${cityName}
 ${tempSymbol} ${skytext} ${temperature}°C 
 -.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-
@@ -3136,6 +3150,7 @@ mentionedJid: [nomor]
 replyimg(been1, text, capt, owner)
 
 });
+})
 
 var xpn = Number(xp);
 var upxp = Number(1);
