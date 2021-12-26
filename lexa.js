@@ -3093,11 +3093,11 @@ api.batteryStatus()
 			var energy = "ϟ"
 			}
 
-			if (Number(stats.status) === 'DISCHARGING') {
-				var charge = "‎"
+			if (Number(stats.current) > Number(0)) {
+				var charge = "🔌"
 				}
 				else  {
-				  var charge = "🔌"
+				  var charge = "‎"
 				}
 
 	weather.find({search: `${userlocation}`, degreeType: 'c'}, function(err, result) {
