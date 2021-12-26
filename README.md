@@ -32,6 +32,9 @@ Open App Termux
 > bash install.sh
 > node index
 ```
+!!! please also install termux api. 
+- If you got Termux from playstore get termux api from playstore
+- If you got TErmux from FDROID get termux api from fdroid
 
 Scan Qr Code with ur Whatsapp
 </details>
