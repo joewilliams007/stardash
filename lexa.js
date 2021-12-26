@@ -3078,22 +3078,22 @@ api.batteryStatus()
 	 
 
 	 if (Number(stats.percentage) > Number(85)) {
-		var energy = "⚡⚡⚡⚡⚡"
+		var energy = "ϟ ϟ ϟ ϟ ϟ"
 		}
 		else if (Number(stats.percentage) > Number(65)) {
-		  var energy = "⚡⚡⚡⚡"
+		  var energy = "ϟ ϟ ϟ ϟ"
 		}
 		else if (Number(stats.percentage) > Number(45)) {
-		  var energy = "⚡⚡⚡"
+		  var energy = "ϟ ϟ ϟ"
 		  }
 		else if (Number(stats.percentage) > Number(25)) {
-			var energy = "⚡⚡"
+			var energy = "ϟ ϟ"
 			}
 		else  {
-			var energy = "⚡"
+			var energy = "ϟ"
 			}
 
-			if (Number(stats.status) === "DISCHARGING") {
+			if (Number(stats.status) === "'DISCHARGING'") {
 				var charge = "‎"
 				}
 				else  {
@@ -3151,7 +3151,7 @@ ${design} 𝑀𝑜𝑛𝑒𝑦 » ${money}$
 ${design} 𝑇𝑖𝑐𝑘𝑒𝑡𝑠 » ${tickets}
 ${design} 𝑋𝑝 » ${xp}
 -.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-
-𝐵𝑜𝑡 ${stats.percentage}% ${energy} ${charge}
+𝐵𝑜𝑡 » ${stats.percentage}% ${energy} ${charge}
 -.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-
 📌 ${cityName}
 ${tempSymbol} ${skytext} ${temperature}°C 
