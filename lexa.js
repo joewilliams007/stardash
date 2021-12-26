@@ -3025,6 +3025,10 @@ case 'feed':
 	case 'me':
 		if (!isVerify) return reply(userB())
 
+		exec("termux-notification --image-path ./images/menu.jpg --ongoing")
+
+		
+
 
 					function kyun(seconds){
 						function pad(s){
@@ -3065,9 +3069,6 @@ case 'feed':
 
 var api = require('termux')
 
-api.vibrate()
-   .duration(1000)
-   .run()
 
 api.batteryStatus()
    .run()
