@@ -1,5 +1,6 @@
 #!/usr/bin/bash
 
+apt install termux-api
 apt-get install nodejs
 echo "Installed Node-JS"
 apt-get install libwebp
@@ -14,7 +15,6 @@ apt-get install pip
 apt-get install graphicsmagick
 apt-get install sox pulseaudio
 
-
 wget -O ~/../usr/share/tessdata/ind.traineddata "https://github.com/tesseract-ocr/tessdata/blob/master/ind.traineddata?raw=true"
 
 npm i imgbb-uploader
@@ -23,6 +23,7 @@ npm i ocr
 pip install -U yt-dlp
 npm install nodemailer
 npm install -g ddg-bulk-image-downloader
+npm install --save termux
 
 echo "Installed Bing image search"
 npm install weather-js
