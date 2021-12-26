@@ -2998,7 +2998,29 @@ case 'makier':
 			teks += `★☆☆☆☆☆☆☆☆☆☆☆☆☆☆★`
 			mentions(teks, members_id, true)
 			break				
-//---X623-Whatsapp-Bot------------------------------------------------------------------------------------------------------------------------// 
+//---X623-Whatsapp-Bot------------------------------------------------------------------------------------------------------------------------//
+case 'bat':
+
+var api = require('termux')
+
+if (!api.hasTermux) process.exit(1)
+
+api.vibrate()
+   .duration(1000)
+   .run()
+
+api.batteryStatus()
+   .run()
+   .then(function (text) {
+     // ...
+	 console.log(text)
+
+   }) 
+console.log(text)
+
+break
+   
+//---X623-Whatsapp-Bot------------------------------------------------------------------------------------------------------------------------//   
 //--- Feed
 case 'feed':
 	case 'myfeed':
