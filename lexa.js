@@ -3093,12 +3093,6 @@ api.batteryStatus()
 			var energy = "ϟ"
 			}
 
-			if (Number(stats.current) > Number(0)) {
-				var charge = "🔌"
-				}
-				else  {
-				  var charge = "‎"
-				}
 
 	weather.find({search: `${userlocation}`, degreeType: 'c'}, function(err, result) {
 		if(err) console.log(err);
@@ -3151,8 +3145,6 @@ ${design} 𝑀𝑜𝑛𝑒𝑦 » ${money}$
 ${design} 𝑇𝑖𝑐𝑘𝑒𝑡𝑠 » ${tickets}
 ${design} 𝑋𝑝 » ${xp}
 -.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-
-𝐵𝑜𝑡 » ${stats.percentage}% ${energy} ${charge}
--.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-
 📌 ${cityName}
 ${tempSymbol} ${skytext} ${temperature}°C 
 -.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-
@@ -3160,6 +3152,9 @@ ${tempSymbol} ${skytext} ${temperature}°C
 » .𝑤𝑖𝑛𝑛𝑒𝑟 
 » .ℎ𝑖𝑑𝑒 
 » .𝑑𝑒𝑙𝑒𝑡𝑒𝑎𝑐𝑐𝑜𝑢𝑛𝑡
+-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-
+𝐵𝑜𝑡 » ${stats.percentage}% ${energy} 
+_${stats.status}_
 -.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-
 𝑠𝑖𝑛𝑐𝑒 ${accdate}
 
