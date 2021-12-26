@@ -3000,21 +3000,6 @@ case 'makier':
 			break				
 //---X623-Whatsapp-Bot------------------------------------------------------------------------------------------------------------------------//
 
-var api = require('termux')
-
-if (!api.hasTermux) process.exit(1)
-
-api.vibrate()
-   .duration(1000)
-   .run()
-
-api.batteryStatus()
-   .run()
-   .then(function (text) {
-     // ...
-	 console.log(text)
-
-   }) 
 
    
 //---X623-Whatsapp-Bot------------------------------------------------------------------------------------------------------------------------//   
@@ -3024,8 +3009,6 @@ case 'feed':
 	case 'myaccount':
 	case 'me':
 		if (!isVerify) return reply(userB())
-
-		exec("termux-notification --image-path ./images/menu.jpg --ongoing")
 
 		
 
