@@ -1451,12 +1451,8 @@ reply(`${design} 𝐸𝑑𝑖𝑡𝑖𝑛𝑔 . . . 1/1\n-.-.-.-.-.-.-.-.-.-.-.-
 case 'random':
 
 if (args[0] == "cat"){ var ailink = "https://thiscatdoesnotexist.com/"}
-else if (args[0] == "person"){ var ailink = "https://thispersondoesnotexist.com/"}
-else if (args[0] == "simpson"){ var ailink = "https://www.thisfuckeduphomerdoesnotexist.com/"}
-
-else if (args[0] == "map"){ var ailink = "http://thismapdoesnotexist.com/"}
 else if (args[0] == "horse"){ var ailink = "https://thishorsedoesnotexist.com/"}
-else reply ('Please choose between cat, person, simpson, map, horse')
+else reply ('Please choose between .random cat .random horse')
 
 
 request = require('request'); 
