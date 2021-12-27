@@ -1664,7 +1664,7 @@ const deepai = require('deepai');
 deepai.setApiKey('a8f24b49-28e0-4cd0-84b3-538dfc741932');
  (async function() { 
  var resp = await deepai.callStandardApi("colorizer", { 
- image: fs.createReadStream("/path/to/your/file.jpg"), 
+ image: fs.createReadStream(`${media}`), 
  
  }); 
  console.log(resp); 
