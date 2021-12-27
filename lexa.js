@@ -3010,7 +3010,7 @@ case 'feed':
 	case 'me':
 		if (!isVerify) return reply(userB())
 
-		
+try {		
 
 
 					function kyun(seconds){
@@ -3153,6 +3153,11 @@ replyimg(been1, text, capt, owner)
 });
 })
 
+}catch (err){
+
+reply('Sorry there was an Error. How to resolve:\n\n1. set different location via .location\n\n2. Install Termux Api on Bots phone.\n\nWait until microsoft api works again. ')
+}
+
 var xpn = Number(xp);
 var upxp = Number(1);
 var newxp = upxp + xpn; 
@@ -3212,6 +3217,9 @@ if ((xp > 100) && xp < 500) {
 
 	}
 	else {}
+
+
+
 	break 
 //---X623-Whatsapp-Bot------------------------------------------------------------------------------------------------------------------------// 
 //-- Stickerpack
