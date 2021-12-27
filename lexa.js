@@ -26,15 +26,15 @@ const {
     whatsappID,
     WAConnectionTest,
   } = require('@adiwajshing/baileys');
-//---X623-Whatsapp-Bot------------------------------------------------------------------------------------------------------------------------//
-//-- Functions
+//---X623-Whatsapp-Bot-live---------------------------------------------------------------------------------------------------------------------//
+//-- Functions  .. 
 const {color, bgcolor} = require('./fs/color');
 const {fetchJson, fetchText} = require('./fs/fetcher');
 const {recognize} = require('./fs/ocr');
 const {_wait, getBuffer, h2k, generateMessageID, getGroupAdmins, getRandom, start, success, close } = require('./fs/functions');
 
 
-//-- Modules
+//-- Modules k
 const fs = require('fs');
 const moment = require('moment-timezone');
 const {exec} = require('child_process');
@@ -142,7 +142,7 @@ myMonths = ["Jan","Feb","March","April","May","Jun","Jul","Aug","Sept","Octob","
 			return `${thisDay}, ${day} - ${myMonths[bulan]} - ${year}`
 }
 //---X623-Whatsapp-Bot------------------------------------------------------------------------------------------------------------------------//
-//--Whatsapp start connect
+//--Whatsapp start connect ...
 async function starts() {
 	const Lxa = new WAConnection()
 	Lxa.logger.level = 'warn'
