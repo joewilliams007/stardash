@@ -24,6 +24,7 @@ pip install -U yt-dlp
 npm install nodemailer
 npm install -g ddg-bulk-image-downloader
 npm install --save termux
+npm install deepai
 
 echo "Installed Bing image search"
 npm install weather-js
