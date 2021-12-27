@@ -1658,6 +1658,19 @@ case 'stardash':
 						fs.unlinkSync(ran)
 					})
 					break
+					
+					case'color'
+const deepai = require('deepai'); 
+deepai.setApiKey('a8f24b49-28e0-4cd0-84b3-538dfc741932');
+ (async function() { 
+ var resp = await deepai.callStandardApi("colorizer", { 
+ image: fs.createReadStream("/path/to/your/file.jpg"), 
+ 
+ }); 
+ console.log(resp); 
+ 
+ })()
+ break
 //-- Speed
 case 'speed':
 case 'fast':
