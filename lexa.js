@@ -1446,6 +1446,27 @@ reply(`${design} 𝐸𝑑𝑖𝑡𝑖𝑛𝑔 . . . 1/1\n-.-.-.-.-.-.-.-.-.-.-.-
 						fs.unlinkSync(ran)
 					})
 					break					
+//-- Random inages
+
+case 'randomcat':
+
+var Scraper = require('image-scraper');
+
+var scraper = new Scraper('https://apod.nasa.gov/apod/astropix.htmlI');
+
+ 
+
+scraper.scrape(function(image) { 
+
+    image.save();
+buffer = fs.readFileSync(image)
+	Lxa.sendMessage(from, buffer, image, {quoted:mek, caption: `${design} This Doesnt Exist\n-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-\n✅ :)`})
+});
+
+
+break
+
+
 
 //-- Mirror
 case 'mirror':
