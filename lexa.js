@@ -1450,19 +1450,19 @@ reply(`${design} 𝐸𝑑𝑖𝑡𝑖𝑛𝑔 . . . 1/1\n-.-.-.-.-.-.-.-.-.-.-.-
 
 case 'randomcat':
 
-var Scraper = require('image-scraper');
 
-var scraper = new Scraper('https://en.m.wikipedia.org/wiki/Pikachu');
-
- 
-
-scraper.scrape(function(image) { 
-
-    image.save();
-buffer = fs.readFileSync(image)
-	Lxa.sendMessage(from, buffer, image, {quoted:mek, caption: `${design} This Doesnt Exist\n-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-\n✅ :)`})
-});
-
+request = require('request'); 
+ var download = function(uri, filename, callback){ request.head(uri, function(err, res, body){ 
+ console.log('content-type:', res.headers['content-type']); 
+ console.log('content-length:', res.headers['content-length']); request(uri).pipe(fs.createWriteStream(filename)).on('close', callback); 
+ 
+ }); 
+ 
+ };
+ download(`https://thiscatdoesnotexist.com/`, 'output.jpg', function(){ 
+ console.log('done'); 
+ 					buffer = fs.readFileSync('output.jpg')
+						Lxa.sendMessage(from, buffer, image, {quoted:mek, caption: `${design} This Doesnt Exist\n-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-\n✅ :)`})
 
 break
 
@@ -1681,6 +1681,7 @@ case 'stardash':
 					break
 					
 					case'color':
+					case'colour':
 					encmedia = JSON.parse(JSON.stringify(mek).replace('quotedM','m')).message.extendedTextMessage.contextInfo
 media = await Lxa.downloadAndSaveMediaMessage(encmedia)
 					
