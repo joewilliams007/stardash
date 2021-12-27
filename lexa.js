@@ -1463,7 +1463,7 @@ request = require('request');
  console.log('done'); 
  					buffer = fs.readFileSync('output.jpg')
 						Lxa.sendMessage(from, buffer, image, {quoted:mek, caption: `${design} This Doesnt Exist\n-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-\n✅ :)`})
-
+});
 break
 
 
