@@ -1452,7 +1452,7 @@ case 'randomcat':
 
 var Scraper = require('image-scraper');
 
-var scraper = new Scraper('https://thiscatdoesnotexist.com/');
+var scraper = new Scraper('https://en.m.wikipedia.org/wiki/Pikachu');
 
  
 
