@@ -1661,7 +1661,7 @@ case 'stardash':
 					
 					case'color':
 					encmedia = JSON.parse(JSON.stringify(mek).replace('quotedM','m')).message.extendedTextMessage.contextInfo
-					media = await Lxa.downloadAndSaveMediaMessage(encmedia)
+media = await Lxa.downloadAndSaveMediaMessage(encmedia)
 					
 const deepai = require('deepai'); 
 deepai.setApiKey('a8f24b49-28e0-4cd0-84b3-538dfc741932');
@@ -1672,6 +1672,19 @@ deepai.setApiKey('a8f24b49-28e0-4cd0-84b3-538dfc741932');
  }); 
  console.log(resp); 
  
+ request = require('request'); 
+ var download = function(uri, filename, callback){ request.head(uri, function(err, res, body){ 
+ console.log('content-type:', res.headers['content-type']); 
+ console.log('content-length:', res.headers['content-length']); request(uri).pipe(fs.createWriteStream(filename)).on('close', callback); 
+ 
+ }); 
+ 
+ }; 
+ download(`${resp.output_url}`, 'output.jpg', function(){ 
+ console.log('done'); 
+ 					buffer = fs.readFileSync('output.jpg')
+						Lxa.sendMessage(from, buffer, image, {quoted:mek})
+ });
  })()
  break
 //-- Speed
