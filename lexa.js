@@ -1448,7 +1448,15 @@ reply(`${design} 𝐸𝑑𝑖𝑡𝑖𝑛𝑔 . . . 1/1\n-.-.-.-.-.-.-.-.-.-.-.-
 					break					
 //-- Random inages
 
-case 'randomcat':
+case 'random':
+
+if (args[0] == "cat"){ var ailink = "https://thiscatdoesnotexist.com/"}
+else if (args[0] == "person"){ var ailink = "https://thispersondoesnotexist.com/"}
+else if (args[0] == "simpson"){ var ailink = "https://www.thisfuckeduphomerdoesnotexist.com/"}
+
+else if (args[0] == "map"){ var ailink = "http://thismapdoesnotexist.com/"}
+else if (args[0] == "horse"){ var ailink = "https://thishorsedoesnotexist.com/"}
+else reply ('Please choose between cat, person, simpson, map, horse')
 
 
 request = require('request'); 
@@ -1459,7 +1467,7 @@ request = require('request');
  }); 
  
  };
- download(`https://thiscatdoesnotexist.com/`, 'output.jpg', function(){ 
+ download(`${ailink}`, 'output.jpg', function(){ 
  console.log('done'); 
  					buffer = fs.readFileSync('output.jpg')
 						Lxa.sendMessage(from, buffer, image, {quoted:mek, caption: `${design} This Doesnt Exist\n-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-\n✅ :)`})
