@@ -3679,12 +3679,8 @@ break
 
 case "remindme":
 case "reminder":
-try{
+
 	reply(reminder.set(sender.split('@')[0],args,value));
-	}
-	catch (err) {
-	    reply ('Please use \n.remindme in 0:01\n.remindme today 12:30')
-	    }
 	
 	break
 
