@@ -33,6 +33,14 @@ const {fetchJson, fetchText} = require('./fs/fetcher');
 const {recognize} = require('./fs/ocr');
 const {_wait, getBuffer, h2k, generateMessageID, getGroupAdmins, getRandom, start, success, close } = require('./fs/functions');
 
+//---X623-Whatsapp-Bot------------------------------------------------------------------------------------------------------------------------//
+
+//REMINDER PLUGIN LADEN.......s
+const reminder = require("./_tools/reminder")
+reminder.load()
+
+//---X623-Whatsapp-Bot------------------------------------------------------------------------------------------------------------------------//
+
 
 //-- Modules k
 const fs = require('fs');
@@ -465,14 +473,6 @@ try{
 "fileLength": "201809",
 "jpegThumbnail": `${rep2}` } } }})
       }			
-
-//---X623-Whatsapp-Bot------------------------------------------------------------------------------------------------------------------------//
-
-//REMINDER PLUGIN LADEN.......s
-const reminder = require("./_tools/reminder")
-reminder.load()
-
-//---X623-Whatsapp-Bot------------------------------------------------------------------------------------------------------------------------//
 
 //--MessageType
 const isMedia = (type === 'imageMessage' || type === 'videoMessage')
