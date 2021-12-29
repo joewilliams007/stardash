@@ -3682,8 +3682,8 @@ case "reminder":
 
 	reply(reminder.set(sender.split('@')[0],args,value));
 	
-	break
-
+break
+	
 //---X623-Whatsapp-Bot------------------------------------------------------------------------------------------------------------------------// 
 
 case 'return':
