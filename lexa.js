@@ -610,9 +610,9 @@ reply('Met John in Real Life 🥵💚')}
 
 switch(is) {
 case '.tos':
-reply(`☑️ 𝑇𝑒𝑟𝑚𝑠 𝑜𝑓 𝑆𝑒𝑟𝑣𝑖𝑐𝑒\n- - - - - - - - - - - - - - - - - -\n» What is X623?\n
+reply(`☑️ 𝑇𝑒𝑟𝑚𝑠 𝑜𝑓 𝑆𝑒𝑟𝑣𝑖𝑐𝑒\n- - - - - - - - - - - - - - - - - -\n⌖ What is X623?\n
 X623 is a Bot which has many types of usefull commands and fun games. It is coded by the developer joewilliams007 whom you can find on Github
-\n» What happens when i register?\n\nWhen you register to our Bot, an Account file is created. At the start it includes:\n
+\n⌖ What happens when i register?\n\nWhen you register to our Bot, an Account file is created. At the start it includes:\n
 • Phone Number
 • Pushname
 • Account creation date
@@ -674,7 +674,7 @@ ${design} .settings
 ${design} .admin
 ${design} .owners
 - - - - - - - - - - - - - - - - - - 
-𝑌𝑜𝑢𝑟 𝑀𝑜𝑛𝑒𝑦 » _${money}$_
+𝑌𝑜𝑢𝑟 𝑀𝑜𝑛𝑒𝑦 ⌖ _${money}$_
 `,
 }
 replyimg(beens, text, capt, owner)
@@ -694,7 +694,7 @@ ${design} .starpicture
 ${design} .sp
 ${design} .mysp
 - - - - - - - - - - - - - - - - - - 
-_𝑌𝑜𝑢𝑟 𝑀𝑜𝑛𝑒𝑦 » ${money}$_
+_𝑌𝑜𝑢𝑟 𝑀𝑜𝑛𝑒𝑦 ⌖ ${money}$_
 `,
 }
 replyimg(beens, text, capt, owner)
@@ -707,7 +707,7 @@ case 'games':
 	var beens = {
 	text: `𝐺𝑎𝑚𝑒𝑠 
 - - - - - - - - - - - - - - - - - - 
-» ${pushname}
+⌖ ${pushname}
 - - - - - - - - - - - - - - - - - -    
 ${design} .slot
 ${design} .truth
@@ -727,7 +727,7 @@ ${design} .euflag
 ${design} .dog
 ${design} .nsfw
 - - - - - - - - - - - - - - - - - - 
-𝑌𝑜𝑢𝑟 𝑀𝑜𝑛𝑒𝑦 » _${money}$_
+𝑌𝑜𝑢𝑟 𝑀𝑜𝑛𝑒𝑦 ⌖ _${money}$_
 `,
 }
 replyimg(beens, text, capt, owner)
@@ -741,7 +741,7 @@ case 'tools':
 	var beens = {
 text: `𝑇𝑜𝑜𝑙𝑠 
 - - - - - - - - - - - - - - - - - - 
-» ${pushname}
+⌖ ${pushname}
 - - - - - - - - - - - - - - - - - -    
 ${design} .song
 ${design} .send
@@ -755,7 +755,7 @@ ${design} .wish
 ${design} .rsong
 ${design} .symbol
 - - - - - - - - - - - - - - - - - - 
-𝑌𝑜𝑢𝑟 𝑀𝑜𝑛𝑒𝑦 » _${money}$_
+𝑌𝑜𝑢𝑟 𝑀𝑜𝑛𝑒𝑦 ⌖ _${money}$_
 `,
 }
 replyimg(beens, text, capt, owner)
@@ -769,7 +769,7 @@ case 'edit':
 	var beens = {
 text: `𝐸𝑑𝑖𝑡 
 - - - - - - - - - - - - - - - - - - 
-» ${pushname}
+⌖ ${pushname}
 - - - - - - - - - - - - - - - - - -    
 ${design} .sticker
 ${design} .image
@@ -791,7 +791,7 @@ ${design} .audiolevel
 ${design} .speed
 ${design} .crush
 	- - - - - - - - - - - - - - - - - - 
-	𝑌𝑜𝑢𝑟 𝑀𝑜𝑛𝑒𝑦 » _${money}$_
+	𝑌𝑜𝑢𝑟 𝑀𝑜𝑛𝑒𝑦 ⌖ _${money}$_
 	`,
 }
 replyimg(beens, text, capt, owner)
@@ -807,8 +807,8 @@ case 'setting':
 	var beens = {
 text: `𝑆𝑒𝑡𝑡𝑖𝑛𝑔𝑠 ⚙️
 - - - - - - - - - - - - - - - - - - 
-» ${pushname}
-» ${id}
+⌖ ${pushname}
+⌖ ${id}
 - - - - - - - - - - - - - - - - - -    
 🏷️ .name 
 ✅ ${username}
@@ -834,7 +834,7 @@ ${design} .design
 ✅ ${design}
 ℹ️ For Account Design.
 - - - - - - - - - - - - - - - - - - 
-_𝑌𝑜𝑢𝑟 𝑀𝑜𝑛𝑒𝑦 » ${money}$_
+_𝑌𝑜𝑢𝑟 𝑀𝑜𝑛𝑒𝑦 ⌖ ${money}$_
 `,
 }
 replyimg(beens, text, capt, owner)
@@ -846,8 +846,8 @@ case 'admin':
 
 reply(`𝐴𝑑𝑚𝑖𝑛 📡
 - - - - - - - - - - - - - - - - - - 
-» ${pushname}
-» ${id}
+⌖ ${pushname}
+⌖ ${id}
 - - - - - - - - - - - - - - - - - -    
 ${design} .kick
 ${design} .promote 
@@ -861,7 +861,7 @@ ${design} .devare
 ${design} .listonline
 ${design} .listadmin
 - - - - - - - - - - - - - - - - - - 
-𝑌𝑜𝑢𝑟 𝑀𝑜𝑛𝑒𝑦 » _${money}$_
+𝑌𝑜𝑢𝑟 𝑀𝑜𝑛𝑒𝑦 ⌖ _${money}$_
 `)
 	 break      
 case 'owners':
@@ -870,8 +870,8 @@ case 'owners':
 
 reply(`𝑂𝑤𝑛𝑒𝑟 🛠️
 - - - - - - - - - - - - - - - - - - 
-» ${pushname}
-» ${id}
+⌖ ${pushname}
+⌖ ${id}
 - - - - - - - - - - - - - - - - - -    
 ${design} .pika
 ${design} .ping
@@ -881,7 +881,7 @@ ${design} .bc
 ${design} .updatebot
 ${design} .updates
 - - - - - - - - - - - - - - - - - - 
-𝑌𝑜𝑢𝑟 𝑀𝑜𝑛𝑒𝑦 » _${money}$_
+𝑌𝑜𝑢𝑟 𝑀𝑜𝑛𝑒𝑦 ⌖ _${money}$_
 `)
 	 break      
 
@@ -894,7 +894,7 @@ case 'registrieren':
 case 'register':
 
 				if (isVerify) return reply('✅ 𝑌𝑜𝑢 𝑎𝑟𝑒 𝑎𝑙𝑟𝑒𝑎𝑑𝑦 𝑟𝑒𝑔𝑖𝑠𝑡𝑒𝑟𝑒𝑑.') 
-				if (args.length < 1) return reply(`☑️  𝑅𝑒𝑔𝑖𝑠𝑡𝑟𝑎𝑡𝑖𝑜𝑛\n𝐵𝑦 𝑟𝑒𝑔𝑖𝑠𝑡𝑒𝑟𝑖𝑛𝑔 𝑦𝑜𝑢 𝑎𝑔𝑟𝑒𝑒 𝑡𝑜 𝑡ℎ𝑒 𝑏𝑜𝑡𝑠 𝑇𝑜𝑆. 𝑉𝑖𝑒𝑤 𝑡ℎ𝑒𝑚 𝑏𝑦 𝑠𝑒𝑛𝑑𝑖𝑛𝑔 » .tos «\n- - - - - - - - - - - - - - - - - -\nℹ️ 𝐻𝑜𝑤 𝑡𝑜 𝑟𝑒𝑔𝑖𝑠𝑡𝑒𝑟\n.𝑟𝑒𝑔𝑖𝑠𝑡𝑒𝑟 𝑆𝑡𝑎𝑟`)
+				if (args.length < 1) return reply(`☑️  𝑅𝑒𝑔𝑖𝑠𝑡𝑟𝑎𝑡𝑖𝑜𝑛\n𝐵𝑦 𝑟𝑒𝑔𝑖𝑠𝑡𝑒𝑟𝑖𝑛𝑔 𝑦𝑜𝑢 𝑎𝑔𝑟𝑒𝑒 𝑡𝑜 𝑡ℎ𝑒 𝑏𝑜𝑡𝑠 𝑇𝑜𝑆. 𝑉𝑖𝑒𝑤 𝑡ℎ𝑒𝑚 𝑏𝑦 𝑠𝑒𝑛𝑑𝑖𝑛𝑔 ⌖ .tos «\n- - - - - - - - - - - - - - - - - -\nℹ️ 𝐻𝑜𝑤 𝑡𝑜 𝑟𝑒𝑔𝑖𝑠𝑡𝑒𝑟\n.𝑟𝑒𝑔𝑖𝑠𝑡𝑒𝑟 𝑆𝑡𝑎𝑟`)
 			    if (args.length > 1) return reply(`☑️  𝑅𝑒𝑔𝑖𝑠𝑡𝑟𝑎𝑡𝑖𝑜𝑛\n- - - - - - - - - - - - - - - - - -\nℹ️ 𝑃𝑙𝑒𝑎𝑠𝑒 𝑜𝑛𝑙𝑦 𝑢𝑠𝑒 𝑜𝑛𝑒 𝑛𝑎𝑚𝑒. 𝐸𝑥𝑎𝑚𝑝𝑙𝑒 𝑔𝑖𝑣𝑒𝑛: .𝑟𝑒𝑔𝑖𝑠𝑡𝑒𝑟 𝑆𝑡𝑎𝑟`) 
 			
                         function kyun(seconds){
@@ -924,7 +924,7 @@ case 'register':
 			fs.writeFileSync('./data/bot/user.json', JSON.stringify(_user))
 
 			//-- Registered message
-			capt = `𝑆𝑢𝑐𝑐𝑒𝑠𝑠𝑓𝑢𝑙𝑙𝑦 𝑟𝑒𝑔𝑖𝑠𝑡𝑒𝑟𝑒𝑑 ✅\n*${pushname}* 𝑐ℎ𝑒𝑐𝑘 𝑦𝑜𝑢𝑟 𝑎𝑐𝑐𝑜𝑢𝑛𝑡 𝑤𝑖𝑡ℎ » .𝑚𝑒`
+			capt = `𝑆𝑢𝑐𝑐𝑒𝑠𝑠𝑓𝑢𝑙𝑙𝑦 𝑟𝑒𝑔𝑖𝑠𝑡𝑒𝑟𝑒𝑑 ✅\n*${pushname}* 𝑐ℎ𝑒𝑐𝑘 𝑦𝑜𝑢𝑟 𝑎𝑐𝑐𝑜𝑢𝑛𝑡 𝑤𝑖𝑡ℎ ⌖ .𝑚𝑒`
 			Lxa.sendMessage(from, capt, text, {quoted: mek})
 
             //-- Create Files for user with random id
@@ -2233,10 +2233,10 @@ weather.find({search: `${value}`, degreeType: 'c'}, function(err, result) {
 			}
 reply(`${design} 𝑊𝑒𝑎𝑡ℎ𝑒𝑟
 - - - - - - - - - - - - - - - - - -
-📍 𝐿𝑜𝑐𝑎𝑡𝑖𝑜𝑛 » ${cityName} 
-${tempSymbol} 𝑇𝑒𝑚𝑝𝑒𝑟𝑎𝑡𝑢𝑟𝑒 » ${temperature}°C
-🔮 𝑆𝑘𝑦 » ${skytext}
-🧭 𝑊𝑖𝑛𝑑 » ${winddisplay}
+📍 𝐿𝑜𝑐𝑎𝑡𝑖𝑜𝑛 ⌖ ${cityName} 
+${tempSymbol} 𝑇𝑒𝑚𝑝𝑒𝑟𝑎𝑡𝑢𝑟𝑒 ⌖ ${temperature}°C
+🔮 𝑆𝑘𝑦 ⌖ ${skytext}
+🧭 𝑊𝑖𝑛𝑑 ⌖ ${winddisplay}
 - - - - - - - - - - - - - - - - - -
 𝑀𝑜𝑛𝑒𝑦 𝑙𝑒𝑓𝑡: ${newmoney}$`);
 });
@@ -2434,7 +2434,7 @@ case 'slots':
 case 'slot':
 	if (!isVerify) return reply(userB())
 	if (!isGroup) return reply(group())
-    if (tickets < 1) return reply(`${design} 𝑁𝑜𝑡 𝑒𝑛𝑜𝑢𝑔ℎ 𝑇𝑖𝑐𝑘𝑒𝑡𝑠. » .claim`)
+    if (tickets < 1) return reply(`${design} 𝑁𝑜𝑡 𝑒𝑛𝑜𝑢𝑔ℎ 𝑇𝑖𝑐𝑘𝑒𝑡𝑠. ⌖ .claim`)
     const slot1 = _slot[Math.floor(Math.random() * _slot.length)]
     const slot2 = _slot[Math.floor(Math.random() * _slot.length)]
     const slot3 = _slot[Math.floor(Math.random() * _slot.length)]
@@ -3094,11 +3094,11 @@ try {
 					let isclaim;
 					try{	
 						if (claim === `${tanggal()}`) { 
-							isclaim = `. . .`
+							isclaim = `♕︎`
 						} 
 						else { 
 							
-							isclaim = `𝐶𝑙𝑎𝑖𝑚 𝑑𝑎𝑖𝑙𝑦 𝑐𝑎𝑠ℎ. 🎁 \n» .𝑐𝑙𝑎𝑖𝑚 «`
+							isclaim = `𝐶𝑙𝑎𝑖𝑚 𝑑𝑎𝑖𝑙𝑦 𝑐𝑎𝑠ℎ. ✧ \n⌖ .𝑐𝑙𝑎𝑖𝑚 «`
 							} 
 						}catch (err){
 						
@@ -3173,26 +3173,26 @@ nomor = '4917626388837@s.whatsapp.net'
 capt = `❄️ 𝑊𝑖𝑛𝑡𝑒𝑟𝑆𝑡𝑎𝑟𝐷𝑎𝑠ℎ\n${design} ${username}`
 const been1 = {
 
-    text: `» ${pushname}
-» ${status}
+    text: `⌖ ${pushname}
+⌖ ${status}
 - - - - - - - - - - - - - - - - - -
-${design} 𝑁𝑎𝑚𝑒 » ${username}
-${design} 𝐴𝑔𝑒 » ${age}
-${design} 𝐸𝑚𝑜𝑗𝑖𝑒 » ${emojie}
-${design} 𝑀𝑜𝑜𝑑 » ${mood}
-${design} 𝑀𝑜𝑛𝑒𝑦 » ${money}$
-${design} 𝑇𝑖𝑐𝑘𝑒𝑡𝑠 » ${tickets}
-${design} 𝑋𝑝 » ${xp}
+${design} 𝑁𝑎𝑚𝑒 ⌖ ${username}
+${design} 𝐴𝑔𝑒 ⌖ ${age}
+${design} 𝐸𝑚𝑜𝑗𝑖𝑒 ⌖ ${emojie}
+${design} 𝑀𝑜𝑜𝑑 ⌖ ${mood}
+${design} 𝑀𝑜𝑛𝑒𝑦 ⌖ ${money}$
+${design} 𝑇𝑖𝑐𝑘𝑒𝑡𝑠 ⌖ ${tickets}
+${design} 𝑋𝑝 ⌖ ${xp}
 - - - - - - - - - - - - - - - - - -
-📌 ${cityName}
+➴ ${cityName}
 ${tempSymbol} ${skytext} ${temperature}°C 
 - - - - - - - - - - - - - - - - - -
-» .𝑠𝑒𝑡𝑡𝑖𝑛𝑔𝑠
-» .𝑤𝑖𝑛𝑛𝑒𝑟 
-» .ℎ𝑖𝑑𝑒 
-» .𝑑𝑒𝑙𝑒𝑡𝑒𝑎𝑐𝑐𝑜𝑢𝑛𝑡
+⌖ .𝑠𝑒𝑡𝑡𝑖𝑛𝑔𝑠
+⌖ .𝑤𝑖𝑛𝑛𝑒𝑟 
+⌖ .ℎ𝑖𝑑𝑒 
+⌖ .𝑑𝑒𝑙𝑒𝑡𝑒𝑎𝑐𝑐𝑜𝑢𝑛𝑡
 - - - - - - - - - - - - - - - - - -
-𝐵𝑜𝑡 » ${stats.percentage}% ${energy} 
+𝐵𝑜𝑡 ⌖ ${stats.percentage}% ${energy} 
 _${stats.status}_
 - - - - - - - - - - - - - - - - - -
 𝑠𝑖𝑛𝑐𝑒 ${accdate}
@@ -3633,21 +3633,21 @@ const winner33status = _winner33[2]	//--- status
 	reply(`𝐿𝑒𝑎𝑑𝑒𝑟𝑏𝑜𝑎𝑟𝑑
 - - - - - - - - - - - - - - - - - -
 
-🥇 𝐿𝑒𝑎𝑑𝑒𝑟 » ${winner11name}
-${design} 𝑥𝑝 » ${winner11}
-${design} 𝑆𝑡𝑎𝑡𝑢𝑠 » ${winner11status}
+🥇 𝐿𝑒𝑎𝑑𝑒𝑟 ⌖ ${winner11name}
+${design} 𝑥𝑝 ⌖ ${winner11}
+${design} 𝑆𝑡𝑎𝑡𝑢𝑠 ⌖ ${winner11status}
 
-🥈 𝑆𝑒𝑐𝑜𝑛𝑑 » ${winner22name}
-${design} 𝑥𝑝 » ${winner22}
-${design} 𝑆𝑡𝑎𝑡𝑢𝑠 » ${winner22status}
+🥈 𝑆𝑒𝑐𝑜𝑛𝑑 ⌖ ${winner22name}
+${design} 𝑥𝑝 ⌖ ${winner22}
+${design} 𝑆𝑡𝑎𝑡𝑢𝑠 ⌖ ${winner22status}
 
-🥉 𝑇ℎ𝑖𝑟𝑑 » ${winner33name}
-${design} 𝑥𝑝 » ${winner33}
-${design} 𝑆𝑡𝑎𝑡𝑢𝑠 » ${winner33status}
+🥉 𝑇ℎ𝑖𝑟𝑑 ⌖ ${winner33name}
+${design} 𝑥𝑝 ⌖ ${winner33}
+${design} 𝑆𝑡𝑎𝑡𝑢𝑠 ⌖ ${winner33status}
 
 
-𝑌𝑜𝑢𝑟𝑋𝑝 » ${xp}
-𝑌𝑜𝑢𝑟𝑆𝑡𝑎𝑡𝑢𝑠 » ${status}`)
+𝑌𝑜𝑢𝑟𝑋𝑝 ⌖ ${xp}
+𝑌𝑜𝑢𝑟𝑆𝑡𝑎𝑡𝑢𝑠 ⌖ ${status}`)
 
 break
 //---X623-Whatsapp-Bot------------------------------------------------------------------------------------------------------------------------// 
