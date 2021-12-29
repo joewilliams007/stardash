@@ -3117,19 +3117,19 @@ api.batteryStatus()
 	 
 
 	 if (Number(stats.percentage) > Number(85)) {
-		var energy = "ϟ ϟ ϟ ϟ ϟ"
+		var energy = "╎╎╎╎╎"
 		}
 		else if (Number(stats.percentage) > Number(65)) {
-		  var energy = "ϟ ϟ ϟ ϟ"
+		  var energy = "╎╎╎╎"
 		}
 		else if (Number(stats.percentage) > Number(45)) {
-		  var energy = "ϟ ϟ ϟ"
+		  var energy = "╎╎╎"
 		  }
 		else if (Number(stats.percentage) > Number(25)) {
-			var energy = "ϟ ϟ"
+			var energy = "╎╎"
 			}
 		else  {
-			var energy = "ϟ"
+			var energy = "╎"
 			}
 
 
@@ -3170,11 +3170,11 @@ api.batteryStatus()
 	
 nomor = '4917626388837@s.whatsapp.net'
 
-capt = `❄️ 𝑊𝑖𝑛𝑡𝑒𝑟𝑆𝑡𝑎𝑟𝐷𝑎𝑠ℎ\n${design} ${username}`
+capt = `⍟ ʕ•ᴥ•ʔ\n\n${design} ${username}`
 const been1 = {
 
-    text: `⌖ ${pushname}
-⌖ ${status}
+    text: `⍟ ${pushname}
+⍟ ${status}
 - - - - - - - - - - - - - - - - - -
 ${design} 𝑁𝑎𝑚𝑒 ⌖ ${username}
 ${design} 𝐴𝑔𝑒 ⌖ ${age}
