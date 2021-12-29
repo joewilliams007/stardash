@@ -469,9 +469,8 @@ try{
 //---X623-Whatsapp-Bot------------------------------------------------------------------------------------------------------------------------//
 
 //REMINDER PLUGIN LADEN.......s
-// var reminder = require("./_tools/reminder")
-//Beim Laden des Reminder-plugins wird mitgegeben, was an den Erinnerungsterminen gemacht werden soll:
-// console.log( reminder.load(function (event) {reply(`@${event.usernum}, i shall remind you of something! ${event.message}`)}));
+const reminder = require("./_tools/reminder")
+reminder.load()
 
 //---X623-Whatsapp-Bot------------------------------------------------------------------------------------------------------------------------//
 
@@ -3679,8 +3678,19 @@ break
 
 case "remindme":
 case "reminder":
-	reply(reminder.set(sender.split('@')[0],args,value));
-	break
+	reply(reminder.set(sender.split("@")[0], args, value, function(event)
+	{
+		reply(`-------------------------
+
+@${event.usernum}, I want to remind you of:
+
+${event.message}
+
+-------------------------
+
+
+		`)
+	}))
 
 //---X623-Whatsapp-Bot------------------------------------------------------------------------------------------------------------------------// 
 

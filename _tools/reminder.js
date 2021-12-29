@@ -1,6 +1,5 @@
 
 const fs = require('fs');
-const { success } = require('../fs/functions');
 const filePath = './data/reminder/reminder_events.json';
 
 //hours to add to London timezone (Berlin = 1)
@@ -8,13 +7,12 @@ const timezone = 0
 
 var callback;
 
-var events;
+var events = [];
 
 //this should be called at the startup of node.js program
-function load(callbackFunc){
-
-    callback = callbackFunc;
-
+//it returns a string with info about the missed events
+function load(){
+    
     fs.readFile(filePath, 'utf8', function (err,data) {
         if (err) {
           return console.log(err);
@@ -27,14 +25,23 @@ function load(callbackFunc){
         var missedEvents = "Missed reminder events: \n"
 
         for (e in events){
-            if (Date(e.date) > date){
-                setTimeout(remind, Date(e.date) - date)
+            if (new Date(events[e].date) > date){
+                setTimeout(remind, new Date(events[e].date) - date, events[e])
             }
             else{
-                missedEvents += `-> missed at ${e.date}: ${e.message}\n`
+                missedEvents += `-> missed at ${events[e].date}: ${events[e].message}\n`
+                events.splice(e,1);
+                fs.writeFile(filePath, JSON.stringify(events), function (err) {
+                    if (err) {
+                        return console.log(err);
+                    }
+                });
+                e -= 1;
             }
-            return missedEvents;
         }
+
+        //console.log(set("12345", ["tm", "12:00"], "tm 12:00 Mal gucken obs klappt!", function(eve){console.log(eve)}))
+        console.log(missedEvents);
       });
 }
 
@@ -45,7 +52,9 @@ function event(usernum, date, message){
 }
 
 //function to set a new timer
-function set(usernum, args, value){
+function set(usernum, args, value, callbackFunc){
+
+    callback = callbackFunc
 
     //variable will have current date stored when initialized
     var date = new Date();
@@ -59,47 +68,77 @@ function set(usernum, args, value){
     switch(args[0]){
         case 'today':
         case 'td':
-            setTime(Number(args[1].split(':')[0] ), Number(args[1].split(':')[1]))
-            events.push(new event(usernum, date, value.substr(args[0].length) + args[1].length + 2))
+            try{
+                setTime(Number(args[1].split(':')[0] ), Number(args[1].split(':')[1]))
+                eve = new event(usernum, date, value.substr(args[0].length) + args[1].length + 2)
+                events.push(eve)
+            }
+            catch (e){
+                throw("Invalid Syntax");
+            }
             break
         case 'tm':
         case 'tomorrow':
-            date.addDays(1);
-            setTime(Number(args[1].split(':')[0]) , Number(args[1].split(':')[1]))
-            events.push(new event(usernum, date, value.substr(args[0].length + args[1].length + 2)))
+            try{
+                date.addDays(1);
+                setTime(Number(args[1].split(':')[0]) , Number(args[1].split(':')[1]))
+                eve = new event(usernum, date, value.substr(args[0].length + args[1].length + 2))
+                events.push(eve)
+            }
+            catch (e){
+                throw("Invalid Syntax");
+            }
             break
         case 'later':
-            //reminder will be set to two hours later
-            date.addHours(2);
-            events.push(new event(usernum, date, value.substr(args[0].length + 1)))
+            try{
+                //reminder will be set to two hours later
+                date.addHours(2);
+                eve = new event(usernum, date, value.substr(args[0].length + 1))
+                events.push(eve)
+            }
+            catch (e){
+                throw("Invalid Syntax");
+            }
             break
         case 'in':
-            // <hours>:<minutes>
-            date.addHours(Number(args[1].split(':')[0]));
-            date.addMinutes(Number(args[1].split(':')[1]));
-            events.push(new event(usernum, date, value.substr(args[0].length + args[1].length + 2)))
+            try{
+                // <hours>:<minutes>
+                date.addHours(Number(args[1].split(':')[0]));
+                date.addMinutes(Number(args[1].split(':')[1]));
+                eve = new event(usernum, date, value.substr(args[0].length + args[1].length + 2))
+                events.push(eve)
+            }
+            catch (e){
+                throw("Invalid Syntax");
+            }
             break
         case 'next':
             break
+        case '*':
+            throw ("Invalid Syntax")
     }
 
-    //save changes to file
+    //save new event to file
     fs.writeFile(filePath, JSON.stringify(events), function (err) {
         if (err) {
             return console.log(err);
         }
-        console.log("The new event was saved to file!");
     });
-
-    //set timer for next event
-    setTimeout(remind, date - new Date());
-
+    
+    //set the timer for the new event
+    setTimeout(remind, date - new Date(), eve);
+    
     return `Event sucessfully set! You will be reminded at ${date.toString()}`
 }
 
 function remind(e){
     callback(e)
     events.splice(events.indexOf(e),1);
+    fs.writeFile(filePath, JSON.stringify(events), function (err) {
+        if (err) {
+            return console.log(err);
+        }
+    });
 }
 
 
@@ -123,25 +162,3 @@ Date.prototype.addMinutes = function (units) {
 
 module.exports = {set, load}
 
-
-/** 
-date.prototype.addDays = function (date, days) {
-    var result = new Date(date);
-    result.setDate(result.getDate() + days);
-    return result;
-}
-date.prototype.addMonths = function (date, months) {
-    var result = new Date(date);
-    result.setMonth(result.getMonth() + months);
-    return result;
-}
-date.prototype.addHours = function (date, hours) {
-    var result = new Date(date);
-    result.setHours(result.getHours() + hours);
-    return result;
-}
-date.prototype.addMinutes = function (date, minutes) {
-    var result = new Date(date);
-    result.setMinutes(result.getMinutes() + minutes);
-    return result;
-}*/
