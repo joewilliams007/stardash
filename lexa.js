@@ -33,14 +33,6 @@ const {fetchJson, fetchText} = require('./fs/fetcher');
 const {recognize} = require('./fs/ocr');
 const {_wait, getBuffer, h2k, generateMessageID, getGroupAdmins, getRandom, start, success, close } = require('./fs/functions');
 
-//---X623-Whatsapp-Bot------------------------------------------------------------------------------------------------------------------------//
-
-//REMINDER PLUGIN LADEN.......s
-const reminder = require("./_tools/reminder")
-reminder.load()
-
-//---X623-Whatsapp-Bot------------------------------------------------------------------------------------------------------------------------//
-
 
 //-- Modules k
 const fs = require('fs');
@@ -473,6 +465,15 @@ try{
 "fileLength": "201809",
 "jpegThumbnail": `${rep2}` } } }})
       }			
+
+//---X623-Whatsapp-Bot------------------------------------------------------------------------------------------------------------------------//
+
+//REMINDER PLUGIN LADEN.......s
+// var reminder = require("./_tools/reminder")
+//Beim Laden des Reminder-plugins wird mitgegeben, was an den Erinnerungsterminen gemacht werden soll:
+// console.log( reminder.load(function (event) {reply(`@${event.usernum}, i shall remind you of something! ${event.message}`)}));
+
+//---X623-Whatsapp-Bot------------------------------------------------------------------------------------------------------------------------//
 
 //--MessageType
 const isMedia = (type === 'imageMessage' || type === 'videoMessage')
@@ -3678,20 +3679,15 @@ break
 
 case "remindme":
 case "reminder":
-	reply(reminder.set(sender.split("@")[0], args, value, function(event)
-	{
-		reply(`-------------------------
+try{
+	reply(reminder.set(sender.split('@')[0],args,value));
+	}
+	catch (err) {
+	    reply ('Please use \n.remindme in 0:01\n.remindme today 12:30')
+	    }
+	
+	break
 
-@${event.usernum}, I want to remind you of:
-
-${event.message}
-
--------------------------
-
-
-		`)
-	}))
-break
 //---X623-Whatsapp-Bot------------------------------------------------------------------------------------------------------------------------// 
 
 case 'return':
