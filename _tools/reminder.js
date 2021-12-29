@@ -40,7 +40,7 @@ function load(){
             }
         }
 
-        //console.log(set("12345", ["tm", "12:00"], "tm 12:00 Mal gucken obs klappt!", function(eve){console.log(eve)}))
+        console.log(set("12345", ["in", "0:01"], "tm 12:00 Mal gucken obs klappt!", function(eve){console.log(eve)}))
         console.log(missedEvents);
       });
 }
