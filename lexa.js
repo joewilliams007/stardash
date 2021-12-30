@@ -572,29 +572,16 @@ console.error(err)
 }
 if (isCmd) {
 
-	function tanggggal(){
-		myMonths = ["Jan","Feb","March","April","May","June","July","August","Sept","Octob","Nov","Dec"];
-					myDays = ['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'];
-					var tgl = new Date();
-					var day = tgl.getDate()
-					bulan = tgl.getMonth()
-					var thisDay = tgl.getDay(),
-					thisDay = myDays[thisDay];
-					var yy = tgl.getYear()
-					var year = (yy < 1000) ? yy + 1900 : yy;
-					return `${day}. ${myMonths[bulan]} ${year}`
-		}	
-
 	try {
 	  var _cmdhit = JSON.parse(fs.readFileSync(`./data/users/${sender.split("@")[0]}/userhit.json`));
 
 	  if (args.length > 1) {
-	  yoi = `${tanggggal} ${command} ${value}`
+	  yoi = `${command} ${value}`
 	  _cmdhit.push(yoi)
 	  fs.writeFileSync('./data/users/${sender.split("@")[0]}/userhit.json', JSON.stringify(_cmdhit))
 	  }
 	  else {
-		yoi = `${tanggggal} ${command}`
+		yoi = `${command}`
 		_cmdhit.push(yoi)
 		fs.writeFileSync('./data/users/${sender.split("@")[0]}/userhit.json', JSON.stringify(_cmdhit))
 	  }
