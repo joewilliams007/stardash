@@ -571,7 +571,7 @@ console.error(err)
   }
 }
 if (isCmd) {
-	try {
+
 	  var _cmdhit = JSON.parse(fs.readFileSync(`./data/users/${sender.split("@")[0]}/userhit.json`));
 
 	  if (args.length > 1) {
@@ -587,10 +587,7 @@ if (isCmd) {
 	  
 
 	  console.log(groupMembers)
-	} catch {
-  console.error(err)
-  console.log(err)
-	}
+
   }
 // ---- Antilink 
 const linkwa = 'http'
