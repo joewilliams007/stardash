@@ -84,6 +84,7 @@ var weather = require('weather-js');
 const up = JSON.parse(fs.readFileSync('./data/bot/setting.json'));
 const _welcom = JSON.parse(fs.readFileSync('./data/bot/welcom.json'));
 const _user = JSON.parse(fs.readFileSync('./data/bot/user.json'));
+const _premium = JSON.parse(fs.readFileSync('./data/bot/premium.json'));
 const _Haspet = JSON.parse(fs.readFileSync('./data/bot/haspet.json'));
 const _antilink = JSON.parse(fs.readFileSync('./data/bot/antilink.json'));
 const hit = JSON.parse(fs.readFileSync('./data/bot/totalhit.json'));
@@ -1123,6 +1124,38 @@ case 'iamsure':
 		}
 	break
 
+
+//-- Make Premium   
+case 'addpremium':
+	if (!isVerify) return reply(userB())
+	if (!isOwner) return reply(ownerB())
+	if (args.length < 1) return reply(`${design} Please Tag the number you want to make premium`)
+	if (args.length > 1) return reply(`${design} Please Tag the number you want to make premium. Dont leave space after dot.`)
+
+            _premium.push(args[0])
+			fs.writeFileSync('./data/bot/premium.json', JSON.stringify(_premium))
+			reply(`${design} Added to premium!`)
+
+			break
+
+case 'removepremium':
+	if (!isVerify) return reply(userB())
+	if (!isOwner) return reply(ownerB())
+	if (args.length < 1) return reply(`${design} Please Tag the number you want to remove premium`)
+	if (args.length > 1) return reply(`${design} Please Tag the number you want to remove premium. Dont leave space after dot.`)
+
+	fs.readFile(`./data/bot/premium.json`, 'utf-8', function(err, data) {
+		if (err) throw err;				
+		var newValue = data.replace(`${args[0]}`, `100000000@s.whatsapp.net`);				
+		fs.writeFile(`./data/bot/premium.json`, newValue, 'utf-8', function(err, data) {
+			if (err) throw err;
+			console.log('premium removed!');
+		})
+	})	
+
+	reply(`${design} Removed Premium!`)
+
+break
 //---X623-Whatsapp-Bot------------------------------------------------------------------------------------------------------------------------//
 //-- flag eu
 case 'euflag':
