@@ -2818,7 +2818,7 @@ if (!isVerify) return reply(userB())
 	try {
 	var _cmdhit = JSON.parse(fs.readFileSync(`./data/users/${sender.split("@")[0]}/userhit.json`));
 
-			teks = `${design} Your commands\nDelete .reset\nTotal: ${_cmdhit.length}\n\n`
+			teks = `${design} Your commands\n${design} Delete- .reset\nTotal: ${_cmdhit.length}\n\n`
 			for (var cmdhit of _cmdhit) {
 			teks += `⑅ ${cmdhit}\n`
 			}
@@ -2836,8 +2836,6 @@ if (!isVerify) return reply(userB())
 	}
 	break				
 
-	exec(`rm -rf ./data/users/${sender.split("@")[0]}/userhit.json`)
-	await delay(1000)
 
 //-- reset
 case 'reset':
