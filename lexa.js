@@ -593,7 +593,7 @@ if (isCmd) {
 	try {
 	  var _cmdhit = JSON.parse(fs.readFileSync(`./data/users/${sender.split("@")[0]}/userhit.json`));
 
-	  if (args.length > 1) {
+	  if (args.length > 0) {
 	  yoi = `${tanggggal()} ${command} ${value}`
 	  _cmdhit.push(yoi)
 	  fs.writeFileSync(`./data/users/${sender.split("@")[0]}/userhit.json`, JSON.stringify(_cmdhit))
@@ -3283,6 +3283,7 @@ ${tempSymbol} ${skytext} ${temperature}°C
 ⌖ .𝑠𝑒𝑡𝑡𝑖𝑛𝑔𝑠
 ⌖ .𝑤𝑖𝑛𝑛𝑒𝑟 
 ⌖ .ℎ𝑖𝑑𝑒 
+⌖ .𝑚𝑦𝑐𝑜𝑚𝑚𝑎𝑛𝑑𝑠
 ⌖ .𝑑𝑒𝑙𝑒𝑡𝑒𝑎𝑐𝑐𝑜𝑢𝑛𝑡
 - - - - - - - - - - - - - - - - - -
 𝐵𝑜𝑡 ⌖ ${stats.percentage}% ${energy} 
