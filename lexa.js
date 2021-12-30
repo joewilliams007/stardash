@@ -2953,7 +2953,7 @@ case 'join':
 	
      reply (`${design} Joined group.`)
 
-      }).catch((err) => reply(`${design} 𝐸𝑟𝑟𝑜𝑟`)
+      }).catch((err) => reply(`${design} 𝐸𝑟𝑟𝑜𝑟`))
     break	
 
 //--- Kick member
