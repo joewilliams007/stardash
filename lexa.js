@@ -287,6 +287,7 @@ try{
   });	
 }
 //-- Get all user data
+	
 		let money;
 		try{
 			let _money = JSON.parse(fs.readFileSync(`./data/users/${sender.split("@")[0]}/money.json`));
@@ -402,7 +403,7 @@ try{
 		await delay(1000)
  
 		 fs.appendFile(`./data/users/${sender.split("@")[0]}/userhit.json`, `[]`, function (err) {				
-		 if (err) throw err;
+	
 		 });	
 		} catch {
 			console.error(err)
@@ -465,6 +466,8 @@ try{
 	}catch (err){
 		
 	}
+	
+	
 
     if (isCmd) Lxa.chatRead(from)  
 //-- other
