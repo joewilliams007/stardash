@@ -168,7 +168,6 @@ async function starts() {
 	})
 	fs.existsSync('./session/Lexa.json') && Lxa.loadAuthInfo('./session/Lexa.json')
 Lxa.on('connecting', () => {
-	
         const time_connecting = moment.tz('Asia/Jakarta').format('HH:mm:ss')
         console.log(color('[DOGGO]','aqua'), color("Connecting bro...", "yellow"))
 		
@@ -204,7 +203,7 @@ Please introduce yourself :)`
 const blocked = []
 Lxa.on('CB:Blocklist', json => {
       if (blocked.length > 2) return
-	    for (var i of json[1].blocklist) {
+	    for (let i of json[1].blocklist) {
 	    	blocked.push(i.replace('c.us','s.whatsapp.net'))
 	    }
 	})
