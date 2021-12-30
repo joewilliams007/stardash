@@ -1118,8 +1118,10 @@ case 'addpremium':
 
             _premium.push(s3)
 			fs.writeFileSync('./data/bot/premium.json', JSON.stringify(_premium))
-			reply(`${design} Added to premium!`)
+			reply(`${design} Added to premium!\n- restarting`)
 
+			await delay(1000) /// waiting 1 second.
+			process.exit(1);
 			break
 
 case 'removepremium':
