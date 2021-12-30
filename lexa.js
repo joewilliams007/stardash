@@ -726,6 +726,7 @@ ${design} .flag
 ${design} .euflag
 ${design} .dog
 ${design} .nsfw
+${design} .random 
 - - - - - - - - - - - - - - - - - - 
 𝑌𝑜𝑢𝑟 𝑀𝑜𝑛𝑒𝑦 ⌖ _${money}$_
 `,
@@ -775,6 +776,7 @@ ${design} .sticker
 ${design} .image
 ${design} .rmbg
 ${design} .rmbgs
+${design} .color
 - - - - - - - - - - - - - - - - - - 
 ${design} .blur
 ${design} .saturation
