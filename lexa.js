@@ -2794,7 +2794,7 @@ if (!isVerify) return reply(userB())
 			teks = `${design} Your commands\nTotal: ${_cmdhit.length}\n\n`
 			for (var cmdhit of _cmdhit) {
 			teks += `⑅ ${cmdhit}\n`
-				
+			}
 			reply(teks.trim())
 	break				
 //---X623-Whatsapp-Bot------------------------------------------------------------------------------------------------------------------------// 
