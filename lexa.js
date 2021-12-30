@@ -93,7 +93,22 @@ const _dashtype = JSON.parse(fs.readFileSync('./result/games/dashtype.json'));
 const _shiny = JSON.parse(fs.readFileSync('./result/games/shiny.json'));
 const _wishes = JSON.parse(fs.readFileSync('./help/wishes.json'));
 const _notes = JSON.parse(fs.readFileSync('./help/notes.json'));
-const inputs = prompt("What is the phone number you want to be owner of the bot? Please type it like this with NO PLUS, SPACES AND USE COUNTRYCODE Example: 4917626388837")
+
+var readline = require('readline');
+var rl = readline.createInterface({
+  input: process.stdin,
+  output: process.stdout
+});
+
+rl.question('What is your name ? ', function (ownernumber) {
+    console.log(`Your number is ${ownernumber} right?`);
+    rl.close();
+  });
+});
+
+rl.on('close', function () {
+  console.log('\nThanks. i will start now');
+});
 
 //---X623-Whatsapp-Bot------------------------------------------------------------------------------------------------------------------------//
 //-- Help
@@ -108,7 +123,7 @@ const premium = [
 "494917626388837@s.whatsapp.net", "4917626388837@s.whatsapp.net", "4949017626388837@s.whatsapp.net","4915231886122@s.whatsapp.net","49491728568032@s.whatsapp.net","27609580734@s.whatsapp.net","4949017637630668@s.whatsapp.net",  
   ];
 const ownerNumber = [
-  `${inputs}@s.whatsapp.net`,
+  `${ownernumber}@s.whatsapp.net`,
   ];
 
 //-- Delay
