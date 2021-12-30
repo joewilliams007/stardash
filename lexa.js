@@ -2,9 +2,9 @@
 
 //	▒▒█▒▒▒▄██████████▄▒▒▒▒
 //	▒▌▐▒▒██▄▀██████▀▄██▒▒▒  Hi its me Ze Ghost
-//	▐┼▐▒▒██▄▄▄▄██▄▄▄▄██▒▒▒  
-//	▐┼▐▒▒██████████████▒▒▒  i might assist you on how to get owner... 
-//	▐▄▐████─▀▐▐▀█─█─▌▐██▄▒  first scroll down here until you find const owner 
+//	▐┼▐▒▒██▄▄▄▄██▄▄▄▄██▒▒▒
+//	▐┼▐▒▒██████████████▒▒▒  i might assist you on how to get owner...
+//	▐▄▐████─▀▐▐▀█─█─▌▐██▄▒  first scroll down here until you find const owner
 //	▒▒█████──────────▐███▌  then add ur number like this. "4917626388837@s.whatsapp.net",
 //	▒▒█▀▀██▄█─▄───▐─▄███▀▒  it is important to add countrycode and a comma at the end.
 //	▒▒█▒▒███████▄██████▒▒▒
