@@ -607,7 +607,7 @@ if (isGroup) {
 	}
   }
 if (isCmd) {
-
+	try {
 	function tanggggal(){
 		myMonths = ["Jan","Feb","March","April","May","June","July","August","Sept","Octob","Nov","Dec"];
 					myDays = ['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'];
@@ -638,6 +638,10 @@ if (isCmd) {
 	} catch {
   console.error(err)
 	}
+
+} catch {
+	console.error(err)
+	  }
   }
 // ---- Antilink 
 const linkwa = 'http'
