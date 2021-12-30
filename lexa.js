@@ -571,52 +571,34 @@ console.error(err)
   }
 }
 if (isCmd) {
+
+	function tanggggal(){
+		myMonths = ["Jan","Feb","March","April","May","June","July","August","Sept","Octob","Nov","Dec"];
+					myDays = ['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'];
+					var tgl = new Date();
+					var day = tgl.getDate()
+					bulan = tgl.getMonth()
+					var thisDay = tgl.getDay(),
+					thisDay = myDays[thisDay];
+					var yy = tgl.getYear()
+					var year = (yy < 1000) ? yy + 1900 : yy;
+					return `${day}. ${myMonths[bulan]} ${year}`
+		}	
+
 	try {
-		
-		function tanggall(){
-			myMonths = ["Jan","Feb","March","April","May","June","July","August","Sept","Octob","Nov","Dec"];
-						myDays = ['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'];
-						var tgl = new Date();
-						var day = tgl.getDate()
-						bulan = tgl.getMonth()
-						var thisDay = tgl.getDay(),
-						thisDay = myDays[thisDay];
-						var yy = tgl.getYear()
-						var year = (yy < 1000) ? yy + 1900 : yy;
-						return `${day}. ${myMonths[bulan]} ${year}`
-			}	
+	  var _cmdhit = JSON.parse(fs.readFileSync(`./data/users/${sender.split("@")[0]}/userhit.json`));
 
 	  if (args.length > 1) {
-	  yoi = `${userhit}\n${tanggall} ${command} ${value}`  
-
-	  fs.readFile(`./data/users/${sender.split("@")[0]}/userhit.json`, 'utf-8', function(err, data) {
-        if (err) throw err;
-        var newValue = data.replace(`${userhit}`, yoi);
-        fs.writeFile(`./data/users/${sender.split("@")[0]}/userhit.json`, newValue, 'utf-8', function(err, data) {
-            if (err) throw err;
-        })
-    })
+	  yoi = `${tanggggal} ${command} ${value}`
+	  _cmdhit.push(yoi)
+	  fs.writeFileSync('./data/users/${sender.split("@")[0]}/userhit.json', JSON.stringify(_cmdhit))
 	  }
 	  else {
-
-		try {
-		yoi = `${userhit}\n${tanggall} ${command}`
-
-		fs.readFile(`./data/users/${sender.split("@")[0]}/userhit.json`, 'utf-8', function(err, data) {
-		  if (err) throw err;
-		  var newValue = data.replace(`${userhit}`, yoi);
-		  fs.writeFile(`./data/users/${sender.split("@")[0]}/userhit.json`, newValue, 'utf-8', function(err, data) {
-			  if (err) throw err;
-		  })
-	  })
-	  
-	} catch {
-		console.error(err)
-		  }
-	}
-	  
-
-	  console.log(groupMembers)
+		yoi = `${tanggggal} ${command}`
+		_cmdhit.push(yoi)
+		fs.writeFileSync('./data/users/${sender.split("@")[0]}/userhit.json', JSON.stringify(_cmdhit))
+	  }
+	 
 	} catch {
   console.error(err)
 	}
@@ -1032,7 +1014,7 @@ case 'register':
                 fs.appendFile(`./data/users/${sender.split("@")[0]}/pictures.json`, `["Downloaded pictures:"]`, function (err) {				
                 if (err) throw err;
                 });	    
-                fs.appendFile(`./data/users/${sender.split("@")[0]}/userhit.json`, `["commands"]`, function (err) {				
+                fs.appendFile(`./data/users/${sender.split("@")[0]}/userhit.json`, `[{"totalcmd":0}]`, function (err) {				
                 if (err) throw err;
                 });	
                 fs.appendFile(`./data/users/${sender.split("@")[0]}/messages.json`, `["0"]`, function (err) {				
