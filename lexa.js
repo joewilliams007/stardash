@@ -1112,7 +1112,11 @@ case 'addpremium':
 	if (args.length < 1) return reply(`${design} Please Tag the number you want to make premium`)
 	if (args.length > 1) return reply(`${design} Please Tag the number you want to make premium. Dont leave space after dot.`)
 
-            _premium.push(args[0])
+	var s1 = args[0];
+	var s2 = s1.substring(1);
+	var s3 = s2 + "@s.whatsapp.net"
+
+            _premium.push(s3)
 			fs.writeFileSync('./data/bot/premium.json', JSON.stringify(_premium))
 			reply(`${design} Added to premium!`)
 
