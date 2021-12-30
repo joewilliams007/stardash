@@ -1499,7 +1499,22 @@ case 'volume':
 						Lxa.sendMessage(from, buffer, audio, {quoted:mek})
 						fs.unlinkSync(ran)
 					})
-					break	
+					break
+//-- audio volume
+case 'reversevideo':
+			if (!isQuotedVideo) return reply(`${design} 𝑃𝑙𝑒𝑎𝑠𝑒 𝑡𝑎𝑔 𝑎𝑛 video`)
+	  	reply(`${design} 𝐶ℎ𝑎𝑛𝑔𝑖𝑛𝑔 1/1`)
+					encmedia = JSON.parse(JSON.stringify(mek).replace('quotedM','m')).message.extendedTextMessage.contextInfo
+					media = await Lxa.downloadAndSaveMediaMessage(encmedia)
+				ran= getRandom('.mp4')
+				exec(`ffmpeg -i ${media} -vf reverse -af areverse ${ran} `, (err) => {
+						fs.unlinkSync(media)
+						if (err) return reply(`${design} 𝐸𝑟𝑟𝑜𝑟`)
+						buffer = fs.readFileSync(ran)
+						Lxa.sendMessage(from, buffer, video, {quoted:mek})
+						fs.unlinkSync(ran)
+					})
+					break							
 //-- brightness
 case 'brightness':
 			if (!isQuotedImage) return reply(`${design} 𝑃𝑙𝑒𝑎𝑠𝑒 𝑡𝑎𝑔 𝑎𝑛 𝑖𝑚𝑎𝑔𝑒`)
@@ -2924,6 +2939,20 @@ case 'add':
 						reply(`${design} 𝐸𝑟𝑟𝑜𝑟`)
 					}
 					break
+//-- Join group					
+case 'join':
+    if (!isVerify) return reply(userB())
+    if (args.length < 1) return reply(`${design} Add link`)
+    join = value.split('https://chat.whatsapp.com/')[1]
+    await Lxa.acceptInvite(join).then((res) => {
+
+		Lxa.sendMessage(from, `${design} Joined group.`, text, {quoted:mek})
+	}
+     reply (`${design} Joined group.`)
+
+      }).catch((err) => reply(`${design} 𝐸𝑟𝑟𝑜𝑟`)
+    break	
+
 //--- Kick member
 case 'kick':
 			        if (!isVerify) return reply(userB())
