@@ -932,6 +932,8 @@ ${design} .clearchat
 ${design} .bc
 ${design} .updatebot
 ${design} .updates
+${design} .addpremium
+${design} .removepremium
 - - - - - - - - - - - - - - - - - - 
 𝑌𝑜𝑢𝑟 𝑀𝑜𝑛𝑒𝑦 ⌖ _${money}$_
 `)
