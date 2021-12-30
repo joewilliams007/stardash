@@ -831,6 +831,7 @@ ${design} .rmbg
 ${design} .rmbgs
 ${design} .color
 - - - - - - - - - - - - - - - - - - 
+${design} .reversevideo
 ${design} .blur
 ${design} .saturation
 ${design} .brightness
@@ -2946,14 +2947,11 @@ case 'add':
 case 'join':
     if (!isVerify) return reply(userB())
     if (args.length < 1) return reply(`${design} Add link`)
-    join = value.split('https://chat.whatsapp.com/')[1]
-    await Lxa.acceptInvite(join).then((res) => {
-
-		Lxa.sendMessage(from, `${design} Joined group.`, text, {quoted:mek})
+    join = args[0].split('https://chat.whatsapp.com/')[1]
+    await Lxa.acceptInvite(join)
 	
      reply (`${design} Joined group.`)
 
-      }).catch((err) => reply(`${design} 𝐸𝑟𝑟𝑜𝑟`))
     break	
 
 //--- Kick member
