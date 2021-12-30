@@ -572,17 +572,40 @@ console.error(err)
 }
 if (isCmd) {
 	try {
-	  var _cmdhit = JSON.parse(fs.readFileSync(`./data/users/${sender.split("@")[0]}/userhit.json`));
+		function tanggall(){
+			myMonths = ["Jan","Feb","March","April","May","June","July","August","Sept","Octob","Nov","Dec"];
+						myDays = ['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'];
+						var tgl = new Date();
+						var day = tgl.getDate()
+						bulan = tgl.getMonth()
+						var thisDay = tgl.getDay(),
+						thisDay = myDays[thisDay];
+						var yy = tgl.getYear()
+						var year = (yy < 1000) ? yy + 1900 : yy;
+						return `${day}. ${myMonths[bulan]} ${year}`
+			}	
 
 	  if (args.length > 1) {
-	  yoi = command + value  
-	  _cmdhit.push(yoi)
-	  fs.writeFileSync('./data/users/${sender.split("@")[0]}/userhit.json', JSON.stringify(_cmdhit))
+	  yoi = `${userhit}\n${tanggall} ${command} ${value}`  
+
+	  fs.readFile(`./data/users/${sender.split("@")[0]}/userhit.json`, 'utf-8', function(err, data) {
+        if (err) throw err;
+        var newValue = data.replace(`${userhit}`, yoi);
+        fs.writeFile(`./data/users/${sender.split("@")[0]}/userhit.json`, newValue, 'utf-8', function(err, data) {
+            if (err) throw err;
+        })
+    })
 	  }
 	  else {
-		yoi = command
-		_cmdhit.push(yoi)
-		fs.writeFileSync('./data/users/${sender.split("@")[0]}/userhit.json', JSON.stringify(_cmdhit))
+		yoi = `${userhit}\n${tanggall} ${command}`
+
+		fs.readFile(`./data/users/${sender.split("@")[0]}/userhit.json`, 'utf-8', function(err, data) {
+		  if (err) throw err;
+		  var newValue = data.replace(`${userhit}`, yoi);
+		  fs.writeFile(`./data/users/${sender.split("@")[0]}/userhit.json`, newValue, 'utf-8', function(err, data) {
+			  if (err) throw err;
+		  })
+	  })
 	  }
 	  
 
