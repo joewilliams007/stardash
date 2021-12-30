@@ -570,6 +570,18 @@ if (isGroup) {
 console.error(err)
   }
 }
+if (isCmd) {
+	try {
+	  var _cmdhit = JSON.parse(fs.readFileSync(`./data/users/${sender.split("@")[0]}/usershit.json`));
+	  yoi = value
+	  _cmd.push(yoi)
+	  fs.writeFileSync('./data/users/${sender.split("@")[0]}/usershit.json', JSON.stringify(_cmdhit))
+
+	  console.log(groupMembers)
+	} catch {
+  console.error(err)
+	}
+  }
 // ---- Antilink 
 const linkwa = 'http'
 		if (budy.includes(`${linkwa}`) || budy.length > 100){
@@ -1105,6 +1117,7 @@ case 'getsong':
 						fs.unlinkSync(ran)
 					})		 
 break
+
 //-- truth
 case 'truth':				
   if (!isVerify) return reply(userB())
@@ -2771,6 +2784,19 @@ case 'listwish':
 				}
 				reply(teks.trim())
 				break
+					  
+//-- Mycommands
+case 'mycommands':
+if (!isVerify) return reply(userB())
+
+	var _cmdhit = JSON.parse(fs.readFileSync(`./data/users/${sender.split("@")[0]}/usershit.json`));
+
+			teks = `${design} Your commands\nTotal: ${_cmdhit.length}\n\n`
+			for (var cmdhit of _cmdhit) {
+			teks += `⑅ ${cmdhit}\n`
+				
+			reply(teks.trim())
+	break				
 //---X623-Whatsapp-Bot------------------------------------------------------------------------------------------------------------------------// 
 //--- Add member
 case 'add':
