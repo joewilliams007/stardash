@@ -16,7 +16,6 @@
 
 
 
-try{
 //---X623-Whatsapp-Bot------------------------------------------------------------------------------------------------------------------------//
 //-- Whatsapp Connecting
 const {
@@ -3871,6 +3870,3 @@ break
 starts()
 
 //-- More ? Füge dich hinzu
-} catch {
-	console.error(err)
-	  }
