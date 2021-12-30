@@ -93,6 +93,7 @@ const _dashtype = JSON.parse(fs.readFileSync('./result/games/dashtype.json'));
 const _shiny = JSON.parse(fs.readFileSync('./result/games/shiny.json'));
 const _wishes = JSON.parse(fs.readFileSync('./help/wishes.json'));
 const _notes = JSON.parse(fs.readFileSync('./help/notes.json'));
+const inputs = prompt("What is the phone number you want to be owner of the bot? Please type it like this with NO PLUS, SPACES AND USE COUNTRYCODE Example: 4917626388837")
 
 //---X623-Whatsapp-Bot------------------------------------------------------------------------------------------------------------------------//
 //-- Help
@@ -158,8 +159,6 @@ Lxa.on('connecting', () => {
 		
     })
 Lxa.on('open', () => {
-
-		const inputs = prompt("What is the phone number you want to be owner of the bot? Please type it like this with NO PLUS, SPACES AND USE COUNTRYCODE Example: 4917626388837")
         const time_connect = moment.tz('Asia/Jakarta').format('HH:mm:ss')
         console.log(color('[DOGGO]','aqua'), color(`Done Connecting`, "aqua"))
         start('')
