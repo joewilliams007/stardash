@@ -119,6 +119,7 @@ const { wait, stick, err, group, ban, ownerB, userP, premi, userB, admin, Badmin
 //-- Settings > Add your unmber here to get owner and premium
 const prefix = up.prefix
 const memberlimit = up.memberlimit;
+const premium = JSON.parse(fs.readFileSync('./data/bot/premium.json'));
 const banned = [
   ];
 // ADD YOUR NUMBER HERE TO GET OWNER!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
@@ -243,7 +244,7 @@ const botNumber = Lxa.user.jid
   const groupAdmins = isGroup ? getGroupAdmins(groupMembers) : ''
   const isOwner = ownerNumber.includes(sender)
   const isVerify = _user.includes(sender)
-  const isPrem = _premium.includes(sender) || isOwner
+  const isPrem = premium.includes(sender) || isOwner
   const isBan = blocked.includes(sender)
   const isBotGroupAdmins = groupAdmins.includes(botNumber) || false
   const isGroupAdmins = groupAdmins.includes(sender) || false
