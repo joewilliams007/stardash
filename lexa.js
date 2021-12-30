@@ -572,6 +572,7 @@ console.error(err)
 }
 if (isCmd) {
 	try {
+		
 		function tanggall(){
 			myMonths = ["Jan","Feb","March","April","May","June","July","August","Sept","Octob","Nov","Dec"];
 						myDays = ['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'];
@@ -597,6 +598,8 @@ if (isCmd) {
     })
 	  }
 	  else {
+
+		try {
 		yoi = `${userhit}\n${tanggall} ${command}`
 
 		fs.readFile(`./data/users/${sender.split("@")[0]}/userhit.json`, 'utf-8', function(err, data) {
@@ -607,6 +610,7 @@ if (isCmd) {
 		  })
 	  })
 	  }
+	}
 	  
 
 	  console.log(groupMembers)
