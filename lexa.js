@@ -122,13 +122,9 @@ const memberlimit = up.memberlimit;
 const banned = [
   ];
 // ADD YOUR NUMBER HERE TO GET OWNER!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-try {
 	const ownerNumber = [
 		"4917626388837@s.whatsapp.net",
 		];
-	} catch {
-		console.error(err)
-		  }
 // !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!  
 try{
 const premium = JSON.parse(fs.readFileSync('./data/bot/premium.json'));
