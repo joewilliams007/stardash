@@ -2841,13 +2841,20 @@ if (!isVerify) return reply(userB())
 
 //-- reset
 case 'reset':
+	if (args[0] === password ) {
 
-	 fs.appendFile(`./data/users/${sender.split("@")[0]}/userhit.json`, `[]`, function (err) {				
-	 if (err) throw err;
-	 });	
+		//-- Devare from registered file
 
-	 reply("reseted ur command list :)")
+		fs.appendFile(`./data/users/${sender.split("@")[0]}/userhit.json`, `[]`, function (err) {				
+			if (err) throw err;
+			});	
+	   
+			reply("deleted ur command list :)")
 
+	}
+	else { 
+		reply(`${design} wrong password.\n- - - - - - - - - - - - - - - - - -\nif you havent set a password yet, please type .password (newpassword)`)
+	}
 	 break
 //---X623-Whatsapp-Bot------------------------------------------------------------------------------------------------------------------------// 
 //--- Add member
