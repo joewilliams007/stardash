@@ -585,21 +585,23 @@ if (isCmd) {
 					return `${day}. ${myMonths[bulan]} ${year}`
 		}	
 
-	
+	try {
 	  var _cmdhit = JSON.parse(fs.readFileSync(`./data/users/${sender.split("@")[0]}/userhit.json`));
 
 	  if (args.length > 1) {
 	  yoi = `${tanggggal} ${command} ${value}`
 	  _cmdhit.push(yoi)
-	  fs.writeFileSync('./data/users/${sender.split("@")[0]}/userhit.json', JSON.stringify(_cmdhit))
+	  fs.writeFileSync(`./data/users/${sender.split("@")[0]}/userhit.json`, JSON.stringify(_cmdhit))
 	  }
 	  else {
 		yoi = `${tanggggal} ${command}`
 		_cmdhit.push(yoi)
-		fs.writeFileSync('./data/users/${sender.split("@")[0]}/userhit.json', JSON.stringify(_cmdhit))
+		fs.writeFileSync(`./data/users/${sender.split("@")[0]}/userhit.json`, JSON.stringify(_cmdhit))
 	  }
 	 
-
+	} catch {
+  console.error(err)
+	}
   }
 // ---- Antilink 
 const linkwa = 'http'
