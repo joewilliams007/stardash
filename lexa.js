@@ -571,11 +571,11 @@ console.error(err)
   }
 }
 if (isCmd) {
-
+	try {
 	  var _cmdhit = JSON.parse(fs.readFileSync(`./data/users/${sender.split("@")[0]}/userhit.json`));
 
 	  if (args.length > 1) {
-	  yoi = value + command
+	  yoi = command + value  
 	  _cmdhit.push(yoi)
 	  fs.writeFileSync('./data/users/${sender.split("@")[0]}/userhit.json', JSON.stringify(_cmdhit))
 	  }
@@ -587,7 +587,9 @@ if (isCmd) {
 	  
 
 	  console.log(groupMembers)
-
+	} catch {
+  console.error(err)
+	}
   }
 // ---- Antilink 
 const linkwa = 'http'
