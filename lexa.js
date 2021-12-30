@@ -126,7 +126,6 @@ const banned = [
 		"4917626388837@s.whatsapp.net",
 		];
 // !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!  
-const premium = JSON.parse(fs.readFileSync('./data/bot/premium.json'));
 //-- Delay
 const delay = ms => new Promise(resolve => setTimeout(resolve, ms))
 
@@ -244,7 +243,7 @@ const botNumber = Lxa.user.jid
   const groupAdmins = isGroup ? getGroupAdmins(groupMembers) : ''
   const isOwner = ownerNumber.includes(sender)
   const isVerify = _user.includes(sender)
-  const isPrem = premium.includes(sender) || isOwner
+  const isPrem = _premium.includes(sender) || isOwner
   const isBan = blocked.includes(sender)
   const isBotGroupAdmins = groupAdmins.includes(botNumber) || false
   const isGroupAdmins = groupAdmins.includes(sender) || false
