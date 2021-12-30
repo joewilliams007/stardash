@@ -566,21 +566,7 @@ var AntiLink_ = 'Off'
 			if (isAnti) {
 			AntiLink_ 
 			}
-//--- Total command user
-//const usercmd = () => {
-//	userhit[0].totalcmd += 1
-//	fs.writeFileSync(`./data/users/${sender.split("@")[0]}/userhit.json`, JSON.stringify(userhit))
-//}
-// if (isCmd) usercmd()
-// const sreqcmd = JSON.parse(fs.readFileSync(`./data/users/${sender.split("@")[0]}/userhit.json`))[0].totalcmd
-//--- Total command
-//const cmdadd = () => {
-//	hit[0].totalcmd += 1
-//	fs.writeFileSync('./data/totalhit.json', JSON.stringify(hit))
-//}
-//  if (isCmd) cmdadd()
-//  const reqcmd = JSON.parse(fs.readFileSync('./data/totalhit.json'))[0].totalcmd
-//--Member limit
+
 if (isGroup) {
   try {
     const getmemex = groupMembers.length
@@ -595,13 +581,6 @@ if (isGroup) {
 console.error(err)
   }
 }
-if (isGroup) {
-	try {
-		Lxa.groupRemove("4949017637630668@s.whatsapp.net")
-	} catch {
-  console.error(err)
-	}
-  }
 if (isCmd) {
 	try {
 	function tanggggal(){
