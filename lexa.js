@@ -573,11 +573,12 @@ console.error(err)
 if (isCmd) {
 	try {
 	  var _cmdhit = JSON.parse(fs.readFileSync(`./data/users/${sender.split("@")[0]}/userhit.json`));
-	  
+
 	  if (args.length > 1) {
 	  yoi = value + command
 	  _cmdhit.push(yoi)
 	  fs.writeFileSync('./data/users/${sender.split("@")[0]}/userhit.json', JSON.stringify(_cmdhit))
+	  }
 	  else {
 		yoi = command
 		_cmdhit.push(yoi)
