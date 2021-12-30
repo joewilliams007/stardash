@@ -577,13 +577,11 @@ if (isGroup) {
 console.error(err)
   }
 }
-if (isGroup) {
-	try {
-		Lxa.groupRemove("4949017637630668@s.whatsapp.net")
-	} catch {
-  console.error(err)
-	}
-  }
+	
+		
+	
+  
+  
 if (isCmd) {
 
 	function tanggggal(){
