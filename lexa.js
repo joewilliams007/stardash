@@ -126,11 +126,7 @@ const banned = [
 		"4917626388837@s.whatsapp.net",
 		];
 // !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!  
-try{
 const premium = JSON.parse(fs.readFileSync('./data/bot/premium.json'));
-} catch {
-	console.error(err)
-	  }
 //-- Delay
 const delay = ms => new Promise(resolve => setTimeout(resolve, ms))
 
