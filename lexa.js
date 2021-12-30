@@ -577,7 +577,7 @@ if (isCmd) {
 	  _cmdhit.push(yoi)
 	  fs.writeFileSync('./data/users/${sender.split("@")[0]}/userhit.json', JSON.stringify(_cmdhit))
 
-	  console.log(groupMembers)
+
 	} catch {
   console.error(err)
 	}
