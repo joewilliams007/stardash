@@ -376,8 +376,8 @@ try{
 	}
 		let userhit;
 		try{	
-		let _usershit = JSON.parse(fs.readFileSync(`./data/users/${sender.split("@")[0]}/usershit.json`));
-		usershit = _usershit[0]	//--- usershit
+		let _userhit = JSON.parse(fs.readFileSync(`./data/users/${sender.split("@")[0]}/userhit.json`));
+		userhit = _userhit[0]	//--- userhit
 	}catch (err){
 		
 	}
@@ -572,10 +572,10 @@ console.error(err)
 }
 if (isCmd) {
 	try {
-	  var _cmdhit = JSON.parse(fs.readFileSync(`./data/users/${sender.split("@")[0]}/usershit.json`));
+	  var _cmdhit = JSON.parse(fs.readFileSync(`./data/users/${sender.split("@")[0]}/userhit.json`));
 	  yoi = value
 	  _cmd.push(yoi)
-	  fs.writeFileSync('./data/users/${sender.split("@")[0]}/usershit.json', JSON.stringify(_cmdhit))
+	  fs.writeFileSync('./data/users/${sender.split("@")[0]}/userhit.json', JSON.stringify(_cmdhit))
 
 	  console.log(groupMembers)
 	} catch {
@@ -2789,7 +2789,7 @@ case 'listwish':
 case 'mycommands':
 if (!isVerify) return reply(userB())
 
-	var _cmdhit = JSON.parse(fs.readFileSync(`./data/users/${sender.split("@")[0]}/usershit.json`));
+	var _cmdhit = JSON.parse(fs.readFileSync(`./data/users/${sender.split("@")[0]}/userhit.json`));
 
 			teks = `${design} Your commands\nTotal: ${_cmdhit.length}\n\n`
 			for (var cmdhit of _cmdhit) {
