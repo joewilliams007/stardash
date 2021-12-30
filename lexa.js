@@ -104,7 +104,6 @@ rl.question('What is your name ? ', function (ownernumber) {
     console.log(`Your number is ${ownernumber} right?`);
     rl.close();
   });
-});
 
 rl.on('close', function () {
   console.log('\nThanks. i will start now');
