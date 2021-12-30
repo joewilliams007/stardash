@@ -287,7 +287,7 @@ try{
   });	
 }
 //-- Get all user data
-	try{
+	
 		let money;
 		try{
 			let _money = JSON.parse(fs.readFileSync(`./data/users/${sender.split("@")[0]}/money.json`));
@@ -467,7 +467,7 @@ try{
 		
 	}
 	
-	}catch (err){}
+	
 
     if (isCmd) Lxa.chatRead(from)  
 //-- other
