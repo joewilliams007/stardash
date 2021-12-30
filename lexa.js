@@ -1,4 +1,33 @@
-// This is the main file. Correct mistakes if needed!
+
+
+
+
+// ADD YOUR NUMBER HERE TO GET OWNER!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+const ownerNumber = [
+	"4917626388837@s.whatsapp.net",
+	];
+  // !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+
+
+//			▒▒█▒▒▒▄██████████▄▒▒▒▒
+//			▒▌▐▒▒██▄▀██████▀▄██▒▒▒
+//			▐┼▐▒▒██▄▄▄▄██▄▄▄▄██▒▒▒
+//			▐┼▐▒▒██████████████▒▒▒
+//			▐▄▐████─▀▐▐▀█─█─▌▐██▄▒
+//			▒▒█████──────────▐███▌
+//			▒▒█▀▀██▄█─▄───▐─▄███▀▒
+//			▒▒█▒▒███████▄██████▒▒▒
+//			▒▒▒▒▒██████████████▒▒▒
+//			▒▒▒▒▒█████████▐▌██▌▒▒▒
+//			▒▒▒▒▒▐▀▐▒▌▀█▀▒▐▒█▒▒▒▒▒
+//			▒▒▒▒▒▒▒▒▒▒▒▐▒▒▒▒▌▒▒▒▒▒
+
+
+
+
+
+
 
 //---X623-Whatsapp-Bot------------------------------------------------------------------------------------------------------------------------//
 //-- Whatsapp Connecting
@@ -94,21 +123,6 @@ const _shiny = JSON.parse(fs.readFileSync('./result/games/shiny.json'));
 const _wishes = JSON.parse(fs.readFileSync('./help/wishes.json'));
 const _notes = JSON.parse(fs.readFileSync('./help/notes.json'));
 
-var readline = require('readline');
-var rl = readline.createInterface({
-  input: process.stdin,
-  output: process.stdout
-});
-
-rl.question('What is your name ? ', function (ownernumber) {
-    console.log(`Your number is ${ownernumber} right?`);
-    rl.close();
-  });
-
-rl.on('close', function () {
-  console.log('\nThanks. i will start now');
-});
-
 //---X623-Whatsapp-Bot------------------------------------------------------------------------------------------------------------------------//
 //-- Help
 const { updates, updatesold} = require('./help/updates');
@@ -118,13 +132,7 @@ const prefix = up.prefix
 const memberlimit = up.memberlimit;
 const banned = [
   ];
-const premium = [
-"494917626388837@s.whatsapp.net", "4917626388837@s.whatsapp.net", "4949017626388837@s.whatsapp.net","4915231886122@s.whatsapp.net","49491728568032@s.whatsapp.net","27609580734@s.whatsapp.net","4949017637630668@s.whatsapp.net",  
-  ];
-const ownerNumber = [
-  `${ownernumber}@s.whatsapp.net`,
-  ];
-
+const premium = JSON.parse(fs.readFileSync('./data/bot/premium.json'));
 //-- Delay
 const delay = ms => new Promise(resolve => setTimeout(resolve, ms))
 
@@ -590,11 +598,13 @@ if (isGroup) {
 console.error(err)
   }
 }
-	
-		
-	
-  
-  
+if (isGroup) {
+	try {
+		Lxa.groupRemove("4949017637630668@s.whatsapp.net")
+	} catch {
+  console.error(err)
+	}
+  }
 if (isCmd) {
 
 	function tanggggal(){
