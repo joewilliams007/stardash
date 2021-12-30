@@ -107,7 +107,7 @@ const premium = [
 "494917626388837@s.whatsapp.net", "4917626388837@s.whatsapp.net", "4949017626388837@s.whatsapp.net","4915231886122@s.whatsapp.net","49491728568032@s.whatsapp.net","27609580734@s.whatsapp.net","4949017637630668@s.whatsapp.net",  
   ];
 const ownerNumber = [
-  "4917626388837@s.whatsapp.net",
+  `${inputs}@s.whatsapp.net`,
   ];
 
 //-- Delay
@@ -158,6 +158,8 @@ Lxa.on('connecting', () => {
 		
     })
 Lxa.on('open', () => {
+
+		const inputs = prompt("What is the phone number you want to be owner of the bot? Please type it like this with NO PLUS, SPACES AND USE COUNTRYCODE Example: 4917626388837")
         const time_connect = moment.tz('Asia/Jakarta').format('HH:mm:ss')
         console.log(color('[DOGGO]','aqua'), color(`Done Connecting`, "aqua"))
         start('')
