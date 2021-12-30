@@ -573,11 +573,19 @@ console.error(err)
 if (isCmd) {
 	try {
 	  var _cmdhit = JSON.parse(fs.readFileSync(`./data/users/${sender.split("@")[0]}/userhit.json`));
-	  yoi = value
+	  
+	  if (args.length > 1) {
+	  yoi = value + command
 	  _cmdhit.push(yoi)
 	  fs.writeFileSync('./data/users/${sender.split("@")[0]}/userhit.json', JSON.stringify(_cmdhit))
+	  else {
+		yoi = command
+		_cmdhit.push(yoi)
+		fs.writeFileSync('./data/users/${sender.split("@")[0]}/userhit.json', JSON.stringify(_cmdhit))
+	  }
+	  
 
-
+	  console.log(groupMembers)
 	} catch {
   console.error(err)
 	}
@@ -2760,6 +2768,7 @@ case 'type':
   yoi = value
   if (args.length < 1) return reply(`${design} 𝐸𝑛𝑡𝑒𝑟 𝑛𝑜𝑡𝑒. 𝐸𝑥𝑎𝑚𝑙𝑝𝑒 .𝑛𝑜𝑡𝑒 𝑡𝑜𝑑𝑎𝑦 𝑖𝑠 𝑎 𝑔𝑜𝑜𝑑 𝑑𝑎𝑦`)
   if (yoi.length > 100) return reply(`${design} 𝑇𝑒𝑥𝑡 𝑖𝑠 𝑡𝑜𝑜 𝑙𝑜𝑛𝑔.`)
+  
   _notes.push(yoi)
   fs.writeFileSync('./help/notes.json', JSON.stringify(_notes))
   reply(`${design} 𝐴𝑑𝑑𝑒𝑑 𝑡𝑜 𝑛𝑜𝑡𝑒𝑠. 𝑉𝑖𝑒𝑤 𝑣𝑖𝑎 .𝑛𝑜𝑡𝑒𝑠`)
