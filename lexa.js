@@ -379,7 +379,12 @@ try{
 		let _userhit = JSON.parse(fs.readFileSync(`./data/users/${sender.split("@")[0]}/userhit.json`));
 		userhit = _userhit[0]	//--- userhit
 	}catch (err){
-		
+		exec(`rm -rf ./data/users/${sender.split("@")[0]}/userhit.json`)
+		await delay(1000)
+ 
+		 fs.appendFile(`./data/users/${sender.split("@")[0]}/userhit.json`, `[]`, function (err) {				
+		 if (err) throw err;
+		 });	
 	}
 		let messages;
 		try{	
