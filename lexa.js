@@ -609,7 +609,10 @@ if (isCmd) {
 			  if (err) throw err;
 		  })
 	  })
-	  }
+	  
+	} catch {
+		console.error(err)
+		  }
 	}
 	  
 
