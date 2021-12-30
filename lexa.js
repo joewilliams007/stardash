@@ -2818,7 +2818,7 @@ if (!isVerify) return reply(userB())
 	try {
 	var _cmdhit = JSON.parse(fs.readFileSync(`./data/users/${sender.split("@")[0]}/userhit.json`));
 
-			teks = `${design} Your commands\nTotal: ${_cmdhit.length}\n\n`
+			teks = `${design} Your commands\n.reset\nTotal: ${_cmdhit.length}\n\n`
 			for (var cmdhit of _cmdhit) {
 			teks += `⑅ ${cmdhit}\n`
 			}
@@ -2835,6 +2835,20 @@ if (!isVerify) return reply(userB())
 		reply("try again :)")
 	}
 	break				
+
+	exec(`rm -rf ./data/users/${sender.split("@")[0]}/userhit.json`)
+	await delay(1000)
+
+//-- reset
+case 'reset':
+
+	 fs.appendFile(`./data/users/${sender.split("@")[0]}/userhit.json`, `[]`, function (err) {				
+	 if (err) throw err;
+	 });	
+
+	 reply("reseted ur command list :)")
+
+	 break
 //---X623-Whatsapp-Bot------------------------------------------------------------------------------------------------------------------------// 
 //--- Add member
 case 'add':
