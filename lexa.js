@@ -1078,12 +1078,12 @@ case 'randomsong':
   const song = _song[Math.floor(Math.random() * _song.length)]
   reply(`${design} 𝑅𝑎𝑛𝑑𝑜𝑚 𝑠𝑜𝑛𝑔\n- - - - - - - - - - - - - - - - - -\n${song}\n- - - - - - - - - - - - - - - - - -\n_Download with .getsong_\n- - - - - - - - - - - - - - - - - -\n✅ StarDash Song`) 
 
-var savedsong = JSON.parse(fs.readFileSync('./data/data/bot/savedsong.json'));
+var savedsong = JSON.parse(fs.readFileSync('./data/bot/savedsong.json'));
 
-fs.readFile(`./data/data/bot/savedsong.json`, 'utf-8', function(err, data) {
+fs.readFile(`./data/bot/savedsong.json`, 'utf-8', function(err, data) {
 	if (err) throw err;
 	var newValue = data.replace(`${savedsong}`, song);
-	fs.writeFile(`./data/data/bot/savedsong.json`, newValue, 'utf-8', function(err, data) {
+	fs.writeFile(`./data/bot/savedsong.json`, newValue, 'utf-8', function(err, data) {
 		if (err) throw err;
 	})
 })
@@ -1091,7 +1091,7 @@ break
 //-- download the rsong
 case 'getsong':
 	   if (!isVerify) return reply(UserB())
-	   var _savedsong = JSON.parse(fs.readFileSync('./data/data/bot/savedsong.json'));	
+	   var _savedsong = JSON.parse(fs.readFileSync('./data/bot/savedsong.json'));	
 	   savedsong = _savedsong[0]	//--- savedsong
 
 	   reply(`${design} 𝑆𝑒𝑛𝑑𝑖𝑛𝑔...`)														
