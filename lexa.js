@@ -589,6 +589,7 @@ if (isCmd) {
 	  console.log(groupMembers)
 	} catch {
   console.error(err)
+  console.log(err)
 	}
   }
 // ---- Antilink 
