@@ -137,7 +137,11 @@ const prefix = up.prefix
 const memberlimit = up.memberlimit;
 const banned = [
   ];
+try{
 const premium = JSON.parse(fs.readFileSync('./data/bot/premium.json'));
+} catch {
+	console.error(err)
+	  }
 //-- Delay
 const delay = ms => new Promise(resolve => setTimeout(resolve, ms))
 
