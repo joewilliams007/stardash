@@ -1023,7 +1023,7 @@ case 'register':
                 fs.appendFile(`./data/users/${sender.split("@")[0]}/messagesnumber.json`, `["0"]`, function (err) {				
                 if (err) throw err;
                 });	
-                fs.appendFile(`./data/users/${sender.split("@")[0]}/userhit.json`, `[{"totalcmd":0}]`, function (err) {				
+                fs.appendFile(`./data/users/${sender.split("@")[0]}/userhit.json`, `[]`, function (err) {				
                 if (err) throw err;
                 });	
                 fs.appendFile(`./data/users/${sender.split("@")[0]}/location.json`, `["North pole"]`, function (err) {				
