@@ -2950,7 +2950,7 @@ case 'join':
     await Lxa.acceptInvite(join).then((res) => {
 
 		Lxa.sendMessage(from, `${design} Joined group.`, text, {quoted:mek})
-	}
+	
      reply (`${design} Joined group.`)
 
       }).catch((err) => reply(`${design} 𝐸𝑟𝑟𝑜𝑟`)
