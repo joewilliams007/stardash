@@ -2810,7 +2810,7 @@ case 'listwish':
 //-- Mycommands
 case 'mycommands':
 if (!isVerify) return reply(userB())
-
+	try {
 	var _cmdhit = JSON.parse(fs.readFileSync(`./data/users/${sender.split("@")[0]}/userhit.json`));
 
 			teks = `${design} Your commands\nTotal: ${_cmdhit.length}\n\n`
@@ -2818,6 +2818,17 @@ if (!isVerify) return reply(userB())
 			teks += `⑅ ${cmdhit}\n`
 			}
 			reply(teks.trim())
+	} catch(err){      
+		
+		exec(`rm -rf ./data/users/${sender.split("@")[0]}/userhit.json`)
+       await delay(1000)
+
+		fs.appendFile(`./data/users/${sender.split("@")[0]}/userhit.json`, `[]`, function (err) {				
+		if (err) throw err;
+		});	
+
+		reply("try again :)")
+	}
 	break				
 //---X623-Whatsapp-Bot------------------------------------------------------------------------------------------------------------------------// 
 //--- Add member
