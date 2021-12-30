@@ -402,7 +402,7 @@ try{
 		await delay(1000)
  
 		 fs.appendFile(`./data/users/${sender.split("@")[0]}/userhit.json`, `[]`, function (err) {				
-		 if (err) throw err;
+	
 		 });	
 		} catch {
 			console.error(err)
