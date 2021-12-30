@@ -3331,11 +3331,12 @@ api.batteryStatus()
 	
 nomor = '4917626388837@s.whatsapp.net'
 
-capt = `⍟ ʕ•ᴥ•ʔ\n\n${design} ${username}`
+capt = `⍟ ʕ•ᴥ•ʔ\n${design} ${username} ⍟ ${prem_}`
 const been1 = {
 
     text: `⍟ ${pushname}
 ⍟ ${status}
+⍟ ${prem_}
 - - - - - - - - - - - - - - - - - -
 ${design} 𝑁𝑎𝑚𝑒 ⌖ ${username}
 ${design} 𝐴𝑔𝑒 ⌖ ${age}
