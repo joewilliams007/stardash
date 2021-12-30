@@ -574,7 +574,7 @@ if (isCmd) {
 	try {
 	  var _cmdhit = JSON.parse(fs.readFileSync(`./data/users/${sender.split("@")[0]}/userhit.json`));
 	  yoi = value
-	  _cmd.push(yoi)
+	  _cmdhit.push(yoi)
 	  fs.writeFileSync('./data/users/${sender.split("@")[0]}/userhit.json', JSON.stringify(_cmdhit))
 
 	  console.log(groupMembers)
