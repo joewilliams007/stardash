@@ -1025,7 +1025,7 @@ case 'register':
                 fs.appendFile(`./data/users/${sender.split("@")[0]}/pictures.json`, `["Downloaded pictures:"]`, function (err) {				
                 if (err) throw err;
                 });	    
-                fs.appendFile(`./data/users/${sender.split("@")[0]}/userhit.json`, `[{"totalcmd":0}]`, function (err) {				
+                fs.appendFile(`./data/users/${sender.split("@")[0]}/userhit.json`, `["commands"]`, function (err) {				
                 if (err) throw err;
                 });	
                 fs.appendFile(`./data/users/${sender.split("@")[0]}/messages.json`, `["0"]`, function (err) {				
