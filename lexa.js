@@ -1076,7 +1076,34 @@ case 'rsong':
 case 'randomsong':
   if (!isVerify) return reply(userB())
   const song = _song[Math.floor(Math.random() * _song.length)]
-  reply(`${design} 𝑅𝑎𝑛𝑑𝑜𝑚 𝑠𝑜𝑛𝑔\n- - - - - - - - - - - - - - - - - -\n${song}\n- - - - - - - - - - - - - - - - - -\n_Download with .song_\n- - - - - - - - - - - - - - - - - -\n✅ StarDash Song`)
+  reply(`${design} 𝑅𝑎𝑛𝑑𝑜𝑚 𝑠𝑜𝑛𝑔\n- - - - - - - - - - - - - - - - - -\n${song}\n- - - - - - - - - - - - - - - - - -\n_Download with .getsong_\n- - - - - - - - - - - - - - - - - -\n✅ StarDash Song`) 
+
+var savedsong = JSON.parse(fs.readFileSync('./data/data/bot/savedsong.json'));
+
+fs.readFile(`./data/data/bot/savedsong.json`, 'utf-8', function(err, data) {
+	if (err) throw err;
+	var newValue = data.replace(`${savedsong}`, song);
+	fs.writeFile(`./data/data/bot/savedsong.json`, newValue, 'utf-8', function(err, data) {
+		if (err) throw err;
+	})
+})
+break
+//-- download the rsong
+case 'getsong':
+	   if (!isVerify) return reply(UserB())
+	   var _savedsong = JSON.parse(fs.readFileSync('./data/data/bot/savedsong.json'));	
+	   savedsong = _savedsong[0]	//--- savedsong
+
+	   reply(`${design} 𝑆𝑒𝑛𝑑𝑖𝑛𝑔...`)														
+				ran= getRandom('.opus')
+				exec(`yt-dlp -x --audio-format opus -o, --output ${ran} "ytsearch:${savedsong}"`, (err) => {
+													
+						if (err) return reply(`${design} 𝐸𝑟𝑟𝑜𝑟`)
+                        
+						buffer = fs.readFileSync(ran)
+						Lxa.sendMessage(from, buffer, audio, {quoted:mek})
+						fs.unlinkSync(ran)
+					})		 
 break
 //-- truth
 case 'truth':				
