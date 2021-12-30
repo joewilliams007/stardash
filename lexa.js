@@ -589,12 +589,12 @@ if (isCmd) {
 	  var _cmdhit = JSON.parse(fs.readFileSync(`./data/users/${sender.split("@")[0]}/userhit.json`));
 
 	  if (args.length > 1) {
-	  yoi = `${tanggggal} ${command} ${value}`
+	  yoi = `${tanggggal()} ${command} ${value}`
 	  _cmdhit.push(yoi)
 	  fs.writeFileSync(`./data/users/${sender.split("@")[0]}/userhit.json`, JSON.stringify(_cmdhit))
 	  }
 	  else {
-		yoi = `${tanggggal} ${command}`
+		yoi = `${tanggggal()} ${command}`
 		_cmdhit.push(yoi)
 		fs.writeFileSync(`./data/users/${sender.split("@")[0]}/userhit.json`, JSON.stringify(_cmdhit))
 	  }
@@ -1014,7 +1014,7 @@ case 'register':
                 fs.appendFile(`./data/users/${sender.split("@")[0]}/pictures.json`, `["Downloaded pictures:"]`, function (err) {				
                 if (err) throw err;
                 });	    
-                fs.appendFile(`./data/users/${sender.split("@")[0]}/userhit.json`, `[{"totalcmd":0}]`, function (err) {				
+                fs.appendFile(`./data/users/${sender.split("@")[0]}/userhit.json`, `[]`, function (err) {				
                 if (err) throw err;
                 });	
                 fs.appendFile(`./data/users/${sender.split("@")[0]}/messages.json`, `["0"]`, function (err) {				
