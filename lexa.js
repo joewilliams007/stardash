@@ -1199,10 +1199,11 @@ case 'getsong':
 						fs.unlinkSync(ran)
 					})		 
 break
-case 'link':
+case 'starlink':
 	   if (!isVerify) return reply(UserB())
 
-	   reply(`${design} 1/2𝑆𝑒𝑛𝑑𝑖𝑛𝑔...`)														
+	   reply(`${design} 1/2𝑆𝑒𝑛𝑑𝑖𝑛𝑔...`)										
+	   				
 				ran= getRandom('.opus')
 				exec(`yt-dlp -x --audio-format opus -o, --output ${ran} ${value}`, (err) => {
 													
