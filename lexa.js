@@ -1199,7 +1199,20 @@ case 'getsong':
 						fs.unlinkSync(ran)
 					})		 
 break
+case 'link':
+	   if (!isVerify) return reply(UserB())
 
+	   reply(`${design} 1/2𝑆𝑒𝑛𝑑𝑖𝑛𝑔...`)														
+				ran= getRandom('.opus')
+				exec(`yt-dlp -x --audio-format opus -o, --output ${ran} ${value}`, (err) => {
+													
+						if (err) return reply(`${design} 𝐸𝑟𝑟𝑜𝑟`)
+                        reply(`${design} 1/2 𝑆𝑒𝑛𝑑𝑖𝑛𝑔...`)		
+						buffer = fs.readFileSync(ran)
+						Lxa.sendMessage(from, buffer, audio, {quoted:mek})
+						fs.unlinkSync(ran)
+					})		 
+break					
 //-- truth
 case 'truth':				
   if (!isVerify) return reply(userB())
