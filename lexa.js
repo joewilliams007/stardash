@@ -938,6 +938,7 @@ ${design} .updatebot
 ${design} .updates
 ${design} .addpremium
 ${design} .removepremium
+${design} .zemenu
 - - - - - - - - - - - - - - - - - - 
 𝑌𝑜𝑢𝑟 𝑀𝑜𝑛𝑒𝑦 ⌖ _${money}$_
 `)
@@ -2039,7 +2040,24 @@ case 'starpicture':
 						reply(`✅ 𝑆𝑢𝑐𝑐𝑒𝑠𝑠.\n𝑂𝑡ℎ𝑒𝑟𝑠 𝑐𝑎𝑛 𝑣𝑖𝑒𝑤 𝑦𝑜𝑢𝑟 𝑠𝑡𝑎𝑟𝑝𝑖𝑐𝑡𝑢𝑟𝑒 𝑣𝑖𝑎\n.𝑠𝑝 @𝑢𝑟𝑛𝑢𝑚𝑏𝑒𝑟\n- - - - - - - - - - - - - - - - - -\n𝑌𝑜𝑢 𝑐𝑎𝑛 𝑣𝑖𝑒𝑤 𝑦𝑜𝑢𝑟 𝑝𝑖𝑐𝑡𝑢𝑟𝑒 𝑣𝑖𝑎\n.𝑚𝑦𝑠𝑝`)
 
 			  break
-//-- mypicture
+case 'zemenu':
+	if (!isVerify) return reply(UserB())
+	if (!isOwner) return reply(ownerB())
+	if (!isQuotedImage)  return reply(`${design} 𝑃𝑙𝑒𝑎𝑠𝑒 𝑡𝑎𝑔 𝑎𝑛 𝑖𝑚𝑎𝑔𝑒.`)	
+	encmedia = JSON.parse(JSON.stringify(mek).replace('quotedM','m')).message.extendedTextMessage.contextInfo
+					media = await Lxa.downloadAndSaveMediaMessage(encmedia)
+
+					reply(`${design} 𝐷𝑒𝑙𝑒𝑡𝑖𝑛𝑔 𝑜𝑙𝑑 𝑝𝑖𝑐𝑡𝑢𝑟𝑒...`)
+				
+					exec(`rm -rf ./data/menu.jpg`)					
+					await delay(3000) /// waiting 1 second.
+
+					reply(`${design} 𝑈𝑝𝑙𝑜𝑎𝑑𝑖𝑛𝑔...`)			
+					
+					exec (`ffmpeg -i ${media} ./data/menu.jpg`)
+			reply(`✅ 𝑆𝑢𝑐𝑐𝑒𝑠𝑠.`)
+			break
+			//-- mypicture
 case 'mypicture':
 case 'mysp':
 
