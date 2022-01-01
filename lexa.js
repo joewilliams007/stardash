@@ -1182,15 +1182,15 @@ fs.readFile(`./data/bot/savedsong.json`, 'utf-8', function(err, data) {
 	})
 })
 break
-//-- download the rsong
+//-- download the rsong :)
 case 'getsong':
 	   if (!isVerify) return reply(UserB())
 	   var _savedsong = JSON.parse(fs.readFileSync('./data/bot/savedsong.json'));	
 	   savedsong = _savedsong[0]	//--- savedsong
 
 	   reply(`${design} 𝑆𝑒𝑛𝑑𝑖𝑛𝑔...`)														
-				ran= getRandom('.opus')
-				exec(`yt-dlp -x --audio-format opus -o, --output ${ran} "ytsearch:${savedsong}"`, (err) => {
+				ran= getRandom('.mp3')
+				exec(`yt-dlp -x --audio-format mp3 -o, --output ${ran} "ytsearch:${savedsong}"`, (err) => {
 													
 						if (err) return reply(`${design} 𝐸𝑟𝑟𝑜𝑟`)
                         
@@ -2262,8 +2262,8 @@ case 'ytbsong':
        await delay(1000) /// waiting 1 second.					
        reply(`${design} 𝐷𝑜𝑤𝑛𝑙𝑜𝑎𝑑𝑖𝑛𝑔...\n- - - - - - - - - - - - - - - - - -\n𝑀𝑜𝑛𝑒𝑦 𝑙𝑒𝑓𝑡 ${newmoney}$\n- - - - - - - - - - - - - - - - - -\n❇️ 𝑋623 𝑆𝑜𝑛𝑔𝑠`)
 																
-				ran= getRandom('.opus')
-				exec(`yt-dlp -x --audio-format opus -o, --output ${ran} "ytsearch:${value}"`, (err) => {
+				ran= getRandom('.mp3')
+				exec(`yt-dlp -x --audio-format mp3 -o, --output ${ran} "ytsearch:${value}"`, (err) => {
 													
 						if (err) return reply(`${design} 𝐸𝑟𝑟𝑜𝑟`)
                         reply(`${design} 𝑆𝑒𝑛𝑑𝑖𝑛𝑔...\n- - - - - - - - - - - - - - - - - -\n_Tipp: ${tipp}_\n- - - - - - - - - - - - - - - - - -\n❇️ 𝑋623 𝑆𝑜𝑛𝑔𝑠`)
