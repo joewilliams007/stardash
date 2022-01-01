@@ -2049,12 +2049,12 @@ case 'zemenu':
 
 					reply(`${design} 𝐷𝑒𝑙𝑒𝑡𝑖𝑛𝑔 𝑜𝑙𝑑 𝑝𝑖𝑐𝑡𝑢𝑟𝑒...`)
 				
-					exec(`rm -rf ./data/menu.jpg`)					
+					exec(`rm -rf ./images/menu.jpg`)					
 					await delay(3000) /// waiting 1 second.
 
 					reply(`${design} 𝑈𝑝𝑙𝑜𝑎𝑑𝑖𝑛𝑔...`)			
 					
-					exec (`ffmpeg -i ${media} ./data/menu.jpg`)
+					exec (`ffmpeg -i ${media} ./images/menu.jpg`)
 			reply(`✅ 𝑆𝑢𝑐𝑐𝑒𝑠𝑠.`)
 			break
 			//-- mypicture
