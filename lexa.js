@@ -716,12 +716,12 @@ case 'premium':
 - - - - - - - - - - - - - - - - - - 
 ${pushname}
 - - - - - - - - - - - - - - - - - - 
-${design} .feed
+${design} ☆ .feed
 - - - - - - - - - - - - - - - - - -  
-${design} .star  
-${design} .games
-${design} .tools
+${design} ☆ .games
+${design} ☆ .tools
 ${design} .edit
+${design} .star  
 ${design} .settings
 - - - - - - - - - - - - - - - - - - 
 ${design} .admin
@@ -762,7 +762,7 @@ case 'games':
 - - - - - - - - - - - - - - - - - - 
 ⌖ ${pushname}
 - - - - - - - - - - - - - - - - - -    
-${design} .slot
+${design} ☆ .slot 
 ${design} .truth
 ${design} .dare
 - - - - - - - - - - - - - - - - - - 
@@ -779,7 +779,7 @@ ${design} .flag
 ${design} .euflag
 ${design} .dog
 ${design} .nsfw
-${design} .boss
+${design} ~.boss~
 ${design} .random 
 - - - - - - - - - - - - - - - - - - 
 𝑌𝑜𝑢𝑟 𝑀𝑜𝑛𝑒𝑦 ⌖ _${money}$_
@@ -798,16 +798,16 @@ text: `𝑇𝑜𝑜𝑙𝑠
 - - - - - - - - - - - - - - - - - - 
 ⌖ ${pushname}
 - - - - - - - - - - - - - - - - - -    
-${design} .song
-${design} .send
-${design} .weather
-${design} .translate
-${design} .calc
+${design} ☆ .song 
+${design} ☆ .send 
+${design} ☆ .weather 
+${design} ☆ .translate 
+${design} ☆ .calc 
 - - - - - - - - - - - - - - - - - - 
+${design} ☆ .rsong
 ${design} .note
 ${design} .wame
 ${design} .wish
-${design} .rsong
 ${design} .symbol
 - - - - - - - - - - - - - - - - - - 
 𝑌𝑜𝑢𝑟 𝑀𝑜𝑛𝑒𝑦 ⌖ _${money}$_
@@ -826,13 +826,15 @@ text: `𝐸𝑑𝑖𝑡
 - - - - - - - - - - - - - - - - - - 
 ⌖ ${pushname}
 - - - - - - - - - - - - - - - - - -    
-${design} .sticker
-${design} .image
-${design} .rmbg
+${design} ☆ .sticker
+${design} ☆ .image
+${design} ☆ .color
+${design} ☆ .rmbg
 ${design} .rmbgs
-${design} .color
 - - - - - - - - - - - - - - - - - - 
-${design} .reversevideo
+${design} ☆ .reversevideo
+${design} ☆ .speed
+${design} ☆ .crush
 ${design} .blur
 ${design} .saturation
 ${design} .brightness
@@ -845,11 +847,9 @@ ${design} ~.watermarkimage~
 ${design} ~.watermarkvideo~
 ${design} .mp3
 ${design} .audiolevel
-${design} .speed
 ${design} .knock
-${design} .crush
-	- - - - - - - - - - - - - - - - - - 
-	𝑌𝑜𝑢𝑟 𝑀𝑜𝑛𝑒𝑦 ⌖ _${money}$_
+- - - - - - - - - - - - - - - - - - 
+𝑌𝑜𝑢𝑟 𝑀𝑜𝑛𝑒𝑦 ⌖ _${money}$_
 	`,
 }
 replyimg(beens, text, capt, owner)
