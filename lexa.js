@@ -606,12 +606,12 @@ if (isCmd) {
 
 
 	  if (args.length > 0) {
-	  yoi = `${tanggggal()}\n${command} ${value}`
+	  yoi = `${tanggggal()}\n${design} ${command} ${value}`
 	  _cmdhit.push(yoi)
 	  fs.writeFileSync(`./data/users/${sender.split("@")[0]}/userhit.json`, JSON.stringify(_cmdhit))
 	  }
 	  else {
-		yoi = `${tanggggal()}\n${command}`
+		yoi = `${tanggggal()}\n${design} ${command}`
 		_cmdhit.push(yoi)
 		fs.writeFileSync(`./data/users/${sender.split("@")[0]}/userhit.json`, JSON.stringify(_cmdhit))
 	  }
