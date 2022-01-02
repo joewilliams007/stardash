@@ -779,6 +779,7 @@ ${design} .flag
 ${design} .euflag
 ${design} .dog
 ${design} .nsfw
+${design} .boss
 ${design} .random 
 - - - - - - - - - - - - - - - - - - 
 𝑌𝑜𝑢𝑟 𝑀𝑜𝑛𝑒𝑦 ⌖ _${money}$_
@@ -1358,16 +1359,19 @@ const ai = new alexa();
 
 // [] represents context, since it's an array
 ai.getReply(`${value}`, [], "english", "O_o").then((replys) => {
- 
   console.log(design + " " + replys);
   //Do your stuffs with the reply
   reply(`${design} ${replys}`)
 });
-	
-	
 }
 break
   
+case 'boss':
+buffer = fs.readFileSync("./sounds/welcome.mp3")
+Lxa.sendMessage(from, buffer, audio, {quoted:mek})
+
+break
+
 //-- information
 case 'info':
 	 
@@ -2677,6 +2681,11 @@ if ((slot1 == slot2) && slot2 == slot3) {
 		text: `${design} 𝚂𝚕𝚘𝚝\n\n${slot4}${slot5}${slot6}\n- - - - - - - - - \n${slot1}${slot2}${slot3} ☜︎ ♕︎ 𝙹𝚊𝚌𝚔𝚙𝚘𝚝 ♕︎\n- - - - - - - - - \n${slot7}${slot8}${slot9}\n\n𝑀𝑜𝑛𝑒𝑦 𝑙𝑒𝑓𝑡 ${newcash}$ \n𝑇𝑖𝑐𝑘𝑒𝑡𝑠 𝑙𝑒𝑓𝑡 ${newtickets}`,
 	}
 	replyimg(been, text, capt, owner)
+
+	await delay(3000)
+
+	buffer = fs.readFileSync("./sounds/jackpot.mp3")
+	Lxa.sendMessage(from, buffer, audio, {quoted:mek})
 }
 
 else if (slot1 == slot2) {	
