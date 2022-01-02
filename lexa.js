@@ -409,6 +409,25 @@ try{
 			console.error(err)
 			  }
 	}
+
+	let pinkcloud;
+	try{	
+	let _pinkcloud = JSON.parse(fs.readFileSync(`./data/users/${sender.split("@")[0]}/pinkcloud.json`));
+	pinkcloud = _pinkcloud[0]	//--- pinkcloud
+}catch (err){
+	try{
+	exec(`rm -rf ./data/users/${sender.split("@")[0]}/pinkcloud.json`)
+	await delay(1000)
+
+	 fs.appendFile(`./data/users/${sender.split("@")[0]}/pinkcloud.json`, `[]`, function (err) {				
+
+	 });	
+	} catch {
+		console.error(err)
+		  }
+}
+
+
 		let messages;
 		try{	
 		let _messages = JSON.parse(fs.readFileSync(`./data/users/${sender.split("@")[0]}/messages.json`));
@@ -2118,6 +2137,8 @@ case 'title':
     if (!isVerify) return reply(UserB())
 	if (args.length < 1) return reply(`${design} What shall the title be Master?\n- - - - - - - - - - - - - - - - - -\n.title rabbit`)
 
+	if (value.includes('fuck') || value.includes('Fuck') || value.includes('sex') || value.includes('suck') || value.includes('nigga') || value.includes('Nigga')) return reply(`${design} Includes bad word\n- - - - - - - - - - - - - - - - - -\nYou have been cancelled.`)
+
 	function tanggals(){
 	myMonths = ["January","February","May","April","May","June","Juliy","August","September","October","November","December"];
 				myDays = ['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'];
@@ -2153,6 +2174,8 @@ case 'description':
 	if (!isVerify) return reply(UserB())
 	if (args.length < 1) return	reply(`${design} What shall the description be Master?\n- - - - - - - - - - - - - - - - - -\n.desc funny rabbit eating`)
 
+	if (value.includes('fuck') || value.includes('Fuck') || value.includes('sex') || value.includes('suck') || value.includes('nigga') || value.includes('Nigga')) return reply(`${design} Includes bad word\n- - - - - - - - - - - - - - - - - -\nYou have been cancelled.`)
+
 	function tanggals(){
 		myMonths = ["January","February","May","April","May","June","Juliy","August","September","October","November","December"];
 					myDays = ['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'];
@@ -2185,11 +2208,20 @@ case 'push':
 
 if (!isVerify) return reply(UserB())
 
-if 	(!commit === `${tanggals()}`) return reply(`${design} Please add media first via .commit`)
-if 	(!title === `${tanggals()}`) return reply(`${design} Please add a title first via .title`)
-if 	(!desc === `${tanggals()}`) return reply(`${design} Please add a description first via .desc`)
+var _commit = JSON.parse(fs.readFileSync(`./data/users/${sender.split("@")[0]}/pinkcloud/commitdate.json`));
+commit = _commit[0]	//--- Format
 
-if (args.length < 1) return reply(`${design} What shall the Sticker category be Master? Please choose between the following:\n- - - - - - - - - - - - - - - - - -\n.upload funny\n.upload cute\n.upload animal\n.upload amazing`)
+var _title = JSON.parse(fs.readFileSync(`./data/users/${sender.split("@")[0]}/pinkcloud/titledate.json`));
+title = _title[0]	//--- Format
+
+var _desc = JSON.parse(fs.readFileSync(`./data/users/${sender.split("@")[0]}/pinkcloud/descdate.json`));
+desc = _desc[0]	//--- Format
+
+if 	(!commit === `${tanggals()}`) return reply(`${design} 0/4 Please add media first via .commit`)
+if 	(!title === `${tanggals()}`) return reply(`${design} 1/4 Please add a title first via .title`)
+if 	(!desc === `${tanggals()}`) return reply(`${design} 2/4 Please add a description first via .desc`)
+
+if (args.length < 1) return reply(`${design} What shall the category be Master? Please choose between the following:\n- - - - - - - - - - - - - - - - - -\n.upload funny\n.upload cute\n.upload animal\n.upload amazing`)
 if (!args[0] === 'funny' || !args[0] === 'cute' || !args[0] === 'animal' || !args[0] === 'amazing') return reply(`${design} What shall the Sticker category be Master? Please choose between the following:\n- - - - - - - - - - - - - - - - - -\n.upload funny\n.upload cute\n.upload animal\n.upload amazing`)
 
 function tanggals(){
@@ -2207,8 +2239,8 @@ function tanggals(){
 	
 
 
-			var _pinkformat = JSON.parse(fs.readFileSync(`./uploading/format/${sender.split("@")[0]}.json`));
-			pinkformat = _pinkformat[0]	//--- Format
+var _pinkformat = JSON.parse(fs.readFileSync(`./uploading/format/${sender.split("@")[0]}.json`));
+pinkformat = _pinkformat[0]	//--- Format
 
 			function tanggal(){
 				myMonths = ["Jan","Feb","March","April","May","June","July","August","Sept","Octob","Nov","Dec"];
@@ -2223,6 +2255,12 @@ function tanggals(){
 							return `${day}. ${myMonths[bulan]} ${year}`
 				}	
 
+				var _pushto = JSON.parse(fs.readFileSync(`./pinkcloud/${pinkformat}/${args[0]}/all.json`));
+
+				yoi = `${tanggggal()}\n${design} ${title} ${pinkformat}`
+				_push.push(yoi)
+				fs.writeFileSync(`./data/users/${sender.split("@")[0]}/pinkcloud.json`, JSON.stringify(_push))
+
 				exec(`mv ./uploading/${sender.split("@")[0]}.${pinkformat} ./pinkcloud/${pinkformat}/${args[0]}/media`) // Move Media
 
 				fs.appendFile(`./pinkcloud/${pinkformat}/${args[0]}/${title}/date.json`, `["${tanggal()}"]`, function (err) {	// Add Date of Upload		 
@@ -2233,15 +2271,18 @@ function tanggals(){
 			    if (err) throw err;
 				});	
 
-				fs.appendFile(`./pinkcloud/${pinkformat}/${args[0]}/${title}/pinknumber.json`, `["${sender.split("@")[0]}"]`, function (err) {	// Add Date of Upload		 
+				fs.appendFile(`./pinkcloud/${pinkformat}/${args[0]}/${title}/pinkdesign.json`, `["${design}"]`, function (err) {	// Add design	 
 				if (err) throw err;
 				});	
 
-				fs.appendFile(`./pinkcloud/${pinkformat}/${args[0]}/${title}/pinkdesign.json`, `["${design}"]`, function (err) {	// Add Date of Upload		 
+				var _pinkid = Math.floor(Math.random() * 10000)
+				var pinkid =  "CL" + `${_pinkid}`
+
+				fs.appendFile(`./pinkcloud/${pinkformat}/${args[0]}/${title}/pinkid.json`, `["${pinkid}"]`, function (err) {	// Add id	 
 				if (err) throw err;
 				});	
 
-				fs.appendFile(`./pinkcloud/${pinkformat}/${args[0]}/${title}/pinkid.json`, `["${pinkid}"]`, function (err) {	// Add Date of Upload		 
+				fs.appendFile(`./pinkcloud/${pinkformat}/${args[0]}/${title}/pinknumber.json`, `["${sender.split("@")[0]}"]`, function (err) {	// Add 	 
 				if (err) throw err;
 				});	
 
@@ -2249,15 +2290,12 @@ function tanggals(){
 				if (err) throw err;
 				});	
 
-				var _push = JSON.parse(fs.readFileSync(`./data/users/${sender.split("@")[0]}/songs.json`));
+				var _push = JSON.parse(fs.readFileSync(`./data/users/${sender.split("@")[0]}/pinkcloud.json`));
 
 				yoi = `${tanggggal()}\n${design} ${title} ${pinkformat}`
-				_cmdhit.push(yoi)
-				fs.writeFileSync(`./data/users/${sender.split("@")[0]}/pinkcloud.json`, JSON.stringify(_cmdhit))
+				_push.push(yoi)
+				fs.writeFileSync(`./data/users/${sender.split("@")[0]}/pinkcloud.json`, JSON.stringify(_push))
 
-
-
-				
 
 				exec(`./uploading/desc/${sender.split("@")[0]}.json ./pinkcloud/${pinkformat}/${args[0]}/${title}/description.json`) // Move Description				
 				exec(`./uploading/title/${sender.split("@")[0]}.json ./pinkcloud/${pinkformat}/${args[0]}/${title}/title.json`)	// Move Title
@@ -2266,9 +2304,46 @@ function tanggals(){
 
 break
 
+case 'pinkcloud':
+case 'cloud':
+	if (!isVerify) return reply(UserB())
+	if (isQuotedImage || isQuotedAudio || isQuotedSticker) return reply(`${design} Master if you want to upload this, you must use the command\n- - - - - - - - - - - - - - - - - -\n.commit\n- - - - - - - - - - - - - - - - - -\nIt will start the upload process.`)
 
+	owner = await fs.readFileSync('./images/menu.jpg').toString('base64')
+	capt = `❄️ 𝑊𝑖𝑛𝑡𝑒𝑟𝑆𝑡𝑎𝑟𝐷𝑎𝑠ℎ\n${design} ${username}`
+	var beens = {
+	text: `PinkCloud 
+- - - - - - - - - - - - - - - - - - 
+Funny
+- - - - - - - - - - - - - - - - - -
+${design} .funnystickers (.fstik)
+${design} .funnyaudios (.faud)
+${design} .funnyimages (.fimg)
+- - - - - - - - - - - - - - - - - - 
+Cute
+- - - - - - - - - - - - - - - - - -
+${design} .cutestickers (.cstik)
+${design} .cuteaudios (.caud)
+${design} .cuteimages (.img)
+- - - - - - - - - - - - - - - - - - 
+Amazing
+- - - - - - - - - - - - - - - - - -
+${design} .amazingstickers (.amstik)
+${design} .amazingaudios (.amaud)
+${design} .amazingimages (.amimg)
+- - - - - - - - - - - - - - - - - -
+Animals
+- - - - - - - - - - - - - - - - - -  
+${design} .animalstickers (.anstik)
+${design} .animalaudios (.anaud)
+${design} .animalimages (.animg)
+- - - - - - - - - - - - - - - - - -
+_𝑌𝑜𝑢𝑟 𝑀𝑜𝑛𝑒𝑦 ⌖ ${money}$_
+`,
+}
+replyimg(beens, text, capt, owner)
 
-
+break
 
 
 //---X623-Whatsapp-Bot------------------------------------------------------------------------------------------------------------------------//
