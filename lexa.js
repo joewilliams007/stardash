@@ -1519,6 +1519,22 @@ case 'volume':
 						fs.unlinkSync(ran)
 					})
 					break
+//-- knock
+case 'knock':
+			if (!isQuotedAudio) return reply(`${design} 𝑃𝑙𝑒𝑎𝑠𝑒 𝑡𝑎𝑔 𝑎𝑛 𝑎𝑢𝑑𝑖𝑜`)
+	  	reply(`${design} 𝐶ℎ𝑎𝑛𝑔𝑖𝑛𝑔 1/1`)
+					encmedia = JSON.parse(JSON.stringify(mek).replace('quotedM','m')).message.extendedTextMessage.contextInfo
+					media = await Lxa.downloadAndSaveMediaMessage(encmedia)
+				ran= getRandom('.opus')
+				exec(`ffmpeg -i ${media} -itsoffset 00:00:05 -i ./sounds/knock.mp3 -map 0:0 -map 1:0 -preset ultrafast  ${ran} `, (err) => {
+						fs.unlinkSync(media)
+						if (err) return reply(`${design} 𝐸𝑟𝑟𝑜𝑟`)
+						buffer = fs.readFileSync(ran)
+						Lxa.sendMessage(from, buffer, audio, {quoted:mek})
+						fs.unlinkSync(ran)
+					})
+					break					
+							
 //-- audio volume
 case 'reversevideo':
 			if (!isQuotedVideo) return reply(`${design} 𝑃𝑙𝑒𝑎𝑠𝑒 𝑡𝑎𝑔 𝑎𝑛 video`)
