@@ -840,11 +840,12 @@ ${design} .flip
 ${design} .bw
 ${design} .cover
 ${design} .cool
-${design} .watermarkimage
-${design} .watermarkvideo
+${design} ~.watermarkimage~
+${design} ~.watermarkvideo~
 ${design} .mp3
 ${design} .audiolevel
 ${design} .speed
+${design} .knock
 ${design} .crush
 	- - - - - - - - - - - - - - - - - - 
 	𝑌𝑜𝑢𝑟 𝑀𝑜𝑛𝑒𝑦 ⌖ _${money}$_
