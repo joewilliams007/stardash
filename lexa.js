@@ -2093,8 +2093,23 @@ case 'mysp':
 	reply(`${design} 𝑇ℎ𝑒𝑟𝑒 𝑤𝑎𝑠 𝑎𝑛 𝐸𝑟𝑟𝑜𝑟 𝑟𝑒𝑎𝑑𝑖𝑛𝑔 𝑦𝑜𝑢𝑟 𝑝𝑖𝑐𝑡𝑢𝑟𝑒. 𝐴𝑟𝑒 𝑦𝑜𝑢 𝑠𝑢𝑟𝑒 𝑦𝑜𝑢 ℎ𝑎𝑣𝑒 𝑢𝑝𝑙𝑜𝑎𝑑𝑒𝑑 𝑜𝑛𝑒 𝑣𝑖𝑎 .𝑠𝑡𝑎𝑟𝑝𝑖𝑐𝑡𝑢𝑟𝑒`)
 }
 
+
+try{
+
 buffer = fs.readFileSync(`./data/users/${sender.split("@")[0]}/starpicture.jpg`)
 Lxa.sendMessage(from, buffer, image, {quoted:mek, caption: `${design} ${username} ${age} 𝑦𝑜\n${design} ${money}$ ${xp} 𝑥𝑝\n\n${mybio}`})
+
+}catch (err){
+	try{
+buffer = fs.readFileSync(`./data/users/${sender.split("@")[0]}/starpicture.jpg`)
+Lxa.sendMessage(from, buffer, image, {quoted:mek, caption: `${design} ${username} ${age} 𝑦𝑜\n${design} ${money}$ ${xp} 𝑥𝑝\n\n${mybio}`})
+ }catch (err){
+	buffer = fs.readFileSync(`./data/users/${sender.split("@")[0]}/starpicture.jpg`)
+	Lxa.sendMessage(from, buffer, image, {quoted:mek, caption: `${design} ${username} ${age} 𝑦𝑜\n${design} ${money}$ ${xp} 𝑥𝑝\n\n${mybio}`})	 
+ }
+}
+
+
 break
 
 //-- sp
@@ -2145,10 +2160,26 @@ hisdesign = _hisdesign[0]	//--- bio
 
 }
 
+try{	
 buffer = fs.readFileSync(`./data/users${args[0].replace('@','/')}/starpicture.jpg`)
 Lxa.sendMessage(from, buffer, image, {quoted:mek, caption: `${hisdesign} ${spusername} ${spage} 𝑦𝑜\n${hisdesign} ${spmoney}$ ${spxp} 𝑥𝑝\n\n${spbio}`})
-break
 
+}catch (err){
+
+	try{
+
+	buffer = fs.readFileSync(`./data/users${args[0].replace('@','/')}/starpicture.jpg`)
+	Lxa.sendMessage(from, buffer, image, {quoted:mek, caption: `${hisdesign} ${spusername} ${spage} 𝑦𝑜\n${hisdesign} ${spmoney}$ ${spxp} 𝑥𝑝\n\n${spbio}`})
+
+	}catch (err){
+
+		buffer = fs.readFileSync(`./data/users${args[0].replace('@','/')}/starpicture.jpg`)
+		Lxa.sendMessage(from, buffer, image, {quoted:mek, caption: `${hisdesign} ${spusername} ${spage} 𝑦𝑜\n${hisdesign} ${spmoney}$ ${spxp} 𝑥𝑝\n\n${spbio}`})	
+
+	}
+}
+
+break
 //-- watermark 
 case 'watermarkimage':
 if (!isVerify) return reply(UserB())
