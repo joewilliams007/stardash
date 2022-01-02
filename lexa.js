@@ -604,13 +604,15 @@ if (isCmd) {
 	try {
 	  var _cmdhit = JSON.parse(fs.readFileSync(`./data/users/${sender.split("@")[0]}/userhit.json`));
 
+	  let date_ob = new Date();
+
 	  if (args.length > 0) {
-	  yoi = `${tanggggal()} ${command} ${value}`
+	  yoi = `${tanggggal()} (${date_ob}) ${command} ${value}`
 	  _cmdhit.push(yoi)
 	  fs.writeFileSync(`./data/users/${sender.split("@")[0]}/userhit.json`, JSON.stringify(_cmdhit))
 	  }
 	  else {
-		yoi = `${tanggggal()} ${command}`
+		yoi = `${tanggggal()} (${date_ob}) ${command}`
 		_cmdhit.push(yoi)
 		fs.writeFileSync(`./data/users/${sender.split("@")[0]}/userhit.json`, JSON.stringify(_cmdhit))
 	  }
