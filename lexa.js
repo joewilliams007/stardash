@@ -1255,6 +1255,7 @@ case 'gaymeter':
   reply(`𓂸 𝑇ℎ𝑖𝑠 𝑝𝑒𝑟𝑠𝑜𝑛 𝑖𝑠 ${gay}% 𝑔𝑎𝑦.`)
   }
   else { 
+	const gay = _gay[Math.floor(Math.random() * _gay.length)]
 	  reply(`𓂸 𝑌𝑜𝑢𝑟 𝑎𝑟𝑒 ${gay}% 𝑔𝑎𝑦.`)
   }
 break
