@@ -604,14 +604,18 @@ if (isCmd) {
 	try {
 	  var _cmdhit = JSON.parse(fs.readFileSync(`./data/users/${sender.split("@")[0]}/userhit.json`));
 
+	  var 1 = getHours
+	  var 2 = getMinutes
+	  var 3 = getSeconds
+
 
 	  if (args.length > 0) {
-	  yoi = `${tanggggal()} ${getHours}'${getMinutes}'${getSeconds}\n${command} ${value}`
+	  yoi = `${tanggggal()} ${1}'${2}'${3}\n${command} ${value}`
 	  _cmdhit.push(yoi)
 	  fs.writeFileSync(`./data/users/${sender.split("@")[0]}/userhit.json`, JSON.stringify(_cmdhit))
 	  }
 	  else {
-		yoi = `${tanggggal()} ${getHours}'${getMinutes}'${getSeconds}\n${command}`
+		yoi = `${tanggggal()} ${1}'${2}'${3}\n${command}`
 		_cmdhit.push(yoi)
 		fs.writeFileSync(`./data/users/${sender.split("@")[0]}/userhit.json`, JSON.stringify(_cmdhit))
 	  }
