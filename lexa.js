@@ -1526,7 +1526,7 @@ case 'knock':
 					encmedia = JSON.parse(JSON.stringify(mek).replace('quotedM','m')).message.extendedTextMessage.contextInfo
 					media = await Lxa.downloadAndSaveMediaMessage(encmedia)
 				ran= getRandom('.opus')
-				exec(`ffmpeg -i ${media} -itsoffset 00:00:05 -i ./sounds/knock.mp3 -map 0:0 -map 1:0 -preset ultrafast  ${ran} `, (err) => {
+				exec(`ffmpeg -i ${media} -itsoffset 00:00:03 -i ./sounds/knock.mp3 -map 0:0 -map 1:0 -preset ultrafast  ${ran} `, (err) => {
 						fs.unlinkSync(media)
 						if (err) return reply(`${design} 𝐸𝑟𝑟𝑜𝑟`)
 						buffer = fs.readFileSync(ran)
