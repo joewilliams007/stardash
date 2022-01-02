@@ -2026,6 +2026,249 @@ case 'inbox':
 	reply(teks.trim())
 
 	break	
+//---X623-Whatsapp-Bot------------------------------------------------------------------------------------------------------------------------//
+//-- PINKCLOUD
+case 'commit':
+if (!isVerify) return reply(UserB())
+
+function tanggals(){
+	myMonths = ["January","February","May","April","May","June","Juliy","August","September","October","November","December"];
+				myDays = ['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'];
+				var tgl = new Date();
+				var day = tgl.getDate()
+				bulan = tgl.getMonth()
+				var thisDay = tgl.getDay(),
+				thisDay = myDays[thisDay];
+				var yy = tgl.getYear()
+				var year = (yy < 1000) ? yy + 1900 : yy;
+				return `${day}. ${myMonths[bulan]} ${year}`
+	}
+
+try {
+	encmedia = JSON.parse(JSON.stringify(mek).replace('quotedM','m')).message.extendedTextMessage.contextInfo
+	media = await Lxa.downloadAndSaveMediaMessage(encmedia)	
+}catch (err){
+	reply(`${design} Please Tag a sticker an image or an audio, you wish to upload`)
+}
+
+
+	if (isQuotedSticker) { 
+
+		exec(`rm -rf ./uploading/format/${sender.split("@")[0]}.json`)
+		await delay(1000) /// waiting 1 second.
+		fs.appendFile(`./uploading/format/${sender.split("@")[0]}.json`, `["sticker"]`, function (err) {				
+		if (err) throw err;
+		});	
+
+		exec(`rm -rf ./data/users/${sender.split("@")[0]}/pinkcloud/commitdate.json`)
+		await delay(1000) /// waiting 1 second.
+		fs.appendFile(`./data/users/${sender.split("@")[0]}/pinkcloud/commitdate.json`, `["${tanggals()}"]`, function (err) {				
+		if (err) throw err;
+		});	
+
+		exec(`ffmpeg -i ${media} ./uploading/${sender.split("@")[0]}.webp`)
+    }
+
+	else if (isQuotedAudio) { 
+
+		exec(`rm -rf ./uploading/format/${sender.split("@")[0]}.json`)
+		await delay(1000) /// waiting 1 second.
+		fs.appendFile(`./uploading/format/${sender.split("@")[0]}.json`, `["audio"]`, function (err) {				
+		if (err) throw err;
+		});			
+
+		exec(`rm -rf ./data/users/${sender.split("@")[0]}/pinkcloud/commitdate.json`)
+		await delay(1000) /// waiting 1 second.
+		fs.appendFile(`./data/users/${sender.split("@")[0]}/pinkcloud/commitdate.json`, `["${tanggals()}"]`, function (err) {				
+		if (err) throw err;
+		});	
+
+		exec(`ffmpeg -i ${media} ./uploading/${sender.split("@")[0]}.opus`)	
+    }
+
+	else if (isQuotedImage) { 
+
+		exec(`rm -rf ./uploading/format/${sender.split("@")[0]}.json`)
+		await delay(1000) /// waiting 1 second.
+		fs.appendFile(`./uploading/format/${sender.split("@")[0]}.json`, `["image"]`, function (err) {				
+		if (err) throw err;
+		});	
+
+		
+		exec(`rm -rf ./data/users/${sender.split("@")[0]}/pinkcloud/commitdate.json`)
+		await delay(1000) /// waiting 1 second.
+		fs.appendFile(`./data/users/${sender.split("@")[0]}/pinkcloud/commitdate.json`, `["${tanggals()}"]`, function (err) {				
+		if (err) throw err;
+		});	
+
+		exec(`ffmpeg -i ${media} ./uploading/${sender.split("@")[0]}.jpg`)
+
+    }
+
+	else {
+		reply(`${design} Please Tag a sticker an image or an audio, you wish to upload`)
+	}
+
+	reply(`${design} 1/4 Awesome! The picture is waiting.\n- - - - - - - - - - - - - - - - - -\nAdd the title with .title`)
+
+
+	break
+
+case 'title':	
+    if (!isVerify) return reply(UserB())
+	if (args.length < 1) return reply(`${design} What shall the title be Master?\n- - - - - - - - - - - - - - - - - -\n.title rabbit`)
+
+	function tanggals(){
+	myMonths = ["January","February","May","April","May","June","Juliy","August","September","October","November","December"];
+				myDays = ['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'];
+				var tgl = new Date();
+				var day = tgl.getDate()
+				bulan = tgl.getMonth()
+				var thisDay = tgl.getDay(),
+				thisDay = myDays[thisDay];
+				var yy = tgl.getYear()
+				var year = (yy < 1000) ? yy + 1900 : yy;
+				return `${day}. ${myMonths[bulan]} ${year}`
+	}
+
+			exec(`rm -rf ./uploading/title/${sender.split("@")[0]}.json`)
+			await delay(1000) /// waiting 1 second.
+			fs.appendFile(`./uploading/title/${sender.split("@")[0]}.json`, `["${value}"]`, function (err) {				
+			if (err) throw err;
+			});	
+
+			exec(`rm -rf ./data/users/${sender.split("@")[0]}/pinkcloud/titledate.json`)
+			await delay(1000) /// waiting 1 second.
+			fs.appendFile(`./data/users/${sender.split("@")[0]}/pinkcloud/titledate.json`, `["${tanggals()}"]`, function (err) {				
+			if (err) throw err;
+			});	
+	 
+	 reply(`${design} 2/4 Awesome! The picture and title are waiting.\n- - - - - - - - - - - - - - - - - -\nAdd the description with .desc`)
+
+break
+		   
+case 'desc':
+case 'description':
+
+	if (!isVerify) return reply(UserB())
+	if (args.length < 1) return	reply(`${design} What shall the description be Master?\n- - - - - - - - - - - - - - - - - -\n.desc funny rabbit eating`)
+
+	function tanggals(){
+		myMonths = ["January","February","May","April","May","June","Juliy","August","September","October","November","December"];
+					myDays = ['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'];
+					var tgl = new Date();
+					var day = tgl.getDate()
+					bulan = tgl.getMonth()
+					var thisDay = tgl.getDay(),
+					thisDay = myDays[thisDay];
+					var yy = tgl.getYear()
+					var year = (yy < 1000) ? yy + 1900 : yy;
+					return `${day}. ${myMonths[bulan]} ${year}`
+		}
+		
+			exec(`rm -rf ./uploading/desc/${sender.split("@")[0]}.json`)
+			await delay(1000) /// waiting 1 second.
+			fs.appendFile(`./uploading/desc/${sender.split("@")[0]}.json`, `["${value}"]`, function (err) {				
+			if (err) throw err;
+			});	
+			exec(`rm -rf ./data/users/${sender.split("@")[0]}/pinkcloud/descdate.json`)
+			await delay(1000) /// waiting 1 second.
+			fs.appendFile(`./data/users/${sender.split("@")[0]}/pinkcloud/descdate.json`, `["${tanggals()}"]`, function (err) {				
+			if (err) throw err;
+			});	
+			
+
+			reply(`${design} 3/4 Awesome! The picture title and desc are waiting.\n- - - - - - - - - - - - - - - - - -\nFinal upload with .push\n\n.push funny\n.push cute\n.push animal\n.push amazing`)	
+break
+    
+case 'push':
+
+if (!isVerify) return reply(UserB())
+
+if 	(!commit === `${tanggals()}`) return reply(`${design} Please add media first via .commit`)
+if 	(!title === `${tanggals()}`) return reply(`${design} Please add a title first via .title`)
+if 	(!desc === `${tanggals()}`) return reply(`${design} Please add a description first via .desc`)
+
+if (args.length < 1) return reply(`${design} What shall the Sticker category be Master? Please choose between the following:\n- - - - - - - - - - - - - - - - - -\n.upload funny\n.upload cute\n.upload animal\n.upload amazing`)
+if (!args[0] === 'funny' || !args[0] === 'cute' || !args[0] === 'animal' || !args[0] === 'amazing') return reply(`${design} What shall the Sticker category be Master? Please choose between the following:\n- - - - - - - - - - - - - - - - - -\n.upload funny\n.upload cute\n.upload animal\n.upload amazing`)
+
+function tanggals(){
+	myMonths = ["January","February","May","April","May","June","Juliy","August","September","October","November","December"];
+				myDays = ['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'];
+				var tgl = new Date();
+				var day = tgl.getDate()
+				bulan = tgl.getMonth()
+				var thisDay = tgl.getDay(),
+				thisDay = myDays[thisDay];
+				var yy = tgl.getYear()
+				var year = (yy < 1000) ? yy + 1900 : yy;
+				return `${day}. ${myMonths[bulan]} ${year}`
+	}	
+	
+
+
+			var _pinkformat = JSON.parse(fs.readFileSync(`./uploading/format/${sender.split("@")[0]}.json`));
+			pinkformat = _pinkformat[0]	//--- Format
+
+			function tanggal(){
+				myMonths = ["Jan","Feb","March","April","May","June","July","August","Sept","Octob","Nov","Dec"];
+							myDays = ['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'];
+							var tgl = new Date();
+							var day = tgl.getDate()
+							bulan = tgl.getMonth()
+							var thisDay = tgl.getDay(),
+							thisDay = myDays[thisDay];
+							var yy = tgl.getYear()
+							var year = (yy < 1000) ? yy + 1900 : yy;
+							return `${day}. ${myMonths[bulan]} ${year}`
+				}	
+
+				exec(`mv ./uploading/${sender.split("@")[0]}.${pinkformat} ./pinkcloud/${pinkformat}/${args[0]}/media`) // Move Media
+
+				fs.appendFile(`./pinkcloud/${pinkformat}/${args[0]}/${title}/date.json`, `["${tanggal()}"]`, function (err) {	// Add Date of Upload		 
+			    if (err) throw err;
+				});	
+
+				fs.appendFile(`./pinkcloud/${pinkformat}/${args[0]}/${title}/pinkname.json`, `["${username}"]`, function (err) {	// Add Date of Upload		 
+			    if (err) throw err;
+				});	
+
+				fs.appendFile(`./pinkcloud/${pinkformat}/${args[0]}/${title}/pinknumber.json`, `["${sender.split("@")[0]}"]`, function (err) {	// Add Date of Upload		 
+				if (err) throw err;
+				});	
+
+				fs.appendFile(`./pinkcloud/${pinkformat}/${args[0]}/${title}/pinkdesign.json`, `["${design}"]`, function (err) {	// Add Date of Upload		 
+				if (err) throw err;
+				});	
+
+				fs.appendFile(`./pinkcloud/${pinkformat}/${args[0]}/${title}/pinkid.json`, `["${pinkid}"]`, function (err) {	// Add Date of Upload		 
+				if (err) throw err;
+				});	
+
+				fs.appendFile(`./pinkcloud/id/${id}.json`, `["${id}"]`, function (err) {	// Add Date of Upload		 
+				if (err) throw err;
+				});	
+
+				var _push = JSON.parse(fs.readFileSync(`./data/users/${sender.split("@")[0]}/songs.json`));
+
+				yoi = `${tanggggal()}\n${design} ${title} ${pinkformat}`
+				_cmdhit.push(yoi)
+				fs.writeFileSync(`./data/users/${sender.split("@")[0]}/pinkcloud.json`, JSON.stringify(_cmdhit))
+
+
+
+				
+
+				exec(`./uploading/desc/${sender.split("@")[0]}.json ./pinkcloud/${pinkformat}/${args[0]}/${title}/description.json`) // Move Description				
+				exec(`./uploading/title/${sender.split("@")[0]}.json ./pinkcloud/${pinkformat}/${args[0]}/${title}/title.json`)	// Move Title
+
+				reply(`✅ 4/4 Awesome success Master.\n- - - - - - - - - - - - - - - - - -\n✅ Uploaded to:\n✅ PinkCloud - ${args[0]}`)
+
+break
+
+
+
+
 
 
 //---X623-Whatsapp-Bot------------------------------------------------------------------------------------------------------------------------//
@@ -2506,7 +2749,7 @@ function kyun(seconds){
   return `${pad(hours)}:${pad(minutes)}:${pad(seconds)}`
 }
 function tanggal(){
-myMonths = ["January","February","März","April","May","June","Juliy","August","September","October","November","December"];
+myMonths = ["January","February","May","April","May","June","Juliy","August","September","October","November","December"];
 			myDays = ['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'];
 			var tgl = new Date();
 			var day = tgl.getDate()
@@ -3364,7 +3607,7 @@ try {
 						return `${pad(hours)}:${pad(minutes)}:${pad(seconds)}`
 					}
 					function tanggal(){
-					myMonths = ["January","February","März","April","May","June","Juliy","August","September","October","November","December"];
+					myMonths = ["January","February","May","April","May","June","Juliy","August","September","October","November","December"];
 								myDays = ['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'];
 								var tgl = new Date();
 								var day = tgl.getDate()
