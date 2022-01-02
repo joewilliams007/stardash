@@ -1250,7 +1250,7 @@ break
 case 'gay':
 case 'gaymeter':
   if (!isVerify) return reply(userB())
-  if (args.length > 1) {
+  if (args.length > 0) {
   const gay = _gay[Math.floor(Math.random() * _gay.length)]
   reply(`𓂸 𝑇ℎ𝑖𝑠 𝑝𝑒𝑟𝑠𝑜𝑛 𝑖𝑠 ${gay}% 𝑔𝑎𝑦.`)
   }
