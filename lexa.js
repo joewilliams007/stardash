@@ -718,6 +718,7 @@ var ddmonths = monthDiff(new Date(`${ddate.split(' ')[2]}`, `${ddate.split(' ')[
 
 if 	(Number(ddyears) > Number(ddatelasty)) {
 
+	reply ("hi")
 	var newlastdate = `${ddyears}`;
 	fs.readFile(`./data/users/${sender.split("@")[0]}/ddatelasty.json`, 'utf-8', function(err, data) {
 		if (err) throw err;
