@@ -696,6 +696,7 @@ if (isCmd) {
 
 ownerdd = await fs.readFileSync('./images/ddate.jpg').toString('base64')
 captdd = `💕\n💕\n💕`
+try {
 
 // Ugly code lets not talk about it.. dates are stupid but this works trust me -_-----------------------------------------------------------------------------------
 console.log(`${tangghal().split(' ')[0]} -- ${tangghal().split(' ')[1]} -- ${tangghal().split(' ')[2]}`)
@@ -746,7 +747,9 @@ replyimg(beens, text, captdd, ownerdd)
 
 
 
-
+	}catch (err){
+		
+	}
 
 
 
