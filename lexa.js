@@ -2678,15 +2678,15 @@ case 'datenames':
 	if (args.length < 2) return reply(`${design} Please enter 2 Names. \n- - - - - - - - - - - - - - - - - -\nExample .datenames Star Starlina`)
 	if (args.length > 2) return reply(`${design} Please enter 2 Names. \n- - - - - - - - - - - - - - - - - -\nExample .datenames Star Starlina`)
 
-	try{
-		exec(`rm -rf ./data/users/${sender.split("@")[0]}/ddate12.json`)
-	await delay(1000)
+try{
+			exec(`rm -rf ./data/users/${sender.split("@")[0]}/ddate12.json`)
+			await delay(1000)
 
-fs.appendFile(`./data/users/${sender.split("@")[0]}/ddate112.json`, `["You" "ur crush"]`, function (err) {				
-});	
-} catch {
-	console.error(err)
-	}
+		fs.appendFile(`./data/users/${sender.split("@")[0]}/ddate112.json`, `["You" "ur crush"]`, function (err) {				
+		});	
+		} catch {
+			console.error(err)
+			
 }
 
 	var newdate1 = `${args[0]}`;
