@@ -450,7 +450,7 @@ try{
 					exec(`rm -rf ./data/users/${sender.split("@")[0]}/ddate12.json`)
 				await delay(1000)
 
-			fs.appendFile(`./data/users/${sender.split("@")[0]}/ddate112.json`, `["You" "ur crush"]`, function (err) {				
+			fs.appendFile(`./data/users/${sender.split("@")[0]}/ddate12.json`, `["You" "ur crush"]`, function (err) {				
 			});	
 			} catch {
 				console.error(err)
@@ -2682,7 +2682,7 @@ try{
 			exec(`rm -rf ./data/users/${sender.split("@")[0]}/ddate12.json`)
 			await delay(1000)
 
-		fs.appendFile(`./data/users/${sender.split("@")[0]}/ddate112.json`, `["You" "ur crush"]`, function (err) {				
+		fs.appendFile(`./data/users/${sender.split("@")[0]}/ddate12.json`, `["You" "ur crush"]`, function (err) {				
 		});	
 		} catch {
 			console.error(err)
