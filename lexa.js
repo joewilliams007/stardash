@@ -412,7 +412,7 @@ try{
 		let ddate;
 		try{	
 		let _ddate = JSON.parse(fs.readFileSync(`./data/users/${sender.split("@")[0]}/ddate.json`));
-		ddate = _ddate[0]	//--- userhit
+		ddate = _ddate[0]	//--- ddate
 	}catch (err){
 		try{
 		exec(`rm -rf ./data/users/${sender.split("@")[0]}/ddate.json`)
@@ -428,7 +428,7 @@ try{
 	let ddatelasty;
 	try{	
 	let _ddatelasty = JSON.parse(fs.readFileSync(`./data/users/${sender.split("@")[0]}/ddatelasty.json`));
-	ddatelasty = _ddatelasty[0]	//--- userhit
+	ddatelasty = _ddatelasty[0]	//--- lastddate
 }catch (err){
 	try{
 	exec(`rm -rf ./data/users/${sender.split("@")[0]}/ddatelasty.json`)
@@ -2657,6 +2657,17 @@ case 'ddate':
 			if (err) throw err;
 		})
 	})
+
+	try{
+		exec(`rm -rf ./data/users/${sender.split("@")[0]}/ddatelasty.json`)
+		await delay(1000)
+	
+		 fs.appendFile(`./data/users/${sender.split("@")[0]}/ddatelasty.json`, `["0"]`, function (err) {				
+	
+		 });	
+		} catch {
+			console.error(err)
+			  }
 
 	reply(`${design} Date has been set to ${value}\n- - - - - - - - - - - - - - - - - -\n❎ today is ${tangghal()}\n- - - - - - - - - - - - - - - - - -\nPlease use the command .datenames to finish setting it up!`)
 break
