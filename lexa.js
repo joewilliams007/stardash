@@ -2534,7 +2534,7 @@ case 'ddate':
 					return `${day} ${myMonths[bulan]} ${year}`
 		}
 
-	var newwdate = `${value}`;
+	var newdate = `${value}`;
 	fs.readFile(`./data/users/${sender.split("@")[0]}/ddate.json`, 'utf-8', function(err, data) {
 		if (err) throw err;
 		var newValue = data.replace(`${ddate}`, newdate);
