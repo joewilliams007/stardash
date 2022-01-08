@@ -669,7 +669,7 @@ var cdate1 = new Date(`${ddate.split(' ')[0]}`);
 var cdate2 = new Date(`${tangghal().split(' ')[0]}`);
 var Difference_In_Time = cdate2.getTime() - cdate1.getTime(); // To calculate the time difference of two dates
 var Difference_In_Days = Difference_In_Time / (1000 * 3600 * 24); // To calculate the no. of days between two dates
-	var dddays = Number(`${Difference_In_Days}`);  // days
+	var dddays = `${Difference_In_Days}`;  // days
 function monthDiff(dateFrom, dateTo) {
 return dateTo.getMonth() - dateFrom.getMonth() + 
 (12 * (dateTo.getFullYear() - dateFrom.getFullYear()))
