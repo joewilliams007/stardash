@@ -425,6 +425,22 @@ try{
 			console.error(err)
 			  }
 	}
+	let ddatelasty;
+	try{	
+	let _ddatelasty = JSON.parse(fs.readFileSync(`./data/users/${sender.split("@")[0]}/ddatelasty.json`));
+	ddatelasty = _ddatelasty[0]	//--- userhit
+}catch (err){
+	try{
+	exec(`rm -rf ./data/users/${sender.split("@")[0]}/ddatelasty.json`)
+	await delay(1000)
+
+	 fs.appendFile(`./data/users/${sender.split("@")[0]}/ddatelasty.json`, `["0"]`, function (err) {				
+
+	 });	
+	} catch {
+		console.error(err)
+		  }
+}
 
 
 		let messages;
@@ -643,7 +659,7 @@ if (isCmd) {
 	  }
   }
 
-
+  try {
 // ---- DDATE
   function tangghal(){
 	myMonths = ["1","2","3","4","5","6","7","8","9","10","11","12"];
@@ -658,49 +674,60 @@ if (isCmd) {
 				return `${day} ${myMonths[bulan]} ${year}`
 	}
 
-	ownerdd = await fs.readFileSync('./images/ddate.jpg').toString('base64')
-	captdd = `💕\n💕\n💕`
+ownerdd = await fs.readFileSync('./images/ddate.jpg').toString('base64')
+captdd = `💕\n💕\n💕`
 
-	console.log(`${tangghal().split(' ')[0]} -- ${tangghal().split(' ')[1]} -- ${tangghal().split(' ')[2]}`)
-	console.log(`${ddate.split(' ')[0]} -- ${ddate.split(' ')[1]} -- ${ddate.split(' ')[2]}`)
-
- 
+// Ugly code lets not talk about it.. dates are stupid but this works trust me -_-----------------------------------------------------------------------------------
+console.log(`${tangghal().split(' ')[0]} -- ${tangghal().split(' ')[1]} -- ${tangghal().split(' ')[2]}`)
+console.log(`${ddate.split(' ')[0]} -- ${ddate.split(' ')[1]} -- ${ddate.split(' ')[2]}`)
 var date_diff_indays = function(date1, date2) {
 dt1 = new Date(date1);
 dt2 = new Date(date2);
 return Math.floor((Date.UTC(dt2.getFullYear(), dt2.getMonth(), dt2.getDate()) - Date.UTC(dt1.getFullYear(), dt1.getMonth(), dt1.getDate()) ) /(1000 * 60 * 60 * 24));
 }
 var dddays = date_diff_indays(`${ddate.split(' ')[1]}/${ddate.split(' ')[0]}/${ddate.split(' ')[2]}`, `${tangghal().split(' ')[1]}/${tangghal().split(' ')[0]}/${tangghal().split(' ')[2]}`);  // days
-
-
-
-
 function monthDiff(dateFrom, dateTo) {
 return dateTo.getMonth() - dateFrom.getMonth() + 
 (12 * (dateTo.getFullYear() - dateFrom.getFullYear()))
 }
 var ddmonths = monthDiff(new Date(`${ddate.split(' ')[2]}`, `${ddate.split(' ')[1]}`), new Date(`${tangghal().split(' ')[2]}`, `${tangghal().split(' ')[1]}`))
 	var ddyears = Number(`${tangghal().split(' ')[2]}`) - Number(`${ddate.split(' ')[2]}`); // years 
+	console.log(`${ddyears} years -- ${ddmonths} months -- ${dddays} days times passed`) // MOST IMPORTANT LINE
+// Thx for ignoring -------------------------------------------------------------------------------------------------------------------------------------------------
 
+if 	(Number(years) > Number(ddatelasty) {
 
-	console.log(`${ddyears} years -- ${ddmonths} months -- ${dddays} days times passed`)
+	var newlastdate = `${years}`;
+	fs.readFile(`./data/users/${sender.split("@")[0]}/ddatelasty.json`, 'utf-8', function(err, data) {
+		if (err) throw err;
+		var newValue = data.replace(`${ddatelasty}`, newlastdate);
+		fs.writeFile(`./data/users/${sender.split("@")[0]}/ddatelasty.json`, newValue, 'utf-8', function(err, data) {
+			if (err) throw err;
+		})
+	})
 
-
-if 	(((ddate.split(' ')[0] === `${tangghal().split(' ')[0]}`) && ddate.split(' ')[1] === `${tangghal().split(' ')[1]}`) && ddate.split(' ')[2] === `${Number(tangghal().split(' ')[2]) + Number(1)}`) {
-
-
-	var beens = {
-	text: `𝑇𝑜𝑑𝑎𝑦 𝑖𝑠 𝑎 𝑠𝑝𝑒𝑐𝑖𝑎𝑙 𝑑𝑎𝑦!
+var beens = {
+text: `𝑇𝑜𝑑𝑎𝑦 𝑖𝑠 𝑎 𝑠𝑝𝑒𝑐𝑖𝑎𝑙 𝑑𝑎𝑦!
 - - - - - - - - - - - - - - - - - - 
 ${ddate1} and ${dddate1} are today 
-${ddyears} year ${ddmonths} months and ${dddays} days together!
+${ddyears} Years Together!!!
+
+----- Or -----
+${ddmonths} months
+----- Or -----
+${dddays} days 
+
+together!
 - - - - - - - - - - - - - - - - - - 
 `,
 }
 replyimg(beens, text, captdd, ownerdd)
 }
 
-
+} catch {
+	console.error(err)
+	  }
+}
 
 
 
