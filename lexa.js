@@ -664,10 +664,20 @@ if (isCmd) {
 	console.log(`${tangghal().split(' ')[0]} -- ${tangghal().split(' ')[1]} -- ${tangghal().split(' ')[2]}`)
 	console.log(`${ddate.split(' ')[0]} -- ${ddate.split(' ')[1]} -- ${ddate.split(' ')[2]}`)
 
+ 
+var cdate1 = new Date(`${ddate.split(' ')[0]}`);
+var cdate2 = new Date(`${tangghal().split(' ')[0]}`);
+var Difference_In_Time = cdate2.getTime() - cdate1.getTime(); // To calculate the time difference of two dates
+var Difference_In_Days = Difference_In_Time / (1000 * 3600 * 24); // To calculate the no. of days between two dates
+	var dddays = Number(`${Difference_In_Days}`);  // days
+function monthDiff(dateFrom, dateTo) {
+return dateTo.getMonth() - dateFrom.getMonth() + 
+(12 * (dateTo.getFullYear() - dateFrom.getFullYear()))
+}
+var ddemonths = monthDiff(new Date(`${ddate.split(' ')[2]}`, `${ddate.split(' ')[1]}`), new Date(`${tangghal().split(' ')[2]}`, `${tangghal().split(' ')[1]}`))
+	var ddmonths = ddemonths.split(' ')[0] // months
+	var ddyears = Number(`${tangghal().split(' ')[2]}`) - Number(`${ddate.split(' ')[2]}`); // years 
 
-	var ddyears = Number(`${tangghal().split(' ')[2]}`) - Number(`${ddate.split(' ')[2]}`); 
-	var ddmonths = Number(`${tangghal().split(' ')[1]}`) - Number(`${ddate.split(' ')[1]}`); 
-	var dddays = Number(`${tangghal().split(' ')[0]}`) - Number(`${ddate.split(' ')[0]}`); 
 
 	console.log(`${ddyears} -- ${ddmonths} -- ${dddays}`)
 
