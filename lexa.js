@@ -718,6 +718,10 @@ var ddmonths = monthDiff(new Date(`${ddate.split(' ')[2]}`, `${ddate.split(' ')[
 
 if 	(Number(ddyears) > Number(ddatelasty)) {
 
+	let _ddate11 = JSON.parse(fs.readFileSync(`./data/users/${sender.split("@")[0]}/ddate12.json`));
+	ddate11 = _ddate11[0]
+	let _ddate22 = JSON.parse(fs.readFileSync(`./data/users/${sender.split("@")[0]}/ddate12.json`));
+	ddate22 = _ddate22[1]	
 
 	var newlastdate = `${ddyears}`;
 	fs.readFile(`./data/users/${sender.split("@")[0]}/ddatelasty.json`, 'utf-8', function(err, data) {
@@ -731,7 +735,7 @@ if 	(Number(ddyears) > Number(ddatelasty)) {
 var beens = {
 text: `𝑇𝑜𝑑𝑎𝑦 𝑖𝑠 𝑎 𝑠𝑝𝑒𝑐𝑖𝑎𝑙 𝑑𝑎𝑦!
 - - - - - - - - - - - - - - - - - - 
-${ddate1} and ${ddate2} are today 
+${ddate11} and ${ddate2} are today 
 ${ddyears} Years Together!!!
 
 ----- Or -----
