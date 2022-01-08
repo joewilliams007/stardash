@@ -642,6 +642,31 @@ if (isCmd) {
 	console.error(err)
 	  }
   }
+
+  try {
+// ---- DDATE
+  function tangghal(){
+	myMonths = ["1","2","3","4","5","6","7","8","9","10","11","12"];
+				myDays = ['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'];
+				var tgl = new Date();
+				var day = tgl.getDate()
+				bulan = tgl.getMonth()
+				var thisDay = tgl.getDay(),
+				thisDay = myDays[thisDay];
+				var yy = tgl.getYear()
+				var year = (yy < 1000) ? yy + 1900 : yy;
+				return `${day} ${myMonths[bulan]} ${year}`
+	}
+
+	console.log(`${tangghal().split(' ')[0]} -- ${tangghal().split(' ')[1]} -- ${tangghal().split(' ')[3]}`)
+	console.log(`${ddate.split(' ')[0]} -- ${ddate.split(' ')[1]} -- ${ddate.split(' ')[2]}`)
+
+// if 	((ddate.split(' ')[0] === `${tangghal().split(' ')[0]}`) && ddate.split(' ')[1] === `${tangghal().split(' ')[1]}`) && ddate.split(' ')[2] === `${Number(tangghal().split(' ')[2]) + Number(1)}`)
+} catch {
+	console.error(err)
+	  }
+
+
 // ---- Antilink 
 const linkwa = 'http'
 		if (budy.includes(`${linkwa}`) || budy.length > 100){
@@ -2533,8 +2558,8 @@ case 'ddate':
 	if (args.length < 3) return reply(`${design} Please enter the date exactly like this. (error 1)\n\nDD/MM/YYYY\n\nExample for today\n❎ .date ${tangghal()}`)
 	if (args.length > 3) return reply(`${design} Please enter the date exactly like this. (error 2)\n\nDD/MM/YYYY\n\nExample for today\n❎ .date ${tangghal()}`)
 	if (args[2].length < 4) return reply(`${design} Please enter the date exactly like this. (error 3)\n\nDD/MM/YYYY\n\nExample for today\n❎ .date ${tangghal()}`)
-	if (args[0].length > 2) return reply(`${design} Please enter the date exactly like this. (error 3)\n\nDD/MM/YYYY\n\nExample for today\n❎ .date ${tangghal()}`)
-	if (args[1].length > 2) return reply(`${design} Please enter the date exactly like this. (error 3)\n\nDD/MM/YYYY\n\nExample for today\n❎ .date ${tangghal()}`)
+	if (args[0].length > 2) return reply(`${design} Please enter the date exactly like this. (error 4)\n\nDD/MM/YYYY\n\nExample for today\n❎ .date ${tangghal()}`)
+	if (args[1].length > 2) return reply(`${design} Please enter the date exactly like this. (error 5)\n\nDD/MM/YYYY\n\nExample for today\n❎ .date ${tangghal()}`)
 
 
 
