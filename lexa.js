@@ -718,8 +718,7 @@ var ddmonths = monthDiff(new Date(`${ddate.split(' ')[2]}`, `${ddate.split(' ')[
 
 if 	(Number(ddyears) > Number(ddatelasty)) {
 
-	capt = `𝑆𝑢𝑐𝑐𝑒𝑠𝑠𝑓𝑢𝑙𝑙𝑦 𝑟𝑒𝑔𝑖𝑠𝑡𝑒𝑟𝑒𝑑 ✅\n*${pushname}* 𝑐ℎ𝑒𝑐𝑘 𝑦𝑜𝑢𝑟 𝑎𝑐𝑐𝑜𝑢𝑛𝑡 𝑤𝑖𝑡ℎ ⌖ .𝑚𝑒`
-	Lxa.sendMessage(from, capt, text, {quoted: mek})
+
 	var newlastdate = `${ddyears}`;
 	fs.readFile(`./data/users/${sender.split("@")[0]}/ddatelasty.json`, 'utf-8', function(err, data) {
 		if (err) throw err;
@@ -732,7 +731,7 @@ if 	(Number(ddyears) > Number(ddatelasty)) {
 var beens = {
 text: `𝑇𝑜𝑑𝑎𝑦 𝑖𝑠 𝑎 𝑠𝑝𝑒𝑐𝑖𝑎𝑙 𝑑𝑎𝑦!
 - - - - - - - - - - - - - - - - - - 
-${ddate1} and ${dddate1} are today 
+${ddate1} and ${ddate2} are today 
 ${ddyears} Years Together!!!
 
 ----- Or -----
