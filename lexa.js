@@ -658,7 +658,7 @@ if (isCmd) {
 				return `${day} ${myMonths[bulan]} ${year}`
 	}
 
-	console.log(`${tangghal().split(' ')[0]} -- ${tangghal().split(' ')[1]} -- ${tangghal().split(' ')[3]}`)
+	console.log(`${tangghal().split(' ')[0]} -- ${tangghal().split(' ')[1]} -- ${tangghal().split(' ')[2]}`)
 	console.log(`${ddate.split(' ')[0]} -- ${ddate.split(' ')[1]} -- ${ddate.split(' ')[2]}`)
 
 // if 	((ddate.split(' ')[0] === `${tangghal().split(' ')[0]}`) && ddate.split(' ')[1] === `${tangghal().split(' ')[1]}`) && ddate.split(' ')[2] === `${Number(tangghal().split(' ')[2]) + Number(1)}`)
