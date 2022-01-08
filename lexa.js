@@ -686,7 +686,6 @@ ${ddyears} year ${ddmonths} months and ${dddays} days together!
 replyimg(beens, text, captdd, ownerdd)
 }
 
-  }
 
 
 } catch {
