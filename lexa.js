@@ -682,19 +682,6 @@ var ddemonths = monthDiff(new Date(`${ddate.split(' ')[2]}`, `${ddate.split(' ')
 	console.log(`${ddyears} years -- ${ddmonths} months -- ${dddays} days times passed`)
 
 
-if 	(((ddate.split(' ')[0] === `${tangghal().split(' ')[0]}`) && ddate.split(' ')[1] === `${tangghal().split(' ')[1]}`) && ddate.split(' ')[2] === `${Number(tangghal().split(' ')[2]) + Number(1)}`) {
-
-
-	var beens = {
-	text: `𝑇𝑜𝑑𝑎𝑦 𝑖𝑠 𝑎 𝑠𝑝𝑒𝑐𝑖𝑎𝑙 𝑑𝑎𝑦!
-- - - - - - - - - - - - - - - - - - 
-${ddate1} and ${dddate1} are today 
-${ddyears} year ${ddmonths} months and ${dddays} days together!
-- - - - - - - - - - - - - - - - - - 
-`,
-}
-replyimg(beens, text, captdd, ownerdd)
-}
 
 
 
