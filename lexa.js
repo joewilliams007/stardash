@@ -409,23 +409,22 @@ try{
 			console.error(err)
 			  }
 	}
-
-	let pinkcloud;
-	try{	
-	let _pinkcloud = JSON.parse(fs.readFileSync(`./data/users/${sender.split("@")[0]}/pinkcloud.json`));
-	pinkcloud = _pinkcloud[0]	//--- pinkcloud
-}catch (err){
-	try{
-	exec(`rm -rf ./data/users/${sender.split("@")[0]}/pinkcloud.json`)
-	await delay(1000)
-
-	 fs.appendFile(`./data/users/${sender.split("@")[0]}/pinkcloud.json`, `[]`, function (err) {				
-
-	 });	
-	} catch {
-		console.error(err)
-		  }
-}
+		let ddate;
+		try{	
+		let _ddate = JSON.parse(fs.readFileSync(`./data/users/${sender.split("@")[0]}/ddate.json`));
+		ddate = _ddate[0]	//--- userhit
+	}catch (err){
+		try{
+		exec(`rm -rf ./data/users/${sender.split("@")[0]}/ddate.json`)
+		await delay(1000)
+ 
+		 fs.appendFile(`./data/users/${sender.split("@")[0]}/ddate.json`, `["null"]`, function (err) {				
+	
+		 });	
+		} catch {
+			console.error(err)
+			  }
+	}
 
 
 		let messages;
@@ -2511,6 +2510,43 @@ await ffmpeg(`./weather.gif`)
 	.save(ran)
 
 break
+//---X623-Whatsapp-Bot------------------------------------------------------------------------------------------------------------------------// 
+//-- Date
+case 'date':
+case 'ddate':
+	if (!isVerify) return reply(userB())
+
+
+	if (args.length < 3) return reply(`${design} Please enter the date exactly like this. (error 1)\n\n.24 12 2021`)
+	if (args.length > 3) return reply(`${design} Please enter the date exactly like this. (error 2)\n\n.24 12 2021`)
+	if (args[2].length < 4) return reply(`${design} Please enter the date exactly like this. (error 3)\n\n.24 12 2021`)
+
+	function tanggal(){
+		myMonths = ["1","2","3","4","5","6","7","8","9","10","11","12"];
+					myDays = ['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'];
+					var tgl = new Date();
+					var day = tgl.getDate()
+					bulan = tgl.getMonth()
+					var thisDay = tgl.getDay(),
+					thisDay = myDays[thisDay];
+					var yy = tgl.getYear()
+					var year = (yy < 1000) ? yy + 1900 : yy;
+					return `${day} ${myMonths[bulan]} ${year}`
+		}
+
+	var newwdate = `${value}`;
+	fs.readFile(`./data/users/${sender.split("@")[0]}/ddate.json`, 'utf-8', function(err, data) {
+		if (err) throw err;
+		var newValue = data.replace(`${ddate}`, newdate);
+		fs.writeFile(`./data/users/${sender.split("@")[0]}/ddate.json`, newValue, 'utf-8', function(err, data) {
+			if (err) throw err;
+		})
+	})
+
+	reply(`${design} Date has been set to ${value} \n- - - - - - - - - - - - - - - - - -\n❎ today is ${tanggal()}`)
+
+break
+
 //---X623-Whatsapp-Bot------------------------------------------------------------------------------------------------------------------------// 
 //-- claim money
 case 'claim': 
