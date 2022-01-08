@@ -441,7 +441,27 @@ try{
 		console.error(err)
 		  }
 }
+			let ddate1;
+				try{	
+				let _ddate1 = JSON.parse(fs.readFileSync(`./data/users/${sender.split("@")[0]}/ddate12.json`));
+				ddate1 = _ddate1[0]	
+				}catch (err){
+				try{
+					exec(`rm -rf ./data/users/${sender.split("@")[0]}/ddate12.json`)
+				await delay(1000)
 
+			fs.appendFile(`./data/users/${sender.split("@")[0]}/ddate112.json`, `["You" "ur crush"]`, function (err) {				
+			});	
+			} catch {
+				console.error(err)
+				}
+			}
+			let ddate2;
+			try{	
+			let _ddate2 = JSON.parse(fs.readFileSync(`./data/users/${sender.split("@")[0]}/ddate12.json`));
+			ddate2 = _ddate2[1]	
+			}catch (err){
+			}
 
 		let messages;
 		try{	
@@ -2636,6 +2656,34 @@ case 'ddate':
 	})
 
 	reply(`${design} Date has been set to ${value} \n- - - - - - - - - - - - - - - - - -\n❎ today is ${tangghal()}`)
+break
+
+case 'datenames':
+	if (!isVerify) return reply(userB())
+
+	if (args.length < 2) return reply(`${design} Please enter 2 Names. \n- - - - - - - - - - - - - - - - - -\nExample .datenames Star Starlina`)
+	if (args.length > 2) return reply(`${design} Please enter 2 Names. \n- - - - - - - - - - - - - - - - - -\nExample .datenames Star Starlina`)
+
+	var newdate1 = `${args[0]}`;
+	fs.readFile(`./data/users/${sender.split("@")[0]}/ddate12.json`, 'utf-8', function(err, data) {
+		if (err) throw err;
+		var newValue = data.replace(`${ddate1}`, newdate1);
+		fs.writeFile(`./data/users/${sender.split("@")[0]}/ddate12.json`, newValue, 'utf-8', function(err, data) {
+			if (err) throw err;
+		})
+	})
+
+	var newdate2 = `${args[1]}`;
+	fs.readFile(`./data/users/${sender.split("@")[0]}/ddate12.json`, 'utf-8', function(err, data) {
+		if (err) throw err;
+		var newValue = data.replace(`${ddate2}`, newdate2);
+		fs.writeFile(`./data/users/${sender.split("@")[0]}/ddate12.json`, newValue, 'utf-8', function(err, data) {
+			if (err) throw err;
+		})
+	})
+
+reply(`${design} Names has been set to\n- - - - - - - - - - - - - - - - - -\nFirst Name ${args[0]} Second Name ${args[1]}\n- - - - - - - - - - - - - - - - - -\nYou can always vhange these.`)
+
 
 break
 
