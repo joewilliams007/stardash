@@ -695,7 +695,7 @@ var ddmonths = monthDiff(new Date(`${ddate.split(' ')[2]}`, `${ddate.split(' ')[
 	console.log(`${ddyears} years -- ${ddmonths} months -- ${dddays} days times passed`) // MOST IMPORTANT LINE
 // Thx for ignoring -------------------------------------------------------------------------------------------------------------------------------------------------
 
-if 	(Number(years) > Number(ddatelasty) {
+if 	(Number(years) > Number(ddatelasty)) {
 
 	var newlastdate = `${years}`;
 	fs.readFile(`./data/users/${sender.split("@")[0]}/ddatelasty.json`, 'utf-8', function(err, data) {
