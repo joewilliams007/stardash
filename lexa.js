@@ -679,7 +679,7 @@ var ddemonths = monthDiff(new Date(`${ddate.split(' ')[2]}`, `${ddate.split(' ')
 	var ddyears = Number(`${tangghal().split(' ')[2]}`) - Number(`${ddate.split(' ')[2]}`); // years 
 
 
-	console.log(`${ddyears} -- ${ddmonths} -- ${dddays}`)
+	console.log(`${ddyears} years -- ${ddmonths} months -- ${dddays} days times passed`)
 
 
 if 	(((ddate.split(' ')[0] === `${tangghal().split(' ')[0]}`) && ddate.split(' ')[1] === `${tangghal().split(' ')[1]}`) && ddate.split(' ')[2] === `${Number(tangghal().split(' ')[2]) + Number(1)}`) {
