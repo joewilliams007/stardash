@@ -2517,11 +2517,11 @@ case 'ddate':
 	if (!isVerify) return reply(userB())
 
 
-	if (args.length < 3) return reply(`${design} Please enter the date exactly like this. (error 1)\n\n.24 12 2021`)
-	if (args.length > 3) return reply(`${design} Please enter the date exactly like this. (error 2)\n\n.24 12 2021`)
-	if (args[2].length < 4) return reply(`${design} Please enter the date exactly like this. (error 3)\n\n.24 12 2021`)
+	if (args.length < 3) return reply(`${design} Please enter the date exactly like this. (error 1)\n\n❎ .date 24 12 2021`)
+	if (args.length > 3) return reply(`${design} Please enter the date exactly like this. (error 2)\n\n❎ .date 24 12 2021`)
+	if (args[2].length < 4) return reply(`${design} Please enter the date exactly like this. (error 3)\n\n❎ .date 24 12 2021`)
 
-	function tanggal(){
+	function tangghal(){
 		myMonths = ["1","2","3","4","5","6","7","8","9","10","11","12"];
 					myDays = ['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'];
 					var tgl = new Date();
@@ -2543,7 +2543,7 @@ case 'ddate':
 		})
 	})
 
-	reply(`${design} Date has been set to ${value} \n- - - - - - - - - - - - - - - - - -\n❎ today is ${tanggal()}`)
+	reply(`${design} Date has been set to ${value} \n- - - - - - - - - - - - - - - - - -\n❎ today is ${tangghal()}`)
 
 break
 
