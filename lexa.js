@@ -674,8 +674,7 @@ function monthDiff(dateFrom, dateTo) {
 return dateTo.getMonth() - dateFrom.getMonth() + 
 (12 * (dateTo.getFullYear() - dateFrom.getFullYear()))
 }
-var ddemonths = monthDiff(new Date(`${ddate.split(' ')[2]}`, `${ddate.split(' ')[1]}`), new Date(`${tangghal().split(' ')[2]}`, `${tangghal().split(' ')[1]}`))
-	var ddmonths = ddemonths.replace(/ .*/,''); // months
+var ddmonths = monthDiff(new Date(`${ddate.split(' ')[2]}`, `${ddate.split(' ')[1]}`), new Date(`${tangghal().split(' ')[2]}`, `${tangghal().split(' ')[1]}`))
 	var ddyears = Number(`${tangghal().split(' ')[2]}`) - Number(`${ddate.split(' ')[2]}`); // years 
 
 
