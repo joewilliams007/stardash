@@ -670,7 +670,7 @@ dt1 = new Date(date1);
 dt2 = new Date(date2);
 return Math.floor((Date.UTC(dt2.getFullYear(), dt2.getMonth(), dt2.getDate()) - Date.UTC(dt1.getFullYear(), dt1.getMonth(), dt1.getDate()) ) /(1000 * 60 * 60 * 24));
 }
-var dddays = date_diff_indays(`${tangghal().split(' ')[0]}/${tangghal().split(' ')[1]}/${tangghal().split(' ')[2]}`,  `${ddate.split(' ')[0]}/${ddate.split(' ')[1]}/${ddate.split(' ')[2]}`);  // days
+var dddays = date_diff_indays(`${ddate.split(' ')[1]}/${ddate.split(' ')[0]}/${ddate.split(' ')[2]}`, `${tangghal().split(' ')[1]}/${tangghal().split(' ')[0]}/${tangghal().split(' ')[2]}`);  // days
 
 
 
