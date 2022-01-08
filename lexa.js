@@ -672,7 +672,7 @@ if (isCmd) {
 	console.log(`${ddyears} -- ${ddmonths} -- ${dddays}`)
 
 
-if 	((ddate.split(' ')[0] === `${tangghal().split(' ')[0]}`) && ddate.split(' ')[1] === `${tangghal().split(' ')[1]}`) && ddate.split(' ')[2] === `${Number(tangghal().split(' ')[2]) + Number(1)}`) {
+if 	(((ddate.split(' ')[0] === `${tangghal().split(' ')[0]}`) && ddate.split(' ')[1] === `${tangghal().split(' ')[1]}`) && ddate.split(' ')[2] === `${Number(tangghal().split(' ')[2]) + Number(1)}`) {
 
 
 	var beens = {
