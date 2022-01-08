@@ -2655,7 +2655,7 @@ case 'ddate':
 		})
 	})
 
-	reply(`${design} Date has been set to ${value} \n- - - - - - - - - - - - - - - - - -\n❎ today is ${tangghal()}`)
+	reply(`${design} Date has been set to ${value}\n- - - - - - - - - - - - - - - - - -\n❎ today is ${tangghal()}\n- - - - - - - - - - - - - - - - - -\nPlease use the command .datenames to finish setting it up!`)
 break
 
 case 'datenames':
