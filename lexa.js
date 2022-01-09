@@ -748,7 +748,7 @@ var _ddyears = Number(`${tangghal().split(' ')[2]}`) - Number(`${ddate.split(' '
 var ze1 = Number(_ddyears);
 var ze2 = Number(1);
 var ddyears = ze1 - ze2; 
-	console.log(`${ddyears} years -- ${ddmonths} months -- ${dddays} days times passed`) // MOST IMPORTANT LINE
+//	console.log(`${ddyears} years -- ${ddmonths} months -- ${dddays} days times passed`) // MOST IMPORTANT LINE
 // Thx for ignoring -------------------------------------------------------------------------------------------------------------------------------------------------
 
 if 	(Number(ddyears) > Number(ddatelasty)) {
