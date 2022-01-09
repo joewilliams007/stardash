@@ -944,7 +944,7 @@ case 'premium':
     if (!isVerify) return reply(userB(prefix))
 
 	owner = await fs.readFileSync('./images/menu.jpg').toString('base64')
-	capt = `❄️ 𝑊𝑖𝑛𝑡𝑒𝑟𝑆𝑡𝑎𝑟𝐷𝑎𝑠ℎ\n${design} ${username}`
+	capt = `𝑆𝑡𝑎𝑟𝐷𝑎𝑠ℎ\n${design} ${username}`
 	var beens = {
 	text: `𝑀𝑒𝑛𝑢 ☁️
 - - - - - - - - - - - - - - - - - - 
@@ -970,7 +970,7 @@ break
 case 'star':
     if (!isVerify) return reply(userB(prefix))
 	owner = await fs.readFileSync('./images/menu.jpg').toString('base64')
-	capt = `❄️ 𝑊𝑖𝑛𝑡𝑒𝑟𝑆𝑡𝑎𝑟𝐷𝑎𝑠ℎ\n${design} ${username}`
+	capt = `𝑆𝑡𝑎𝑟𝐷𝑎𝑠ℎ\n${design} ${username}`
 	var beens = {
 	text: `𝑆𝑡𝑎𝑟𝑃𝑖𝑐𝑡𝑢𝑟𝑒 ✨
 - - - - - - - - - - - - - - - - - - 
@@ -990,7 +990,7 @@ replyimg(beens, text, capt, owner)
 case 'games':
     if (!isVerify) return reply(userB(prefix))
 	owner = await fs.readFileSync('./images/menu.jpg').toString('base64')
-	capt = `❄️ 𝑊𝑖𝑛𝑡𝑒𝑟𝑆𝑡𝑎𝑟𝐷𝑎𝑠ℎ\n${design} ${username}`
+	capt = `𝑆𝑡𝑎𝑟𝐷𝑎𝑠ℎ\n${design} ${username}`
 	var beens = {
 	text: `𝐺𝑎𝑚𝑒𝑠 
 - - - - - - - - - - - - - - - - - - 
@@ -1026,7 +1026,7 @@ replyimg(beens, text, capt, owner)
 case 'tools':
     if (!isVerify) return reply(userB(prefix))
 	owner = await fs.readFileSync('./images/menu.jpg').toString('base64')
-	capt = `❄️ 𝑊𝑖𝑛𝑡𝑒𝑟𝑆𝑡𝑎𝑟𝐷𝑎𝑠ℎ\n${design} ${username}`
+	capt = `𝑆𝑡𝑎𝑟𝐷𝑎𝑠ℎ\n${design} ${username}`
 	var beens = {
 text: `𝑇𝑜𝑜𝑙𝑠 
 - - - - - - - - - - - - - - - - - - 
@@ -1056,7 +1056,7 @@ replyimg(beens, text, capt, owner)
 case 'edit':
     if (!isVerify) return reply(userB(prefix))
 	owner = await fs.readFileSync('./images/menu.jpg').toString('base64')
-	capt = `❄️ 𝑊𝑖𝑛𝑡𝑒𝑟𝑆𝑡𝑎𝑟𝐷𝑎𝑠ℎ\n${design} ${username}`
+	capt = `𝑆𝑡𝑎𝑟𝐷𝑎𝑠ℎ\n${design} ${username}`
 	var beens = {
 text: `𝐸𝑑𝑖𝑡 
 - - - - - - - - - - - - - - - - - - 
@@ -1097,7 +1097,7 @@ case 'settings':
 case 'setting':
     if (!isVerify) return reply(userB(prefix))
 	owner = await fs.readFileSync('./images/menu.jpg').toString('base64')
-	capt = `❄️ 𝑊𝑖𝑛𝑡𝑒𝑟𝑆𝑡𝑎𝑟𝐷𝑎𝑠ℎ\n${design} ${username}`
+	capt = `𝑆𝑡𝑎𝑟𝐷𝑎𝑠ℎ\n${design} ${username}`
 	var beens = {
 text: `𝑆𝑒𝑡𝑡𝑖𝑛𝑔𝑠 ⚙️
 - - - - - - - - - - - - - - - - - - 
@@ -2250,7 +2250,7 @@ break
 case 'inbox':
 	if (!isVerify) return reply(UserB())
 			owner = await fs.readFileSync('./images/menu.jpg').toString('base64')
-			capt = `❄️ 𝑊𝑖𝑛𝑡𝑒𝑟𝑆𝑡𝑎𝑟𝐷𝑎𝑠ℎ\n${design} ${username}`
+			capt = `𝑆𝑡𝑎𝑟𝐷𝑎𝑠ℎ\n${design} ${username}`
 			teks = `📩 𝐼𝑛𝑏𝑜𝑥 ⌬ ${messages.length} ⌬\n- - - - - - - - - - - - - - - - - -\n`
 		
 
@@ -3095,7 +3095,7 @@ if ((slot1 == slot2) && slot2 == slot3) {
             })
         })
 		owner = await fs.readFileSync('./images/menu.jpg').toString('base64')
-		capt = `❄️ 𝑊𝑖𝑛𝑡𝑒𝑟𝑆𝑡𝑎𝑟𝐷𝑎𝑠ℎ\n${design} ${username}`
+		capt = `𝑆𝑡𝑎𝑟𝐷𝑎𝑠ℎ\n${design} ${username}`
 		const been = {
 		text: `${design} 𝚂𝚕𝚘𝚝\n\n${slot4}${slot5}${slot6}\n- - - - - - - - - \n${slot1}${slot2}${slot3} ☜︎ ♕︎ 𝙹𝚊𝚌𝚔𝚙𝚘𝚝 ♕︎\n- - - - - - - - - \n${slot7}${slot8}${slot9}\n\n𝑀𝑜𝑛𝑒𝑦 𝑙𝑒𝑓𝑡 ${newcash}$ \n𝑇𝑖𝑐𝑘𝑒𝑡𝑠 𝑙𝑒𝑓𝑡 ${newtickets}`,
 	}
@@ -3132,7 +3132,7 @@ else if (slot1 == slot2) {
 		})
 	})
 	owner = await fs.readFileSync('./images/menu.jpg').toString('base64')
-	capt = `❄️ 𝑊𝑖𝑛𝑡𝑒𝑟𝑆𝑡𝑎𝑟𝐷𝑎𝑠ℎ\n${design} ${username}`
+	capt = `𝑆𝑡𝑎𝑟𝐷𝑎𝑠ℎ\n${design} ${username}`
 	const been = {
 	text: `${design} 𝚂𝚕𝚘𝚝\n\n${slot4}${slot5}${slot6}\n- - - - - - - - - \n${slot1}${slot2}${slot3} ☜︎ 𝚂𝚖𝚊𝚕𝚕 𝚠𝚒𝚗 ♕︎\n- - - - - - - - - \n${slot7}${slot8}${slot9}\n\n𝑀𝑜𝑛𝑒𝑦 𝑙𝑒𝑓𝑡 ${newcash}$\n𝑇𝑖𝑐𝑘𝑒𝑡𝑠 𝑙𝑒𝑓𝑡 ${newtickets}`,
 }
@@ -3165,7 +3165,7 @@ else if (slot2 == slot3) {
 	})
 
 	owner = await fs.readFileSync('./images/menu.jpg').toString('base64')
-	capt = `❄️ 𝑊𝑖𝑛𝑡𝑒𝑟𝑆𝑡𝑎𝑟𝐷𝑎𝑠ℎ\n${design} ${username}`
+	capt = `𝑆𝑡𝑎𝑟𝐷𝑎𝑠ℎ\n${design} ${username}`
 	const been = {
 	text: `${design} 𝚂𝚕𝚘𝚝\n\n${slot4}${slot5}${slot6}\n- - - - - - - - - \n${slot1}${slot2}${slot3} ☜︎ 𝚂𝚖𝚊𝚕𝚕 𝚠𝚒𝚗 ♕︎\n- - - - - - - - - \n${slot7}${slot8}${slot9}\n\n𝑀𝑜𝑛𝑒𝑦 𝑙𝑒𝑓𝑡 ${newcash}$\n𝑇𝑖𝑐𝑘𝑒𝑡𝑠 𝑙𝑒𝑓𝑡 ${newtickets}`,
 }
@@ -3198,7 +3198,7 @@ else if (slot1 == slot3) {
 	})
 
 	owner = await fs.readFileSync('./images/menu.jpg').toString('base64')
-	capt = `❄️ 𝑊𝑖𝑛𝑡𝑒𝑟𝑆𝑡𝑎𝑟𝐷𝑎𝑠ℎ\n${design} ${username}`
+	capt = `𝑆𝑡𝑎𝑟𝐷𝑎𝑠ℎ\n${design} ${username}`
 	const been = {
 	text: `${design} 𝚂𝚕𝚘𝚝\n\n${slot4}${slot5}${slot6}\n- - - - - - - - - \n${slot1}${slot2}${slot3} ☜︎ 𝚂𝚖𝚊𝚕𝚕 𝚠𝚒𝚗 ♕︎\n- - - - - - - - - \n${slot7}${slot8}${slot9}\n\n𝑀𝑜𝑛𝑒𝑦 𝑙𝑒𝑓𝑡 ${newcash}$\n𝑇𝑖𝑐𝑘𝑒𝑡𝑠 𝑙𝑒𝑓𝑡 ${newtickets}`,
 }
@@ -3215,7 +3215,7 @@ else {
 		})
 	})	
 	owner = await fs.readFileSync('./images/menu.jpg').toString('base64')
-	capt = `❄️ 𝑊𝑖𝑛𝑡𝑒𝑟𝑆𝑡𝑎𝑟𝐷𝑎𝑠ℎ\n${design} ${username}`
+	capt = `𝑆𝑡𝑎𝑟𝐷𝑎𝑠ℎ\n${design} ${username}`
 	const been = {
 	text: `${design} 𝚂𝚕𝚘𝚝\n\n${slot4}${slot5}${slot6}\n- - - - - - - - - \n${slot1}${slot2}${slot3} ☜︎ 𝙽𝚘 𝚠𝚒𝚗 ♕︎\n- - - - - - - - - \n${slot7}${slot8}${slot9}\n\n𝑀𝑜𝑛𝑒𝑦 𝑙𝑒𝑓𝑡 ${money}$\n𝑇𝑖𝑐𝑘𝑒𝑡𝑠 𝑙𝑒𝑓𝑡 ${newtickets}`,
 }
@@ -4072,7 +4072,7 @@ case 'name':
 							if (err) throw err;
 						})
 					})
-								reply(`${design} 𝐶ℎ𝑎𝑛𝑔𝑒𝑑 𝑢𝑠𝑒𝑟𝑛𝑎𝑚𝑒 𝑓𝑟𝑜𝑚 *${username}* 𝑡𝑜 *${value}*\n- - - - - - - - - - - - - - - - - -\n𝑀𝑜𝑛𝑒𝑦 𝑙𝑒𝑓𝑡 ${newmoney}$\n- - - - - - - - - - - - - - - - - -\n❄️ 𝑊𝑖𝑛𝑡𝑒𝑟𝑆𝑡𝑎𝑟𝐷𝑎𝑠ℎ 𝑆𝑒𝑡𝑡𝑖𝑛𝑔𝑠`)      
+								reply(`${design} 𝐶ℎ𝑎𝑛𝑔𝑒𝑑 𝑢𝑠𝑒𝑟𝑛𝑎𝑚𝑒 𝑓𝑟𝑜𝑚 *${username}* 𝑡𝑜 *${value}*\n- - - - - - - - - - - - - - - - - -\n𝑀𝑜𝑛𝑒𝑦 𝑙𝑒𝑓𝑡 ${newmoney}$\n- - - - - - - - - - - - - - - - - -\n𝑆𝑡𝑎𝑟𝐷𝑎𝑠ℎ 𝑆𝑒𝑡𝑡𝑖𝑛𝑔𝑠`)      
 		break
 //-- changeage - Setage
 case 'changeage': 
@@ -4080,7 +4080,7 @@ case 'setage':
 case 'age':  
 		if (!isVerify) return reply(userB())	
 		if (args.length < 1) return reply(`${design} 𝑃𝑙𝑒𝑎𝑠𝑒 𝑒𝑛𝑡𝑒𝑟 𝑛𝑒𝑤 𝑎𝑔𝑒.`)
-		if (money < 30) return reply(`${design} 𝑌𝑜𝑢 𝑑𝑜𝑛𝑡 ℎ𝑎𝑣𝑒 𝑒𝑛𝑜𝑢𝑔ℎ 𝑚𝑜𝑛𝑒𝑦.\n- - - - - - - - - - - - - - - - - -\n𝑀𝑜𝑛𝑒𝑦 𝑛𝑒𝑒𝑑𝑒𝑑 30$ 𝑌𝑜𝑢𝑟 𝑚𝑜𝑛𝑒𝑦 ${money}$\n- - - - - - - - - - - - - - - - - -\n❎ 𝑊𝑖𝑛𝑡𝑒𝑟𝑆𝑡𝑎𝑟𝐷𝑎𝑠ℎ 𝑆𝑒𝑡𝑡𝑖𝑛𝑔𝑠`) 
+		if (money < 30) return reply(`${design} 𝑌𝑜𝑢 𝑑𝑜𝑛𝑡 ℎ𝑎𝑣𝑒 𝑒𝑛𝑜𝑢𝑔ℎ 𝑚𝑜𝑛𝑒𝑦.\n- - - - - - - - - - - - - - - - - -\n𝑀𝑜𝑛𝑒𝑦 𝑛𝑒𝑒𝑑𝑒𝑑 30$ 𝑌𝑜𝑢𝑟 𝑚𝑜𝑛𝑒𝑦 ${money}$\n- - - - - - - - - - - - - - - - - -\n❎ 𝑡𝑎𝑟𝐷𝑎𝑠ℎ 𝑆𝑒𝑡𝑡𝑖𝑛𝑔𝑠`) 
 
 		var money1 = Number(money);
 		var cost = Number(5);
@@ -4105,7 +4105,7 @@ case 'age':
 						})
 					})
 					await delay(1000) /// waiting 1 second.
-		reply(`${design} 𝐶ℎ𝑎𝑛𝑔𝑒𝑑 𝑎𝑔𝑒 𝑓𝑟𝑜𝑚  *${age}* 𝑡𝑜 *${value}*\n- - - - - - - - - - - - - - - - - -\n𝑀𝑜𝑛𝑒𝑦 𝑙𝑒𝑓𝑡 ${newmoney}$\n- - - - - - - - - - - - - - - - - -\n❄️ 𝑊𝑖𝑛𝑡𝑒𝑟𝑆𝑡𝑎𝑟𝐷𝑎𝑠ℎ 𝑆𝑒𝑡𝑡𝑖𝑛𝑔𝑠`)
+		reply(`${design} 𝐶ℎ𝑎𝑛𝑔𝑒𝑑 𝑎𝑔𝑒 𝑓𝑟𝑜𝑚  *${age}* 𝑡𝑜 *${value}*\n- - - - - - - - - - - - - - - - - -\n𝑀𝑜𝑛𝑒𝑦 𝑙𝑒𝑓𝑡 ${newmoney}$\n- - - - - - - - - - - - - - - - - -\n𝑆𝑡𝑎𝑟𝐷𝑎𝑠ℎ 𝑆𝑒𝑡𝑡𝑖𝑛𝑔𝑠`)
 			  
 	break
 //-- change email
@@ -4127,7 +4127,7 @@ case 'email':
 					})
 					await delay(1000) /// waiting 1 second.
 
-			reply(`${design} 𝐶ℎ𝑎𝑛𝑔𝑒𝑑 𝐸𝑚𝑎𝑖𝑙 𝑡𝑜 ${args[0]}\n- - - - - - - - - - - - - - - - - -\n❄️ 𝑊𝑖𝑛𝑡𝑒𝑟𝑆𝑡𝑎𝑟𝐷𝑎𝑠ℎ 𝑀𝑎𝑖𝑙 `)
+			reply(`${design} 𝐶ℎ𝑎𝑛𝑔𝑒𝑑 𝐸𝑚𝑎𝑖𝑙 𝑡𝑜 ${args[0]}\n- - - - - - - - - - - - - - - - - -\n𝑆𝑡𝑎𝑟𝐷𝑎𝑠ℎ 𝑀𝑎𝑖𝑙 `)
 		
 						var nodemailer = require('nodemailer');
 						var transporter = nodemailer.createTransport({
@@ -4166,7 +4166,7 @@ case 'changedesign':
 	if (!isVerify) return reply(userB())	
 	if (args.length < 1) return reply(`${design} 𝐸𝑛𝑡𝑒𝑟 𝐷𝑒𝑠𝑖𝑔𝑛 𝑜𝑟 𝑆𝑦𝑚𝑏𝑜𝑙.`)
 	if (args.length > 1) return reply(`${design} 𝐷𝑜 𝑎𝑠 𝑒𝑥𝑎𝑚𝑝𝑙𝑒: .𝑑𝑒𝑠𝑖𝑔𝑛 ✨`)
-	if (money < 20) return reply(`${design} 𝑌𝑜𝑢 𝑑𝑜𝑛𝑡 ℎ𝑎𝑣𝑒 𝑒𝑛𝑜𝑢𝑔ℎ 𝑚𝑜𝑛𝑒𝑦.\n- - - - - - - - - - - - - - - - - -\n𝑀𝑜𝑛𝑒𝑦 𝑛𝑒𝑒𝑑𝑒𝑑 25$ 𝑌𝑜𝑢𝑟 𝑚𝑜𝑛𝑒𝑦 ${money}$\n- - - - - - - - - - - - - - - - - -\n❎ 𝑊𝑖𝑛𝑡𝑒𝑟𝑆𝑡𝑎𝑟𝐷𝑎𝑠ℎ 𝑆𝑒𝑡𝑡𝑖𝑛𝑔𝑠`) 
+	if (money < 20) return reply(`${design} 𝑌𝑜𝑢 𝑑𝑜𝑛𝑡 ℎ𝑎𝑣𝑒 𝑒𝑛𝑜𝑢𝑔ℎ 𝑚𝑜𝑛𝑒𝑦.\n- - - - - - - - - - - - - - - - - -\n𝑀𝑜𝑛𝑒𝑦 𝑛𝑒𝑒𝑑𝑒𝑑 25$ 𝑌𝑜𝑢𝑟 𝑚𝑜𝑛𝑒𝑦 ${money}$\n- - - - - - - - - - - - - - - - - -\n❎ 𝑡𝑎𝑟𝐷𝑎𝑠ℎ 𝑆𝑒𝑡𝑡𝑖𝑛𝑔𝑠`) 
 	var money1 = Number(money);
 	var cost = Number(25);
 	var newmoney = money1 - cost; 
@@ -4188,7 +4188,7 @@ case 'changedesign':
 				})
 				await delay(1000) /// waiting 1 second.
  
-					reply(`${design} 𝐶ℎ𝑎𝑛𝑔𝑒𝑑 𝑑𝑒𝑠𝑖𝑔𝑛 𝑓𝑟𝑜𝑚  *${design}* 𝑡𝑜 *${value}*\n- - - - - - - - - - - - - - - - - -\n𝑀𝑜𝑛𝑒𝑦 𝑙𝑒𝑓𝑡 ${newmoney}$\n- - - - - - - - - - - - - - - - - -\n❄️ 𝑊𝑖𝑛𝑡𝑒𝑟𝑆𝑡𝑎𝑟𝐷𝑎𝑠ℎ 𝑆𝑒𝑡𝑡𝑖𝑛𝑔𝑠`)					
+					reply(`${design} 𝐶ℎ𝑎𝑛𝑔𝑒𝑑 𝑑𝑒𝑠𝑖𝑔𝑛 𝑓𝑟𝑜𝑚  *${design}* 𝑡𝑜 *${value}*\n- - - - - - - - - - - - - - - - - -\n𝑀𝑜𝑛𝑒𝑦 𝑙𝑒𝑓𝑡 ${newmoney}$\n- - - - - - - - - - - - - - - - - -\n𝑆𝑡𝑎𝑟𝐷𝑎𝑠ℎ 𝑆𝑒𝑡𝑡𝑖𝑛𝑔𝑠`)					
 		break
 //-- changeemojie
 case 'changeemojie': 
@@ -4196,7 +4196,7 @@ case 'changemojie':
 case 'setemojie':  
 	if (!isVerify) return reply(userB())	
 	if (args.length < 1) return reply(`${design} 𝑃𝑙𝑒𝑎𝑠𝑒 𝑒𝑛𝑡𝑒𝑟 𝑛𝑒𝑤 𝑒𝑚𝑜𝑗𝑖𝑒.`)
-	if (money < 20) return reply(`${design} 𝑌𝑜𝑢 𝑑𝑜𝑛𝑡 ℎ𝑎𝑣𝑒 𝑒𝑛𝑜𝑢𝑔ℎ 𝑚𝑜𝑛𝑒𝑦.\n- - - - - - - - - - - - - - - - - -\n𝑀𝑜𝑛𝑒𝑦 𝑛𝑒𝑒𝑑𝑒𝑑 25$ 𝑌𝑜𝑢𝑟 𝑚𝑜𝑛𝑒𝑦 ${money}$\n- - - - - - - - - - - - - - - - - -\n❎ 𝑊𝑖𝑛𝑡𝑒𝑟𝑆𝑡𝑎𝑟𝐷𝑎𝑠ℎ 𝑆𝑒𝑡𝑡𝑖𝑛𝑔𝑠`) 
+	if (money < 20) return reply(`${design} 𝑌𝑜𝑢 𝑑𝑜𝑛𝑡 ℎ𝑎𝑣𝑒 𝑒𝑛𝑜𝑢𝑔ℎ 𝑚𝑜𝑛𝑒𝑦.\n- - - - - - - - - - - - - - - - - -\n𝑀𝑜𝑛𝑒𝑦 𝑛𝑒𝑒𝑑𝑒𝑑 25$ 𝑌𝑜𝑢𝑟 𝑚𝑜𝑛𝑒𝑦 ${money}$\n- - - - - - - - - - - - - - - - - -\n❎ 𝑆𝑡𝑎𝑟𝐷𝑎𝑠ℎ 𝑆𝑒𝑡𝑡𝑖𝑛𝑔𝑠`) 
 	var money1 = Number(money);
 	var cost = Number(25);
 	var newmoney = money1 - cost; 
@@ -4217,7 +4217,7 @@ case 'setemojie':
 					})
 				})
 				await delay(1000) /// waiting 1 second.
-				reply(`${design} 𝐶ℎ𝑎𝑛𝑔𝑒𝑑 𝑒𝑚𝑜𝑗𝑖𝑒 𝑓𝑟𝑜𝑚 *${emojie}* 𝑡𝑜 *${value}*\n- - - - - - - - - - - - - - - - - -\n𝑀𝑜𝑛𝑒𝑦 𝑙𝑒𝑓𝑡 ${newmoney}$\n- - - - - - - - - - - - - - - - - -\n❄️ 𝑊𝑖𝑛𝑡𝑒𝑟𝑆𝑡𝑎𝑟𝐷𝑎𝑠ℎ 𝑆𝑒𝑡𝑡𝑖𝑛𝑔𝑠`)  
+				reply(`${design} 𝐶ℎ𝑎𝑛𝑔𝑒𝑑 𝑒𝑚𝑜𝑗𝑖𝑒 𝑓𝑟𝑜𝑚 *${emojie}* 𝑡𝑜 *${value}*\n- - - - - - - - - - - - - - - - - -\n𝑀𝑜𝑛𝑒𝑦 𝑙𝑒𝑓𝑡 ${newmoney}$\n- - - - - - - - - - - - - - - - - -\n𝑆𝑡𝑎𝑟𝐷𝑎𝑠ℎ 𝑆𝑒𝑡𝑡𝑖𝑛𝑔𝑠`)  
 	break
 //---X623-Whatsapp-Bot------------------------------------------------------------------------------------------------------------------------// 
 // -- Leaderboard
