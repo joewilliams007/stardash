@@ -680,7 +680,72 @@ if (isCmd) {
   }
 
   
+// ---- DDATE
+  function tangghal(){
+	myMonths = ["1","2","3","4","5","6","7","8","9","10","11","12"];
+				myDays = ['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'];
+				var tgl = new Date();
+				var day = tgl.getDate()
+				bulan = tgl.getMonth()
+				var thisDay = tgl.getDay(),
+				thisDay = myDays[thisDay];
+				var yy = tgl.getYear()
+				var year = (yy < 1000) ? yy + 1900 : yy;
+				return `${day} ${myMonths[bulan]} ${year}`
+	}
 
+ownerdd = await fs.readFileSync('./images/ddate.jpg').toString('base64')
+captdd = `💕\n💕\n💕`
+
+
+// Ugly code lets not talk about it.. dates are stupid but this works trust me -_-----------------------------------------------------------------------------------
+console.log(`${tangghal().split(' ')[0]} -- ${tangghal().split(' ')[1]} -- ${tangghal().split(' ')[2]}`)
+console.log(`${ddate.split(' ')[0]} -- ${ddate.split(' ')[1]} -- ${ddate.split(' ')[2]}`)
+var date_diff_indays = function(date1, date2) {
+dt1 = new Date(date1);
+dt2 = new Date(date2);
+return Math.floor((Date.UTC(dt2.getFullYear(), dt2.getMonth(), dt2.getDate()) - Date.UTC(dt1.getFullYear(), dt1.getMonth(), dt1.getDate()) ) /(1000 * 60 * 60 * 24));
+}
+var dddays = date_diff_indays(`${ddate.split(' ')[1]}/${ddate.split(' ')[0]}/${ddate.split(' ')[2]}`, `${tangghal().split(' ')[1]}/${tangghal().split(' ')[0]}/${tangghal().split(' ')[2]}`);  // days
+function monthDiff(dateFrom, dateTo) {
+return dateTo.getMonth() - dateFrom.getMonth() + 
+(12 * (dateTo.getFullYear() - dateFrom.getFullYear()))
+}
+var ddmonths = monthDiff(new Date(`${ddate.split(' ')[2]}`, `${ddate.split(' ')[1]}`), new Date(`${tangghal().split(' ')[2]}`, `${tangghal().split(' ')[1]}`))
+	var ddyears = Number(`${tangghal().split(' ')[2]}`) - Number(`${ddate.split(' ')[2]}`); // years 
+	console.log(`${ddyears} years -- ${ddmonths} months -- ${dddays} days times passed`) // MOST IMPORTANT LINE
+// Thx for ignoring -------------------------------------------------------------------------------------------------------------------------------------------------
+
+if 	(Number(ddyears) > Number(ddatelasty)) {
+
+
+
+	var newlastdate = `${ddyears}`;
+	fs.readFile(`./data/users/${sender.split("@")[0]}/ddatelasty.json`, 'utf-8', function(err, data) {
+		if (err) throw err;
+		var newValue = data.replace(`${ddatelasty}`, newlastdate);
+		fs.writeFile(`./data/users/${sender.split("@")[0]}/ddatelasty.json`, newValue, 'utf-8', function(err, data) {
+			if (err) throw err;
+		})
+	})
+
+var beens = {
+text: `𝑇𝑜𝑑𝑎𝑦 𝑖𝑠 𝑎 𝑠𝑝𝑒𝑐𝑖𝑎𝑙 𝑑𝑎𝑦!
+- - - - - - - - - - - - - - - - - - 
+Yuu and UrBab are today 
+${ddyears} Years Together!!!
+
+----- Or -----
+${ddmonths} months
+----- Or -----
+${dddays} days 
+
+together!
+- - - - - - - - - - - - - - - - - - 
+`,
+}
+replyimg(beens, text, captdd, ownerdd)
+}
 
 
 
