@@ -1039,6 +1039,8 @@ ${design} ☆ .translate
 ${design} ☆ .calc 
 - - - - - - - - - - - - - - - - - - 
 ${design} ☆ .rsong
+${design} ☆ .ddate
+${design} ☆ .mylove
 ${design} .note
 ${design} .wame
 ${design} .wish
@@ -2854,7 +2856,7 @@ case 'ddate':
 							console.error(err)
 							  }
 
-	reply(`${design} Date has been set to ${value}\n- - - - - - - - - - - - - - - - - -\n❎ today is ${tangghal()}\n- - - - - - - - - - - - - - - - - -\nPlease use the command .datenames to finish setting it up!`)
+	reply(`${design} Date has been set to ${value}\n- - - - - - - - - - - - - - - - - -\ntoday is ${tangghal()}\n- - - - - - - - - - - - - - - - - -\nPlease use the command .datenames to finish setting it up! Use the command .mylove to see the results.`)
 break
 
 case 'datenames':
@@ -2870,7 +2872,7 @@ case 'datename':
 fs.appendFile(`./data/users/${sender.split("@")[0]}/ddate12.json`, `["${args[0]}", "${args[1]}"]`, function (err) {				
 });	
 
-reply(`${design} Names has been set to\n- - - - - - - - - - - - - - - - - -\nFirst Name ${args[0]} Second Name ${args[1]}\n- - - - - - - - - - - - - - - - - -\nYou can always change these.`)
+reply(`${design} Names has been set to\n- - - - - - - - - - - - - - - - - -\nFirst Name ${args[0]} Second Name ${args[1]}\n- - - - - - - - - - - - - - - - - -\nYou can always change these. -> .mylove`)
 
 
 break
