@@ -712,7 +712,10 @@ return dateTo.getMonth() - dateFrom.getMonth() +
 (12 * (dateTo.getFullYear() - dateFrom.getFullYear()))
 }
 var ddmonths = monthDiff(new Date(`${ddate.split(' ')[2]}`, `${ddate.split(' ')[1]}`), new Date(`${tangghal().split(' ')[2]}`, `${tangghal().split(' ')[1]}`))
-	var ddyears = Number(`${tangghal().split(' ')[2]}`) - Number(`${ddate.split(' ')[2]}`); // years 
+var _ddyears = Number(`${tangghal().split(' ')[2]}`) - Number(`${ddate.split(' ')[2]}`); // years 
+var ze1 = Number(_ddyears);
+var ze2 = Number(1);
+var ddyears = ze1 - ze2; 
 	console.log(`${ddyears} years -- ${ddmonths} months -- ${dddays} days times passed`) // MOST IMPORTANT LINE
 // Thx for ignoring -------------------------------------------------------------------------------------------------------------------------------------------------
 
@@ -2658,7 +2661,10 @@ return dateTo.getMonth() - dateFrom.getMonth() +
 (12 * (dateTo.getFullYear() - dateFrom.getFullYear()))
 }
 var ddmonths = monthDiff(new Date(`${ddate.split(' ')[2]}`, `${ddate.split(' ')[1]}`), new Date(`${tangghal().split(' ')[2]}`, `${tangghal().split(' ')[1]}`))
-	var ddyears = Number(`${tangghal().split(' ')[2]}`) - Number(`${ddate.split(' ')[2]}`); // years 
+	var _ddyears = Number(`${tangghal().split(' ')[2]}`) - Number(`${ddate.split(' ')[2]}`); // years 
+var ze1 = Number(_ddyears);
+var ze2 = Number(1);
+var ddyears = ze1 - ze2; 
 	console.log(`${ddyears} years -- ${ddmonths} months -- ${dddays} days times passed`) // MOST IMPORTANT LINE
 // Thx for ignoring -------------------------------------------------------------------------------------------------------------------------------------------------
 
@@ -2729,6 +2735,7 @@ case 'ddate':
 break
 
 case 'datenames':
+case 'datename':
 	if (!isVerify) return reply(userB())
 
 	if (args.length < 2) return reply(`${design} Please enter 2 Names. \n- - - - - - - - - - - - - - - - - -\nExample .datenames Star Starlina`)
