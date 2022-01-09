@@ -731,8 +731,8 @@ captdd = `💕\n💕\n💕`
 
 
 // Ugly code lets not talk about it.. dates are stupid but this works trust me -_-----------------------------------------------------------------------------------
-console.log(`${tangghal().split(' ')[0]} -- ${tangghal().split(' ')[1]} -- ${tangghal().split(' ')[2]}`)
-console.log(`${ddate.split(' ')[0]} -- ${ddate.split(' ')[1]} -- ${ddate.split(' ')[2]}`)
+// console.log(`${tangghal().split(' ')[0]} -- ${tangghal().split(' ')[1]} -- ${tangghal().split(' ')[2]}`)
+// console.log(`${ddate.split(' ')[0]} -- ${ddate.split(' ')[1]} -- ${ddate.split(' ')[2]}`)
 var date_diff_indays = function(date1, date2) {
 dt1 = new Date(date1);
 dt2 = new Date(date2);
@@ -2778,9 +2778,8 @@ ${dddays} days
 
 together! 
 
-- - - 💕 since 💕 - - -
-${ddate.split(' ')[0]}
-${ddate.split(' ')[1]}
+${ddate.split(' ')[0]} 
+${ddate.split(' ')[1]} 
 ${ddate.split(' ')[2]}
 `,
 }
@@ -2871,7 +2870,7 @@ case 'datename':
 fs.appendFile(`./data/users/${sender.split("@")[0]}/ddate12.json`, `["${args[0]}", "${args[1]}"]`, function (err) {				
 });	
 
-reply(`${design} Names has been set to\n- - - - - - - - - - - - - - - - - -\nFirst Name ${args[0]} Second Name ${args[1]}\n- - - - - - - - - - - - - - - - - -\nYou can always vhange these.`)
+reply(`${design} Names has been set to\n- - - - - - - - - - - - - - - - - -\nFirst Name ${args[0]} Second Name ${args[1]}\n- - - - - - - - - - - - - - - - - -\nYou can always change these.`)
 
 
 break
