@@ -450,7 +450,7 @@ try{
 					exec(`rm -rf ./data/users/${sender.split("@")[0]}/ddate12.json`)
 				await delay(1000)
 
-			fs.appendFile(`./data/users/${sender.split("@")[0]}/ddate12.json`, `["You" "ur crush"]`, function (err) {				
+			fs.appendFile(`./data/users/${sender.split("@")[0]}/ddate12.json`, `["You", "ur crush"]`, function (err) {				
 			});	
 			} catch {
 				console.error(err)
@@ -732,7 +732,7 @@ if 	(Number(ddyears) > Number(ddatelasty)) {
 var beens = {
 text: `𝑇𝑜𝑑𝑎𝑦 𝑖𝑠 𝑎 𝑠𝑝𝑒𝑐𝑖𝑎𝑙 𝑑𝑎𝑦!
 - - - - - - - - - - - - - - - - - - 
-Yuu and UrBab are today 
+${ddate1} and ${ddate2} are today 
 ${ddyears} Years Together!!!
 
 ----- Or -----
