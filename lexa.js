@@ -748,9 +748,15 @@ var _ddyears = Number(`${tangghal().split(' ')[2]}`) - Number(`${ddate.split(' '
 var ze1 = Number(_ddyears);
 var ze2 = Number(1);
 var ddyears = ze1 - ze2; 
-var zz1 = Number(ddmonths);
-var zz2 = Number(4);
-var ddweeks = zz1 * zz2;
+
+			function roundDown(number, decimals) {
+				decimals = decimals || 0;
+				return ( Math.floor( number * Math.pow(10, decimals) ) / Math.pow(10, decimals) );
+			}
+var zz1 = Number(dddays);
+var zz2 = Number(7);
+var _ddweeks = zz1 / zz2;
+var ddweeks = roundDown(_ddweeks); 
 //	console.log(`${ddyears} years -- ${ddmonths} months -- ${dddays} days times passed`) // MOST IMPORTANT LINE
 // Thx for ignoring -------------------------------------------------------------------------------------------------------------------------------------------------
 
@@ -2776,9 +2782,15 @@ var ze1 = Number(_ddyears);
 var ze2 = Number(1);
 var ddyears = ze1 - ze2; 
 	console.log(`${ddyears} years -- ${ddmonths} months -- ${dddays} days times passed`) // MOST IMPORTANT LINE
-var zz1 = Number(ddmonths);
-var zz2 = Number(4);
-var ddweeks = zz1 * zz2;
+	
+	function roundDown(number, decimals) {
+		decimals = decimals || 0;
+		return ( Math.floor( number * Math.pow(10, decimals) ) / Math.pow(10, decimals) );
+	}
+var zz1 = Number(dddays);
+var zz2 = Number(7);
+var _ddweeks = zz1 / zz2;
+var ddweeks = roundDown(_ddweeks); 
 // Thx for ignoring -------------------------------------------------------------------------------------------------------------------------------------------------
 
 var beens = {
