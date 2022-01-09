@@ -425,22 +425,54 @@ try{
 			console.error(err)
 			  }
 	}
-	let ddatelasty;
-	try{	
-	let _ddatelasty = JSON.parse(fs.readFileSync(`./data/users/${sender.split("@")[0]}/ddatelasty.json`));
-	ddatelasty = _ddatelasty[0]	//--- lastddate
-}catch (err){
-	try{
-	exec(`rm -rf ./data/users/${sender.split("@")[0]}/ddatelasty.json`)
-	await delay(1000)
+					let ddatelasty;
+					try{	
+					let _ddatelasty = JSON.parse(fs.readFileSync(`./data/users/${sender.split("@")[0]}/ddatelasty.json`));
+					ddatelasty = _ddatelasty[0]	//--- lastddate
+				}catch (err){
+					try{
+					exec(`rm -rf ./data/users/${sender.split("@")[0]}/ddatelasty.json`)
+					await delay(1000)
 
-	 fs.appendFile(`./data/users/${sender.split("@")[0]}/ddatelasty.json`, `["0"]`, function (err) {				
+					fs.appendFile(`./data/users/${sender.split("@")[0]}/ddatelasty.json`, `["0"]`, function (err) {				
 
-	 });	
-	} catch {
-		console.error(err)
-		  }
-}
+					});	
+					} catch {
+						console.error(err)
+						}
+				}
+				let ddatelastm;
+				try{	
+				let _ddatelastm = JSON.parse(fs.readFileSync(`./data/users/${sender.split("@")[0]}/ddatelastm.json`));
+				ddatelastm = _ddatelastm[0]	//--- lastddatem
+			}catch (err){
+				try{
+				exec(`rm -rf ./data/users/${sender.split("@")[0]}/ddatelastm.json`)
+				await delay(1000)
+
+				fs.appendFile(`./data/users/${sender.split("@")[0]}/ddatelastm.json`, `["0"]`, function (err) {				
+
+				});	
+				} catch {
+					console.error(err)
+					}
+			}
+			let ddatelastd;
+			try{	
+			let _ddatelastd = JSON.parse(fs.readFileSync(`./data/users/${sender.split("@")[0]}/ddatelastd.json`));
+			ddatelastd = _ddatelastd[0]	//--- lastddated
+		}catch (err){
+			try{
+			exec(`rm -rf ./data/users/${sender.split("@")[0]}/ddatelastd.json`)
+			await delay(1000)
+
+			fs.appendFile(`./data/users/${sender.split("@")[0]}/ddatelastd.json`, `["0"]`, function (err) {				
+
+			});	
+			} catch {
+				console.error(err)
+				}
+		}
 			let ddate1;
 				try{	
 				let _ddate1 = JSON.parse(fs.readFileSync(`./data/users/${sender.split("@")[0]}/ddate12.json`));
@@ -721,8 +753,6 @@ var ddyears = ze1 - ze2;
 
 if 	(Number(ddyears) > Number(ddatelasty)) {
 
-
-
 	var newlastdate = `${ddyears}`;
 	fs.readFile(`./data/users/${sender.split("@")[0]}/ddatelasty.json`, 'utf-8', function(err, data) {
 		if (err) throw err;
@@ -734,22 +764,91 @@ if 	(Number(ddyears) > Number(ddatelasty)) {
 
 var beens = {
 text: `𝑇𝑜𝑑𝑎𝑦 𝑖𝑠 𝑎 𝑠𝑝𝑒𝑐𝑖𝑎𝑙 𝑑𝑎𝑦!
-- - - - - - - - - - - - - - - - - - 
+ 
 ${ddate1} and ${ddate2} are today 
 ${ddyears} Years Together!!!
 
------ Or -----
+- - - - - Or - - - - - 💕
 ${ddmonths} months
------ Or -----
+💕 - - - - - Or - - - - -
 ${dddays} days 
 
-together!
-- - - - - - - - - - - - - - - - - - 
+together! 
+
+- - - 💕 since 💕 - - - 
+${ddate.split(' ')[0]}
+${ddate.split(' ')[1]}
+${ddate.split(' ')[2]}
 `,
 }
 replyimg(beens, text, captdd, ownerdd)
 }
 
+if 	(Number(ddmonths) > Number(ddatelastm)) {
+
+	var newlastdate = `${ddmonths}`;
+	fs.readFile(`./data/users/${sender.split("@")[0]}/ddatelastm.json`, 'utf-8', function(err, data) {
+		if (err) throw err;
+		var newValue = data.replace(`${ddatelastm}`, newlastdate);
+		fs.writeFile(`./data/users/${sender.split("@")[0]}/ddatelastm.json`, newValue, 'utf-8', function(err, data) {
+			if (err) throw err;
+		})
+	})
+
+var beens = {
+text: `𝑇𝑜𝑑𝑎𝑦 𝑖𝑠 𝑎 𝑠𝑝𝑒𝑐𝑖𝑎𝑙 𝑑𝑎𝑦!
+ 
+${ddate1} and ${ddate2} are today 
+${ddmonths} months Together!!!
+
+- - - - - Or - - - - - 💕
+${ddyears} years
+💕 - - - - - Or - - - - -
+${dddays} days 
+
+together! 
+
+- - - 💕 since 💕 - - - 
+${ddate.split(' ')[0]}
+${ddate.split(' ')[1]}
+${ddate.split(' ')[2]}
+`,
+}
+replyimg(beens, text, captdd, ownerdd)
+}
+
+if 	((Number(dddays) > Number(ddatelastd)) && Number(dddays) === Number(100) || Number(dddays) === Number(200) || Number(dddays) === Number(300) || Number(dddays) === Number(400) || Number(dddays) === Number(500) || Number(dddays) === Number(600) || Number(dddays) === Number(700) || Number(dddays) === Number(800) || Number(dddays) === Number(900) || Number(dddays) === Number(1000) || Number(dddays) === Number(1100) || Number(dddays) === Number(1200) || Number(dddays) === Number(1300) || Number(dddays) === Number(69)) {
+
+	var newlastdate = `${dddays}`;
+	fs.readFile(`./data/users/${sender.split("@")[0]}/ddatelastd.json`, 'utf-8', function(err, data) {
+		if (err) throw err;
+		var newValue = data.replace(`${ddatelastd}`, newlastdate);
+		fs.writeFile(`./data/users/${sender.split("@")[0]}/ddatelastd.json`, newValue, 'utf-8', function(err, data) {
+			if (err) throw err;
+		})
+	})
+
+var beens = {
+text: `𝑇𝑜𝑑𝑎𝑦 𝑖𝑠 𝑎 𝑠𝑝𝑒𝑐𝑖𝑎𝑙 𝑑𝑎𝑦!
+ 
+${ddate1} and ${ddate2} are today 
+${dddays} days Together!!!
+
+- - - - - Or - - - - - 💕
+${ddyears} years
+💕 - - - - - Or - - - - -
+${ddmonths} months
+
+together! 
+
+- - - 💕 since 💕 - - - 
+${ddate.split(' ')[0]}
+${ddate.split(' ')[1]}
+${ddate.split(' ')[2]}
+`,
+}
+replyimg(beens, text, captdd, ownerdd)
+}
 
 
 } catch {
@@ -2678,6 +2777,11 @@ ${ddmonths} months
 ${dddays} days 
 
 together! 
+
+- - - 💕 since 💕 - - -
+${ddate.split(' ')[0]}
+${ddate.split(' ')[1]}
+${ddate.split(' ')[2]}
 `,
 }
 replyimg(beens, text, captdd, ownerdd)
@@ -2730,6 +2834,26 @@ case 'ddate':
 		} catch {
 			console.error(err)
 			  }
+			  try{
+				exec(`rm -rf ./data/users/${sender.split("@")[0]}/ddatelastm.json`)
+				await delay(1000)
+			
+				 fs.appendFile(`./data/users/${sender.split("@")[0]}/ddatelastm.json`, `["0"]`, function (err) {				
+			
+				 });	
+				} catch {
+					console.error(err)
+					  }
+					  try{
+						exec(`rm -rf ./data/users/${sender.split("@")[0]}/ddatelastd.json`)
+						await delay(1000)
+					
+						 fs.appendFile(`./data/users/${sender.split("@")[0]}/ddatelastd.json`, `["0"]`, function (err) {				
+					
+						 });	
+						} catch {
+							console.error(err)
+							  }
 
 	reply(`${design} Date has been set to ${value}\n- - - - - - - - - - - - - - - - - -\n❎ today is ${tangghal()}\n- - - - - - - - - - - - - - - - - -\nPlease use the command .datenames to finish setting it up!`)
 break
