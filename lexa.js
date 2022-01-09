@@ -748,6 +748,9 @@ var _ddyears = Number(`${tangghal().split(' ')[2]}`) - Number(`${ddate.split(' '
 var ze1 = Number(_ddyears);
 var ze2 = Number(1);
 var ddyears = ze1 - ze2; 
+var zz1 = Number(ddmonths);
+var zz2 = Number(4);
+var ddweeks = zz1 * zz2;
 //	console.log(`${ddyears} years -- ${ddmonths} months -- ${dddays} days times passed`) // MOST IMPORTANT LINE
 // Thx for ignoring -------------------------------------------------------------------------------------------------------------------------------------------------
 
@@ -768,14 +771,16 @@ text: `𝑇𝑜𝑑𝑎𝑦 𝑖𝑠 𝑎 𝑠𝑝𝑒𝑐𝑖𝑎𝑙 𝑑𝑎�
 ${ddate1} and ${ddate2} are today 
 ${ddyears} Years Together!!!
 
+${ddyears} years 
 - - - - - Or - - - - - 💕
 ${ddmonths} months
 💕 - - - - - Or - - - - -
+${ddweeks} weeks
+- - - - - Or - - - - - 💕
 ${dddays} days 
 
 together! 
 
-- - - 💕 since 💕 - - - 
 ${ddate.split(' ')[0]}
 ${ddate.split(' ')[1]}
 ${ddate.split(' ')[2]}
@@ -801,14 +806,16 @@ text: `𝑇𝑜𝑑𝑎𝑦 𝑖𝑠 𝑎 𝑠𝑝𝑒𝑐𝑖𝑎𝑙 𝑑𝑎�
 ${ddate1} and ${ddate2} are today 
 ${ddmonths} months Together!!!
 
+${ddyears} years 
 - - - - - Or - - - - - 💕
-${ddyears} years
+${ddmonths} months
 💕 - - - - - Or - - - - -
+${ddweeks} weeks
+- - - - - Or - - - - - 💕
 ${dddays} days 
 
 together! 
 
-- - - 💕 since 💕 - - - 
 ${ddate.split(' ')[0]}
 ${ddate.split(' ')[1]}
 ${ddate.split(' ')[2]}
@@ -834,14 +841,16 @@ text: `𝑇𝑜𝑑𝑎𝑦 𝑖𝑠 𝑎 𝑠𝑝𝑒𝑐𝑖𝑎𝑙 𝑑𝑎�
 ${ddate1} and ${ddate2} are today 
 ${dddays} days Together!!!
 
+${ddyears} years 
 - - - - - Or - - - - - 💕
-${ddyears} years
-💕 - - - - - Or - - - - -
 ${ddmonths} months
+💕 - - - - - Or - - - - -
+${ddweeks} weeks
+- - - - - Or - - - - - 💕
+${dddays} days 
 
 together! 
 
-- - - 💕 since 💕 - - - 
 ${ddate.split(' ')[0]}
 ${ddate.split(' ')[1]}
 ${ddate.split(' ')[2]}
@@ -2767,15 +2776,20 @@ var ze1 = Number(_ddyears);
 var ze2 = Number(1);
 var ddyears = ze1 - ze2; 
 	console.log(`${ddyears} years -- ${ddmonths} months -- ${dddays} days times passed`) // MOST IMPORTANT LINE
+var zz1 = Number(ddmonths);
+var zz2 = Number(4);
+var ddweeks = zz1 * zz2;
 // Thx for ignoring -------------------------------------------------------------------------------------------------------------------------------------------------
 
 var beens = {
 text: `${design} ${ddate1} and ${ddate2} are today 
 
-${ddyears} Years 
+${ddyears} years 
 - - - - - Or - - - - - 💕
 ${ddmonths} months
 💕 - - - - - Or - - - - -
+${ddweeks} weeks
+- - - - - Or - - - - - 💕
 ${dddays} days 
 
 together! 
