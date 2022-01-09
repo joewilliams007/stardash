@@ -2641,7 +2641,7 @@ case 'ml':
 	}
 
 ownerdd = await fs.readFileSync('./images/ddate.jpg').toString('base64')
-captdd = `💕\n💕\n💕`
+captdd = `ZeLoveDisplayInator\n💕\n💕`
 
 
 // Ugly code lets not talk about it.. dates are stupid but this works trust me -_-----------------------------------------------------------------------------------
@@ -2663,9 +2663,7 @@ var ddmonths = monthDiff(new Date(`${ddate.split(' ')[2]}`, `${ddate.split(' ')[
 // Thx for ignoring -------------------------------------------------------------------------------------------------------------------------------------------------
 
 var beens = {
-text: `${design} 𝑇𝑜𝑑𝑎𝑦 𝑖𝑠 𝑎 𝑠𝑝𝑒𝑐𝑖𝑎𝑙 𝑑𝑎𝑦!
-- - - - - - - - - - - - - - - - - - 
-${ddate1} and ${ddate2} are today 
+text: `${design} ${ddate1} and ${ddate2} are today 
 
 ${ddyears} Years 
 - - - - - Or - - - - - 💕
@@ -2673,8 +2671,7 @@ ${ddmonths} months
 💕 - - - - - Or - - - - -
 ${dddays} days 
 
-together!
-- - - - - - - - - - - - - - - - - - 
+together! 
 `,
 }
 replyimg(beens, text, captdd, ownerdd)
@@ -2737,24 +2734,11 @@ case 'datenames':
 	if (args.length < 2) return reply(`${design} Please enter 2 Names. \n- - - - - - - - - - - - - - - - - -\nExample .datenames Star Starlina`)
 	if (args.length > 2) return reply(`${design} Please enter 2 Names. \n- - - - - - - - - - - - - - - - - -\nExample .datenames Star Starlina`)
 
+	exec(`rm -rf ./data/users/${sender.split("@")[0]}/ddate12.json`)
+	await delay(1000)
 
-	var newdate1 = `${args[0]}`;
-	fs.readFile(`./data/users/${sender.split("@")[0]}/ddate12.json`, 'utf-8', function(err, data) {
-		if (err) throw err;
-		var newValue = data.replace(`${ddate1}`, newdate1);
-		fs.writeFile(`./data/users/${sender.split("@")[0]}/ddate12.json`, newValue, 'utf-8', function(err, data) {
-			if (err) throw err;
-		})
-	})
-
-	var newdate2 = `${args[1]}`;
-	fs.readFile(`./data/users/${sender.split("@")[0]}/ddate12.json`, 'utf-8', function(err, data) {
-		if (err) throw err;
-		var newValue = data.replace(`${ddate2}`, newdate2);
-		fs.writeFile(`./data/users/${sender.split("@")[0]}/ddate12.json`, newValue, 'utf-8', function(err, data) {
-			if (err) throw err;
-		})
-	})
+fs.appendFile(`./data/users/${sender.split("@")[0]}/ddate12.json`, `["${args[0]}", "${args[1]}"]`, function (err) {				
+});	
 
 reply(`${design} Names has been set to\n- - - - - - - - - - - - - - - - - -\nFirst Name ${args[0]} Second Name ${args[1]}\n- - - - - - - - - - - - - - - - - -\nYou can always vhange these.`)
 
