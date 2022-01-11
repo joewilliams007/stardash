@@ -3054,7 +3054,7 @@ break
 case 'mysticker':
 case 'mys':
   if (!isVerify) return reply(UserB())
-					buffer = fs.readFileSync(`${sender.split("@")[0]}.webp`)
+					buffer = fs.readFileSync(`./data/users/${sender.split("@")[0]}/sticker.webp`)
 					Lxa.sendMessage(from, buffer, sticker, {quoted:mek})
 											
 			break			
@@ -3063,7 +3063,7 @@ case 'myaudio':
 case 'audio':
 case 'mysong':
   if (!isVerify) return reply(UserB())
-					buffer = fs.readFileSync(`${sender.split("@")[0]}.opus`)
+					buffer = fs.readFileSync(`./data/users/${sender.split("@")[0]}/song.opus`)
 					Lxa.sendMessage(from, buffer, audio, {quoted:mek})											
 			break	
 //---X623-Whatsapp-Bot------------------------------------------------------------------------------------------------------------------------// 
