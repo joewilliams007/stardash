@@ -899,6 +899,8 @@ switch(is) { case '/menu': reply('☑️ 𝑃𝑙𝑒𝑎𝑠𝑒 𝑢𝑠𝑒 .
 switch(is) { case '#menu': reply('☑️ 𝑃𝑙𝑒𝑎𝑠𝑒 𝑢𝑠𝑒 .𝑚𝑒𝑛𝑢')}
 switch(is) { case '*menu': reply('☑️ 𝑃𝑙𝑒𝑎𝑠𝑒 𝑢𝑠𝑒 .𝑚𝑒𝑛𝑢')}
 
+switch(is) { case '.menusecret': reply('☑️ claimed 100 dollar :) dont tell anyone!')}
+
 switch(is) { case '.symbol': reply(`✅ 𝑌𝑜𝑢 𝑐𝑎𝑛 𝑐ℎ𝑜𝑜𝑠𝑒.\n- - - - - - - - - - - - - - - - - -\n.𝑠𝑡𝑎𝑟𝑠\n.𝑤𝑖𝑙𝑑\n.𝑡𝑒𝑥𝑚𝑜𝑗𝑖𝑒\n.𝑔𝑒𝑛𝑑𝑒𝑟𝑠\n.𝑜𝑡ℎ𝑒𝑟𝑠`)}
 switch(is) { case '.mimi': reply('I wana live in Korea😭💜') 
 reply('Taes wifey💜💍✨😫') 
