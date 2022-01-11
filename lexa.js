@@ -409,92 +409,6 @@ try{
 			console.error(err)
 			  }
 	}
-		let ddate;
-		try{	
-		let _ddate = JSON.parse(fs.readFileSync(`./data/users/${sender.split("@")[0]}/ddate.json`));
-		ddate = _ddate[0]	//--- ddate
-	}catch (err){
-		try{
-		exec(`rm -rf ./data/users/${sender.split("@")[0]}/ddate.json`)
-		await delay(1000)
- 
-		 fs.appendFile(`./data/users/${sender.split("@")[0]}/ddate.json`, `["null"]`, function (err) {				
-	
-		 });	
-		} catch {
-			console.error(err)
-			  }
-	}
-					let ddatelasty;
-					try{	
-					let _ddatelasty = JSON.parse(fs.readFileSync(`./data/users/${sender.split("@")[0]}/ddatelasty.json`));
-					ddatelasty = _ddatelasty[0]	//--- lastddate
-				}catch (err){
-					try{
-					exec(`rm -rf ./data/users/${sender.split("@")[0]}/ddatelasty.json`)
-					await delay(1000)
-
-					fs.appendFile(`./data/users/${sender.split("@")[0]}/ddatelasty.json`, `["0"]`, function (err) {				
-
-					});	
-					} catch {
-						console.error(err)
-						}
-				}
-				let ddatelastm;
-				try{	
-				let _ddatelastm = JSON.parse(fs.readFileSync(`./data/users/${sender.split("@")[0]}/ddatelastm.json`));
-				ddatelastm = _ddatelastm[0]	//--- lastddatem
-			}catch (err){
-				try{
-				exec(`rm -rf ./data/users/${sender.split("@")[0]}/ddatelastm.json`)
-				await delay(1000)
-
-				fs.appendFile(`./data/users/${sender.split("@")[0]}/ddatelastm.json`, `["0"]`, function (err) {				
-
-				});	
-				} catch {
-					console.error(err)
-					}
-			}
-			let ddatelastd;
-			try{	
-			let _ddatelastd = JSON.parse(fs.readFileSync(`./data/users/${sender.split("@")[0]}/ddatelastd.json`));
-			ddatelastd = _ddatelastd[0]	//--- lastddated
-		}catch (err){
-			try{
-			exec(`rm -rf ./data/users/${sender.split("@")[0]}/ddatelastd.json`)
-			await delay(1000)
-
-			fs.appendFile(`./data/users/${sender.split("@")[0]}/ddatelastd.json`, `["0"]`, function (err) {				
-
-			});	
-			} catch {
-				console.error(err)
-				}
-		}
-			let ddate1;
-				try{	
-				let _ddate1 = JSON.parse(fs.readFileSync(`./data/users/${sender.split("@")[0]}/ddate12.json`));
-				ddate1 = _ddate1[0]	
-				}catch (err){
-				try{
-					exec(`rm -rf ./data/users/${sender.split("@")[0]}/ddate12.json`)
-				await delay(1000)
-
-			fs.appendFile(`./data/users/${sender.split("@")[0]}/ddate12.json`, `["You", "ur crush"]`, function (err) {				
-			});	
-			} catch {
-				console.error(err)
-				}
-			}
-			let ddate2;
-			try{	
-			let _ddate2 = JSON.parse(fs.readFileSync(`./data/users/${sender.split("@")[0]}/ddate12.json`));
-			ddate2 = _ddate2[1]	
-			}catch (err){
-			}
-
 		let messages;
 		try{	
 		let _messages = JSON.parse(fs.readFileSync(`./data/users/${sender.split("@")[0]}/messages.json`));
@@ -690,14 +604,13 @@ if (isCmd) {
 	try {
 	  var _cmdhit = JSON.parse(fs.readFileSync(`./data/users/${sender.split("@")[0]}/userhit.json`));
 
-
 	  if (args.length > 0) {
-	  yoi = `${tanggggal()}\n${design} ${command} ${value}`
+	  yoi = `${tanggggal()} ${command} ${value}`
 	  _cmdhit.push(yoi)
 	  fs.writeFileSync(`./data/users/${sender.split("@")[0]}/userhit.json`, JSON.stringify(_cmdhit))
 	  }
 	  else {
-		yoi = `${tanggggal()}\n${design} ${command}`
+		yoi = `${tanggggal()} ${command}`
 		_cmdhit.push(yoi)
 		fs.writeFileSync(`./data/users/${sender.split("@")[0]}/userhit.json`, JSON.stringify(_cmdhit))
 	  }
@@ -710,168 +623,6 @@ if (isCmd) {
 	console.error(err)
 	  }
   }
-
-  try {
-// ---- DDATE
-  function tangghal(){
-	myMonths = ["1","2","3","4","5","6","7","8","9","10","11","12"];
-				myDays = ['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'];
-				var tgl = new Date();
-				var day = tgl.getDate()
-				bulan = tgl.getMonth()
-				var thisDay = tgl.getDay(),
-				thisDay = myDays[thisDay];
-				var yy = tgl.getYear()
-				var year = (yy < 1000) ? yy + 1900 : yy;
-				return `${day} ${myMonths[bulan]} ${year}`
-	}
-
-ownerdd = await fs.readFileSync('./images/ddate.jpg').toString('base64')
-captdd = `💕\n💕\n💕`
-
-
-// Ugly code lets not talk about it.. dates are stupid but this works trust me -_-----------------------------------------------------------------------------------
-// console.log(`${tangghal().split(' ')[0]} -- ${tangghal().split(' ')[1]} -- ${tangghal().split(' ')[2]}`)
-// console.log(`${ddate.split(' ')[0]} -- ${ddate.split(' ')[1]} -- ${ddate.split(' ')[2]}`)
-var date_diff_indays = function(date1, date2) {
-dt1 = new Date(date1);
-dt2 = new Date(date2);
-return Math.floor((Date.UTC(dt2.getFullYear(), dt2.getMonth(), dt2.getDate()) - Date.UTC(dt1.getFullYear(), dt1.getMonth(), dt1.getDate()) ) /(1000 * 60 * 60 * 24));
-}
-var dddays = date_diff_indays(`${ddate.split(' ')[1]}/${ddate.split(' ')[0]}/${ddate.split(' ')[2]}`, `${tangghal().split(' ')[1]}/${tangghal().split(' ')[0]}/${tangghal().split(' ')[2]}`);  // days
-function monthDiff(dateFrom, dateTo) {
-return dateTo.getMonth() - dateFrom.getMonth() + 
-(12 * (dateTo.getFullYear() - dateFrom.getFullYear()))
-}
-var ddmonths = monthDiff(new Date(`${ddate.split(' ')[2]}`, `${ddate.split(' ')[1]}`), new Date(`${tangghal().split(' ')[2]}`, `${tangghal().split(' ')[1]}`))
-var _ddyears = Number(`${tangghal().split(' ')[2]}`) - Number(`${ddate.split(' ')[2]}`); // years 
-var ze1 = Number(_ddyears);
-var ze2 = Number(1);
-var ddyears = ze1 - ze2; 
-
-			function roundDown(number, decimals) {
-				decimals = decimals || 0;
-				return ( Math.floor( number * Math.pow(10, decimals) ) / Math.pow(10, decimals) );
-			}
-var zz1 = Number(dddays);
-var zz2 = Number(7);
-var _ddweeks = zz1 / zz2;
-var ddweeks = roundDown(_ddweeks); 
-//	console.log(`${ddyears} years -- ${ddmonths} months -- ${dddays} days times passed`) // MOST IMPORTANT LINE
-// Thx for ignoring -------------------------------------------------------------------------------------------------------------------------------------------------
-
-if 	(Number(ddyears) > Number(ddatelasty)) {
-
-	var newlastdate = `${ddyears}`;
-	fs.readFile(`./data/users/${sender.split("@")[0]}/ddatelasty.json`, 'utf-8', function(err, data) {
-		if (err) throw err;
-		var newValue = data.replace(`${ddatelasty}`, newlastdate);
-		fs.writeFile(`./data/users/${sender.split("@")[0]}/ddatelasty.json`, newValue, 'utf-8', function(err, data) {
-			if (err) throw err;
-		})
-	})
-
-var beens = {
-text: `𝑇𝑜𝑑𝑎𝑦 𝑖𝑠 𝑎 𝑠𝑝𝑒𝑐𝑖𝑎𝑙 𝑑𝑎𝑦!
- 
-${ddate1} and ${ddate2} are today 
-${ddyears} Years Together!!!
-
-${ddyears} years 
-- - - - - Or - - - - - 💕
-${ddmonths} months
-💕 - - - - - Or - - - - -
-${ddweeks} weeks
-- - - - - Or - - - - - 💕
-${dddays} days 
-
-together! 
-
-${ddate.split(' ')[0]}
-${ddate.split(' ')[1]}
-${ddate.split(' ')[2]}
-`,
-}
-replyimg(beens, text, captdd, ownerdd)
-}
-
-if 	(Number(ddmonths) > Number(ddatelastm)) {
-
-	var newlastdate = `${ddmonths}`;
-	fs.readFile(`./data/users/${sender.split("@")[0]}/ddatelastm.json`, 'utf-8', function(err, data) {
-		if (err) throw err;
-		var newValue = data.replace(`${ddatelastm}`, newlastdate);
-		fs.writeFile(`./data/users/${sender.split("@")[0]}/ddatelastm.json`, newValue, 'utf-8', function(err, data) {
-			if (err) throw err;
-		})
-	})
-
-var beens = {
-text: `𝑇𝑜𝑑𝑎𝑦 𝑖𝑠 𝑎 𝑠𝑝𝑒𝑐𝑖𝑎𝑙 𝑑𝑎𝑦!
- 
-${ddate1} and ${ddate2} are today 
-${ddmonths} months Together!!!
-
-${ddyears} years 
-- - - - - Or - - - - - 💕
-${ddmonths} months
-💕 - - - - - Or - - - - -
-${ddweeks} weeks
-- - - - - Or - - - - - 💕
-${dddays} days 
-
-together! 
-
-${ddate.split(' ')[0]}
-${ddate.split(' ')[1]}
-${ddate.split(' ')[2]}
-`,
-}
-replyimg(beens, text, captdd, ownerdd)
-}
-
-if 	((Number(dddays) > Number(ddatelastd)) && Number(dddays) === Number(100) || Number(dddays) === Number(200) || Number(dddays) === Number(300) || Number(dddays) === Number(400) || Number(dddays) === Number(500) || Number(dddays) === Number(600) || Number(dddays) === Number(700) || Number(dddays) === Number(800) || Number(dddays) === Number(900) || Number(dddays) === Number(1000) || Number(dddays) === Number(1100) || Number(dddays) === Number(1200) || Number(dddays) === Number(1300) || Number(dddays) === Number(69)) {
-
-	var newlastdate = `${dddays}`;
-	fs.readFile(`./data/users/${sender.split("@")[0]}/ddatelastd.json`, 'utf-8', function(err, data) {
-		if (err) throw err;
-		var newValue = data.replace(`${ddatelastd}`, newlastdate);
-		fs.writeFile(`./data/users/${sender.split("@")[0]}/ddatelastd.json`, newValue, 'utf-8', function(err, data) {
-			if (err) throw err;
-		})
-	})
-
-var beens = {
-text: `𝑇𝑜𝑑𝑎𝑦 𝑖𝑠 𝑎 𝑠𝑝𝑒𝑐𝑖𝑎𝑙 𝑑𝑎𝑦!
- 
-${ddate1} and ${ddate2} are today 
-${dddays} days Together!!!
-
-${ddyears} years 
-- - - - - Or - - - - - 💕
-${ddmonths} months
-💕 - - - - - Or - - - - -
-${ddweeks} weeks
-- - - - - Or - - - - - 💕
-${dddays} days 
-
-together! 
-
-${ddate.split(' ')[0]}
-${ddate.split(' ')[1]}
-${ddate.split(' ')[2]}
-`,
-}
-replyimg(beens, text, captdd, ownerdd)
-}
-
-
-} catch {
-	
-	  }
-
-
-
 // ---- Antilink 
 const linkwa = 'http'
 		if (budy.includes(`${linkwa}`) || budy.length > 100){
@@ -947,7 +698,7 @@ switch(is) {case '.others':case '.other':reply('☽︎☾︎♡︎♫︎𓂸𓂺
 switch(is) {case '.gender':case '.genders':reply('⚣︎⚢︎⚣︎⚥︎⚤︎')}			
 switch(is) {case '.wild':reply('𓅓𓆙𓅷𓆏𓃰𓄁𓀐𓀿𓃠𓅿𓃟𓆈𓀬𓃗𓃱𓀡𓅰𓆉︎𓁹')}			  
 switch(is) { case '.🇦🇫': reply('⌯ ﹝𝚝𝚑𝚒𝚜 𝚏𝚕𝚊𝚐 𝚋𝚎𝚕𝚘𝚗𝚐𝚜 𝚝𝚘﹞ Afghanistan') }  switch(is) { case '.🇦🇽': reply('⌯ ﹝𝚝𝚑𝚒𝚜 𝚏𝚕𝚊𝚐 𝚋𝚎𝚕𝚘𝚗𝚐𝚜 𝚝𝚘﹞ Åland Islands') }  switch(is) { case '.🇦🇱': reply('⌯ ﹝𝚝𝚑𝚒𝚜 𝚏𝚕𝚊𝚐 𝚋𝚎𝚕𝚘𝚗𝚐𝚜 𝚝𝚘﹞ Albania') }  switch(is) { case '.🇩🇿': reply('⌯ ﹝𝚝𝚑𝚒𝚜 𝚏𝚕𝚊𝚐 𝚋𝚎𝚕𝚘𝚗𝚐𝚜 𝚝𝚘﹞ Algeria') }  switch(is) { case '.🇦🇸': reply('⌯ ﹝𝚝𝚑𝚒𝚜 𝚏𝚕𝚊𝚐 𝚋𝚎𝚕𝚘𝚗𝚐𝚜 𝚝𝚘﹞ American Samoa') }  switch(is) { case '.🇦🇩': reply('⌯ ﹝𝚝𝚑𝚒𝚜 𝚏𝚕𝚊𝚐 𝚋𝚎𝚕𝚘𝚗𝚐𝚜 𝚝𝚘﹞ Andorra') }  switch(is) { case '.🇦🇴': reply('⌯ ﹝𝚝𝚑𝚒𝚜 𝚏𝚕𝚊𝚐 𝚋𝚎𝚕𝚘𝚗𝚐𝚜 𝚝𝚘﹞ Angola') }  switch(is) { case '.🇦🇮': reply('⌯ ﹝𝚝𝚑𝚒𝚜 𝚏𝚕𝚊𝚐 𝚋𝚎𝚕𝚘𝚗𝚐𝚜 𝚝𝚘﹞ Anguilla') }  switch(is) { case '.🇦🇶': reply('⌯ ﹝𝚝𝚑𝚒𝚜 𝚏𝚕𝚊𝚐 𝚋𝚎𝚕𝚘𝚗𝚐𝚜 𝚝𝚘﹞ Antarctica') }  switch(is) { case '.🇦🇬': reply('⌯ ﹝𝚝𝚑𝚒𝚜 𝚏𝚕𝚊𝚐 𝚋𝚎𝚕𝚘𝚗𝚐𝚜 𝚝𝚘﹞ Antigua and Barbuda') } switch(is) { case '.🇦🇷': reply('⌯ ﹝𝚝𝚑𝚒𝚜 𝚏𝚕𝚊𝚐 𝚋𝚎𝚕𝚘𝚗𝚐𝚜 𝚝𝚘﹞ Argentina') } switch(is) { case '.🇦🇲': reply('⌯ ﹝𝚝𝚑𝚒𝚜 𝚏𝚕𝚊𝚐 𝚋𝚎𝚕𝚘𝚗𝚐𝚜 𝚝𝚘﹞ Armenia') } switch(is) { case '.🇦🇼': reply('⌯ ﹝𝚝𝚑𝚒𝚜 𝚏𝚕𝚊𝚐 𝚋𝚎𝚕𝚘𝚗𝚐𝚜 𝚝𝚘﹞ Aruba') } switch(is) { case '.🇦🇺': reply('⌯ ﹝𝚝𝚑𝚒𝚜 𝚏𝚕𝚊𝚐 𝚋𝚎𝚕𝚘𝚗𝚐𝚜 𝚝𝚘﹞ Australia') } switch(is) { case '.🇦🇹': reply('⌯ ﹝𝚝𝚑𝚒𝚜 𝚏𝚕𝚊𝚐 𝚋𝚎𝚕𝚘𝚗𝚐𝚜 𝚝𝚘﹞ Austria') } switch(is) { case '.🇦🇿': reply('⌯ ﹝𝚝𝚑𝚒𝚜 𝚏𝚕𝚊𝚐 𝚋𝚎𝚕𝚘𝚗𝚐𝚜 𝚝𝚘﹞ Azerbaijan') } switch(is) { case '.🇧🇸': reply('⌯ ﹝𝚝𝚑𝚒𝚜 𝚏𝚕𝚊𝚐 𝚋𝚎𝚕𝚘𝚗𝚐𝚜 𝚝𝚘﹞ Bahamas') } switch(is) { case '.🇧🇭': reply('⌯ ﹝𝚝𝚑𝚒𝚜 𝚏𝚕𝚊𝚐 𝚋𝚎𝚕𝚘𝚗𝚐𝚜 𝚝𝚘﹞ 🇧🇭') } switch(is) { case '.🇧🇩': reply('⌯ ﹝𝚝𝚑𝚒𝚜 𝚏𝚕𝚊𝚐 𝚋𝚎𝚕𝚘𝚗𝚐𝚜 𝚝𝚘﹞ Bangladesh') } switch(is) { case '.🇧🇧': reply('⌯ ﹝𝚝𝚑𝚒𝚜 𝚏𝚕𝚊𝚐 𝚋𝚎𝚕𝚘𝚗𝚐𝚜 𝚝𝚘﹞ Barbados') } switch(is) { case '.🇧🇾': reply('⌯ ﹝𝚝𝚑𝚒𝚜 𝚏𝚕𝚊𝚐 𝚋𝚎𝚕𝚘𝚗𝚐𝚜 𝚝𝚘﹞ Belarus') } switch(is) { case '.🇧🇪': reply('⌯ ﹝𝚝𝚑𝚒𝚜 𝚏𝚕𝚊𝚐 𝚋𝚎𝚕𝚘𝚗𝚐𝚜 𝚝𝚘﹞ Belgium') } switch(is) { case '.🇧🇿': reply('⌯ ﹝𝚝𝚑𝚒𝚜 𝚏𝚕𝚊𝚐 𝚋𝚎𝚕𝚘𝚗𝚐𝚜 𝚝𝚘﹞ Belize') } switch(is) { case '.🇧🇯': reply('⌯ ﹝𝚝𝚑𝚒𝚜 𝚏𝚕𝚊𝚐 𝚋𝚎𝚕𝚘𝚗𝚐𝚜 𝚝𝚘﹞ Benin') } switch(is) { case '.🇧🇲': reply('⌯ ﹝𝚝𝚑𝚒𝚜 𝚏𝚕𝚊𝚐 𝚋𝚎𝚕𝚘𝚗𝚐𝚜 𝚝𝚘﹞ Bermuda') } switch(is) { case '.🇧🇹': reply('⌯ ﹝𝚝𝚑𝚒𝚜 𝚏𝚕𝚊𝚐 𝚋𝚎𝚕𝚘𝚗𝚐𝚜 𝚝𝚘﹞ Bhutan') } switch(is) { case '.🇧🇴': reply('⌯ ﹝𝚝𝚑𝚒𝚜 𝚏𝚕𝚊𝚐 𝚋𝚎𝚕𝚘𝚗𝚐𝚜 𝚝𝚘﹞ Bolivia') } switch(is) { case '.🇧🇦': reply('⌯ ﹝𝚝𝚑𝚒𝚜 𝚏𝚕𝚊𝚐 𝚋𝚎𝚕𝚘𝚗𝚐𝚜 𝚝𝚘﹞ Bosnia and Herzegovina') } switch(is) { case '.🇧🇼': reply('⌯ ﹝𝚝𝚑𝚒𝚜 𝚏𝚕𝚊𝚐 𝚋𝚎𝚕𝚘𝚗𝚐𝚜 𝚝𝚘﹞ Botswana') } switch(is) { case '.🇧🇻': reply('⌯ ﹝𝚝𝚑𝚒𝚜 𝚏𝚕𝚊𝚐 𝚋𝚎𝚕𝚘𝚗𝚐𝚜 𝚝𝚘﹞ Bouvet Island') } switch(is) { case '.🇧🇷': reply('⌯ ﹝𝚝𝚑𝚒𝚜 𝚏𝚕𝚊𝚐 𝚋𝚎𝚕𝚘𝚗𝚐𝚜 𝚝𝚘﹞ Brazil') } switch(is) { case '.🇮🇴': reply('⌯ ﹝𝚝𝚑𝚒𝚜 𝚏𝚕𝚊𝚐 𝚋𝚎𝚕𝚘𝚗𝚐𝚜 𝚝𝚘﹞ British Indian Ocean Territory') } switch(is) { case '.🇧🇳': reply('⌯ ﹝𝚝𝚑𝚒𝚜 𝚏𝚕𝚊𝚐 𝚋𝚎𝚕𝚘𝚗𝚐𝚜 𝚝𝚘﹞ Brunei') } switch(is) { case '.🇧🇬': reply('⌯ ﹝𝚝𝚑𝚒𝚜 𝚏𝚕𝚊𝚐 𝚋𝚎𝚕𝚘𝚗𝚐𝚜 𝚝𝚘﹞ Bulgaria') } switch(is) { case '.🇧🇫': reply('⌯ ﹝𝚝𝚑𝚒𝚜 𝚏𝚕𝚊𝚐 𝚋𝚎𝚕𝚘𝚗𝚐𝚜 𝚝𝚘﹞ Burkina Faso') } switch(is) { case '.🇧🇮': reply('⌯ ﹝𝚝𝚑𝚒𝚜 𝚏𝚕𝚊𝚐 𝚋𝚎𝚕𝚘𝚗𝚐𝚜 𝚝𝚘﹞ Burundi') } switch(is) { case '.🇰🇭': reply('⌯ ﹝𝚝𝚑𝚒𝚜 𝚏𝚕𝚊𝚐 𝚋𝚎𝚕𝚘𝚗𝚐𝚜 𝚝𝚘﹞ Cambodia') } switch(is) { case '.🇨🇲': reply('⌯ ﹝𝚝𝚑𝚒𝚜 𝚏𝚕𝚊𝚐 𝚋𝚎𝚕𝚘𝚗𝚐𝚜 𝚝𝚘﹞ Cameroon') } switch(is) { case '.🇨🇦': reply('⌯ ﹝𝚝𝚑𝚒𝚜 𝚏𝚕𝚊𝚐 𝚋𝚎𝚕𝚘𝚗𝚐𝚜 𝚝𝚘﹞ Canada') } switch(is) { case '.🇨🇻': reply('⌯ ﹝𝚝𝚑𝚒𝚜 𝚏𝚕𝚊𝚐 𝚋𝚎𝚕𝚘𝚗𝚐𝚜 𝚝𝚘﹞ Cape Verde') } switch(is) { case '.🇧🇶 ': reply('⌯ ﹝𝚝𝚑𝚒𝚜 𝚏𝚕𝚊𝚐 𝚋𝚎𝚕𝚘𝚗𝚐𝚜 𝚝𝚘﹞ Caribbean Netherlands') } switch(is) { case '.🇰🇾': reply('⌯ ﹝𝚝𝚑𝚒𝚜 𝚏𝚕𝚊𝚐 𝚋𝚎𝚕𝚘𝚗𝚐𝚜 𝚝𝚘﹞ Cayman Islands') }switch(is) { case '.🇨🇫': reply('⌯ ﹝𝚝𝚑𝚒𝚜 𝚏𝚕𝚊𝚐 𝚋𝚎𝚕𝚘𝚗𝚐𝚜 𝚝𝚘﹞ Central African Republic') } switch(is) { case '.🇹🇩': reply('⌯ ﹝𝚝𝚑𝚒𝚜 𝚏𝚕𝚊𝚐 𝚋𝚎𝚕𝚘𝚗𝚐𝚜 𝚝𝚘﹞ Chad') } switch(is) { case '.🇨🇱': reply('⌯ ﹝𝚝𝚑𝚒𝚜 𝚏𝚕𝚊𝚐 𝚋𝚎𝚕𝚘𝚗𝚐𝚜 𝚝𝚘﹞ Chile') } switch(is) { case '.🇨🇳': reply('⌯ ﹝𝚝𝚑𝚒𝚜 𝚏𝚕𝚊𝚐 𝚋𝚎𝚕𝚘𝚗𝚐𝚜 𝚝𝚘﹞ China') } switch(is) { case '.🇨🇽': reply('⌯ ﹝𝚝𝚑𝚒𝚜 𝚏𝚕𝚊𝚐 𝚋𝚎𝚕𝚘𝚗𝚐𝚜 𝚝𝚘﹞ Christmas Island') } switch(is) { case '.🇨🇨': reply('⌯ ﹝𝚝𝚑𝚒𝚜 𝚏𝚕𝚊𝚐 𝚋𝚎𝚕𝚘𝚗𝚐𝚜 𝚝𝚘﹞ Cocos (Keeling) Islands') } switch(is) { case '.🇨🇴': reply('⌯ ﹝𝚝𝚑𝚒𝚜 𝚏𝚕𝚊𝚐 𝚋𝚎𝚕𝚘𝚗𝚐𝚜 𝚝𝚘﹞ Colombia') } switch(is) { case '.🇰🇲': reply('⌯ ﹝𝚝𝚑𝚒𝚜 𝚏𝚕𝚊𝚐 𝚋𝚎𝚕𝚘𝚗𝚐𝚜 𝚝𝚘﹞ Comoros') } switch(is) { case '.🇨🇬': reply('⌯ ﹝𝚝𝚑𝚒𝚜 𝚏𝚕𝚊𝚐 𝚋𝚎𝚕𝚘𝚗𝚐𝚜 𝚝𝚘﹞ Republic of the Congo') } switch(is) { case '.🇨🇩': reply('⌯ ﹝𝚝𝚑𝚒𝚜 𝚏𝚕𝚊𝚐 𝚋𝚎𝚕𝚘𝚗𝚐𝚜 𝚝𝚘﹞ DR Congo') } switch(is) { case '.🇨🇰': reply('⌯ ﹝𝚝𝚑𝚒𝚜 𝚏𝚕𝚊𝚐 𝚋𝚎𝚕𝚘𝚗𝚐𝚜 𝚝𝚘﹞ Cook Islands') } switch(is) { case '.🇨🇷': reply('⌯ ﹝𝚝𝚑𝚒𝚜 𝚏𝚕𝚊𝚐 𝚋𝚎𝚕𝚘𝚗𝚐𝚜 𝚝𝚘﹞ Costa Rica') } switch(is) { case '.🇨🇮': reply('⌯ ﹝𝚝𝚑𝚒𝚜 𝚏𝚕𝚊𝚐 𝚋𝚎𝚕𝚘𝚗𝚐𝚜 𝚝𝚘﹞ Côte dIvoire Ivory Coast') } switch(is) { case '.🇭🇷': reply('⌯ ﹝𝚝𝚑𝚒𝚜 𝚏𝚕𝚊𝚐 𝚋𝚎𝚕𝚘𝚗𝚐𝚜 𝚝𝚘﹞ Croatia') } switch(is) { case '.🇨🇺': reply('⌯ ﹝𝚝𝚑𝚒𝚜 𝚏𝚕𝚊𝚐 𝚋𝚎𝚕𝚘𝚗𝚐𝚜 𝚝𝚘﹞ Cuba') } switch(is) { case '.🇨🇼': reply('⌯ ﹝𝚝𝚑𝚒𝚜 𝚏𝚕𝚊𝚐 𝚋𝚎𝚕𝚘𝚗𝚐𝚜 𝚝𝚘﹞ Curaçao') } switch(is) { case '.🇨🇾': reply('⌯ ﹝𝚝𝚑𝚒𝚜 𝚏𝚕𝚊𝚐 𝚋𝚎𝚕𝚘𝚗𝚐𝚜 𝚝𝚘﹞ Cyprus') } switch(is) { case '.🇨🇿': reply('⌯ ﹝𝚝𝚑𝚒𝚜 𝚏𝚕𝚊𝚐 𝚋𝚎𝚕𝚘𝚗𝚐𝚜 𝚝𝚘﹞ Czechia') } switch(is) { case '.🇩🇰': reply('⌯ ﹝𝚝𝚑𝚒𝚜 𝚏𝚕𝚊𝚐 𝚋𝚎𝚕𝚘𝚗𝚐𝚜 𝚝𝚘﹞ Denmark') } switch(is) { case '.🇩🇯': reply('⌯ ﹝𝚝𝚑𝚒𝚜 𝚏𝚕𝚊𝚐 𝚋𝚎𝚕𝚘𝚗𝚐𝚜 𝚝𝚘﹞ Djibouti') } switch(is) { case '.🇩🇲': reply('⌯ ﹝𝚝𝚑𝚒𝚜 𝚏𝚕𝚊𝚐 𝚋𝚎𝚕𝚘𝚗𝚐𝚜 𝚝𝚘﹞ Dominica') } switch(is) { case '.🇩🇴': reply('⌯ ﹝𝚝𝚑𝚒𝚜 𝚏𝚕𝚊𝚐 𝚋𝚎𝚕𝚘𝚗𝚐𝚜 𝚝𝚘﹞ Dominican Republic') } switch(is) { case '.🇪🇨': reply('⌯ ﹝𝚝𝚑𝚒𝚜 𝚏𝚕𝚊𝚐 𝚋𝚎𝚕𝚘𝚗𝚐𝚜 𝚝𝚘﹞ Ecuador') } switch(is) { case '.🇪🇬 ': reply('⌯ ﹝𝚝𝚑𝚒𝚜 𝚏𝚕𝚊𝚐 𝚋𝚎𝚕𝚘𝚗𝚐𝚜 𝚝𝚘﹞ Egypt') } switch(is) { case '.🏴󠁧󠁢󠁥󠁮󠁧󠁿 ': reply('⌯ ﹝𝚝𝚑𝚒𝚜 𝚏𝚕𝚊𝚐 𝚋𝚎𝚕𝚘𝚗𝚐𝚜 𝚝𝚘﹞ England') } switch(is) { case '.🇬🇶': reply('⌯ ﹝𝚝𝚑𝚒𝚜 𝚏𝚕𝚊𝚐 𝚋𝚎𝚕𝚘𝚗𝚐𝚜 𝚝𝚘﹞ Equatorial Guinea') } switch(is) { case '.🇪🇷': reply('⌯ ﹝𝚝𝚑𝚒𝚜 𝚏𝚕𝚊𝚐 𝚋𝚎𝚕𝚘𝚗𝚐𝚜 𝚝𝚘﹞ Eritrea') } switch(is) { case '.🇪🇪': reply('⌯ ﹝𝚝𝚑𝚒𝚜 𝚏𝚕𝚊𝚐 𝚋𝚎𝚕𝚘𝚗𝚐𝚜 𝚝𝚘﹞ Estonia') } switch(is) { case '.🇸🇿': reply('⌯ ﹝𝚝𝚑𝚒𝚜 𝚏𝚕𝚊𝚐 𝚋𝚎𝚕𝚘𝚗𝚐𝚜 𝚝𝚘﹞ Eswatini Swaziland') } switch(is) { case '.🇪🇹': reply('⌯ ﹝𝚝𝚑𝚒𝚜 𝚏𝚕𝚊𝚐 𝚋𝚎𝚕𝚘𝚗𝚐𝚜 𝚝𝚘﹞ Ethiopia') } switch(is) { case '.🇫🇰 ': reply('⌯ ﹝𝚝𝚑𝚒𝚜 𝚏𝚕𝚊𝚐 𝚋𝚎𝚕𝚘𝚗𝚐𝚜 𝚝𝚘﹞ Falkland Islands') } switch(is) { case '.🇫🇴': reply('⌯ ﹝𝚝𝚑𝚒𝚜 𝚏𝚕𝚊𝚐 𝚋𝚎𝚕𝚘𝚗𝚐𝚜 𝚝𝚘﹞ Faroe Islands') } switch(is) { case '.🇫🇯 ': reply('⌯ ﹝𝚝𝚑𝚒𝚜 𝚏𝚕𝚊𝚐 𝚋𝚎𝚕𝚘𝚗𝚐𝚜 𝚝𝚘﹞ Fiji') } switch(is) { case '.🇫🇮': reply('⌯ ﹝𝚝𝚑𝚒𝚜 𝚏𝚕𝚊𝚐 𝚋𝚎𝚕𝚘𝚗𝚐𝚜 𝚝𝚘﹞ Finland') } switch(is) { case '.🇫🇷': reply('⌯ ﹝𝚝𝚑𝚒𝚜 𝚏𝚕𝚊𝚐 𝚋𝚎𝚕𝚘𝚗𝚐𝚜 𝚝𝚘﹞ France') } switch(is) { case '.🇬🇫': reply('⌯ ﹝𝚝𝚑𝚒𝚜 𝚏𝚕𝚊𝚐 𝚋𝚎𝚕𝚘𝚗𝚐𝚜 𝚝𝚘﹞ French Guiana') } switch(is) { case '.🇵🇫': reply('⌯ ﹝𝚝𝚑𝚒𝚜 𝚏𝚕𝚊𝚐 𝚋𝚎𝚕𝚘𝚗𝚐𝚜 𝚝𝚘﹞ French Polynesia') } switch(is) { case '.🇹🇫': reply('⌯ ﹝𝚝𝚑𝚒𝚜 𝚏𝚕𝚊𝚐 𝚋𝚎𝚕𝚘𝚗𝚐𝚜 𝚝𝚘﹞ French Southern and Antarctic Lands') } switch(is) { case '.🇬🇦': reply('⌯ ﹝𝚝𝚑𝚒𝚜 𝚏𝚕𝚊𝚐 𝚋𝚎𝚕𝚘𝚗𝚐𝚜 𝚝𝚘﹞ Gabon') } switch(is) { case '.🇬🇲': reply('⌯ ﹝𝚝𝚑𝚒𝚜 𝚏𝚕𝚊𝚐 𝚋𝚎𝚕𝚘𝚗𝚐𝚜 𝚝𝚘﹞ Gambia') } switch(is) { case '.🇬🇪': reply('⌯ ﹝𝚝𝚑𝚒𝚜 𝚏𝚕𝚊𝚐 𝚋𝚎𝚕𝚘𝚗𝚐𝚜 𝚝𝚘﹞ Georgia') } switch(is) { case '.🇩🇪': reply('⌯ ﹝𝚝𝚑𝚒𝚜 𝚏𝚕𝚊𝚐 𝚋𝚎𝚕𝚘𝚗𝚐𝚜 𝚝𝚘﹞ Germany') } switch(is) { case '.🇬🇭': reply('⌯ ﹝𝚝𝚑𝚒𝚜 𝚏𝚕𝚊𝚐 𝚋𝚎𝚕𝚘𝚗𝚐𝚜 𝚝𝚘﹞ Ghana') } switch(is) { case '.🇬🇮': reply('⌯ ﹝𝚝𝚑𝚒𝚜 𝚏𝚕𝚊𝚐 𝚋𝚎𝚕𝚘𝚗𝚐𝚜 𝚝𝚘﹞ Gibraltar') } switch(is) { case '.🇬🇷': reply('⌯ ﹝𝚝𝚑𝚒𝚜 𝚏𝚕𝚊𝚐 𝚋𝚎𝚕𝚘𝚗𝚐𝚜 𝚝𝚘﹞ Greece') } switch(is) { case '.🇬🇱': reply('⌯ ﹝𝚝𝚑𝚒𝚜 𝚏𝚕𝚊𝚐 𝚋𝚎𝚕𝚘𝚗𝚐𝚜 𝚝𝚘﹞ Greenland') } switch(is) { case '.🇬🇩': reply('⌯ ﹝𝚝𝚑𝚒𝚜 𝚏𝚕𝚊𝚐 𝚋𝚎𝚕𝚘𝚗𝚐𝚜 𝚝𝚘﹞ Grenada') } switch(is) { case '.🇬🇵': reply('⌯ ﹝𝚝𝚑𝚒𝚜 𝚏𝚕𝚊𝚐 𝚋𝚎𝚕𝚘𝚗𝚐𝚜 𝚝𝚘﹞ Guadeloupe') } switch(is) { case '.🇬🇺': reply('⌯ ﹝𝚝𝚑𝚒𝚜 𝚏𝚕𝚊𝚐 𝚋𝚎𝚕𝚘𝚗𝚐𝚜 𝚝𝚘﹞ Guam') } switch(is) { case '.🇬🇹': reply('⌯ ﹝𝚝𝚑𝚒𝚜 𝚏𝚕𝚊𝚐 𝚋𝚎𝚕𝚘𝚗𝚐𝚜 𝚝𝚘﹞ Guatemala') } switch(is) { case '.🇬🇬': reply('⌯ ﹝𝚝𝚑𝚒𝚜 𝚏𝚕𝚊𝚐 𝚋𝚎𝚕𝚘𝚗𝚐𝚜 𝚝𝚘﹞ Guernsey') } switch(is) { case '.🇬🇳': reply('⌯ ﹝𝚝𝚑𝚒𝚜 𝚏𝚕𝚊𝚐 𝚋𝚎𝚕𝚘𝚗𝚐𝚜 𝚝𝚘﹞ Guinea') } switch(is) { case '.🇬🇼': reply('⌯ ﹝𝚝𝚑𝚒𝚜 𝚏𝚕𝚊𝚐 𝚋𝚎𝚕𝚘𝚗𝚐𝚜 𝚝𝚘﹞ Guinea-Bissau') } switch(is) { case '.🇬🇾': reply('⌯ ﹝𝚝𝚑𝚒𝚜 𝚏𝚕𝚊𝚐 𝚋𝚎𝚕𝚘𝚗𝚐𝚜 𝚝𝚘﹞ Guyana') } switch(is) { case '.🇭🇹': reply('⌯ ﹝𝚝𝚑𝚒𝚜 𝚏𝚕𝚊𝚐 𝚋𝚎𝚕𝚘𝚗𝚐𝚜 𝚝𝚘﹞ Haiti') } switch(is) { case '.🇭🇲 ': reply('⌯ ﹝𝚝𝚑𝚒𝚜 𝚏𝚕𝚊𝚐 𝚋𝚎𝚕𝚘𝚗𝚐𝚜 𝚝𝚘﹞ Heard Island and McDonald Islands') } switch(is) { case '.🇭🇳': reply('⌯ ﹝𝚝𝚑𝚒𝚜 𝚏𝚕𝚊𝚐 𝚋𝚎𝚕𝚘𝚗𝚐𝚜 𝚝𝚘﹞ Honduras') } switch(is) { case '.🇭🇰': reply('⌯ ﹝𝚝𝚑𝚒𝚜 𝚏𝚕𝚊𝚐 𝚋𝚎𝚕𝚘𝚗𝚐𝚜 𝚝𝚘﹞ Hong Kong') } switch(is) { case '.🇭🇺': reply('⌯ ﹝𝚝𝚑𝚒𝚜 𝚏𝚕𝚊𝚐 𝚋𝚎𝚕𝚘𝚗𝚐𝚜 𝚝𝚘﹞ Hungary') } switch(is) { case '.🇮🇸': reply('⌯ ﹝𝚝𝚑𝚒𝚜 𝚏𝚕𝚊𝚐 𝚋𝚎𝚕𝚘𝚗𝚐𝚜 𝚝𝚘﹞ Iceland') } switch(is) { case '.🇮🇳': reply('⌯ ﹝𝚝𝚑𝚒𝚜 𝚏𝚕𝚊𝚐 𝚋𝚎𝚕𝚘𝚗𝚐𝚜 𝚝𝚘﹞ India') } switch(is) { case '.🇮🇩': reply('⌯ ﹝𝚝𝚑𝚒𝚜 𝚏𝚕𝚊𝚐 𝚋𝚎𝚕𝚘𝚗𝚐𝚜 𝚝𝚘﹞ Indonesia') } switch(is) { case '.🇮🇷': reply('⌯ ﹝𝚝𝚑𝚒𝚜 𝚏𝚕𝚊𝚐 𝚋𝚎𝚕𝚘𝚗𝚐𝚜 𝚝𝚘﹞ Iran') }switch(is) { case '.🇮🇶': reply('⌯ ﹝𝚝𝚑𝚒𝚜 𝚏𝚕𝚊𝚐 𝚋𝚎𝚕𝚘𝚗𝚐𝚜 𝚝𝚘﹞ Iraq') }switch(is) { case '.🇮🇪': reply('⌯ ﹝𝚝𝚑𝚒𝚜 𝚏𝚕𝚊𝚐 𝚋𝚎𝚕𝚘𝚗𝚐𝚜 𝚝𝚘﹞ Ireland') }switch(is) { case '.🇮🇲': reply('⌯ ﹝𝚝𝚑𝚒𝚜 𝚏𝚕𝚊𝚐 𝚋𝚎𝚕𝚘𝚗𝚐𝚜 𝚝𝚘﹞ Isle of Man') }switch(is) { case '.🇮🇱': reply('⌯ ﹝𝚝𝚑𝚒𝚜 𝚏𝚕𝚊𝚐 𝚋𝚎𝚕𝚘𝚗𝚐𝚜 𝚝𝚘﹞ Israel') }switch(is) { case '.🇮🇹': reply('⌯ ﹝𝚝𝚑𝚒𝚜 𝚏𝚕𝚊𝚐 𝚋𝚎𝚕𝚘𝚗𝚐𝚜 𝚝𝚘﹞ Italy') }switch(is) { case '.🇯🇲': reply('⌯ ﹝𝚝𝚑𝚒𝚜 𝚏𝚕𝚊𝚐 𝚋𝚎𝚕𝚘𝚗𝚐𝚜 𝚝𝚘﹞ Jamaica') }switch(is) { case '.🇯🇵': reply('⌯ ﹝𝚝𝚑𝚒𝚜 𝚏𝚕𝚊𝚐 𝚋𝚎𝚕𝚘𝚗𝚐𝚜 𝚝𝚘﹞ Japan') }switch(is) { case '.🇯🇪': reply('⌯ ﹝𝚝𝚑𝚒𝚜 𝚏𝚕𝚊𝚐 𝚋𝚎𝚕𝚘𝚗𝚐𝚜 𝚝𝚘﹞ Jersey') }switch(is) { case '.🇯🇴': reply('⌯ ﹝𝚝𝚑𝚒𝚜 𝚏𝚕𝚊𝚐 𝚋𝚎𝚕𝚘𝚗𝚐𝚜 𝚝𝚘﹞ Jordan') }switch(is) { case '.🇰🇿': reply('⌯ ﹝𝚝𝚑𝚒𝚜 𝚏𝚕𝚊𝚐 𝚋𝚎𝚕𝚘𝚗𝚐𝚜 𝚝𝚘﹞ Kazakhstan') }switch(is) { case '.🇰🇪': reply('⌯ ﹝𝚝𝚑𝚒𝚜 𝚏𝚕𝚊𝚐 𝚋𝚎𝚕𝚘𝚗𝚐𝚜 𝚝𝚘﹞ Kenya') }switch(is) { case '.🇰🇮': reply('⌯ ﹝𝚝𝚑𝚒𝚜 𝚏𝚕𝚊𝚐 𝚋𝚎𝚕𝚘𝚗𝚐𝚜 𝚝𝚘﹞ Kiribati') }switch(is) { case '.🇰🇵': reply('⌯ ﹝𝚝𝚑𝚒𝚜 𝚏𝚕𝚊𝚐 𝚋𝚎𝚕𝚘𝚗𝚐𝚜 𝚝𝚘﹞ North Korea') }switch(is) { case '.🇰🇷': reply('⌯ ﹝𝚝𝚑𝚒𝚜 𝚏𝚕𝚊𝚐 𝚋𝚎𝚕𝚘𝚗𝚐𝚜 𝚝𝚘﹞ South Korea') }switch(is) { case '.🇽🇰': reply('⌯ ﹝𝚝𝚑𝚒𝚜 𝚏𝚕𝚊𝚐 𝚋𝚎𝚕𝚘𝚗𝚐𝚜 𝚝𝚘﹞ Kosovo') }switch(is) { case '.🇰🇼': reply('⌯ ﹝𝚝𝚑𝚒𝚜 𝚏𝚕𝚊𝚐 𝚋𝚎𝚕𝚘𝚗𝚐𝚜 𝚝𝚘﹞ Kuwait') }switch(is) { case '.🇰🇬': reply('⌯ ﹝𝚝𝚑𝚒𝚜 𝚏𝚕𝚊𝚐 𝚋𝚎𝚕𝚘𝚗𝚐𝚜 𝚝𝚘﹞ Kyrgyzstan') }switch(is) { case '.🇱🇦': reply('⌯ ﹝𝚝𝚑𝚒𝚜 𝚏𝚕𝚊𝚐 𝚋𝚎𝚕𝚘𝚗𝚐𝚜 𝚝𝚘﹞ Laos') }switch(is) { case '.🇱🇻': reply('⌯ ﹝𝚝𝚑𝚒𝚜 𝚏𝚕𝚊𝚐 𝚋𝚎𝚕𝚘𝚗𝚐𝚜 𝚝𝚘﹞ Latvia') }switch(is) { case '.🇱🇧': reply('⌯ ﹝𝚝𝚑𝚒𝚜 𝚏𝚕𝚊𝚐 𝚋𝚎𝚕𝚘𝚗𝚐𝚜 𝚝𝚘﹞ Lebanon') }switch(is) { case '.🇱🇸': reply('⌯ ﹝𝚝𝚑𝚒𝚜 𝚏𝚕𝚊𝚐 𝚋𝚎𝚕𝚘𝚗𝚐𝚜 𝚝𝚘﹞ Lesotho') }switch(is) { case '.🇱🇷': reply('⌯ ﹝𝚝𝚑𝚒𝚜 𝚏𝚕𝚊𝚐 𝚋𝚎𝚕𝚘𝚗𝚐𝚜 𝚝𝚘﹞ Liberia') }switch(is) { case '.🇱🇾': reply('⌯ ﹝𝚝𝚑𝚒𝚜 𝚏𝚕𝚊𝚐 𝚋𝚎𝚕𝚘𝚗𝚐𝚜 𝚝𝚘﹞ Libya') }switch(is) { case '.🇱🇮': reply('⌯ ﹝𝚝𝚑𝚒𝚜 𝚏𝚕𝚊𝚐 𝚋𝚎𝚕𝚘𝚗𝚐𝚜 𝚝𝚘﹞ Liechtenstein') }switch(is) { case '.🇱🇹': reply('⌯ ﹝𝚝𝚑𝚒𝚜 𝚏𝚕𝚊𝚐 𝚋𝚎𝚕𝚘𝚗𝚐𝚜 𝚝𝚘﹞ Lithuania') }switch(is) { case '.🇱🇺': reply('⌯ ﹝𝚝𝚑𝚒𝚜 𝚏𝚕𝚊𝚐 𝚋𝚎𝚕𝚘𝚗𝚐𝚜 𝚝𝚘﹞ Luxembourg') } switch(is) { case '.🇲🇴': reply('⌯ ﹝𝚝𝚑𝚒𝚜 𝚏𝚕𝚊𝚐 𝚋𝚎𝚕𝚘𝚗𝚐𝚜 𝚝𝚘﹞ Macau') } switch(is) { case '.🇲🇬': reply('⌯ ﹝𝚝𝚑𝚒𝚜 𝚏𝚕𝚊𝚐 𝚋𝚎𝚕𝚘𝚗𝚐𝚜 𝚝𝚘﹞ Madagascar') }switch(is) { case '.🇲🇼': reply('⌯ ﹝𝚝𝚑𝚒𝚜 𝚏𝚕𝚊𝚐 𝚋𝚎𝚕𝚘𝚗𝚐𝚜 𝚝𝚘﹞ Malawi') }switch(is) { case '.🇲🇾': reply('⌯ ﹝𝚝𝚑𝚒𝚜 𝚏𝚕𝚊𝚐 𝚋𝚎𝚕𝚘𝚗𝚐𝚜 𝚝𝚘﹞ Malaysia') }switch(is) { case '.🇲🇻': reply('⌯ ﹝𝚝𝚑𝚒𝚜 𝚏𝚕𝚊𝚐 𝚋𝚎𝚕𝚘𝚗𝚐𝚜 𝚝𝚘﹞ Maldives') }switch(is) { case '.🇲🇱': reply('⌯ ﹝𝚝𝚑𝚒𝚜 𝚏𝚕𝚊𝚐 𝚋𝚎𝚕𝚘𝚗𝚐𝚜 𝚝𝚘﹞ Mali') }switch(is) { case '.🇲🇹': reply('⌯ ﹝𝚝𝚑𝚒𝚜 𝚏𝚕𝚊𝚐 𝚋𝚎𝚕𝚘𝚗𝚐𝚜 𝚝𝚘﹞ Malta') }switch(is) { case '.🇲🇭': reply('⌯ ﹝𝚝𝚑𝚒𝚜 𝚏𝚕𝚊𝚐 𝚋𝚎𝚕𝚘𝚗𝚐𝚜 𝚝𝚘﹞ Marshall Islands') }switch(is) { case '.🇲🇶 ': reply('⌯ ﹝𝚝𝚑𝚒𝚜 𝚏𝚕𝚊𝚐 𝚋𝚎𝚕𝚘𝚗𝚐𝚜 𝚝𝚘﹞ Martinique') }switch(is) { case '.🇲🇷': reply('⌯ ﹝𝚝𝚑𝚒𝚜 𝚏𝚕𝚊𝚐 𝚋𝚎𝚕𝚘𝚗𝚐𝚜 𝚝𝚘﹞ Mauritania') }switch(is) { case '.🇲🇺 ': reply('⌯ ﹝𝚝𝚑𝚒𝚜 𝚏𝚕𝚊𝚐 𝚋𝚎𝚕𝚘𝚗𝚐𝚜 𝚝𝚘﹞ Mauritius') }switch(is) { case '.🇾🇹': reply('⌯ ﹝𝚝𝚑𝚒𝚜 𝚏𝚕𝚊𝚐 𝚋𝚎𝚕𝚘𝚗𝚐𝚜 𝚝𝚘﹞ Mayotte') }switch(is) { case '.🇲🇽': reply('⌯ ﹝𝚝𝚑𝚒𝚜 𝚏𝚕𝚊𝚐 𝚋𝚎𝚕𝚘𝚗𝚐𝚜 𝚝𝚘﹞ Mexico') }switch(is) { case '.🇫🇲': reply('⌯ ﹝𝚝𝚑𝚒𝚜 𝚏𝚕𝚊𝚐 𝚋𝚎𝚕𝚘𝚗𝚐𝚜 𝚝𝚘﹞ Micronesia') }switch(is) { case '.🇲🇩': reply('⌯ ﹝𝚝𝚑𝚒𝚜 𝚏𝚕𝚊𝚐 𝚋𝚎𝚕𝚘𝚗𝚐𝚜 𝚝𝚘﹞ Moldova') }switch(is) { case '.🇲🇨': reply('⌯ ﹝𝚝𝚑𝚒𝚜 𝚏𝚕𝚊𝚐 𝚋𝚎𝚕𝚘𝚗𝚐𝚜 𝚝𝚘﹞ Monaco') } switch(is) { case '.🇲🇳 ': reply('⌯ ﹝𝚝𝚑𝚒𝚜 𝚏𝚕𝚊𝚐 𝚋𝚎𝚕𝚘𝚗𝚐𝚜 𝚝𝚘﹞ Mongolia') }switch(is) { case '.🇲🇪': reply('⌯ ﹝𝚝𝚑𝚒𝚜 𝚏𝚕𝚊𝚐 𝚋𝚎𝚕𝚘𝚗𝚐𝚜 𝚝𝚘﹞ Montenegro') }switch(is) { case '.🇲🇸': reply('⌯ ﹝𝚝𝚑𝚒𝚜 𝚏𝚕𝚊𝚐 𝚋𝚎𝚕𝚘𝚗𝚐𝚜 𝚝𝚘﹞ Montserrat') }switch(is) { case '.🇲🇦': reply('⌯ ﹝𝚝𝚑𝚒𝚜 𝚏𝚕𝚊𝚐 𝚋𝚎𝚕𝚘𝚗𝚐𝚜 𝚝𝚘﹞ Morocco') }switch(is) { case '.🇲🇿': reply('⌯ ﹝𝚝𝚑𝚒𝚜 𝚏𝚕𝚊𝚐 𝚋𝚎𝚕𝚘𝚗𝚐𝚜 𝚝𝚘﹞ Mozambique') }switch(is) { case '.🇲🇲': reply('⌯ ﹝𝚝𝚑𝚒𝚜 𝚏𝚕𝚊𝚐 𝚋𝚎𝚕𝚘𝚗𝚐𝚜 𝚝𝚘﹞ Myanmar') }switch(is) { case '.🇳🇦': reply('⌯ ﹝𝚝𝚑𝚒𝚜 𝚏𝚕𝚊𝚐 𝚋𝚎𝚕𝚘𝚗𝚐𝚜 𝚝𝚘﹞ Namibia') }switch(is) { case '.🇳🇷': reply('⌯ ﹝𝚝𝚑𝚒𝚜 𝚏𝚕𝚊𝚐 𝚋𝚎𝚕𝚘𝚗𝚐𝚜 𝚝𝚘﹞ Nauru') }switch(is) { case '.🇳🇵': reply('⌯ ﹝𝚝𝚑𝚒𝚜 𝚏𝚕𝚊𝚐 𝚋𝚎𝚕𝚘𝚗𝚐𝚜 𝚝𝚘﹞ Nepal') }switch(is) { case '.🇳🇱': reply('⌯ ﹝𝚝𝚑𝚒𝚜 𝚏𝚕𝚊𝚐 𝚋𝚎𝚕𝚘𝚗𝚐𝚜 𝚝𝚘﹞ Netherlands') }switch(is) { case '.🇳🇨': reply('⌯ ﹝𝚝𝚑𝚒𝚜 𝚏𝚕𝚊𝚐 𝚋𝚎𝚕𝚘𝚗𝚐𝚜 𝚝𝚘﹞ New Caledonia') }switch(is) { case '.🇳🇿': reply('⌯ ﹝𝚝𝚑𝚒𝚜 𝚏𝚕𝚊𝚐 𝚋𝚎𝚕𝚘𝚗𝚐𝚜 𝚝𝚘﹞ New Zealand') }switch(is) { case '.🇳🇮': reply('⌯ ﹝𝚝𝚑𝚒𝚜 𝚏𝚕𝚊𝚐 𝚋𝚎𝚕𝚘𝚗𝚐𝚜 𝚝𝚘﹞ Nicaragua') }switch(is) { case '.🇳🇪': reply('⌯ ﹝𝚝𝚑𝚒𝚜 𝚏𝚕𝚊𝚐 𝚋𝚎𝚕𝚘𝚗𝚐𝚜 𝚝𝚘﹞ Niger') }switch(is) { case '.🇳🇬': reply('⌯ ﹝𝚝𝚑𝚒𝚜 𝚏𝚕𝚊𝚐 𝚋𝚎𝚕𝚘𝚗𝚐𝚜 𝚝𝚘﹞ Nigeria') }switch(is) { case '.🇳🇺': reply('⌯ ﹝𝚝𝚑𝚒𝚜 𝚏𝚕𝚊𝚐 𝚋𝚎𝚕𝚘𝚗𝚐𝚜 𝚝𝚘﹞ Niue') }switch(is) { case '.🇳🇫': reply('⌯ ﹝𝚝𝚑𝚒𝚜 𝚏𝚕𝚊𝚐 𝚋𝚎𝚕𝚘𝚗𝚐𝚜 𝚝𝚘﹞ Norfolk Island') }switch(is) { case '.🇲🇰 ': reply('⌯ ﹝𝚝𝚑𝚒𝚜 𝚏𝚕𝚊𝚐 𝚋𝚎𝚕𝚘𝚗𝚐𝚜 𝚝𝚘﹞ North Macedonia') }switch(is) { case '.🇲🇵': reply('⌯ ﹝𝚝𝚑𝚒𝚜 𝚏𝚕𝚊𝚐 𝚋𝚎𝚕𝚘𝚗𝚐𝚜 𝚝𝚘﹞ Northern Mariana Islands') }switch(is) { case '.🇳🇴': reply('⌯ ﹝𝚝𝚑𝚒𝚜 𝚏𝚕𝚊𝚐 𝚋𝚎𝚕𝚘𝚗𝚐𝚜 𝚝𝚘﹞ Norway') }switch(is) { case '.🇴🇲 ': reply('⌯ ﹝𝚝𝚑𝚒𝚜 𝚏𝚕𝚊𝚐 𝚋𝚎𝚕𝚘𝚗𝚐𝚜 𝚝𝚘﹞ Oman') }switch(is) { case '.🇵🇰': reply('⌯ ﹝𝚝𝚑𝚒𝚜 𝚏𝚕𝚊𝚐 𝚋𝚎𝚕𝚘𝚗𝚐𝚜 𝚝𝚘﹞ Pakistan') }switch(is) { case '.🇵🇼': reply('⌯ ﹝𝚝𝚑𝚒𝚜 𝚏𝚕𝚊𝚐 𝚋𝚎𝚕𝚘𝚗𝚐𝚜 𝚝𝚘﹞ Palau') }switch(is) { case '.🇵🇸': reply('⌯ ﹝𝚝𝚑𝚒𝚜 𝚏𝚕𝚊𝚐 𝚋𝚎𝚕𝚘𝚗𝚐𝚜 𝚝𝚘﹞ Palestine') }switch(is) { case '.🇵🇦': reply('⌯ ﹝𝚝𝚑𝚒𝚜 𝚏𝚕𝚊𝚐 𝚋𝚎𝚕𝚘𝚗𝚐𝚜 𝚝𝚘﹞ Panama') }switch(is) { case '.🇵🇬': reply('⌯ ﹝𝚝𝚑𝚒𝚜 𝚏𝚕𝚊𝚐 𝚋𝚎𝚕𝚘𝚗𝚐𝚜 𝚝𝚘﹞ Papua New Guinea') }switch(is) { case '.🇵🇾': reply('⌯ ﹝𝚝𝚑𝚒𝚜 𝚏𝚕𝚊𝚐 𝚋𝚎𝚕𝚘𝚗𝚐𝚜 𝚝𝚘﹞ Paraguay') }switch(is) { case '.🇵🇪': reply('⌯ ﹝𝚝𝚑𝚒𝚜 𝚏𝚕𝚊𝚐 𝚋𝚎𝚕𝚘𝚗𝚐𝚜 𝚝𝚘﹞ Peru') }switch(is) { case '.🇵🇭': reply('⌯ ﹝𝚝𝚑𝚒𝚜 𝚏𝚕𝚊𝚐 𝚋𝚎𝚕𝚘𝚗𝚐𝚜 𝚝𝚘﹞ Philippines') }switch(is) { case '.🇵🇳': reply('⌯ ﹝𝚝𝚑𝚒𝚜 𝚏𝚕𝚊𝚐 𝚋𝚎𝚕𝚘𝚗𝚐𝚜 𝚝𝚘﹞ Pitcairn Islands') }switch(is) { case '.🇵🇱': reply('⌯ ﹝𝚝𝚑𝚒𝚜 𝚏𝚕𝚊𝚐 𝚋𝚎𝚕𝚘𝚗𝚐𝚜 𝚝𝚘﹞ Poland') }switch(is) { case '.🇵🇹': reply('⌯ ﹝𝚝𝚑𝚒𝚜 𝚏𝚕𝚊𝚐 𝚋𝚎𝚕𝚘𝚗𝚐𝚜 𝚝𝚘﹞ Portugal') }switch(is) { case '.🇵🇷': reply('⌯ ﹝𝚝𝚑𝚒𝚜 𝚏𝚕𝚊𝚐 𝚋𝚎𝚕𝚘𝚗𝚐𝚜 𝚝𝚘﹞ Puerto Rico') }switch(is) { case '.🇶🇦': reply('⌯ ﹝𝚝𝚑𝚒𝚜 𝚏𝚕𝚊𝚐 𝚋𝚎𝚕𝚘𝚗𝚐𝚜 𝚝𝚘﹞ Qatar') }switch(is) { case '.🇷🇪': reply('⌯ ﹝𝚝𝚑𝚒𝚜 𝚏𝚕𝚊𝚐 𝚋𝚎𝚕𝚘𝚗𝚐𝚜 𝚝𝚘﹞ Réunion') }switch(is) { case '.🇷🇴': reply('⌯ ﹝𝚝𝚑𝚒𝚜 𝚏𝚕𝚊𝚐 𝚋𝚎𝚕𝚘𝚗𝚐𝚜 𝚝𝚘﹞ Romania') }switch(is) { case '.🇷🇺': reply('⌯ ﹝𝚝𝚑𝚒𝚜 𝚏𝚕𝚊𝚐 𝚋𝚎𝚕𝚘𝚗𝚐𝚜 𝚝𝚘﹞ Russia') }switch(is) { case '.🇷🇼': reply('⌯ ﹝𝚝𝚑𝚒𝚜 𝚏𝚕𝚊𝚐 𝚋𝚎𝚕𝚘𝚗𝚐𝚜 𝚝𝚘﹞ Rwanda') }switch(is) { case '.🇧🇱': reply('⌯ ﹝𝚝𝚑𝚒𝚜 𝚏𝚕𝚊𝚐 𝚋𝚎𝚕𝚘𝚗𝚐𝚜 𝚝𝚘﹞ Saint Barthélemy') }switch(is) { case '.🇸🇭': reply('⌯ ﹝𝚝𝚑𝚒𝚜 𝚏𝚕𝚊𝚐 𝚋𝚎𝚕𝚘𝚗𝚐𝚜 𝚝𝚘﹞ Saint Helena, Ascension and Tristan da Cunha') }switch(is) { case '.🇰🇳': reply('⌯ ﹝𝚝𝚑𝚒𝚜 𝚏𝚕𝚊𝚐 𝚋𝚎𝚕𝚘𝚗𝚐𝚜 𝚝𝚘﹞ Saint Kitts and Nevis') }switch(is) { case '.🇱🇨': reply('⌯ ﹝𝚝𝚑𝚒𝚜 𝚏𝚕𝚊𝚐 𝚋𝚎𝚕𝚘𝚗𝚐𝚜 𝚝𝚘﹞ Saint Lucia') }switch(is) { case '.🇲🇫': reply('⌯ ﹝𝚝𝚑𝚒𝚜 𝚏𝚕𝚊𝚐 𝚋𝚎𝚕𝚘𝚗𝚐𝚜 𝚝𝚘﹞ Saint Martin') }switch(is) { case '.🇵🇲': reply('⌯ ﹝𝚝𝚑𝚒𝚜 𝚏𝚕𝚊𝚐 𝚋𝚎𝚕𝚘𝚗𝚐𝚜 𝚝𝚘﹞ Saint Pierre and Miquelon') }switch(is) { case '.🇻🇨': reply('⌯ ﹝𝚝𝚑𝚒𝚜 𝚏𝚕𝚊𝚐 𝚋𝚎𝚕𝚘𝚗𝚐𝚜 𝚝𝚘﹞ Saint Vincent and the Grenadines') }switch(is) { case '.🇼🇸 ': reply('⌯ ﹝𝚝𝚑𝚒𝚜 𝚏𝚕𝚊𝚐 𝚋𝚎𝚕𝚘𝚗𝚐𝚜 𝚝𝚘﹞ Samoa') }switch(is) { case '.🇸🇲': reply('⌯ ﹝𝚝𝚑𝚒𝚜 𝚏𝚕𝚊𝚐 𝚋𝚎𝚕𝚘𝚗𝚐𝚜 𝚝𝚘﹞ San Marino') }switch(is) { case '.🇸🇹': reply('⌯ ﹝𝚝𝚑𝚒𝚜 𝚏𝚕𝚊𝚐 𝚋𝚎𝚕𝚘𝚗𝚐𝚜 𝚝𝚘﹞ São Tomé and Príncipe') }switch(is) { case '.🇸🇦': reply('⌯ ﹝𝚝𝚑𝚒𝚜 𝚏𝚕𝚊𝚐 𝚋𝚎𝚕𝚘𝚗𝚐𝚜 𝚝𝚘﹞ Saudi Arabia') }switch(is) { case '.🏴󠁧󠁢󠁳󠁣󠁴󠁿': reply('⌯ ﹝𝚝𝚑𝚒𝚜 𝚏𝚕𝚊𝚐 𝚋𝚎𝚕𝚘𝚗𝚐𝚜 𝚝𝚘﹞ Scotland') } switch(is) { case '.🇸🇳': reply('⌯ ﹝𝚝𝚑𝚒𝚜 𝚏𝚕𝚊𝚐 𝚋𝚎𝚕𝚘𝚗𝚐𝚜 𝚝𝚘﹞ Senegal') }switch(is) { case '.🇷🇸': reply('⌯ ﹝𝚝𝚑𝚒𝚜 𝚏𝚕𝚊𝚐 𝚋𝚎𝚕𝚘𝚗𝚐𝚜 𝚝𝚘﹞ Serbia') }switch(is) { case '.🇸🇨': reply('⌯ ﹝𝚝𝚑𝚒𝚜 𝚏𝚕𝚊𝚐 𝚋𝚎𝚕𝚘𝚗𝚐𝚜 𝚝𝚘﹞ Seychelles') }switch(is) { case '.🇸🇱': reply('⌯ ﹝𝚝𝚑𝚒𝚜 𝚏𝚕𝚊𝚐 𝚋𝚎𝚕𝚘𝚗𝚐𝚜 𝚝𝚘﹞ Sierra Leone') }switch(is) { case '.🇸🇬': reply('⌯ ﹝𝚝𝚑𝚒𝚜 𝚏𝚕𝚊𝚐 𝚋𝚎𝚕𝚘𝚗𝚐𝚜 𝚝𝚘﹞ Singapore') }switch(is) { case '.🇸🇽': reply('⌯ ﹝𝚝𝚑𝚒𝚜 𝚏𝚕𝚊𝚐 𝚋𝚎𝚕𝚘𝚗𝚐𝚜 𝚝𝚘﹞ Sint Maarten') }switch(is) { case '.🇸🇰': reply('⌯ ﹝𝚝𝚑𝚒𝚜 𝚏𝚕𝚊𝚐 𝚋𝚎𝚕𝚘𝚗𝚐𝚜 𝚝𝚘﹞ Slovakia') }switch(is) { case '.🇸🇮': reply('⌯ ﹝𝚝𝚑𝚒𝚜 𝚏𝚕𝚊𝚐 𝚋𝚎𝚕𝚘𝚗𝚐𝚜 𝚝𝚘﹞ Slovenia') }switch(is) { case '.🇸🇧': reply('⌯ ﹝𝚝𝚑𝚒𝚜 𝚏𝚕𝚊𝚐 𝚋𝚎𝚕𝚘𝚗𝚐𝚜 𝚝𝚘﹞ Solomon Islands') }switch(is) { case '.🇸🇴': reply('⌯ ﹝𝚝𝚑𝚒𝚜 𝚏𝚕𝚊𝚐 𝚋𝚎𝚕𝚘𝚗𝚐𝚜 𝚝𝚘﹞ Somalia') }switch(is) { case '.🇿🇦': reply('⌯ ﹝𝚝𝚑𝚒𝚜 𝚏𝚕𝚊𝚐 𝚋𝚎𝚕𝚘𝚗𝚐𝚜 𝚝𝚘﹞ South Africa') }switch(is) { case '.🇬🇸': reply('⌯ ﹝𝚝𝚑𝚒𝚜 𝚏𝚕𝚊𝚐 𝚋𝚎𝚕𝚘𝚗𝚐𝚜 𝚝𝚘﹞ South Georgia') }switch(is) { case '.🇸🇸': reply('⌯ ﹝𝚝𝚑𝚒𝚜 𝚏𝚕𝚊𝚐 𝚋𝚎𝚕𝚘𝚗𝚐𝚜 𝚝𝚘﹞ South Sudan') }switch(is) { case '.🇪🇸': reply('⌯ ﹝𝚝𝚑𝚒𝚜 𝚏𝚕𝚊𝚐 𝚋𝚎𝚕𝚘𝚗𝚐𝚜 𝚝𝚘﹞ Spain') }switch(is) { case '.🇱🇰': reply('⌯ ﹝𝚝𝚑𝚒𝚜 𝚏𝚕𝚊𝚐 𝚋𝚎𝚕𝚘𝚗𝚐𝚜 𝚝𝚘﹞ Sri Lanka') }switch(is) { case '.🇸🇩': reply('⌯ ﹝𝚝𝚑𝚒𝚜 𝚏𝚕𝚊𝚐 𝚋𝚎𝚕𝚘𝚗𝚐𝚜 𝚝𝚘﹞ Sudan') }switch(is) { case '.🇸🇷': reply('⌯ ﹝𝚝𝚑𝚒𝚜 𝚏𝚕𝚊𝚐 𝚋𝚎𝚕𝚘𝚗𝚐𝚜 𝚝𝚘﹞ Suriname') }switch(is) { case '.🇸🇯': reply('⌯ ﹝𝚝𝚑𝚒𝚜 𝚏𝚕𝚊𝚐 𝚋𝚎𝚕𝚘𝚗𝚐𝚜 𝚝𝚘﹞ Svalbard and Jan Mayen') }switch(is) { case '.🇸🇪': reply('⌯ ﹝𝚝𝚑𝚒𝚜 𝚏𝚕𝚊𝚐 𝚋𝚎𝚕𝚘𝚗𝚐𝚜 𝚝𝚘﹞ Sweden') }switch(is) { case '.🇨🇭': reply('⌯ ﹝𝚝𝚑𝚒𝚜 𝚏𝚕𝚊𝚐 𝚋𝚎𝚕𝚘𝚗𝚐𝚜 𝚝𝚘﹞ Switzerland') }switch(is) { case '.🇸🇾': reply('⌯ ﹝𝚝𝚑𝚒𝚜 𝚏𝚕𝚊𝚐 𝚋𝚎𝚕𝚘𝚗𝚐𝚜 𝚝𝚘﹞ Syria') }switch(is) { case '.🇹🇼': reply('⌯ ﹝𝚝𝚑𝚒𝚜 𝚏𝚕𝚊𝚐 𝚋𝚎𝚕𝚘𝚗𝚐𝚜 𝚝𝚘﹞ Taiwan') }switch(is) { case '.🇹🇯': reply('⌯ ﹝𝚝𝚑𝚒𝚜 𝚏𝚕𝚊𝚐 𝚋𝚎𝚕𝚘𝚗𝚐𝚜 𝚝𝚘﹞ Tajikistan') }switch(is) { case '.🇹🇿': reply('⌯ ﹝𝚝𝚑𝚒𝚜 𝚏𝚕𝚊𝚐 𝚋𝚎𝚕𝚘𝚗𝚐𝚜 𝚝𝚘﹞ Tanzania') }switch(is) { case '.🇹🇭': reply('⌯ ﹝𝚝𝚑𝚒𝚜 𝚏𝚕𝚊𝚐 𝚋𝚎𝚕𝚘𝚗𝚐𝚜 𝚝𝚘﹞ Thailand') }switch(is) { case '.🇹🇱': reply('⌯ ﹝𝚝𝚑𝚒𝚜 𝚏𝚕𝚊𝚐 𝚋𝚎𝚕𝚘𝚗𝚐𝚜 𝚝𝚘﹞ Timor-Leste') }switch(is) { case '.🇹🇬': reply('⌯ ﹝𝚝𝚑𝚒𝚜 𝚏𝚕𝚊𝚐 𝚋𝚎𝚕𝚘𝚗𝚐𝚜 𝚝𝚘﹞ Togo') }switch(is) { case '.🇹🇰': reply('⌯ ﹝𝚝𝚑𝚒𝚜 𝚏𝚕𝚊𝚐 𝚋𝚎𝚕𝚘𝚗𝚐𝚜 𝚝𝚘﹞ Tokelau') }switch(is) { case '.🇹🇴': reply('⌯ ﹝𝚝𝚑𝚒𝚜 𝚏𝚕𝚊𝚐 𝚋𝚎𝚕𝚘𝚗𝚐𝚜 𝚝𝚘﹞ Tonga') } switch(is) { case '.🇹🇹': reply('⌯ ﹝𝚝𝚑𝚒𝚜 𝚏𝚕𝚊𝚐 𝚋𝚎𝚕𝚘𝚗𝚐𝚜 𝚝𝚘﹞ Trinidad and Tobago ') } switch(is) { case '.🇹🇳': reply('⌯ ﹝𝚝𝚑𝚒𝚜 𝚏𝚕𝚊𝚐 𝚋𝚎𝚕𝚘𝚗𝚐𝚜 𝚝𝚘﹞ Tunisia') } switch(is) { case '.🇹🇷': reply('⌯ ﹝𝚝𝚑𝚒𝚜 𝚏𝚕𝚊𝚐 𝚋𝚎𝚕𝚘𝚗𝚐𝚜 𝚝𝚘﹞ Turkey') } switch(is) { case '.🇹🇲': reply('⌯ ﹝𝚝𝚑𝚒𝚜 𝚏𝚕𝚊𝚐 𝚋𝚎𝚕𝚘𝚗𝚐𝚜 𝚝𝚘﹞ Turkmenistan') } switch(is) { case '.🇹🇨': reply('⌯ ﹝𝚝𝚑𝚒𝚜 𝚏𝚕𝚊𝚐 𝚋𝚎𝚕𝚘𝚗𝚐𝚜 𝚝𝚘﹞ Turks and Caicos Islands') } switch(is) { case '.🇹🇻': reply('⌯ ﹝𝚝𝚑𝚒𝚜 𝚏𝚕𝚊𝚐 𝚋𝚎𝚕𝚘𝚗𝚐𝚜 𝚝𝚘﹞ Tuvalu') } switch(is) { case '.🇺🇬': reply('⌯ ﹝𝚝𝚑𝚒𝚜 𝚏𝚕𝚊𝚐 𝚋𝚎𝚕𝚘𝚗𝚐𝚜 𝚝𝚘﹞ Uganda') } switch(is) { case '.🇺🇦': reply('⌯ ﹝𝚝𝚑𝚒𝚜 𝚏𝚕𝚊𝚐 𝚋𝚎𝚕𝚘𝚗𝚐𝚜 𝚝𝚘﹞ Ukraine') } switch(is) { case '.🇦🇪': reply('⌯ ﹝𝚝𝚑𝚒𝚜 𝚏𝚕𝚊𝚐 𝚋𝚎𝚕𝚘𝚗𝚐𝚜 𝚝𝚘﹞ United Arab Emirates') } switch(is) { case '.🇬🇧': reply('⌯ ﹝𝚝𝚑𝚒𝚜 𝚏𝚕𝚊𝚐 𝚋𝚎𝚕𝚘𝚗𝚐𝚜 𝚝𝚘﹞ United Kingdom') } switch(is) { case '.🇺🇸': reply('⌯ ﹝𝚝𝚑𝚒𝚜 𝚏𝚕𝚊𝚐 𝚋𝚎𝚕𝚘𝚗𝚐𝚜 𝚝𝚘﹞ United States') } switch(is) { case '.🇺🇲': reply('⌯ ﹝𝚝𝚑𝚒𝚜 𝚏𝚕𝚊𝚐 𝚋𝚎𝚕𝚘𝚗𝚐𝚜 𝚝𝚘﹞ United States Minor Outlying Islands') } switch(is) { case '.🇺🇾': reply('⌯ ﹝𝚝𝚑𝚒𝚜 𝚏𝚕𝚊𝚐 𝚋𝚎𝚕𝚘𝚗𝚐𝚜 𝚝𝚘﹞ Uruguay') } switch(is) { case '.🇺🇿': reply('⌯ ﹝𝚝𝚑𝚒𝚜 𝚏𝚕𝚊𝚐 𝚋𝚎𝚕𝚘𝚗𝚐𝚜 𝚝𝚘﹞ Uzbekistan') } switch(is) { case '.🇻🇺': reply('⌯ ﹝𝚝𝚑𝚒𝚜 𝚏𝚕𝚊𝚐 𝚋𝚎𝚕𝚘𝚗𝚐𝚜 𝚝𝚘﹞ Vanuatu') } switch(is) { case '.🇻🇦': reply('⌯ ﹝𝚝𝚑𝚒𝚜 𝚏𝚕𝚊𝚐 𝚋𝚎𝚕𝚘𝚗𝚐𝚜 𝚝𝚘﹞ Vatican City (Holy See)') } switch(is) { case '.🇻🇪': reply('⌯ ﹝𝚝𝚑𝚒𝚜 𝚏𝚕𝚊𝚐 𝚋𝚎𝚕𝚘𝚗𝚐𝚜 𝚝𝚘﹞ Venezuela') } switch(is) { case '.🇻🇳': reply('⌯ ﹝𝚝𝚑𝚒𝚜 𝚏𝚕𝚊𝚐 𝚋𝚎𝚕𝚘𝚗𝚐𝚜 𝚝𝚘﹞ Vietnam') } switch(is) { case '.🇻🇬': reply('⌯ ﹝𝚝𝚑𝚒𝚜 𝚏𝚕𝚊𝚐 𝚋𝚎𝚕𝚘𝚗𝚐𝚜 𝚝𝚘﹞ British Virgin Islands') } switch(is) { case '.🇻🇮': reply('⌯ ﹝𝚝𝚑𝚒𝚜 𝚏𝚕𝚊𝚐 𝚋𝚎𝚕𝚘𝚗𝚐𝚜 𝚝𝚘﹞ United States Virgin Islands') } switch(is) { case '.🏴󠁧󠁢󠁷󠁬󠁳󠁿': reply('⌯ ﹝𝚝𝚑𝚒𝚜 𝚏𝚕𝚊𝚐 𝚋𝚎𝚕𝚘𝚗𝚐𝚜 𝚝𝚘﹞ Wales') } switch(is) { case '.🇼🇫': reply('⌯ ﹝𝚝𝚑𝚒𝚜 𝚏𝚕𝚊𝚐 𝚋𝚎𝚕𝚘𝚗𝚐𝚜 𝚝𝚘﹞ Wallis and Futuna') } switch(is) { case '.🇪🇭': reply('⌯ ﹝𝚝𝚑𝚒𝚜 𝚏𝚕𝚊𝚐 𝚋𝚎𝚕𝚘𝚗𝚐𝚜 𝚝𝚘﹞ Western Sahara') } switch(is) { case '.🇾🇪': reply('⌯ ﹝𝚝𝚑𝚒𝚜 𝚏𝚕𝚊𝚐 𝚋𝚎𝚕𝚘𝚗𝚐𝚜 𝚝𝚘﹞ Yemen') } switch(is) { case '.🇿🇲': reply('⌯ ﹝𝚝𝚑𝚒𝚜 𝚏𝚕𝚊𝚐 𝚋𝚎𝚕𝚘𝚗𝚐𝚜 𝚝𝚘﹞ Zambia') } switch(is) { case '.🇿🇼': reply('⌯ ﹝𝚝𝚑𝚒𝚜 𝚏𝚕𝚊𝚐 𝚋𝚎𝚕𝚘𝚗𝚐𝚜 𝚝𝚘﹞ Zimbabwe') }
- 
+ switch(is) { case '.secretmenu': reply ('💫 claimed free money :)')}
 //---X623-Whatsapp-Bot------------------------------------------------------------------------------------------------------------------------//
 const newLocal = 'upslot';
 //-- Command
@@ -959,18 +710,18 @@ case 'premium':
     if (!isVerify) return reply(userB(prefix))
 
 	owner = await fs.readFileSync('./images/menu.jpg').toString('base64')
-	capt = `𝑆𝑡𝑎𝑟𝐷𝑎𝑠ℎ\n${design} ${username}`
+	capt = `❄️ 𝑊𝑖𝑛𝑡𝑒𝑟𝑆𝑡𝑎𝑟𝐷𝑎𝑠ℎ\n${design} ${username}`
 	var beens = {
 	text: `𝑀𝑒𝑛𝑢 ☁️
 - - - - - - - - - - - - - - - - - - 
 ${pushname}
 - - - - - - - - - - - - - - - - - - 
-${design} ☆ .feed
+${design} .feed
 - - - - - - - - - - - - - - - - - -  
-${design} ☆ .games
-${design} ☆ .tools
-${design} .edit
 ${design} .star  
+${design} .games
+${design} .tools
+${design} .edit
 ${design} .settings
 - - - - - - - - - - - - - - - - - - 
 ${design} .admin
@@ -985,7 +736,7 @@ break
 case 'star':
     if (!isVerify) return reply(userB(prefix))
 	owner = await fs.readFileSync('./images/menu.jpg').toString('base64')
-	capt = `𝑆𝑡𝑎𝑟𝐷𝑎𝑠ℎ\n${design} ${username}`
+	capt = `❄️ 𝑊𝑖𝑛𝑡𝑒𝑟𝑆𝑡𝑎𝑟𝐷𝑎𝑠ℎ\n${design} ${username}`
 	var beens = {
 	text: `𝑆𝑡𝑎𝑟𝑃𝑖𝑐𝑡𝑢𝑟𝑒 ✨
 - - - - - - - - - - - - - - - - - - 
@@ -1005,13 +756,13 @@ replyimg(beens, text, capt, owner)
 case 'games':
     if (!isVerify) return reply(userB(prefix))
 	owner = await fs.readFileSync('./images/menu.jpg').toString('base64')
-	capt = `𝑆𝑡𝑎𝑟𝐷𝑎𝑠ℎ\n${design} ${username}`
+	capt = `❄️ 𝑊𝑖𝑛𝑡𝑒𝑟𝑆𝑡𝑎𝑟𝐷𝑎𝑠ℎ\n${design} ${username}`
 	var beens = {
 	text: `𝐺𝑎𝑚𝑒𝑠 
 - - - - - - - - - - - - - - - - - - 
 ⌖ ${pushname}
 - - - - - - - - - - - - - - - - - -    
-${design} ☆ .slot 
+${design} .slot
 ${design} .truth
 ${design} .dare
 - - - - - - - - - - - - - - - - - - 
@@ -1028,7 +779,6 @@ ${design} .flag
 ${design} .euflag
 ${design} .dog
 ${design} .nsfw
-${design} ~.boss~
 ${design} .random 
 - - - - - - - - - - - - - - - - - - 
 𝑌𝑜𝑢𝑟 𝑀𝑜𝑛𝑒𝑦 ⌖ _${money}$_
@@ -1041,24 +791,22 @@ replyimg(beens, text, capt, owner)
 case 'tools':
     if (!isVerify) return reply(userB(prefix))
 	owner = await fs.readFileSync('./images/menu.jpg').toString('base64')
-	capt = `𝑆𝑡𝑎𝑟𝐷𝑎𝑠ℎ\n${design} ${username}`
+	capt = `❄️ 𝑊𝑖𝑛𝑡𝑒𝑟𝑆𝑡𝑎𝑟𝐷𝑎𝑠ℎ\n${design} ${username}`
 	var beens = {
 text: `𝑇𝑜𝑜𝑙𝑠 
 - - - - - - - - - - - - - - - - - - 
 ⌖ ${pushname}
 - - - - - - - - - - - - - - - - - -    
-${design} ☆ .song 
-${design} ☆ .send 
-${design} ☆ .weather 
-${design} ☆ .translate 
-${design} ☆ .calc 
+${design} .song
+${design} .send
+${design} .weather
+${design} .translate
+${design} .calc
 - - - - - - - - - - - - - - - - - - 
-${design} ☆ .rsong
-${design} ☆ .ddate
-${design} ☆ .mylove
 ${design} .note
 ${design} .wame
 ${design} .wish
+${design} .rsong
 ${design} .symbol
 - - - - - - - - - - - - - - - - - - 
 𝑌𝑜𝑢𝑟 𝑀𝑜𝑛𝑒𝑦 ⌖ _${money}$_
@@ -1071,21 +819,19 @@ replyimg(beens, text, capt, owner)
 case 'edit':
     if (!isVerify) return reply(userB(prefix))
 	owner = await fs.readFileSync('./images/menu.jpg').toString('base64')
-	capt = `𝑆𝑡𝑎𝑟𝐷𝑎𝑠ℎ\n${design} ${username}`
+	capt = `❄️ 𝑊𝑖𝑛𝑡𝑒𝑟𝑆𝑡𝑎𝑟𝐷𝑎𝑠ℎ\n${design} ${username}`
 	var beens = {
 text: `𝐸𝑑𝑖𝑡 
 - - - - - - - - - - - - - - - - - - 
 ⌖ ${pushname}
 - - - - - - - - - - - - - - - - - -    
-${design} ☆ .sticker
-${design} ☆ .image
-${design} ☆ .color
-${design} ☆ .rmbg
+${design} .sticker
+${design} .image
+${design} .rmbg
 ${design} .rmbgs
+${design} .color
 - - - - - - - - - - - - - - - - - - 
-${design} ☆ .reversevideo
-${design} ☆ .speed
-${design} ☆ .crush
+${design} .reversevideo
 ${design} .blur
 ${design} .saturation
 ${design} .brightness
@@ -1094,13 +840,14 @@ ${design} .flip
 ${design} .bw
 ${design} .cover
 ${design} .cool
-${design} ~.watermarkimage~
-${design} ~.watermarkvideo~
+${design} .watermarkimage
+${design} .watermarkvideo
 ${design} .mp3
 ${design} .audiolevel
-${design} .knock
-- - - - - - - - - - - - - - - - - - 
-𝑌𝑜𝑢𝑟 𝑀𝑜𝑛𝑒𝑦 ⌖ _${money}$_
+${design} .speed
+${design} .crush
+	- - - - - - - - - - - - - - - - - - 
+	𝑌𝑜𝑢𝑟 𝑀𝑜𝑛𝑒𝑦 ⌖ _${money}$_
 	`,
 }
 replyimg(beens, text, capt, owner)
@@ -1112,7 +859,7 @@ case 'settings':
 case 'setting':
     if (!isVerify) return reply(userB(prefix))
 	owner = await fs.readFileSync('./images/menu.jpg').toString('base64')
-	capt = `𝑆𝑡𝑎𝑟𝐷𝑎𝑠ℎ\n${design} ${username}`
+	capt = `❄️ 𝑊𝑖𝑛𝑡𝑒𝑟𝑆𝑡𝑎𝑟𝐷𝑎𝑠ℎ\n${design} ${username}`
 	var beens = {
 text: `𝑆𝑒𝑡𝑡𝑖𝑛𝑔𝑠 ⚙️
 - - - - - - - - - - - - - - - - - - 
@@ -1501,12 +1248,11 @@ break
 case 'gay':
 case 'gaymeter':
   if (!isVerify) return reply(userB())
-  if (args.length > 0) {
+  if (args.length > 1) {
   const gay = _gay[Math.floor(Math.random() * _gay.length)]
   reply(`𓂸 𝑇ℎ𝑖𝑠 𝑝𝑒𝑟𝑠𝑜𝑛 𝑖𝑠 ${gay}% 𝑔𝑎𝑦.`)
   }
   else { 
-	const gay = _gay[Math.floor(Math.random() * _gay.length)]
 	  reply(`𓂸 𝑌𝑜𝑢𝑟 𝑎𝑟𝑒 ${gay}% 𝑔𝑎𝑦.`)
   }
 break
@@ -1611,19 +1357,16 @@ const ai = new alexa();
 
 // [] represents context, since it's an array
 ai.getReply(`${value}`, [], "english", "O_o").then((replys) => {
+ 
   console.log(design + " " + replys);
   //Do your stuffs with the reply
   reply(`${design} ${replys}`)
 });
+	
+	
 }
 break
   
-case 'boss':
-buffer = fs.readFileSync("./sounds/welcome.mp3")
-Lxa.sendMessage(from, buffer, audio, {quoted:mek})
-
-break
-
 //-- information
 case 'info':
 	 
@@ -1776,22 +1519,6 @@ case 'volume':
 						fs.unlinkSync(ran)
 					})
 					break
-//-- knock
-case 'knock':
-			if (!isQuotedAudio) return reply(`${design} 𝑃𝑙𝑒𝑎𝑠𝑒 𝑡𝑎𝑔 𝑎𝑛 𝑎𝑢𝑑𝑖𝑜`)
-	  	reply(`${design} 𝐶ℎ𝑎𝑛𝑔𝑖𝑛𝑔 1/1`)
-					encmedia = JSON.parse(JSON.stringify(mek).replace('quotedM','m')).message.extendedTextMessage.contextInfo
-					media = await Lxa.downloadAndSaveMediaMessage(encmedia)
-				ran= getRandom('.opus')
-				exec(`ffmpeg -i ${media} -itsoffset 00:00:03 -i ./sounds/knock.mp3 -map 0:0 -map 1:0 -preset ultrafast  ${ran} `, (err) => {
-						fs.unlinkSync(media)
-						if (err) return reply(`${design} 𝐸𝑟𝑟𝑜𝑟`)
-						buffer = fs.readFileSync(ran)
-						Lxa.sendMessage(from, buffer, audio, {quoted:mek})
-						fs.unlinkSync(ran)
-					})
-					break					
-							
 //-- audio volume
 case 'reversevideo':
 			if (!isQuotedVideo) return reply(`${design} 𝑃𝑙𝑒𝑎𝑠𝑒 𝑡𝑎𝑔 𝑎𝑛 video`)
@@ -2265,7 +1992,7 @@ break
 case 'inbox':
 	if (!isVerify) return reply(UserB())
 			owner = await fs.readFileSync('./images/menu.jpg').toString('base64')
-			capt = `𝑆𝑡𝑎𝑟𝐷𝑎𝑠ℎ\n${design} ${username}`
+			capt = `❄️ 𝑊𝑖𝑛𝑡𝑒𝑟𝑆𝑡𝑎𝑟𝐷𝑎𝑠ℎ\n${design} ${username}`
 			teks = `📩 𝐼𝑛𝑏𝑜𝑥 ⌬ ${messages.length} ⌬\n- - - - - - - - - - - - - - - - - -\n`
 		
 
@@ -2276,7 +2003,6 @@ case 'inbox':
 	reply(teks.trim())
 
 	break	
-//---X623-Whatsapp-Bot------------------------------------------------------------------------------------------------------------------------//
 
 
 //---X623-Whatsapp-Bot------------------------------------------------------------------------------------------------------------------------//
@@ -2345,23 +2071,8 @@ case 'mysp':
 	reply(`${design} 𝑇ℎ𝑒𝑟𝑒 𝑤𝑎𝑠 𝑎𝑛 𝐸𝑟𝑟𝑜𝑟 𝑟𝑒𝑎𝑑𝑖𝑛𝑔 𝑦𝑜𝑢𝑟 𝑝𝑖𝑐𝑡𝑢𝑟𝑒. 𝐴𝑟𝑒 𝑦𝑜𝑢 𝑠𝑢𝑟𝑒 𝑦𝑜𝑢 ℎ𝑎𝑣𝑒 𝑢𝑝𝑙𝑜𝑎𝑑𝑒𝑑 𝑜𝑛𝑒 𝑣𝑖𝑎 .𝑠𝑡𝑎𝑟𝑝𝑖𝑐𝑡𝑢𝑟𝑒`)
 }
 
-
-try{
-
 buffer = fs.readFileSync(`./data/users/${sender.split("@")[0]}/starpicture.jpg`)
 Lxa.sendMessage(from, buffer, image, {quoted:mek, caption: `${design} ${username} ${age} 𝑦𝑜\n${design} ${money}$ ${xp} 𝑥𝑝\n\n${mybio}`})
-
-}catch (err){
-	try{
-buffer = fs.readFileSync(`./data/users/${sender.split("@")[0]}/starpicture.jpg`)
-Lxa.sendMessage(from, buffer, image, {quoted:mek, caption: `${design} ${username} ${age} 𝑦𝑜\n${design} ${money}$ ${xp} 𝑥𝑝\n\n${mybio}`})
- }catch (err){
-	buffer = fs.readFileSync(`./data/users/${sender.split("@")[0]}/starpicture.jpg`)
-	Lxa.sendMessage(from, buffer, image, {quoted:mek, caption: `${design} ${username} ${age} 𝑦𝑜\n${design} ${money}$ ${xp} 𝑥𝑝\n\n${mybio}`})	 
- }
-}
-
-
 break
 
 //-- sp
@@ -2412,26 +2123,10 @@ hisdesign = _hisdesign[0]	//--- bio
 
 }
 
-try{	
 buffer = fs.readFileSync(`./data/users${args[0].replace('@','/')}/starpicture.jpg`)
 Lxa.sendMessage(from, buffer, image, {quoted:mek, caption: `${hisdesign} ${spusername} ${spage} 𝑦𝑜\n${hisdesign} ${spmoney}$ ${spxp} 𝑥𝑝\n\n${spbio}`})
-
-}catch (err){
-
-	try{
-
-	buffer = fs.readFileSync(`./data/users${args[0].replace('@','/')}/starpicture.jpg`)
-	Lxa.sendMessage(from, buffer, image, {quoted:mek, caption: `${hisdesign} ${spusername} ${spage} 𝑦𝑜\n${hisdesign} ${spmoney}$ ${spxp} 𝑥𝑝\n\n${spbio}`})
-
-	}catch (err){
-
-		buffer = fs.readFileSync(`./data/users${args[0].replace('@','/')}/starpicture.jpg`)
-		Lxa.sendMessage(from, buffer, image, {quoted:mek, caption: `${hisdesign} ${spusername} ${spage} 𝑦𝑜\n${hisdesign} ${spmoney}$ ${spxp} 𝑥𝑝\n\n${spbio}`})	
-
-	}
-}
-
 break
+
 //-- watermark 
 case 'watermarkimage':
 if (!isVerify) return reply(UserB())
@@ -2743,167 +2438,6 @@ await ffmpeg(`./weather.gif`)
 
 break
 //---X623-Whatsapp-Bot------------------------------------------------------------------------------------------------------------------------// 
-case 'mylove':
-case 'ml':
-
- function tangghal(){
-	myMonths = ["1","2","3","4","5","6","7","8","9","10","11","12"];
-				myDays = ['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'];
-				var tgl = new Date();
-				var day = tgl.getDate()
-				bulan = tgl.getMonth()
-				var thisDay = tgl.getDay(),
-				thisDay = myDays[thisDay];
-				var yy = tgl.getYear()
-				var year = (yy < 1000) ? yy + 1900 : yy;
-				return `${day} ${myMonths[bulan]} ${year}`
-	}
-
-ownerdd = await fs.readFileSync('./images/ddate.jpg').toString('base64')
-captdd = `ZeLoveDisplayInator\n💕\n💕`
-
-
-// Ugly code lets not talk about it.. dates are stupid but this works trust me -_-----------------------------------------------------------------------------------
-console.log(`${tangghal().split(' ')[0]} -- ${tangghal().split(' ')[1]} -- ${tangghal().split(' ')[2]}`)
-console.log(`${ddate.split(' ')[0]} -- ${ddate.split(' ')[1]} -- ${ddate.split(' ')[2]}`)
-var date_diff_indays = function(date1, date2) {
-dt1 = new Date(date1);
-dt2 = new Date(date2);
-return Math.floor((Date.UTC(dt2.getFullYear(), dt2.getMonth(), dt2.getDate()) - Date.UTC(dt1.getFullYear(), dt1.getMonth(), dt1.getDate()) ) /(1000 * 60 * 60 * 24));
-}
-var dddays = date_diff_indays(`${ddate.split(' ')[1]}/${ddate.split(' ')[0]}/${ddate.split(' ')[2]}`, `${tangghal().split(' ')[1]}/${tangghal().split(' ')[0]}/${tangghal().split(' ')[2]}`);  // days
-function monthDiff(dateFrom, dateTo) {
-return dateTo.getMonth() - dateFrom.getMonth() + 
-(12 * (dateTo.getFullYear() - dateFrom.getFullYear()))
-}
-var ddmonths = monthDiff(new Date(`${ddate.split(' ')[2]}`, `${ddate.split(' ')[1]}`), new Date(`${tangghal().split(' ')[2]}`, `${tangghal().split(' ')[1]}`))
-	var _ddyears = Number(`${tangghal().split(' ')[2]}`) - Number(`${ddate.split(' ')[2]}`); // years 
-var ze1 = Number(_ddyears);
-var ze2 = Number(1);
-var ddyears = ze1 - ze2; 
-	console.log(`${ddyears} years -- ${ddmonths} months -- ${dddays} days times passed`) // MOST IMPORTANT LINE
-	
-	function roundDown(number, decimals) {
-		decimals = decimals || 0;
-		return ( Math.floor( number * Math.pow(10, decimals) ) / Math.pow(10, decimals) );
-	}
-var zz1 = Number(dddays);
-var zz2 = Number(7);
-var _ddweeks = zz1 / zz2;
-var ddweeks = roundDown(_ddweeks); 
-// Thx for ignoring -------------------------------------------------------------------------------------------------------------------------------------------------
-
-var beens = {
-text: `${design} ${ddate1} and ${ddate2} are today 
-
-${ddyears} years 
-- - - - - Or - - - - - 💕
-${ddmonths} months
-💕 - - - - - Or - - - - -
-${ddweeks} weeks
-- - - - - Or - - - - - 💕
-${dddays} days 
-
-together! 
-
-${ddate.split(' ')[0]} 
-${ddate.split(' ')[1]} 
-${ddate.split(' ')[2]}
-`,
-}
-replyimg(beens, text, captdd, ownerdd)
-
-
-break
-//-- Date
-case 'date':
-case 'ddate':
-	if (!isVerify) return reply(userB())
-
-	function tangghal(){
-		myMonths = ["1","2","3","4","5","6","7","8","9","10","11","12"];
-					myDays = ['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'];
-					var tgl = new Date();
-					var day = tgl.getDate()
-					bulan = tgl.getMonth()
-					var thisDay = tgl.getDay(),
-					thisDay = myDays[thisDay];
-					var yy = tgl.getYear()
-					var year = (yy < 1000) ? yy + 1900 : yy;
-					return `${day} ${myMonths[bulan]} ${year}`
-		}
-
-
-	if (args.length < 3) return reply(`${design} Please enter the date exactly like this. (error 1)\n\nDD/MM/YYYY\n\nExample for today\n❎ .date ${tangghal()}`)
-	if (args.length > 3) return reply(`${design} Please enter the date exactly like this. (error 2)\n\nDD/MM/YYYY\n\nExample for today\n❎ .date ${tangghal()}`)
-	if (args[2].length < 4) return reply(`${design} Please enter the date exactly like this. (error 3)\n\nDD/MM/YYYY\n\nExample for today\n❎ .date ${tangghal()}`)
-	if (args[0].length > 2) return reply(`${design} Please enter the date exactly like this. (error 4)\n\nDD/MM/YYYY\n\nExample for today\n❎ .date ${tangghal()}`)
-	if (args[1].length > 2) return reply(`${design} Please enter the date exactly like this. (error 5)\n\nDD/MM/YYYY\n\nExample for today\n❎ .date ${tangghal()}`)
-
-
-
-	var newdate = `${value}`;
-	fs.readFile(`./data/users/${sender.split("@")[0]}/ddate.json`, 'utf-8', function(err, data) {
-		if (err) throw err;
-		var newValue = data.replace(`${ddate}`, newdate);
-		fs.writeFile(`./data/users/${sender.split("@")[0]}/ddate.json`, newValue, 'utf-8', function(err, data) {
-			if (err) throw err;
-		})
-	})
-
-	try{
-		exec(`rm -rf ./data/users/${sender.split("@")[0]}/ddatelasty.json`)
-		await delay(1000)
-	
-		 fs.appendFile(`./data/users/${sender.split("@")[0]}/ddatelasty.json`, `["0"]`, function (err) {				
-	
-		 });	
-		} catch {
-			console.error(err)
-			  }
-			  try{
-				exec(`rm -rf ./data/users/${sender.split("@")[0]}/ddatelastm.json`)
-				await delay(1000)
-			
-				 fs.appendFile(`./data/users/${sender.split("@")[0]}/ddatelastm.json`, `["0"]`, function (err) {				
-			
-				 });	
-				} catch {
-					console.error(err)
-					  }
-					  try{
-						exec(`rm -rf ./data/users/${sender.split("@")[0]}/ddatelastd.json`)
-						await delay(1000)
-					
-						 fs.appendFile(`./data/users/${sender.split("@")[0]}/ddatelastd.json`, `["0"]`, function (err) {				
-					
-						 });	
-						} catch {
-							console.error(err)
-							  }
-
-	reply(`${design} Date has been set to ${value}\n- - - - - - - - - - - - - - - - - -\ntoday is ${tangghal()}\n- - - - - - - - - - - - - - - - - -\nPlease use the command .datenames to finish setting it up! Use the command .mylove to see the results.`)
-break
-
-case 'datenames':
-case 'datename':
-	if (!isVerify) return reply(userB())
-
-	if (args.length < 2) return reply(`${design} Please enter 2 Names. \n- - - - - - - - - - - - - - - - - -\nExample .datenames Star Starlina`)
-	if (args.length > 2) return reply(`${design} Please enter 2 Names. \n- - - - - - - - - - - - - - - - - -\nExample .datenames Star Starlina`)
-
-	exec(`rm -rf ./data/users/${sender.split("@")[0]}/ddate12.json`)
-	await delay(1000)
-
-fs.appendFile(`./data/users/${sender.split("@")[0]}/ddate12.json`, `["${args[0]}", "${args[1]}"]`, function (err) {				
-});	
-
-reply(`${design} Names has been set to\n- - - - - - - - - - - - - - - - - -\nFirst Name ${args[0]} Second Name ${args[1]}\n- - - - - - - - - - - - - - - - - -\nYou can always change these. -> .mylove`)
-
-
-break
-
-//---X623-Whatsapp-Bot------------------------------------------------------------------------------------------------------------------------// 
 //-- claim money
 case 'claim': 
 if (!isVerify) return reply(userB())
@@ -2918,7 +2452,7 @@ function kyun(seconds){
   return `${pad(hours)}:${pad(minutes)}:${pad(seconds)}`
 }
 function tanggal(){
-myMonths = ["January","February","May","April","May","June","Juliy","August","September","October","November","December"];
+myMonths = ["January","February","März","April","May","June","Juliy","August","September","October","November","December"];
 			myDays = ['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'];
 			var tgl = new Date();
 			var day = tgl.getDate()
@@ -3121,16 +2655,11 @@ if ((slot1 == slot2) && slot2 == slot3) {
             })
         })
 		owner = await fs.readFileSync('./images/menu.jpg').toString('base64')
-		capt = `𝑆𝑡𝑎𝑟𝐷𝑎𝑠ℎ\n${design} ${username}`
+		capt = `❄️ 𝑊𝑖𝑛𝑡𝑒𝑟𝑆𝑡𝑎𝑟𝐷𝑎𝑠ℎ\n${design} ${username}`
 		const been = {
 		text: `${design} 𝚂𝚕𝚘𝚝\n\n${slot4}${slot5}${slot6}\n- - - - - - - - - \n${slot1}${slot2}${slot3} ☜︎ ♕︎ 𝙹𝚊𝚌𝚔𝚙𝚘𝚝 ♕︎\n- - - - - - - - - \n${slot7}${slot8}${slot9}\n\n𝑀𝑜𝑛𝑒𝑦 𝑙𝑒𝑓𝑡 ${newcash}$ \n𝑇𝑖𝑐𝑘𝑒𝑡𝑠 𝑙𝑒𝑓𝑡 ${newtickets}`,
 	}
 	replyimg(been, text, capt, owner)
-
-	await delay(3000)
-
-	buffer = fs.readFileSync("./sounds/jackpot.mp3")
-	Lxa.sendMessage(from, buffer, audio, {quoted:mek})
 }
 
 else if (slot1 == slot2) {	
@@ -3158,7 +2687,7 @@ else if (slot1 == slot2) {
 		})
 	})
 	owner = await fs.readFileSync('./images/menu.jpg').toString('base64')
-	capt = `𝑆𝑡𝑎𝑟𝐷𝑎𝑠ℎ\n${design} ${username}`
+	capt = `❄️ 𝑊𝑖𝑛𝑡𝑒𝑟𝑆𝑡𝑎𝑟𝐷𝑎𝑠ℎ\n${design} ${username}`
 	const been = {
 	text: `${design} 𝚂𝚕𝚘𝚝\n\n${slot4}${slot5}${slot6}\n- - - - - - - - - \n${slot1}${slot2}${slot3} ☜︎ 𝚂𝚖𝚊𝚕𝚕 𝚠𝚒𝚗 ♕︎\n- - - - - - - - - \n${slot7}${slot8}${slot9}\n\n𝑀𝑜𝑛𝑒𝑦 𝑙𝑒𝑓𝑡 ${newcash}$\n𝑇𝑖𝑐𝑘𝑒𝑡𝑠 𝑙𝑒𝑓𝑡 ${newtickets}`,
 }
@@ -3191,7 +2720,7 @@ else if (slot2 == slot3) {
 	})
 
 	owner = await fs.readFileSync('./images/menu.jpg').toString('base64')
-	capt = `𝑆𝑡𝑎𝑟𝐷𝑎𝑠ℎ\n${design} ${username}`
+	capt = `❄️ 𝑊𝑖𝑛𝑡𝑒𝑟𝑆𝑡𝑎𝑟𝐷𝑎𝑠ℎ\n${design} ${username}`
 	const been = {
 	text: `${design} 𝚂𝚕𝚘𝚝\n\n${slot4}${slot5}${slot6}\n- - - - - - - - - \n${slot1}${slot2}${slot3} ☜︎ 𝚂𝚖𝚊𝚕𝚕 𝚠𝚒𝚗 ♕︎\n- - - - - - - - - \n${slot7}${slot8}${slot9}\n\n𝑀𝑜𝑛𝑒𝑦 𝑙𝑒𝑓𝑡 ${newcash}$\n𝑇𝑖𝑐𝑘𝑒𝑡𝑠 𝑙𝑒𝑓𝑡 ${newtickets}`,
 }
@@ -3224,7 +2753,7 @@ else if (slot1 == slot3) {
 	})
 
 	owner = await fs.readFileSync('./images/menu.jpg').toString('base64')
-	capt = `𝑆𝑡𝑎𝑟𝐷𝑎𝑠ℎ\n${design} ${username}`
+	capt = `❄️ 𝑊𝑖𝑛𝑡𝑒𝑟𝑆𝑡𝑎𝑟𝐷𝑎𝑠ℎ\n${design} ${username}`
 	const been = {
 	text: `${design} 𝚂𝚕𝚘𝚝\n\n${slot4}${slot5}${slot6}\n- - - - - - - - - \n${slot1}${slot2}${slot3} ☜︎ 𝚂𝚖𝚊𝚕𝚕 𝚠𝚒𝚗 ♕︎\n- - - - - - - - - \n${slot7}${slot8}${slot9}\n\n𝑀𝑜𝑛𝑒𝑦 𝑙𝑒𝑓𝑡 ${newcash}$\n𝑇𝑖𝑐𝑘𝑒𝑡𝑠 𝑙𝑒𝑓𝑡 ${newtickets}`,
 }
@@ -3241,7 +2770,7 @@ else {
 		})
 	})	
 	owner = await fs.readFileSync('./images/menu.jpg').toString('base64')
-	capt = `𝑆𝑡𝑎𝑟𝐷𝑎𝑠ℎ\n${design} ${username}`
+	capt = `❄️ 𝑊𝑖𝑛𝑡𝑒𝑟𝑆𝑡𝑎𝑟𝐷𝑎𝑠ℎ\n${design} ${username}`
 	const been = {
 	text: `${design} 𝚂𝚕𝚘𝚝\n\n${slot4}${slot5}${slot6}\n- - - - - - - - - \n${slot1}${slot2}${slot3} ☜︎ 𝙽𝚘 𝚠𝚒𝚗 ♕︎\n- - - - - - - - - \n${slot7}${slot8}${slot9}\n\n𝑀𝑜𝑛𝑒𝑦 𝑙𝑒𝑓𝑡 ${money}$\n𝑇𝑖𝑐𝑘𝑒𝑡𝑠 𝑙𝑒𝑓𝑡 ${newtickets}`,
 }
@@ -3392,7 +2921,7 @@ if (!isVerify) return reply(userB())
 	try {
 	var _cmdhit = JSON.parse(fs.readFileSync(`./data/users/${sender.split("@")[0]}/userhit.json`));
 
-			teks = `${design} Your commands\n${design} Delete- .reset\n${design} Total: ${_cmdhit.length}\n\n`
+			teks = `${design} Your commands\n${design} Delete- .reset\nTotal: ${_cmdhit.length}\n\n`
 			for (var cmdhit of _cmdhit) {
 			teks += `⑅ ${cmdhit}\n`
 			}
@@ -3776,7 +3305,7 @@ try {
 						return `${pad(hours)}:${pad(minutes)}:${pad(seconds)}`
 					}
 					function tanggal(){
-					myMonths = ["January","February","May","April","May","June","Juliy","August","September","October","November","December"];
+					myMonths = ["January","February","März","April","May","June","Juliy","August","September","October","November","December"];
 								myDays = ['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'];
 								var tgl = new Date();
 								var day = tgl.getDate()
@@ -4098,7 +3627,7 @@ case 'name':
 							if (err) throw err;
 						})
 					})
-								reply(`${design} 𝐶ℎ𝑎𝑛𝑔𝑒𝑑 𝑢𝑠𝑒𝑟𝑛𝑎𝑚𝑒 𝑓𝑟𝑜𝑚 *${username}* 𝑡𝑜 *${value}*\n- - - - - - - - - - - - - - - - - -\n𝑀𝑜𝑛𝑒𝑦 𝑙𝑒𝑓𝑡 ${newmoney}$\n- - - - - - - - - - - - - - - - - -\n𝑆𝑡𝑎𝑟𝐷𝑎𝑠ℎ 𝑆𝑒𝑡𝑡𝑖𝑛𝑔𝑠`)      
+								reply(`${design} 𝐶ℎ𝑎𝑛𝑔𝑒𝑑 𝑢𝑠𝑒𝑟𝑛𝑎𝑚𝑒 𝑓𝑟𝑜𝑚 *${username}* 𝑡𝑜 *${value}*\n- - - - - - - - - - - - - - - - - -\n𝑀𝑜𝑛𝑒𝑦 𝑙𝑒𝑓𝑡 ${newmoney}$\n- - - - - - - - - - - - - - - - - -\n❄️ 𝑊𝑖𝑛𝑡𝑒𝑟𝑆𝑡𝑎𝑟𝐷𝑎𝑠ℎ 𝑆𝑒𝑡𝑡𝑖𝑛𝑔𝑠`)      
 		break
 //-- changeage - Setage
 case 'changeage': 
@@ -4106,7 +3635,7 @@ case 'setage':
 case 'age':  
 		if (!isVerify) return reply(userB())	
 		if (args.length < 1) return reply(`${design} 𝑃𝑙𝑒𝑎𝑠𝑒 𝑒𝑛𝑡𝑒𝑟 𝑛𝑒𝑤 𝑎𝑔𝑒.`)
-		if (money < 30) return reply(`${design} 𝑌𝑜𝑢 𝑑𝑜𝑛𝑡 ℎ𝑎𝑣𝑒 𝑒𝑛𝑜𝑢𝑔ℎ 𝑚𝑜𝑛𝑒𝑦.\n- - - - - - - - - - - - - - - - - -\n𝑀𝑜𝑛𝑒𝑦 𝑛𝑒𝑒𝑑𝑒𝑑 30$ 𝑌𝑜𝑢𝑟 𝑚𝑜𝑛𝑒𝑦 ${money}$\n- - - - - - - - - - - - - - - - - -\n❎ 𝑡𝑎𝑟𝐷𝑎𝑠ℎ 𝑆𝑒𝑡𝑡𝑖𝑛𝑔𝑠`) 
+		if (money < 30) return reply(`${design} 𝑌𝑜𝑢 𝑑𝑜𝑛𝑡 ℎ𝑎𝑣𝑒 𝑒𝑛𝑜𝑢𝑔ℎ 𝑚𝑜𝑛𝑒𝑦.\n- - - - - - - - - - - - - - - - - -\n𝑀𝑜𝑛𝑒𝑦 𝑛𝑒𝑒𝑑𝑒𝑑 30$ 𝑌𝑜𝑢𝑟 𝑚𝑜𝑛𝑒𝑦 ${money}$\n- - - - - - - - - - - - - - - - - -\n❎ 𝑊𝑖𝑛𝑡𝑒𝑟𝑆𝑡𝑎𝑟𝐷𝑎𝑠ℎ 𝑆𝑒𝑡𝑡𝑖𝑛𝑔𝑠`) 
 
 		var money1 = Number(money);
 		var cost = Number(5);
@@ -4131,7 +3660,7 @@ case 'age':
 						})
 					})
 					await delay(1000) /// waiting 1 second.
-		reply(`${design} 𝐶ℎ𝑎𝑛𝑔𝑒𝑑 𝑎𝑔𝑒 𝑓𝑟𝑜𝑚  *${age}* 𝑡𝑜 *${value}*\n- - - - - - - - - - - - - - - - - -\n𝑀𝑜𝑛𝑒𝑦 𝑙𝑒𝑓𝑡 ${newmoney}$\n- - - - - - - - - - - - - - - - - -\n𝑆𝑡𝑎𝑟𝐷𝑎𝑠ℎ 𝑆𝑒𝑡𝑡𝑖𝑛𝑔𝑠`)
+		reply(`${design} 𝐶ℎ𝑎𝑛𝑔𝑒𝑑 𝑎𝑔𝑒 𝑓𝑟𝑜𝑚  *${age}* 𝑡𝑜 *${value}*\n- - - - - - - - - - - - - - - - - -\n𝑀𝑜𝑛𝑒𝑦 𝑙𝑒𝑓𝑡 ${newmoney}$\n- - - - - - - - - - - - - - - - - -\n❄️ 𝑊𝑖𝑛𝑡𝑒𝑟𝑆𝑡𝑎𝑟𝐷𝑎𝑠ℎ 𝑆𝑒𝑡𝑡𝑖𝑛𝑔𝑠`)
 			  
 	break
 //-- change email
@@ -4153,7 +3682,7 @@ case 'email':
 					})
 					await delay(1000) /// waiting 1 second.
 
-			reply(`${design} 𝐶ℎ𝑎𝑛𝑔𝑒𝑑 𝐸𝑚𝑎𝑖𝑙 𝑡𝑜 ${args[0]}\n- - - - - - - - - - - - - - - - - -\n𝑆𝑡𝑎𝑟𝐷𝑎𝑠ℎ 𝑀𝑎𝑖𝑙 `)
+			reply(`${design} 𝐶ℎ𝑎𝑛𝑔𝑒𝑑 𝐸𝑚𝑎𝑖𝑙 𝑡𝑜 ${args[0]}\n- - - - - - - - - - - - - - - - - -\n❄️ 𝑊𝑖𝑛𝑡𝑒𝑟𝑆𝑡𝑎𝑟𝐷𝑎𝑠ℎ 𝑀𝑎𝑖𝑙 `)
 		
 						var nodemailer = require('nodemailer');
 						var transporter = nodemailer.createTransport({
@@ -4192,7 +3721,7 @@ case 'changedesign':
 	if (!isVerify) return reply(userB())	
 	if (args.length < 1) return reply(`${design} 𝐸𝑛𝑡𝑒𝑟 𝐷𝑒𝑠𝑖𝑔𝑛 𝑜𝑟 𝑆𝑦𝑚𝑏𝑜𝑙.`)
 	if (args.length > 1) return reply(`${design} 𝐷𝑜 𝑎𝑠 𝑒𝑥𝑎𝑚𝑝𝑙𝑒: .𝑑𝑒𝑠𝑖𝑔𝑛 ✨`)
-	if (money < 20) return reply(`${design} 𝑌𝑜𝑢 𝑑𝑜𝑛𝑡 ℎ𝑎𝑣𝑒 𝑒𝑛𝑜𝑢𝑔ℎ 𝑚𝑜𝑛𝑒𝑦.\n- - - - - - - - - - - - - - - - - -\n𝑀𝑜𝑛𝑒𝑦 𝑛𝑒𝑒𝑑𝑒𝑑 25$ 𝑌𝑜𝑢𝑟 𝑚𝑜𝑛𝑒𝑦 ${money}$\n- - - - - - - - - - - - - - - - - -\n❎ 𝑡𝑎𝑟𝐷𝑎𝑠ℎ 𝑆𝑒𝑡𝑡𝑖𝑛𝑔𝑠`) 
+	if (money < 20) return reply(`${design} 𝑌𝑜𝑢 𝑑𝑜𝑛𝑡 ℎ𝑎𝑣𝑒 𝑒𝑛𝑜𝑢𝑔ℎ 𝑚𝑜𝑛𝑒𝑦.\n- - - - - - - - - - - - - - - - - -\n𝑀𝑜𝑛𝑒𝑦 𝑛𝑒𝑒𝑑𝑒𝑑 25$ 𝑌𝑜𝑢𝑟 𝑚𝑜𝑛𝑒𝑦 ${money}$\n- - - - - - - - - - - - - - - - - -\n❎ 𝑊𝑖𝑛𝑡𝑒𝑟𝑆𝑡𝑎𝑟𝐷𝑎𝑠ℎ 𝑆𝑒𝑡𝑡𝑖𝑛𝑔𝑠`) 
 	var money1 = Number(money);
 	var cost = Number(25);
 	var newmoney = money1 - cost; 
@@ -4214,7 +3743,7 @@ case 'changedesign':
 				})
 				await delay(1000) /// waiting 1 second.
  
-					reply(`${design} 𝐶ℎ𝑎𝑛𝑔𝑒𝑑 𝑑𝑒𝑠𝑖𝑔𝑛 𝑓𝑟𝑜𝑚  *${design}* 𝑡𝑜 *${value}*\n- - - - - - - - - - - - - - - - - -\n𝑀𝑜𝑛𝑒𝑦 𝑙𝑒𝑓𝑡 ${newmoney}$\n- - - - - - - - - - - - - - - - - -\n𝑆𝑡𝑎𝑟𝐷𝑎𝑠ℎ 𝑆𝑒𝑡𝑡𝑖𝑛𝑔𝑠`)					
+					reply(`${design} 𝐶ℎ𝑎𝑛𝑔𝑒𝑑 𝑑𝑒𝑠𝑖𝑔𝑛 𝑓𝑟𝑜𝑚  *${design}* 𝑡𝑜 *${value}*\n- - - - - - - - - - - - - - - - - -\n𝑀𝑜𝑛𝑒𝑦 𝑙𝑒𝑓𝑡 ${newmoney}$\n- - - - - - - - - - - - - - - - - -\n❄️ 𝑊𝑖𝑛𝑡𝑒𝑟𝑆𝑡𝑎𝑟𝐷𝑎𝑠ℎ 𝑆𝑒𝑡𝑡𝑖𝑛𝑔𝑠`)					
 		break
 //-- changeemojie
 case 'changeemojie': 
@@ -4222,7 +3751,7 @@ case 'changemojie':
 case 'setemojie':  
 	if (!isVerify) return reply(userB())	
 	if (args.length < 1) return reply(`${design} 𝑃𝑙𝑒𝑎𝑠𝑒 𝑒𝑛𝑡𝑒𝑟 𝑛𝑒𝑤 𝑒𝑚𝑜𝑗𝑖𝑒.`)
-	if (money < 20) return reply(`${design} 𝑌𝑜𝑢 𝑑𝑜𝑛𝑡 ℎ𝑎𝑣𝑒 𝑒𝑛𝑜𝑢𝑔ℎ 𝑚𝑜𝑛𝑒𝑦.\n- - - - - - - - - - - - - - - - - -\n𝑀𝑜𝑛𝑒𝑦 𝑛𝑒𝑒𝑑𝑒𝑑 25$ 𝑌𝑜𝑢𝑟 𝑚𝑜𝑛𝑒𝑦 ${money}$\n- - - - - - - - - - - - - - - - - -\n❎ 𝑆𝑡𝑎𝑟𝐷𝑎𝑠ℎ 𝑆𝑒𝑡𝑡𝑖𝑛𝑔𝑠`) 
+	if (money < 20) return reply(`${design} 𝑌𝑜𝑢 𝑑𝑜𝑛𝑡 ℎ𝑎𝑣𝑒 𝑒𝑛𝑜𝑢𝑔ℎ 𝑚𝑜𝑛𝑒𝑦.\n- - - - - - - - - - - - - - - - - -\n𝑀𝑜𝑛𝑒𝑦 𝑛𝑒𝑒𝑑𝑒𝑑 25$ 𝑌𝑜𝑢𝑟 𝑚𝑜𝑛𝑒𝑦 ${money}$\n- - - - - - - - - - - - - - - - - -\n❎ 𝑊𝑖𝑛𝑡𝑒𝑟𝑆𝑡𝑎𝑟𝐷𝑎𝑠ℎ 𝑆𝑒𝑡𝑡𝑖𝑛𝑔𝑠`) 
 	var money1 = Number(money);
 	var cost = Number(25);
 	var newmoney = money1 - cost; 
@@ -4243,7 +3772,7 @@ case 'setemojie':
 					})
 				})
 				await delay(1000) /// waiting 1 second.
-				reply(`${design} 𝐶ℎ𝑎𝑛𝑔𝑒𝑑 𝑒𝑚𝑜𝑗𝑖𝑒 𝑓𝑟𝑜𝑚 *${emojie}* 𝑡𝑜 *${value}*\n- - - - - - - - - - - - - - - - - -\n𝑀𝑜𝑛𝑒𝑦 𝑙𝑒𝑓𝑡 ${newmoney}$\n- - - - - - - - - - - - - - - - - -\n𝑆𝑡𝑎𝑟𝐷𝑎𝑠ℎ 𝑆𝑒𝑡𝑡𝑖𝑛𝑔𝑠`)  
+				reply(`${design} 𝐶ℎ𝑎𝑛𝑔𝑒𝑑 𝑒𝑚𝑜𝑗𝑖𝑒 𝑓𝑟𝑜𝑚 *${emojie}* 𝑡𝑜 *${value}*\n- - - - - - - - - - - - - - - - - -\n𝑀𝑜𝑛𝑒𝑦 𝑙𝑒𝑓𝑡 ${newmoney}$\n- - - - - - - - - - - - - - - - - -\n❄️ 𝑊𝑖𝑛𝑡𝑒𝑟𝑆𝑡𝑎𝑟𝐷𝑎𝑠ℎ 𝑆𝑒𝑡𝑡𝑖𝑛𝑔𝑠`)  
 	break
 //---X623-Whatsapp-Bot------------------------------------------------------------------------------------------------------------------------// 
 // -- Leaderboard
