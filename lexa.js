@@ -3460,7 +3460,7 @@ case 'fix':
 
 if (args.length < 1) return reply(`${design} What do you want to fix?\n- - - - - - - - - - - - - - - - - -\nOptions:\n\n.fix winner 1\n.fix winner 2\n.fix winner 3\n\n.fix location`)
 	
-if (args[0] === winner ) {
+if (args[0] === `winner` ) {
 
 	if (args.length < 2) return reply(`${design} Enter number which winner of the leaderboard you want to fix.\n- - - - - - - - - - - - - - - - - -\nExample: .fix winner 1`)
 
@@ -3471,7 +3471,7 @@ if (args[0] === winner ) {
 	});	
 	reply(`${design} Fixed winner ${args[1]}\n- - - - - - - - - - - - - - - - - -\n❎ FIX`)
 }
-else if (args[0] === location ) {
+else if (args[0] === `location` ) {
 
 
 	fs.readFile(`./data/users/${sender.split("@")[0]}/location.json`, 'utf-8', function(err, data) {
