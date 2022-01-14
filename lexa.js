@@ -1168,7 +1168,7 @@ ${design} .add
 ${design} .link
 ${design} .leave 
 ${design} .antilink
-${design} .devare
+${design} .delete
 ${design} .listonline
 ${design} .listadmin
 - - - - - - - - - - - - - - - - - - 
@@ -1194,6 +1194,7 @@ ${design} .updates
 ${design} .addpremium
 ${design} .removepremium
 ${design} .zemenu
+${design} .fix
 - - - - - - - - - - - - - - - - - - 
 𝑌𝑜𝑢𝑟 𝑀𝑜𝑛𝑒𝑦 ⌖ _${money}$_
 `)
