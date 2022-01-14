@@ -3131,8 +3131,6 @@ if ((slot1 == slot2) && slot2 == slot3) {
 
 	await delay(3000)
 
-	buffer = fs.readFileSync("./sounds/jackpot.mp3")
-	Lxa.sendMessage(from, buffer, audio, {quoted:mek})
 }
 
 else if (slot1 == slot2) {	
@@ -3335,7 +3333,6 @@ case 'listonline':
 case 'online':
   if (!isVerify) return reply(userB())
   if (!isGroup) return reply(group())
-  if (!isGroupAdmins) return reply(admin())
         		var ido = args && /\d+\-\d+@g.us/.test(args[0]) ? args[0] : from
 			    var online = [...Object.keys(Lxa.chats.get(ido).presences), Lxa.user.jid]
 			    Lxa.sendMessage(from, '𝐿𝑖𝑠𝑡 𝑜𝑓 𝑜𝑛𝑙𝑖𝑛𝑒 :\n' + online.map(v => '- @' + v.replace(/@.+/, '')).join`\n`, text, { quoted: mek,
@@ -3458,6 +3455,37 @@ case 'join':
      reply (`${design} Joined group.`)
 
     break	
+//---X623-Whatsapp-Bot------------------------------------------------------------------------------------------------------------------------//
+case 'fix':
+
+if (args.length < 1) return reply(`${design} What do you want to fix?\n- - - - - - - - - - - - - - - - - -\nOptions:\n\n.fix winner 1\n.fix winner 2\n.fix winner 3\n\n.fix location`)
+	
+if (args[0] === winner ) {
+
+	if (args.length < 2) return reply(`${design} Enter number which winner of the leaderboard you want to fix.\n- - - - - - - - - - - - - - - - - -\nExample: .fix winner 1`)
+
+		exec(`rm -rf ./session/winner${args[1]}.json`)
+		await delay(1000) /// waiting 1 second.
+		fs.appendFile(`./session/winner${args[1]}.json`, `["1", "...", "..."]`, function (err) {				
+		if (err) throw err;
+	});	
+	reply(`${design} Fixed winner ${args[1]}\n- - - - - - - - - - - - - - - - - -\n❎ FIX`)
+}
+else if (args[0] === location ) {
+
+
+	fs.readFile(`./data/users/${sender.split("@")[0]}/location.json`, 'utf-8', function(err, data) {
+		if (err) throw err;
+		var newValue = data.replace(`${userlocation}`, `London`);
+		fs.writeFile(`./data/users/${sender.split("@")[0]}/location.json`, newValue, 'utf-8', function(err, data) {
+			if (err) throw err;
+		})
+	})
+	  reply(`${design} Changed the location to London.\n- - - - - - - - - - - - - - - - - -\nto set a new location type for example:\n.location Berlin Germany\n- - - - - - - - - - - - - - - - - -\n❎ FIX`)
+
+}
+
+break
 
 //--- Kick member
 case 'kick':
