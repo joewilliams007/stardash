@@ -2785,8 +2785,12 @@ case 'shazam':
 		var hint4 = hints.term[3]
 		var hint5 = hints.term[4]
 
-		owner = await fs.readFileSync('./images/menu.jpg').toString('base64')
-		capt = `𝑆ℎ𝑎𝑧𝑎𝑚\n${design} ${username}`
+	}).catch(function (error) {
+		console.error(error);
+	});
+
+	owner = await fs.readFileSync('./images/menu.jpg').toString('base64')
+	capt = `𝑆ℎ𝑎𝑧𝑎𝑚\n${design} ${username}`
 var beenss = {
 text: `${design} 𝑆ℎ𝑎𝑧𝑎𝑚
 - - - - - - - - - - - - - - - - - - 
@@ -2801,12 +2805,8 @@ _${hint4}_
 _${hint5}_
 - - - - - - - - - - - - - - - - - -
 𝑇𝑖𝑐𝑘𝑒𝑡𝑠 𝑙𝑒𝑓𝑡 ${newtickets}`,
-	}
-	replyimg(beenss, text, capt, owner)
-
-	}).catch(function (error) {
-		console.error(error);
-	});
+}
+replyimg(beenss, text, capt, owner)
 break
 //---X623-Whatsapp-Bot------------------------------------------------------------------------------------------------------------------------// 
 case 'mylove':
