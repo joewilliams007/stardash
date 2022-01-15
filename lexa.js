@@ -2779,6 +2779,8 @@ case 'shazam':
 	
 	axios.request(options).then(function (response) {
 		console.log(response.data);
+		console.log(response.data.hints);
+		console.log(response.data.hints.term[0]);
 		var hint1 = response.data.hints.term[0]
 		var hint2 = response.data.hints.term[1]
 		var hint3 = response.data.hints.term[2]
