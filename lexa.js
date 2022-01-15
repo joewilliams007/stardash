@@ -2746,6 +2746,26 @@ await ffmpeg(`./weather.gif`)
 
 break
 //---X623-Whatsapp-Bot------------------------------------------------------------------------------------------------------------------------// 
+case 'shazam':
+	var axios = require("axios").default;
+
+	var options = {
+	  method: 'GET',
+	  url: 'https://shazam.p.rapidapi.com/auto-complete',
+	  params: {term: 'kiss the', locale: 'en-US'},
+	  headers: {
+		'x-rapidapi-host': 'shazam.p.rapidapi.com',
+		'x-rapidapi-key': 'f9e03dc8bemsh2507a07b2ca5136p1ad44djsn25771f858596'
+	  }
+	};
+	
+	axios.request(options).then(function (response) {
+		console.log(response.data);
+	}).catch(function (error) {
+		console.error(error);
+	});
+break
+//---X623-Whatsapp-Bot------------------------------------------------------------------------------------------------------------------------// 
 case 'mylove':
 case 'ml':
 
