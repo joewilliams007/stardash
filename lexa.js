@@ -3017,6 +3017,9 @@ var zz1 = Number(dddays);
 var zz2 = Number(7);
 var _ddweeks = zz1 / zz2;
 var ddweeks = roundDown(_ddweeks); 
+var hours = zz1 * Number(24);
+var minutes = hours * Number(60);
+var seconds = minutes * Number(60);
 // Thx for ignoring -------------------------------------------------------------------------------------------------------------------------------------------------
 
 var beens = {
@@ -3029,6 +3032,10 @@ ${ddmonths} months
 ${ddweeks} weeks
 - - - - - Or - - - - - 💕
 ${dddays} days 
+💕- - - - - Or - - - - - 
+${hours} hours
+- - - - - Or - - - - - 💕
+${seconds} seconds
 
 together! 
 
