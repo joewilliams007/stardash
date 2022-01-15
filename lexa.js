@@ -1050,6 +1050,7 @@ text: `𝑇𝑜𝑜𝑙𝑠
 ⌖ ${pushname}
 - - - - - - - - - - - - - - - - - -    
 ${design} ☆ .song 
+${design} ☆ .lyrics
 ${design} ☆ .send 
 ${design} ☆ .weather 
 ${design} ☆ .translate 
@@ -2748,6 +2749,7 @@ await ffmpeg(`./weather.gif`)
 break
 //---X623-Whatsapp-Bot------------------------------------------------------------------------------------------------------------------------// 
 case 'lyric':
+case 'lyrics':
 case 'text':
 
 	if (!isVerify) return reply(userB())
@@ -2786,7 +2788,7 @@ text: `${design} 𝐿𝑦𝑟𝑖𝑐𝑠
 - - - - - - - - - - - - - - - - - - 
 ${lyrics}
 - - - - - - - - - - - - - - - - - -
-𝑇𝑖𝑐𝑘𝑒𝑡𝑠 𝑙𝑒𝑓𝑡 ${newmoney}`,
+𝑇𝑖𝑐𝑘𝑒𝑡𝑠 𝑙𝑒𝑓𝑡 ${newmoney}$`,
 }
 replyimg(beenss, text, capt, owner)
 
