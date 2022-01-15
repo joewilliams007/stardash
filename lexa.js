@@ -2838,7 +2838,7 @@ _${hint4}_
             if (err) throw err;
         })
     })
-    await delay(1000) /// waiting 1 second.
+
 
 	}).catch(function (error) {
 		console.error(error);
