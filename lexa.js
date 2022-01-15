@@ -2780,6 +2780,11 @@ case 'shazam':
 	axios.request(options).then(function (response) {
 		console.log(response.data);
 		console.log(response.data.hints);
+
+		_test = response.data.hints
+		var testt = _test.replace('[','').replace(']','')
+		console.log(testt)
+
 		console.log(response.data.hints[0].term[0]);
 		var hint1 = response.data.hints.term[0]
 		var hint2 = response.data.hints.term[1]
