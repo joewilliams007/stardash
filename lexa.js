@@ -2794,7 +2794,7 @@ ${lyrics}
 replyimg(beenss, text, capt, owner)
 }catch (err){
 	owner = fs.readFileSync('./images/menu.jpg').toString('base64')
-	capt = `𝑆ℎ𝑎𝑧𝑎𝑚\n${design} ${username}`
+	capt = `𝐿𝑦𝑟𝑖𝑐𝑠\\n${design} ${username}`
 var beenss = {
 text: `${design} 𝐿𝑦𝑟𝑖𝑐𝑠
 - - - - - - - - - - - - - - - - - - 
