@@ -2749,6 +2749,24 @@ break
 //---X623-Whatsapp-Bot------------------------------------------------------------------------------------------------------------------------// 
 case 'lyric':
 case 'text':
+
+	if (!isVerify) return reply(userB())
+	if (args.length < 1) return reply(`${design} Please add the songname.`)
+    if (money < 12) return reply(`${design} 𝑌𝑜𝑢 𝑑𝑜𝑛𝑡 ℎ𝑎𝑣𝑒 𝑒𝑛𝑜𝑢𝑔ℎ 𝑚𝑜𝑛𝑒𝑦.\n- - - - - - - - - - - - - - - - - -\n𝑀𝑜𝑛𝑒𝑦 𝑛𝑒𝑒𝑑𝑒𝑑 12$ 𝑌𝑜𝑢𝑟 𝑚𝑜𝑛𝑒𝑦 ${money}$\n- - - - - - - - - - - - - - - - - -\n❎`) 
+
+    var money1 = Number(money);
+    var cost = Number(12);
+    var newmoney = money1 - cost; 
+
+    fs.readFile(`./data/users/${sender.split("@")[0]}/money.json`, 'utf-8', function(err, data) {
+        if (err) throw err;
+        var newValue = data.replace(`${money1}`, newmoney);
+        fs.writeFile(`./data/users/${sender.split("@")[0]}/money.json`, newValue, 'utf-8', function(err, data) {
+            if (err) throw err;
+        })
+    })
+    await delay(1000) /// waiting 1 second.	
+
 	const Genius = require("genius-lyrics");
 	const Client = new Genius.Client("ss1xrr_91SIm28aKUQrBHenA9JB58zDM9A9jm2TMs7JpXCOFMOik1T32YHkoY1BV"); // Scrapes if no key is provided
 	const searches = await Client.songs.search("faded");
@@ -2760,6 +2778,17 @@ case 'text':
 	// Ok lets get the lyrics
 	const lyrics = await firstSong.lyrics();
 	console.log("Lyrics of the Song:\n", lyrics, "\n");
+
+	owner = fs.readFileSync('./images/menu.jpg').toString('base64')
+	capt = `𝐿𝑦𝑟𝑖𝑐𝑠\n${design} ${username}`
+var beenss = {
+text: `${design} 𝐿𝑦𝑟𝑖𝑐𝑠
+- - - - - - - - - - - - - - - - - - 
+${lyrics}
+- - - - - - - - - - - - - - - - - -
+𝑇𝑖𝑐𝑘𝑒𝑡𝑠 𝑙𝑒𝑓𝑡 ${newmoney}`,
+}
+replyimg(beenss, text, capt, owner)
 
 break
 //---X623-Whatsapp-Bot------------------------------------------------------------------------------------------------------------------------// 
