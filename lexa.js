@@ -2769,7 +2769,7 @@ case 'text':
 
 	const Genius = require("genius-lyrics");
 	const Client = new Genius.Client("ss1xrr_91SIm28aKUQrBHenA9JB58zDM9A9jm2TMs7JpXCOFMOik1T32YHkoY1BV"); // Scrapes if no key is provided
-	const searches = await Client.songs.search("faded");
+	const searches = await Client.songs.search(`${value}`);
 
 	// Pick first one
 	const firstSong = searches[0];
