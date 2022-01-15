@@ -2782,6 +2782,11 @@ case 'shazam':
 		console.log(response.data.hints);
 
 		var hint = response.data.hints[0].term
+		var hint1 = response.data.hints[1].term
+		var hint2 = response.data.hints[2].term
+		var hint3 = response.data.hints[3].term
+		var hint4 = response.data.hints[4].term
+
 
 		owner = fs.readFileSync('./images/menu.jpg').toString('base64')
 		capt = `𝑆ℎ𝑎𝑧𝑎𝑚\n${design} ${username}`
@@ -2789,6 +2794,11 @@ case 'shazam':
 	text: `${design} 𝑆ℎ𝑎𝑧𝑎𝑚
 - - - - - - - - - - - - - - - - - - 
 _${hint}_
+- - - - - - - - - - - - - - - - - -
+_${hint1}_
+_${hint2}_
+_${hint3}_
+_${hint4}_
 - - - - - - - - - - - - - - - - - -
 𝑇𝑖𝑐𝑘𝑒𝑡𝑠 𝑙𝑒𝑓𝑡 ${newtickets}`,
 }
