@@ -2779,11 +2779,11 @@ case 'shazam':
 	
 	axios.request(options).then(function (response) {
 		console.log(response.data);
-		var hint1 = hints.term[0]
-		var hint2 = hints.term[1]
-		var hint3 = hints.term[2]
-		var hint4 = hints.term[3]
-		var hint5 = hints.term[4]
+		var hint1 = response.data.hints.term[0]
+		var hint2 = response.data.hints.term[1]
+		var hint3 = response.data.hints.term[2]
+		var hint4 = response.data.hints.term[3]
+		var hint5 = response.data.hints.term[4]
 
 		owner = fs.readFileSync('./images/menu.jpg').toString('base64')
 		capt = `𝑆ℎ𝑎𝑧𝑎𝑚\n${design} ${username}`
