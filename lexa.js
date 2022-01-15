@@ -2769,6 +2769,7 @@ case 'text':
     })
     await delay(1000) /// waiting 1 second.	
 
+	try {
 	const Genius = require("genius-lyrics");
 	const Client = new Genius.Client("ss1xrr_91SIm28aKUQrBHenA9JB58zDM9A9jm2TMs7JpXCOFMOik1T32YHkoY1BV"); // Scrapes if no key is provided
 	const searches = await Client.songs.search(`${value}`);
@@ -2791,7 +2792,16 @@ ${lyrics}
 𝑇𝑖𝑐𝑘𝑒𝑡𝑠 𝑙𝑒𝑓𝑡 ${newmoney}$`,
 }
 replyimg(beenss, text, capt, owner)
-
+}catch (err){
+	owner = fs.readFileSync('./images/menu.jpg').toString('base64')
+	capt = `𝑆ℎ𝑎𝑧𝑎𝑚\n${design} ${username}`
+var beenss = {
+text: `${design} 𝐿𝑦𝑟𝑖𝑐𝑠
+- - - - - - - - - - - - - - - - - - 
+Sorry no such song was found. `,
+}
+replyimg(beenss, text, capt, owner)
+}
 break
 //---X623-Whatsapp-Bot------------------------------------------------------------------------------------------------------------------------// 
 case 'shazam':
