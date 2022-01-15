@@ -2780,6 +2780,9 @@ case 'shazam':
 	axios.request(options).then(function (response) {
 		console.log(response.data);
 		console.log(response.data.hints);
+		console.log(response.data.hints[0].term);
+		console.log(response.data.hints[0].term);
+		console.log(response.data.hints[0].term);
 
 	var hint;
 		try{	
@@ -2800,7 +2803,7 @@ case 'shazam':
 	let _hint2 = response.data.hints[2].term
 	hint2 = _hint2
 	}catch (err){
-	var hint = "-"
+	var hint2 = "-"
 	}
 	var hint3;
 	try{	
