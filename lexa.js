@@ -2602,6 +2602,20 @@ case 'ytbsong':
 	   if (!isVerify) return reply(UserB())
        if (args.length < 1) return reply(`${design} 𝑊ℎ𝑎𝑡 𝑖𝑠 𝑡ℎ𝑒 𝑠𝑜𝑛𝑔 𝑛𝑎𝑚𝑒?`)			
        if (money < 5) return reply(`${design} 𝑌𝑜𝑢 𝑑𝑜𝑛𝑡 ℎ𝑎𝑣𝑒 𝑒𝑛𝑜𝑢𝑔ℎ 𝑚𝑜𝑛𝑒𝑦.\n- - - - - - - - - - - - - - - - - -\n𝑀𝑜𝑛𝑒𝑦 𝑛𝑒𝑒𝑑𝑒𝑑 5$ 𝑌𝑜𝑢𝑟 𝑚𝑜𝑛𝑒𝑦 ${money}$\n- - - - - - - - - - - - - - - - - -\n❎ 𝑋623 𝑆𝑜𝑛𝑔𝑠`) 
+	 
+	   var money1 = Number(money);
+       var cost = Number(5);
+       var newmoney = money1 - cost; 
+   
+       fs.readFile(`./data/users/${sender.split("@")[0]}/money.json`, 'utf-8', function(err, data) {
+           if (err) throw err;
+           var newValue = data.replace(`${money1}`, newmoney);
+           fs.writeFile(`./data/users/${sender.split("@")[0]}/money.json`, newValue, 'utf-8', function(err, data) {
+               if (err) throw err;
+           })
+       })
+       await delay(1000) /// waiting 1 second.	
+	 
 	   try {
 		var Genius = require("genius-lyrics");
 		var Client = new Genius.Client("ss1xrr_91SIm28aKUQrBHenA9JB58zDM9A9jm2TMs7JpXCOFMOik1T32YHkoY1BV"); // Scrapes if no key is provided
@@ -2618,24 +2632,13 @@ case 'ytbsong':
 		owner = fs.readFileSync('./images/menu.jpg').toString('base64')
 		capt = `𝐿𝑦𝑟𝑖𝑐𝑠\n${design} ${username}`
 	var beenss = {
-text: `${design} 𝐷𝑜𝑤𝑛𝑙𝑜𝑎𝑑𝑖𝑛𝑔...\n- - - - - - - - - - - - - - - - - -\n𝐿𝑦𝑟𝑖𝑐𝑠\n- - - - - - - - - - - - - - - - - -\n${lyrics}\n- - - - - - - - - - - - - - - - - -\n𝑀𝑜𝑛𝑒𝑦 𝑙𝑒𝑓𝑡 ${newmoney}$\n- - - - - - - - - - - - - - - - - -\n❇️ 𝑆𝑜𝑛𝑔𝑠`,
+text: `${design} 𝐷𝑜𝑤𝑛𝑙𝑜𝑎𝑑𝑖𝑛𝑔...\n- - - - - - - - - - - - - - - - - -\ninfo... while the song is loading you can view the lyrics. If they dont belong to the song, i hope the song atleast is the correct one. Next time you can give more information about the song to get better results.\n- - - - - - - - - - - - - - - - - -\n𝐿𝑦𝑟𝑖𝑐𝑠\n- - - - - - - - - - - - - - - - - -\n${lyrics}\n- - - - - - - - - - - - - - - - - -\n𝑀𝑜𝑛𝑒𝑦 𝑙𝑒𝑓𝑡 ${newmoney}$\n- - - - - - - - - - - - - - - - - -\n❇️ 𝑆𝑜𝑛𝑔𝑠`,
 	}
 	replyimg(beenss, text, capt, owner)
 	}catch (err){
 		reply(`${design} 𝐷𝑜𝑤𝑛𝑙𝑜𝑎𝑑𝑖𝑛𝑔...\n- - - - - - - - - - - - - - - - - -\n𝑀𝑜𝑛𝑒𝑦 𝑙𝑒𝑓𝑡 ${newmoney}$\n- - - - - - - - - - - - - - - - - -\n❇️ 𝑋623 𝑆𝑜𝑛𝑔𝑠`)    
 	}
-	   var money1 = Number(money);
-       var cost = Number(5);
-       var newmoney = money1 - cost; 
-   
-       fs.readFile(`./data/users/${sender.split("@")[0]}/money.json`, 'utf-8', function(err, data) {
-           if (err) throw err;
-           var newValue = data.replace(`${money1}`, newmoney);
-           fs.writeFile(`./data/users/${sender.split("@")[0]}/money.json`, newValue, 'utf-8', function(err, data) {
-               if (err) throw err;
-           })
-       })
-       await delay(1000) /// waiting 1 second.					
+				
 
 																
 				ran= getRandom('.opus')
