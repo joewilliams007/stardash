@@ -1058,6 +1058,7 @@ ${design} ☆ .calc
 ${design} ☆ .rsong
 ${design} ☆ .ddate
 ${design} ☆ .mylove
+${design} .shazam
 ${design} .note
 ${design} .wame
 ${design} .wish
@@ -2847,7 +2848,8 @@ _${hint4}_
 	var beenss = {
 	text: `${design} 𝑆ℎ𝑎𝑧𝑎𝑚
 - - - - - - - - - - - - - - - - - - 
-Sorry no song was found. Your ticket will be refunded.`,
+Sorry no song was found. 
+Your ticket will be refunded.`,
 }
 	replyimg(beenss, text, capt, owner)
 	});
