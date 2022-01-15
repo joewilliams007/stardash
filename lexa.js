@@ -2781,34 +2781,17 @@ case 'shazam':
 		console.log(response.data);
 		console.log(response.data.hints);
 
-		_test = response.data.hints
-		var testt = _test.replace('[','').replace(']','')
-		console.log(testt)
-
-		console.log(response.data.hints[0].term[0]);
-		var hint1 = response.data.hints.term[0]
-		var hint2 = response.data.hints.term[1]
-		var hint3 = response.data.hints.term[2]
-		var hint4 = response.data.hints.term[3]
-		var hint5 = response.data.hints.term[4]
+		var hint = response.data.hints
 
 		owner = fs.readFileSync('./images/menu.jpg').toString('base64')
 		capt = `𝑆ℎ𝑎𝑧𝑎𝑚\n${design} ${username}`
 	var beenss = {
 	text: `${design} 𝑆ℎ𝑎𝑧𝑎𝑚
-	- - - - - - - - - - - - - - - - - - 
-	_${hint1}_
-	- - - - - - - - - - - - - - - - - -
-	_${hint2}_
-	- - - - - - - - - - - - - - - - - -
-	_${hint3}_
-	- - - - - - - - - - - - - - - - - -
-	_${hint4}_
-	- - - - - - - - - - - - - - - - - -
-	_${hint5}_
-	- - - - - - - - - - - - - - - - - -
-	𝑇𝑖𝑐𝑘𝑒𝑡𝑠 𝑙𝑒𝑓𝑡 ${newtickets}`,
-	}
+- - - - - - - - - - - - - - - - - - 
+_${hint}_
+- - - - - - - - - - - - - - - - - -
+𝑇𝑖𝑐𝑘𝑒𝑡𝑠 𝑙𝑒𝑓𝑡 ${newtickets}`,
+}
 	replyimg(beenss, text, capt, owner)
 
 	}).catch(function (error) {
