@@ -2747,12 +2747,30 @@ await ffmpeg(`./weather.gif`)
 break
 //---X623-Whatsapp-Bot------------------------------------------------------------------------------------------------------------------------// 
 case 'shazam':
+
+	if (!isVerify) return reply(userB())
+	if (args.length < 1) return reply(`${design} Please add the lyrics you can think off.`)
+	if (tickets < 1) return reply(`${design} 𝑁𝑜𝑡 𝑒𝑛𝑜𝑢𝑔ℎ 𝑇𝑖𝑐𝑘𝑒𝑡𝑠. ⌖ .claim`)
+
+    var tickets1 = Number(tickets)
+    var plus = Number(1);
+    var newtickets = tickets1 - plus; 
+
+    fs.readFile(`./data/users/${sender.split("@")[0]}/tickets.json`, 'utf-8', function(err, data) {
+        if (err) throw err;
+        var newValue = data.replace(`${tickets1}`, newtickets);
+        fs.writeFile(`./data/users/${sender.split("@")[0]}/tickets.json`, newValue, 'utf-8', function(err, data) {
+            if (err) throw err;
+        })
+    })
+    await delay(1000) /// waiting 1 second.
+
 	var axios = require("axios").default;
 
 	var options = {
 	  method: 'GET',
 	  url: 'https://shazam.p.rapidapi.com/auto-complete',
-	  params: {term: 'kiss the', locale: 'en-US'},
+	  params: {term: `${value}`, locale: 'en-US'},
 	  headers: {
 		'x-rapidapi-host': 'shazam.p.rapidapi.com',
 		'x-rapidapi-key': 'f9e03dc8bemsh2507a07b2ca5136p1ad44djsn25771f858596'
@@ -2761,6 +2779,31 @@ case 'shazam':
 	
 	axios.request(options).then(function (response) {
 		console.log(response.data);
+		var hint1 = hints.term[0]
+		var hint2 = hints.term[1]
+		var hint3 = hints.term[2]
+		var hint4 = hints.term[3]
+		var hint5 = hints.term[4]
+
+		owner = await fs.readFileSync('./images/menu.jpg').toString('base64')
+		capt = `𝑆ℎ𝑎𝑧𝑎𝑚\n${design} ${username}`
+var beenss = {
+text: `${design} 𝑆ℎ𝑎𝑧𝑎𝑚
+- - - - - - - - - - - - - - - - - - 
+_${hint1}_
+- - - - - - - - - - - - - - - - - -
+_${hint2}_
+- - - - - - - - - - - - - - - - - -
+_${hint3}_
+- - - - - - - - - - - - - - - - - -
+_${hint4}_
+- - - - - - - - - - - - - - - - - -
+_${hint5}_
+- - - - - - - - - - - - - - - - - -
+𝑇𝑖𝑐𝑘𝑒𝑡𝑠 𝑙𝑒𝑓𝑡 ${newtickets}`,
+	}
+	replyimg(beenss, text, capt, owner)
+
 	}).catch(function (error) {
 		console.error(error);
 	});
