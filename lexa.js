@@ -2842,6 +2842,14 @@ _${hint4}_
 
 	}).catch(function (error) {
 		console.error(error);
+		owner = fs.readFileSync('./images/menu.jpg').toString('base64')
+		capt = `𝑆ℎ𝑎𝑧𝑎𝑚\n${design} ${username}`
+	var beenss = {
+	text: `${design} 𝑆ℎ𝑎𝑧𝑎𝑚
+- - - - - - - - - - - - - - - - - - 
+Sorry no song was found. Your ticket will be refunded.`,
+}
+	replyimg(beenss, text, capt, owner)
 	});
 
 
