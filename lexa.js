@@ -2747,6 +2747,29 @@ await ffmpeg(`./weather.gif`)
 
 break
 //---X623-Whatsapp-Bot------------------------------------------------------------------------------------------------------------------------// 
+case 'lyric':
+case 'text':
+
+var axios = require("axios").default;
+
+var options = {
+  method: 'GET',
+  url: 'https://sridurgayadav-chart-lyrics-v1.p.rapidapi.com/apiv1.asmx/SearchLyricDirect',
+  params: {artist: 'michael jackson', song: 'bad'},
+  headers: {
+    'x-rapidapi-host': 'sridurgayadav-chart-lyrics-v1.p.rapidapi.com',
+    'x-rapidapi-key': 'f9e03dc8bemsh2507a07b2ca5136p1ad44djsn25771f858596'
+  }
+};
+
+axios.request(options).then(function (response) {
+	console.log(response.data);
+}).catch(function (error) {
+	console.error(error);
+});
+
+break
+//---X623-Whatsapp-Bot------------------------------------------------------------------------------------------------------------------------// 
 case 'shazam':
 
 	if (!isVerify) return reply(userB())
