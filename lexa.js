@@ -2749,24 +2749,17 @@ break
 //---X623-Whatsapp-Bot------------------------------------------------------------------------------------------------------------------------// 
 case 'lyric':
 case 'text':
+	const Genius = require("genius-lyrics");
+	const Client = new Genius.Client("top-secret-optional-key"); // Scrapes if no key is provided
+	const searches = await Client.songs.search("faded");
 
-var axios = require("axios").default;
-
-var options = {
-  method: 'GET',
-  url: 'https://sridurgayadav-chart-lyrics-v1.p.rapidapi.com/apiv1.asmx/SearchLyricDirect',
-  params: {artist: 'michael jackson', song: 'bad'},
-  headers: {
-    'x-rapidapi-host': 'sridurgayadav-chart-lyrics-v1.p.rapidapi.com',
-    'x-rapidapi-key': 'f9e03dc8bemsh2507a07b2ca5136p1ad44djsn25771f858596'
-  }
-};
-
-axios.request(options).then(function (response) {
-	console.log(response.data);
-}).catch(function (error) {
-	console.error(error);
-});
+	// Pick first one
+	const firstSong = searches[0];
+	console.log("About the Song:\n", firstSong, "\n");
+	
+	// Ok lets get the lyrics
+	const lyrics = await firstSong.lyrics();
+	console.log("Lyrics of the Song:\n", lyrics, "\n");
 
 break
 //---X623-Whatsapp-Bot------------------------------------------------------------------------------------------------------------------------// 
