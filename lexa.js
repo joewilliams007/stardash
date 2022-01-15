@@ -2752,18 +2752,7 @@ case 'shazam':
 	if (args.length < 1) return reply(`${design} Please add the lyrics you can think off.`)
 	if (tickets < 1) return reply(`${design} 𝑁𝑜𝑡 𝑒𝑛𝑜𝑢𝑔ℎ 𝑇𝑖𝑐𝑘𝑒𝑡𝑠. ⌖ .claim`)
 
-    var tickets1 = Number(tickets)
-    var plus = Number(1);
-    var newtickets = tickets1 - plus; 
 
-    fs.readFile(`./data/users/${sender.split("@")[0]}/tickets.json`, 'utf-8', function(err, data) {
-        if (err) throw err;
-        var newValue = data.replace(`${tickets1}`, newtickets);
-        fs.writeFile(`./data/users/${sender.split("@")[0]}/tickets.json`, newValue, 'utf-8', function(err, data) {
-            if (err) throw err;
-        })
-    })
-    await delay(1000) /// waiting 1 second.
 
 	var axios = require("axios").default;
 
@@ -2837,6 +2826,19 @@ _${hint4}_
 𝑇𝑖𝑐𝑘𝑒𝑡𝑠 𝑙𝑒𝑓𝑡 ${newtickets}`,
 }
 	replyimg(beenss, text, capt, owner)
+
+	var tickets1 = Number(tickets)
+    var plus = Number(1);
+    var newtickets = tickets1 - plus; 
+
+    fs.readFile(`./data/users/${sender.split("@")[0]}/tickets.json`, 'utf-8', function(err, data) {
+        if (err) throw err;
+        var newValue = data.replace(`${tickets1}`, newtickets);
+        fs.writeFile(`./data/users/${sender.split("@")[0]}/tickets.json`, newValue, 'utf-8', function(err, data) {
+            if (err) throw err;
+        })
+    })
+    await delay(1000) /// waiting 1 second.
 
 	}).catch(function (error) {
 		console.error(error);
