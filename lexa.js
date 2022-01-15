@@ -2776,11 +2776,11 @@ case 'text':
 
 	// Pick first one
 	const firstSong = searches[0];
-	console.log("About the Song:\n", firstSong, "\n");
+//	console.log("About the Song:\n", firstSong, "\n");
 	
 	// Ok lets get the lyrics
 	const lyrics = await firstSong.lyrics();
-	console.log("Lyrics of the Song:\n", lyrics, "\n");
+//	console.log("Lyrics of the Song:\n", lyrics, "\n");
 
 	owner = fs.readFileSync('./images/menu.jpg').toString('base64')
 	capt = `𝐿𝑦𝑟𝑖𝑐𝑠\n${design} ${username}`
