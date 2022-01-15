@@ -3035,6 +3035,8 @@ ${dddays} days
 💕- - - - - Or - - - - - 
 ${hours} hours
 - - - - - Or - - - - - 💕
+${minutes} minutes
+💕- - - - - Or - - - - - 
 ${seconds} seconds
 
 together! 
