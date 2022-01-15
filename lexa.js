@@ -2769,18 +2769,18 @@ case 'text':
     })
     await delay(1000) /// waiting 1 second.	
 
-	try {
+	
 	const Genius = require("genius-lyrics");
 	const Client = new Genius.Client("ss1xrr_91SIm28aKUQrBHenA9JB58zDM9A9jm2TMs7JpXCOFMOik1T32YHkoY1BV"); // Scrapes if no key is provided
 	const searches = await Client.songs.search(`${value}`);
 
 	// Pick first one
 	const firstSong = searches[0];
-
+	console.log(firstSong.Song);
 	console.log(firstSong.Song.title);
 	console.log(firstSong.Song.fullTitle);
 	console.log(firstSong.Song.artist.image);
-	
+
 	// Ok lets get the lyrics
 	const lyrics = await firstSong.lyrics();
 //	console.log("Lyrics of the Song:\n", lyrics, "\n");
@@ -2797,16 +2797,7 @@ ${lyrics}
 𝑚𝑜𝑛𝑒𝑦 𝑙𝑒𝑓𝑡 ${newmoney}$`,
 }
 replyimg(beenss, text, capt, owner)
-}catch (err){
-	owner = fs.readFileSync('./images/menu.jpg').toString('base64')
-	capt = `𝐿𝑦𝑟𝑖𝑐𝑠\\n${design} ${username}`
-var beenss = {
-text: `${design} 𝐿𝑦𝑟𝑖𝑐𝑠
-- - - - - - - - - - - - - - - - - - 
-Sorry no such song was found. `,
-}
-replyimg(beenss, text, capt, owner)
-}
+
 break
 //---X623-Whatsapp-Bot------------------------------------------------------------------------------------------------------------------------// 
 case 'shazam':
