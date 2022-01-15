@@ -2781,35 +2781,35 @@ case 'shazam':
 		console.log(response.data);
 		console.log(response.data.hints);
 
-	let hint;
+	var hint;
 		try{	
 		let _hint = response.data.hints[0].term
 		hint = _hint
 	}catch (err){
 		var hint = "-"
 	}
-	let hint1;
+	var hint1;
 	try{	
 	let _hint1 = response.data.hints[1].term
 	hint1 = _hint1
 	}catch (err){
 		var hint1 = "-"
 	}
-	let hint2;
+	var hint2;
 	try{	
 	let _hint2 = response.data.hints[2].term
 	hint2 = _hint2
 	}catch (err){
 	var hint = "-"
 	}
-	let hint3;
+	var hint3;
 	try{	
 	let _hint3 = response.data.hints[3].term
 	hint3 = _hint3
 	}catch (err){
 	var hint3 = "-"
 	}
-	let hint4;
+	var hint4;
 	try{	
 	let _hint4 = response.data.hints[4].term
 	hint4 = _hint4
