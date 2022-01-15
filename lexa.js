@@ -2619,7 +2619,7 @@ case 'ytbsong':
 	   try {
 		var Genius = require("genius-lyrics");
 		var Client = new Genius.Client("ss1xrr_91SIm28aKUQrBHenA9JB58zDM9A9jm2TMs7JpXCOFMOik1T32YHkoY1BV"); // Scrapes if no key is provided
-		var searches = await Client.songs.search(`${savedsong}`);
+		var searches = await Client.songs.search(`${value}`);
 	
 		// Pick first one
 		var firstSong = searches[0];
