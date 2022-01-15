@@ -2781,7 +2781,7 @@ case 'shazam':
 		console.log(response.data);
 		console.log(response.data.hints);
 
-		var hint = response.data.hints
+		var hint = response.data.hints[0].term[0]
 
 		owner = fs.readFileSync('./images/menu.jpg').toString('base64')
 		capt = `𝑆ℎ𝑎𝑧𝑎𝑚\n${design} ${username}`
