@@ -2776,7 +2776,10 @@ case 'text':
 
 	// Pick first one
 	const firstSong = searches[0];
-//	console.log("About the Song:\n", firstSong, "\n");
+
+	console.log(firstSong.Song.title);
+	console.log(firstSong.Song.fullTitle);
+	console.log(firstSong.Song.artist.image);
 	
 	// Ok lets get the lyrics
 	const lyrics = await firstSong.lyrics();
@@ -2787,8 +2790,10 @@ case 'text':
 var beenss = {
 text: `${design} 𝐿𝑦𝑟𝑖𝑐𝑠
 - - - - - - - - - - - - - - - - - - 
+
+- - - - - - - - - - - - - - - - - - 
 ${lyrics}
-- - - - - - - - - - - - - - - - - -
+- - - - - - - - - - - - - - - - - - 
 𝑚𝑜𝑛𝑒𝑦 𝑙𝑒𝑓𝑡 ${newmoney}$`,
 }
 replyimg(beenss, text, capt, owner)
