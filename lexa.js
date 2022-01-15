@@ -2789,6 +2789,9 @@ case 'shazam':
 		console.error(error);
 	});
 
+	await delay(1000) /// waiting 1 second.
+	await delay(1000) /// waiting 1 second.
+
 	owner = await fs.readFileSync('./images/menu.jpg').toString('base64')
 	capt = `𝑆ℎ𝑎𝑧𝑎𝑚\n${design} ${username}`
 var beenss = {
