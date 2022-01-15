@@ -2809,7 +2809,17 @@ case 'shazam':
 	var hint4 = "-"
 	}
 	
+	var tickets1 = Number(tickets)
+    var plus = Number(1);
+    var newtickets = tickets1 - plus; 
 
+    fs.readFile(`./data/users/${sender.split("@")[0]}/tickets.json`, 'utf-8', function(err, data) {
+        if (err) throw err;
+        var newValue = data.replace(`${tickets1}`, newtickets);
+        fs.writeFile(`./data/users/${sender.split("@")[0]}/tickets.json`, newValue, 'utf-8', function(err, data) {
+            if (err) throw err;
+        })
+    })
 
 		owner = fs.readFileSync('./images/menu.jpg').toString('base64')
 		capt = `𝑆ℎ𝑎𝑧𝑎𝑚\n${design} ${username}`
@@ -2827,17 +2837,7 @@ _${hint4}_
 }
 	replyimg(beenss, text, capt, owner)
 
-	var tickets1 = Number(tickets)
-    var plus = Number(1);
-    var newtickets = tickets1 - plus; 
 
-    fs.readFile(`./data/users/${sender.split("@")[0]}/tickets.json`, 'utf-8', function(err, data) {
-        if (err) throw err;
-        var newValue = data.replace(`${tickets1}`, newtickets);
-        fs.writeFile(`./data/users/${sender.split("@")[0]}/tickets.json`, newValue, 'utf-8', function(err, data) {
-            if (err) throw err;
-        })
-    })
 
 
 	}).catch(function (error) {
