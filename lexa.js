@@ -1104,6 +1104,7 @@ ${design} ☆ .send
 ${design} ☆ .weather 
 ${design} ☆ .translate 
 ${design} ☆ .calc 
+${design} ☆ .qrcode
 - - - - - - - - - - - - - - - - - - 
 ${design} ☆ .command
 ${design} ☆ .rsong
@@ -1630,13 +1631,7 @@ case 'smiley':
   if (!isVerify) return reply(userB())
   const emoji = _emoji[Math.floor(Math.random() * _emoji.length)]
   reply(`${design} 𝑌𝑜𝑢𝑟 𝑒𝑚𝑜𝑗𝑖𝑒\n${emoji}`)
-break
-//-- link whatsapp
-case 'wame':
-case 'mylink':
-  if (!isVerify) return reply(userB())
-reply(`${design} wa.me/${sender.split('@')[0]}`)
-			break				
+break			
 //-- Aussprache wiederholen
 case 'say':
 case 'sag':
@@ -1980,13 +1975,15 @@ break
 //-- Qr code
 case 'qrcode':
 case 'qr':
+case 'wa.me':
+	case 'wame':
 if (args.length > 1) {	
 	var poot = `${args[0]}`
-	var pooty = `${design} Your personal QR code with the text ${args[0]}\n- - - - - - - - - - - - - - - - - -\n✅ :)`
+	var pooty = `${design} Your personal QR code with the text ${args[0]}\n- - - - - - - - - - - - - - - - - -\n_Tipp: ${tipp}_\n- - - - - - - - - - - - - - - - - -\n✅ :)`
 }
 else {
 	var poot = `https://wa.me/${sender.split("@")[0]}`
-	var pooty = `${design} Your personal QR code with a link to your Whatsapp Chat\n- - - - - - - - - - - - - - - - - -\n✅ :)`
+	var pooty = `${design} Your personal QR code with a link to your Whatsapp Chat\n- - - - - - - - - - - - - - - - - -\nhttps://wa.me/${sender.split("@")[0]}\n- - - - - - - - - - - - - - - - - -\n_Tipp: ${tipp}_\n- - - - - - - - - - - - - - - - - -\n✅ :)`
 }
 
 
