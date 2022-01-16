@@ -2796,13 +2796,15 @@ case 'quote':
 
 	const Quotes = require("randomquote-api");
 
-	if (args.length < 1) {
+try {
+
+if (args.length < 1) {
 
 // To get one random Quote you do
 const randomquote = Quotes.randomQuote();
 console.log(randomquote);
 
-try {
+
 reply(`${design} Random Quote
 - - - - - - - - - - - - - - - - - -		
 ${randomquote}`)
@@ -2818,7 +2820,7 @@ reply(`${design} Random Quote
 - - - - - - - - - - - - - - - - - -		
 ${getbyauthor}`)
 	} catch {
-		
+
 	}
 
 break
