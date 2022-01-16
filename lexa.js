@@ -2772,7 +2772,7 @@ case 'ytbsong':
 		owner = fs.readFileSync('./images/menu.jpg').toString('base64')
 		capt = `𝐿𝑦𝑟𝑖𝑐𝑠\n${design} ${username}`
 	var beenss = {
-text: `${design} 𝐷𝑜𝑤𝑛𝑙𝑜𝑎𝑑𝑖𝑛𝑔...\n- - - - - - - - - - - - - - - - - -\ninfo- while the song is loading you can view the lyrics. If they dont belong to the song, i hope the song atleast is the correct one. Next time you can give more information about the song to get better results. Huge thanks to the genius lyric API and the yt-dlp team for making this possible. Also a big shoutout to the song creaters though. Have fun enoying the song!\n- - - - - - - - - - - - - - - - - -\n𝐿𝑦𝑟𝑖𝑐𝑠\n- - - - - - - - - - - - - - - - - -\n${lyrics}\n- - - - - - - - - - - - - - - - - -\n_cost: 25$_\n_.cheapsong (cost 4$)_\n- - - - - - - - - - - - - - - - - -\n𝑀𝑜𝑛𝑒𝑦 𝑙𝑒𝑓𝑡 ${newmoney}$\n- - - - - - - - - - - - - - - - - -\n❇️ 𝑆𝑜𝑛𝑔𝑠`,
+text: `${design} 𝐷𝑜𝑤𝑛𝑙𝑜𝑎𝑑𝑖𝑛𝑔...\n- - - - - - - - - - - - - - - - - -\ninfo- while the song is loading you can view the lyrics. If they dont belong to the song, i hope the song atleast is the correct one. Next time you can give more information about the song to get better results. Huge thanks to the genius lyric API and the yt-dlp team for making this possible. Also a big shoutout to the song creaters though. Have fun enoying the song!\n- - - - - - - - - - - - - - - - - -\n𝐿𝑦𝑟𝑖𝑐𝑠\n- - - - - - - - - - - - - - - - - -\n${lyrics}\n- - - - - - - - - - - - - - - - - -\n_cost: 25$_\n_.cheapsong (cost 4$)_\n- - - - - - - - - - - - - - - - - -\n𝑀𝑜𝑛𝑒𝑦 𝑙𝑒𝑓𝑡 ${newmoney}$\n- - - - - - - - - - - - - - - - - -\n❇️  _Premium Songs_`,
 	}
 	replyimg(beenss, text, capt, owner)
 	}catch (err){
