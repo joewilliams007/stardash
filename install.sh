@@ -1,19 +1,20 @@
 #!/usr/bin/bash
-
-apt install termux-api
-apt-get install nodejs
+apt update -y
+apt upgrade -y
+apt install termux-api -y
+apt-get install nodejs -y
 echo "Installed Node-JS"
-apt-get install libwebp
-apt-get install ffmpeg
+apt-get install libwebp -y
+apt-get install ffmpeg -y
 echo "Installed ffmpeg for amazing filters"
-apt-get install wget
-apt-get install curl
-apt-get install tesseract
-apt-get install mmv
-apt-get install python
-apt-get install pip
-apt-get install graphicsmagick
-apt-get install sox pulseaudio
+apt-get install wget -y
+apt-get install curl -y
+apt-get install tesseract -y
+apt-get install mmv -y
+apt-get install python -y
+apt-get install pip -y
+apt-get install graphicsmagick -y
+apt-get install sox pulseaudio -y
 
 wget -O ~/../usr/share/tessdata/ind.traineddata "https://github.com/tesseract-ocr/tessdata/blob/master/ind.traineddata?raw=true"
 
