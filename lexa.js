@@ -552,7 +552,20 @@ try{
 	}catch (err){
 		
 	}
-	
+	let commanduser;
+	try{	
+	let _commanduser = JSON.parse(fs.readFileSync(`./data/users/${sender.split("@")[0]}/commanduser.json`));
+	commanduser = _commanduser[0]	//--- commanduser
+	}catch (err){
+		
+	}
+	let commandtext;
+	try{	
+	let _commandtext = JSON.parse(fs.readFileSync(`./data/users/${sender.split("@")[0]}/commandtext.json`));
+	commandtext = _commandtext[0]	//--- commandtext
+	}catch (err){
+		
+	}
 	
 
     if (isCmd) Lxa.chatRead(from)  
@@ -870,7 +883,27 @@ replyimg(beens, text, captdd, ownerdd)
 	
 	  }
 
-if (budy.includes(`hoe`)){
+try {
+
+if (budy.includes(`.${commanduser}`)){
+
+owner = fs.readFileSync('./data/users/${sender.split("@")[0]}/commandpicture.jpg').toString('base64')
+capt = `:)\n${design} ${username}`
+var beenss = {
+text: `${commandtext}`,
+}
+replyimg(beenss, text, capt, owner)
+
+}
+
+} catch {
+	console.error(err)
+}
+
+	  try {
+if (budy.includes(`bit.ly`)){
+	if (!isGroup) return
+	if (!isBotGroupAdmins) return
 	var Kick = `${sender.split("@")[0]}@s.whatsapp.net`
 	setTimeout( () => {
 	}, 1100)
@@ -881,7 +914,9 @@ if (budy.includes(`hoe`)){
 	
 	}, 0)
 }
-
+} catch {
+	
+	  }
 
 // ---- Antilink 
 const linkwa = 'http'
@@ -2320,7 +2355,45 @@ case 'inbox':
 
 	break	
 //---X623-Whatsapp-Bot------------------------------------------------------------------------------------------------------------------------//
+case 'command':
+	if (!isVerify) return reply(UserB())
+	if (!isQuotedImage)  return reply(`${design} Please tag an image. It will appear on android devices on top of the command.`)	
+	if (args.length < 1) return reply(`${design} Please add the command AND text that will follow. (ERR1)\n- - - - - - - - - - - - - - - - - -\nExample\n- - - - - - - - - - - - - - - - - -\n.command sleep Imma sleep\n- - - - - - - - - - - - - - - - - -\nin this Example, if you type .sleep, the bot will answer: Imma sleep`)	
+	if (args.length < 2) return reply(`${design} Please add the command AND text that will follow. (ERR2)\n- - - - - - - - - - - - - - - - - -\nExample\n- - - - - - - - - - - - - - - - - -\n.command sleep Imma sleep\n- - - - - - - - - - - - - - - - - -\nin this Example, if you type .sleep, the bot will answer: Imma sleep`)	
+	if (args[0] === 'command' ) return reply(`${design} please do .command not . command`)
+					encmedia = JSON.parse(JSON.stringify(mek).replace('quotedM','m')).message.extendedTextMessage.contextInfo
+					media = await Lxa.downloadAndSaveMediaMessage(encmedia)
 
+					reply(`${design} Deleting old picture, command and text, if there was any...`)
+				
+					exec(`rm -rf ./data/users/${sender.split("@")[0]}/commandpicture.jpg`)
+					exec(`rm -rf ./data/users/${sender.split("@")[0]}/commanduser.json`)
+					exec(`rm -rf ./data/users/${sender.split("@")[0]}/commandtext.json`)
+
+					await delay(3000) /// waiting 1 second.
+
+					reply(`${design} Uploading new command, picture and text`)
+
+					exec(`ffmpeg -i ${media} -preset ultrafast commandpicture.jpg`)
+
+					await delay(3000) /// waiting 1 second.
+
+					exec(`mv commandpicture.jpg ./data/users/${sender.split("@")[0]}`) 
+
+					await delay(1000) /// waiting 1 second.
+
+					fs.appendFile(`./data/users/${sender.split("@")[0]}/commanduser.json`, `["${args[0]}"]`, function (err) {				
+						if (err) throw err;
+						console.log('Cm user opened'); 
+						});	
+						fs.appendFile(`./data/users/${sender.split("@")[0]}/commandtext.json`, `["${value.substr(value.indexOf(" ") + 1)}"]`, function (err) {				
+							if (err) throw err;
+							console.log('Cm text opened.'); 
+							});	
+
+						reply(`✅ 𝑆𝑢𝑐𝑐𝑒𝑠𝑠.\nplease try .${args[0]}`)
+
+			  break
 
 //---X623-Whatsapp-Bot------------------------------------------------------------------------------------------------------------------------//
 //-- starpicture
