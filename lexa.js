@@ -1994,7 +1994,7 @@ request = require('request');
  					buffer = fs.readFileSync('output.jpg')
 						Lxa.sendMessage(from, buffer, image, {quoted:mek, caption: `${design} Your personal QR code\n- - - - - - - - - - - - - - - - - -\n✅ :)`})
 });
-break
+
 break
 
 //-- Mirror
