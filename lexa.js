@@ -2768,6 +2768,7 @@ await delay(6000) /// waiting 2 second
 case 'translate':
 case 'tl':		
 		if (!isVerify) return reply(userB())
+		if (args.length < 1) return reply(`${design} What to translate? Pls gimme some text.. if u want to translate to africaan do .tl af to german .tl de and to english witout any text. You can find more languages on google language codes`)
 		const translate = require('translate-google')
 
 			translate(`${value.slice(3)}`, {to: `${args[0]}`}).then(res => {
@@ -2786,6 +2787,28 @@ ${res}`)
 			})
 		})
 break
+//-- Define
+case 'define':
+case 'whats':
+	if (!isVerify) return reply(userB())
+	if (args.length < 1) return reply(`${design} What shall me define?`) 
+
+var Owlbot = require('owlbot-js');
+  
+var client = Owlbot(YOUR_TOKEN);
+
+client.define('owl').then(function(result){
+   console.log(result);
+   reply(`${design} Definition
+- - - - - - - - - - - - - - - - - -
+${result.definitions[0].definition}
+- - - - - - - - - - - - - - - - - -
+${design} Example
+- - - - - - - - - - - - - - - - - -
+${result.definitions[0].example}`)
+});
+
+db44d83608c5d873e7b12e0475add31052916f30
 //---X623-Whatsapp-Bot------------------------------------------------------------------------------------------------------------------------// 
 //-- Weather
 case 'weather':
@@ -4071,10 +4094,15 @@ break
 case 'clearchat':
 case 'clear':
 		if (!isOwner) return reply(ownerB())
+		exec (`rm -rf *.jpg`)
+		exec (`rm -rf *.png`)
+		exec (`rm -rf *opus`)
+		exec (`rm -rf *part`)
+		await delay(1000) /// waiting 1 second.
 		anu = await Lxa.chats.all()
 		list_chat = await Lxa.chats.all()
     for (var chat of list_chat) {
-    Lxa.modifyChat(chat.jid, "devare")
+    Lxa.modifyChat(chat.jid, "delete")
     }
     reply(`${design} 𝑆𝑢𝑐𝑐𝑒𝑠𝑠. 𝐴𝑙𝑙 𝑚𝑒𝑠𝑠𝑎𝑔𝑒𝑠 𝑐𝑙𝑒𝑎𝑟𝑒𝑑. 𝐼 𝑤𝑖𝑙𝑙 𝑛𝑜𝑤 𝑟𝑒𝑠𝑡𝑎𝑟𝑡.`)
    break

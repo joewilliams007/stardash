@@ -20,6 +20,7 @@ wget -O ~/../usr/share/tessdata/ind.traineddata "https://github.com/tesseract-oc
 npm i imgbb-uploader
 npm i
 npm i ocr
+npm install owlbot-js
 pip install -U yt-dlp
 npm install nodemailer
 npm install -g ddg-bulk-image-downloader
