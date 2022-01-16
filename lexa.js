@@ -2803,9 +2803,17 @@ client.define(`${value}`).then(function(result){
 - - - - - - - - - - - - - - - - - -
 ${result.definitions[0].definition}
 - - - - - - - - - - - - - - - - - -
+${design} Type
+- - - - - - - - - - - - - - - - - -
+${result.definitions[0].type}
+- - - - - - - - - - - - - - - - - -
 ${design} Example
 - - - - - - - - - - - - - - - - - -
-${result.definitions[0].example}`)
+${result.definitions[0].example}
+- - - - - - - - - - - - - - - - - -
+${design} Emoji
+- - - - - - - - - - - - - - - - - -
+${result.definitions[0].emoji}`)
 });
 
 
