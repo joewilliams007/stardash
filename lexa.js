@@ -1116,6 +1116,7 @@ ${design} .note
 ${design} .wame
 ${design} .wish
 ${design} .symbol
+${design} .restart
 - - - - - - - - - - - - - - - - - - 
 𝑌𝑜𝑢𝑟 𝑀𝑜𝑛𝑒𝑦 ⌖ _${money}$_
 `,
