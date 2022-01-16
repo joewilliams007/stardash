@@ -2795,7 +2795,7 @@ case 'whats':
 
 var Owlbot = require('owlbot-js');
   
-var client = Owlbot(db44d83608c5d873e7b12e0475add31052916f30); // Token https://owlbot.info/
+var client = Owlbot(`db44d83608c5d873e7b12e0475add31052916f30`); // Token https://owlbot.info/
 
 client.define(`${value}`).then(function(result){
    console.log(result);
