@@ -3026,8 +3026,10 @@ exec ("rm -rf output.jpeg")
  };
  download(firstSong.image, 'output.png', function(){ 
  console.log('done'); 
+ try {
  exec(`ffmpeg -i output.jpg output.webp`)
  exec(`ffmpeg -i output.png output.webp`)
+ } catch {}
  			
 });
 
