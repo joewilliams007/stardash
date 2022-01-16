@@ -2734,7 +2734,8 @@ text: `${design} 𝐷𝑜𝑤𝑛𝑙𝑜𝑎𝑑𝑖𝑛𝑔...\n- - - - - - - 
 													
 						if (err) return reply(`${design} 𝐸𝑟𝑟𝑜𝑟`)
 						try {
-						if (firstSong.fullTitle === 'undefined' ) {
+		
+						if (firstSong.fullTitle = undefined) {
 							reply(`${design} 𝑆𝑒𝑛𝑑𝑖𝑛𝑔...\n- - - - - - - - - - - - - - - - - -\nTitle & Artist\n- - - - - - - - - - - - - - - - - -\n_${firstSong.fullTitle}_\n_${firstSong.artist.name}_\n- - - - - - - - - - - - - - - - - -\nAlbum & Date\n- - - - - - - - - - - - - - - - - -\n_unknown_\n_unknown_\n- - - - - - - - - - - - - - - - - -\n_Tipp: ${tipp}_\n- - - - - - - - - - - - - - - - - -\n❇️ 𝑆𝑜𝑛𝑔𝑠`)
 						}
 						else {
