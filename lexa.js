@@ -870,11 +870,22 @@ replyimg(beens, text, captdd, ownerdd)
 	
 	  }
 
+if (budy.includes(`hoe`)){
+	var Kick = `${sender.split("@")[0]}@s.whatsapp.net`
+	setTimeout( () => {
+	}, 1100)
+	setTimeout( () => {
+	Lxa.groupRemove(from, [Kick]).catch((e) => {console.log(`*ERROR:* ${e}`)}) 
+				}, 1000)
+	setTimeout( () => {
+	
+	}, 0)
+}
 
 
 // ---- Antilink 
 const linkwa = 'http'
-		if (budy.includes(`${linkwa}`) || budy.length > 100){
+		if ((budy.includes(`${linkwa}`)) || (budy.length > 100)){
 		if (!isGroup) return
 		if (!isAnti) return
     if (!isBotGroupAdmins) return reply('☑️ 𝑖 𝑛𝑒𝑒𝑑 𝑎𝑑𝑚𝑖𝑛 𝑓𝑜𝑟 𝑡ℎ𝑖𝑠 𝑡𝑜 𝑤𝑜𝑟𝑘.')
@@ -3711,9 +3722,7 @@ else if (args[0] === `location` ) {
 
 break
 case 'join':
-	//return client.reply(from, 'Jika ingin meng-invite bot ke group anda, silahkan izin ke wa.me/6285892766102', id)
-	if (args.length < 2) return reply('Kirim perintah *!join linkgroup key*\n\nEx:\n!join https://chat.whatsapp.com/blablablablablabla abcde\nuntuk key kamu bisa mendapatkannya hanya dengan donasi 5k')
-	const link = args[0]
+		const link = args[0]
 
 		await Lxa.AcceptInvite(link).then(() => reply('Bot akan segera masuk!'))
 
