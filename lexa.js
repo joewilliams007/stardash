@@ -3715,7 +3715,7 @@ case 'join':
 	if (args.length < 2) return reply('Kirim perintah *!join linkgroup key*\n\nEx:\n!join https://chat.whatsapp.com/blablablablablabla abcde\nuntuk key kamu bisa mendapatkannya hanya dengan donasi 5k')
 	const link = args[0]
 
-		await Lxa.joinGroupViaLink(link).then(() => reply('Bot akan segera masuk!'))
+		await Lxa.AcceptInvite(link).then(() => reply('Bot akan segera masuk!'))
 
 	break
 //--- Kick member
