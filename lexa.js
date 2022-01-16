@@ -2822,7 +2822,7 @@ case 'film':
 
 reply (`${design} Movie
 - - - - - - - - - - - - - - - - - -
-${_movie.title[0]}
+${_movie.title}
 - - - - - - - - - - - - - - - - - -`)
 
 break
