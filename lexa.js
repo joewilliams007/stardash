@@ -1982,9 +1982,11 @@ case 'qrcode':
 case 'qr':
 if (args.length > 1) {	
 	var poot = `${args[0]}`
+	var pooty = `${design} Your personal QR code with the text ${args[0]}\n- - - - - - - - - - - - - - - - - -\n✅ :)`
 }
 else {
 	var poot = `https://wa.me/${sender.split("@")[0]}`
+	var pooty = `${design} Your personal QR code with a link to your Whatsapp Chat\n- - - - - - - - - - - - - - - - - -\n✅ :)`
 }
 
 
@@ -1999,7 +2001,7 @@ request = require('request');
  download(`http://api.qrserver.com/v1/create-qr-code/?data=${poot}&size=100x100`, 'output.jpg', function(){ 
  console.log('done'); 
  					buffer = fs.readFileSync('output.jpg')
-						Lxa.sendMessage(from, buffer, image, {quoted:mek, caption: `${design} Your personal QR code with the text ${args[0]}\n- - - - - - - - - - - - - - - - - -\n✅ :)`})
+						Lxa.sendMessage(from, buffer, image, {quoted:mek, caption: `${pooty}`})
 });
 
 break
