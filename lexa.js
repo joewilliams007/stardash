@@ -2797,7 +2797,7 @@ case 'film':
 //const imdb = require('imdb-api')
 //imdb.get({name: `${value}`}, {apiKey: 'fbc0659b', timeout: 30000}).then(console.log).catch(console.log);
 
-import imdb = require('imdb');
+const imdb = require('imdb');
 const cli = new imdb.Client({apiKey: 'fbc0659b'});
 cli.search({'name': `${value}`}).then((search) => {
   for (const result of search.results) {
