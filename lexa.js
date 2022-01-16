@@ -2823,11 +2823,11 @@ console.log(getbyauthor);
 
 reply(`${design} Random Quote
 - - - - - - - - - - - - - - - - - -		
-_${getbyauthor.quote}_
+_${getbyauthor[0].quote}_
 - - - - - - - - - - - - - - - - - -
 ${design} Author
 - - - - - - - - - - - - - - - - - -
-_${getbyauthor.author}_`)
+_${getbyauthor[0].author}_`)
 	}
 	} catch {
 
