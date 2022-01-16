@@ -1980,7 +1980,13 @@ break
 //-- Qr code
 case 'qrcode':
 case 'qr':
-if (args.length < 1) return reply(`${design} Enter Word :)`)	
+if (args.length > 1) {	
+	var poot = `${args[0]}`
+else {
+	var poot = `https://wa.me/${sender.split("@")[0]}`
+}
+
+
 request = require('request'); 
  var download = function(uri, filename, callback){ request.head(uri, function(err, res, body){ 
  console.log('content-type:', res.headers['content-type']); 
@@ -1989,7 +1995,7 @@ request = require('request');
  }); 
  
  };
- download(`http://api.qrserver.com/v1/create-qr-code/?data=${args[0]}&size=100x100`, 'output.jpg', function(){ 
+ download(`http://api.qrserver.com/v1/create-qr-code/?data=${poot}&size=100x100`, 'output.jpg', function(){ 
  console.log('done'); 
  					buffer = fs.readFileSync('output.jpg')
 						Lxa.sendMessage(from, buffer, image, {quoted:mek, caption: `${design} Your personal QR code with the text ${args[0]}\n- - - - - - - - - - - - - - - - - -\n✅ :)`})
