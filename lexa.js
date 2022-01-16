@@ -2795,7 +2795,7 @@ case 'whats':
 
 var Owlbot = require('owlbot-js');
   
-var client = Owlbot(YOUR_TOKEN);
+var client = Owlbot(db44d83608c5d873e7b12e0475add31052916f30);
 
 client.define('owl').then(function(result){
    console.log(result);
@@ -2808,7 +2808,7 @@ ${design} Example
 ${result.definitions[0].example}`)
 });
 
-db44d83608c5d873e7b12e0475add31052916f30
+
 //---X623-Whatsapp-Bot------------------------------------------------------------------------------------------------------------------------// 
 //-- Weather
 case 'weather':
