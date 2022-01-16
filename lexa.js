@@ -3024,18 +3024,13 @@ exec ("rm -rf output.jpeg")
  }); 
  
  };
- download(firstSong.image, 'output.jpg', function(){ 
+ download(firstSong.image, 'output.*', function(){ 
  console.log('done'); 
  exec(`ffmpeg -i output.jpg output.webp`)
  exec(`ffmpeg -i output.png output.webp`)
  			
 });
-download(firstSong.image, 'output.png', function(){ 
-	console.log('done'); 
-	exec(`ffmpeg -i output.jpg output.webp`)
-	exec(`ffmpeg -i output.png output.webp`)
-				
-   });
+
 await delay(1000) /// waiting 1 second.	
 buffer = fs.readFileSync('output.webp')
 Lxa.sendMessage(from, buffer, sticker, {quoted:mek})
