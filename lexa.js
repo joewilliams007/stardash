@@ -2797,9 +2797,9 @@ var Owlbot = require('owlbot-js');
   
 var client = Owlbot(db44d83608c5d873e7b12e0475add31052916f30); // Token https://owlbot.info/
 
-client.define('owl').then(function(result){
+client.define(`${value}`).then(function(result){
    console.log(result);
-   reply(`${value}` Definition
+   reply(`${design} Definition
 - - - - - - - - - - - - - - - - - -
 ${result.definitions[0].definition}
 - - - - - - - - - - - - - - - - - -
