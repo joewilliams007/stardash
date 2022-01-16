@@ -2807,7 +2807,7 @@ cli.search({'name': `${value}`}).then((search) => {
 
 	reply(`${design} Movie
 - - - - - - - - - - - - - - - - - -
-_${SearchResult[0].title}_
+_${result[0].title}_
 - - - - - - - - - - - - - - - - - -`)
   
 });
