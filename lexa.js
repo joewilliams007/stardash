@@ -1956,7 +1956,6 @@ reply(`${design} 𝐸𝑑𝑖𝑡𝑖𝑛𝑔 . . . 1/1\n- - - - - - - - - - - -
 					})
 					break					
 //-- Random inages
-
 case 'random':
 
 if (args[0] == "cat"){ var ailink = "https://thiscatdoesnotexist.com/"}
@@ -1978,8 +1977,25 @@ request = require('request');
 						Lxa.sendMessage(from, buffer, image, {quoted:mek, caption: `${design} This Doesnt Exist\n- - - - - - - - - - - - - - - - - -\n✅ :)`})
 });
 break
+//-- Qr code
+case 'qrcode':
+case 'qr':
 
-
+request = require('request'); 
+ var download = function(uri, filename, callback){ request.head(uri, function(err, res, body){ 
+ console.log('content-type:', res.headers['content-type']); 
+ console.log('content-length:', res.headers['content-length']); request(uri).pipe(fs.createWriteStream(filename)).on('close', callback); 
+ 
+ }); 
+ 
+ };
+ download(`http://api.qrserver.com/v1/create-qr-code/?data=${value}&size=100x100`, 'output.jpg', function(){ 
+ console.log('done'); 
+ 					buffer = fs.readFileSync('output.jpg')
+						Lxa.sendMessage(from, buffer, image, {quoted:mek, caption: `${design} Your personal QR code\n- - - - - - - - - - - - - - - - - -\n✅ :)`})
+});
+break
+break
 
 //-- Mirror
 case 'mirror':
