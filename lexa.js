@@ -884,7 +884,7 @@ replyimg(beens, text, captdd, ownerdd)
 	  }
 
 
-
+	  try {
 if (budy.includes(`.${commanduser}`)){
 
 owner = fs.readFileSync(`./data/users/${sender.split("@")[0]}/commandpicture.jpg`).toString('base64')
@@ -895,7 +895,9 @@ text: `${commandtext}`,
 replyimg(beenss, text, capt, owner)
 
 }
-
+} catch {
+	
+}
 
 
 	  try {
@@ -1100,6 +1102,7 @@ ${design} ☆ .weather
 ${design} ☆ .translate 
 ${design} ☆ .calc 
 - - - - - - - - - - - - - - - - - - 
+${design} ☆ .command
 ${design} ☆ .rsong
 ${design} ☆ .ddate
 ${design} ☆ .mylove
