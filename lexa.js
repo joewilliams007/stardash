@@ -2820,12 +2820,10 @@ case 'film':
 
 		await delay(1000) /// waiting 2 second.
 
-teks = `${design} Movies\n⌯  Total: ${_movie.length}\n\n⌯ \n`
-for (var film of _movie) {
-	teks += `⑅ ${film}\n`
-}
-reply(teks.trim())
-
+reply (`${design} Movie
+- - - - - - - - - - - - - - - - - -
+${_movie.title[0]}
+- - - - - - - - - - - - - - - - - -`)
 
 break
 //-- Define
@@ -2840,7 +2838,7 @@ var client = Owlbot(`db44d83608c5d873e7b12e0475add31052916f30`); // Token https:
 
 try {
 
-client.define(`${value}`).then(function(result){
+client.define(${value}`).then(function(result){
    console.log(result);
    reply(`${design} Definition
 - - - - - - - - - - - - - - - - - -
