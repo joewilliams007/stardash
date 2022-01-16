@@ -112,6 +112,7 @@ const _dashtype = JSON.parse(fs.readFileSync('./result/games/dashtype.json'));
 const _shiny = JSON.parse(fs.readFileSync('./result/games/shiny.json'));
 const _wishes = JSON.parse(fs.readFileSync('./help/wishes.json'));
 const _notes = JSON.parse(fs.readFileSync('./help/notes.json'));
+const _movie = JSON.parse(fs.readFileSync('./help/movie.json'));
 
 //---X623-Whatsapp-Bot------------------------------------------------------------------------------------------------------------------------//
 //-- Help
@@ -2794,26 +2795,36 @@ case 'film':
 	if (!isVerify) return reply(userB())
 	if (args.length < 1) return reply(`${design} What Movie do you want to know about?`) 
 
-//const imdb = require('imdb-api')
-//imdb.get({name: `${value}`}, {apiKey: 'fbc0659b', timeout: 30000}).then(console.log).catch(console.log);
+				//const imdb = require('imdb-api')
+				//imdb.get({name: `${value}`}, {apiKey: 'fbc0659b', timeout: 30000}).then(console.log).catch(console.log);
 
-const imdb = require('imdb-api');
-const cli = new imdb.Client({apiKey: 'fbc0659b'});
-cli.search({'name': `${value}`}).then((search) => {
-  for (const result of search.results) {
-    console.log(result);
+				
 
-	reply(`${design} Movie
-	- - - - - - - - - - - - - - - - - -
-	_${result[0]}_
-	- - - - - - - - - - - - - - - - - -`)
+				await exec(`rm -rf ./help/movie.json`)
+				await delay(1000) /// waiting 2 second.
 
+				fs.appendFile(`./help/movie.json`, `[]`, function (err) {				
+					if (err) throw err;
+					});	
+
+		const imdb = require('imdb-api');
+		const cli = new imdb.Client({apiKey: 'fbc0659b'});
+		cli.search({'name': `${value}`}).then((search) => {
+		for (const result of search.results) {
+			console.log(result);
+			_movie.push(result)
+			fs.writeFileSync('./help/movie.json', JSON.stringify(_movie))
+			
+		}
+		});
+
+		await delay(1000) /// waiting 2 second.
+
+teks = `${design} Movies\n⌯  Total: ${_movie.length}\n\n⌯ \n`
+for (var film of _movie) {
+	teks += `⑅ ${film}\n`
 }
-
-
-  
-});
-
+reply(teks.trim())
 
 
 break
