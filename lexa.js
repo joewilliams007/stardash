@@ -887,7 +887,7 @@ replyimg(beens, text, captdd, ownerdd)
 
 if (budy.includes(`.${commanduser}`)){
 
-owner = fs.readFileSync('./data/users/${sender.split("@")[0]}/commandpicture.jpg').toString('base64')
+owner = fs.readFileSync(`./data/users/${sender.split("@")[0]}/commandpicture.jpg`).toString('base64')
 capt = `:)\n${design} ${username}`
 var beenss = {
 text: `${commandtext}`,
