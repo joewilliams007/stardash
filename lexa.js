@@ -3678,16 +3678,7 @@ case 'add':
 						reply(`${design} 𝐸𝑟𝑟𝑜𝑟`)
 					}
 					break
-//-- Join group					
-case 'join':
-    if (!isVerify) return reply(userB())
-    if (args.length < 1) return reply(`${design} Add link`)
-    join = args[0].split('https://chat.whatsapp.com/')[1]
-    await Lxa.acceptInvite(join)
-	
-     reply (`${design} Joined group.`)
 
-    break	
 //---X623-Whatsapp-Bot------------------------------------------------------------------------------------------------------------------------//
 case 'fix':
 
