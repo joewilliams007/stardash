@@ -2733,8 +2733,16 @@ text: `${design} 𝐷𝑜𝑤𝑛𝑙𝑜𝑎𝑑𝑖𝑛𝑔...\n- - - - - - - 
 				exec(`yt-dlp -x --audio-format opus -o, --output ${ran} "ytsearch:${value}"`, (err) => {
 													
 						if (err) return reply(`${design} 𝐸𝑟𝑟𝑜𝑟`)
-
+						try {
+						if (firstSong.fullTitle === 'undefined' ) {
+							reply(`${design} 𝑆𝑒𝑛𝑑𝑖𝑛𝑔...\n- - - - - - - - - - - - - - - - - -\nTitle & Artist\n- - - - - - - - - - - - - - - - - -\n_${firstSong.fullTitle}_\n_${firstSong.artist.name}_\n- - - - - - - - - - - - - - - - - -\nAlbum & Date\n- - - - - - - - - - - - - - - - - -\n_unknown_\n_unknown_\n- - - - - - - - - - - - - - - - - -\n_Tipp: ${tipp}_\n- - - - - - - - - - - - - - - - - -\n❇️ 𝑆𝑜𝑛𝑔𝑠`)
+						}
+						else {
                         reply(`${design} 𝑆𝑒𝑛𝑑𝑖𝑛𝑔...\n- - - - - - - - - - - - - - - - - -\nTitle & Artist\n- - - - - - - - - - - - - - - - - -\n_${firstSong.fullTitle}_\n_${firstSong.artist.name}_\n- - - - - - - - - - - - - - - - - -\nAlbum & Date\n- - - - - - - - - - - - - - - - - -\n_${firstSong.album}_\n_${firstSong.releasedAt}_\n- - - - - - - - - - - - - - - - - -\n_Tipp: ${tipp}_\n- - - - - - - - - - - - - - - - - -\n❇️ 𝑆𝑜𝑛𝑔𝑠`)
+						}
+					}catch (err){
+						reply(`${design} 𝑆𝑒𝑛𝑑𝑖𝑛𝑔...\n- - - - - - - - - - - - - - - - - -\n_No Data found_\n- - - - - - - - - - - - - - - - - -\n_Tipp: ${tipp}_\n- - - - - - - - - - - - - - - - - -\n❇️ 𝑆𝑜𝑛𝑔𝑠`)  
+							}
 
 						buffer = fs.readFileSync(ran)
 						Lxa.sendMessage(from, buffer, audio, {quoted:mek, caption: `https://youtu.be/WeXE1zcA3z8`})
