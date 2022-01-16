@@ -2838,7 +2838,7 @@ var client = Owlbot(`db44d83608c5d873e7b12e0475add31052916f30`); // Token https:
 
 try {
 
-client.define(${value}`).then(function(result){
+client.define(`${value}`).then(function(result){
    console.log(result);
    reply(`${design} Definition
 - - - - - - - - - - - - - - - - - -
