@@ -1061,6 +1061,7 @@ case 'games':
 ⌖ ${pushname}
 - - - - - - - - - - - - - - - - - -    
 ${design} ☆ .slot 
+${design} ☆ .quote 
 ${design} .truth
 ${design} .dare
 - - - - - - - - - - - - - - - - - - 
@@ -2791,7 +2792,7 @@ ${res}`)
 break
 //-- Quote
 case 'quote':
-
+case 'qoute':
 	if (!isVerify) return reply(userB())
 
 	const Quotes = require("randomquote-api");
@@ -2830,7 +2831,11 @@ ${design} Author
 _${getbyauthor[0].author}_`)
 	}
 	} catch {
-
+		reply(`${design} Random Quote
+- - - - - - - - - - - - - - - - - -
+Sorry no quote from this person found :(
+Get a random quote via .quote
+`)
 	}
 
 break
