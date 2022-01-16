@@ -2991,7 +2991,9 @@ case 'text':
 	if (!isVerify) return reply(userB())
 	if (args.length < 1) return reply(`${design} Please add the songname.`)
     if (money < 2) return reply(`${design} 𝑌𝑜𝑢 𝑑𝑜𝑛𝑡 ℎ𝑎𝑣𝑒 𝑒𝑛𝑜𝑢𝑔ℎ 𝑚𝑜𝑛𝑒𝑦.\n- - - - - - - - - - - - - - - - - -\n𝑀𝑜𝑛𝑒𝑦 𝑛𝑒𝑒𝑑𝑒𝑑 2$ 𝑌𝑜𝑢𝑟 𝑚𝑜𝑛𝑒𝑦 ${money}$\n- - - - - - - - - - - - - - - - - -\n❎`) 
-
+exec ("rm -rf output.jpg")
+exec ("rm -rf output.webp")
+exec ("rm -rf output.jpeg")
     var money1 = Number(money);
     var cost = Number(2);
     var newmoney = money1 - cost; 
