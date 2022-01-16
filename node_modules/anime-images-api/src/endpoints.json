@@ -1,0 +1,18 @@
+{
+  "sfw": {
+    "hug": "/img/hug",
+    "kiss": "/img/kiss",
+    "slap": "/img/slap",
+    "wink": "/img/wink",
+    "pat": "/img/pat",
+    "kill": "/img/kill",
+    "cuddle": "/img/cuddle",
+    "punch": "/img/punch",
+    "waifu": "/img/waifu"
+  },
+  "nsfw": {
+      "hentai": "/img/nsfw/hentai",
+      "boobs": "/img/nsfw/boobs",
+      "lesbian": "/img/nsfw/lesbian"
+  }
+}
