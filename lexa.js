@@ -2789,7 +2789,39 @@ ${res}`)
 			})
 		})
 break
+//-- Quote
+case 'quote':
 
+	if (!isVerify) return reply(userB())
+
+	const Quotes = require("randomquote-api");
+
+	if (args.length < 1) {
+
+// To get one random Quote you do
+const randomquote = Quotes.randomQuote();
+console.log(randomquote);
+
+try {
+reply(`${design} Random Quote
+- - - - - - - - - - - - - - - - - -		
+${randomquote}`)
+
+	}
+
+	else {
+
+// to get a number amount of quotes by who said them
+const getbyauthor = Quotes.getbyauthor(`${value}`, 1);
+console.log(getbyauthor);
+reply(`${design} Random Quote
+- - - - - - - - - - - - - - - - - -		
+${getbyauthor}`)
+	} catch {
+		
+	}
+
+break
 //-- Define
 case 'define':
 case 'whats':
