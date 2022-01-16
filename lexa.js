@@ -2803,11 +2803,13 @@ cli.search({'name': `${value}`}).then((search) => {
   for (const result of search.results) {
     console.log(result);
 
+}
+
 	reply(`${design} Movie
 - - - - - - - - - - - - - - - - - -
-_${result.title}_
+_${SearchResult[0].title}_
 - - - - - - - - - - - - - - - - - -`)
-  }
+  
 });
 
 
