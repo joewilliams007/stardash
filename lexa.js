@@ -1098,6 +1098,7 @@ text: `𝑇𝑜𝑜𝑙𝑠
 ⌖ ${pushname}
 - - - - - - - - - - - - - - - - - -    
 ${design} ☆ .song 
+${design} .cheapsong 
 ${design} ☆ .lyrics
 ${design} ☆ .define
 ${design} ☆ .send 
@@ -2703,7 +2704,36 @@ exec(`rm -rf ${value} jpg_0.jpg`)
 })
 	break
 
-	
+//-- CHEAP YOUTUBE
+case 'cheapsong':
+	   if (!isVerify) return reply(UserB())
+
+	   if (money < 4) return reply(`${design} 𝑌𝑜𝑢 𝑑𝑜𝑛𝑡 ℎ𝑎𝑣𝑒 𝑒𝑛𝑜𝑢𝑔ℎ 𝑚𝑜𝑛𝑒𝑦.\n- - - - - - - - - - - - - - - - - -\n𝑀𝑜𝑛𝑒𝑦 𝑛𝑒𝑒𝑑𝑒𝑑 4$ 𝑌𝑜𝑢𝑟 𝑚𝑜𝑛𝑒𝑦 ${money}$\n- - - - - - - - - - - - - - - - - -\n❎ _Cheap Songs_`) 
+	 
+	   var money1 = Number(money);
+       var cost = Number(4);
+       var newmoney = money1 - cost; 
+   
+       fs.readFile(`./data/users/${sender.split("@")[0]}/money.json`, 'utf-8', function(err, data) {
+           if (err) throw err;
+           var newValue = data.replace(`${money1}`, newmoney);
+           fs.writeFile(`./data/users/${sender.split("@")[0]}/money.json`, newValue, 'utf-8', function(err, data) {
+               if (err) throw err;
+           })
+       })
+       await delay(1000) /// waiting 1 second.	
+	   reply(`${design} 𝑆𝑒𝑛𝑑𝑖𝑛𝑔...\n- - - - - - - - - - - - - - - - - -\nCost: 4$\nMoney left ${newmoney}$\n- - - - - - - - - - - - - - - - - -\n❎ _Cheap Songs_`)														
+				ran= getRandom('.opus')
+				exec(`yt-dlp -x --audio-format opus -o, --output ${ran} "ytsearch:${value}"`, (err) => {
+													
+						if (err) return reply(`${design} 𝐸𝑟𝑟𝑜𝑟`)
+                        
+						buffer = fs.readFileSync(ran)
+						Lxa.sendMessage(from, buffer, audio, {quoted:mek})
+						fs.unlinkSync(ran)
+					})		 
+				
+break	
 //---X623-Whatsapp-Bot------------------------------------------------------------------------------------------------------------------------//	
 //-- youtube song opus
 case 'song':
@@ -2711,7 +2741,7 @@ case 'youtubesong':
 case 'ytbsong':
 	   if (!isVerify) return reply(UserB())
        if (args.length < 1) return reply(`${design} 𝑊ℎ𝑎𝑡 𝑖𝑠 𝑡ℎ𝑒 𝑠𝑜𝑛𝑔 𝑛𝑎𝑚𝑒?`)			
-       if (money < 5) return reply(`${design} 𝑌𝑜𝑢 𝑑𝑜𝑛𝑡 ℎ𝑎𝑣𝑒 𝑒𝑛𝑜𝑢𝑔ℎ 𝑚𝑜𝑛𝑒𝑦.\n- - - - - - - - - - - - - - - - - -\n𝑀𝑜𝑛𝑒𝑦 𝑛𝑒𝑒𝑑𝑒𝑑 5$ 𝑌𝑜𝑢𝑟 𝑚𝑜𝑛𝑒𝑦 ${money}$\n- - - - - - - - - - - - - - - - - -\n❎ 𝑋623 𝑆𝑜𝑛𝑔𝑠`) 
+       if (money < 25) return reply(`${design} 𝑌𝑜𝑢 𝑑𝑜𝑛𝑡 ℎ𝑎𝑣𝑒 𝑒𝑛𝑜𝑢𝑔ℎ 𝑚𝑜𝑛𝑒𝑦.\n- - - - - - - - - - - - - - - - - -\n𝑀𝑜𝑛𝑒𝑦 𝑛𝑒𝑒𝑑𝑒𝑑 25$ 𝑌𝑜𝑢𝑟 𝑚𝑜𝑛𝑒𝑦 ${money}$\n- - - - - - - - - - - - - - - - - -\nGET A SONG FOR CHEAP\nwith .cheapsong\n- - - - - - - - - - - - - - - - - -\n❎ _Premium Songs_`) 
 	 
 	   var money1 = Number(money);
        var cost = Number(5);
@@ -2746,7 +2776,7 @@ text: `${design} 𝐷𝑜𝑤𝑛𝑙𝑜𝑎𝑑𝑖𝑛𝑔...\n- - - - - - - 
 	}
 	replyimg(beenss, text, capt, owner)
 	}catch (err){
-		reply(`${design} 𝐷𝑜𝑤𝑛𝑙𝑜𝑎𝑑𝑖𝑛𝑔...\n- - - - - - - - - - - - - - - - - -\n𝑁𝑜 𝑙𝑦𝑟𝑖𝑐𝑠 𝑤𝑒𝑟𝑒 𝑓𝑜𝑢𝑛𝑑\n𝑀𝑜𝑛𝑒𝑦 𝑙𝑒𝑓𝑡 ${newmoney}$\n- - - - - - - - - - - - - - - - - -\n❇️ 𝑆𝑜𝑛𝑔𝑠`)    
+		reply(`${design} 𝐷𝑜𝑤𝑛𝑙𝑜𝑎𝑑𝑖𝑛𝑔...\n- - - - - - - - - - - - - - - - - -\n𝑁𝑜 𝑙𝑦𝑟𝑖𝑐𝑠 𝑤𝑒𝑟𝑒 𝑓𝑜𝑢𝑛𝑑\n𝑀𝑜𝑛𝑒𝑦 𝑙𝑒𝑓𝑡 ${newmoney}$\n- - - - - - - - - - - - - - - - - -\n❇️ _Premium Songs_`)    
 			}
 				
 
@@ -2758,13 +2788,13 @@ text: `${design} 𝐷𝑜𝑤𝑛𝑙𝑜𝑎𝑑𝑖𝑛𝑔...\n- - - - - - - 
 						try {
 		
 						if (firstSong.fullTitle = undefined) {
-							reply(`${design} 𝑆𝑒𝑛𝑑𝑖𝑛𝑔...\n- - - - - - - - - - - - - - - - - -\nTitle & Artist\n- - - - - - - - - - - - - - - - - -\n_${firstSong.fullTitle}_\n_${firstSong.artist.name}_\n- - - - - - - - - - - - - - - - - -\nAlbum & Date\n- - - - - - - - - - - - - - - - - -\n_unknown_\n_unknown_\n- - - - - - - - - - - - - - - - - -\n_Tipp: ${tipp}_\n- - - - - - - - - - - - - - - - - -\n❇️ 𝑆𝑜𝑛𝑔𝑠`)
+							reply(`${design} 𝑆𝑒𝑛𝑑𝑖𝑛𝑔...\n- - - - - - - - - - - - - - - - - -\nTitle & Artist\n- - - - - - - - - - - - - - - - - -\n_${firstSong.fullTitle}_\n_${firstSong.artist.name}_\n- - - - - - - - - - - - - - - - - -\nAlbum & Date\n- - - - - - - - - - - - - - - - - -\n_unknown_\n_unknown_\n- - - - - - - - - - - - - - - - - -\n_Tipp: ${tipp}_\n- - - - - - - - - - - - - - - - - -\n❇️ _Premium Songs_`)
 						}
 						else {
-                        reply(`${design} 𝑆𝑒𝑛𝑑𝑖𝑛𝑔...\n- - - - - - - - - - - - - - - - - -\nTitle & Artist\n- - - - - - - - - - - - - - - - - -\n_${firstSong.fullTitle}_\n_${firstSong.artist.name}_\n- - - - - - - - - - - - - - - - - -\nAlbum & Date\n- - - - - - - - - - - - - - - - - -\n_${firstSong.album}_\n_${firstSong.releasedAt}_\n- - - - - - - - - - - - - - - - - -\n_Tipp: ${tipp}_\n- - - - - - - - - - - - - - - - - -\n❇️ 𝑆𝑜𝑛𝑔𝑠`)
+                        reply(`${design} 𝑆𝑒𝑛𝑑𝑖𝑛𝑔...\n- - - - - - - - - - - - - - - - - -\nTitle & Artist\n- - - - - - - - - - - - - - - - - -\n_${firstSong.fullTitle}_\n_${firstSong.artist.name}_\n- - - - - - - - - - - - - - - - - -\nAlbum & Date\n- - - - - - - - - - - - - - - - - -\n_${firstSong.album}_\n_${firstSong.releasedAt}_\n- - - - - - - - - - - - - - - - - -\n_Tipp: ${tipp}_\n- - - - - - - - - - - - - - - - - -\n❇️ _Premium Songs_`)
 						}
 					}catch (err){
-						reply(`${design} 𝑆𝑒𝑛𝑑𝑖𝑛𝑔...\n- - - - - - - - - - - - - - - - - -\n_No Data found_\n- - - - - - - - - - - - - - - - - -\n_Tipp: ${tipp}_\n- - - - - - - - - - - - - - - - - -\n❇️ 𝑆𝑜𝑛𝑔𝑠`)  
+						reply(`${design} 𝑆𝑒𝑛𝑑𝑖𝑛𝑔...\n- - - - - - - - - - - - - - - - - -\n_No Data found_\n- - - - - - - - - - - - - - - - - -\n_Get a song for only 4$ via .cheapsong_\n- - - - - - - - - - - - - - - - - -\n_Tipp: ${tipp}_\n- - - - - - - - - - - - - - - - - -\n❇️ _Premium Songs_`)  
 							}
 
 						buffer = fs.readFileSync(ran)
