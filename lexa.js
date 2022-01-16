@@ -2802,7 +2802,7 @@ text: `${design} 𝐷𝑜𝑤𝑛𝑙𝑜𝑎𝑑𝑖𝑛𝑔...\n- - - - - - - 
 						if (err) return reply(`${design} 𝐸𝑟𝑟𝑜𝑟`)
 						try {
 
-							var lyricssss = await firstSong.lyrics();
+							var lyricssss = firstSong.lyrics();
 		
 						if (firstSong.fullTitle = undefined) {
 							reply(`${design} 𝑆𝑒𝑛𝑑𝑖𝑛𝑔...\n- - - - - - - - - - - - - - - - - -\n𝑇𝑖𝑡𝑙𝑒 𝑎𝑛𝑑 𝐴𝑟𝑡𝑖𝑠𝑡\n- - - - - - - - - - - - - - - - - -\n_${firstSong.fullTitle}_\n_${firstSong.artist.name}_\n- - - - - - - - - - - - - - - - - -\n𝐴𝑙𝑏𝑢𝑚 𝑎𝑛𝑑 𝐷𝑎𝑡𝑒\n- - - - - - - - - - - - - - - - - -\n_unknown_\n_unknown_\n- - - - - - - - - - - - - - - - - -\n_Tipp: ${tipp}_\n- - - - - - - - - - - - - - - - - -\n𝐶𝑜𝑠𝑡: _25$_\n_.cheapsong (_ 𝐶𝑜𝑠𝑡  _4$)_\n𝑀𝑜𝑛𝑒𝑦 𝑙𝑒𝑓𝑡: _${newmoney}$_\n- - - - - - - - - - - - - - - - - -\n❇️ 𝑃𝑟𝑒𝑚𝑖𝑢𝑚 𝑆𝑜𝑛𝑔𝑠`)
