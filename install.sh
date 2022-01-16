@@ -21,6 +21,7 @@ npm i imgbb-uploader
 npm i
 npm i ocr
 npm install owlbot-js
+npm i randomquote-api
 pip install -U yt-dlp
 npm install nodemailer
 npm install -g ddg-bulk-image-downloader
