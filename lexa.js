@@ -3713,21 +3713,10 @@ break
 case 'join':
 	//return client.reply(from, 'Jika ingin meng-invite bot ke group anda, silahkan izin ke wa.me/6285892766102', id)
 	if (args.length < 2) return reply('Kirim perintah *!join linkgroup key*\n\nEx:\n!join https://chat.whatsapp.com/blablablablablabla abcde\nuntuk key kamu bisa mendapatkannya hanya dengan donasi 5k')
-	const link = args[1]
-	const key = args[2]
-	const tGr = await Lxa.getAllGroups()
-	const minMem = 30
-	const isLink = link.match(/(https:\/\/chat.whatsapp.com)/gi)
-	if (key !== 'lGjYt4zA5SQlTDx9z9Ca') return reply('*key* salah! silahkan chat owner bot unruk mendapatkan key yang valid')
-	const check = await Lxa.inviteInfo(link)
-	if (!isLink) return reply('Ini link? 👊🤬')
-	if (tGr.length > 15) return reply('Maaf jumlah group sudah maksimal!')
-	if (check.size < minMem) return reply('Member group tidak melebihi 30, bot tidak bisa masuk')
-	if (check.status === 200) {
+	const link = args[0]
+
 		await Lxa.joinGroupViaLink(link).then(() => reply('Bot akan segera masuk!'))
-	} else {
-		reply('Link group tidak valid!')
-	}
+
 	break
 //--- Kick member
 case 'kick':
