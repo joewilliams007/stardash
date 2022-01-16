@@ -3025,7 +3025,7 @@ case 'text':
  download(firstSong.image, 'output.jpg', function(){ 
  console.log('done'); 
  exec(`ffmpeg -i output.jpg output.webp`)
- 
+ await delay(1000) /// waiting 1 second.	
  					buffer = fs.readFileSync('output.webp')
 					Lxa.sendMessage(from, buffer, sticker, {quoted:mek})
 });
