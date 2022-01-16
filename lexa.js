@@ -1982,6 +1982,7 @@ case 'qrcode':
 case 'qr':
 if (args.length > 1) {	
 	var poot = `${args[0]}`
+}
 else {
 	var poot = `https://wa.me/${sender.split("@")[0]}`
 }
