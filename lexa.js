@@ -3013,6 +3013,21 @@ case 'text':
 	// Pick first one
 	const firstSong = searches[0];
 	console.log(firstSong.image);
+
+	request = require('request'); 
+ var download = function(uri, filename, callback){ request.head(uri, function(err, res, body){ 
+ console.log('content-type:', res.headers['content-type']); 
+ console.log('content-length:', res.headers['content-length']); request(uri).pipe(fs.createWriteStream(filename)).on('close', callback); 
+ 
+ }); 
+ 
+ };
+ download(firstSong.image, 'output.jpg', function(){ 
+ console.log('done'); 
+ 					buffer = fs.readFileSync('output.jpg')
+						Lxa.sendMessage(from, buffer, image, {quoted:mek, caption: `${design} This Doesnt Exist\n- - - - - - - - - - - - - - - - - -\n✅ :)`})
+});
+
 	
 	// Ok lets get the lyrics
 	const lyrics = await firstSong.lyrics();
