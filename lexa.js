@@ -2789,43 +2789,7 @@ ${res}`)
 			})
 		})
 break
-//-- Movie
-case 'movie':
-case 'film':
-	if (!isVerify) return reply(userB())
-	if (args.length < 1) return reply(`${design} What Movie do you want to know about?`) 
 
-				//const imdb = require('imdb-api')
-				//imdb.get({name: `${value}`}, {apiKey: 'fbc0659b', timeout: 30000}).then(console.log).catch(console.log);
-
-				
-
-				await exec(`rm -rf ./help/movie.json`)
-				await delay(1000) /// waiting 2 second.
-
-				fs.appendFile(`./help/movie.json`, `[]`, function (err) {				
-					if (err) throw err;
-					});	
-
-		const imdb = require('imdb-api');
-		const cli = new imdb.Client({apiKey: 'fbc0659b'});
-		cli.search({'name': `${value}`}).then((search) => {
-		for (const result of search.results) {
-			console.log(result);
-			_movie.push(result)
-			fs.writeFileSync('./help/movie.json', JSON.stringify(_movie))
-			
-		}
-		});
-
-		await delay(1000) /// waiting 2 second.
-
-reply (`${design} Movie
-- - - - - - - - - - - - - - - - - -
-${_movie.title}
-- - - - - - - - - - - - - - - - - -`)
-
-break
 //-- Define
 case 'define':
 case 'whats':
