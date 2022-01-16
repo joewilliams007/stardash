@@ -2818,7 +2818,7 @@ ${design} Emoji
 - - - - - - - - - - - - - - - - - -
 _${result.definitions[0].emoji}_`)
 });
-}catch (err){
+}catch{
 	reply(`${design} no Definition :(`)		
 }
 break
