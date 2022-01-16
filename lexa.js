@@ -2793,7 +2793,7 @@ case 'define':
 case 'whats':
 	if (!isVerify) return reply(userB())
 	if (args.length < 1) return reply(`${design} What shall me define?`) 
-
+try {
 var Owlbot = require('owlbot-js');
   
 var client = Owlbot(`db44d83608c5d873e7b12e0475add31052916f30`); // Token https://owlbot.info/
@@ -2816,7 +2816,9 @@ ${design} Emoji
 - - - - - - - - - - - - - - - - - -
 _${result.definitions[0].emoji}_`)
 });
-
+}catch (err){
+	reply(`${design} no Definition :(`)		
+}
 break
 //---X623-Whatsapp-Bot------------------------------------------------------------------------------------------------------------------------// 
 //-- Weather
