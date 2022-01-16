@@ -2741,7 +2741,7 @@ case 'youtubesong':
 case 'ytbsong':
 	   if (!isVerify) return reply(UserB())
        if (args.length < 1) return reply(`${design} 𝑊ℎ𝑎𝑡 𝑖𝑠 𝑡ℎ𝑒 𝑠𝑜𝑛𝑔 𝑛𝑎𝑚𝑒?`)			
-       if (money < 25) return reply(`${design} 𝑌𝑜𝑢 𝑑𝑜𝑛𝑡 ℎ𝑎𝑣𝑒 𝑒𝑛𝑜𝑢𝑔ℎ 𝑚𝑜𝑛𝑒𝑦.\n- - - - - - - - - - - - - - - - - -\n𝑀𝑜𝑛𝑒𝑦 𝑛𝑒𝑒𝑑𝑒𝑑 25$ 𝑌𝑜𝑢𝑟 𝑚𝑜𝑛𝑒𝑦 ${money}$\n- - - - - - - - - - - - - - - - - -\nGET A SONG FOR CHEAP\nwith .cheapsong\n- - - - - - - - - - - - - - - - - -\n❎ _Premium Songs_`) 
+       if (money < 25) return reply(`${design} 𝑌𝑜𝑢 𝑑𝑜𝑛𝑡 ℎ𝑎𝑣𝑒 𝑒𝑛𝑜𝑢𝑔ℎ 𝑚𝑜𝑛𝑒𝑦.\n- - - - - - - - - - - - - - - - - -\n𝑀𝑜𝑛𝑒𝑦 𝑛𝑒𝑒𝑑𝑒𝑑 25$ 𝑌𝑜𝑢𝑟 𝑚𝑜𝑛𝑒𝑦 ${money}$\n- - - - - - - - - - - - - - - - - -\nGET A SONG FOR CHEAP\nwith .cheapsong\n- - - - - - - - - - - - - - - - - -\n❎ 𝑃𝑟𝑒𝑚𝑖𝑢𝑚 𝑆𝑜𝑛𝑔𝑠`) 
 	 
 	   var money1 = Number(money);
        var cost = Number(5);
@@ -2772,11 +2772,11 @@ case 'ytbsong':
 		owner = fs.readFileSync('./images/menu.jpg').toString('base64')
 		capt = `𝐿𝑦𝑟𝑖𝑐𝑠\n${design} ${username}`
 	var beenss = {
-text: `${design} 𝐷𝑜𝑤𝑛𝑙𝑜𝑎𝑑𝑖𝑛𝑔...\n- - - - - - - - - - - - - - - - - -\ninfo- while the song is loading you can view the lyrics. If they dont belong to the song, i hope the song atleast is the correct one. Next time you can give more information about the song to get better results. Huge thanks to the genius lyric API and the yt-dlp team for making this possible. Also a big shoutout to the song creaters though. Have fun enoying the song!\n- - - - - - - - - - - - - - - - - -\n𝐿𝑦𝑟𝑖𝑐𝑠\n- - - - - - - - - - - - - - - - - -\n${lyrics}\n- - - - - - - - - - - - - - - - - -\n_cost: 25$_\n_.cheapsong (cost 4$)_\n- - - - - - - - - - - - - - - - - -\n𝑀𝑜𝑛𝑒𝑦 𝑙𝑒𝑓𝑡 ${newmoney}$\n- - - - - - - - - - - - - - - - - -\n❇️  _Premium Songs_`,
+text: `${design} 𝐷𝑜𝑤𝑛𝑙𝑜𝑎𝑑𝑖𝑛𝑔...\n- - - - - - - - - - - - - - - - - -\ninfo- while the song is loading you can view the lyrics. If they dont belong to the song, i hope the song atleast is the correct one. Next time you can give more information about the song to get better results. Huge thanks to the genius lyric API and the yt-dlp team for making this possible. Also a big shoutout to the song creaters though. Have fun enoying the song!\n- - - - - - - - - - - - - - - - - -\n𝐿𝑦𝑟𝑖𝑐𝑠\n- - - - - - - - - - - - - - - - - -\n${lyrics}\n- - - - - - - - - - - - - - - - - -\n𝐶𝑜𝑠𝑡: _25$_\n_.cheapsong (_ 𝐶𝑜𝑠𝑡  _4$)_\n𝑀𝑜𝑛𝑒𝑦 𝑙𝑒𝑓𝑡: _${newmoney}$_\n- - - - - - - - - - - - - - - - - -\n❇️ 𝑃𝑟𝑒𝑚𝑖𝑢𝑚 𝑆𝑜𝑛𝑔𝑠`,
 	}
 	replyimg(beenss, text, capt, owner)
 	}catch (err){
-		reply(`${design} 𝐷𝑜𝑤𝑛𝑙𝑜𝑎𝑑𝑖𝑛𝑔...\n- - - - - - - - - - - - - - - - - -\n𝑁𝑜 𝑙𝑦𝑟𝑖𝑐𝑠 𝑤𝑒𝑟𝑒 𝑓𝑜𝑢𝑛𝑑\n𝑀𝑜𝑛𝑒𝑦 𝑙𝑒𝑓𝑡 ${newmoney}$\n- - - - - - - - - - - - - - - - - -\n❇️ _Premium Songs_`)    
+		reply(`${design} 𝐷𝑜𝑤𝑛𝑙𝑜𝑎𝑑𝑖𝑛𝑔...\n- - - - - - - - - - - - - - - - - -\n𝑁𝑜 𝑙𝑦𝑟𝑖𝑐𝑠 𝑤𝑒𝑟𝑒 𝑓𝑜𝑢𝑛𝑑\n- - - - - - - - - - - - - - - - - -\n❇️ 𝑃𝑟𝑒𝑚𝑖𝑢𝑚 𝑆𝑜𝑛𝑔𝑠`)    
 			}
 				
 
@@ -2788,13 +2788,13 @@ text: `${design} 𝐷𝑜𝑤𝑛𝑙𝑜𝑎𝑑𝑖𝑛𝑔...\n- - - - - - - 
 						try {
 		
 						if (firstSong.fullTitle = undefined) {
-							reply(`${design} 𝑆𝑒𝑛𝑑𝑖𝑛𝑔...\n- - - - - - - - - - - - - - - - - -\nTitle & Artist\n- - - - - - - - - - - - - - - - - -\n_${firstSong.fullTitle}_\n_${firstSong.artist.name}_\n- - - - - - - - - - - - - - - - - -\nAlbum & Date\n- - - - - - - - - - - - - - - - - -\n_unknown_\n_unknown_\n- - - - - - - - - - - - - - - - - -\n_Tipp: ${tipp}_\n- - - - - - - - - - - - - - - - - -\n_cost: 25$_\n_.cheapsong (cost 4$)_\n- - - - - - - - - - - - - - - - - -\n❇️ _Premium Songs_`)
+							reply(`${design} 𝑆𝑒𝑛𝑑𝑖𝑛𝑔...\n- - - - - - - - - - - - - - - - - -\n𝑇𝑖𝑡𝑙𝑒 𝑎𝑛𝑑 𝐴𝑟𝑡𝑖𝑠𝑡\n- - - - - - - - - - - - - - - - - -\n_${firstSong.fullTitle}_\n_${firstSong.artist.name}_\n- - - - - - - - - - - - - - - - - -\n𝐴𝑙𝑏𝑢𝑚 𝑎𝑛𝑑 𝐷𝑎𝑡𝑒\n- - - - - - - - - - - - - - - - - -\n_unknown_\n_unknown_\n- - - - - - - - - - - - - - - - - -\n_Tipp: ${tipp}_\n- - - - - - - - - - - - - - - - - -\n𝐶𝑜𝑠𝑡: _25$_\n_.cheapsong (_ 𝐶𝑜𝑠𝑡  _4$)_\n𝑀𝑜𝑛𝑒𝑦 𝑙𝑒𝑓𝑡: _${newmoney}$_\n- - - - - - - - - - - - - - - - - -\n❇️ 𝑃𝑟𝑒𝑚𝑖𝑢𝑚 𝑆𝑜𝑛𝑔𝑠`)
 						}
 						else {
-                        reply(`${design} 𝑆𝑒𝑛𝑑𝑖𝑛𝑔...\n- - - - - - - - - - - - - - - - - -\nTitle & Artist\n- - - - - - - - - - - - - - - - - -\n_${firstSong.fullTitle}_\n_${firstSong.artist.name}_\n- - - - - - - - - - - - - - - - - -\nAlbum & Date\n- - - - - - - - - - - - - - - - - -\n_${firstSong.album}_\n_${firstSong.releasedAt}_\n- - - - - - - - - - - - - - - - - -\n_Tipp: ${tipp}_\n- - - - - - - - - - - - - - - - - -\n_cost: 25$_\n_.cheapsong (cost 4$)_\n- - - - - - - - - - - - - - - - - -\n❇️ _Premium Songs_`)
+                        reply(`${design} 𝑆𝑒𝑛𝑑𝑖𝑛𝑔...\n- - - - - - - - - - - - - - - - - -\n𝑇𝑖𝑡𝑙𝑒 𝑎𝑛𝑑 𝐴𝑟𝑡𝑖𝑠𝑡\n- - - - - - - - - - - - - - - - - -\n_${firstSong.fullTitle}_\n_${firstSong.artist.name}_\n- - - - - - - - - - - - - - - - - -\n𝐴𝑙𝑏𝑢𝑚 𝑎𝑛𝑑 𝐷𝑎𝑡𝑒\n- - - - - - - - - - - - - - - - - -\n_${firstSong.album}_\n_${firstSong.releasedAt}_\n- - - - - - - - - - - - - - - - - -\n_Tipp: ${tipp}_\n- - - - - - - - - - - - - - - - - -\n𝐶𝑜𝑠𝑡: _25$_\n_.cheapsong (_ 𝐶𝑜𝑠𝑡  _4$)_\n𝑀𝑜𝑛𝑒𝑦 𝑙𝑒𝑓𝑡: _${newmoney}$_\n- - - - - - - - - - - - - - - - - -\n❇️ 𝑃𝑟𝑒𝑚𝑖𝑢𝑚 𝑆𝑜𝑛𝑔𝑠`)
 						}
 					}catch (err){
-						reply(`${design} 𝑆𝑒𝑛𝑑𝑖𝑛𝑔...\n- - - - - - - - - - - - - - - - - -\n_No Data found_\n- - - - - - - - - - - - - - - - - -\n_cost: 25$_\n_.cheapsong (cost 4$)_\n- - - - - - - - - - - - - - - - - -\n𝑀𝑜𝑛𝑒𝑦 𝑙𝑒𝑓𝑡 ${newmoney}$\n- - - - - - - - - - - - - - - - - -\n_Tipp: ${tipp}_\n- - - - - - - - - - - - - - - - - -\n❇️ _Premium Songs_`)  
+						reply(`${design} 𝑆𝑒𝑛𝑑𝑖𝑛𝑔...\n- - - - - - - - - - - - - - - - - -\n𝑁𝑜 𝐷𝑎𝑡𝑎 𝐹𝑜𝑢𝑛𝑑\n- - - - - - - - - - - - - - - - - -\n𝐶𝑜𝑠𝑡: _25$_\n_.cheapsong (_ 𝐶𝑜𝑠𝑡  _4$)_\n𝑀𝑜𝑛𝑒𝑦 𝑙𝑒𝑓𝑡: _${newmoney}$_\n- - - - - - - - - - - - - - - - - -\n_Tipp: ${tipp}_\n- - - - - - - - - - - - - - - - - -\n❇️ 𝑃𝑟𝑒𝑚𝑖𝑢𝑚 𝑆𝑜𝑛𝑔𝑠`)  
 							}
 
 						buffer = fs.readFileSync(ran)
@@ -2803,7 +2803,7 @@ text: `${design} 𝐷𝑜𝑤𝑛𝑙𝑜𝑎𝑑𝑖𝑛𝑔...\n- - - - - - - 
 					})
 					var xp1 = Number(xp);
 					var gain = Number(5);
-					var newxp = xp + gain; 
+					var newxp = xp1 + gain; 
 
         fs.readFile(`./data/users/${sender.split("@")[0]}/xp.json`, 'utf-8', function(err, data) {
             if (err) throw err;
