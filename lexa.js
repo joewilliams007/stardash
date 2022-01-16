@@ -1097,6 +1097,7 @@ text: `𝑇𝑜𝑜𝑙𝑠
 - - - - - - - - - - - - - - - - - -    
 ${design} ☆ .song 
 ${design} ☆ .lyrics
+${design} ☆ .define
 ${design} ☆ .send 
 ${design} ☆ .weather 
 ${design} ☆ .translate 
@@ -2801,19 +2802,19 @@ client.define(`${value}`).then(function(result){
    console.log(result);
    reply(`${design} Definition
 - - - - - - - - - - - - - - - - - -
-${result.definitions[0].definition}
+_${result.definitions[0].definition}_
 - - - - - - - - - - - - - - - - - -
 ${design} Type
 - - - - - - - - - - - - - - - - - -
-${result.definitions[0].type}
+_${result.definitions[0].type}_
 - - - - - - - - - - - - - - - - - -
 ${design} Example
 - - - - - - - - - - - - - - - - - -
-${result.definitions[0].example}
+_${result.definitions[0].example}_
 - - - - - - - - - - - - - - - - - -
 ${design} Emoji
 - - - - - - - - - - - - - - - - - -
-${result.definitions[0].emoji}`)
+_${result.definitions[0].emoji}_`)
 });
 
 break
