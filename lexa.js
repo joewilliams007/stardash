@@ -3001,7 +3001,7 @@ case 'text':
 
 	// Pick first one
 	const firstSong = searches[0];
-//	console.log("About the Song:\n", firstSong, "\n");
+	console.log("About the Song:\n", firstSong, "\n");
 	
 	// Ok lets get the lyrics
 	const lyrics = await firstSong.lyrics();
