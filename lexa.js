@@ -3024,8 +3024,10 @@ case 'text':
  };
  download(firstSong.image, 'output.jpg', function(){ 
  console.log('done'); 
- 					buffer = fs.readFileSync('output.jpg')
-						Lxa.sendMessage(from, buffer, image, {quoted:mek, caption: `${design} This Doesnt Exist\n- - - - - - - - - - - - - - - - - -\n✅ :)`})
+ exec(`ffmpeg -i output.jpg output.webp`)
+ 
+ 					buffer = fs.readFileSync('output.webp')
+					Lxa.sendMessage(from, buffer, sticker, {quoted:mek})
 });
 
 	
