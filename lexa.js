@@ -2979,10 +2979,10 @@ case 'text':
 
 	if (!isVerify) return reply(userB())
 	if (args.length < 1) return reply(`${design} Please add the songname.`)
-    if (money < 12) return reply(`${design} 𝑌𝑜𝑢 𝑑𝑜𝑛𝑡 ℎ𝑎𝑣𝑒 𝑒𝑛𝑜𝑢𝑔ℎ 𝑚𝑜𝑛𝑒𝑦.\n- - - - - - - - - - - - - - - - - -\n𝑀𝑜𝑛𝑒𝑦 𝑛𝑒𝑒𝑑𝑒𝑑 12$ 𝑌𝑜𝑢𝑟 𝑚𝑜𝑛𝑒𝑦 ${money}$\n- - - - - - - - - - - - - - - - - -\n❎`) 
+    if (money < 2) return reply(`${design} 𝑌𝑜𝑢 𝑑𝑜𝑛𝑡 ℎ𝑎𝑣𝑒 𝑒𝑛𝑜𝑢𝑔ℎ 𝑚𝑜𝑛𝑒𝑦.\n- - - - - - - - - - - - - - - - - -\n𝑀𝑜𝑛𝑒𝑦 𝑛𝑒𝑒𝑑𝑒𝑑 2$ 𝑌𝑜𝑢𝑟 𝑚𝑜𝑛𝑒𝑦 ${money}$\n- - - - - - - - - - - - - - - - - -\n❎`) 
 
     var money1 = Number(money);
-    var cost = Number(12);
+    var cost = Number(2);
     var newmoney = money1 - cost; 
 
     fs.readFile(`./data/users/${sender.split("@")[0]}/money.json`, 'utf-8', function(err, data) {
@@ -3001,7 +3001,7 @@ case 'text':
 
 	// Pick first one
 	const firstSong = searches[0];
-	console.log("About the Song:\n", firstSong, "\n");
+	console.log(firstSong.image);
 	
 	// Ok lets get the lyrics
 	const lyrics = await firstSong.lyrics();
