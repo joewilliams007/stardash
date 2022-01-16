@@ -2788,6 +2788,21 @@ ${res}`)
 			})
 		})
 break
+//-- Movie
+case 'movie':
+case 'film':
+	if (!isVerify) return reply(userB())
+	if (args.length < 1) return reply(`${design} What Movie do you want to know about?`) 
+
+const imdb = require('imdb-api')
+imdb.get({name: `${value}`}, {apiKey: 'fbc0659b', timeout: 30000}).then(console.log).catch(console.log);
+
+reply(`${design} Definition
+- - - - - - - - - - - - - - - - - -
+_${idmb.get}_
+- - - - - - - - - - - - - - - - - -`)
+
+break
 //-- Define
 case 'define':
 case 'whats':
