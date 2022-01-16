@@ -2802,13 +2802,15 @@ const cli = new imdb.Client({apiKey: 'fbc0659b'});
 cli.search({'name': `${value}`}).then((search) => {
   for (const result of search.results) {
     console.log(result);
-  }
-});
 
-reply(`${design} Movie
+	reply(`${design} Movie
 - - - - - - - - - - - - - - - - - -
 _${result.title}_
 - - - - - - - - - - - - - - - - - -`)
+  }
+});
+
+
 
 break
 //-- Define
