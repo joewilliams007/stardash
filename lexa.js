@@ -883,7 +883,7 @@ replyimg(beens, text, captdd, ownerdd)
 	
 	  }
 
-try {
+
 
 if (budy.includes(`.${commanduser}`)){
 
@@ -896,9 +896,7 @@ replyimg(beenss, text, capt, owner)
 
 }
 
-} catch {
-	console.error(err)
-}
+
 
 	  try {
 if (budy.includes(`bit.ly`)){
