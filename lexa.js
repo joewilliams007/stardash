@@ -2819,6 +2819,7 @@ console.log(getbyauthor);
 reply(`${design} Random Quote
 - - - - - - - - - - - - - - - - - -		
 ${getbyauthor}`)
+	}
 	} catch {
 
 	}
