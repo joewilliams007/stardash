@@ -2807,7 +2807,11 @@ console.log(randomquote);
 
 reply(`${design} Random Quote
 - - - - - - - - - - - - - - - - - -		
-${randomquote}`)
+_${randomquote.quote}_
+- - - - - - - - - - - - - - - - - -
+${design} Author
+- - - - - - - - - - - - - - - - - -
+_${randomquote.author}_`)
 
 	}
 
@@ -2816,9 +2820,14 @@ ${randomquote}`)
 // to get a number amount of quotes by who said them
 const getbyauthor = Quotes.getbyauthor(`${value}`, 1);
 console.log(getbyauthor);
+
 reply(`${design} Random Quote
 - - - - - - - - - - - - - - - - - -		
-${getbyauthor}`)
+_${getbyauthor.quote}_
+- - - - - - - - - - - - - - - - - -
+${design} Author
+- - - - - - - - - - - - - - - - - -
+_${getbyauthor.author}_`)
 	}
 	} catch {
 
