@@ -2888,9 +2888,10 @@ case 'axolotel':
 reply (`${design} Sending... Please wait\n- - - - - - - - - - - - - - - - - -\n✅ :)`)
 
 var getJSON = require('get-json')
-
 getJSON('https://axoltlapi.herokuapp.com/', function(error, res){
     console.log(res);
+
+	
 
 
 request = require('request'); 
@@ -2910,6 +2911,31 @@ Lxa.sendMessage(from, buffer, image, {quoted:mek, caption: `${design} Axolotl\n-
 })
 break
 //---X623-Whatsapp-Bot------------------------------------------------------------------------------------------------------------------------//
+//-- animeQuote
+case 'animequote':
+
+var getJSON = require('get-json')
+getJSON('https://animechan.vercel.app/api/random', function(error, res){
+    console.log(res);
+
+reply(`${design} 𝑅𝑎𝑛𝑑𝑜𝑚 𝑄𝑢𝑜𝑡𝑒
+- - - - - - - - - - - - - - - - - -		
+_${res.quote}_
+- - - - - - - - - - - - - - - - - -
+${design} 𝐶ℎ𝑎𝑟𝑎𝑐𝑡𝑒𝑟
+- - - - - - - - - - - - - - - - - -
+_${res.character}_
+- - - - - - - - - - - - - - - - - -
+${design} 𝐴𝑛𝑖𝑚𝑒
+- - - - - - - - - - - - - - - - - -
+_${res.anime}_
+- - - - - - - - - - - - - - - - - -
+`)
+
+});
+
+break
+
 //-- Quote
 case 'quote':
 case 'qoute':
