@@ -2958,11 +2958,11 @@ console.log(getbyauthor);
 
 reply(`${design} 𝑅𝑎𝑛𝑑𝑜𝑚 𝑄𝑢𝑜𝑡𝑒
 - - - - - - - - - - - - - - - - - -		
-_${randomquote.quote}_
+_${getbyauthor[0].quote}_
 - - - - - - - - - - - - - - - - - -
 ${design} 𝐴𝑢𝑡ℎ𝑜𝑟
 - - - - - - - - - - - - - - - - - -
-_${randomquote.author}_
+_${getbyauthor[0].author}_
 - - - - - - - - - - - - - - - - - -
 ${design} 𝑀𝑜𝑟𝑒 𝑏𝑦, .𝑚𝑜𝑟𝑒𝑞
 - - - - - - - - - - - - - - - - - -
