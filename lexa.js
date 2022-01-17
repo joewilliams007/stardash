@@ -2911,6 +2911,28 @@ Lxa.sendMessage(from, buffer, image, {quoted:mek, caption: `${design} Axolotl\n-
 });
 })
 break
+
+
+
+
+
+
+//-- corona
+case 'virus':
+case 'covid':
+case 'coronavirus':
+case 'wuhan':
+case 'wuhanvirus':
+
+var getJSON = require('get-json')
+getJSON('https://covid-api.mmediagroup.fr/v1/cases', function(error, res){
+    console.log(res);
+
+
+
+});
+
+break
 //---X623-Whatsapp-Bot------------------------------------------------------------------------------------------------------------------------//
 //-- animeQuote
 case 'animequote':
