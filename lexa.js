@@ -2930,7 +2930,7 @@ getJSON('https://covid-api.mmediagroup.fr/v1/cases', function(error, res){
 	console.log(res.Global);
 
 
-var country = `res.value`
+var country = res.value
 console.log(country.Global);
 
 reply(`${design} COVID CASES
