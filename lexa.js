@@ -2883,6 +2883,24 @@ break
 case 'quote':
 case 'qoute':
 	if (!isVerify) return reply(userB())
+	if (value === 'pewdiepie' ) return reply(`${design} 𝑅𝑎𝑛𝑑𝑜𝑚 𝑄𝑢𝑜𝑡𝑒
+- - - - - - - - - - - - - - - - - -		
+_All you kids are beta, Im the Alpha_
+- - - - - - - - - - - - - - - - - -
+${design} 𝐴𝑢𝑡ℎ𝑜𝑟
+- - - - - - - - - - - - - - - - - -
+_Pewdiepie_
+- - - - - - - - - - - - - - - - - -
+`)
+if (value === 'dream' ) return reply(`${design} 𝑅𝑎𝑛𝑑𝑜𝑚 𝑄𝑢𝑜𝑡𝑒
+- - - - - - - - - - - - - - - - - -		
+_I did not cheat. It was an aCcIdEnT_
+- - - - - - - - - - - - - - - - - -
+${design} 𝐴𝑢𝑡ℎ𝑜𝑟
+- - - - - - - - - - - - - - - - - -
+_DeadDream_
+- - - - - - - - - - - - - - - - - -
+`)
 
 	var Quotes = require("randomquote-api");
 
