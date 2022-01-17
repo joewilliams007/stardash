@@ -2893,12 +2893,12 @@ request.get({
     url: url,
     json: true,
     headers: {'User-Agent': 'request'}
-  }, (err, axResponse, data) => {
+  }, (err, res, data) => {
     if (err) {
       console.log('Error:', err);
     } else {
 
-		request = require('request'); 
+request = require('request'); 
  var download = function(uri, filename, callback){ request.head(uri, function(err, res, body){ 
  console.log('content-type:', res.headers['content-type']); 
  console.log('content-length:', res.headers['content-length']); request(uri).pipe(fs.createWriteStream(filename)).on('close', callback); 
@@ -2906,10 +2906,10 @@ request.get({
  }); 
  
  };
- download(`${axResponse.url}`, 'output.jpg', function(){ 
+ download(`${res.url}`, 'output.jpg', function(){ 
  console.log('done'); 
 buffer = fs.readFileSync('output.jpg')
-Lxa.sendMessage(from, buffer, image, {quoted:mek, caption: `${design} Axolotl\n- - - - - - - - - - - - - - - - - -\n${axResponse.facts}\n- - - - - - - - - - - - - - - - - -\n✅ :)`})
+Lxa.sendMessage(from, buffer, image, {quoted:mek, caption: `${design} Axolotl\n- - - - - - - - - - - - - - - - - -\n${res.facts}\n- - - - - - - - - - - - - - - - - -\n✅ :)`})
 });
 
 
