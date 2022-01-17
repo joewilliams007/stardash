@@ -2933,7 +2933,7 @@ getJSON('https://covid-api.mmediagroup.fr/v1/cases', function(error, res){
 reply(`${design} COVID CASES
 - - - - - - - - - - - - - - - - - -
 𝐶𝑜𝑟𝑜𝑛𝑎𝑣𝑖𝑟𝑢𝑠 𝑐𝑎𝑠𝑒𝑠
-_${res.'SouthAfrica'.confirmed}_
+_${res.South Africa.confirmed}_
 𝑃𝑜𝑝𝑢𝑙𝑎𝑡𝑖𝑜𝑛
 𝐶𝑜𝑛𝑓𝑖𝑟𝑚𝑒𝑑
 𝑅𝑒𝑐𝑜𝑣𝑒𝑟𝑒𝑑
