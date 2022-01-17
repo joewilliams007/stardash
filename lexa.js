@@ -2934,11 +2934,11 @@ getJSON('https://covid-api.mmediagroup.fr/v1/cases', function(error, res){
 reply(`${design} COVID CASES
 - - - - - - - - - - - - - - - - - -
 𝐶𝑜𝑟𝑜𝑛𝑎𝑣𝑖𝑟𝑢𝑠 𝑐𝑎𝑠𝑒𝑠
-_${res.Global.confirmed}_
+_${res.Global.All.confirmed}_
 𝑃𝑜𝑝𝑢𝑙𝑎𝑡𝑖𝑜𝑛
-_${res.Global.population}_
+_${res.Global.All.population}_
 𝐷𝑒𝑎𝑡ℎ𝑠
-_${res.Global.deaths}_
+_${res.Global.All.deaths}_
 - - - - - - - - - - - - - - - - - -
 `)
 
