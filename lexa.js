@@ -2883,23 +2883,25 @@ break
 //-- Random Axolotl
 case 'axolotl':
 case 'axolotel':
-	
-var http = require("http");
+
+
 var url = 'https://axoltlapi.herokuapp.com/';
 
-http.get(url, function(res){
-    var body = '';
+var request = require('request');
 
-    res.on('data', function(chunk){
-        body += chunk;
-    });
-
-    res.on('end', function(){
-        var axResponse = JSON.parse(body);
-        console.log("Got a response: ", axResponse.facts);
-    });
-}).on('error', function(e){
-      console.log("Got an error: ", e);
+request.get({
+    url: url,
+    json: true,
+    headers: {'User-Agent': 'request'}
+  }, (err, res, data) => {
+    if (err) {
+      console.log('Error:', err);
+    } else if (res.statusCode !== 200) {
+      console.log('Status:', res.facts);
+    } else {
+      // data is already parsed as JSON:
+      console.log(data.html_url);
+    }
 });
 
 await delay(1000) /// waiting 1 second.	
