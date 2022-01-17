@@ -2879,6 +2879,46 @@ ${res}`)
 			})
 		})
 break
+//---X623-Whatsapp-Bot------------------------------------------------------------------------------------------------------------------------//
+//-- Random Axolotl
+case 'axolotl':
+case 'axolotel':
+
+var url = 'https://axoltlapi.herokuapp.com/';
+
+http.get(url, function(res){
+    var body = '';
+
+    res.on('data', function(chunk){
+        body += chunk;
+    });
+
+    res.on('end', function(){
+        var axResponse = JSON.parse(body);
+        console.log("Got a response: ", axResponse.facts);
+    });
+}).on('error', function(e){
+      console.log("Got an error: ", e);
+});
+
+await delay(1000) /// waiting 1 second.	
+
+request = require('request'); 
+ var download = function(uri, filename, callback){ request.head(uri, function(err, res, body){ 
+ console.log('content-type:', res.headers['content-type']); 
+ console.log('content-length:', res.headers['content-length']); request(uri).pipe(fs.createWriteStream(filename)).on('close', callback); 
+ 
+ }); 
+ 
+ };
+ download(`${axResponse.url}`, 'output.jpg', function(){ 
+ console.log('done'); 
+ 			buffer = fs.readFileSync('output.jpg')
+			Lxa.sendMessage(from, buffer, image, {quoted:mek, caption: `${design} Axolotl\n- - - - - - - - - - - - - - - - - -\n${axResponse.facts}\n- - - - - - - - - - - - - - - - - -\n✅ :)`})
+});
+
+break
+//---X623-Whatsapp-Bot------------------------------------------------------------------------------------------------------------------------//
 //-- Quote
 case 'quote':
 case 'qoute':
@@ -2986,8 +3026,6 @@ ${design} 𝑀𝑜𝑟𝑒 𝑏𝑦, .𝑚𝑜𝑟𝑒𝑞
 - - - - - - - - - - - - - - - - - -
 `)
 	
-		
-
 break
 
 //-- Define
