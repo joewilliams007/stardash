@@ -2913,24 +2913,15 @@ Lxa.sendMessage(from, buffer, image, {quoted:mek, caption: `${design} Axolotl\n-
 })
 break
 
-
-
-
-
-
+//---X623-Whatsapp-Bot------------------------------------------------------------------------------------------------------------------------//
 //-- corona
 case 'virus':
 case 'covid':
 case 'coronavirus':
 case 'wuhan':
 case 'wuhanvirus':
-
 var getJSON = require('get-json')
 getJSON('https://covid-api.mmediagroup.fr/v1/cases', function(error, res){
-    console.log(res);
-	console.log(res.Global);
-
-
 reply(`${design} COVID CASES
 - - - - - - - - - - - - - - - - - -
 𝐶𝑜𝑟𝑜𝑛𝑎𝑣𝑖𝑟𝑢𝑠 𝑐𝑎𝑠𝑒𝑠
@@ -2941,7 +2932,6 @@ _${res.Global.All.population}_
 _${res.Global.All.deaths}_
 - - - - - - - - - - - - - - - - - -
 `)
-
 });
 
 break
