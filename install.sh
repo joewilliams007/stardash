@@ -21,6 +21,7 @@ wget -O ~/../usr/share/tessdata/ind.traineddata "https://github.com/tesseract-oc
 npm i imgbb-uploader
 npm i
 npm i ocr
+npm install get-json 
 npm install owlbot-js
 npm i randomquote-api
 pip install -U yt-dlp
