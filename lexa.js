@@ -2884,14 +2884,14 @@ case 'quote':
 case 'qoute':
 	if (!isVerify) return reply(userB())
 
-	const Quotes = require("randomquote-api");
+	var Quotes = require("randomquote-api");
 
 try {
 
 if (args.length < 1) {
 
 // To get one random Quote you do
-const randomquote = Quotes.randomQuote();
+var randomquote = Quotes.randomQuote();
 console.log(randomquote);
 
 
@@ -2922,7 +2922,7 @@ fs.readFile(`./data/bot/savedquote.json`, 'utf-8', function(err, data) {
 	else {
 
 // to get a number amount of quotes by who said them
-const getbyauthor = Quotes.getbyauthor(`${value}`, 1);
+var getbyauthor = Quotes.getbyauthor(`${value}`, 1);
 console.log(getbyauthor);
 
 reply(`${design} Random Quote
@@ -2950,9 +2950,9 @@ case 'moreq':
 	var _moreq = JSON.parse(fs.readFileSync('./data/bot/savedquote.json'));	
 	moreq = _moreq[0]	//--- saved moreq
 
-	const Quotes = require("randomquote-api");
+	var Quotes = require("randomquote-api");
 
-const getbyauthor = Quotes.getbyauthor(`${moreq}`, 1);
+var getbyauthor = Quotes.getbyauthor(`${moreq}`, 1);
 console.log(getbyauthor);
 
 reply(`${design} 𝑅𝑎𝑛𝑑𝑜𝑚 𝑄𝑢𝑜𝑡𝑒
