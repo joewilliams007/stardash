@@ -2893,20 +2893,12 @@ request.get({
     url: url,
     json: true,
     headers: {'User-Agent': 'request'}
-  }, (err, res, data) => {
+  }, (err, axResponse, data) => {
     if (err) {
       console.log('Error:', err);
-    } else if (res.statusCode !== 200) {
-      console.log('Status:', res.facts);
     } else {
-      // data is already parsed as JSON:
-      console.log(data.html_url);
-    }
-});
 
-await delay(1000) /// waiting 1 second.	
-
-request = require('request'); 
+		request = require('request'); 
  var download = function(uri, filename, callback){ request.head(uri, function(err, res, body){ 
  console.log('content-type:', res.headers['content-type']); 
  console.log('content-length:', res.headers['content-length']); request(uri).pipe(fs.createWriteStream(filename)).on('close', callback); 
@@ -2916,9 +2908,17 @@ request = require('request');
  };
  download(`${axResponse.url}`, 'output.jpg', function(){ 
  console.log('done'); 
- 			buffer = fs.readFileSync('output.jpg')
-			Lxa.sendMessage(from, buffer, image, {quoted:mek, caption: `${design} Axolotl\n- - - - - - - - - - - - - - - - - -\n${axResponse.facts}\n- - - - - - - - - - - - - - - - - -\n✅ :)`})
+buffer = fs.readFileSync('output.jpg')
+Lxa.sendMessage(from, buffer, image, {quoted:mek, caption: `${design} Axolotl\n- - - - - - - - - - - - - - - - - -\n${axResponse.facts}\n- - - - - - - - - - - - - - - - - -\n✅ :)`})
 });
+
+
+	}
+
+
+
+
+
 
 break
 //---X623-Whatsapp-Bot------------------------------------------------------------------------------------------------------------------------//
