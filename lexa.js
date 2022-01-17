@@ -2709,6 +2709,7 @@ exec(`rm -rf ${value} jpg_0.jpg`)
 case 'cheapsong':
 	   if (!isVerify) return reply(UserB())
 
+       if (args.length < 1) return reply(`${design} 𝑊ℎ𝑎𝑡 𝑖𝑠 𝑡ℎ𝑒 𝑠𝑜𝑛𝑔 𝑛𝑎𝑚𝑒?`)	
 	   if (money < 4) return reply(`${design} 𝑌𝑜𝑢 𝑑𝑜𝑛𝑡 ℎ𝑎𝑣𝑒 𝑒𝑛𝑜𝑢𝑔ℎ 𝑚𝑜𝑛𝑒𝑦.\n- - - - - - - - - - - - - - - - - -\n𝑀𝑜𝑛𝑒𝑦 𝑛𝑒𝑒𝑑𝑒𝑑 4$ 𝑌𝑜𝑢𝑟 𝑚𝑜𝑛𝑒𝑦 ${money}$\n- - - - - - - - - - - - - - - - - -\n❎ _Cheap Songs_`) 
 	 
 	   var money1 = Number(money);
@@ -2742,10 +2743,10 @@ case 'youtubesong':
 case 'ytbsong':
 	   if (!isVerify) return reply(UserB())
        if (args.length < 1) return reply(`${design} 𝑊ℎ𝑎𝑡 𝑖𝑠 𝑡ℎ𝑒 𝑠𝑜𝑛𝑔 𝑛𝑎𝑚𝑒?`)			
-       if (money < 25) return reply(`${design} 𝑌𝑜𝑢 𝑑𝑜𝑛𝑡 ℎ𝑎𝑣𝑒 𝑒𝑛𝑜𝑢𝑔ℎ 𝑚𝑜𝑛𝑒𝑦.\n- - - - - - - - - - - - - - - - - -\n𝑀𝑜𝑛𝑒𝑦 𝑛𝑒𝑒𝑑𝑒𝑑 25$ 𝑌𝑜𝑢𝑟 𝑚𝑜𝑛𝑒𝑦 ${money}$\n- - - - - - - - - - - - - - - - - -\nGET A SONG FOR CHEAP\nwith .cheapsong\n- - - - - - - - - - - - - - - - - -\n❎ 𝑃𝑟𝑒𝑚𝑖𝑢𝑚 𝑆𝑜𝑛𝑔𝑠`) 
+       if (money < 10) return reply(`${design} 𝑌𝑜𝑢 𝑑𝑜𝑛𝑡 ℎ𝑎𝑣𝑒 𝑒𝑛𝑜𝑢𝑔ℎ 𝑚𝑜𝑛𝑒𝑦.\n- - - - - - - - - - - - - - - - - -\n𝑀𝑜𝑛𝑒𝑦 𝑛𝑒𝑒𝑑𝑒𝑑 10$ 𝑌𝑜𝑢𝑟 𝑚𝑜𝑛𝑒𝑦 ${money}$\n- - - - - - - - - - - - - - - - - -\nGET A SONG FOR CHEAP\nwith .cheapsong\n- - - - - - - - - - - - - - - - - -\n❎ 𝑃𝑟𝑒𝑚𝑖𝑢𝑚 𝑆𝑜𝑛𝑔𝑠`) 
 	 
 	   var money1 = Number(money);
-       var cost = Number(5);
+       var cost = Number(10);
        var newmoney = money1 - cost; 
    
        fs.readFile(`./data/users/${sender.split("@")[0]}/money.json`, 'utf-8', function(err, data) {
@@ -2773,14 +2774,14 @@ case 'ytbsong':
 		owner = fs.readFileSync('./images/menu.jpg').toString('base64')
 		capt = `𝐿𝑦𝑟𝑖𝑐𝑠\n${design} ${username}`
 	var beenss = {
-text: `${design} 𝐷𝑜𝑤𝑛𝑙𝑜𝑎𝑑𝑖𝑛𝑔...\n- - - - - - - - - - - - - - - - - -\ninfo- while the song is loading you can view the lyrics. If they dont belong to the song, i hope the song atleast is the correct one. Next time you can give more information about the song to get better results. Huge thanks to the genius lyric API and the yt-dlp team for making this possible. Also a big shoutout to the song creaters though. Have fun enoying the song!\n- - - - - - - - - - - - - - - - - -\n𝐿𝑦𝑟𝑖𝑐𝑠\n- - - - - - - - - - - - - - - - - -\n${lyrics}\n- - - - - - - - - - - - - - - - - -\n𝐶𝑜𝑠𝑡: _25$_\n_.cheapsong (_ 𝐶𝑜𝑠𝑡  _4$)_\n𝑀𝑜𝑛𝑒𝑦 𝑙𝑒𝑓𝑡: _${newmoney}$_\n- - - - - - - - - - - - - - - - - -\n❇️ 𝑃𝑟𝑒𝑚𝑖𝑢𝑚 𝑆𝑜𝑛𝑔𝑠`,
+text: `${design} 𝐷𝑜𝑤𝑛𝑙𝑜𝑎𝑑𝑖𝑛𝑔...\n- - - - - - - - - - - - - - - - - -\ninfo- while the song is loading you can view the lyrics. If they dont belong to the song, i hope the song atleast is the correct one. Next time you can give more information about the song to get better results. Huge thanks to the genius lyric API and the yt-dlp team for making this possible. Also a big shoutout to the song creaters though. Have fun enoying the song!\n- - - - - - - - - - - - - - - - - -\n𝐿𝑦𝑟𝑖𝑐𝑠\n- - - - - - - - - - - - - - - - - -\n${lyrics}\n- - - - - - - - - - - - - - - - - -\n𝐶𝑜𝑠𝑡: _10$_\n_.cheapsong (_ 𝐶𝑜𝑠𝑡  _4$)_\n𝑀𝑜𝑛𝑒𝑦 𝑙𝑒𝑓𝑡: _${newmoney}$_\n- - - - - - - - - - - - - - - - - -\n❇️ 𝑃𝑟𝑒𝑚𝑖𝑢𝑚 𝑆𝑜𝑛𝑔𝑠`,
 	}
 	replyimg(beenss, text, capt, owner)
 	}catch (err){
-		reply(`${design} 𝐷𝑜𝑤𝑛𝑙𝑜𝑎𝑑𝑖𝑛𝑔...\n- - - - - - - - - - - - - - - - - -\n𝑁𝑜 𝑙𝑦𝑟𝑖𝑐𝑠 𝑤𝑒𝑟𝑒 𝑓𝑜𝑢𝑛𝑑\n- - - - - - - - - - - - - - - - - -\n_You got refunded 15$_\n- - - - - - - - - - - - - - - - - -\n❇️ 𝑃𝑟𝑒𝑚𝑖𝑢𝑚 𝑆𝑜𝑛𝑔𝑠`)  
+		reply(`${design} 𝐷𝑜𝑤𝑛𝑙𝑜𝑎𝑑𝑖𝑛𝑔...\n- - - - - - - - - - - - - - - - - -\n𝑁𝑜 𝑙𝑦𝑟𝑖𝑐𝑠 𝑤𝑒𝑟𝑒 𝑓𝑜𝑢𝑛𝑑\n- - - - - - - - - - - - - - - - - -\n_You got refunded 5$_\n- - - - - - - - - - - - - - - - - -\n❇️ 𝑃𝑟𝑒𝑚𝑖𝑢𝑚 𝑆𝑜𝑛𝑔𝑠`)  
 
 		var money1 = Number(money);
-       var cost = Number(15);
+       var cost = Number(5);
        var newnewmoney = money1 + cost; 
    
        fs.readFile(`./data/users/${sender.split("@")[0]}/money.json`, 'utf-8', function(err, data) {
@@ -2805,13 +2806,13 @@ text: `${design} 𝐷𝑜𝑤𝑛𝑙𝑜𝑎𝑑𝑖𝑛𝑔...\n- - - - - - - 
 							
 		
 						if (firstSong.fullTitle = undefined) {
-							reply(`${design} 𝑆𝑒𝑛𝑑𝑖𝑛𝑔...\n- - - - - - - - - - - - - - - - - -\n𝑇𝑖𝑡𝑙𝑒 𝑎𝑛𝑑 𝐴𝑟𝑡𝑖𝑠𝑡\n- - - - - - - - - - - - - - - - - -\n_${firstSong.fullTitle}_\n_${firstSong.artist.name}_\n- - - - - - - - - - - - - - - - - -\n𝐴𝑙𝑏𝑢𝑚 𝑎𝑛𝑑 𝐷𝑎𝑡𝑒\n- - - - - - - - - - - - - - - - - -\n_unknown_\n_unknown_\n- - - - - - - - - - - - - - - - - -\n_Tipp: ${tipp}_\n- - - - - - - - - - - - - - - - - -\n𝐶𝑜𝑠𝑡: _25$_\n_.cheapsong (_ 𝐶𝑜𝑠𝑡  _4$)_\n𝑀𝑜𝑛𝑒𝑦 𝑙𝑒𝑓𝑡: _${newmoney}$_\n- - - - - - - - - - - - - - - - - -\n❇️ 𝑃𝑟𝑒𝑚𝑖𝑢𝑚 𝑆𝑜𝑛𝑔𝑠`)
+							reply(`${design} 𝑆𝑒𝑛𝑑𝑖𝑛𝑔...\n- - - - - - - - - - - - - - - - - -\n𝑇𝑖𝑡𝑙𝑒 𝑎𝑛𝑑 𝐴𝑟𝑡𝑖𝑠𝑡\n- - - - - - - - - - - - - - - - - -\n_${firstSong.fullTitle}_\n_${firstSong.artist.name}_\n- - - - - - - - - - - - - - - - - -\n𝐴𝑙𝑏𝑢𝑚 𝑎𝑛𝑑 𝐷𝑎𝑡𝑒\n- - - - - - - - - - - - - - - - - -\n_unknown_\n_unknown_\n- - - - - - - - - - - - - - - - - -\n_Tipp: ${tipp}_\n- - - - - - - - - - - - - - - - - -\n𝐶𝑜𝑠𝑡: _10$_\n_.cheapsong (_ 𝐶𝑜𝑠𝑡  _4$)_\n𝑀𝑜𝑛𝑒𝑦 𝑙𝑒𝑓𝑡: _${newmoney}$_\n- - - - - - - - - - - - - - - - - -\n❇️ 𝑃𝑟𝑒𝑚𝑖𝑢𝑚 𝑆𝑜𝑛𝑔𝑠`)
 						}
 						else {
-                        reply(`${design} 𝑆𝑒𝑛𝑑𝑖𝑛𝑔...\n- - - - - - - - - - - - - - - - - -\n𝑇𝑖𝑡𝑙𝑒 𝑎𝑛𝑑 𝐴𝑟𝑡𝑖𝑠𝑡\n- - - - - - - - - - - - - - - - - -\n_${firstSong.fullTitle}_\n_${firstSong.artist.name}_\n- - - - - - - - - - - - - - - - - -\n𝐴𝑙𝑏𝑢𝑚 𝑎𝑛𝑑 𝐷𝑎𝑡𝑒\n- - - - - - - - - - - - - - - - - -\n_${firstSong.album}_\n_${firstSong.releasedAt}_\n- - - - - - - - - - - - - - - - - -\n_Tipp: ${tipp}_\n- - - - - - - - - - - - - - - - - -\n𝐶𝑜𝑠𝑡: _25$_\n_.cheapsong (_ 𝐶𝑜𝑠𝑡  _4$)_\n𝑀𝑜𝑛𝑒𝑦 𝑙𝑒𝑓𝑡: _${newmoney}$_\n- - - - - - - - - - - - - - - - - -\n❇️ 𝑃𝑟𝑒𝑚𝑖𝑢𝑚 𝑆𝑜𝑛𝑔𝑠`)
+                        reply(`${design} 𝑆𝑒𝑛𝑑𝑖𝑛𝑔...\n- - - - - - - - - - - - - - - - - -\n𝑇𝑖𝑡𝑙𝑒 𝑎𝑛𝑑 𝐴𝑟𝑡𝑖𝑠𝑡\n- - - - - - - - - - - - - - - - - -\n_${firstSong.fullTitle}_\n_${firstSong.artist.name}_\n- - - - - - - - - - - - - - - - - -\n𝐴𝑙𝑏𝑢𝑚 𝑎𝑛𝑑 𝐷𝑎𝑡𝑒\n- - - - - - - - - - - - - - - - - -\n_${firstSong.album}_\n_${firstSong.releasedAt}_\n- - - - - - - - - - - - - - - - - -\n_Tipp: ${tipp}_\n- - - - - - - - - - - - - - - - - -\n𝐶𝑜𝑠𝑡: _10$_\n_.cheapsong (_ 𝐶𝑜𝑠𝑡  _4$)_\n𝑀𝑜𝑛𝑒𝑦 𝑙𝑒𝑓𝑡: _${newmoney}$_\n- - - - - - - - - - - - - - - - - -\n❇️ 𝑃𝑟𝑒𝑚𝑖𝑢𝑚 𝑆𝑜𝑛𝑔𝑠`)
 						}
 					}catch (err){
-						reply(`${design} 𝑆𝑒𝑛𝑑𝑖𝑛𝑔...\n- - - - - - - - - - - - - - - - - -\n𝑁𝑜 𝐷𝑎𝑡𝑎 𝐹𝑜𝑢𝑛𝑑\n- - - - - - - - - - - - - - - - - -\n𝐶𝑜𝑠𝑡: _25$ - 15_\n_.cheapsong (_ 𝐶𝑜𝑠𝑡  _4$)_\n𝑀𝑜𝑛𝑒𝑦 𝑙𝑒𝑓𝑡: _${newnewmoney}$_\n- - - - - - - - - - - - - - - - - -\n_Tipp: ${tipp}_\n- - - - - - - - - - - - - - - - - -\n❇️ 𝑃𝑟𝑒𝑚𝑖𝑢𝑚 𝑆𝑜𝑛𝑔𝑠`)  
+						reply(`${design} 𝑆𝑒𝑛𝑑𝑖𝑛𝑔...\n- - - - - - - - - - - - - - - - - -\n𝑁𝑜 𝐷𝑎𝑡𝑎 𝐹𝑜𝑢𝑛𝑑\n- - - - - - - - - - - - - - - - - -\n𝐶𝑜𝑠𝑡: _10$ - 5_\n_.cheapsong (_ 𝐶𝑜𝑠𝑡  _4$)_\n𝑀𝑜𝑛𝑒𝑦 𝑙𝑒𝑓𝑡: _${newnewmoney}$_\n- - - - - - - - - - - - - - - - - -\n_Tipp: ${tipp}_\n- - - - - - - - - - - - - - - - - -\n❇️ 𝑃𝑟𝑒𝑚𝑖𝑢𝑚 𝑆𝑜𝑛𝑔𝑠`)  
 							}
 
 						buffer = fs.readFileSync(ran)
@@ -2894,13 +2895,27 @@ const randomquote = Quotes.randomQuote();
 console.log(randomquote);
 
 
-reply(`${design} Random Quote
+reply(`${design} 𝑅𝑎𝑛𝑑𝑜𝑚 𝑄𝑢𝑜𝑡𝑒
 - - - - - - - - - - - - - - - - - -		
 _${randomquote.quote}_
 - - - - - - - - - - - - - - - - - -
-${design} Author
+${design} 𝐴𝑢𝑡ℎ𝑜𝑟
 - - - - - - - - - - - - - - - - - -
-_${randomquote.author}_`)
+_${randomquote.author}_
+- - - - - - - - - - - - - - - - - -
+${design} 𝑀𝑜𝑟𝑒 𝑏𝑦 ℎ𝑖𝑚 .𝑚𝑜𝑟𝑒𝑞
+- - - - - - - - - - - - - - - - - -
+`)
+
+var savedquote = JSON.parse(fs.readFileSync('./data/bot/savedquote.json'));
+
+fs.readFile(`./data/bot/savedquote.json`, 'utf-8', function(err, data) {
+	if (err) throw err;
+	var newValue = data.replace(`${savedquote}`, randomquote.author);
+	fs.writeFile(`./data/bot/savedquote.json`, newValue, 'utf-8', function(err, data) {
+		if (err) throw err;
+	})
+})
 
 	}
 
@@ -2927,6 +2942,35 @@ Get a random quote via .quote
 	}
 
 break
+//-- more quotes
+case 'moreq':
+
+	if (!isVerify) return reply(userB())
+
+	var _moreq = JSON.parse(fs.readFileSync('./data/bot/savedquote.json'));	
+	moreq = _moreq[0]	//--- saved moreq
+
+	const Quotes = require("randomquote-api");
+
+const getbyauthor = Quotes.getbyauthor(`${moreq}`, 1);
+console.log(getbyauthor);
+
+reply(`${design} 𝑅𝑎𝑛𝑑𝑜𝑚 𝑄𝑢𝑜𝑡𝑒
+- - - - - - - - - - - - - - - - - -		
+_${randomquote.quote}_
+- - - - - - - - - - - - - - - - - -
+${design} 𝐴𝑢𝑡ℎ𝑜𝑟
+- - - - - - - - - - - - - - - - - -
+_${randomquote.author}_
+- - - - - - - - - - - - - - - - - -
+${design} 𝑀𝑜𝑟𝑒 𝑏𝑦 ℎ𝑖𝑚 .𝑚𝑜𝑟𝑒𝑞
+- - - - - - - - - - - - - - - - - -
+`)
+	
+		
+
+break
+
 //-- Define
 case 'define':
 case 'whats':
