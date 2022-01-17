@@ -2927,6 +2927,7 @@ case 'wuhanvirus':
 var getJSON = require('get-json')
 getJSON('https://covid-api.mmediagroup.fr/v1/cases', function(error, res){
     console.log(res);
+	console.log(res.Global);
 
 
 
