@@ -1062,6 +1062,7 @@ case 'games':
 - - - - - - - - - - - - - - - - - -    
 ${design} ☆ .slot 
 ${design} ☆ .quote 
+${design} ☆ .axolotl
 ${design} .truth
 ${design} .dare
 - - - - - - - - - - - - - - - - - - 
