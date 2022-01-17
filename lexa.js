@@ -2930,6 +2930,30 @@ getJSON('https://covid-api.mmediagroup.fr/v1/cases', function(error, res){
 	console.log(res.Global);
 
 
+var country = res.`${value}`
+console.log(country.Global);
+
+reply(`${design} COVID CASES
+- - - - - - - - - - - - - - - - - -
+𝐶𝑜𝑟𝑜𝑛𝑎𝑣𝑖𝑟𝑢𝑠 𝑐𝑎𝑠𝑒𝑠
+__
+𝑃𝑜𝑝𝑢𝑙𝑎𝑡𝑖𝑜𝑛
+𝐶𝑜𝑛𝑓𝑖𝑟𝑚𝑒𝑑
+𝑅𝑒𝑐𝑜𝑣𝑒𝑟𝑒𝑑
+𝐷𝑒𝑎𝑡ℎ𝑠
+𝑆𝑞𝑢𝑎𝑟𝑒 𝐾𝑚 𝐴𝑟𝑒𝑎
+𝐿𝑖𝑓𝑒 𝐸𝑥𝑝𝑒𝑐𝑡𝑎𝑛𝑐𝑦
+𝐸𝑙𝑒𝑣𝑎𝑡𝑖𝑜𝑛 𝑖𝑛 𝑚𝑒𝑡𝑒𝑟𝑠
+𝐶𝑜𝑛𝑡𝑖𝑛𝑒𝑛𝑡
+𝐴𝑏𝑏𝑟𝑒𝑣𝑎𝑡𝑖𝑜𝑛
+𝐿𝑜𝑐𝑎𝑡𝑖𝑜𝑛
+𝑖𝑠𝑜
+𝐶𝑎𝑝𝑖𝑡𝑎𝑙 𝐶𝑖𝑡𝑦
+𝑙𝑎𝑡
+𝑙𝑜𝑛𝑔
+𝑢𝑝𝑑𝑎𝑡𝑒𝑑
+- - - - - - - - - - - - - - - - - -
+`)
 
 });
 
