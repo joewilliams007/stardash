@@ -2930,12 +2930,10 @@ getJSON('https://covid-api.mmediagroup.fr/v1/cases', function(error, res){
 	console.log(res.Global);
 
 
-console.log(res.value);
-
 reply(`${design} COVID CASES
 - - - - - - - - - - - - - - - - - -
 𝐶𝑜𝑟𝑜𝑛𝑎𝑣𝑖𝑟𝑢𝑠 𝑐𝑎𝑠𝑒𝑠
-__
+_${res.'SouthAfrica'.confirmed}_
 𝑃𝑜𝑝𝑢𝑙𝑎𝑡𝑖𝑜𝑛
 𝐶𝑜𝑛𝑓𝑖𝑟𝑚𝑒𝑑
 𝑅𝑒𝑐𝑜𝑣𝑒𝑟𝑒𝑑
