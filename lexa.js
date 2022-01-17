@@ -2884,6 +2884,8 @@ break
 case 'axolotl':
 case 'axolotel':
 
+reply (`${design} Sending... Please wait\n- - - - - - - - - - - - - - - - - -\n✅ :)`)
+
 var getJSON = require('get-json')
 
 getJSON('https://axoltlapi.herokuapp.com/', function(error, res){
@@ -2902,7 +2904,7 @@ request = require('request');
  console.log('done'); 
 
 buffer = fs.readFileSync('output.jpg')
-Lxa.sendMessage(from, buffer, image, {quoted:mek, caption: `${design} Axolotl\n- - - - - - - - - - - - - - - - - -\n${res.facts}\n- - - - - - - - - - - - - - - - - -\n✅ :)`})
+Lxa.sendMessage(from, buffer, image, {quoted:mek, caption: `${design} Axolotl\n- - - - - - - - - - - - - - - - - -\n_${res.facts}_\n- - - - - - - - - - - - - - - - - -\n✅ :)`})
 });
 })
 break
