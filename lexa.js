@@ -2903,11 +2903,12 @@ ${design} 𝐴𝑢𝑡ℎ𝑜𝑟
 - - - - - - - - - - - - - - - - - -
 _${randomquote.author}_
 - - - - - - - - - - - - - - - - - -
-${design} 𝑀𝑜𝑟𝑒 𝑏𝑦 ℎ𝑖𝑚 .𝑚𝑜𝑟𝑒𝑞
+${design} 𝑀𝑜𝑟𝑒 𝑏𝑦, .𝑚𝑜𝑟𝑒𝑞
 - - - - - - - - - - - - - - - - - -
 `)
 
-var savedquote = JSON.parse(fs.readFileSync('./data/bot/savedquote.json'));
+var _savedquote = JSON.parse(fs.readFileSync('./data/bot/savedquote.json'));
+savedquote = _savedquote[0]	//--- savedquote
 
 fs.readFile(`./data/bot/savedquote.json`, 'utf-8', function(err, data) {
 	if (err) throw err;
@@ -2947,12 +2948,12 @@ case 'moreq':
 
 	if (!isVerify) return reply(userB())
 
-	var _moreq = JSON.parse(fs.readFileSync('./data/bot/savedquote.json'));	
-	moreq = _moreq[0]	//--- saved moreq
+	var _savedquote = JSON.parse(fs.readFileSync('./data/bot/savedquote.json'));
+	savedquote = _savedquote[0]	//--- savedquote
 
 	var Quotes = require("randomquote-api");
 
-var getbyauthor = Quotes.getbyauthor(`${moreq}`, 1);
+var getbyauthor = Quotes.getbyauthor(`${savedquote}`, 1);
 console.log(getbyauthor);
 
 reply(`${design} 𝑅𝑎𝑛𝑑𝑜𝑚 𝑄𝑢𝑜𝑡𝑒
@@ -2963,7 +2964,7 @@ ${design} 𝐴𝑢𝑡ℎ𝑜𝑟
 - - - - - - - - - - - - - - - - - -
 _${randomquote.author}_
 - - - - - - - - - - - - - - - - - -
-${design} 𝑀𝑜𝑟𝑒 𝑏𝑦 ℎ𝑖𝑚 .𝑚𝑜𝑟𝑒𝑞
+${design} 𝑀𝑜𝑟𝑒 𝑏𝑦, .𝑚𝑜𝑟𝑒𝑞
 - - - - - - - - - - - - - - - - - -
 `)
 	
