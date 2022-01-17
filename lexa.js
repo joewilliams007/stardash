@@ -2883,7 +2883,8 @@ break
 //-- Random Axolotl
 case 'axolotl':
 case 'axolotel':
-
+	
+var http = require("http");
 var url = 'https://axoltlapi.herokuapp.com/';
 
 http.get(url, function(res){
