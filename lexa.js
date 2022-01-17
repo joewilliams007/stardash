@@ -2916,7 +2916,7 @@ Lxa.sendMessage(from, buffer, image, {quoted:mek, caption: `${design} Axolotl\n-
 	}
 
 
-
+});
 
 
 
