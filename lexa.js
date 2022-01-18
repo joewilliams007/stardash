@@ -4846,19 +4846,6 @@ case 'feed':
 
 				
 
-				var agemy
-				try {
-				var getJSON = require('get-json')
-					getJSON(`https://api.agify.io/?name=${username}`, function(error, res){
-						console.log(res);
-				
-				agemy = res.age		
-				});
-
-				} catch(err){      
-				
-				}
-
 				var gendermy
 				try {
 				var getJSON = require('get-json')
