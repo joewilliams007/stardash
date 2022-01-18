@@ -4611,12 +4611,22 @@ case 'feed':
 
 		}
 
-		let stardashhit
+		
+
+		var stardashhitmenu
+		try {
+			var getJSON = require('get-json')
+			getJSON('https://api.countapi.xyz/hit/namespace/stardashwhatsappbotbyjoeandjohntotalhits', function(error, res){
+
+			stardashhitmenu = res.value
+
+		})
+	
+			} catch(err){      
+	
+			}
 
 
-
-	var getJSON = require('get-json')
-	getJSON('https://api.countapi.xyz/hit/namespace/stardashwhatsappbotbyjoeandjohntotalhits', function(error, res){
 
 	
 
@@ -4757,7 +4767,7 @@ ${tempSymbol} ${skytext} ${temperature}°C
 𝑌𝑜𝑢𝑟 𝑇𝑜𝑡𝑎𝑙 𝐶𝑜𝑚𝑚𝑎𝑛𝑑𝑠 
 ⌖ ${cmdlenght}
 𝐺𝑙𝑜𝑏𝑎𝑙 𝑇𝑜𝑡𝑎𝑙 𝐶𝑜𝑚𝑚𝑎𝑛𝑑𝑠 
-⌖ ${res.value}
+⌖ ${stardashhitmenu}
 - - - - - - - - - - - - - - - - - -
 📡 𝐶𝑎𝑟𝑟𝑖𝑒𝑟
 ${carrier}
@@ -4782,7 +4792,7 @@ replyimg(been1, text, capt, owner)
 
 reply('Sorry there was an Error. How to resolve:\n\n1. set different location via .location\n\n2. Install Termux Api on Bots phone.\n\nWait until microsoft api works again. ')
 }
-})
+
 
 var xpn = Number(xp);
 var upxp = Number(1);
