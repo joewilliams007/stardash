@@ -2937,6 +2937,47 @@ _${res.Global.All.deaths}_
 
 break
 //---X623-Whatsapp-Bot------------------------------------------------------------------------------------------------------------------------//
+//-- mynumber
+case 'number':
+
+var access_key = '3938fda5de7c7e53601edfc59f0e08ff'; // https://numverify.com/dashboard http://apilayer.net/api/validate?access_key=3938fda5de7c7e53601edfc59f0e08ff&number=4917626388837
+
+var getJSON = require('get-json')
+getJSON('http://apilayer.net/api/validate?access_key=' + access_key + '&number=' + sender.split("@")[0], function(error, res){
+reply(`${design} 𝑀𝐸
+- - - - - - - - - - - - - - - - - -
+📡 𝐶𝑎𝑟𝑟𝑖𝑒𝑟
+_${res.carrier}_
+- - - - - - - - - - - - - - - - - -
+✅ 𝑉𝑎𝑙𝑖𝑑
+_${res.valid}_
+- - - - - - - - - - - - - - - - - -
+🔑 𝐶𝑜𝑢𝑛𝑡𝑟𝑦 𝑃𝑟𝑒𝑓𝑖𝑥
+_${res.country_prefix}_
+- - - - - - - - - - - - - - - - - -
+🧬 𝐶𝑜𝑢𝑛𝑡𝑟𝑦 𝐶𝑜𝑑𝑒
+_${res.country_code}_
+- - - - - - - - - - - - - - - - - -
+🏳️ 𝐶𝑜𝑢𝑛𝑡𝑟𝑦
+_${country_name}_
+- - - - - - - - - - - - - - - - - -
+📟 𝐿𝑜𝑐𝑎𝑡𝑖𝑜𝑛
+_${res.location}_
+- - - - - - - - - - - - - - - - - -
+${design}  𝑁𝑢𝑚𝑏𝑒𝑟
+_${res.number}_
+- - - - - - - - - - - - - - - - - -
+${design}  𝐿𝑜𝑐𝑎𝑙
+_${res.local_format}_
+- - - - - - - - - - - - - - - - - -
+${design}  𝐼𝑛𝑡𝑒𝑟𝑛𝑎𝑡𝑖𝑜𝑛𝑎𝑙
+_${res.international_format}_
+- - - - - - - - - - - - - - - - - -
+`)
+});
+
+break
+//---X623-Whatsapp-Bot------------------------------------------------------------------------------------------------------------------------//
 //-- animeQuote
 case 'animequote':
 
