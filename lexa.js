@@ -3197,7 +3197,7 @@ case 'whatgender':
 	var agemy
 	try {
 	var getJSON = require('get-json')
-		getJSON(`https://api.agify.io/?name=${username}`, function(error, res){
+		getJSON(`https://api.agify.io/?name=${args[0]}`, function(error, res){
 			console.log(res);
 	
 	agemy = res.age		
