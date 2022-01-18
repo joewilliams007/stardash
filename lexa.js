@@ -1184,7 +1184,6 @@ text: `𝑇𝑜𝑜𝑙𝑠
 ⌖ ${pushname}
 - - - - - - - - - - - - - - - - - -    
 ${design} ☆ .song 
-${design} .cheapsong 
 ${design} ☆ .lyrics
 ${design} ☆ .define
 ${design} ☆ .send 
@@ -1197,6 +1196,8 @@ ${design} ☆ .command
 ${design} ☆ .rsong
 ${design} ☆ .ddate
 ${design} ☆ .mylove
+${design} .cheapsong 
+${design} .iss
 ${design} .virus
 ${design} .shazam
 ${design} .note
@@ -3005,11 +3006,16 @@ var getJSON = require('get-json')
 getJSON('http://api.open-notify.org/iss-now.json', function(error, res){
     console.log(res);
 
+getJSON('http://api.open-notify.org/astros.json', function(error, res1){
+	console.log(res1);	
+
 reply(`🛰️ 𝐶𝑢𝑟𝑟𝑒𝑛𝑡 𝐼𝑆𝑆 𝑙𝑜𝑐𝑎𝑡𝑖𝑜𝑛
 - - - - - - - - - - - - - - - - - -
 🗺️ 𝐿𝑜𝑐𝑎𝑡𝑖𝑜𝑛 
 🌐 𝐿𝑜𝑛𝑔𝑖𝑡𝑢𝑑𝑒 ⌖ _${res.iss_position.longitude}_
 🌐 𝐿𝑎𝑡𝑖𝑡𝑢𝑑𝑒 ⌖ _${res.iss_position.latitude}_
+- - - - - - - - - - - - - - - - - -
+👩‍🚀 𝑃𝑒𝑜𝑝𝑙𝑒 𝑖𝑛 𝑆𝑝𝑎𝑐𝑒 ⌖ _${res2.number}_
 - - - - - - - - - - - - - - - - - -
 ✅ 𝑀𝑒𝑠𝑠𝑠𝑔𝑒 ⌖ _${res.message}_
 - - - - - - - - - - - - - - - - - -
@@ -3026,11 +3032,13 @@ case 'virus':
 case 'covid':
 case 'coronavirus':
 case 'wuhan':
+case 'china':
+case 'corona':
 case 'wuhanvirus':
 
 var getJSON = require('get-json')
 getJSON('https://covid-api.mmediagroup.fr/v1/cases', function(error, res){
-reply(`🦠 𝐶𝑜𝑟𝑜𝑛𝑎𝑣𝑖𝑟𝑢𝑠 𝐶𝑎𝑠𝑒𝑠
+reply(`🦠 𝐶𝑜𝑟𝑜𝑛𝑎𝑣𝑖𝑟𝑢𝑠
 - - - - - - - - - - - - - - - - - -
 😷 𝐶𝑜𝑟𝑜𝑛𝑎𝑣𝑖𝑟𝑢𝑠 𝑐𝑎𝑠𝑒𝑠
 _${res.Global.All.confirmed}_
