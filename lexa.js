@@ -763,14 +763,15 @@ if (isCmd) {
 					var year = (yy < 1000) ? yy + 1900 : yy;
 					return `${day}. ${myMonths[bulan]} ${year}`
 		}	
-
+     
+	let stardashhit
 	try {
 	  var _cmdhit = JSON.parse(fs.readFileSync(`./data/users/${sender.split("@")[0]}/userhit.json`));
 
 	  var getJSON = require('get-json')
 	  getJSON('https://api.countapi.xyz/hit/namespace/stardashwhatsappbotbyjoeandjohntotalhits', function(error, res){
 
-	  var stardashhit = res.value
+	  stardashhit = res.value
 
     })
 
