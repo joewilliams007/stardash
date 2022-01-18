@@ -3010,7 +3010,7 @@ getJSON('http://api.open-notify.org/astros.json', function(error, res1){
 	console.log(res1);	
 
 
-if (Number(res1.number) === Number(10)) { 
+if (Number(res1.number) > Number(9)) { 
 
 reply(`🛰️ 𝐶𝑢𝑟𝑟𝑒𝑛𝑡 𝐼𝑆𝑆 𝑙𝑜𝑐𝑎𝑡𝑖𝑜𝑛
 - - - - - - - - - - - - - - - - - -
@@ -3020,8 +3020,18 @@ reply(`🛰️ 𝐶𝑢𝑟𝑟𝑒𝑛𝑡 𝐼𝑆𝑆 𝑙𝑜𝑐𝑎𝑡�
 - - - - - - - - - - - - - - - - - -
 👩‍🚀 𝑃𝑒𝑜𝑝𝑙𝑒 𝑖𝑛 𝑆𝑝𝑎𝑐𝑒 ⌖ _${res1.number}_
 - - - - - - - - - - - - - - - - - -
-${res1.people[0].craft}
-${res1.people[0].name}
+👽 𝑇𝑜𝑝 𝑇𝑒𝑛 
+- - - - - - - - - - - - - - - - - -
+_${res1.people[0].craft} ${res1.people[0].name}_
+_${res1.people[1].craft} ${res1.people[1].name}_
+_${res1.people[2].craft} ${res1.people[2].name}_
+_${res1.people[3].craft} ${res1.people[3].name}_
+_${res1.people[4].craft} ${res1.people[4].name}_
+_${res1.people[5].craft} ${res1.people[5].name}_
+_${res1.people[6].craft} ${res1.people[6].name}_
+_${res1.people[7].craft} ${res1.people[7].name}_
+_${res1.people[8].craft} ${res1.people[8].name}_
+_${res1.people[9].craft} ${res1.people[9].name}_
 - - - - - - - - - - - - - - - - - -
 ✅ 𝑀𝑒𝑠𝑠𝑠𝑔𝑒 ⌖ _${res.message}_
 - - - - - - - - - - - - - - - - - -
@@ -3029,8 +3039,7 @@ ${res1.people[0].name}
 _${res.timestamp}_
 - - - - - - - - - - - - - - - - - -
 `)
-
-} 
+} else { 
 
 reply(`🛰️ 𝐶𝑢𝑟𝑟𝑒𝑛𝑡 𝐼𝑆𝑆 𝑙𝑜𝑐𝑎𝑡𝑖𝑜𝑛
 - - - - - - - - - - - - - - - - - -
@@ -3040,14 +3049,21 @@ reply(`🛰️ 𝐶𝑢𝑟𝑟𝑒𝑛𝑡 𝐼𝑆𝑆 𝑙𝑜𝑐𝑎𝑡�
 - - - - - - - - - - - - - - - - - -
 👩‍🚀 𝑃𝑒𝑜𝑝𝑙𝑒 𝑖𝑛 𝑆𝑝𝑎𝑐𝑒 ⌖ _${res1.number}_
 - - - - - - - - - - - - - - - - - -
+👽 𝑇𝑜𝑝 𝐹𝑖𝑣𝑒
+- - - - - - - - - - - - - - - - - -
+_${res1.people[0].craft} ${res1.people[0].name}_
+_${res1.people[1].craft} ${res1.people[1].name}_
+_${res1.people[2].craft} ${res1.people[2].name}_
+_${res1.people[3].craft} ${res1.people[3].name}_
+_${res1.people[4].craft} ${res1.people[4].name}_
+- - - - - - - - - - - - - - - - - -
 ✅ 𝑀𝑒𝑠𝑠𝑠𝑔𝑒 ⌖ _${res.message}_
 - - - - - - - - - - - - - - - - - -
 ⏱️ 𝑇𝑖𝑚𝑒𝑠𝑡𝑠𝑎𝑚𝑝 ⌖
 _${res.timestamp}_
 - - - - - - - - - - - - - - - - - -
 `)
-
-
+}
 
 
 });
