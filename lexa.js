@@ -767,6 +767,14 @@ if (isCmd) {
 	try {
 	  var _cmdhit = JSON.parse(fs.readFileSync(`./data/users/${sender.split("@")[0]}/userhit.json`));
 
+	  var getJSON = require('get-json')
+	  getJSON('https://api.countapi.xyz/hit/namespace/stardashwhatsappbotbyjoeandjohntotalhits', function(error, res){
+
+	  var stardashhit = res.value
+
+    })
+
+
 
 	  if (args.length > 0) {
 	  yoi = `${tanggggal()}\n${design} ${command} ${value}`
@@ -4579,7 +4587,17 @@ case 'feed':
 	case 'myfeed':
 	case 'myaccount':
 	case 'me':
-		if (!isVerify) return reply(userB())
+
+	if (!isVerify) return reply(userB())
+
+    var cmdlenght
+	try {
+		var _cmdhit = JSON.parse(fs.readFileSync(`./data/users/${sender.split("@")[0]}/userhit.json`));
+		cmdlenght = `${_cmdhit.length}`
+
+		} catch(err){      
+
+		}
 
 try {		
 
@@ -4710,6 +4728,11 @@ ${tempSymbol} ${skytext} ${temperature}°C
 ⌖ .ℎ𝑖𝑑𝑒 
 ⌖ .𝑚𝑦𝑐𝑜𝑚𝑚𝑎𝑛𝑑𝑠
 ⌖ .𝑑𝑒𝑙𝑒𝑡𝑒𝑎𝑐𝑐𝑜𝑢𝑛𝑡
+- - - - - - - - - - - - - - - - - -
+𝑌𝑜𝑢𝑟 𝑇𝑜𝑡𝑎𝑙 𝐶𝑜𝑚𝑚𝑎𝑛𝑑𝑠 
+⌖ ${cmdlenght}
+𝐺𝑙𝑜𝑏𝑎𝑙 𝑇𝑜𝑡𝑎𝑙 𝐶𝑜𝑚𝑚𝑎𝑛𝑑𝑠 
+⌖ ${stardashhit}
 - - - - - - - - - - - - - - - - - -
 📡 𝐶𝑎𝑟𝑟𝑖𝑒𝑟
 ${carrier}
