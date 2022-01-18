@@ -3005,7 +3005,7 @@ var getJSON = require('get-json')
 getJSON('http://api.open-notify.org/iss-now.json', function(error, res){
     console.log(res);
 
-reply(`🛰️ 𝐶𝑢𝑟𝑟𝑒𝑛𝑡 𝐼𝑆𝑆 𝑙𝑜𝑐𝑎𝑡𝑖𝑜𝑛 🌐🌍🌎🌏🗺️
+reply(`🛰️ 𝐶𝑢𝑟𝑟𝑒𝑛𝑡 𝐼𝑆𝑆 𝑙𝑜𝑐𝑎𝑡𝑖𝑜𝑛
 - - - - - - - - - - - - - - - - - -
 🗺️ 𝐿𝑜𝑐𝑎𝑡𝑖𝑜𝑛 
 🌐 𝐿𝑜𝑛𝑔𝑖𝑡𝑢𝑑𝑒 ⌖ _${res.iss_position.longitude}_
@@ -3042,7 +3042,7 @@ _${res.Global.All.population}_
 _${res.Global.All.deaths}_
 - - - - - - - - - - - - - - - - - -
 📄 𝑆𝑜𝑢𝑟𝑐𝑒
-https://mmediagroup.fr/
+_https://covid-api.mmediagroup.fr/v1/cases_
 - - - - - - - - - - - - - - - - - -
 `)
 });
