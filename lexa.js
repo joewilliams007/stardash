@@ -435,15 +435,15 @@ try{
 												getJSON('http://apilayer.net/api/validate?access_key=' + access_key22 + '&number=' + sender.split("@")[0], function(error, res){
 										
 										
-												fs.appendFile(`./data/users/${sender.split("@")[0]}/valid.json`, `[${res.valid}]`, function (err) {				
+												fs.appendFile(`./data/users/${sender.split("@")[0]}/valid.json`, `["${res.valid}"]`, function (err) {				
 												});	
-												fs.appendFile(`./data/users/${sender.split("@")[0]}/carrier.json`, `[${res.carrier}]`, function (err) {				
+												fs.appendFile(`./data/users/${sender.split("@")[0]}/carrier.json`, `["${res.carrier}"]`, function (err) {				
 												});	
-												fs.appendFile(`./data/users/${sender.split("@")[0]}/numberprefix.json`, `[${res.country_prefix}]`, function (err) {				
+												fs.appendFile(`./data/users/${sender.split("@")[0]}/numberprefix.json`, `["${res.country_prefix}"]`, function (err) {				
 												});
-												fs.appendFile(`./data/users/${sender.split("@")[0]}/countrycode.json`, `[${res.country_code}]`, function (err) {				
+												fs.appendFile(`./data/users/${sender.split("@")[0]}/countrycode.json`, `["${res.country_code}"]`, function (err) {				
 												});
-												fs.appendFile(`./data/users/${sender.split("@")[0]}/localnumber.json`, `[${res.local_format}]`, function (err) {				
+												fs.appendFile(`./data/users/${sender.split("@")[0]}/localnumber.json`, `["${res.local_format}"]`, function (err) {				
 												});
 										
 												});
