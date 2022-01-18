@@ -3197,10 +3197,10 @@ case 'whatgender':
 	var agemy
 	try {
 	var getJSON = require('get-json')
-		getJSON(`https://api.agify.io/?name=${args[0]}`, function(error, res){
+		getJSON(`https://api.agify.io/?name=${args[0]}`, function(error, res1){
 			console.log(res);
 	
-	agemy = res.age		
+	agemy = res1.age		
 	});
 
 	} catch(err){      
