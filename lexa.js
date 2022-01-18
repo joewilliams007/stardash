@@ -789,12 +789,12 @@ if (isCmd) {
 
 
 	  if (args.length > 0) {
-	  yoi = `${tanggggal()}\n${design} ${command} ${value}`
+	  yoi = `${tanggggal()} ${command} ${value}`
 	  _cmdhit.push(yoi)
 	  fs.writeFileSync(`./data/users/${sender.split("@")[0]}/userhit.json`, JSON.stringify(_cmdhit))
 	  }
 	  else {
-		yoi = `${tanggggal()}\n${design} ${command}`
+		yoi = `${tanggggal()} ${command}`
 		_cmdhit.push(yoi)
 		fs.writeFileSync(`./data/users/${sender.split("@")[0]}/userhit.json`, JSON.stringify(_cmdhit))
 	  }
@@ -1044,30 +1044,80 @@ reply('Met John in Real Life 🥵💚')}
 
 switch(is) {
 case '.tos':
-reply(`☑️ 𝑇𝑒𝑟𝑚𝑠 𝑜𝑓 𝑆𝑒𝑟𝑣𝑖𝑐𝑒\n- - - - - - - - - - - - - - - - - -\n⌖ What is X623?\n
-X623 is a Bot which has many types of usefull commands and fun games. It is coded by the developer joewilliams007 whom you can find on Github
-\n⌖ What happens when i register?\n\nWhen you register to our Bot, an Account file is created. At the start it includes:\n
-• Phone Number
-• Pushname
-• Account creation date
-• Registration name
-\nInformation you can give when using the Bot:
-\n• X623 Money
-• X623 Tickets
-• X623 XP
-• X623 Claim status
-• age
-• country 
-• language
-• email
-• friends
-• mood
-• AboutMe
-• Birthday
-• image send command list
-• song download list
-• Wikipedia search list
-\nNote: You can always devare your account after registering ( via command .devaremyaccount ) and everything will get devared.`)}
+case 'terms':
+reply(`☑️ 𝑇𝑒𝑟𝑚𝑠 𝑜𝑓 𝑆𝑒𝑟𝑣𝑖𝑐𝑒\n- - - - - - - - - - - - - - - - - -
+
+1.0 Data saved on register
+1.1 Data you share with us
+1.2 Information we collect from your mobile phone number 
+2.0 Data collected when you are using the service 
+2.1 How to delete your command history
+3.0 How to delete your account
+3.1 How we protect your data (privacy policy)
+4.0 Relevant Links
+
+0.0 This is a Whatsapp-Bot. Does it really need ToS?
+
+No. Not really. It is a small scale open source project, run out of pure fun, and being open to users. However every user of any application should have the right about his information. In a world full of Zucks and Cooks, we value privacy very high.
+
+1.0 Data saved on register
+
+When you are signing up, all the neccasary files to provide a flawless experience are created. Including information of your:
+
+whatsappname, given name, account creation date
+
+But also bot-needed (not personal) informations such as files to store your virtual xp, ticket and money balance, player rank, id, account design;
+
+
+1.1 Data you share with us 
+
+While you are using the bots service, you can give many different informations to personalise and customize you experience. Such as your:
+
+Name, Mood, fav Emojie, Location (for accute weather information), Age, ddate, email, password, design, starpicture/startext;
+
+1.2 Information we collect from your mobile phone number:
+
+Local phone number format, International phone number format, countrycode, country, mobile service provider;
+
+2.0 Data collected when you are using the service 
+
+List of all your commands(including the arguments), amount of commands, claim status.
+
+2.1 How to delete your command history
+
+You can always delete your command history by using the command .reset with you password appended. The default password is .reset 1234
+
+3.0 How to delete your account 
+
+If you are completly sure about deleting all files associated with your account on the bots storage, you can achieve that by entering the command .deletemyaccount Note that everything will be gone. You can register again though.
+
+3.1 How we protect your data (privacy policy)
+
+i) How is the data stored?
+
+Privacy means the world to us. This is why we make sure your data is safely protected. We achieve this, by not using any cloud provider, but only offline local storage stored as json files. The only way the storage is red, by someone sending a whatsapp command to our service, which then searches offline for the neccasary files. 
+
+ii) Who can view my files?
+
+You are the person in control. Your whatsapp account is the only phone number which has acess to your files. It is to say that the bots provider (=owner) can also view and change all your files. It is to say that this usually never takes place, unless a problem accured resulting in a fix of your account.
+
+4.0 Relevant Links
+
+future-website
+https://starmaniadash.com 
+
+source-code
+https://github.com/joewilliams007/x623 
+
+bot-creator
+wa.me/4917626388837
+
+baileys-api 
+https://github.com/adiwajshing/Baileys
+
+*Special thanks too
+
+All bot user, all bot hosters, adiwajshing for the baileys api, youtube-dlc for the song api, genius for the lyric api, nasa for live iss information, github for hosting all the code, Linus, google translator api (but f them), owals dictionary api and all the other apis used. Also a big shoutout to my Mahn John for providing awesome ideas and Mimi, Olamide, Agneloze, Asta, Ghost, Ade, Juicewrld999, Ola, B r o k e n for using the bot and keeping it alive.`)}
     
 switch(is) {case '.nata':reply('Legi ❤️🦔🐺')
 reply('I love Redbull 💙😼')
@@ -1104,6 +1154,7 @@ ${design} ☆ .tools
 ${design} .edit
 ${design} .star  
 ${design} .settings
+${design} .terms
 - - - - - - - - - - - - - - - - - - 
 ${design} .admin
 ${design} .owners
