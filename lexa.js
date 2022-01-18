@@ -2736,41 +2736,124 @@ case 'nobg':
 //---X623-Whatsapp-Bot------------------------------------------------------------------------------------------------------------------------// 
 //-- Calculator
 case 'calc':
-	if (!isVerify) return reply(UserB())
-	if (args.length < 2) return reply(`${design} 𝐸𝑛𝑡𝑒𝑟 𝐶𝑎𝑙𝑐𝑢𝑙𝑎𝑡𝑖𝑜𝑛. 𝐸𝑥𝑎𝑚𝑝𝑙𝑒𝑠:\n.calc 5 + 9\n.calc 6 / 2\n.calc 5 * 5\n.calc   10 - 5`)
+case 'calculator':
+	
+if (!isVerify) return reply(UserB())
 
-var x = Number(args[0]);
-var y = Number(args[2]);
+reply(`📜 𝑂𝑝𝑡𝑖𝑜𝑛𝑠
+- - - - - - - - - - - - - - - - - -
+${design} 𝐴𝑑𝑑 
+.add
+- - - - - - - - - - - - - - - - - -
+${design} 𝑆𝑢𝑏𝑡𝑟𝑎𝑐𝑡
+.sub
+- - - - - - - - - - - - - - - - - -
+${design} 𝐷𝑖𝑣𝑖𝑑𝑒
+.div
+- - - - - - - - - - - - - - - - - -
+${design} 𝑀𝑢𝑙𝑡𝑖𝑝𝑙𝑦
+.multi
+- - - - - - - - - - - - - - - - - -
+${design} 𝑆𝑖𝑛𝑢𝑠
+.sin
+- - - - - - - - - - - - - - - - - -
+${design} 𝐶𝑜𝑠𝑖𝑛𝑢𝑠
+.cos
+- - - - - - - - - - - - - - - - - -
+${design} 𝑇𝑎𝑛𝑔𝑒𝑛𝑠
+.tan
+- - - - - - - - - - - - - - - - - -
+${design} 𝑆𝑞𝑢𝑎𝑟𝑒𝑟𝑜𝑜𝑡
+.sqrt
+- - - - - - - - - - - - - - - - - -
+${design} 𝐿𝑜𝑔
+.log
+- - - - - - - - - - - - - - - - - -
+${design} 𝐸
+.e
+- - - - - - - - - - - - - - - - - -
+${design} 𝑃𝑖
+.pi
+- - - - - - - - - - - - - - - - - -
+📐 𝐶𝑎𝑐𝑙𝑐𝑢𝑙𝑎𝑡𝑜𝑟
+`)
 
-	if (args[1] === '+' ) {
-		var z = x + y;
-		reply(`${design} 𝑇ℎ𝑒 𝑟𝑒𝑠𝑢𝑙𝑡 𝑜𝑓 ` + x + ` ${args[1]} ` + y + ` 𝑖𝑠 ` + z + `.`); 
-  } else if (args[1] === '*' ) {
-		var z = x * y;
-		reply(`${design} 𝑇ℎ𝑒 𝑟𝑒𝑠𝑢𝑙𝑡 𝑜𝑓 ` + x + ` ${args[1]} ` + y + ` 𝑖𝑠 ` + z + `.`);  
-  } else if (args[1] === 'x' ) {
-		var z = x * y;
-		reply(`${design} 𝑇ℎ𝑒 𝑟𝑒𝑠𝑢𝑙𝑡 𝑜𝑓 ` + x + ` ${args[1]} ` + y + ` 𝑖𝑠 ` + z + `.`); 
-  } else if (args[1] === '/' ) {
-		var z = x / y;
-		reply(`${design} 𝑇ℎ𝑒 𝑟𝑒𝑠𝑢𝑙𝑡 𝑜𝑓 ` + x + ` ${args[1]} ` + y + ` 𝑖𝑠 ` + z + `.`); 	
-  } else if (args[1] === ':' ) {
-		var z = x / y;
-		reply(`${design} 𝑇ℎ𝑒 𝑟𝑒𝑠𝑢𝑙𝑡 𝑜𝑓 ` + x + ` ${args[1]} ` + y + ` 𝑖𝑠 ` + z + `.`); 	
-  } 
-  else if (args[1] === '-' ) {
-		var z = x - y;
-		reply(`${design} 𝑇ℎ𝑒 𝑟𝑒𝑠𝑢𝑙𝑡 𝑜𝑓 ` + x + ` ${args[1]} ` + y + ` 𝑖𝑠 ` + z + `.`); 
-  } 
 break 
+//-- Calculator
+	case 'add':
+	if (!isVerify) return reply(UserB())
+	if (args.length < 2) return reply(`${design} 𝐸𝑛𝑡𝑒𝑟 𝐶𝑎𝑙𝑐𝑢𝑙𝑎𝑡𝑖𝑜𝑛.\n- - - - - - - - - - - - - - - - - -\n𝐸𝑥𝑎𝑚𝑝𝑙𝑒𝑠: .add 6 8\n- - - - - - - - - - - - - - - - - -\n📐 𝐶𝑎𝑐𝑙𝑐𝑢𝑙𝑎𝑡𝑜𝑟`)
+	var x = Number(args[0]);
+	var y = Number(args[1]);
+	var z = x + y;
+	reply(`${design} ` + x + ` + ` + y + ` = ` + z + `.\n- - - - - - - - - - - - - - - - - -\n📐 𝐶𝑎𝑐𝑙𝑐𝑢𝑙𝑎𝑡𝑜𝑟`); 
+	break
+	case 'subtract':
+	case 'sub':
+	if (!isVerify) return reply(UserB())
+	if (args.length < 2) return reply(`${design} 𝐸𝑛𝑡𝑒𝑟 𝐶𝑎𝑙𝑐𝑢𝑙𝑎𝑡𝑖𝑜𝑛.\n- - - - - - - - - - - - - - - - - -\n𝐸𝑥𝑎𝑚𝑝𝑙𝑒𝑠: .subtract 10 5\n- - - - - - - - - - - - - - - - - -\n📐 𝐶𝑎𝑐𝑙𝑐𝑢𝑙𝑎𝑡𝑜𝑟`)
+	var x = Number(args[0]);
+	var y = Number(args[1]);
+	var z = x - y;
+	reply(`${design} ` + x + ` - ` + y + ` = ` + z + `.\n- - - - - - - - - - - - - - - - - -\n📐 𝐶𝑎𝑐𝑙𝑐𝑢𝑙𝑎𝑡𝑜𝑟`); 
+	break
+	case 'multiply':
+	case 'multi':
+	if (!isVerify) return reply(UserB())
+	if (args.length < 2) return reply(`${design} 𝐸𝑛𝑡𝑒𝑟 𝐶𝑎𝑙𝑐𝑢𝑙𝑎𝑡𝑖𝑜𝑛.\n- - - - - - - - - - - - - - - - - -\n𝐸𝑥𝑎𝑚𝑝𝑙𝑒𝑠: .multiply 3 23\n- - - - - - - - - - - - - - - - - -\n📐 𝐶𝑎𝑐𝑙𝑐𝑢𝑙𝑎𝑡𝑜𝑟`)
+	var x = Number(args[0]);
+	var y = Number(args[1]);
+	var z = x * y;
+	reply(`${design} ` + x + ` * ` + y + ` = ` + z + `.\n- - - - - - - - - - - - - - - - - -\n📐 𝐶𝑎𝑐𝑙𝑐𝑢𝑙𝑎𝑡𝑜𝑟`); 
+	break
+	case 'divide':
+	case 'div':
+	if (!isVerify) return reply(UserB())
+	if (args.length < 2) return reply(`${design} 𝐸𝑛𝑡𝑒𝑟 𝐶𝑎𝑙𝑐𝑢𝑙𝑎𝑡𝑖𝑜𝑛.\n- - - - - - - - - - - - - - - - - -\n𝐸𝑥𝑎𝑚𝑝𝑙𝑒𝑠: .divide 10 2\n- - - - - - - - - - - - - - - - - -\n📐 𝐶𝑎𝑐𝑙𝑐𝑢𝑙𝑎𝑡𝑜𝑟`)
+	var x = Number(args[0]);
+	var y = Number(args[1]);
+	var z = x / y;
+	reply(`${design} ` + x + ` / ` + y + ` = ` + z + `.\n- - - - - - - - - - - - - - - - - -\n📐 𝐶𝑎𝑐𝑙𝑐𝑢𝑙𝑎𝑡𝑜𝑟`); 
+	break
 //-- sinus
 case 'sin':
 	if (!isVerify) return reply(UserB())
-	if (args.length < 1) return reply(`${design} 𝐸𝑛𝑡𝑒𝑟 𝐶𝑎𝑙𝑐𝑢𝑙𝑎𝑡𝑖𝑜𝑛.\n- - - - - - - - - - - - - - - - - -\n𝐸𝑥𝑎𝑚𝑝𝑙𝑒: .sin 3`)
-
+	if (args.length < 1) return reply(`${design} 𝐸𝑛𝑡𝑒𝑟 𝐶𝑎𝑙𝑐𝑢𝑙𝑎𝑡𝑖𝑜𝑛.\n- - - - - - - - - - - - - - - - - -\n𝐸𝑥𝑎𝑚𝑝𝑙𝑒: .sin 3\n- - - - - - - - - - - - - - - - - -\n📐 𝐶𝑎𝑐𝑙𝑐𝑢𝑙𝑎𝑡𝑜𝑟`)
 		var z = Math.sin(Number(args[0]))
-		reply(`${design} Sinus of ${args[0]} 𝑖𝑠 ` + z); 
+		reply(`${design} Sinus of ${args[0]} = ` + z); 
 break 
+case 'cos':
+	if (!isVerify) return reply(UserB())
+	if (args.length < 1) return reply(`${design} 𝐸𝑛𝑡𝑒𝑟 𝐶𝑎𝑙𝑐𝑢𝑙𝑎𝑡𝑖𝑜𝑛.\n- - - - - - - - - - - - - - - - - -\n𝐸𝑥𝑎𝑚𝑝𝑙𝑒: .cos 3\n- - - - - - - - - - - - - - - - - -\n📐 𝐶𝑎𝑐𝑙𝑐𝑢𝑙𝑎𝑡𝑜𝑟`)
+		var z = Math.cos(Number(args[0]))
+		reply(`${design} Cosinus of ${args[0]} = ` + z); 
+break 
+case 'tan':
+	if (!isVerify) return reply(UserB())
+	if (args.length < 1) return reply(`${design} 𝐸𝑛𝑡𝑒𝑟 𝐶𝑎𝑙𝑐𝑢𝑙𝑎𝑡𝑖𝑜𝑛.\n- - - - - - - - - - - - - - - - - -\n𝐸𝑥𝑎𝑚𝑝𝑙𝑒: .tan 3\n- - - - - - - - - - - - - - - - - -\n📐 𝐶𝑎𝑐𝑙𝑐𝑢𝑙𝑎𝑡𝑜𝑟`)
+		var z = Math.tan(Number(args[0]))
+		reply(`${design} Tangens of ${args[0]} = ` + z); 
+break 
+case 'log':
+	if (!isVerify) return reply(UserB())
+	if (args.length < 1) return reply(`${design} 𝐸𝑛𝑡𝑒𝑟 𝐶𝑎𝑙𝑐𝑢𝑙𝑎𝑡𝑖𝑜𝑛.\n- - - - - - - - - - - - - - - - - -\n𝐸𝑥𝑎𝑚𝑝𝑙𝑒: .log 3\n- - - - - - - - - - - - - - - - - -\n📐 𝐶𝑎𝑐𝑙𝑐𝑢𝑙𝑎𝑡𝑜𝑟`)
+		var z = Math.log(Number(args[0]))
+		reply(`${design} Log of ${args[0]} = ` + z); 
+break 
+case 'sqrt':
+	if (!isVerify) return reply(UserB())
+	if (args.length < 1) return reply(`${design} 𝐸𝑛𝑡𝑒𝑟 𝐶𝑎𝑙𝑐𝑢𝑙𝑎𝑡𝑖𝑜𝑛.\n- - - - - - - - - - - - - - - - - -\n𝐸𝑥𝑎𝑚𝑝𝑙𝑒: .sqrt 3\n- - - - - - - - - - - - - - - - - -\n📐 𝐶𝑎𝑐𝑙𝑐𝑢𝑙𝑎𝑡𝑜𝑟`)
+		var z = Math.sqrt(Number(args[0]))
+		reply(`${design} The squareroot of ${args[0]} = ` + z); 
+break 
+case 'pi':
+	if (!isVerify) return reply(UserB())
+		reply(`${design} pi  = 3.14159\n- - - - - - - - - - - - - - - - - -\n📐 𝐶𝑎𝑐𝑙𝑐𝑢𝑙𝑎𝑡𝑜𝑟`); 
+break 
+case 'e':
+	if (!isVerify) return reply(UserB())
+		reply(`${design} e = 2,7182818284590452\n- - - - - - - - - - - - - - - - - -\n📐 𝐶𝑎𝑐𝑙𝑐𝑢𝑙𝑎𝑡𝑜𝑟`); 
+break
 //---X623-Whatsapp-Bot------------------------------------------------------------------------------------------------------------------------//
 //-- Send
 case 'imagedownload':
