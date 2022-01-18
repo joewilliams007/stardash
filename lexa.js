@@ -3020,18 +3020,18 @@ reply(`🛰️ 𝐶𝑢𝑟𝑟𝑒𝑛𝑡 𝐼𝑆𝑆 𝑙𝑜𝑐𝑎𝑡�
 - - - - - - - - - - - - - - - - - -
 👩‍🚀 𝑃𝑒𝑜𝑝𝑙𝑒 𝑖𝑛 𝑆𝑝𝑎𝑐𝑒 ⌖ _${res1.number}_
 - - - - - - - - - - - - - - - - - -
-👽 𝑇𝑜𝑝 𝑇𝑒𝑛 
+👽 𝑇𝑒𝑛 𝑂𝑓 𝐿𝑖𝑣𝑒 𝐴𝑢𝑠𝑡𝑟𝑜𝑛𝑎𝑡𝑠
 - - - - - - - - - - - - - - - - - -
-_${res1.people[0].craft} ${res1.people[0].name}_
-_${res1.people[1].craft} ${res1.people[1].name}_
-_${res1.people[2].craft} ${res1.people[2].name}_
-_${res1.people[3].craft} ${res1.people[3].name}_
-_${res1.people[4].craft} ${res1.people[4].name}_
-_${res1.people[5].craft} ${res1.people[5].name}_
-_${res1.people[6].craft} ${res1.people[6].name}_
-_${res1.people[7].craft} ${res1.people[7].name}_
-_${res1.people[8].craft} ${res1.people[8].name}_
-_${res1.people[9].craft} ${res1.people[9].name}_
+🛰️ _${res1.people[0].craft} 👩‍🚀 ${res1.people[0].name}_
+🛰️ _${res1.people[1].craft} 👩‍🚀 ${res1.people[1].name}_
+🛰️ _${res1.people[2].craft} 👩‍🚀 ${res1.people[2].name}_
+🛰️ _${res1.people[3].craft} 👩‍🚀 ${res1.people[3].name}_
+🛰️ _${res1.people[4].craft} 👩‍🚀 ${res1.people[4].name}_
+🛰️ _${res1.people[5].craft} 👩‍🚀 ${res1.people[5].name}_
+🛰️ _${res1.people[6].craft} 👩‍🚀 ${res1.people[6].name}_
+🛰️ _${res1.people[7].craft} 👩‍🚀 ${res1.people[7].name}_
+🛰️ _${res1.people[8].craft} 👩‍🚀 ${res1.people[8].name}_
+🛰️ _${res1.people[9].craft} 👩‍🚀 ${res1.people[9].name}_
 - - - - - - - - - - - - - - - - - -
 ✅ 𝑀𝑒𝑠𝑠𝑠𝑔𝑒 ⌖ _${res.message}_
 - - - - - - - - - - - - - - - - - -
@@ -3049,13 +3049,13 @@ reply(`🛰️ 𝐶𝑢𝑟𝑟𝑒𝑛𝑡 𝐼𝑆𝑆 𝑙𝑜𝑐𝑎𝑡�
 - - - - - - - - - - - - - - - - - -
 👩‍🚀 𝑃𝑒𝑜𝑝𝑙𝑒 𝑖𝑛 𝑆𝑝𝑎𝑐𝑒 ⌖ _${res1.number}_
 - - - - - - - - - - - - - - - - - -
-👽 𝑇𝑜𝑝 𝐹𝑖𝑣𝑒
+👽 𝐹𝑖𝑣𝑒 𝑂𝑓 𝐿𝑖𝑣𝑒 𝐴𝑢𝑠𝑡𝑟𝑜𝑛𝑎𝑡𝑠
 - - - - - - - - - - - - - - - - - -
-_${res1.people[0].craft} ${res1.people[0].name}_
-_${res1.people[1].craft} ${res1.people[1].name}_
-_${res1.people[2].craft} ${res1.people[2].name}_
-_${res1.people[3].craft} ${res1.people[3].name}_
-_${res1.people[4].craft} ${res1.people[4].name}_
+🛰️ _${res1.people[0].craft} 👩‍🚀 ${res1.people[0].name}_
+🛰️ _${res1.people[1].craft} 👩‍🚀 ${res1.people[1].name}_
+🛰️ _${res1.people[2].craft} 👩‍🚀 ${res1.people[2].name}_
+🛰️ _${res1.people[3].craft} 👩‍🚀 ${res1.people[3].name}_
+🛰️ _${res1.people[4].craft} 👩‍🚀 ${res1.people[4].name}_
 - - - - - - - - - - - - - - - - - -
 ✅ 𝑀𝑒𝑠𝑠𝑠𝑔𝑒 ⌖ _${res.message}_
 - - - - - - - - - - - - - - - - - -
