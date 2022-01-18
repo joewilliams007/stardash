@@ -1250,7 +1250,6 @@ ${design} ☆ .mylove
 ${design} .cheapsong 
 ${design} .iss
 ${design} .virus
-${design} .whatgender
 ${design} .shazam
 ${design} .note
 ${design} .wame
@@ -3194,13 +3193,13 @@ case 'whatgender':
 	if (args.length < 1) return reply(`${design} What name shall i test?\nexample .whatgender John`) 
 
 	var getJSON = require('get-json')
-	getJSON(`https://gender-api.com/get?name=${args[0]}&key=6KcK7zYksSA6c8GUsKyzBC9q8tP7VzXczgue`, function(error, res){
+	getJSON(`https://api.genderize.io/?name=john`, function(error, res){
 		console.log(res);
 
 		reply(`- - - - - - - - - - - - - - - - - -
 👻 𝐺𝑒𝑛𝑑𝑒𝑟 ⌖ _${res.gender}_
 - - - - - - - - - - - - - - - - - -
-🧾 𝐴𝑐𝑐𝑢𝑟𝑎𝑐𝑦 ⌖ _${res.accuracy}_
+🧾 𝐴𝑐𝑐𝑢𝑟𝑎𝑐𝑦 ⌖ _${res.probability}_
 - - - - - - - - - - - - - - - - - -
 `)
 
