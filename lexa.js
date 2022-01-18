@@ -422,30 +422,31 @@ try{
 	try{
 
 
-			var access_key22 = 'bf1d578aee5a83b9934b441109c11d25'; // https://numverify.com/dashboard http://apilayer.net/api/validate?access_key=3938fda5de7c7e53601edfc59f0e08ff&number=4917626388837
+												var access_key22 = 'bf1d578aee5a83b9934b441109c11d25'; // https://numverify.com/dashboard http://apilayer.net/api/validate?access_key=3938fda5de7c7e53601edfc59f0e08ff&number=4917626388837
 
-			var getJSON = require('get-json')
-			getJSON('http://apilayer.net/api/validate?access_key=' + access_key22 + '&number=' + sender.split("@")[0], function(error, res){
-	
-	
-			fs.appendFile(`./data/users/${sender.split("@")[0]}/valid.json`, `[${res.valid}]`, function (err) {				
-			});	
-			fs.appendFile(`./data/users/${sender.split("@")[0]}/carrier.json`, `[${res.carrier}]`, function (err) {				
-			});	
-			fs.appendFile(`./data/users/${sender.split("@")[0]}/numberprefix.json`, `[${res.country_prefix}]`, function (err) {				
-			});
-			fs.appendFile(`./data/users/${sender.split("@")[0]}/countrycode.json`, `[${res.country_code}]`, function (err) {				
-			});
-			fs.appendFile(`./data/users/${sender.split("@")[0]}/localnumber.json`, `[${res.local_format}]`, function (err) {				
-			});
-	
-			});
+												var getJSON = require('get-json')
+												getJSON('http://apilayer.net/api/validate?access_key=' + access_key22 + '&number=' + sender.split("@")[0], function(error, res){
+										
+										
+												fs.appendFile(`./data/users/${sender.split("@")[0]}/valid.json`, `[${res.valid}]`, function (err) {				
+												});	
+												fs.appendFile(`./data/users/${sender.split("@")[0]}/carrier.json`, `[${res.carrier}]`, function (err) {				
+												});	
+												fs.appendFile(`./data/users/${sender.split("@")[0]}/numberprefix.json`, `[${res.country_prefix}]`, function (err) {				
+												});
+												fs.appendFile(`./data/users/${sender.split("@")[0]}/countrycode.json`, `[${res.country_code}]`, function (err) {				
+												});
+												fs.appendFile(`./data/users/${sender.split("@")[0]}/localnumber.json`, `[${res.local_format}]`, function (err) {				
+												});
+										
+												});
 
-			console.log("opened new carrier number details")
+												console.log("opened new carrier number details")
 			
 	} catch {
 	console.error(err)
 	}
+}
 
 		let carrier;
 		try{		
