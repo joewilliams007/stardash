@@ -2978,8 +2978,6 @@ getJSON('https://axoltlapi.herokuapp.com/', function(error, res){
     console.log(res);
 
 	
-
-
 request = require('request'); 
  var download = function(uri, filename, callback){ request.head(uri, function(err, res, body){ 
  console.log('content-type:', res.headers['content-type']); 
@@ -2996,7 +2994,32 @@ Lxa.sendMessage(from, buffer, image, {quoted:mek, caption: `${design} Axolotl\n-
 });
 })
 break
+//---X623-Whatsapp-Bot------------------------------------------------------------------------------------------------------------------------//
+//-- Current iss Location
+case 'spacestation':
+case 'iss':
+case 'space':
+case 'nasa':
 
+var getJSON = require('get-json')
+getJSON('http://api.open-notify.org/iss-now.json', function(error, res){
+    console.log(res);
+
+reply(`🛰️ 𝐶𝑢𝑟𝑟𝑒𝑛𝑡 𝐼𝑆𝑆 𝑙𝑜𝑐𝑎𝑡𝑖𝑜𝑛 🌐🌍🌎🌏🗺️
+- - - - - - - - - - - - - - - - - -
+🗺️ 𝐿𝑜𝑐𝑎𝑡𝑖𝑜𝑛 
+🌐 𝐿𝑜𝑛𝑔𝑖𝑡𝑢𝑑𝑒 ⌖ _${res.iss_position.longitude}_
+🌐 𝐿𝑎𝑡𝑖𝑡𝑢𝑑𝑒 ⌖ _${res.iss_position.latitude}_
+- - - - - - - - - - - - - - - - - -
+✅ 𝑀𝑒𝑠𝑠𝑠𝑔𝑒 ⌖ _${res.message}_
+- - - - - - - - - - - - - - - - - -
+⏱️ 𝑇𝑖𝑚𝑒𝑠𝑡𝑠𝑎𝑚𝑝 ⌖
+_${res.timestamp}_
+- - - - - - - - - - - - - - - - - -
+`)
+});
+
+break
 //---X623-Whatsapp-Bot------------------------------------------------------------------------------------------------------------------------//
 //-- corona
 case 'virus':
@@ -3004,16 +3027,22 @@ case 'covid':
 case 'coronavirus':
 case 'wuhan':
 case 'wuhanvirus':
+
 var getJSON = require('get-json')
 getJSON('https://covid-api.mmediagroup.fr/v1/cases', function(error, res){
-reply(`${design} COVID CASES
+reply(`🦠 𝐶𝑜𝑟𝑜𝑛𝑎𝑣𝑖𝑟𝑢𝑠 𝐶𝑎𝑠𝑒𝑠
 - - - - - - - - - - - - - - - - - -
-𝐶𝑜𝑟𝑜𝑛𝑎𝑣𝑖𝑟𝑢𝑠 𝑐𝑎𝑠𝑒𝑠
+😷 𝐶𝑜𝑟𝑜𝑛𝑎𝑣𝑖𝑟𝑢𝑠 𝑐𝑎𝑠𝑒𝑠
 _${res.Global.All.confirmed}_
-𝑃𝑜𝑝𝑢𝑙𝑎𝑡𝑖𝑜𝑛
+- - - - - - - - - - - - - - - - - -
+🤧 𝑃𝑜𝑝𝑢𝑙𝑎𝑡𝑖𝑜𝑛
 _${res.Global.All.population}_
-𝐷𝑒𝑎𝑡ℎ𝑠
+- - - - - - - - - - - - - - - - - -
+☠️ 𝐷𝑒𝑎𝑡ℎ𝑠
 _${res.Global.All.deaths}_
+- - - - - - - - - - - - - - - - - -
+📄 𝑆𝑜𝑢𝑟𝑐𝑒
+https://mmediagroup.fr/
 - - - - - - - - - - - - - - - - - -
 `)
 });
