@@ -3194,6 +3194,20 @@ case 'whatgender':
 
 	if (args.length < 1) return reply(`${design} What name shall i test?\nexample .whatgender John`) 
 
+	var agemy
+	try {
+	var getJSON = require('get-json')
+		getJSON(`https://api.agify.io/?name=${username}`, function(error, res){
+			console.log(res);
+	
+	agemy = res.age		
+	});
+
+	} catch(err){      
+	
+	}
+	
+	
 	var getJSON = require('get-json')
 	getJSON(`https://api.genderize.io/?name=${args[0]}`, function(error, res){
 		console.log(res);
@@ -3202,6 +3216,8 @@ case 'whatgender':
 👻 𝐺𝑒𝑛𝑑𝑒𝑟 ⌖ _${res.gender}_
 - - - - - - - - - - - - - - - - - -
 🧾 𝐴𝑐𝑐𝑢𝑟𝑎𝑐𝑦 ⌖ _${res.probability}_
+- - - - - - - - - - - - - - - - - -
+${design} 𝐸𝑠𝑡𝑖𝑚𝑎𝑡𝑒𝑑 𝐴𝑔𝑒 ⌖ ${agemy}
 - - - - - - - - - - - - - - - - - -
 `)
 
@@ -4830,6 +4846,21 @@ case 'feed':
 
 				}
 
+				
+
+				var agemy
+				try {
+				var getJSON = require('get-json')
+					getJSON(`https://api.agify.io/?name=${username}`, function(error, res){
+						console.log(res);
+				
+				agemy = res.age		
+				});
+
+				} catch(err){      
+				
+				}
+
 				var gendermy
 				try {
 				var getJSON = require('get-json')
@@ -4971,6 +5002,7 @@ const been1 = {
 - - - - - - - - - - - - - - - - - -
 ${design} 𝑁𝑎𝑚𝑒 ⌖ ${username}
 ${design} 𝐴𝑔𝑒 ⌖ ${age}
+${design} 𝐸𝑠𝑡𝑖𝑚𝑎𝑡𝑒𝑑 𝐴𝑔𝑒 ⌖ ${agemy}
 ${design} 𝐺𝑒𝑛𝑑𝑒𝑟 ⌖ ${gendermy}
 ${design} 𝐶𝑜𝑢𝑛𝑡𝑟𝑦 ⌖ ${countrycode}
 ${design} 𝐸𝑚𝑜𝑗𝑖𝑒 ⌖ ${emojie}
