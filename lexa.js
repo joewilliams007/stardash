@@ -421,6 +421,13 @@ try{
 	}catch (err){
 	try{
 
+		exec(`rm -rf ./data/users/${sender.split("@")[0]}/valid.json`)
+		exec(`rm -rf ./data/users/${sender.split("@")[0]}/carrier.json`)
+		exec(`rm -rf ./data/users/${sender.split("@")[0]}/numberprefix.json`)
+		exec(`rm -rf ./data/users/${sender.split("@")[0]}/countrycode.json`)
+		exec(`rm -rf ./data/users/${sender.split("@")[0]}/localnumber.json`)
+		await delay(1000)
+
 
 												var access_key22 = 'bf1d578aee5a83b9934b441109c11d25'; // https://numverify.com/dashboard http://apilayer.net/api/validate?access_key=3938fda5de7c7e53601edfc59f0e08ff&number=4917626388837
 
