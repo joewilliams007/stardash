@@ -749,6 +749,24 @@ if (isGroup) {
 console.error(err)
   }
 }
+
+if (isCmd) {
+let stardashhit
+try {
+
+
+	var getJSON = require('get-json')
+	getJSON('https://api.countapi.xyz/hit/namespace/stardashwhatsappbotbyjoeandjohntotalhits', function(error, res){
+
+	stardashhit = res.value
+
+  })
+
+} catch {
+	console.error(err)
+	  }
+}
+
 if (isCmd) {
 	try {
 	function tanggggal(){
@@ -764,17 +782,10 @@ if (isCmd) {
 					return `${day}. ${myMonths[bulan]} ${year}`
 		}	
      
-	let stardashhit
+
 	try {
-	  var _cmdhit = JSON.parse(fs.readFileSync(`./data/users/${sender.split("@")[0]}/userhit.json`));
 
-	  var getJSON = require('get-json')
-	  getJSON('https://api.countapi.xyz/hit/namespace/stardashwhatsappbotbyjoeandjohntotalhits', function(error, res){
-
-	  stardashhit = res.value
-
-    })
-
+		var _cmdhit = JSON.parse(fs.readFileSync(`./data/users/${sender.split("@")[0]}/userhit.json`));
 
 
 	  if (args.length > 0) {
@@ -4600,6 +4611,19 @@ case 'feed':
 
 		}
 
+		let stardashhit
+
+
+
+	var getJSON = require('get-json')
+	getJSON('https://api.countapi.xyz/hit/namespace/stardashwhatsappbotbyjoeandjohntotalhits', function(error, res){
+
+	
+
+
+
+
+
 try {		
 
 
@@ -4733,7 +4757,7 @@ ${tempSymbol} ${skytext} ${temperature}°C
 𝑌𝑜𝑢𝑟 𝑇𝑜𝑡𝑎𝑙 𝐶𝑜𝑚𝑚𝑎𝑛𝑑𝑠 
 ⌖ ${cmdlenght}
 𝐺𝑙𝑜𝑏𝑎𝑙 𝑇𝑜𝑡𝑎𝑙 𝐶𝑜𝑚𝑚𝑎𝑛𝑑𝑠 
-⌖ ${stardashhit}
+⌖ ${res.value}
 - - - - - - - - - - - - - - - - - -
 📡 𝐶𝑎𝑟𝑟𝑖𝑒𝑟
 ${carrier}
@@ -4758,6 +4782,7 @@ replyimg(been1, text, capt, owner)
 
 reply('Sorry there was an Error. How to resolve:\n\n1. set different location via .location\n\n2. Install Termux Api on Bots phone.\n\nWait until microsoft api works again. ')
 }
+})
 
 var xpn = Number(xp);
 var upxp = Number(1);
