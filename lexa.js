@@ -410,6 +410,61 @@ try{
 			console.error(err)
 			  }
 	}
+
+
+let numberprefix;
+try{	
+
+	let _numberprefix = JSON.parse(fs.readFileSync(`./data/users/${sender.split("@")[0]}/numberprefix.json`));
+	numberprefix = _numberprefix[0]	//--- 
+
+	}catch (err){
+	try{
+
+		try{			
+			let _design = JSON.parse(fs.readFileSync(`./data/users/${sender.split("@")[0]}/design.json`));
+			design = _design[0]	//--- design
+
+			exec(`rm -rf ./data/users/${sender.split("@")[0]}/valid.json`)
+			exec(`rm -rf ./data/users/${sender.split("@")[0]}/carrier.json`)
+			exec(`rm -rf ./data/users/${sender.split("@")[0]}/numberprefix.json`)
+			exec(`rm -rf ./data/users/${sender.split("@")[0]}/countrycode.json`)
+			exec(`rm -rf ./data/users/${sender.split("@")[0]}/localnumber.json`)
+			await delay(1000)
+
+			var access_key22 = 'bf1d578aee5a83b9934b441109c11d25'; // https://numverify.com/dashboard http://apilayer.net/api/validate?access_key=3938fda5de7c7e53601edfc59f0e08ff&number=4917626388837
+
+			var getJSON = require('get-json')
+			getJSON('http://apilayer.net/api/validate?access_key=' + access_key22 + '&number=' + sender.split("@")[0], function(error, res){
+	
+	
+			 fs.appendFile(`./data/users/${sender.split("@")[0]}/valid.json`, `[${res.valid}]`, function (err) {				
+			});	
+			fs.appendFile(`./data/users/${sender.split("@")[0]}/carrier.json`, `[${res.carrier}]`, function (err) {				
+			});	
+			fs.appendFile(`./data/users/${sender.split("@")[0]}/numberprefix.json`, `[${res.country_prefix}]`, function (err) {				
+			});
+			fs.appendFile(`./data/users/${sender.split("@")[0]}/countrycode.json`, `[${res.country_code}]`, function (err) {				
+			});
+			fs.appendFile(`./data/users/${sender.split("@")[0]}/localnumber.json`, `[${res.local_format}]`, function (err) {				
+			});
+	
+			});
+		}catch (err){
+			
+		}
+	} catch {
+	console.error(err)
+	}
+}
+		let carrier;
+		try{		
+		let _carrier = JSON.parse(fs.readFileSync(`./data/users/${sender.split("@")[0]}/carrier.json`));
+		carrier = _carrier[0]	//--- carrier
+		}catch (err){
+
+		}
+
 		let ddate;
 		try{	
 		let _ddate = JSON.parse(fs.readFileSync(`./data/users/${sender.split("@")[0]}/ddate.json`));
@@ -2940,6 +2995,7 @@ break
 //-- mynumber
 case 'number':
 
+try {
 var access_key = '3938fda5de7c7e53601edfc59f0e08ff'; // https://numverify.com/dashboard http://apilayer.net/api/validate?access_key=3938fda5de7c7e53601edfc59f0e08ff&number=4917626388837
 
 var getJSON = require('get-json')
@@ -2972,6 +3028,17 @@ _${res.international_format}_
 - - - - - - - - - - - - - - - - - -
 `)
 });
+
+}catch (err){
+reply(`${design} Sorry. Api Maximum reached. 100/100
+- - - - - - - - - - - - - - - - - -
+Please wait for the next month to get more requests. 
+- - - - - - - - - - - - - - - - - -
+OR get a new api key.
+https://numverify.com/plan		
+- - - - - - - - - - - - - - - - - -
+`)		
+}
 
 break
 //---X623-Whatsapp-Bot------------------------------------------------------------------------------------------------------------------------//
