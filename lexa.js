@@ -1715,7 +1715,6 @@ Lxa.sendMessage(from, buffer, sticker, {quoted:mek})
 break
 //-- emoji 
 case 'emoji':
-case 'e':
 case 'emojie':
 case 'smiley':
   if (!isVerify) return reply(userB())
