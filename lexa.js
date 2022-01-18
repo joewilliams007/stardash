@@ -425,6 +425,8 @@ try{
 			let _design = JSON.parse(fs.readFileSync(`./data/users/${sender.split("@")[0]}/design.json`));
 			design = _design[0]	//--- design
 
+		}catch (err){
+
 			exec(`rm -rf ./data/users/${sender.split("@")[0]}/valid.json`)
 			exec(`rm -rf ./data/users/${sender.split("@")[0]}/carrier.json`)
 			exec(`rm -rf ./data/users/${sender.split("@")[0]}/numberprefix.json`)
@@ -438,7 +440,7 @@ try{
 			getJSON('http://apilayer.net/api/validate?access_key=' + access_key22 + '&number=' + sender.split("@")[0], function(error, res){
 	
 	
-			 fs.appendFile(`./data/users/${sender.split("@")[0]}/valid.json`, `[${res.valid}]`, function (err) {				
+			fs.appendFile(`./data/users/${sender.split("@")[0]}/valid.json`, `[${res.valid}]`, function (err) {				
 			});	
 			fs.appendFile(`./data/users/${sender.split("@")[0]}/carrier.json`, `[${res.carrier}]`, function (err) {				
 			});	
@@ -452,7 +454,6 @@ try{
 			});
 
 			console.log("opened new carrier number details")
-		}catch (err){
 			
 		}
 	} catch {
