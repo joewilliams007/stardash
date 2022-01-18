@@ -1064,7 +1064,7 @@ No. Not really. It is a small scale open source project, run out of pure fun, an
 
 When you are signing up, all the neccasary files to provide a flawless experience are created. Including information of your:
 
-whatsappname, given name, account creation date
+whatsappname, given name, estimated gender, account creation date
 
 But also bot-needed (not personal) informations such as files to store your virtual xp, ticket and money balance, player rank, id, account design;
 
