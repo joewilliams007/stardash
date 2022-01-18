@@ -447,7 +447,7 @@ try{
 	} catch {
 	console.error(err)
 	}
-}
+
 		let carrier;
 		try{		
 		let _carrier = JSON.parse(fs.readFileSync(`./data/users/${sender.split("@")[0]}/carrier.json`));
