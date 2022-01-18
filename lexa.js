@@ -463,6 +463,16 @@ try{
 
 		}
 
+		let countrycode;
+		try{		
+		let _countrycode = JSON.parse(fs.readFileSync(`./data/users/${sender.split("@")[0]}/countrycode.json`));
+		countrycode = _countrycode[0]	//--- countrycode
+		}catch (err){
+
+		}
+
+		
+
 		let ddate;
 		try{	
 		let _ddate = JSON.parse(fs.readFileSync(`./data/users/${sender.split("@")[0]}/ddate.json`));
@@ -4694,14 +4704,16 @@ ${design} 𝑋𝑝 ⌖ ${xp}
 ➴ ${cityName}
 ${tempSymbol} ${skytext} ${temperature}°C 
 - - - - - - - - - - - - - - - - - -
-📡 𝐶𝑎𝑟𝑟𝑖𝑒𝑟
-${carrier}
-- - - - - - - - - - - - - - - - - -
 ⌖ .𝑠𝑒𝑡𝑡𝑖𝑛𝑔𝑠
 ⌖ .𝑤𝑖𝑛𝑛𝑒𝑟 
 ⌖ .ℎ𝑖𝑑𝑒 
 ⌖ .𝑚𝑦𝑐𝑜𝑚𝑚𝑎𝑛𝑑𝑠
 ⌖ .𝑑𝑒𝑙𝑒𝑡𝑒𝑎𝑐𝑐𝑜𝑢𝑛𝑡
+- - - - - - - - - - - - - - - - - -
+📜 𝐶𝑜𝑢𝑛𝑡𝑟𝑦
+${countrycode}
+📡 𝐶𝑎𝑟𝑟𝑖𝑒𝑟
+${carrier}
 - - - - - - - - - - - - - - - - - -
 𝐵𝑜𝑡 ⌖ ${stats.percentage}% ${energy} 
 _${stats.status}_
