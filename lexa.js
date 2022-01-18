@@ -1154,7 +1154,7 @@ ${design} ☆ .tools
 ${design} .edit
 ${design} .star  
 ${design} .settings
-${design} .terms
+${design} .tos
 - - - - - - - - - - - - - - - - - - 
 ${design} .admin
 ${design} .owners
