@@ -443,7 +443,6 @@ try{
 
 			console.log("opened new carrier number details")
 			
-		}
 	} catch {
 	console.error(err)
 	}
