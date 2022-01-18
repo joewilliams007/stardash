@@ -1063,6 +1063,7 @@ case 'games':
 ${design} ☆ .slot 
 ${design} ☆ .quote 
 ${design} .animequote
+${design} .evil
 ${design} ☆ .axolotl
 ${design} .truth
 ${design} .dare
@@ -2960,7 +2961,23 @@ _${res.anime}_
 });
 
 break
+//-- insult
+case 'insult':
+case 'evil':
 
+var getJSON = require('get-json')
+getJSON('https://evilinsult.com/generate_insult.php?lang=en&type=json', function(error, res){
+    console.log(res);
+
+reply(`👿 𝐸𝑣𝑖𝑙
+- - - - - - - - - - - - - - - - - -		
+_${res.insult}_
+- - - - - - - - - - - - - - - - - -
+`)
+
+});
+
+break
 //-- Quote
 case 'quote':
 case 'qoute':
