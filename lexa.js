@@ -2737,7 +2737,7 @@ case 'nobg':
 //-- Calculator
 case 'calc':
 	if (!isVerify) return reply(UserB())
-	if (args.length < 1) return reply(`${design} 𝐸𝑛𝑡𝑒𝑟 𝐶𝑎𝑙𝑐𝑢𝑙𝑎𝑡𝑖𝑜𝑛. 𝐸𝑥𝑎𝑚𝑝𝑙𝑒𝑠:\n.calc 5 + 9\n.calc 6 / 2\n.calc 5 * 5\n.calc   10 - 5﹞`)
+	if (args.length < 2) return reply(`${design} 𝐸𝑛𝑡𝑒𝑟 𝐶𝑎𝑙𝑐𝑢𝑙𝑎𝑡𝑖𝑜𝑛. 𝐸𝑥𝑎𝑚𝑝𝑙𝑒𝑠:\n.calc 5 + 9\n.calc 6 / 2\n.calc 5 * 5\n.calc   10 - 5`)
 
 var x = Number(args[0]);
 var y = Number(args[2]);
@@ -2762,6 +2762,14 @@ var y = Number(args[2]);
 		var z = x - y;
 		reply(`${design} 𝑇ℎ𝑒 𝑟𝑒𝑠𝑢𝑙𝑡 𝑜𝑓 ` + x + ` ${args[1]} ` + y + ` 𝑖𝑠 ` + z + `.`); 
   } 
+break 
+//-- sinus
+case 'sin':
+	if (!isVerify) return reply(UserB())
+	if (args.length < 1) return reply(`${design} 𝐸𝑛𝑡𝑒𝑟 𝐶𝑎𝑙𝑐𝑢𝑙𝑎𝑡𝑖𝑜𝑛.\n- - - - - - - - - - - - - - - - - -\n𝐸𝑥𝑎𝑚𝑝𝑙𝑒: .sin 3`)
+
+		var z = Math.sin(Number(args[0]))
+		reply(`${design} Sinus of ${args[0]} 𝑖𝑠 ` + z); 
 break 
 //---X623-Whatsapp-Bot------------------------------------------------------------------------------------------------------------------------//
 //-- Send
