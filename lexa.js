@@ -3009,11 +3009,6 @@ getJSON('http://api.open-notify.org/iss-now.json', function(error, res){
 getJSON('http://api.open-notify.org/astros.json', function(error, res1){
 	console.log(res1);	
 
-	myObject = {
-		"key": "value"
-	}
-	
-	Object.keys(res2); // 
 
 if (Number(res1.number) === Number(10)) { 
 
