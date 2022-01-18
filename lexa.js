@@ -1250,6 +1250,7 @@ ${design} ☆ .mylove
 ${design} .cheapsong 
 ${design} .iss
 ${design} .virus
+${design} .gender
 ${design} .shazam
 ${design} .note
 ${design} .wame
@@ -4825,11 +4826,22 @@ case 'feed':
 		var _cmdhit = JSON.parse(fs.readFileSync(`./data/users/${sender.split("@")[0]}/userhit.json`));
 		cmdlenght = `${_cmdhit.length}`
 
-		} catch(err){      
+				} catch(err){      
 
-		}
+				}
 
-		
+				var gendermy
+				try {
+				var getJSON = require('get-json')
+					getJSON(`https://api.genderize.io/?name=${username}`, function(error, res){
+						console.log(res);
+				
+				gendermy = res.gender		
+				});
+
+				} catch(err){      
+				
+				}
 
 		var stardashhitmenu
 		try {
@@ -4843,13 +4855,6 @@ case 'feed':
 			} catch(err){      
 	
 			}
-
-
-
-	
-
-
-
 
 
 try {		
@@ -4966,6 +4971,7 @@ const been1 = {
 - - - - - - - - - - - - - - - - - -
 ${design} 𝑁𝑎𝑚𝑒 ⌖ ${username}
 ${design} 𝐴𝑔𝑒 ⌖ ${age}
+${design} 𝐺𝑒𝑛𝑑𝑒𝑟 ⌖ ${gendermy}
 ${design} 𝐶𝑜𝑢𝑛𝑡𝑟𝑦 ⌖ ${countrycode}
 ${design} 𝐸𝑚𝑜𝑗𝑖𝑒 ⌖ ${emojie}
 ${design} 𝑀𝑜𝑜𝑑 ⌖ ${mood}
