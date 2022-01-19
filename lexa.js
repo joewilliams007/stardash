@@ -3212,9 +3212,9 @@ case 'getvid':
 	   var childd = require('child_process').exec(`yt-dlp -o ytbvid.mp4 https://www.youtube.com/watch?v=${getsearch}`)
 	   childd.stdout.pipe(process.stdout)
 	   childd.on('exit', function() {
-		buffer = fs.readFileSync("ytbvid.mp4")
+		buffer = fs.readFileSync("ytbvid.mp4.webm")
 		Lxa.sendMessage(from, buffer, video, {quoted:mek})
-		fs.unlinkSync("ytbvid.mp4")
+		fs.unlinkSync("ytbvid.mp4.webm")
 	   })
 
                         
