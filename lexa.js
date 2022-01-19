@@ -3101,7 +3101,7 @@ var views2= videos[2].views
 var views3 = videos[3].views
 var views4 = videos[4].views
 
-try {
+
 
 reply(`${design} 𝑅𝑒𝑠𝑢𝑙𝑡𝑠 𝑓𝑜𝑢𝑛𝑑
 - - - - - - - - - - - - - - - - - -
