@@ -3206,16 +3206,18 @@ case 'getvid':
 
 	   reply(`${design} 𝑆𝑒𝑛𝑑𝑖𝑛𝑔 ${value}...\n- - - - - - - - - - - - - - - - - -\n✅ 𝑃𝑙𝑒𝑎𝑠𝑒 𝑊𝑎𝑖𝑡`)	
 	   
-var execc = require('await-exec')
- 
+				
+	
 
-			
-	execc(`yt-dlp -o, --output ytbvid.mp4 https://www.youtube.com/watch?v=${getsearch}`)
-													
+	   var child = require('child_process').exec(`yt-dlp -o, --output ytbvid.mp4 https://www.youtube.com/watch?v=${getsearch}`)
+	   child.stdout.pipe(process.stdout)
+	   child.on('exit', function() {
+		buffer = fs.readFileSync("ytbvid.mp4")
+		Lxa.sendMessage(from, buffer, video, {quoted:mek})
+		fs.unlinkSync("ytbvid.mp4")
+	   })
+
                         
-						buffer = fs.readFileSync("ytbvid.mp4")
-						Lxa.sendMessage(from, buffer, video, {quoted:mek})
-						fs.unlinkSync("ytbvid.mp4")
 		 
 				
 break
