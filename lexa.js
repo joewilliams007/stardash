@@ -2974,18 +2974,18 @@ case 'ytbsong':
        if (args.length < 1) return reply(`${design} 𝑊ℎ𝑎𝑡 𝑖𝑠 𝑡ℎ𝑒 𝑠𝑜𝑛𝑔 𝑛𝑎𝑚𝑒?`)			
        if (money < 10) return reply(`${design} 𝑌𝑜𝑢 𝑑𝑜𝑛𝑡 ℎ𝑎𝑣𝑒 𝑒𝑛𝑜𝑢𝑔ℎ 𝑚𝑜𝑛𝑒𝑦.\n- - - - - - - - - - - - - - - - - -\n𝑀𝑜𝑛𝑒𝑦 𝑛𝑒𝑒𝑑𝑒𝑑 10$ 𝑌𝑜𝑢𝑟 𝑚𝑜𝑛𝑒𝑦 ${money}$\n- - - - - - - - - - - - - - - - - -\nGET A SONG FOR CHEAP\nwith .cheapsong\n- - - - - - - - - - - - - - - - - -\n❎ 𝑃𝑟𝑒𝑚𝑖𝑢𝑚 𝑆𝑜𝑛𝑔𝑠`) 
 	 
-	   var money1 = Number(money);
-       var cost = Number(10);
-       var newmoney = money1 - cost; 
-   
-       fs.readFile(`./data/users/${sender.split("@")[0]}/money.json`, 'utf-8', function(err, data) {
-           if (err) throw err;
-           var newValue = data.replace(`${money1}`, newmoney);
-           fs.writeFile(`./data/users/${sender.split("@")[0]}/money.json`, newValue, 'utf-8', function(err, data) {
-               if (err) throw err;
-           })
-       })
-       await delay(1000) /// waiting 1 second.	
+				var money1 = Number(money);
+				var cost = Number(10);
+				var newmoney = money1 - cost; 
+			
+				fs.readFile(`./data/users/${sender.split("@")[0]}/money.json`, 'utf-8', function(err, data) {
+					if (err) throw err;
+					var newValue = data.replace(`${money1}`, newmoney);
+					fs.writeFile(`./data/users/${sender.split("@")[0]}/money.json`, newValue, 'utf-8', function(err, data) {
+						if (err) throw err;
+					})
+				})
+				await delay(1000) /// waiting 1 second.	
 	 
 	   try {
 		var Genius = require("genius-lyrics");
@@ -3024,7 +3024,16 @@ text: `${design} 𝐷𝑜𝑤𝑛𝑙𝑜𝑎𝑑𝑖𝑛𝑔...\n- - - - - - - 
 
 			}
 				
+			var yt = require('youtube-search-without-api-key');
 
+			var videos = await yt.search('kygo kids in love this town');
+			
+			console.log('Videos:');
+			console.log(videos);
+			
+			var views = videos[0].views
+			
+			console.log(`${views.toString().replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1.')}`);
 																
 				ran= getRandom('.opus')
 				exec(`yt-dlp -x --audio-format opus -o, --output ${ran} "ytsearch:${value}"`, (err) => {
@@ -3033,13 +3042,22 @@ text: `${design} 𝐷𝑜𝑤𝑛𝑙𝑜𝑎𝑑𝑖𝑛𝑔...\n- - - - - - - 
 						try {
 
 							
-		
-						if (firstSong.fullTitle = undefined) {
-							reply(`${design} 𝑆𝑒𝑛𝑑𝑖𝑛𝑔...\n- - - - - - - - - - - - - - - - - -\n𝑇𝑖𝑡𝑙𝑒 𝑎𝑛𝑑 𝐴𝑟𝑡𝑖𝑠𝑡\n- - - - - - - - - - - - - - - - - -\n_${firstSong.fullTitle}_\n_${firstSong.artist.name}_\n- - - - - - - - - - - - - - - - - -\n𝐴𝑙𝑏𝑢𝑚 𝑎𝑛𝑑 𝐷𝑎𝑡𝑒\n- - - - - - - - - - - - - - - - - -\n_unknown_\n_unknown_\n- - - - - - - - - - - - - - - - - -\n_Tipp: ${tipp}_\n- - - - - - - - - - - - - - - - - -\n𝐶𝑜𝑠𝑡: _10$_\n_.cheapsong (_ 𝐶𝑜𝑠𝑡  _4$)_\n𝑀𝑜𝑛𝑒𝑦 𝑙𝑒𝑓𝑡: _${newmoney}$_\n- - - - - - - - - - - - - - - - - -\n❇️ 𝑃𝑟𝑒𝑚𝑖𝑢𝑚 𝑆𝑜𝑛𝑔𝑠`)
-						}
-						else {
-                        reply(`${design} 𝑆𝑒𝑛𝑑𝑖𝑛𝑔...\n- - - - - - - - - - - - - - - - - -\n𝑇𝑖𝑡𝑙𝑒 𝑎𝑛𝑑 𝐴𝑟𝑡𝑖𝑠𝑡\n- - - - - - - - - - - - - - - - - -\n_${firstSong.fullTitle}_\n_${firstSong.artist.name}_\n- - - - - - - - - - - - - - - - - -\n𝐴𝑙𝑏𝑢𝑚 𝑎𝑛𝑑 𝐷𝑎𝑡𝑒\n- - - - - - - - - - - - - - - - - -\n_${firstSong.album}_\n_${firstSong.releasedAt}_\n- - - - - - - - - - - - - - - - - -\n_Tipp: ${tipp}_\n- - - - - - - - - - - - - - - - - -\n𝐶𝑜𝑠𝑡: _10$_\n_.cheapsong (_ 𝐶𝑜𝑠𝑡  _4$)_\n𝑀𝑜𝑛𝑒𝑦 𝑙𝑒𝑓𝑡: _${newmoney}$_\n- - - - - - - - - - - - - - - - - -\n❇️ 𝑃𝑟𝑒𝑚𝑖𝑢𝑚 𝑆𝑜𝑛𝑔𝑠`)
-						}
+reply(`${design} 𝑆𝑒𝑛𝑑𝑖𝑛𝑔...
+- - - - - - - - - - - - - - - - - -
+𝑇𝑖𝑡𝑙𝑒
+- - - - - - - - - - - - - - - - - -
+_${videos[0].title}_
+- - - - - - - - - - - - - - - - - -
+𝐷𝑢𝑟𝑎𝑡𝑖𝑜𝑛 _${videos[0].duration_raw}_
+- - - - - - - - - - - - - - - - - -
+𝑃𝑢𝑏𝑙𝑖𝑠ℎ𝑒𝑑 _${videos[0].snippet.publishedAt}_
+- - - - - - - - - - - - - - - - - -
+𝑌𝑜𝑢𝑡𝑢𝑏𝑒 𝑉𝑖𝑒𝑤𝑠 _${views}_
+- - - - - - - - - - - - - - - - - -
+𝑀𝑜𝑛𝑒𝑦 𝑙𝑒𝑓𝑡: _${newmoney}$_
+- - - - - - - - - - - - - - - - - -
+❇️ 𝑃𝑟𝑒𝑚𝑖𝑢𝑚 𝑆𝑜𝑛𝑔𝑠`)
+				
 					}catch (err){
 						reply(`${design} 𝑆𝑒𝑛𝑑𝑖𝑛𝑔...\n- - - - - - - - - - - - - - - - - -\n𝑁𝑜 𝐷𝑎𝑡𝑎 𝐹𝑜𝑢𝑛𝑑\n- - - - - - - - - - - - - - - - - -\n𝐶𝑜𝑠𝑡: _10$ - 5_\n_.cheapsong (_ 𝐶𝑜𝑠𝑡  _4$)_\n𝑀𝑜𝑛𝑒𝑦 𝑙𝑒𝑓𝑡: _${newnewmoney}$_\n- - - - - - - - - - - - - - - - - -\n_Tipp: ${tipp}_\n- - - - - - - - - - - - - - - - - -\n❇️ 𝑃𝑟𝑒𝑚𝑖𝑢𝑚 𝑆𝑜𝑛𝑔𝑠`)  
 							}
@@ -3672,19 +3690,7 @@ Sorry no such song was found. `,
 replyimg(beenss, text, capt, owner)
 }
 
-const yt = require('youtube-search-without-api-key');
 
-const videos = await yt.search('kygo kids in love this town');
-
-console.log('Videos:');
-console.log(videos);
-
-console.log(videos[0].title);
-console.log(videos[0].snippet.publishedAt);
-console.log(videos[0].duration_raw);
-var views = videos[0].views
-
-console.log(`${views.toString().replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1.')}`);
 
 break
 //---X623-Whatsapp-Bot------------------------------------------------------------------------------------------------------------------------// 
