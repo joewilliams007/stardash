@@ -3096,10 +3096,10 @@ var videos = await yt.search(`${value}`);
 
 
 var views = videos[0].views
-var views = videos[1].views
-var views = videos[2].views
-var views = videos[3].views
-var views = videos[4].views
+var views1 = videos[1].views
+var views2= videos[2].views
+var views3 = videos[3].views
+var views4 = videos[4].views
 
 try {
 
@@ -3108,7 +3108,7 @@ reply(`${design} 𝑅𝑒𝑠𝑢𝑙𝑡𝑠 𝑓𝑜𝑢𝑛𝑑
 (1) 
 _${videos[0].title}_
 _${videos[0].duration_raw}_
-_${views.toString().replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1.') Views}_
+_${views.toString().replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1.')}_
 _${videos[0].snippet.publishedAt}_
 _${videos[0].url}_
 (2) 
