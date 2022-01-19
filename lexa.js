@@ -3185,7 +3185,7 @@ break
 case 'getvid':
 	   if (!isVerify) return reply(UserB())
 	   if (args.length < 1) return reply(`${design} Whats the video number? 1 2 3 4 or 5`)
-	   if (args.length > 1) return reply(`${design} Whats the video number? .getsearch 1`)
+	   if (args.length > 1) return reply(`${design} Whats the video number? .getvid 1`)
 
 	   if (args[0] === '1' ) {
 		var _getsearch = JSON.parse(fs.readFileSync(`./session/youtube.json`));
@@ -3204,12 +3204,11 @@ case 'getvid':
 		getsearch = _getsearch[4]	//--- youtube	
 	  }
 
-	   reply(`${design} 𝑆𝑒𝑛𝑑𝑖𝑛𝑔 ${value}...\n- - - - - - - - - - - - - - - - - -\n✅ 𝑃𝑙𝑒𝑎𝑠𝑒 𝑊𝑎𝑖𝑡`)	
+	   reply(`${design} 𝑆𝑒𝑛𝑑𝑖𝑛𝑔 ${value}...\n- - - - - - - - - - - - - - - - - -\n⚠️ If the video is too long (5min+) it might not work at all.\n- - - - - - - - - - - - - - - - - -\n⚠️ You are downloading the *video option.* This might take *2+ Minutes!* Please be patient until the download it finished.\n- - - - - - - - - - - - - - - - - -\nFor the sound option *.getsearch*✅ 𝑃𝑙𝑒𝑎𝑠𝑒 𝑊𝑎𝑖𝑡`)	
 	   
 				
-	
 
-	   var childd = require('child_process').exec(`yt-dlp -f 137+140 --write-sub -o ytbvid.mp4 https://www.youtube.com/watch?v=${getsearch}`)
+	   var childd = require('child_process').exec(`yt-dlp -f 133 --write-sub -o ytbvid.mp4 https://www.youtube.com/watch?v=${getsearch}`)
 	   childd.stdout.pipe(process.stdout)
 	   childd.on('exit', function() {
 		buffer = fs.readFileSync("ytbvid.mp4")
