@@ -3114,25 +3114,25 @@ _${videos[0].url}_
 (2) 
 _${videos[1].title}_
 _${videos[1].duration_raw}_
-_${views1.toString().replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1.') Views}_
+_${views1.toString().replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1.')} Views_
 _${videos[1].snippet.publishedAt}_
 _${videos[1].url}_
 (3) 
 _${videos[2].title}_
 _${videos[2].duration_raw}_
-_${views2.toString().replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1.') Views}_
+_${views2.toString().replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1.')} Views_
 _${videos[2].snippet.publishedAt}_
 _${videos[2].url}_
 (4) 
 _${videos[3].title}_
 _${videos[3].duration_raw}_
-_${views3.toString().replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1.') Views}_
+_${views3.toString().replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1.')} Views_
 _${videos[3].snippet.publishedAt}_
 _${videos[3].url}_
 (5) 
 _${videos[4].title}_
 _${videos[4].duration_raw}_
-_${views4.toString().replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1.') Views}_
+_${views4.toString().replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1.')} Views_
 _${videos[4].snippet.publishedAt}_
 _${videos[4].url}_
 - - - - - - - - - - - - - - - - - -
