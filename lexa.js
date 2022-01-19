@@ -1237,6 +1237,7 @@ text: `𝑇𝑜𝑜𝑙𝑠
 ${design} ☆ .song 
 ${design} ☆ .lyrics
 ${design} ☆ .define
+${design} ☆ .search
 ${design} ☆ .send 
 ${design} ☆ .weather 
 ${design} ☆ .translate 
