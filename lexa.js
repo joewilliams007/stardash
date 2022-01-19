@@ -3166,8 +3166,6 @@ case 'getsearch':
 	  }
 
 
-	   var _getsearch = JSON.parse(fs.readFileSync(`./session/youtube.json`));
-	   getsearch = _getsearch[0]	//--- youtube
 
 	   reply(`${design} 𝑆𝑒𝑛𝑑𝑖𝑛𝑔 ${value}...\n- - - - - - - - - - - - - - - - - -\n✅`)														
 				ran= getRandom('.opus')
