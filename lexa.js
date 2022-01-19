@@ -3676,11 +3676,10 @@ console.log(videos[0].snippet.publishedAt);
 console.log(videos[0].duration_raw);
 var views = videos[0].views
 
-function formatNumber(num) {
-	return num.toString().replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1.')
-  }
 
-console.log(formatNumber.views);
+
+
+console.log(`${views.toString().replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1.')}`);
 
 break
 //---X623-Whatsapp-Bot------------------------------------------------------------------------------------------------------------------------// 
