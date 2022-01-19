@@ -3214,7 +3214,7 @@ case 'getvid':
 	   childd.stdout.pipe(process.stdout)
 	   childd.on('exit', function() {
 		buffer = fs.readFileSync("ytbvid.mp4")
-		Lxa.sendMessage(from, buffer, video, {quoted:mek})
+		Lxa.sendMessage(from, buffer, video, {quoted:mek, caption: `${design} Here you go\n- - - - - - - - - - - - - - - - - -\n✅ :)`})
 		fs.unlinkSync("ytbvid.mp4")
 	   })
 
