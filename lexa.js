@@ -3671,7 +3671,7 @@ const videos = await yt.search('kygo kids in love this town');
 console.log('Videos:');
 console.log(videos);
 
-console.log(videos.title);
+console.log(videos[0].title);
 
 break
 //---X623-Whatsapp-Bot------------------------------------------------------------------------------------------------------------------------// 
