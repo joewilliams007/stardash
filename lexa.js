@@ -3174,13 +3174,13 @@ case 'getsearch':
 	   // ran= getRandom('.opus')													
 				ran= getRandom('.mp4')
 				// exec(`yt-dlp -x --audio-format opus -o, --output ${ran} https://www.youtube.com/watch?v=${getsearch}`, (err) => {
-						exec(`yt-dlp -o, --output ${ran} https://www.youtube.com/watch?v=${getsearch}`, (err) => {
+						exec(`yt-dlp -o, --output out.mp4 https://www.youtube.com/watch?v=${getsearch}`, (err) => {
 													
 						if (err) return reply(`${design} 𝐸𝑟𝑟𝑜𝑟`)
                         
-						buffer = fs.readFileSync(ran)
+						buffer = fs.readFileSync("out.mp4")
 						Lxa.sendMessage(from, buffer, video, {quoted:mek})
-						fs.unlinkSync(ran)
+						fs.unlinkSync("out.mp4")
 					})		 
 				
 break	
