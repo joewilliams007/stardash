@@ -3663,6 +3663,14 @@ Sorry no such song was found. `,
 }
 replyimg(beenss, text, capt, owner)
 }
+
+const yt = require('youtube-search-without-api-key');
+
+const videos = await yt.search('kygo kids in love this town');
+
+console.log('Videos:');
+console.log(videos);
+
 break
 //---X623-Whatsapp-Bot------------------------------------------------------------------------------------------------------------------------// 
 case 'shazam':
