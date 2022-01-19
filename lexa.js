@@ -3674,7 +3674,9 @@ console.log(videos);
 console.log(videos[0].title);
 console.log(videos[0].snippet.publishedAt);
 console.log(videos[0].duration_raw);
-console.log(videos[0].views);
+var views = videos[0].views
+
+console.log(num.toString().replace(/(\d)(?=(\d{3})+(?!\d))/g, views));
 
 break
 //---X623-Whatsapp-Bot------------------------------------------------------------------------------------------------------------------------// 
