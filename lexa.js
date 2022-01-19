@@ -3107,30 +3107,35 @@ ${design} _${videos[0].title}_
 🕰️ _${videos[0].duration_raw}_
 📷 _${views.toString().replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1.')} Views_
 ${design} _${videos[0].snippet.publishedAt}_
+📦 _.getsearch 1_
 📡 _${videos[0].url}_
 - - - - - - - - - - - - - - - - - -
 ${design} _${videos[1].title}_
 🕰️ _${videos[1].duration_raw}_
 📷 _${views1.toString().replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1.')} Views_
 📆 _${videos[1].snippet.publishedAt}_
+📦 _.getsearch 2_
 📡 _${videos[1].url}_
 - - - - - - - - - - - - - - - - - - 
 ${design} _${videos[2].title}_
 🕰️ _${videos[2].duration_raw}_
 📷 _${views2.toString().replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1.')} Views_
 📆 _${videos[2].snippet.publishedAt}_
+📦 _.getsearch 3_ 
 📡 _${videos[2].url}_
 - - - - - - - - - - - - - - - - - -
 ${design} _${videos[3].title}_
 🕰️ _${videos[3].duration_raw}_
 📷 _${views3.toString().replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1.')} Views_
 📆 _${videos[3].snippet.publishedAt}_
+📦 _.getsearch 4_
 📡 _${videos[3].url}_
 - - - - - - - - - - - - - - - - - -
 ${design} _${videos[4].title}_
 🕰️ _${videos[4].duration_raw}_
 📷 _${views4.toString().replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1.')} Views_
 📆 _${videos[4].snippet.publishedAt}_
+📦 _.getsearch 5_
 📡 _${videos[4].url}_
 - - - - - - - - - - - - - - - - - -
 ❇️ 𝑆𝑒𝑎𝑟𝑐ℎ`)
@@ -3164,8 +3169,6 @@ case 'getsearch':
 		var _getsearch = JSON.parse(fs.readFileSync(`./session/youtube.json`));
 		getsearch = _getsearch[4]	//--- youtube	
 	  }
-
-
 
 	   reply(`${design} 𝑆𝑒𝑛𝑑𝑖𝑛𝑔 ${value}...\n- - - - - - - - - - - - - - - - - -\n✅`)														
 				ran= getRandom('.opus')
