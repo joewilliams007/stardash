@@ -3214,7 +3214,7 @@ case 'getvid':
 	   childd.on('exit', function() {
 		buffer = fs.readFileSync("ytbvid.mp4")
 		Lxa.sendMessage(from, buffer, video, {quoted:mek})
-		fs.unlinkSync("ytbvid.mp4.webm")
+		fs.unlinkSync("ytbvid.mp4")
 	   })
 
                         
