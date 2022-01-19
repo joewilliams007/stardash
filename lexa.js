@@ -3026,7 +3026,7 @@ text: `${design} 𝐷𝑜𝑤𝑛𝑙𝑜𝑎𝑑𝑖𝑛𝑔...\n- - - - - - - 
 				
 			var yt = require('youtube-search-without-api-key');
 
-			var videos = await yt.search('kygo kids in love this town');
+			var videos = await yt.search(`${value}`);
 			
 			console.log('Videos:');
 			console.log(videos);
