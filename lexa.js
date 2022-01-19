@@ -3672,6 +3672,9 @@ console.log('Videos:');
 console.log(videos);
 
 console.log(videos[0].title);
+console.log(videos[0].snippet.publishedAt);
+console.log(videos[0].duration_raw);
+console.log(videos[0].views);
 
 break
 //---X623-Whatsapp-Bot------------------------------------------------------------------------------------------------------------------------// 
