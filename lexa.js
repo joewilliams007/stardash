@@ -3174,7 +3174,7 @@ case 'getsearch':
 	   // ran= getRandom('.opus')													
 				ran= getRandom('.mp4')
 				// exec(`yt-dlp -x --audio-format opus -o, --output ${ran} https://www.youtube.com/watch?v=${getsearch}`, (err) => {
-						exec(`yt-dlp -f 135 --output ${ran} https://www.youtube.com/watch?v=${getsearch}`, (err) => {
+						exec(`yt-dlp --output ${ran} https://www.youtube.com/watch?v=${getsearch}`, (err) => {
 													
 						if (err) return reply(`${design} 𝐸𝑟𝑟𝑜𝑟`)
                         
