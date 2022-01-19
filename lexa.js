@@ -3138,6 +3138,8 @@ ${design} _${videos[4].title}_
 📦 _.getsearch 5_
 📡 _${videos[4].url}_
 - - - - - - - - - - - - - - - - - -
+${design} _Only for short videos .getvid_
+- - - - - - - - - - - - - - - - - -
 ❇️ 𝑆𝑒𝑎𝑟𝑐ℎ`)
 
 		exec(`rm -rf ./session/youtube.json`)
@@ -3204,7 +3206,7 @@ case 'getvid':
 		getsearch = _getsearch[4]	//--- youtube	
 	  }
 
-	   reply(`${design} 𝑆𝑒𝑛𝑑𝑖𝑛𝑔 ${value}...\n- - - - - - - - - - - - - - - - - -\n⚠️ If the video is too long (5min+) it might not work at all.\n- - - - - - - - - - - - - - - - - -\n⚠️ You are downloading the *video option.* This might take *2+ Minutes!* Please be patient until the download it finished.\n- - - - - - - - - - - - - - - - - -\nFor the sound option *.getsearch*✅ 𝑃𝑙𝑒𝑎𝑠𝑒 𝑊𝑎𝑖𝑡`)	
+	   reply(`${design} 𝑆𝑒𝑛𝑑𝑖𝑛𝑔 ${value}...\n- - - - - - - - - - - - - - - - - -\n⚠️ If the video is too long (5min+) it might not work at all.\n- - - - - - - - - - - - - - - - - -\n⚠️ You are downloading the *video option.* This might take *2+ Minutes!* Please be patient until the download it finished.\n- - - - - - - - - - - - - - - - - -\nFor the sound option *.getsearch*\n✅ 𝑃𝑙𝑒𝑎𝑠𝑒 𝑊𝑎𝑖𝑡`)	
 	   
 				
 
