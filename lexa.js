@@ -3234,16 +3234,24 @@ case 'wuhanvirus':
 
 var getJSON = require('get-json')
 getJSON('https://covid-api.mmediagroup.fr/v1/cases', function(error, res){
+
+	var global1 = res.Global.All.confirmed
+	var global2 = res.Global.All.population
+	var global3 = res.Global.All.deaths
+
+	console.log(``);
+
+
 reply(`🦠 𝐶𝑜𝑟𝑜𝑛𝑎𝑣𝑖𝑟𝑢𝑠
 - - - - - - - - - - - - - - - - - -
 😷 𝐶𝑜𝑟𝑜𝑛𝑎𝑣𝑖𝑟𝑢𝑠 𝑐𝑎𝑠𝑒𝑠
-_${res.Global.All.confirmed}_
+_${global1.toString().replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1.')}_
 - - - - - - - - - - - - - - - - - -
 🤧 𝑃𝑜𝑝𝑢𝑙𝑎𝑡𝑖𝑜𝑛
-_${res.Global.All.population}_
+_${global2.toString().replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1.')}_
 - - - - - - - - - - - - - - - - - -
 ☠️ 𝐷𝑒𝑎𝑡ℎ𝑠
-_${res.Global.All.deaths}_
+_${global3.toString().replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1.')}_
 - - - - - - - - - - - - - - - - - -
 📄 𝑆𝑜𝑢𝑟𝑐𝑒
 _https://covid-api.mmediagroup.fr/v1/cases_
@@ -3675,9 +3683,6 @@ console.log(videos[0].title);
 console.log(videos[0].snippet.publishedAt);
 console.log(videos[0].duration_raw);
 var views = videos[0].views
-
-
-
 
 console.log(`${views.toString().replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1.')}`);
 
