@@ -3106,34 +3106,34 @@ var views4 = videos[4].views
 reply(`${design} 𝑅𝑒𝑠𝑢𝑙𝑡𝑠 𝑓𝑜𝑢𝑛𝑑
 - - - - - - - - - - - - - - - - - -
 ${design} _${videos[0].title}_
-${design} _${videos[0].duration_raw}_
-${design} _${views.toString().replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1.')} Views_
+🕰️ _${videos[0].duration_raw}_
+📷 _${views.toString().replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1.')} Views_
 ${design} _${videos[0].snippet.publishedAt}_
-${design} _${videos[0].url}_
+📡 _${videos[0].url}_
 - - - - - - - - - - - - - - - - - -
 ${design} _${videos[1].title}_
-${design} _${videos[1].duration_raw}_
-${design} _${views1.toString().replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1.')} Views_
-${design} _${videos[1].snippet.publishedAt}_
-${design} _${videos[1].url}_
+🕰️ _${videos[1].duration_raw}_
+📷 _${views1.toString().replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1.')} Views_
+📆 _${videos[1].snippet.publishedAt}_
+📡 _${videos[1].url}_
 - - - - - - - - - - - - - - - - - - 
 ${design} _${videos[2].title}_
-${design} _${videos[2].duration_raw}_
-${design} _${views2.toString().replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1.')} Views_
-${design} _${videos[2].snippet.publishedAt}_
-${design} _${videos[2].url}_
+🕰️ _${videos[2].duration_raw}_
+📷 _${views2.toString().replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1.')} Views_
+📆 _${videos[2].snippet.publishedAt}_
+📡 _${videos[2].url}_
 - - - - - - - - - - - - - - - - - -
 ${design} _${videos[3].title}_
-${design} _${videos[3].duration_raw}_
-${design} _${views3.toString().replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1.')} Views_
-${design} _${videos[3].snippet.publishedAt}_
-${design} _${videos[3].url}_
+🕰️ _${videos[3].duration_raw}_
+📷 _${views3.toString().replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1.')} Views_
+📆 _${videos[3].snippet.publishedAt}_
+📡 _${videos[3].url}_
 - - - - - - - - - - - - - - - - - -
 ${design} _${videos[4].title}_
-${design} _${videos[4].duration_raw}_
-${design} _${views4.toString().replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1.')} Views_
-${design} _${videos[4].snippet.publishedAt}_
-${design} _${videos[4].url}_
+🕰️ _${videos[4].duration_raw}_
+📷 _${views4.toString().replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1.')} Views_
+📆 _${videos[4].snippet.publishedAt}_
+📡 _${videos[4].url}_
 - - - - - - - - - - - - - - - - - -
 ❇️ 𝑆𝑒𝑎𝑟𝑐ℎ`)
 
