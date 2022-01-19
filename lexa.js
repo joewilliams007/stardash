@@ -3208,7 +3208,7 @@ case 'getvid':
 	   
 				
 
-	   var childd = require('child_process').exec(`yt-dlp -f 135 --write-sub -o ytbvid.mp4 https://www.youtube.com/watch?v=${getsearch}`)
+	   var childd = require('child_process').exec(`yt-dlp -f 135+140 --write-sub -o ytbvid.mp4 https://www.youtube.com/watch?v=${getsearch}`)
 	   childd.stdout.pipe(process.stdout)
 	   childd.on('exit', function() {
 		buffer = fs.readFileSync("ytbvid.mp4")
