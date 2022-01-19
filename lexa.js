@@ -3205,15 +3205,14 @@ case 'getvid':
 	  }
 
 	   reply(`${design} 𝑆𝑒𝑛𝑑𝑖𝑛𝑔 ${value}...\n- - - - - - - - - - - - - - - - - -\n✅ 𝑃𝑙𝑒𝑎𝑠𝑒 𝑊𝑎𝑖𝑡`)														
-				ran= getRandom('.mp4')
-				exec(`yt-dlp -o, --output ${ran} https://www.youtube.com/watch?v=${getsearch}`, (err) => {
+			
+				await exec(`yt-dlp -o, --output ytbvid.mp4 https://www.youtube.com/watch?v=${getsearch}`)
 													
-						if (err) return reply(`${design} 𝐸𝑟𝑟𝑜𝑟`)
                         
-						buffer = fs.readFileSync(ran)
+						buffer = fs.readFileSync("ytbvid.mp4")
 						Lxa.sendMessage(from, buffer, video, {quoted:mek})
-						fs.unlinkSync(ran)
-					})		 
+						fs.unlinkSync("ytbvid.mp4")
+		 
 				
 break
 //-- update bot
