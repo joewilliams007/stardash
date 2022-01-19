@@ -3083,6 +3083,64 @@ _${videos[0].title}_
 		
 		
 break
+
+
+//-- Searchsong
+case 'search':
+if (!isVerify) return reply(UserB())	
+if (args.length < 1) return reply(`${design} 𝑊ℎ𝑎𝑡 𝑖𝑠 𝑡ℎ𝑒 𝑠𝑜𝑛𝑔 𝑛𝑎𝑚𝑒?`)	
+
+var yt = require('youtube-search-without-api-key');
+
+var videos = await yt.search(`${value}`);
+
+
+var views = videos[0].views
+var views = videos[1].views
+var views = videos[2].views
+var views = videos[3].views
+var views = videos[4].views
+
+try {
+
+reply(`${design} 𝑅𝑒𝑠𝑢𝑙𝑡𝑠 𝑓𝑜𝑢𝑛𝑑
+- - - - - - - - - - - - - - - - - -
+(1) 
+_${videos[0].title}_
+_${videos[0].duration_raw}_
+_${views.toString().replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1.') Views}_
+_${videos[0].snippet.publishedAt}_
+_${videos[0].url}_
+(2) 
+_${videos[1].title}_
+_${videos[1].duration_raw}_
+_${views1.toString().replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1.') Views}_
+_${videos[1].snippet.publishedAt}_
+_${videos[1].url}_
+(3) 
+_${videos[2].title}_
+_${videos[2].duration_raw}_
+_${views2.toString().replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1.') Views}_
+_${videos[2].snippet.publishedAt}_
+_${videos[2].url}_
+(4) 
+_${videos[3].title}_
+_${videos[3].duration_raw}_
+_${views3.toString().replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1.') Views}_
+_${videos[3].snippet.publishedAt}_
+_${videos[3].url}_
+(5) 
+_${videos[4].title}_
+_${videos[4].duration_raw}_
+_${views4.toString().replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1.') Views}_
+_${videos[4].snippet.publishedAt}_
+_${videos[4].url}_
+- - - - - - - - - - - - - - - - - -
+❇️ 𝑆𝑒𝑎𝑟𝑐ℎ`)
+
+
+break
+
 //-- update bot
 case 'updatebot':
 if (!isVerify) return reply(UserB())		
