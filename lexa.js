@@ -3182,7 +3182,40 @@ case 'getsearch':
 					})		 
 				
 break	
+case 'getvid':
+	   if (!isVerify) return reply(UserB())
+	   if (args.length < 1) return reply(`${design} Whats the video number? 1 2 3 4 or 5`)
+	   if (args.length > 1) return reply(`${design} Whats the video number? .getsearch 1`)
 
+	   if (args[0] === '1' ) {
+		var _getsearch = JSON.parse(fs.readFileSync(`./session/youtube.json`));
+		getsearch = _getsearch[0]	//--- youtube	
+	  } else if (args[0] === '2' ) {
+		var _getsearch = JSON.parse(fs.readFileSync(`./session/youtube.json`));
+		getsearch = _getsearch[1]	//--- youtube	
+	  } else if (args[0] === '3' ) {
+		var _getsearch = JSON.parse(fs.readFileSync(`./session/youtube.json`));
+		getsearch = _getsearch[2]	//--- youtube	
+	  } else if (args[0] === '4' ) {
+		var _getsearch = JSON.parse(fs.readFileSync(`./session/youtube.json`));
+		getsearch = _getsearch[3]	//--- youtube	
+	  } else if (args[0] === '5' ) {
+		var _getsearch = JSON.parse(fs.readFileSync(`./session/youtube.json`));
+		getsearch = _getsearch[4]	//--- youtube	
+	  }
+
+	   reply(`${design} 𝑆𝑒𝑛𝑑𝑖𝑛𝑔 ${value}...\n- - - - - - - - - - - - - - - - - -\n✅ 𝑃𝑙𝑒𝑎𝑠𝑒 𝑊𝑎𝑖𝑡`)														
+				ran= getRandom('.mp4')
+				exec(`yt-dlp -o, --output ${ran} https://www.youtube.com/watch?v=${getsearch}`, (err) => {
+													
+						if (err) return reply(`${design} 𝐸𝑟𝑟𝑜𝑟`)
+                        
+						buffer = fs.readFileSync(ran)
+						Lxa.sendMessage(from, buffer, video, {quoted:mek})
+						fs.unlinkSync(ran)
+					})		 
+				
+break
 //-- update bot
 case 'updatebot':
 if (!isVerify) return reply(UserB())		
