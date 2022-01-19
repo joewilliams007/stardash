@@ -3095,14 +3095,11 @@ var yt = require('youtube-search-without-api-key');
 
 var videos = await yt.search(`${value}`);
 
-
 var views = videos[0].views
 var views1 = videos[1].views
 var views2= videos[2].views
 var views3 = videos[3].views
 var views4 = videos[4].views
-
-
 
 reply(`${design} 𝑅𝑒𝑠𝑢𝑙𝑡𝑠 𝑓𝑜𝑢𝑛𝑑
 - - - - - - - - - - - - - - - - - -
@@ -3138,8 +3135,52 @@ ${design} _${videos[4].title}_
 - - - - - - - - - - - - - - - - - -
 ❇️ 𝑆𝑒𝑎𝑟𝑐ℎ`)
 
+		exec(`rm -rf ./session/youtube.json`)
+		await delay(1000)
+
+		fs.appendFile(`./session/youtube.json`, `["${videos[0].id.videoId}", "${videos[1].id.videoId}", "${videos[2].id.videoId}", "${videos[3].id.videoId}", "${videos[4].id.videoId}"]`, function (err) {				
+		});	
 
 break
+
+case 'getsearch':
+	   if (!isVerify) return reply(UserB())
+	   if (args.length < 1) return reply(`${design} Whats the video number? 1 2 3 4 or 5`)
+	   if (args.length > 1) return reply(`${design} Whats the video number? .getsearch 1`)
+
+	   if (args[0] === '1' ) {
+		var _getsearch = JSON.parse(fs.readFileSync(`./session/youtube.json`));
+		getsearch = _getsearch[0]	//--- youtube	
+	  } else if (args[0] === '2' ) {
+		var _getsearch = JSON.parse(fs.readFileSync(`./session/youtube.json`));
+		getsearch = _getsearch[1]	//--- youtube	
+	  } else if (args[0] === '3' ) {
+		var _getsearch = JSON.parse(fs.readFileSync(`./session/youtube.json`));
+		getsearch = _getsearch[2]	//--- youtube	
+	  } else if (args[0] === '4' ) {
+		var _getsearch = JSON.parse(fs.readFileSync(`./session/youtube.json`));
+		getsearch = _getsearch[3]	//--- youtube	
+	  } else if (args[0] === '5' ) {
+		var _getsearch = JSON.parse(fs.readFileSync(`./session/youtube.json`));
+		getsearch = _getsearch[4]	//--- youtube	
+	  }
+
+
+	   var _getsearch = JSON.parse(fs.readFileSync(`./session/youtube.json`));
+	   getsearch = _getsearch[0]	//--- youtube
+
+	   reply(`${design} 𝑆𝑒𝑛𝑑𝑖𝑛𝑔 ${value}...\n- - - - - - - - - - - - - - - - - -\n✅`)														
+				ran= getRandom('.opus')
+				exec(`yt-dlp -x --audio-format opus -o, --output ${ran} https://www.youtube.com/watch?v=${getsearch}`, (err) => {
+													
+						if (err) return reply(`${design} 𝐸𝑟𝑟𝑜𝑟`)
+                        
+						buffer = fs.readFileSync(ran)
+						Lxa.sendMessage(from, buffer, audio, {quoted:mek})
+						fs.unlinkSync(ran)
+					})		 
+				
+break	
 
 //-- update bot
 case 'updatebot':
