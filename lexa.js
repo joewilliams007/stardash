@@ -3204,9 +3204,13 @@ case 'getvid':
 		getsearch = _getsearch[4]	//--- youtube	
 	  }
 
-	   reply(`${design} 𝑆𝑒𝑛𝑑𝑖𝑛𝑔 ${value}...\n- - - - - - - - - - - - - - - - - -\n✅ 𝑃𝑙𝑒𝑎𝑠𝑒 𝑊𝑎𝑖𝑡`)														
+	   reply(`${design} 𝑆𝑒𝑛𝑑𝑖𝑛𝑔 ${value}...\n- - - - - - - - - - - - - - - - - -\n✅ 𝑃𝑙𝑒𝑎𝑠𝑒 𝑊𝑎𝑖𝑡`)	
+	   
+var execc = require('await-exec')
+ 
+
 			
-				await exec(`yt-dlp -o, --output ytbvid.mp4 https://www.youtube.com/watch?v=${getsearch}`)
+	execc(`yt-dlp -o, --output ytbvid.mp4 https://www.youtube.com/watch?v=${getsearch}`)
 													
                         
 						buffer = fs.readFileSync("ytbvid.mp4")
