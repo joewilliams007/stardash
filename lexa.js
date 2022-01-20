@@ -3455,6 +3455,8 @@ var urls = `https://api.nytimes.com/svc/news/v3/content/nyt/${args[0]}.json?api-
 	var urls = `https://api.nytimes.com/svc/news/v3/content/all/all.json?api-key=3uk8zGEUQ7gDVFjAMORO1MKxWLAS7TTv`
 
 }
+
+try {
 	
 	var getJSON = require('get-json') //https://developer.nytimes.com/docs/timeswire-product/1/overview api
 	getJSON(urls, function(error, res){
@@ -3542,9 +3544,22 @@ ${res.results[4].updated_date}
 ${design} 𝑈𝑟𝑙
 ${res.results[4].url}
 - - - - - - - - - - - - - - - - - -
-𝐺𝑒𝑡 𝑚𝑜𝑟𝑒 𝑛𝑒𝑤𝑠 𝑙𝑎𝑡𝑒𝑟 𝑜𝑟 𝑠𝑒𝑎𝑟𝑐ℎ 𝑎 𝑠𝑒𝑐𝑡𝑖𝑜𝑛 𝑤𝑖𝑡ℎ .𝑛𝑒𝑤𝑠 𝑓𝑜𝑜𝑡𝑏𝑎𝑙𝑙
+𝐺𝑒𝑡 𝑚𝑜𝑟𝑒 𝑛𝑒𝑤𝑠 𝑙𝑎𝑡𝑒𝑟 𝑜𝑟 𝑠𝑒𝑎𝑟𝑐ℎ 𝑎 𝑠𝑒𝑐𝑡𝑖𝑜𝑛 𝑤𝑖𝑡ℎ .𝑛𝑒𝑤𝑠 𝑆𝑝𝑜𝑟𝑡𝑠
 `)
 	})
+
+}catch (err){
+reply(`${design} Sorry, this section doesnt exist
+- - - - - - - - - - - - - - - - - -
+sections: 
+.news world
+.news sports
+...more on new york times website
+- - - - - - - - - - - - - - - - - -
+You can also search for article..
+.article pewdiepie
+`)		
+		}
 
 break
 //---X623-Whatsapp-Bot------------------------------------------------------------------------------------------------------------------------//
