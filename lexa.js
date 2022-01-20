@@ -3451,33 +3451,36 @@ case 'news':
 
 if (args.length > 0) {
 var urls = `https://api.nytimes.com/svc/news/v3/content/nyt/${args[0]}.json?api-key=3uk8zGEUQ7gDVFjAMORO1MKxWLAS7TTv`
+
+reply(`${design} _Searching.._ 
+- - - - - - - - - - - - - - - - - -
+_sections:_
+_.news world_
+_.news sports_
+_...more on new york times website_
+- - - - - - - - - - - - - - - - - -
+_random news: .news_
+- - - - - - - - - - - - - - - - - -
+_You can also search for article..
+.article pewdiepie_
+- - - - - - - - - - - - - - - - - -
+_if no results show up, section doesnt exist._
+`)	
+
 } else {
 	var urls = `https://api.nytimes.com/svc/news/v3/content/all/all.json?api-key=3uk8zGEUQ7gDVFjAMORO1MKxWLAS7TTv`
-
 }
+
 
 
 	
 	var getJSON = require('get-json') //https://developer.nytimes.com/docs/timeswire-product/1/overview api
 	getJSON(urls, function(error, res){
-		try {
+	
 			
 			console.log(res);
-
-		}catch (err){
-			reply(`${design} Sorry, this section doesnt exist
-			- - - - - - - - - - - - - - - - - -
-			sections: 
-			.news world
-			.news sports
-			...more on new york times website
-			- - - - - - - - - - - - - - - - - -
-			random news: .news
-			- - - - - - - - - - - - - - - - - -
-			You can also search for article..
-			.article pewdiepie
-			`)		
-					}
+	
+	
 
 		console.log(res.status);
 		console.log(res.copyright);
