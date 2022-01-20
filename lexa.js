@@ -3381,12 +3381,12 @@ case 'times':
 	getJSON(`https://api.nytimes.com/svc/search/v2/articlesearch.json?q=${args[0]}&api-key=3uk8zGEUQ7gDVFjAMORO1MKxWLAS7TTv`, function(error, res){
 		console.log(res);
 		var resarticle = JSON.stringify(res.response.docs[0])
-		console.log(resarticle[0].abstract[0])
-		console.log(resarticle[0].web_url[0])
-		console.log(resarticle[0].snippet[0])
-		console.log(resarticle[0].lead_paragraph[0])
-		console.log(resarticle[0].source[0])
-	//	console.log(JSON.stringify(res.response.docs[0]));
+		console.log(resarticle[0].abstract)
+		console.log(resarticle[0].web_url)
+		console.log(resarticle[0].snippet)
+		console.log(resarticle[0].lead_paragraph)
+		console.log(resarticle[0].source)
+	console.log(JSON.stringify(res.response.docs[0]));
 reply(`- - - - - - - - - - - - - - - - - -
 👻 𝐺𝑒𝑛𝑑𝑒𝑟 ⌖ 
 - - - - - - - - - - - - - - - - - -
