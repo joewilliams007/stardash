@@ -3387,9 +3387,6 @@ case 'times':
 		console.log(JSON.stringify(res.response.docs[0].lead_paragraph));
 		console.log(JSON.stringify(res.response.docs[0].source));
 	
-
-			
-
 reply(`🗂️ 𝐴𝑟𝑡𝑖𝑐𝑙𝑒𝑠 𝐹𝑜𝑢𝑛𝑑
 - - - - - - - - - - - - - - - - - -
 📁 𝐴𝑏𝑠𝑡𝑟𝑎𝑐𝑡 
@@ -3449,7 +3446,20 @@ Try combining words with +\n
 	}
 
 break
+//---X623-Whatsapp-Bot------------------------------------------------------------------------------------------------------------------------//
+case 'news':
 
+	if (args.length > 1) return reply(`${design} If you have more then one word please use +\n- - - - - - - - - - - - - - - - - -\nExample .article donald+trump`) 
+	
+	
+	var getJSON = require('get-json') //https://developer.nytimes.com/docs/timeswire-product/1/overview api
+	getJSON(`https://api.nytimes.com/svc/news/v3/content/all/all.json?api-key=3uk8zGEUQ7gDVFjAMORO1MKxWLAS7TTv`, function(error, res){
+		console.log(res);
+
+	
+	})
+
+break
 //---X623-Whatsapp-Bot------------------------------------------------------------------------------------------------------------------------//
 //-- corona
 case 'virus':
