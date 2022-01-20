@@ -3376,7 +3376,7 @@ case 'times':
 	if (args.length < 1) return reply(`${design} What article do you want to search?`) 
 	if (args.length > 1) return reply(`${design} If you have more then one word please use +\n- - - - - - - - - - - - - - - - - -\nExample .article donald+trump`) 
 	
-	
+	try {	
 	var getJSON = require('get-json')
 	getJSON(`https://api.nytimes.com/svc/search/v2/articlesearch.json?q=${args[0]}&api-key=3uk8zGEUQ7gDVFjAMORO1MKxWLAS7TTv`, function(error, res){
 		console.log(res);
@@ -3440,6 +3440,13 @@ ${JSON.stringify(res.response.docs[4].web_url)}
 `)
 
 });
+
+}catch (err){
+reply(`${design} Sorry, no results.
+- - - - - - - - - - - - - - - - - -
+Try combining words with +\n
+.article angela+merkel`)		
+	}
 
 break
 
