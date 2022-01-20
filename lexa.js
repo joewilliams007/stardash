@@ -3449,7 +3449,7 @@ break
 //---X623-Whatsapp-Bot------------------------------------------------------------------------------------------------------------------------//
 case 'news':
 
-if (args.length > 1) {
+if (args.length > 0) {
 var urls = `https://api.nytimes.com/svc/news/v3/content/nyt/${args[0]}.json?api-key=3uk8zGEUQ7gDVFjAMORO1MKxWLAS7TTv`
 } else {
 	var urls = `https://api.nytimes.com/svc/news/v3/content/all/all.json?api-key=3uk8zGEUQ7gDVFjAMORO1MKxWLAS7TTv`
