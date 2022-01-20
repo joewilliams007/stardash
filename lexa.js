@@ -3460,6 +3460,7 @@ case 'news':
 		console.log(res.copyright);
 		console.log("ok");
 		console.log(res.results[0].section);
+		console.log(res.results[0].subsection);
 		console.log(res.results[0].item_type);
 		console.log(res.results[0].title);
 		console.log(res.results[0].abstract);
