@@ -3384,7 +3384,7 @@ case 'times':
 		console.log(JSON.stringify(res.response.docs[0].abstract));
 		console.log(JSON.stringify(res.response.docs[0].web_url));
 		console.log(JSON.stringify(res.response.docs[0].snippet));
-		console.log(JSON.stringify(res.response.docs[0].lead_paragraph));
+		console.log(JSON.stringify(res.response.docs[0].lead_paragraph[0]));
 		console.log(JSON.stringify(res.response.docs[0].source));
 	console.log(JSON.stringify(res.response.docs[0].abstract));
 reply(`- - - - - - - - - - - - - - - - - -
