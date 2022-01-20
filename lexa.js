@@ -3456,6 +3456,16 @@ case 'news':
 	getJSON(`https://api.nytimes.com/svc/news/v3/content/all/all.json?api-key=3uk8zGEUQ7gDVFjAMORO1MKxWLAS7TTv`, function(error, res){
 		console.log(res);
 
+		console.log(res.status);
+		console.log(res.copyright);
+		console.log("ok");
+		console.log(res.results[0].section);
+		console.log(res.results[0].item_type);
+		console.log(res.results[0].title);
+		console.log(res.results[0].abstract);
+		console.log(res.results[0].url);
+		console.log(res.results[0].first_published_date);
+		console.log(res.results[0].updated_date);
 	
 	})
 
