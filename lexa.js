@@ -3386,7 +3386,7 @@ case 'times':
 		console.log(resarticle[0].snippet)
 		console.log(resarticle[0].lead_paragraph)
 		console.log(resarticle[0].source)
-	console.log(JSON.stringify(res.response.docs[0]));
+	console.log(JSON.stringify(res.response.docs[0].abstract));
 reply(`- - - - - - - - - - - - - - - - - -
 👻 𝐺𝑒𝑛𝑑𝑒𝑟 ⌖ 
 - - - - - - - - - - - - - - - - - -
