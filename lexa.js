@@ -3380,17 +3380,35 @@ case 'times':
 	var getJSON = require('get-json')
 	getJSON(`https://api.nytimes.com/svc/search/v2/articlesearch.json?q=${args[0]}&api-key=3uk8zGEUQ7gDVFjAMORO1MKxWLAS7TTv`, function(error, res){
 		console.log(res);
-	
+
 		console.log(JSON.stringify(res.response.docs[0].abstract));
 		console.log(JSON.stringify(res.response.docs[0].web_url));
 		console.log(JSON.stringify(res.response.docs[0].snippet));
-		console.log(JSON.stringify(res.response.docs[0].lead_paragraph[0]));
+		console.log(JSON.stringify(res.response.docs[0].lead_paragraph));
 		console.log(JSON.stringify(res.response.docs[0].source));
-	console.log(JSON.stringify(res.response.docs[0].abstract));
-reply(`- - - - - - - - - - - - - - - - - -
-👻 𝐺𝑒𝑛𝑑𝑒𝑟 ⌖ 
+	
+
+			
+
+reply(`🗂️ 𝐴𝑟𝑡𝑖𝑐𝑙𝑒𝑠 𝐹𝑜𝑢𝑛𝑑
 - - - - - - - - - - - - - - - - - -
-🧾 𝐴𝑐𝑐𝑢𝑟𝑎𝑐𝑦 ⌖ 
+📁 𝐴𝑏𝑠𝑡𝑟𝑎𝑐𝑡 
+${JSON.stringify(res.response.docs[0].abstract)}
+📰 𝑆𝑛𝑖𝑝𝑝𝑒𝑡
+${JSON.stringify(res.response.docs[0].snippet)}
+📜 𝑆𝑜𝑢𝑟𝑐𝑒 
+${JSON.stringify(res.response.docs[0].source)}
+📠 𝑈𝑟𝑙 
+${JSON.stringify(res.response.docs[0].web_url)}
+- - - - - - - - - - - - - - - - - -
+📁 𝐴𝑏𝑠𝑡𝑟𝑎𝑐𝑡 
+${JSON.stringify(res.response.docs[1].abstract)}
+📰 𝑆𝑛𝑖𝑝𝑝𝑒𝑡
+${JSON.stringify(res.response.docs[1].snippet)}
+📜 𝑆𝑜𝑢𝑟𝑐𝑒 
+${JSON.stringify(res.response.docs[1].source)}
+📠 𝑈𝑟𝑙 
+${JSON.stringify(res.response.docs[1].web_url)}
 - - - - - - - - - - - - - - - - - -
 `)
 
