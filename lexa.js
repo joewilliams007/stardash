@@ -3450,9 +3450,9 @@ break
 case 'news':
 
 if (args.length > 1) {
-let urls = `https://api.nytimes.com/svc/news/v3/content/nyt/${args[0]}.json?api-key=3uk8zGEUQ7gDVFjAMORO1MKxWLAS7TTv`
-} else 
-	let urls = `https://api.nytimes.com/svc/news/v3/content/all/all.json?api-key=3uk8zGEUQ7gDVFjAMORO1MKxWLAS7TTv`
+var urls = `https://api.nytimes.com/svc/news/v3/content/nyt/${args[0]}.json?api-key=3uk8zGEUQ7gDVFjAMORO1MKxWLAS7TTv`
+} else {
+	var urls = `https://api.nytimes.com/svc/news/v3/content/all/all.json?api-key=3uk8zGEUQ7gDVFjAMORO1MKxWLAS7TTv`
 
 }
 	
