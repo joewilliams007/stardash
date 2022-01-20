@@ -3449,11 +3449,15 @@ break
 //---X623-Whatsapp-Bot------------------------------------------------------------------------------------------------------------------------//
 case 'news':
 
-	if (args.length > 1) return reply(`${design} If you have more then one word please use +\n- - - - - - - - - - - - - - - - - -\nExample .article donald+trump`) 
-	
+if (args.length > 1) {
+let urls = `https://api.nytimes.com/svc/news/v3/content/nyt/${args[0]}.json?api-key=3uk8zGEUQ7gDVFjAMORO1MKxWLAS7TTv`
+} else 
+	let urls = "https://api.nytimes.com/svc/news/v3/content/all/all.json?api-key=3uk8zGEUQ7gDVFjAMORO1MKxWLAS7TTv"
+
+}
 	
 	var getJSON = require('get-json') //https://developer.nytimes.com/docs/timeswire-product/1/overview api
-	getJSON(`https://api.nytimes.com/svc/news/v3/content/all/all.json?api-key=3uk8zGEUQ7gDVFjAMORO1MKxWLAS7TTv`, function(error, res){
+	getJSON(urls, function(error, res){
 		console.log(res);
 
 		console.log(res.status);
@@ -3486,6 +3490,59 @@ ${res.results[0].updated_date}
 ${design} 𝑈𝑟𝑙
 ${res.results[0].url}
 - - - - - - - - - - - - - - - - - -
+📁 𝑆𝑒𝑐𝑡𝑖𝑜𝑛 ${res.results[1].section} ${res.results[1].subsection}
+📦 𝑇𝑦𝑝𝑒 ${res.results[1].item_type}
+🗒️ 𝑇𝑜𝑝𝑖𝑐
+${res.results[1].title}
+📰 𝑇𝑒𝑥𝑡
+${res.results[1].abstract}
+📆 𝑃𝑢𝑏𝑙𝑖𝑠ℎ𝑒𝑑
+${res.results[1].first_published_date}
+🛠️ 𝑈𝑝𝑑𝑎𝑡𝑒𝑑
+${res.results[1].updated_date}
+${design} 𝑈𝑟𝑙
+${res.results[1].url}
+- - - - - - - - - - - - - - - - - -
+📁 𝑆𝑒𝑐𝑡𝑖𝑜𝑛 ${res.results[2].section} ${res.results[2].subsection}
+📦 𝑇𝑦𝑝𝑒 ${res.results[2].item_type}
+🗒️ 𝑇𝑜𝑝𝑖𝑐
+${res.results[2].title}
+📰 𝑇𝑒𝑥𝑡
+${res.results[2].abstract}
+📆 𝑃𝑢𝑏𝑙𝑖𝑠ℎ𝑒𝑑
+${res.results[2].first_published_date}
+🛠️ 𝑈𝑝𝑑𝑎𝑡𝑒𝑑
+${res.results[2].updated_date}
+${design} 𝑈𝑟𝑙
+${res.results[2].url}
+- - - - - - - - - - - - - - - - - -
+📁 𝑆𝑒𝑐𝑡𝑖𝑜𝑛 ${res.results[3].section} ${res.results[3].subsection}
+📦 𝑇𝑦𝑝𝑒 ${res.results[3].item_type}
+🗒️ 𝑇𝑜𝑝𝑖𝑐
+${res.results[3].title}
+📰 𝑇𝑒𝑥𝑡
+${res.results[3].abstract}
+📆 𝑃𝑢𝑏𝑙𝑖𝑠ℎ𝑒𝑑
+${res.results[3].first_published_date}
+🛠️ 𝑈𝑝𝑑𝑎𝑡𝑒𝑑
+${res.results[3].updated_date}
+${design} 𝑈𝑟𝑙
+${res.results[3].url}
+- - - - - - - - - - - - - - - - - -
+📁 𝑆𝑒𝑐𝑡𝑖𝑜𝑛 ${res.results[4].section} ${res.results[4].subsection}
+📦 𝑇𝑦𝑝𝑒 ${res.results[4].item_type}
+🗒️ 𝑇𝑜𝑝𝑖𝑐
+${res.results[4].title}
+📰 𝑇𝑒𝑥𝑡
+${res.results[4].abstract}
+📆 𝑃𝑢𝑏𝑙𝑖𝑠ℎ𝑒𝑑
+${res.results[4].first_published_date}
+🛠️ 𝑈𝑝𝑑𝑎𝑡𝑒𝑑
+${res.results[4].updated_date}
+${design} 𝑈𝑟𝑙
+${res.results[4].url}
+- - - - - - - - - - - - - - - - - -
+𝐺𝑒𝑡 𝑚𝑜𝑟𝑒 𝑛𝑒𝑤𝑠 𝑙𝑎𝑡𝑒𝑟 𝑜𝑟 𝑠𝑒𝑎𝑟𝑐ℎ 𝑎 𝑠𝑒𝑐𝑡𝑖𝑜𝑛 𝑤𝑖𝑡ℎ .𝑛𝑒𝑤𝑠 𝑓𝑜𝑜𝑡𝑏𝑎𝑙𝑙
 `)
 	})
 
