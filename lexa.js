@@ -1238,6 +1238,8 @@ ${design} ☆ .song
 ${design} ☆ .lyrics
 ${design} ☆ .define
 ${design} ☆ .search
+${design} ☆ .news
+${design} ☆ .article
 ${design} ☆ .send 
 ${design} ☆ .weather 
 ${design} ☆ .translate 
@@ -3692,6 +3694,25 @@ _${res.anime}_
 });
 
 break
+//-- insta
+case 'insta':
+case 'instagram':
+
+try {
+const followers = require('instagram-followers');
+ 
+followers(`${args[0]}`).then(no => {
+
+reply(`✅ 𝑈𝑠𝑒𝑟𝑛𝑎𝑚𝑒 ${args[0]}
+🔥 𝐹𝑜𝑙𝑙𝑜𝑤𝑒𝑟𝑠 ${no}
+`)
+});
+
+} catch {
+	reply(`${design} 𝑈𝑠𝑒𝑟
+- - - - - - - - - - - - - - - - - -
+❎ 𝑁𝑜𝑡 𝑓𝑜𝑢𝑛𝑑
+`)
 //-- insult
 case 'insult':
 case 'evil':
