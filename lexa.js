@@ -3461,8 +3461,8 @@ _...more on new york times website_
 - - - - - - - - - - - - - - - - - -
 _random news: .news_
 - - - - - - - - - - - - - - - - - -
-_You can also search for article..
-.article pewdiepie_
+_You can also search for article.._
+_.article pewdiepie_
 - - - - - - - - - - - - - - - - - -
 _if no results show up, section doesnt exist._
 `)	
@@ -3479,7 +3479,6 @@ _if no results show up, section doesnt exist._
 	
 			
 			console.log(res);
-	
 	
 
 		console.log(res.status);
@@ -3567,9 +3566,6 @@ ${res.results[4].url}
 𝐺𝑒𝑡 𝑚𝑜𝑟𝑒 𝑛𝑒𝑤𝑠 𝑙𝑎𝑡𝑒𝑟 𝑜𝑟 𝑠𝑒𝑎𝑟𝑐ℎ 𝑎 𝑠𝑒𝑐𝑡𝑖𝑜𝑛 𝑤𝑖𝑡ℎ .𝑛𝑒𝑤𝑠 𝑆𝑝𝑜𝑟𝑡𝑠
 `)
 	})
-
-
-
 break
 //---X623-Whatsapp-Bot------------------------------------------------------------------------------------------------------------------------//
 //-- corona
@@ -3588,9 +3584,6 @@ getJSON('https://covid-api.mmediagroup.fr/v1/cases', function(error, res){
 	var global2 = res.Global.All.population
 	var global3 = res.Global.All.deaths
 
-	console.log(``);
-
-
 reply(`🦠 𝐶𝑜𝑟𝑜𝑛𝑎𝑣𝑖𝑟𝑢𝑠
 - - - - - - - - - - - - - - - - - -
 😷 𝐶𝑜𝑟𝑜𝑛𝑎𝑣𝑖𝑟𝑢𝑠 𝑐𝑎𝑠𝑒𝑠
@@ -3606,6 +3599,21 @@ _${global3.toString().replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1.')}_
 _https://covid-api.mmediagroup.fr/v1/cases_
 - - - - - - - - - - - - - - - - - -
 `)
+});
+
+break
+//---X623-Whatsapp-Bot------------------------------------------------------------------------------------------------------------------------//
+//-- unix
+case 'unix':
+
+if (args.length < 1) return reply(`${design} What unix time stamp do you want to convert?`) 
+
+var getJSON = require('get-json')
+getJSON(`https://showcase.api.linx.twenty57.net/UnixTime/fromunix?timestamp=${args[0]}`, function(error, res){
+
+reply(`${design} From unix...
+- - - - - - - - - - - - - - - - - -
+${res}`)
 });
 
 break
