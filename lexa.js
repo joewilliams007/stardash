@@ -3395,7 +3395,8 @@ reply(`🗂️ 𝐴𝑟𝑡𝑖𝑐𝑙𝑒𝑠 𝐹𝑜𝑢𝑛𝑑
 📁 𝐴𝑏𝑠𝑡𝑟𝑎𝑐𝑡 
 ${JSON.stringify(res.response.docs[0].abstract)}
 📰 𝑆𝑛𝑖𝑝𝑝𝑒𝑡
-${JSON.stringify(res.response.docs[0].snippet)}
+${JSON.stringify(res.response.docs[0].lead_paragraph)}
+${JSON.stringify(res.response.docs[0].smippet)}
 📜 𝑆𝑜𝑢𝑟𝑐𝑒 
 ${JSON.stringify(res.response.docs[0].source)}
 📠 𝑈𝑟𝑙 
@@ -3404,7 +3405,7 @@ ${JSON.stringify(res.response.docs[0].web_url)}
 📁 𝐴𝑏𝑠𝑡𝑟𝑎𝑐𝑡 
 ${JSON.stringify(res.response.docs[1].abstract)}
 📰 𝑆𝑛𝑖𝑝𝑝𝑒𝑡
-${JSON.stringify(res.response.docs[1].snippet)}
+${JSON.stringify(res.response.docs[1].lead_paragraph)}
 📜 𝑆𝑜𝑢𝑟𝑐𝑒 
 ${JSON.stringify(res.response.docs[1].source)}
 📠 𝑈𝑟𝑙 
