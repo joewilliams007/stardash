@@ -3456,11 +3456,28 @@ var urls = `https://api.nytimes.com/svc/news/v3/content/nyt/${args[0]}.json?api-
 
 }
 
-try {
+
 	
 	var getJSON = require('get-json') //https://developer.nytimes.com/docs/timeswire-product/1/overview api
 	getJSON(urls, function(error, res){
-		console.log(res);
+		try {
+			
+			console.log(res);
+
+		}catch (err){
+			reply(`${design} Sorry, this section doesnt exist
+			- - - - - - - - - - - - - - - - - -
+			sections: 
+			.news world
+			.news sports
+			...more on new york times website
+			- - - - - - - - - - - - - - - - - -
+			random news: .news
+			- - - - - - - - - - - - - - - - - -
+			You can also search for article..
+			.article pewdiepie
+			`)		
+					}
 
 		console.log(res.status);
 		console.log(res.copyright);
@@ -3548,20 +3565,7 @@ ${res.results[4].url}
 `)
 	})
 
-}catch (err){
-reply(`${design} Sorry, this section doesnt exist
-- - - - - - - - - - - - - - - - - -
-sections: 
-.news world
-.news sports
-...more on new york times website
-- - - - - - - - - - - - - - - - - -
-random news: .news
-- - - - - - - - - - - - - - - - - -
-You can also search for article..
-.article pewdiepie
-`)		
-		}
+
 
 break
 //---X623-Whatsapp-Bot------------------------------------------------------------------------------------------------------------------------//
