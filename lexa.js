@@ -3473,16 +3473,12 @@ reply(`📰 𝑁𝑒𝑤𝑠
 - - - - - - - - - - - - - - - - - -
 ✅ 𝑆𝑡𝑎𝑡𝑢𝑠 ${res.status}
 - - - - - - - - - - - - - - - - - -
-📁 𝑆𝑒𝑐𝑡𝑖𝑜𝑛 
-${res.results[0].section} 
-${res.results[0].subsection}
+📁 𝑆𝑒𝑐𝑡𝑖𝑜𝑛 ${res.results[0].section} ${res.results[0].subsection}
+📦 𝑇𝑦𝑝𝑒 ${res.results[0].item_type}
 🗒️ 𝑇𝑜𝑝𝑖𝑐
 ${res.results[0].title}
-📦 𝑇𝑦𝑝𝑒
-${res.results[0].item_type}
 📰 𝑇𝑒𝑥𝑡
 ${res.results[0].abstract}
-- - - - - - - - - - - - - - - - - -
 📆 𝑃𝑢𝑏𝑙𝑖𝑠ℎ𝑒𝑑
 ${res.results[0].first_published_date}
 🛠️ 𝑈𝑝𝑑𝑎𝑡𝑒𝑑
