@@ -3556,6 +3556,8 @@ sections:
 .news sports
 ...more on new york times website
 - - - - - - - - - - - - - - - - - -
+random news: .news
+- - - - - - - - - - - - - - - - - -
 You can also search for article..
 .article pewdiepie
 `)		
