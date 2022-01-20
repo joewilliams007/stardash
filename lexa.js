@@ -3380,8 +3380,13 @@ case 'times':
 	var getJSON = require('get-json')
 	getJSON(`https://api.nytimes.com/svc/search/v2/articlesearch.json?q=${args[0]}&api-key=3uk8zGEUQ7gDVFjAMORO1MKxWLAS7TTv`, function(error, res){
 		console.log(res);
-
-		console.log(JSON.stringify(res.response.docs[0]));
+		var resarticle = JSON.stringify(res.response.docs[0])
+		console.log(resarticle.abstract)
+		console.log(resarticle.web_url)
+		console.log(resarticle.snippet)
+		console.log(resarticle.lead_paragraph)
+		console.log(resarticle.source)
+	//	console.log(JSON.stringify(res.response.docs[0]));
 reply(`- - - - - - - - - - - - - - - - - -
 👻 𝐺𝑒𝑛𝑑𝑒𝑟 ⌖ 
 - - - - - - - - - - - - - - - - - -
