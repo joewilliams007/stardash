@@ -1248,8 +1248,9 @@ ${design} ☆ .qrcode
 - - - - - - - - - - - - - - - - - - 
 ${design} ☆ .command
 ${design} ☆ .rsong
-${design} ☆ .ddate
-${design} ☆ .mylove
+${design} ☆ .instagram
+${design} .ddate
+${design} .mylove
 ${design} .cheapsong 
 ${design} .iss
 ${design} .virus

@@ -22,6 +22,7 @@ npm i imgbb-uploader
 npm i
 npm i ocr
 npm i youtube-search-without-api-key
+npm i instagram-followers
 npm install get-json 
 npm install owlbot-js
 npm i randomquote-api
