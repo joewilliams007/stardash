@@ -3396,10 +3396,9 @@ reply(`🗂️ 𝐴𝑟𝑡𝑖𝑐𝑙𝑒𝑠 𝐹𝑜𝑢𝑛𝑑
 ${JSON.stringify(res.response.docs[0].abstract)}
 📰 𝑆𝑛𝑖𝑝𝑝𝑒𝑡
 ${JSON.stringify(res.response.docs[0].lead_paragraph)}
-${JSON.stringify(res.response.docs[0].smippet)}
 📜 𝑆𝑜𝑢𝑟𝑐𝑒 
 ${JSON.stringify(res.response.docs[0].source)}
-📠 𝑈𝑟𝑙 
+${design} 𝑈𝑟𝑙 
 ${JSON.stringify(res.response.docs[0].web_url)}
 - - - - - - - - - - - - - - - - - -
 📁 𝐴𝑏𝑠𝑡𝑟𝑎𝑐𝑡 
@@ -3408,8 +3407,35 @@ ${JSON.stringify(res.response.docs[1].abstract)}
 ${JSON.stringify(res.response.docs[1].lead_paragraph)}
 📜 𝑆𝑜𝑢𝑟𝑐𝑒 
 ${JSON.stringify(res.response.docs[1].source)}
-📠 𝑈𝑟𝑙 
+${design} 𝑈𝑟𝑙 
 ${JSON.stringify(res.response.docs[1].web_url)}
+- - - - - - - - - - - - - - - - - -
+📁 𝐴𝑏𝑠𝑡𝑟𝑎𝑐𝑡 
+${JSON.stringify(res.response.docs[2].abstract)}
+📰 𝑆𝑛𝑖𝑝𝑝𝑒𝑡
+${JSON.stringify(res.response.docs[2].lead_paragraph)}
+📜 𝑆𝑜𝑢𝑟𝑐𝑒 
+${JSON.stringify(res.response.docs[2].source)}
+${design} 𝑈𝑟𝑙 
+${JSON.stringify(res.response.docs[2].web_url)}
+- - - - - - - - - - - - - - - - - -
+📁 𝐴𝑏𝑠𝑡𝑟𝑎𝑐𝑡 
+${JSON.stringify(res.response.docs[3].abstract)}
+📰 𝑆𝑛𝑖𝑝𝑝𝑒𝑡
+${JSON.stringify(res.response.docs[3].lead_paragraph)}
+📜 𝑆𝑜𝑢𝑟𝑐𝑒 
+${JSON.stringify(res.response.docs[3].source)}
+${design} 𝑈𝑟𝑙 
+${JSON.stringify(res.response.docs[3].web_url)}
+- - - - - - - - - - - - - - - - - -
+📁 𝐴𝑏𝑠𝑡𝑟𝑎𝑐𝑡 
+${JSON.stringify(res.response.docs[4].abstract)}
+📰 𝑆𝑛𝑖𝑝𝑝𝑒𝑡
+${JSON.stringify(res.response.docs[4].lead_paragraph)}
+📜 𝑆𝑜𝑢𝑟𝑐𝑒 
+${JSON.stringify(res.response.docs[4].source)}
+${design} 𝑈𝑟𝑙 
+${JSON.stringify(res.response.docs[4].web_url)}
 - - - - - - - - - - - - - - - - - -
 `)
 
