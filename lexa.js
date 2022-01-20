@@ -3699,6 +3699,8 @@ break
 case 'insta':
 case 'instagram':
 
+	if (args.length < 1) return reply(`${design} What is the username?`) 
+
 try {
 const followers = require('instagram-followers');
  
