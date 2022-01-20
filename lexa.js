@@ -3348,24 +3348,11 @@ _${res.timestamp}_
 });
 
 break
-
+//---X623-Whatsapp-Bot------------------------------------------------------------------------------------------------------------------------//
 case 'whatgender':
-	case 'gender':
+case 'gender':
 
-	if (args.length < 1) return reply(`${design} What name shall i test?\nexample .whatgender John`) 
-
-	var agemy
-	try {
-	var getJSON = require('get-json')
-		getJSON(`https://api.agify.io/?name=${args[0]}`, function(error, res1){
-			console.log(res);
-	
-	agemy = res1.age		
-	});
-
-	} catch(err){      
-	
-	}
+	if (args.length < 1) return reply(`${design} What name shall i test?\n- - - - - - - - - - - - - - - - - -\nexample .whatgender John`) 
 	
 	
 	var getJSON = require('get-json')
@@ -3382,6 +3369,29 @@ case 'whatgender':
 });
 
 break
+//---X623-Whatsapp-Bot------------------------------------------------------------------------------------------------------------------------//
+case 'article':
+case 'times':
+
+	if (args.length < 1) return reply(`${design} What article do you want to search?`) 
+	if (args.length > 1) return reply(`${design} If you have more then one word please use +\n- - - - - - - - - - - - - - - - - -\nExample .article donald+trump`) 
+	
+	
+	var getJSON = require('get-json')
+	getJSON(`https://api.nytimes.com/svc/search/v2/articlesearch.json?q=${args[0]}&api-key=3uk8zGEUQ7gDVFjAMORO1MKxWLAS7TTv`, function(error, res){
+		console.log(res);
+
+reply(`- - - - - - - - - - - - - - - - - -
+👻 𝐺𝑒𝑛𝑑𝑒𝑟 ⌖ 
+- - - - - - - - - - - - - - - - - -
+🧾 𝐴𝑐𝑐𝑢𝑟𝑎𝑐𝑦 ⌖ 
+- - - - - - - - - - - - - - - - - -
+`)
+
+});
+
+break
+
 //---X623-Whatsapp-Bot------------------------------------------------------------------------------------------------------------------------//
 //-- corona
 case 'virus':
