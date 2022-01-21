@@ -25,7 +25,7 @@ SLOW METHOD - COMMAND BY COMMAND
 
 6. Basic Commands:
 
-.register
+6.1 register
 .menu
 .me
 
