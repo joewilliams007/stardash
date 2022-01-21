@@ -4541,6 +4541,18 @@ if ((slot1 == slot2) && slot2 == slot3) {
     
                 await delay(3000) /// waiting 1 second.
 
+				var price = Number(1);
+				fs.readFile(`./session/jackpot.json`, 'utf-8', function(err, data) {
+					if (err) throw err;
+					var newValue = data.replace(`${jackpot}`, price);
+					fs.writeFile(`./session/jackpot.json`, newValue, 'utf-8', function(err, data) {
+						if (err) throw err;
+						console.log('Done!');
+					})
+				})
+			
+						await delay(2000) /// waiting 1 second.
+
         var addxp = Number(50);
         var newxp = xp + addxp; 
 
@@ -4665,7 +4677,7 @@ else {
 	var newcash = price + Number(9); 
 	fs.readFile(`./session/jackpot.json`, 'utf-8', function(err, data) {
 		if (err) throw err;
-		var newValue = data.replace(`${money}`, newcash);
+		var newValue = data.replace(`${jackpot}`, newcash);
 		fs.writeFile(`./session/jackpot.json`, newValue, 'utf-8', function(err, data) {
 			if (err) throw err;
 			console.log('Done!');
@@ -4675,7 +4687,7 @@ else {
 			await delay(2000) /// waiting 1 second.
 
 			var price = Number(9);
-			var newcash = price - cash; 
+			var newcash = cash - price; 
 			fs.readFile(`./data/users/${sender.split("@")[0]}/money.json`, 'utf-8', function(err, data) {
 				if (err) throw err;
 				var newValue = data.replace(`${money}`, newcash);
