@@ -3126,7 +3126,7 @@ getJSON(`https://returnyoutubedislikeapi.com/votes?videoId=${videos[3].id.videoI
 
 
 var getJSON = require('get-json')
-getJSON(`https://returnyoutubedislikeapi.com/votes?videoId=${videos[3].id.videoId}`, function(error, resyt4){
+getJSON(`https://returnyoutubedislikeapi.com/votes?videoId=${videos[4].id.videoId}`, function(error, resyt4){
 
 
 
