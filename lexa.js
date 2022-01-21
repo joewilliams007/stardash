@@ -3047,8 +3047,13 @@ text: `${design} 𝐷𝑜𝑤𝑛𝑙𝑜𝑎𝑑𝑖𝑛𝑔...\n- - - - - - - 
 getJSON(`https://returnyoutubedislikeapi.com/votes?videoId=${videos[0].id.videoId}`, function(error, resyt){
 	var likes = resyt.likes
 	var dislikes = resyt.dislikes
-	var rating = resyt.rating
+	var __rating = resyt.rating
 //	${rating.slice(3)}
+
+var _rating = __rating.toString()
+_rating = _rating.substring(0, 3);
+
+
 			
 reply(`${design} 𝑆𝑒𝑛𝑑𝑖𝑛𝑔...
 - - - - - - - - - - - - - - - - - -
@@ -3063,7 +3068,7 @@ _${videos[0].title}_
 𝑌𝑜𝑢𝑡𝑢𝑏𝑒 𝑉𝑖𝑒𝑤𝑠 _${views.toString().replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1.')}_
 𝐿𝑖𝑘𝑒𝑠  _${likes.toString().replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1.')}_
 𝐷𝑖𝑠𝑙𝑖𝑘𝑒𝑠  _${dislikes.toString().replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1.')}_
-𝑅𝑎𝑡𝑖𝑛𝑔 _${rating.slice(3)}/5 ✩_
+𝑅𝑎𝑡𝑖𝑛𝑔 _${_rating.trim()}/5 ✩_
 - - - - - - - - - - - - - - - - - -
 𝑀𝑜𝑛𝑒𝑦 𝑙𝑒𝑓𝑡: _${newmoney}$_
 - - - - - - - - - - - - - - - - - -
