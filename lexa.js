@@ -3094,6 +3094,11 @@ case 'search':
 if (!isVerify) return reply(UserB())	
 if (args.length < 1) return reply(`${design} 𝑊ℎ𝑎𝑡 𝑖𝑠 𝑡ℎ𝑒 𝑠𝑜𝑛𝑔 𝑛𝑎𝑚𝑒?`)	
 
+
+
+
+
+
 var yt = require('youtube-search-without-api-key');
 
 var videos = await yt.search(`${value}`);
@@ -3104,11 +3109,22 @@ var views2= videos[2].views
 var views3 = videos[3].views
 var views4 = videos[4].views
 
+var getJSON = require('get-json')
+getJSON(`https://returnyoutubedislikeapi.com/votes?videoId=${videos[0].id.videoId}`, function(error, resyt){
+console.log(resyt);
+
+// ✅ 𝐿𝑖𝑘𝑒𝑠 ${resyt.likes}
+
+
+//	❎ 𝐷𝑖𝑠𝑙𝑖𝑘𝑒𝑠 ${resyt.dislikes}
+
 reply(`${design} 𝑅𝑒𝑠𝑢𝑙𝑡𝑠 𝑓𝑜𝑢𝑛𝑑
 - - - - - - - - - - - - - - - - - -
 ${design} _${videos[0].title}_
 🕰️ _${videos[0].duration_raw}_
 📷 _${views.toString().replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1.')} Views_
+✅ _Likes ${resyt.likes}_
+❎ _Dislikes ${resyt.dislikes}_
 ${design} _${videos[0].snippet.publishedAt}_
 📦 _.getsearch 1_
 📡 _${videos[0].url}_
@@ -3144,6 +3160,8 @@ ${design} _${videos[4].title}_
 ${design} _Only for short videos .getvid_
 - - - - - - - - - - - - - - - - - -
 ❇️ 𝑆𝑒𝑎𝑟𝑐ℎ`)
+
+	})
 
 		exec(`rm -rf ./session/youtube.json`)
 		await delay(1000)
