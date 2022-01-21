@@ -2292,7 +2292,37 @@ if (!isQuotedAudio)  return reply(`${design} 𝑃𝑙𝑒𝑎𝑠𝑒 𝑡𝑎�
 						Lxa.sendMessage(from, buffer, audio, {quoted:mek, caption: `⚡`})
 						fs.unlinkSync(ran)
 					})				
-			break					
+			break
+//-- 1
+case '1':
+if (!isVerify) return reply(UserB())
+if (!isQuotedAudio)  return reply(`${design} 𝑃𝑙𝑒𝑎𝑠𝑒 𝑡𝑎𝑔 𝑎𝑛 𝑎𝑢𝑑𝑖𝑜`)
+					encmedia = JSON.parse(JSON.stringify(mek).replace('quotedM','m')).message.extendedTextMessage.contextInfo
+					media = await Lxa.downloadAndSaveMediaMessage(encmedia)
+				ran= getRandom('.opus')
+				exec(`ffmpeg  -i ${media} -af pan="stereo|c0=c0|c1=-1*c1" -ac 1 ${ran} `, (err) => {
+			fs.unlinkSync(media)
+						if (err) return reply(`${design} 𝐸𝑟𝑟𝑜𝑟`)
+						buffer = fs.readFileSync(ran)
+						Lxa.sendMessage(from, buffer, audio, {quoted:mek, caption: `⚡`})
+						fs.unlinkSync(ran)
+					})				
+			break			
+	//-- 2
+case '2':
+	if (!isVerify) return reply(UserB())
+	if (!isQuotedAudio)  return reply(`${design} 𝑃𝑙𝑒𝑎𝑠𝑒 𝑡𝑎𝑔 𝑎𝑛 𝑎𝑢𝑑𝑖𝑜`)
+						encmedia = JSON.parse(JSON.stringify(mek).replace('quotedM','m')).message.extendedTextMessage.contextInfo
+						media = await Lxa.downloadAndSaveMediaMessage(encmedia)
+					ran= getRandom('.opus')
+					exec(`ffmpeg  -i ${media} -codec:v copy -filter_complex highpass=f=200 -codec:a AUDIO_CODEC -f  ${ran} `, (err) => {
+				fs.unlinkSync(media)
+							if (err) return reply(`${design} 𝐸𝑟𝑟𝑜𝑟`)
+							buffer = fs.readFileSync(ran)
+							Lxa.sendMessage(from, buffer, audio, {quoted:mek, caption: `⚡`})
+							fs.unlinkSync(ran)
+						})				
+				break		
 //-- cover song
 case 'cover':
          if (!isVerify) return reply(UserB())
