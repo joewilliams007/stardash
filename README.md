@@ -1,6 +1,3 @@
-<img align="center" height="auto" src="https://github.com/joewilliams007/StarDash/blob/main/media/shiba.jpg"/>
-
-
 1. Download Termux
 https://f-droid.org/en/packages/com.termux/
 
