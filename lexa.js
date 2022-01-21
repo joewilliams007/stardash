@@ -4508,7 +4508,7 @@ case 'slots':
 case 'slot':
 	if (!isVerify) return reply(userB())
 	if (!isGroup) return reply(group())
-    if (tickets < 1) return reply(`${design} 𝑁𝑜𝑡 𝑒𝑛𝑜𝑢𝑔ℎ 𝑇𝑖𝑐𝑘𝑒𝑡𝑠. ⌖ .claim`)
+  //  if (tickets < 1) return reply(`${design} 𝑁𝑜𝑡 𝑒𝑛𝑜𝑢𝑔ℎ 𝑇𝑖𝑐𝑘𝑒𝑡𝑠. ⌖ .claim`)
     const slot1 = _slot[Math.floor(Math.random() * _slot.length)]
     const slot2 = _slot[Math.floor(Math.random() * _slot.length)]
     const slot3 = _slot[Math.floor(Math.random() * _slot.length)]
