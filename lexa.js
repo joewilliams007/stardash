@@ -4689,11 +4689,11 @@ else {
 
 			await delay(2000) /// waiting 1 second.
 
-			var price = Number(9);
-			var newcash = cash - price; 
+			var price1 = Number(9);
+			var newcash1 = cash - price1; 
 			fs.readFile(`./data/users/${sender.split("@")[0]}/money.json`, 'utf-8', function(err, data) {
 				if (err) throw err;
-				var newValue = data.replace(`${money}`, newcash);
+				var newValue = data.replace(`${money}`, newcash1);
 				fs.writeFile(`./data/users/${sender.split("@")[0]}/money.json`, newValue, 'utf-8', function(err, data) {
 					if (err) throw err;
 					console.log('Done!');
