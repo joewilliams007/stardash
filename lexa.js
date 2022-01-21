@@ -2315,7 +2315,7 @@ case '2':
 						encmedia = JSON.parse(JSON.stringify(mek).replace('quotedM','m')).message.extendedTextMessage.contextInfo
 						media = await Lxa.downloadAndSaveMediaMessage(encmedia)
 					ran= getRandom('.opus')
-					exec(`ffmpeg  -i ${media} -codec:v copy -filter_complex highpass=f=200 -codec:a AUDIO_CODEC -f  ${ran} `, (err) => {
+					exec(`ffmpeg  -i ${media} -c:a pcm_s16le -af "bandreject=f=900:width_type=h:w=600"  ${ran} `, (err) => {
 				fs.unlinkSync(media)
 							if (err) return reply(`${design} 𝐸𝑟𝑟𝑜𝑟`)
 							buffer = fs.readFileSync(ran)
