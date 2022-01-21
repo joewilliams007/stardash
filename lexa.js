@@ -4732,6 +4732,7 @@ else {
 		})
 	})
 
+
 			await delay(2000) /// waiting 1 second.
 
 			var price1 = Number(9);
@@ -5184,7 +5185,27 @@ case 'donate':
 						if (err) throw err;
 					})
 				})
-				await delay(1000) /// waiting 1 second.	
+
+				var _jackpot = JSON.parse(fs.readFileSync('./session/jackpot.json'));	
+				var jackpot = _jackpot[0]	//--- jackpot
+
+				await delay(1000) /// waiting 1 second.
+				
+				var price = Number(jackpot);
+				var newcash = price + Number(5); 
+				fs.readFile(`./session/jackpot.json`, 'utf-8', function(err, data) {
+					if (err) throw err;
+					var newValue = data.replace(`${jackpot}`, newcash);
+					fs.writeFile(`./session/jackpot.json`, newValue, 'utf-8', function(err, data) {
+						if (err) throw err;
+						console.log('Done!');
+					})
+				})
+
+				await delay(1000) /// waiting 1 second.
+
+
+
 				var hismon = Number(hismoney);
 				var hisam = Number(args[0]);
 				var hisnewmon = hismon + hisam; 
@@ -5196,8 +5217,12 @@ case 'donate':
 						console.log('Done!');
 					})
 				})
-				await delay(1000) /// waiting 1 second.					
-  reply(`${design} 𝑇𝑟𝑎𝑛𝑠𝑓𝑒𝑟𝑟𝑒𝑑 *${args[0]}$* 𝑡𝑜 *${hisname}* \n- - - - - - - - - - - - - - - - - -\n𝐵𝑜𝑡 𝑠𝑡𝑜𝑙𝑒 5$\n- - - - - - - - - - - - - - - - - -\n𝑌𝑜𝑢𝑟 𝑚𝑜𝑛𝑒𝑦 𝑙𝑒𝑓𝑡: ${mynewmon}$\n𝐻𝑖𝑠/ℎ𝑒𝑟 𝑚𝑜𝑛𝑒𝑦 𝑙𝑒𝑓𝑡: ${hisnewmon}$\n- - - - - - - - - - - - - - - - - -\n✅  𝑋623 𝑇𝑟𝑎𝑛𝑠𝑓𝑒𝑟𝑠`)
+				await delay(1000) /// waiting 1 second.	
+				
+				var _jackpot = JSON.parse(fs.readFileSync('./session/jackpot.json'));	
+				var jackpot1 = _jackpot[0]	//--- jackpot
+
+  reply(`${design} 𝑇𝑟𝑎𝑛𝑠𝑓𝑒𝑟𝑟𝑒𝑑 *${args[0]}$* 𝑡𝑜 *${hisname}* \n- - - - - - - - - - - - - - - - - -\n𝐵𝑜𝑡 𝑠𝑡𝑜𝑙𝑒 5$ 𝐹𝑜𝑟 𝐽𝑎𝑐𝑘𝑝𝑜𝑡\n𝑁𝑒𝑤 𝐽𝑎𝑐𝑘𝑝𝑜𝑡${jackpot1}$\n- - - - - - - - - - - - - - - - - -\n𝑌𝑜𝑢𝑟 𝑚𝑜𝑛𝑒𝑦 𝑙𝑒𝑓𝑡: ${mynewmon}$\n𝐻𝑖𝑠/ℎ𝑒𝑟 𝑚𝑜𝑛𝑒𝑦 𝑙𝑒𝑓𝑡: ${hisnewmon}$\n- - - - - - - - - - - - - - - - - -\n✅  𝑋623 𝑇𝑟𝑎𝑛𝑠𝑓𝑒𝑟𝑠`)
   var xp1 = Number(xp);
   var gain = Number(5);
   var newxp = xp + gain; 
