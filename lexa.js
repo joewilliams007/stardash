@@ -4580,7 +4580,7 @@ if ((slot1 == slot2) && slot2 == slot3) {
 else if (slot1 == slot2) {	
 
 	var price = Number(jackpot);
-	var newcash = price - Number(5); 
+	var newcash = price - Number(15); 
 	fs.readFile(`./session/jackpot.json`, 'utf-8', function(err, data) {
 		if (err) throw err;
 		var newValue = data.replace(`${jackpot}`, newcash);
@@ -4627,7 +4627,7 @@ replyimg(been, text, capt, owner)
 else if (slot2 == slot3) {	
 
 	var price = Number(jackpot);
-	var newcash = price - Number(5); 
+	var newcash = price - Number(15); 
 	fs.readFile(`./session/jackpot.json`, 'utf-8', function(err, data) {
 		if (err) throw err;
 		var newValue = data.replace(`${jackpot}`, newcash);
@@ -4675,7 +4675,7 @@ replyimg(been, text, capt, owner)
 else if (slot1 == slot3) {	
 
 	var price = Number(jackpot);
-	var newcash = price - Number(5); 
+	var newcash = price - Number(15); 
 	fs.readFile(`./session/jackpot.json`, 'utf-8', function(err, data) {
 		if (err) throw err;
 		var newValue = data.replace(`${jackpot}`, newcash);
