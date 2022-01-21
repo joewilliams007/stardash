@@ -1,54 +1,43 @@
-<img align="center" height="auto" src="https://github.com/joewilliams007/StarDash/blob/main/media/shiba.jpg"/>
+1. Download Termux
+https://f-droid.org/en/packages/com.termux/
 
- 
- 
-<details close="close">
-  <summary>TOOLS & INSTALLATION</summary>
-  
-### Tools
-Install to use Bot
-| App | Link |
-|--------|--------|
-| **Termux** | [Download Termux](https://play.google.com/store/apps/details?id=com.termux) |
+2. Download Termux Api (Needed! Get from playstore if you got termux from playstore)
+https://f-droid.org/en/packages/com.termux.api/
 
-<p align="center">
-  <div align="center">
- <code><img height="40" src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/terminal/terminal.png"></code>
-
-  </div>
-  </p>
-
-
-### Install With Termux
-Open App Termux
+3. Open Termux and paste everything from fast methode into termux and hit enter
 
 ```bash
+FAST METHOD - COPY ALL TEXT - TERMUX DOES IT ON ITS OWN
+> termux-setup-storage && apt update -y && apt upgrade -y && pkg install git -y && git clone https://github.com/joewilliams007/stardash && cd stardash && bash install.sh && node index
+
+SLOW METHOD - COMMAND BY COMMAND
 > termux-setup-storage
 > apt update
 > apt upgrade -y
 > pkg install git
-> git clone https://github.com/joewilliams007/x623
-> cd x623
+> git clone https://github.com/joewilliams007/stardash
+> cd stardash
 > bash install.sh
 > node index
 ```
-!!! please also install termux api. 
-- If you got Termux from playstore get termux api from playstore
-- If you got TErmux from FDROID get termux api from fdroid
+4. Scan QR-Code with Whatsapp
+5. Send a whatapp- message to the number.
 
-Scan Qr Code with ur Whatsapp
-</details>
+6. Basic Commands:
 
-<details open="open">
-  <summary>CONTACTS</summary>
+6.1 register
+.menu
+.me
+
+6.2 Best Commands
+.search
+.song
 
 ### Bot
 Contact me for Questions
 <p>
 <a href="https://wa.me/4917626388837?text=x623Help" target="blank"><img src="https://img.shields.io/badge/WhatsApp x623 Bot-30302f?style=flat&logo=whatsapp" /></a>
 </p>
-
-
 
 ### Thanks to
 <a href="https://github.com/adiwajshing/Baileys"><img src="https://img.shields.io/badge/-adiwajshing/Baileys-black?style=flat-square&logo=github"></a>
