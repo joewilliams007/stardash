@@ -3113,21 +3113,21 @@ var getJSON = require('get-json')
 getJSON(`https://returnyoutubedislikeapi.com/votes?videoId=${videos[0].id.videoId}`, function(error, resyt){
 console.log(resyt);
 
-// ✅ 𝐿𝑖𝑘𝑒𝑠 ${resyt.likes}
-
-
-//	❎ 𝐷𝑖𝑠𝑙𝑖𝑘𝑒𝑠 ${resyt.dislikes}
+var likes = resyt.likes
+var dislikes = resyt.dislikes
+// ✅ 𝐿𝑖𝑘𝑒𝑠  ${likes.toString().replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1.')}
+//	❎ 𝐷𝑖𝑠𝑙𝑖𝑘𝑒𝑠  ${dislikes.toString().replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1.')} 
 
 reply(`${design} 𝑅𝑒𝑠𝑢𝑙𝑡𝑠 𝑓𝑜𝑢𝑛𝑑
 - - - - - - - - - - - - - - - - - -
 ${design} _${videos[0].title}_
 🕰️ _${videos[0].duration_raw}_
 📷 _${views.toString().replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1.')} Views_
-✅ _Likes ${resyt.likes}_
-❎ _Dislikes ${resyt.dislikes}_
 ${design} _${videos[0].snippet.publishedAt}_
 📦 _.getsearch 1_
 📡 _${videos[0].url}_
+👍 _Likes ${likes.toString().replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1.')}_
+👎 _Dislikes ${dislikes.toString().replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1.')}_
 - - - - - - - - - - - - - - - - - -
 ${design} _${videos[1].title}_
 🕰️ _${videos[1].duration_raw}_
