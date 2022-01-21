@@ -3196,6 +3196,9 @@ ${design} _${videos[4].title}_
 👍 _Likes ${likes4.toString().replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1.')}_
 👎 _Dislikes ${dislikes4.toString().replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1.')}_
 - - - - - - - - - - - - - - - - - -
+𖠌 _The dislikes are from an API which is not 100% accurate_
+_As we all know ytb disabled their api_
+- - - - - - - - - - - - - - - - - -
 ${design} _Only for short videos .getvid_
 - - - - - - - - - - - - - - - - - -
 ❇️ 𝑆𝑒𝑎𝑟𝑐ℎ`)
