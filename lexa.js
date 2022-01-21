@@ -4553,6 +4553,9 @@ if ((slot1 == slot2) && slot2 == slot3) {
 			
 						await delay(2000) /// waiting 1 second.
 
+						var _jackpot = JSON.parse(fs.readFileSync('./session/jackpot.json'));	
+						var jackpot1 = _jackpot[0]	//--- jackpot
+
         var addxp = Number(50);
         var newxp = xp + addxp; 
 
@@ -4566,7 +4569,7 @@ if ((slot1 == slot2) && slot2 == slot3) {
 		owner = await fs.readFileSync('./images/menu.jpg').toString('base64')
 		capt = `𝑆𝑡𝑎𝑟𝐷𝑎𝑠ℎ\n${design} ${username}`
 		const been = {
-		text: `${design} 𝚂𝚕𝚘𝚝\n\n${slot4}${slot5}${slot6}\n- - - - - - - - - \n${slot1}${slot2}${slot3} ☜︎ ♕︎ 𝙹𝚊𝚌𝚔𝚙𝚘𝚝 ♕︎\n- - - - - - - - - \n${slot7}${slot8}${slot9}\n\n𝑀𝑜𝑛𝑒𝑦 𝑙𝑒𝑓𝑡 ${newcash}$ \n𝐽𝑎𝑐𝑘𝑝𝑜𝑡 ${jackpot}$`,
+		text: `${design} 𝚂𝚕𝚘𝚝\n\n${slot4}${slot5}${slot6}\n- - - - - - - - - \n${slot1}${slot2}${slot3} ☜︎ ♕︎ 𝙹𝚊𝚌𝚔𝚙𝚘𝚝 ♕︎\n- - - - - - - - - \n${slot7}${slot8}${slot9}\n\n𝐺𝑎𝑖𝑛𝑒𝑑 ${jackpot1}$\n𝑀𝑜𝑛𝑒𝑦 𝑙𝑒𝑓𝑡 ${newcash}$ \n𝐽𝑎𝑐𝑘𝑝𝑜𝑡 ${jackpot}$`,
 	}
 	replyimg(been, text, capt, owner)
 
@@ -4601,7 +4604,7 @@ else if (slot1 == slot2) {
 	owner = await fs.readFileSync('./images/menu.jpg').toString('base64')
 	capt = `𝑆𝑡𝑎𝑟𝐷𝑎𝑠ℎ\n${design} ${username}`
 	const been = {
-	text: `${design} 𝚂𝚕𝚘𝚝\n\n${slot4}${slot5}${slot6}\n- - - - - - - - - \n${slot1}${slot2}${slot3} ☜︎ 𝚂𝚖𝚊𝚕𝚕 𝚠𝚒𝚗 ♕︎\n- - - - - - - - - \n${slot7}${slot8}${slot9}\n\n𝑀𝑜𝑛𝑒𝑦 𝑙𝑒𝑓𝑡 ${newcash}$\n𝐽𝑎𝑐𝑘𝑝𝑜𝑡 ${jackpot}$`,
+	text: `${design} 𝚂𝚕𝚘𝚝\n\n${slot4}${slot5}${slot6}\n- - - - - - - - - \n${slot1}${slot2}${slot3} ☜︎ 𝚂𝚖𝚊𝚕𝚕 𝚠𝚒𝚗 ♕︎\n- - - - - - - - - \n${slot7}${slot8}${slot9}\n\n𝐺𝑎𝑖𝑛𝑒𝑑 15$\n𝑀𝑜𝑛𝑒𝑦 𝑙𝑒𝑓𝑡 ${newcash}$\n𝐽𝑎𝑐𝑘𝑝𝑜𝑡 ${jackpot}$`,
 }
 replyimg(been, text, capt, owner)
 }
@@ -4634,7 +4637,7 @@ else if (slot2 == slot3) {
 	owner = await fs.readFileSync('./images/menu.jpg').toString('base64')
 	capt = `𝑆𝑡𝑎𝑟𝐷𝑎𝑠ℎ\n${design} ${username}`
 	const been = {
-	text: `${design} 𝚂𝚕𝚘𝚝\n\n${slot4}${slot5}${slot6}\n- - - - - - - - - \n${slot1}${slot2}${slot3} ☜︎ 𝚂𝚖𝚊𝚕𝚕 𝚠𝚒𝚗 ♕︎\n- - - - - - - - - \n${slot7}${slot8}${slot9}\n\n𝑀𝑜𝑛𝑒𝑦 𝑙𝑒𝑓𝑡 ${newcash}$\n𝐽𝑎𝑐𝑘𝑝𝑜𝑡 ${jackpot}$`,
+	text: `${design} 𝚂𝚕𝚘𝚝\n\n${slot4}${slot5}${slot6}\n- - - - - - - - - \n${slot1}${slot2}${slot3} ☜︎ 𝚂𝚖𝚊𝚕𝚕 𝚠𝚒𝚗 ♕︎\n- - - - - - - - - \n${slot7}${slot8}${slot9}\n\n𝐺𝑎𝑖𝑛𝑒𝑑 15$\n𝑀𝑜𝑛𝑒𝑦 𝑙𝑒𝑓𝑡 ${newcash}$\n𝐽𝑎𝑐𝑘𝑝𝑜𝑡 ${jackpot}$`,
 }
 replyimg(been, text, capt, owner)
 }
@@ -4667,7 +4670,7 @@ else if (slot1 == slot3) {
 	owner = await fs.readFileSync('./images/menu.jpg').toString('base64')
 	capt = `𝑆𝑡𝑎𝑟𝐷𝑎𝑠ℎ\n${design} ${username}`
 	const been = {
-	text: `${design} 𝚂𝚕𝚘𝚝\n\n${slot4}${slot5}${slot6}\n- - - - - - - - - \n${slot1}${slot2}${slot3} ☜︎ 𝚂𝚖𝚊𝚕𝚕 𝚠𝚒𝚗 ♕︎\n- - - - - - - - - \n${slot7}${slot8}${slot9}\n\n𝑀𝑜𝑛𝑒𝑦 𝑙𝑒𝑓𝑡 ${newcash}$\n𝐽𝑎𝑐𝑘𝑝𝑜𝑡 ${jackpot}$`,
+	text: `${design} 𝚂𝚕𝚘𝚝\n\n${slot4}${slot5}${slot6}\n- - - - - - - - - \n${slot1}${slot2}${slot3} ☜︎ 𝚂𝚖𝚊𝚕𝚕 𝚠𝚒𝚗 ♕︎\n- - - - - - - - - \n${slot7}${slot8}${slot9}\n\n𝐺𝑎𝑖𝑛𝑒𝑑 15$\n𝑀𝑜𝑛𝑒𝑦 𝑙𝑒𝑓𝑡 ${newcash}$\n𝐽𝑎𝑐𝑘𝑝𝑜𝑡 ${jackpot}$`,
 }
 replyimg(been, text, capt, owner)
 }
@@ -4713,7 +4716,7 @@ else {
 	owner = await fs.readFileSync('./images/menu.jpg').toString('base64')
 	capt = `𝑆𝑡𝑎𝑟𝐷𝑎𝑠ℎ\n${design} ${username}`
 	const been = {
-	text: `${design} 𝚂𝚕𝚘𝚝\n\n${slot4}${slot5}${slot6}\n- - - - - - - - - \n${slot1}${slot2}${slot3} ☜︎ 𝙽𝚘 𝚠𝚒𝚗 ♕︎\n- - - - - - - - - \n${slot7}${slot8}${slot9}\n\n𝑀𝑜𝑛𝑒𝑦 𝑙𝑒𝑓𝑡 ${money}$\n𝐽𝑎𝑐𝑘𝑝𝑜𝑡 ${jackpot1}$`,
+	text: `${design} 𝚂𝚕𝚘𝚝\n\n${slot4}${slot5}${slot6}\n- - - - - - - - - \n${slot1}${slot2}${slot3} ☜︎ 𝙽𝚘 𝚠𝚒𝚗 ♕︎\n- - - - - - - - - \n${slot7}${slot8}${slot9}\n\n𝐿𝑜𝑠𝑡 9$\n𝑀𝑜𝑛𝑒𝑦 𝑙𝑒𝑓𝑡 ${money}$\n𝐽𝑎𝑐𝑘𝑝𝑜𝑡 ${jackpot1}$`,
 }
 replyimg(been, text, capt, owner) 
 }
