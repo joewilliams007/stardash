@@ -3038,13 +3038,19 @@ text: `${design} 𝐷𝑜𝑤𝑛𝑙𝑜𝑎𝑑𝑖𝑛𝑔...\n- - - - - - - 
 			var views = videos[0].views
 
 
-			
 
-																
+
+
+													
 				ran= getRandom('.opus')
 				exec(`yt-dlp -x --audio-format opus -o, --output ${ran} "ytsearch:${value}"`, (err) => {
 
 					try {
+
+						var getJSON = require('get-json')
+getJSON(`https://returnyoutubedislikeapi.com/votes?videoId=${videos[0].id.videoId}`, function(error, resyt){
+	var likes = resyt.likes
+	var dislikes = resyt.dislikes
 			
 reply(`${design} 𝑆𝑒𝑛𝑑𝑖𝑛𝑔...
 - - - - - - - - - - - - - - - - - -
@@ -3057,10 +3063,14 @@ _${videos[0].title}_
 𝑃𝑢𝑏𝑙𝑖𝑠ℎ𝑒𝑑 _${videos[0].snippet.publishedAt}_
 - - - - - - - - - - - - - - - - - -
 𝑌𝑜𝑢𝑡𝑢𝑏𝑒 𝑉𝑖𝑒𝑤𝑠 _${views.toString().replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1.')}_
+𝐿𝑖𝑘𝑒𝑠  ${likes.toString().replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1.')}
+𝐷𝑖𝑠𝑙𝑖𝑘𝑒𝑠  ${dislikes.toString().replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1.')} 
 - - - - - - - - - - - - - - - - - -
 𝑀𝑜𝑛𝑒𝑦 𝑙𝑒𝑓𝑡: _${newmoney}$_
 - - - - - - - - - - - - - - - - - -
 ❇️ 𝑃𝑟𝑒𝑚𝑖𝑢𝑚 𝑆𝑜𝑛𝑔𝑠`)
+
+					})
 										
 											}catch (err){
 												reply(`${design} 𝑆𝑒𝑛𝑑𝑖𝑛𝑔...\n- - - - - - - - - - - - - - - - - -\n𝑁𝑜 𝐷𝑎𝑡𝑎 𝐹𝑜𝑢𝑛𝑑\n- - - - - - - - - - - - - - - - - -\n𝐶𝑜𝑠𝑡: _10$ - 5_\n_.cheapsong (_ 𝐶𝑜𝑠𝑡  _4$)_\n𝑀𝑜𝑛𝑒𝑦 𝑙𝑒𝑓𝑡: _${newnewmoney}$_\n- - - - - - - - - - - - - - - - - -\n_Tipp: ${tipp}_\n- - - - - - - - - - - - - - - - - -\n❇️ 𝑃𝑟𝑒𝑚𝑖𝑢𝑚 𝑆𝑜𝑛𝑔𝑠`)  
@@ -3095,10 +3105,6 @@ if (!isVerify) return reply(UserB())
 if (args.length < 1) return reply(`${design} 𝑊ℎ𝑎𝑡 𝑖𝑠 𝑡ℎ𝑒 𝑠𝑜𝑛𝑔 𝑛𝑎𝑚𝑒?`)	
 
 
-
-
-
-
 var yt = require('youtube-search-without-api-key');
 
 var videos = await yt.search(`${value}`);
@@ -3111,7 +3117,6 @@ var views4 = videos[4].views
 
 var getJSON = require('get-json')
 getJSON(`https://returnyoutubedislikeapi.com/votes?videoId=${videos[0].id.videoId}`, function(error, resyt){
-
 
 var getJSON = require('get-json')
 getJSON(`https://returnyoutubedislikeapi.com/votes?videoId=${videos[1].id.videoId}`, function(error, resyt1){
@@ -3146,8 +3151,8 @@ var likes4 = resyt4.likes
 var dislikes4 = resyt4.dislikes
 
 
-// ✅ 𝐿𝑖𝑘𝑒𝑠  ${likes.toString().replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1.')}
-//	❎ 𝐷𝑖𝑠𝑙𝑖𝑘𝑒𝑠  ${dislikes.toString().replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1.')} 
+// 👍 𝐿𝑖𝑘𝑒𝑠  ${likes.toString().replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1.')}
+//👎 𝐷𝑖𝑠𝑙𝑖𝑘𝑒𝑠  ${dislikes.toString().replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1.')} 
 
 reply(`${design} 𝑅𝑒𝑠𝑢𝑙𝑡𝑠 𝑓𝑜𝑢𝑛𝑑
 - - - - - - - - - - - - - - - - - -
