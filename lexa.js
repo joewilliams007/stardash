@@ -3170,7 +3170,7 @@ reply(`${design} 𝑅𝑒𝑠𝑢𝑙𝑡𝑠 𝑓𝑜𝑢𝑛𝑑
 - - - - - - - - - - - - - - - - - -
 ${design} _${videos[0].title}_
 🕰️ _${videos[0].duration_raw}_
-⭐ _${rating.trim()}/5 ✩_
+⭐ _${rating.trim()}/5 Stars_
 📷 _${views.toString().replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1.')} Views_
 ${design} _${videos[0].snippet.publishedAt}_
 📦 _.getsearch 1_
@@ -3180,7 +3180,7 @@ ${design} _${videos[0].snippet.publishedAt}_
 - - - - - - - - - - - - - - - - - -
 ${design} _${videos[1].title}_
 🕰️ _${videos[1].duration_raw}_
-⭐ _${rating1.trim()}/5 ✩_
+⭐ _${rating1.trim()}/5 Stars_
 📷 _${views1.toString().replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1.')} Views_
 📆 _${videos[1].snippet.publishedAt}_
 📦 _.getsearch 2_
@@ -3190,7 +3190,7 @@ ${design} _${videos[1].title}_
 - - - - - - - - - - - - - - - - - - 
 ${design} _${videos[2].title}_
 🕰️ _${videos[2].duration_raw}_
-⭐ _${rating2.trim()}/5 ✩_
+⭐ _${rating2.trim()}/5 Stars_
 📷 _${views2.toString().replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1.')} Views_
 📆 _${videos[2].snippet.publishedAt}_
 📦 _.getsearch 3_ 
@@ -3200,7 +3200,7 @@ ${design} _${videos[2].title}_
 - - - - - - - - - - - - - - - - - -
 ${design} _${videos[3].title}_
 🕰️ _${videos[3].duration_raw}_
-⭐ _${rating3.trim()}/5 ✩_
+⭐ _${rating3.trim()}/5 Stars_
 📷 _${views3.toString().replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1.')} Views_
 📆 _${videos[3].snippet.publishedAt}_
 📦 _.getsearch 4_
@@ -3210,7 +3210,7 @@ ${design} _${videos[3].title}_
 - - - - - - - - - - - - - - - - - -
 ${design} _${videos[4].title}_
 🕰️ _${videos[4].duration_raw}_
-⭐ _${rating4.trim()}/5 ✩_
+⭐ _${rating4.trim()}/5 Stars_
 📷 _${views4.toString().replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1.')} Views_
 📆 _${videos[4].snippet.publishedAt}_
 📦 _.getsearch 5_
