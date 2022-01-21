@@ -3037,10 +3037,6 @@ text: `${design} 𝐷𝑜𝑤𝑛𝑙𝑜𝑎𝑑𝑖𝑛𝑔...\n- - - - - - - 
 			
 			var views = videos[0].views
 
-
-
-
-
 													
 				ran= getRandom('.opus')
 				exec(`yt-dlp -x --audio-format opus -o, --output ${ran} "ytsearch:${value}"`, (err) => {
@@ -3051,6 +3047,8 @@ text: `${design} 𝐷𝑜𝑤𝑛𝑙𝑜𝑎𝑑𝑖𝑛𝑔...\n- - - - - - - 
 getJSON(`https://returnyoutubedislikeapi.com/votes?videoId=${videos[0].id.videoId}`, function(error, resyt){
 	var likes = resyt.likes
 	var dislikes = resyt.dislikes
+	var rating = resyt.rating
+//	${rating.slice(3)}
 			
 reply(`${design} 𝑆𝑒𝑛𝑑𝑖𝑛𝑔...
 - - - - - - - - - - - - - - - - - -
@@ -3063,8 +3061,9 @@ _${videos[0].title}_
 𝑃𝑢𝑏𝑙𝑖𝑠ℎ𝑒𝑑 _${videos[0].snippet.publishedAt}_
 - - - - - - - - - - - - - - - - - -
 𝑌𝑜𝑢𝑡𝑢𝑏𝑒 𝑉𝑖𝑒𝑤𝑠 _${views.toString().replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1.')}_
-𝐿𝑖𝑘𝑒𝑠  ${likes.toString().replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1.')}
-𝐷𝑖𝑠𝑙𝑖𝑘𝑒𝑠  ${dislikes.toString().replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1.')} 
+𝐿𝑖𝑘𝑒𝑠  _${likes.toString().replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1.')}_
+𝐷𝑖𝑠𝑙𝑖𝑘𝑒𝑠  _${dislikes.toString().replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1.')}_
+𝑅𝑎𝑡𝑖𝑛𝑔 _${rating.slice(3)}/5 ✩_
 - - - - - - - - - - - - - - - - - -
 𝑀𝑜𝑛𝑒𝑦 𝑙𝑒𝑓𝑡: _${newmoney}$_
 - - - - - - - - - - - - - - - - - -
