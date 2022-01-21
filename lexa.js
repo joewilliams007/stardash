@@ -2285,7 +2285,7 @@ if (!isQuotedAudio)  return reply(`${design} 𝑃𝑙𝑒𝑎𝑠𝑒 𝑡𝑎�
 					encmedia = JSON.parse(JSON.stringify(mek).replace('quotedM','m')).message.extendedTextMessage.contextInfo
 					media = await Lxa.downloadAndSaveMediaMessage(encmedia)
 				ran= getRandom('.opus')
-				exec(`ffmpeg  -i ${media} -filter_complex "acrusher=level_in=8:level_out=18:bits=8:mode=log:aa=1"  ${ran} `, (err) => {
+				exec(`ffmpeg  -i ${media} -filter_complex "acrusher=level_in=8:level_out=18:bits=8:mode=log:aa=1" ${ran}`, (err) => {
 			fs.unlinkSync(media)
 						if (err) return reply(`${design} 𝐸𝑟𝑟𝑜𝑟`)
 						buffer = fs.readFileSync(ran)
