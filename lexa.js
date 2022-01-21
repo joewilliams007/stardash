@@ -4704,6 +4704,9 @@ else {
 					var _jackpot = JSON.parse(fs.readFileSync('./session/jackpot.json'));	
 					var jackpot1 = _jackpot[0]	//--- jackpot
 
+					var leftmoney = Number(9);
+					var newwwww = money - leftmoney;
+
 	var addxp = Number(2);
 	var newxp = xp + addxp; 
 	fs.readFile(`./data/users/${sender.split("@")[0]}/xp.json`, 'utf-8', function(err, data) {
@@ -4716,7 +4719,7 @@ else {
 	owner = await fs.readFileSync('./images/menu.jpg').toString('base64')
 	capt = `𝑆𝑡𝑎𝑟𝐷𝑎𝑠ℎ\n${design} ${username}`
 	const been = {
-	text: `${design} 𝚂𝚕𝚘𝚝\n\n${slot4}${slot5}${slot6}\n- - - - - - - - - \n${slot1}${slot2}${slot3} ☜︎ 𝙽𝚘 𝚠𝚒𝚗 ♕︎\n- - - - - - - - - \n${slot7}${slot8}${slot9}\n\n𝐿𝑜𝑠𝑡 9$\n𝑀𝑜𝑛𝑒𝑦 𝑙𝑒𝑓𝑡 ${money}$\n𝐽𝑎𝑐𝑘𝑝𝑜𝑡 ${jackpot1}$`,
+	text: `${design} 𝚂𝚕𝚘𝚝\n\n${slot4}${slot5}${slot6}\n- - - - - - - - - \n${slot1}${slot2}${slot3} ☜︎ 𝙽𝚘 𝚠𝚒𝚗 ♕︎\n- - - - - - - - - \n${slot7}${slot8}${slot9}\n\n𝐿𝑜𝑠𝑡 9$\n𝑀𝑜𝑛𝑒𝑦 𝑙𝑒𝑓𝑡 ${newwwww}$\n𝐽𝑎𝑐𝑘𝑝𝑜𝑡 ${jackpot1}$`,
 }
 replyimg(been, text, capt, owner) 
 }
