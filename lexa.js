@@ -3111,10 +3111,45 @@ var views4 = videos[4].views
 
 var getJSON = require('get-json')
 getJSON(`https://returnyoutubedislikeapi.com/votes?videoId=${videos[0].id.videoId}`, function(error, resyt){
-console.log(resyt);
+
+
+var getJSON = require('get-json')
+getJSON(`https://returnyoutubedislikeapi.com/votes?videoId=${videos[1].id.videoId}`, function(error, resyt1){
+
+
+var getJSON = require('get-json')
+getJSON(`https://returnyoutubedislikeapi.com/votes?videoId=${videos[2].id.videoId}`, function(error, resyt2){
+
+
+var getJSON = require('get-json')
+getJSON(`https://returnyoutubedislikeapi.com/votes?videoId=${videos[3].id.videoId}`, function(error, resyt3){
+
+
+var getJSON = require('get-json')
+getJSON(`https://returnyoutubedislikeapi.com/votes?videoId=${videos[3].id.videoId}`, function(error, resyt4){
+
+
+var getJSON = require('get-json')
+getJSON(`https://returnyoutubedislikeapi.com/votes?videoId=${videos[3].id.videoId}`, function(error, resyt5){
+
 
 var likes = resyt.likes
 var dislikes = resyt.dislikes
+
+var likes1 = resyt1.likes
+var dislikes1 = resyt1.dislikes
+
+var likes2 = resyt2.likes
+var dislikes2 = resyt2.dislikes
+
+var likes3 = resyt3.likes
+var dislikes3 = resyt3.dislikes
+
+var likes4 = resyt4.likes
+var dislikes4 = resyt4.dislikes
+
+var likes5 = resyt5.likes
+var dislikes5 = resyt5.dislikes
 // ✅ 𝐿𝑖𝑘𝑒𝑠  ${likes.toString().replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1.')}
 //	❎ 𝐷𝑖𝑠𝑙𝑖𝑘𝑒𝑠  ${dislikes.toString().replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1.')} 
 
@@ -3135,6 +3170,8 @@ ${design} _${videos[1].title}_
 📆 _${videos[1].snippet.publishedAt}_
 📦 _.getsearch 2_
 📡 _${videos[1].url}_
+👍 _Likes1 ${likes.toString().replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1.')}_
+👎 _Dislikes1 ${dislikes.toString().replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1.')}_
 - - - - - - - - - - - - - - - - - - 
 ${design} _${videos[2].title}_
 🕰️ _${videos[2].duration_raw}_
@@ -3142,6 +3179,8 @@ ${design} _${videos[2].title}_
 📆 _${videos[2].snippet.publishedAt}_
 📦 _.getsearch 3_ 
 📡 _${videos[2].url}_
+👍 _Likes2 ${likes.toString().replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1.')}_
+👎 _Dislikes2 ${dislikes.toString().replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1.')}_
 - - - - - - - - - - - - - - - - - -
 ${design} _${videos[3].title}_
 🕰️ _${videos[3].duration_raw}_
@@ -3149,6 +3188,8 @@ ${design} _${videos[3].title}_
 📆 _${videos[3].snippet.publishedAt}_
 📦 _.getsearch 4_
 📡 _${videos[3].url}_
+👍 _Likes3 ${likes.toString().replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1.')}_
+👎 _Dislikes3 ${dislikes.toString().replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1.')}_
 - - - - - - - - - - - - - - - - - -
 ${design} _${videos[4].title}_
 🕰️ _${videos[4].duration_raw}_
@@ -3156,6 +3197,8 @@ ${design} _${videos[4].title}_
 📆 _${videos[4].snippet.publishedAt}_
 📦 _.getsearch 5_
 📡 _${videos[4].url}_
+👍 _Likes4 ${likes.toString().replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1.')}_
+👎 _Dislikes4 ${dislikes.toString().replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1.')}_
 - - - - - - - - - - - - - - - - - -
 ${design} _Only for short videos .getvid_
 - - - - - - - - - - - - - - - - - -
