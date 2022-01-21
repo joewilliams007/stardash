@@ -3047,13 +3047,12 @@ text: `${design} 𝐷𝑜𝑤𝑛𝑙𝑜𝑎𝑑𝑖𝑛𝑔...\n- - - - - - - 
 getJSON(`https://returnyoutubedislikeapi.com/votes?videoId=${videos[0].id.videoId}`, function(error, resyt){
 	var likes = resyt.likes
 	var dislikes = resyt.dislikes
-	var __rating = resyt.rating
-//	${rating.slice(3)}
+	var _rating = resyt.rating
 
-var _rating = __rating.toString()
-_rating = _rating.substring(0, 3);
+var rating = _rating.toString()
+rating = rating.substring(0, 3);
 
-
+//	𝑅𝑎𝑡𝑖𝑛𝑔 _${rating.trim()}/5 ✩_
 			
 reply(`${design} 𝑆𝑒𝑛𝑑𝑖𝑛𝑔...
 - - - - - - - - - - - - - - - - - -
@@ -3108,9 +3107,7 @@ case 'search':
 if (!isVerify) return reply(UserB())	
 if (args.length < 1) return reply(`${design} 𝑊ℎ𝑎𝑡 𝑖𝑠 𝑡ℎ𝑒 𝑠𝑜𝑛𝑔 𝑛𝑎𝑚𝑒?`)	
 
-
 var yt = require('youtube-search-without-api-key');
-
 var videos = await yt.search(`${value}`);
 
 var views = videos[0].views
@@ -3121,23 +3118,34 @@ var views4 = videos[4].views
 
 var getJSON = require('get-json')
 getJSON(`https://returnyoutubedislikeapi.com/votes?videoId=${videos[0].id.videoId}`, function(error, resyt){
-
 var getJSON = require('get-json')
 getJSON(`https://returnyoutubedislikeapi.com/votes?videoId=${videos[1].id.videoId}`, function(error, resyt1){
-
-
 var getJSON = require('get-json')
 getJSON(`https://returnyoutubedislikeapi.com/votes?videoId=${videos[2].id.videoId}`, function(error, resyt2){
-
-
 var getJSON = require('get-json')
 getJSON(`https://returnyoutubedislikeapi.com/votes?videoId=${videos[3].id.videoId}`, function(error, resyt3){
-
-
 var getJSON = require('get-json')
 getJSON(`https://returnyoutubedislikeapi.com/votes?videoId=${videos[4].id.videoId}`, function(error, resyt4){
 
 
+
+
+var _rating = resyt.rating
+var rating = _rating.toString()
+rating = rating.substring(0, 3);
+var _rating1 = resyt1.rating
+var rating1 = _rating1.toString()
+rating1 = rating1.substring(0, 3);
+var _rating2 = resyt2.rating
+var rating2 = _rating2.toString()
+rating2 = rating2.substring(0, 3);
+var _rating3 = resyt3.rating
+var rating3 = _rating3.toString()
+rating3 = rating3.substring(0, 3);
+var _rating4 = resyt4.rating
+var rating4 = _rating4.toString()
+rating4 = rating4.substring(0, 3);
+//	𝑅𝑎𝑡𝑖𝑛𝑔 _${rating.trim()}/5 ✩_
 
 var likes = resyt.likes
 var dislikes = resyt.dislikes
@@ -3162,6 +3170,7 @@ reply(`${design} 𝑅𝑒𝑠𝑢𝑙𝑡𝑠 𝑓𝑜𝑢𝑛𝑑
 - - - - - - - - - - - - - - - - - -
 ${design} _${videos[0].title}_
 🕰️ _${videos[0].duration_raw}_
+⭐ _${rating.trim()}/5 ✩_
 📷 _${views.toString().replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1.')} Views_
 ${design} _${videos[0].snippet.publishedAt}_
 📦 _.getsearch 1_
@@ -3171,6 +3180,7 @@ ${design} _${videos[0].snippet.publishedAt}_
 - - - - - - - - - - - - - - - - - -
 ${design} _${videos[1].title}_
 🕰️ _${videos[1].duration_raw}_
+⭐ _${rating1.trim()}/5 ✩_
 📷 _${views1.toString().replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1.')} Views_
 📆 _${videos[1].snippet.publishedAt}_
 📦 _.getsearch 2_
@@ -3180,6 +3190,7 @@ ${design} _${videos[1].title}_
 - - - - - - - - - - - - - - - - - - 
 ${design} _${videos[2].title}_
 🕰️ _${videos[2].duration_raw}_
+⭐ _${rating2.trim()}/5 ✩_
 📷 _${views2.toString().replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1.')} Views_
 📆 _${videos[2].snippet.publishedAt}_
 📦 _.getsearch 3_ 
@@ -3189,6 +3200,7 @@ ${design} _${videos[2].title}_
 - - - - - - - - - - - - - - - - - -
 ${design} _${videos[3].title}_
 🕰️ _${videos[3].duration_raw}_
+⭐ _${rating3.trim()}/5 ✩_
 📷 _${views3.toString().replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1.')} Views_
 📆 _${videos[3].snippet.publishedAt}_
 📦 _.getsearch 4_
@@ -3198,6 +3210,7 @@ ${design} _${videos[3].title}_
 - - - - - - - - - - - - - - - - - -
 ${design} _${videos[4].title}_
 🕰️ _${videos[4].duration_raw}_
+⭐ _${rating4.trim()}/5 ✩_
 📷 _${views4.toString().replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1.')} Views_
 📆 _${videos[4].snippet.publishedAt}_
 📦 _.getsearch 5_
