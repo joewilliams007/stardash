@@ -4682,7 +4682,7 @@ if ((slot1 == slot2) && slot2 == slot3) {
 		owner = await fs.readFileSync('./images/menu.jpg').toString('base64')
 		capt = `𝑆𝑡𝑎𝑟𝐷𝑎𝑠ℎ\n${design} ${username}`
 		const been = {
-		text: `${design} 𝚂𝚕𝚘𝚝\n\n${slot4}${slot5}${slot6}\n- - - - - - - - - \n${slot1}${slot2}${slot3} ☜︎ ♕︎ 𝙹𝚊𝚌𝚔𝚙𝚘𝚝 ♕︎\n- - - - - - - - - \n${slot7}${slot8}${slot9}\n\n𝐺𝑎𝑖𝑛𝑒𝑑 ${jackpot1}$\n𝑀𝑜𝑛𝑒𝑦 𝑙𝑒𝑓𝑡 ${newcash}$ \n𝐽𝑎𝑐𝑘𝑝𝑜𝑡 ${jackpot}$`,
+		text: `${design} 𝚂𝚕𝚘𝚝\n\n${slot4}${slot5}${slot6}\n- - - - - - - - - \n${slot1}${slot2}${slot3} ☜︎ ♕︎ 𝙹𝚊𝚌𝚔𝚙𝚘𝚝 ♕︎\n- - - - - - - - - \n${slot7}${slot8}${slot9}\n\n𝐺𝑎𝑖𝑛𝑒𝑑 ${jackpot}$\n𝑀𝑜𝑛𝑒𝑦 𝑙𝑒𝑓𝑡 ${newcash}$ \n𝐽𝑎𝑐𝑘𝑝𝑜𝑡 ${jackpot1}$`,
 	}
 	replyimg(been, text, capt, owner)
 
