@@ -1821,7 +1821,7 @@ case 'wifi':
 	})
 })
 await delay(1000) /// waiting 1 second.
-reply ("Success. Data Saver is turned off. Beefy mode is turned on.")
+reply ("✅ Success. Data Saver is turned off. Beefy mode is turned on.")
 
 reply('✅ 𝐵𝑜𝑡 𝑟𝑒𝑠𝑡𝑎𝑟𝑡𝑠 𝑖𝑛 𝑠𝑜𝑚𝑒 𝑠𝑒𝑐𝑜𝑛𝑑𝑠.')
 		
@@ -1846,7 +1846,7 @@ process.exit(1);
 		})
 	})
 	await delay(1000) /// waiting 1 second.
-	reply ("Success. Data Saver is now on.")
+	reply ("✅ Success. Data Saver is now on.")
 
 	reply('✅ 𝐵𝑜𝑡 𝑟𝑒𝑠𝑡𝑎𝑟𝑡𝑠 𝑖𝑛 𝑠𝑜𝑚𝑒 𝑠𝑒𝑐𝑜𝑛𝑑𝑠.')
 		
@@ -2998,7 +2998,7 @@ break
 case 'imagedownload':
 case 'send':
 	if (!isVerify) return reply(UserB())
-	if (internet === "data") return reply ("Sorry. The Bot is using mobile data at the moment. Some Commands may be disabled to lower the cost.")
+	if (internet === "data") return reply ("⛔ Sorry. The Bot is using mobile data at the moment. Some Commands may be disabled to lower the cost.")
 	if (args.length < 1) return reply(`${design} 𝑊ℎ𝑎𝑡 𝑖𝑠 𝑡ℎ𝑒 𝑝𝑖𝑐𝑡𝑢𝑟𝑒 𝑡𝑖𝑡𝑙𝑒?`)
     if (money < 10) return reply(`${design} 𝑌𝑜𝑢 𝑑𝑜𝑛𝑡 ℎ𝑎𝑣𝑒 𝑒𝑛𝑜𝑢𝑔ℎ 𝑚𝑜𝑛𝑒𝑦.\n- - - - - - - - - - - - - - - - - -\n𝑀𝑜𝑛𝑒𝑦 𝑛𝑒𝑒𝑑𝑒𝑑 10$ 𝑌𝑜𝑢𝑟 𝑚𝑜𝑛𝑒𝑦 ${money}$\n- - - - - - - - - - - - - - - - - -\n❎ 𝑋623 𝑃𝑖𝑐𝑡𝑢𝑟𝑒𝑠`) 
 
@@ -3362,7 +3362,7 @@ case 'getvid':
 	   if (!isVerify) return reply(UserB())
 	   if (args.length < 1) return reply(`${design} Whats the video number? 1 2 3 4 or 5`)
 	   if (args.length > 1) return reply(`${design} Whats the video number? .getvid 1`)
-	   if (internet === "data") return reply ("Sorry. The Bot is using mobile data at the moment. Some Commands may be disabled to lower the cost.")
+	   if (internet === "data") return reply ("⛔ Sorry. The Bot is using mobile data at the moment. Some Commands may be disabled to lower the cost.")
 
 	   if (args[0] === '1' ) {
 		var _getsearch = JSON.parse(fs.readFileSync(`./session/youtube.json`));
@@ -3448,7 +3448,7 @@ break
 case 'axolotl':
 case 'axolotel':
 
-	if (internet === "data") return reply ("Sorry. The Bot is using mobile data at the moment. Some Commands may be disabled to lower the cost.")
+	if (internet === "data") return reply ("⛔ Sorry. The Bot is using mobile data at the moment. Some Commands may be disabled to lower the cost.")
 
 reply (`${design} Sending... Please wait\n- - - - - - - - - - - - - - - - - -\n✅ :)`)
 
@@ -3549,7 +3549,7 @@ break
 //---X623-Whatsapp-Bot------------------------------------------------------------------------------------------------------------------------//
 case 'article':
 case 'times':
-	if (internet === "data") return reply ("Sorry. The Bot is using mobile data at the moment. Some Commands may be disabled to lower the cost.")
+	if (internet === "data") return reply ("⛔ Sorry. The Bot is using mobile data at the moment. Some Commands may be disabled to lower the cost.")
 	if (args.length < 1) return reply(`${design} What article do you want to search?`) 
 	if (args.length > 1) return reply(`${design} If you have more then one word please use +\n- - - - - - - - - - - - - - - - - -\nExample .article donald+trump`) 
 	
