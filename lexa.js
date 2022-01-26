@@ -455,6 +455,9 @@ try{
 	}
 }
 
+let _internet = JSON.parse(fs.readFileSync(`./internet.json`));
+let internet = _internet[0]	//--- internet
+
 		let carrier;
 		try{		
 		let _carrier = JSON.parse(fs.readFileSync(`./data/users/${sender.split("@")[0]}/carrier.json`));
@@ -1394,6 +1397,8 @@ ${design} .addpremium
 ${design} .removepremium
 ${design} .zemenu
 ${design} .fix
+${design} .data
+${design} .wifi
 - - - - - - - - - - - - - - - - - - 
 𝑌𝑜𝑢𝑟 𝑀𝑜𝑛𝑒𝑦 ⌖ _${money}$_
 `)
@@ -1800,7 +1805,57 @@ case 'update':
           break
 //---X623-Whatsapp-Bot------------------------------------------------------------------------------------------------------------------------//
 
+//---X623-Whatsapp-Bot------------------------------------------------------------------------------------------------------------------------//
+//-- Mobile data
+case 'wifi':
+  if (!isVerify) return reply(userB(prefix))
+  if (!isOwner) return reply("Only for Owner")
 
+  if (internet === "wifi") return reply ("Already on WIFI-mode")
+
+  fs.readFile(`./internet.json`, 'utf-8', function(err, data) {
+	if (err) throw err;
+	var newValue = data.replace(`${internet}`, "wifi");
+	fs.writeFile(`./internet.json`, newValue, 'utf-8', function(err, data) {
+		if (err) throw err;
+	})
+})
+await delay(1000) /// waiting 1 second.
+reply ("Success. Data Saver is turned off. Beefy mode is turned on.")
+
+reply('✅ 𝐵𝑜𝑡 𝑟𝑒𝑠𝑡𝑎𝑟𝑡𝑠 𝑖𝑛 𝑠𝑜𝑚𝑒 𝑠𝑒𝑐𝑜𝑛𝑑𝑠.')
+		
+await delay(2000) /// waiting 2 second.
+
+process.exit(1);
+
+  break
+
+  case 'data':
+
+	if (!isVerify) return reply(userB(prefix))
+	if (!isOwner) return reply("Only for Owner")
+
+    if (internet === "data" ) return reply ("Already on MOBILEDATA-mode")
+
+	fs.readFile(`./internet.json`, 'utf-8', function(err, data) {
+		if (err) throw err;
+		var newValue = data.replace(`${internet}`, "data");
+		fs.writeFile(`./internet.json`, newValue, 'utf-8', function(err, data) {
+			if (err) throw err;
+		})
+	})
+	await delay(1000) /// waiting 1 second.
+	reply ("Success. Data Saver is now on.")
+
+	reply('✅ 𝐵𝑜𝑡 𝑟𝑒𝑠𝑡𝑎𝑟𝑡𝑠 𝑖𝑛 𝑠𝑜𝑚𝑒 𝑠𝑒𝑐𝑜𝑛𝑑𝑠.')
+		
+	await delay(2000) /// waiting 2 second.
+ 
+ process.exit(1);
+  
+
+  break
 //---X623-Whatsapp-Bot------------------------------------------------------------------------------------------------------------------------//
 //-- Dog
 case 'dog':
@@ -2943,6 +2998,7 @@ break
 case 'imagedownload':
 case 'send':
 	if (!isVerify) return reply(UserB())
+	if (internet === "data") return reply ("Sorry. The Bot is using mobile data at the moment. Some Commands may be disabled to lower the cost.")
 	if (args.length < 1) return reply(`${design} 𝑊ℎ𝑎𝑡 𝑖𝑠 𝑡ℎ𝑒 𝑝𝑖𝑐𝑡𝑢𝑟𝑒 𝑡𝑖𝑡𝑙𝑒?`)
     if (money < 10) return reply(`${design} 𝑌𝑜𝑢 𝑑𝑜𝑛𝑡 ℎ𝑎𝑣𝑒 𝑒𝑛𝑜𝑢𝑔ℎ 𝑚𝑜𝑛𝑒𝑦.\n- - - - - - - - - - - - - - - - - -\n𝑀𝑜𝑛𝑒𝑦 𝑛𝑒𝑒𝑑𝑒𝑑 10$ 𝑌𝑜𝑢𝑟 𝑚𝑜𝑛𝑒𝑦 ${money}$\n- - - - - - - - - - - - - - - - - -\n❎ 𝑋623 𝑃𝑖𝑐𝑡𝑢𝑟𝑒𝑠`) 
 
@@ -3135,6 +3191,8 @@ break
 //-- Searchsong
 case 'search':
 if (!isVerify) return reply(UserB())	
+
+
 if (args.length < 1) return reply(`${design} 𝑊ℎ𝑎𝑡 𝑖𝑠 𝑡ℎ𝑒 𝑠𝑜𝑛𝑔 𝑛𝑎𝑚𝑒?`)	
 
 var yt = require('youtube-search-without-api-key');
@@ -3304,6 +3362,7 @@ case 'getvid':
 	   if (!isVerify) return reply(UserB())
 	   if (args.length < 1) return reply(`${design} Whats the video number? 1 2 3 4 or 5`)
 	   if (args.length > 1) return reply(`${design} Whats the video number? .getvid 1`)
+	   if (internet === "data") return reply ("Sorry. The Bot is using mobile data at the moment. Some Commands may be disabled to lower the cost.")
 
 	   if (args[0] === '1' ) {
 		var _getsearch = JSON.parse(fs.readFileSync(`./session/youtube.json`));
@@ -3388,6 +3447,8 @@ break
 //-- Random Axolotl
 case 'axolotl':
 case 'axolotel':
+
+	if (internet === "data") return reply ("Sorry. The Bot is using mobile data at the moment. Some Commands may be disabled to lower the cost.")
 
 reply (`${design} Sending... Please wait\n- - - - - - - - - - - - - - - - - -\n✅ :)`)
 
@@ -3488,7 +3549,7 @@ break
 //---X623-Whatsapp-Bot------------------------------------------------------------------------------------------------------------------------//
 case 'article':
 case 'times':
-
+	if (internet === "data") return reply ("Sorry. The Bot is using mobile data at the moment. Some Commands may be disabled to lower the cost.")
 	if (args.length < 1) return reply(`${design} What article do you want to search?`) 
 	if (args.length > 1) return reply(`${design} If you have more then one word please use +\n- - - - - - - - - - - - - - - - - -\nExample .article donald+trump`) 
 	
@@ -4065,6 +4126,7 @@ ${tempSymbol} 𝑇𝑒𝑚𝑝𝑒𝑟𝑎𝑡𝑢𝑟𝑒 ⌖ ${temperature}°C
 𝑀𝑜𝑛𝑒𝑦 𝑙𝑒𝑓𝑡: ${newmoney}$`);
 });
 
+if (internet === "data") return 
 await delay(3000) /// waiting 3 second. until gif downloaded
 ran = getRandom('.webp')
 await ffmpeg(`./weather.gif`)
@@ -4140,8 +4202,6 @@ exec ("rm -rf output.jpeg")
 });
 
 await delay(1000) /// waiting 1 second.	
-buffer = fs.readFileSync('output.webp')
-Lxa.sendMessage(from, buffer, sticker, {quoted:mek})
 	
 	// Ok lets get the lyrics
 	const lyrics = await firstSong.lyrics();
