@@ -5714,6 +5714,9 @@ ${design} 𝑀𝑜𝑛𝑒𝑦 ⌖ ${money}$
 ${design} 𝑇𝑖𝑐𝑘𝑒𝑡𝑠 ⌖ ${tickets}
 ${design} 𝑋𝑝 ⌖ ${xp}
 - - - - - - - - - - - - - - - - - -
+⌖ _StarDash App_
+https://drive.google.com/file/d/1f_OxQZS6DwawutlSTKX2FiNoi-I3TL3J/view?usp=sharing
+- - - - - - - - - - - - - - - - - -
 ➴ ${cityName}
 ${tempSymbol} ${skytext} ${temperature}°C 
 - - - - - - - - - - - - - - - - - -
