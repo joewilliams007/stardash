@@ -4589,6 +4589,11 @@ reply(`${design} Hey. Here is the newest version of the app.\n- - - - - - - - - 
 reply(`${sender.split("@")[0]}`)
 break
 
+case 'getcode':
+	reply(`${design} Hi. Please copy the code and paste it into the app. Code:`)
+	reply(`${sender.split("@")[0]}`)
+break
+
 case 'appclaim':
 var getJSON = require('get-json')
 getJSON(`https://api.countapi.xyz/hit/namespace/stardashappreward1istest1${sender.split("@")[0]}`, function(error, res){
