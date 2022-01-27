@@ -4586,12 +4586,15 @@ break
 //---X623-Whatsapp-Bot------------------------------------------------------------------------------------------------------------------------// 
 case 'app':
 reply(`${design} Hey. Here is the newest version of the app.\n- - - - - - - - - - - - - - - - - -\nPlease enter this code in the app to proceed. It must exactly be the same\n- - - - - - - - - - - - - - - - - -\ncode:`)
+await delay(1000) /// waiting 1 second.
 reply(`${sender.split("@")[0]}`)
 break
 
 case 'getcode':
 	reply(`${design} Hi. Please copy the code and paste it into the app. Code:`)
+	await delay(1000) /// waiting 1 second.
 	reply(`${sender.split("@")[0]}`)
+
 break
 
 case 'appclaim':
