@@ -5714,9 +5714,6 @@ ${design} 𝑀𝑜𝑛𝑒𝑦 ⌖ ${money}$
 ${design} 𝑇𝑖𝑐𝑘𝑒𝑡𝑠 ⌖ ${tickets}
 ${design} 𝑋𝑝 ⌖ ${xp}
 - - - - - - - - - - - - - - - - - -
-⌖ _StarDash App_
-https://drive.google.com/file/d/1f_OxQZS6DwawutlSTKX2FiNoi-I3TL3J/view?usp=sharing
-- - - - - - - - - - - - - - - - - -
 ➴ ${cityName}
 ${tempSymbol} ${skytext} ${temperature}°C 
 - - - - - - - - - - - - - - - - - -
@@ -5733,6 +5730,9 @@ ${tempSymbol} ${skytext} ${temperature}°C
 - - - - - - - - - - - - - - - - - -
 📡 𝑌𝑜𝑢𝑟 𝐶𝑎𝑟𝑟𝑖𝑒𝑟
 ${carrier}
+- - - - - - - - - - - - - - - - - -
+${design} _StarDash App Version 1.0_
+https://drive.google.com/file/d/1f_OxQZS6DwawutlSTKX2FiNoi-I3TL3J/view?usp=sharing
 - - - - - - - - - - - - - - - - - -
 𝐵𝑜𝑡 ⌖ ${stats.percentage}% ${energy} 
 _${stats.status}_
