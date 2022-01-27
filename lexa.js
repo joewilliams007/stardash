@@ -4584,6 +4584,39 @@ await delay(1000) /// waiting 1 second.
 
 break	
 //---X623-Whatsapp-Bot------------------------------------------------------------------------------------------------------------------------// 
+case 'app':
+reply(`${design} Hey. Here is the newest version of the app.\n- - - - - - - - - - - - - - - - - -\nPlease enter this code in the app to proceed. It must exactly be the same\n- - - - - - - - - - - - - - - - - -\ncode:`)
+reply(`${sender.split("@")[0]}`)
+break
+
+case 'appclaim':
+var getJSON = require('get-json')
+getJSON(`https://api.countapi.xyz/hit/namespace/stardashappreward1istest1${sender.split("@")[0]}`, function(error, res){
+
+appreward = res.value
+
+var lastappreward = Number(1)
+
+var reward1 = Number(appreward) - Number(1)
+
+if ( reward1 === lastappreward ) { 
+
+	// get money
+	reply(`${design} Here have 10$`)
+
+	
+} else {
+
+	reply(`${design} Please open the app and watch an ad to claim money.`)
+
+	// add 1 to lastappreward
+}
+
+})
+
+
+break
+//---X623-Whatsapp-Bot----------------------------------------------------------------------------------------------------------------------
 //-- save picture as sticker
 case 'addsticker':
 case 'savesticker':
