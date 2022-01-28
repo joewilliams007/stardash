@@ -5542,15 +5542,7 @@ case 'makier':
 			mentions(teks, members_id, true)
 			break				
 //---X623-Whatsapp-Bot------------------------------------------------------------------------------------------------------------------------//
-//-- App
-case 'downloadapp':
-case 'getapp':
-case 'app':
-  if (!isVerify) return reply(UserB())
-					buffer = fs.readFileSync(`./StarDash.apk`)
-					Lxa.sendMessage(from, buffer, document, {quoted:mek})
-											
-			break	
+
 //---X623-Whatsapp-Bot------------------------------------------------------------------------------------------------------------------------//   
 //--- Feed
 case 'feed':
