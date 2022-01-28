@@ -4624,7 +4624,7 @@ appreward = res.value
 		if ( Number(appreward) > Number(appclaim) ) { 
 
 			var gain = Number(appreward) - Number(appclaim)
-			var cost = Number(10);
+			var cost = Number(20);
 			var newmoney = gain * cost; 
 			var newnewmoney = Number(newmoney) + Number(money)
 		
