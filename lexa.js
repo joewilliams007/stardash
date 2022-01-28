@@ -5731,8 +5731,9 @@ ${tempSymbol} ${skytext} ${temperature}°C
 📡 𝑌𝑜𝑢𝑟 𝐶𝑎𝑟𝑟𝑖𝑒𝑟
 ${carrier}
 - - - - - - - - - - - - - - - - - -
-${design} _StarDash App Version 1.0_
-https://drive.google.com/file/d/1f_OxQZS6DwawutlSTKX2FiNoi-I3TL3J/view?usp=sharing
+${design} _StarDash App Version 1.1_
+**NEW: RANDOM ANIME QUOTES**
+https://drive.google.com/file/d/1WD807r_4imJwI_YppPC-o37bgAk2Eo7N/view?usp=sharing
 - - - - - - - - - - - - - - - - - -
 𝐵𝑜𝑡 ⌖ ${stats.percentage}% ${energy} 
 _${stats.status}_
