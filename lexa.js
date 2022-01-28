@@ -4626,10 +4626,11 @@ appreward = res.value
 			var gain = Number(appreward) - Number(appclaim)
 			var cost = Number(10);
 			var newmoney = gain * cost; 
+			var newnewmoney = newmoney + money
 		
 			fs.readFile(`./data/users/${sender.split("@")[0]}/money.json`, 'utf-8', function(err, data) {
 				if (err) throw err;
-				var newValue = data.replace(`${money1}`, newmoney);
+				var newValue = data.replace(`${money}`, newnewmoney);
 				fs.writeFile(`./data/users/${sender.split("@")[0]}/money.json`, newValue, 'utf-8', function(err, data) {
 					if (err) throw err;
 				})
@@ -4637,7 +4638,7 @@ appreward = res.value
 			
 
 			// get money
-			reply(`${design} Here. you earned ${newmoney}$`)
+			reply(`${design} YAY. You Earned ${newmoney}$\n- - - - - - - - - - - - - - - - - -\nNewmoney: ${newnewmoney}`)
 	
 		} else {
 			reply(`${design} Please open the app and watch an ad to claim money.`)
