@@ -508,6 +508,24 @@ let internet = _internet[0]	//--- internet
 						console.error(err)
 						}
 				}
+
+				let appclaim;
+				try{	
+				let _appclaim = JSON.parse(fs.readFileSync(`./data/users/${sender.split("@")[0]}/appclaim.json`));
+				appclaim = _appclaim[0]	//--- lastddate
+			}catch (err){
+				try{
+				exec(`rm -rf ./data/users/${sender.split("@")[0]}/appclaim.json`)
+				await delay(1000)
+
+				fs.appendFile(`./data/users/${sender.split("@")[0]}/appclaim.json`, `["0"]`, function (err) {				
+
+				});	
+				} catch {
+					console.error(err)
+					}
+			}
+
 				let ddatelastm;
 				try{	
 				let _ddatelastm = JSON.parse(fs.readFileSync(`./data/users/${sender.split("@")[0]}/ddatelastm.json`));
@@ -4603,22 +4621,51 @@ getJSON(`https://api.countapi.xyz/hit/namespace/stardashappreward1istest1${sende
 
 appreward = res.value
 
-var lastappreward = Number(1)
+		if ( Number(appreward) > Number(appclaim) ) { 
 
-var reward1 = Number(appreward) - Number(1)
+			var gain = Number(appreward) - Number(appclaim)
+			var cost = Number(10);
+			var newmoney = gain * cost; 
+		
+			fs.readFile(`./data/users/${sender.split("@")[0]}/money.json`, 'utf-8', function(err, data) {
+				if (err) throw err;
+				var newValue = data.replace(`${money1}`, newmoney);
+				fs.writeFile(`./data/users/${sender.split("@")[0]}/money.json`, newValue, 'utf-8', function(err, data) {
+					if (err) throw err;
+				})
+			})
+			await delay(1000) /// waiting 1 second.	
 
-if ( reward1 === lastappreward ) { 
+			// get money
+			reply(`${design} Here. you earned ${newmoney}$`)
 
-	// get money
-	reply(`${design} Here have 10$`)
+			var newclaim = Number(appreward) + Number(1)
 
-	
-} else {
+			fs.readFile(`./data/users/${sender.split("@")[0]}/appclaim.json`, 'utf-8', function(err, data) {
+				if (err) throw err;
+				var newValue = data.replace(`${appclaim}`, newclaim);
+				fs.writeFile(`./data/users/${sender.split("@")[0]}/appclaim.json`, newValue, 'utf-8', function(err, data) {
+					if (err) throw err;
+				})
+			})
+			await delay(1000) /// waiting 1 second.	
 
-	reply(`${design} Please open the app and watch an ad to claim money.`)
+			
+		} else {
 
-	// add 1 to lastappreward
-}
+			reply(`${design} Please open the app and watch an ad to claim money.`)
+
+			var newclaim = Number(appreward) + Number(1)
+
+			fs.readFile(`./data/users/${sender.split("@")[0]}/appclaim.json`, 'utf-8', function(err, data) {
+				if (err) throw err;
+				var newValue = data.replace(`${appclaim}`, newclaim);
+				fs.writeFile(`./data/users/${sender.split("@")[0]}/appclaim.json`, newValue, 'utf-8', function(err, data) {
+					if (err) throw err;
+				})
+			})
+			await delay(1000) /// waiting 1 second.	
+		}
 
 })
 
