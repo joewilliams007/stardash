@@ -518,7 +518,7 @@ let internet = _internet[0]	//--- internet
 				exec(`rm -rf ./data/users/${sender.split("@")[0]}/appclaim.json`)
 				await delay(1000)
 
-				fs.appendFile(`./data/users/${sender.split("@")[0]}/appclaim.json`, `["0"]`, function (err) {				
+				fs.appendFile(`./data/users/${sender.split("@")[0]}/appclaim.json`, `["1"]`, function (err) {				
 
 				});	
 				} catch {
@@ -4639,13 +4639,9 @@ appreward = res.value
 			// get money
 			reply(`${design} Here. you earned ${newmoney}$`)
 	
-			
 		} else {
-
 			reply(`${design} Please open the app and watch an ad to claim money.`)
-
 		}
-
 })
 await delay(1000) /// waiting 1 second.
 var newclaim = Number(appreward) + Number(1)
