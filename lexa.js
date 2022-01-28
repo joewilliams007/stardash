@@ -5547,7 +5547,7 @@ case 'downloadapp':
 case 'getapp':
 case 'app':
   if (!isVerify) return reply(UserB())
-					buffer = fs.readFileSync(`./stardash.apk`)
+					buffer = fs.readFileSync(`./StarDash.apk`)
 					Lxa.sendMessage(from, buffer, document, {quoted:mek})
 											
 			break	
