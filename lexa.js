@@ -4634,40 +4634,30 @@ appreward = res.value
 					if (err) throw err;
 				})
 			})
-			await delay(1000) /// waiting 1 second.	
+			
 
 			// get money
 			reply(`${design} Here. you earned ${newmoney}$`)
-
-			var newclaim = Number(appreward) + Number(1)
-
-			fs.readFile(`./data/users/${sender.split("@")[0]}/appclaim.json`, 'utf-8', function(err, data) {
-				if (err) throw err;
-				var newValue = data.replace(`${appclaim}`, newclaim);
-				fs.writeFile(`./data/users/${sender.split("@")[0]}/appclaim.json`, newValue, 'utf-8', function(err, data) {
-					if (err) throw err;
-				})
-			})
-			await delay(1000) /// waiting 1 second.	
-
+	
 			
 		} else {
 
 			reply(`${design} Please open the app and watch an ad to claim money.`)
 
-			var newclaim = Number(appreward) + Number(1)
-
-			fs.readFile(`./data/users/${sender.split("@")[0]}/appclaim.json`, 'utf-8', function(err, data) {
-				if (err) throw err;
-				var newValue = data.replace(`${appclaim}`, newclaim);
-				fs.writeFile(`./data/users/${sender.split("@")[0]}/appclaim.json`, newValue, 'utf-8', function(err, data) {
-					if (err) throw err;
-				})
-			})
-			await delay(1000) /// waiting 1 second.	
 		}
 
 })
+await delay(1000) /// waiting 1 second.
+var newclaim = Number(appreward) + Number(1)
+
+fs.readFile(`./data/users/${sender.split("@")[0]}/appclaim.json`, 'utf-8', function(err, data) {
+	if (err) throw err;
+	var newValue = data.replace(`${appclaim}`, newclaim);
+	fs.writeFile(`./data/users/${sender.split("@")[0]}/appclaim.json`, newValue, 'utf-8', function(err, data) {
+		if (err) throw err;
+	})
+})
+	
 
 
 break
