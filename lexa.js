@@ -5625,7 +5625,6 @@ case 'feed':
 
 try {		
 
-
 					function kyun(seconds){
 						function pad(s){
 						return (s < 10 ? '0' : '') + s;
@@ -5762,11 +5761,12 @@ ${tempSymbol} ${skytext} ${temperature}°C
 📡 𝑌𝑜𝑢𝑟 𝐶𝑎𝑟𝑟𝑖𝑒𝑟
 ${carrier}
 - - - - - - - - - - - - - - - - - -
-${design} _StarDash App Version 1.2.0_
-**NEW: RANDOM ANIME QUOTES**
-**NEW: ABOUT PAGE**
-**NEW: YTB PAGE**
-https://drive.google.com/file/d/1x4dG4QdA99PYEhQv7P1Ncqn6iv6PpsnD/view?usp=sharing
+${design} _StarDash App Version 1.3.0_
+*NEW:* RANDOM ANIME QUOTES
+*NEW:* ABOUT PAGE
+*NEW:* YTB PAGE
+*NEW:* GET FREE MONEY
+https://drive.google.com/file/d/18gdAwvY_Nv11n1d49O_EKFJYRreIh_rl/view?usp=sharing
 - - - - - - - - - - - - - - - - - -
 𝐵𝑜𝑡 ⌖ ${stats.percentage}% ${energy} 
 _${stats.status}_
