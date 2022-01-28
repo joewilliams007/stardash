@@ -4615,7 +4615,7 @@ case 'getcode':
 
 break
 
-case 'appclaim':
+case 'starclaim':
 var getJSON = require('get-json')
 getJSON(`https://api.countapi.xyz/hit/namespace/stardashappreward1istest1${sender.split("@")[0]}`, function(error, res){
 
