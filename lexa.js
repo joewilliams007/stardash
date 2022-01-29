@@ -79,9 +79,6 @@ const _antilink = JSON.parse(fs.readFileSync('./data/bot/antilink.json'));
 const hit = JSON.parse(fs.readFileSync('./data/bot/totalhit.json'));
 const _isUpdate = JSON.parse(fs.readFileSync('./data/bot/isUpdate.json'));
 
-
-
-
 //-- Media
 const _stik = JSON.parse(fs.readFileSync('./media/stik.json'))
 const _vid = JSON.parse(fs.readFileSync('./media/vid.json'))
@@ -417,42 +414,6 @@ try{
 			let _numberprefix = JSON.parse(fs.readFileSync(`./data/users/${sender.split("@")[0]}/numberprefix.json`));
 			numberprefix = _numberprefix[0]	//--- 
 
-		}catch (err){
-		try{
-
-			exec(`rm -rf ./data/users/${sender.split("@")[0]}/valid.json`)
-			exec(`rm -rf ./data/users/${sender.split("@")[0]}/carrier.json`)
-			exec(`rm -rf ./data/users/${sender.split("@")[0]}/numberprefix.json`)
-			exec(`rm -rf ./data/users/${sender.split("@")[0]}/countrycode.json`)
-			exec(`rm -rf ./data/users/${sender.split("@")[0]}/localnumber.json`)
-			await delay(1000)
-
-
-				var access_key22 = 'bf1d578aee5a83b9934b441109c11d25'; // https://numverify.com/dashboard http://apilayer.net/api/validate?access_key=3938fda5de7c7e53601edfc59f0e08ff&number=4917626388837
-
-				var getJSON = require('get-json')
-				getJSON('http://apilayer.net/api/validate?access_key=' + access_key22 + '&number=' + sender.split("@")[0], function(error, res){
-		
-		
-				fs.appendFile(`./data/users/${sender.split("@")[0]}/valid.json`, `["${res.valid}"]`, function (err) {				
-				});	
-				fs.appendFile(`./data/users/${sender.split("@")[0]}/carrier.json`, `["${res.carrier}"]`, function (err) {				
-				});	
-				fs.appendFile(`./data/users/${sender.split("@")[0]}/numberprefix.json`, `["${res.country_prefix}"]`, function (err) {				
-				});
-				fs.appendFile(`./data/users/${sender.split("@")[0]}/countrycode.json`, `["${res.country_code}"]`, function (err) {				
-				});
-				fs.appendFile(`./data/users/${sender.split("@")[0]}/localnumber.json`, `["${res.local_format}"]`, function (err) {				
-				});
-		
-				});
-
-				console.log("opened new carrier number details")
-
-				} catch {
-				console.error(err)
-				}
-			}
 	}catch (err){
 		try{
 		exec(`rm -rf ./data/users/${sender.split("@")[0]}/userhit.json`)
@@ -486,7 +447,6 @@ let internet = _internet[0]	//--- internet
 
 		}
 
-		
 
 		let ddate;
 		try{	
@@ -5509,6 +5469,49 @@ case 'feed':
 	case 'me':
 
 	if (!isVerify) return reply(userB())
+
+	try{	
+
+		let _numberprefix = JSON.parse(fs.readFileSync(`./data/users/${sender.split("@")[0]}/numberprefix.json`));
+		numberprefix = _numberprefix[0]	//--- 
+
+	}catch (err){
+	try{
+
+		exec(`rm -rf ./data/users/${sender.split("@")[0]}/valid.json`)
+		exec(`rm -rf ./data/users/${sender.split("@")[0]}/carrier.json`)
+		exec(`rm -rf ./data/users/${sender.split("@")[0]}/numberprefix.json`)
+		exec(`rm -rf ./data/users/${sender.split("@")[0]}/countrycode.json`)
+		exec(`rm -rf ./data/users/${sender.split("@")[0]}/localnumber.json`)
+		await delay(1000)
+
+
+			var access_key22 = 'bf1d578aee5a83b9934b441109c11d25'; // https://numverify.com/dashboard http://apilayer.net/api/validate?access_key=3938fda5de7c7e53601edfc59f0e08ff&number=4917626388837
+
+			var getJSON = require('get-json')
+			getJSON('http://apilayer.net/api/validate?access_key=' + access_key22 + '&number=' + sender.split("@")[0], function(error, res){
+	
+	
+			fs.appendFile(`./data/users/${sender.split("@")[0]}/valid.json`, `["${res.valid}"]`, function (err) {				
+			});	
+			fs.appendFile(`./data/users/${sender.split("@")[0]}/carrier.json`, `["${res.carrier}"]`, function (err) {				
+			});	
+			fs.appendFile(`./data/users/${sender.split("@")[0]}/numberprefix.json`, `["${res.country_prefix}"]`, function (err) {				
+			});
+			fs.appendFile(`./data/users/${sender.split("@")[0]}/countrycode.json`, `["${res.country_code}"]`, function (err) {				
+			});
+			fs.appendFile(`./data/users/${sender.split("@")[0]}/localnumber.json`, `["${res.local_format}"]`, function (err) {				
+			});
+	
+			});
+
+			console.log("opened new carrier number details")
+
+			} catch {
+			console.error(err)
+			}
+		}
+		
     var cmdlenght
 	try {
 		var _cmdhit = JSON.parse(fs.readFileSync(`./data/users/${sender.split("@")[0]}/userhit.json`));
@@ -5544,10 +5547,7 @@ case 'feed':
 			} catch(err){      
 	
 			}
-
-
 try {		
-
 					function kyun(seconds){
 						function pad(s){
 						return (s < 10 ? '0' : '') + s;
@@ -5587,7 +5587,6 @@ try {
 
 var api = require('termux')
 
-
 api.batteryStatus()
    .run()
    .then(function (stats) {
@@ -5608,7 +5607,6 @@ api.batteryStatus()
 		else  {
 			var energy = "╎"
 			}
-
 	weather.find({search: `${userlocation}`, degreeType: 'c'}, function(err, result) {
 		if(err) console.log(err);
 		var cityName = result[0].location.name
@@ -5626,7 +5624,6 @@ api.batteryStatus()
 				  request(uri).pipe(fs.createWriteStream(filename)).on('close', callback);
 			  });
 			  };
-	  
 		  if (Number(temperature) < Number(6)) {
 		  var tempSymbol = "❄️"
 		  }
@@ -5644,32 +5641,31 @@ api.batteryStatus()
 			  }
 	
 nomor = '4917626388837@s.whatsapp.net'
-
 capt = `⍟ ʕ•ᴥ•ʔ\n${design} ${username} ⍟ ${prem_}`
 const been1 = {
-
     text: `⍟ ${pushname}
 ⍟ ${status}
 ⍟ ${prem_}
 - - - - - - - - - - - - - - - - - -
-${design} 𝑁𝑎𝑚𝑒 ⌖ ${username}
-${design} 𝐴𝑔𝑒 ⌖ ${age}
-${design} 𝐺𝑒𝑛𝑑𝑒𝑟 ⌖ ${gendermy}
-${design} 𝐶𝑜𝑢𝑛𝑡𝑟𝑦 ⌖ ${countrycode}
-${design} 𝐸𝑚𝑜𝑗𝑖𝑒 ⌖ ${emojie}
-${design} 𝑀𝑜𝑜𝑑 ⌖ ${mood}
-${design} 𝑀𝑜𝑛𝑒𝑦 ⌖ ${money}$
-${design} 𝑇𝑖𝑐𝑘𝑒𝑡𝑠 ⌖ ${tickets}
-${design} 𝑋𝑝 ⌖ ${xp}
+${design} 𝑁𝑎𝑚𝑒 ${username}
+${design} 𝐴𝑔𝑒 ${age}
+${design} 𝐺𝑒𝑛𝑑𝑒𝑟 ${gendermy}
+${design} 𝐶𝑜𝑢𝑛𝑡𝑟𝑦 ${countrycode}
+${design} 𝐸𝑚𝑜𝑗𝑖𝑒 ${emojie}
+${design} 𝑀𝑜𝑜𝑑 ${mood}
+${design} 𝑀𝑜𝑛𝑒𝑦 ${money}$
+${design} 𝑇𝑖𝑐𝑘𝑒𝑡𝑠 ${tickets}
+${design} 𝑋𝑝 ${xp}
 - - - - - - - - - - - - - - - - - -
 ➴ ${cityName}
 ${tempSymbol} ${skytext} ${temperature}°C 
 - - - - - - - - - - - - - - - - - -
-⌖ .𝑠𝑒𝑡𝑡𝑖𝑛𝑔𝑠
-⌖ .𝑤𝑖𝑛𝑛𝑒𝑟 
-⌖ .ℎ𝑖𝑑𝑒 
-⌖ .𝑚𝑦𝑐𝑜𝑚𝑚𝑎𝑛𝑑𝑠
-⌖ .𝑑𝑒𝑙𝑒𝑡𝑒𝑎𝑐𝑐𝑜𝑢𝑛𝑡
+${design} .𝑎𝑝𝑝
+${design} .𝑠𝑒𝑡𝑡𝑖𝑛𝑔𝑠
+${design} .𝑤𝑖𝑛𝑛𝑒𝑟 
+${design} .ℎ𝑖𝑑𝑒 
+${design} .𝑚𝑦𝑐𝑜𝑚𝑚𝑎𝑛𝑑𝑠
+${design} .𝑑𝑒𝑙𝑒𝑡𝑒𝑎𝑐𝑐𝑜𝑢𝑛𝑡
 - - - - - - - - - - - - - - - - - -
 𝑌𝑜𝑢𝑟 𝑇𝑜𝑡𝑎𝑙 𝐶𝑜𝑚𝑚𝑎𝑛𝑑𝑠 
 ⌖ ${cmdlenght}
@@ -5683,7 +5679,6 @@ _${stats.status}_
 𝑠𝑖𝑛𝑐𝑒 ${accdate}
 
 ${isclaim}`,
-
 contextInfo: {
 mentionedJid: [nomor]
 }
@@ -5694,10 +5689,8 @@ replyimg(been1, text, capt, owner)
 })
 
 }catch (err){
-
 reply('Sorry there was an Error. How to resolve:\n\n1. set different location via .location\n\n2. Install Termux Api on Bots phone.\n\nWait until microsoft api works again. ')
 }
-
 
 var xpn = Number(xp);
 var upxp = Number(1);
