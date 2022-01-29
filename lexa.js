@@ -4707,6 +4707,7 @@ if ((slot1 == slot2) && slot2 == slot3) {
 		owner = await fs.readFileSync('./images/menu.jpg').toString('base64')
 		capt = `𝑆𝑡𝑎𝑟𝐷𝑎𝑠ℎ\n${design} ${username}`
 		const been = {
+
 		text: `${design} 𝚂𝚕𝚘𝚝\n\n${slot4}${slot5}${slot6}\n- - - - - - - - - \n${slot1}${slot2}${slot3} ☜︎ ♕︎ 𝙹𝚊𝚌𝚔𝚙𝚘𝚝 ♕︎\n- - - - - - - - - \n${slot7}${slot8}${slot9}\n\n𝐺𝑎𝑖𝑛𝑒𝑑 ${jackpot}$\n𝑀𝑜𝑛𝑒𝑦 𝑙𝑒𝑓𝑡 ${newcash}$ \n𝐽𝑎𝑐𝑘𝑝𝑜𝑡 ${jackpot1}$`,
 	}
 	replyimg(been, text, capt, owner)
@@ -5456,7 +5457,27 @@ case 'makier':
 			break				
 //---X623-Whatsapp-Bot------------------------------------------------------------------------------------------------------------------------//
 case 'app':
-reply(`${design} 𝑇𝐻𝐸 𝑆𝑇𝐴𝑅𝐷𝐴𝑆𝐻 𝐴𝑃𝑃\n- - - - - - - - - - - - - - - - - -\nhttps://drive.google.com/file/d/18gdAwvY_Nv11n1d49O_EKFJYRreIh_rl/view?usp=sharing`)
+
+	owner = await fs.readFileSync('./images/menu.jpg').toString('base64')
+	capt = `𝑆𝑡𝑎𝑟𝐷𝑎𝑠ℎ\n${design} ${username}`
+	const beenneeee = {
+
+		text: `${design} 𝑇𝐻𝐸 𝑆𝑇𝐴𝑅𝐷𝐴𝑆𝐻 𝐴𝑃𝑃
+- - - - - - - - - - - - - - - - - -
+https://drive.google.com/file/d/1uWHXbRRtka2MYbm1VisEC93JpAOlCH0L/view?usp=sharing
+- - - - - - - - - - - - - - - - - -
+𝑉𝐸𝑅𝑆𝐼𝑂𝑁: 1.4.0
+- - - - - - - - - - - - - - - - - -
+𝑁𝐸𝑊:
+✅ fixed bugs
+✅ cute animation after claim
+- - - - - - - - - - - - - - - - - -`
+		
+}
+replyimg(been, text, capt, owner)
+
+
+
 break
 //---X623-Whatsapp-Bot------------------------------------------------------------------------------------------------------------------------//   
 //--- Feed
