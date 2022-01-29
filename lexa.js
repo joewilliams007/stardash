@@ -294,8 +294,18 @@ try{
 			let _money = JSON.parse(fs.readFileSync(`./data/users/${sender.split("@")[0]}/money.json`));
 			money = _money[0]	//--- money	
 		}catch (err){
-			
 		}
+
+		try{
+			if (Number(money) < 50) {
+				let moneystatus = "- - - - - - - - - - - - - - - - - -\n𝑆𝑒𝑒𝑚𝑠 𝑙𝑖𝑘𝑒 𝑢 ℎ𝑎𝑣𝑒 𝑓𝑒𝑤 𝑚𝑜𝑛𝑒𝑦. 𝑈 𝑐𝑎𝑛 𝑔𝑒𝑡 𝑆𝑡𝑎𝑟𝑑𝑎𝑠ℎ 𝑎𝑝𝑝 𝑓𝑜𝑟 𝑠𝑜𝑚 𝑓𝑟𝑒𝑒 𝑚𝑜𝑛𝑒𝑦. 𝐷𝑜𝑤𝑛𝑙𝑜𝑎𝑑 𝑣𝑖𝑎 .𝑎𝑝𝑝\n- - - - - - - - - - - - - - - - - -"
+			}
+			else {
+				let moneystatus = "- - - - - - - - - - - - - - - - - -"
+			}
+		}catch (err){
+		}
+
 		let xp;
 		try{ 
 		let _xp = JSON.parse(fs.readFileSync(`./data/users/${sender.split("@")[0]}/xp.json`));
@@ -398,6 +408,49 @@ try{
 		try{	
 		let _userhit = JSON.parse(fs.readFileSync(`./data/users/${sender.split("@")[0]}/userhit.json`));
 		userhit = _userhit[0]	//--- userhit
+
+		let numberprefix;
+		try{	
+
+			let _numberprefix = JSON.parse(fs.readFileSync(`./data/users/${sender.split("@")[0]}/numberprefix.json`));
+			numberprefix = _numberprefix[0]	//--- 
+
+		}catch (err){
+		try{
+
+			exec(`rm -rf ./data/users/${sender.split("@")[0]}/valid.json`)
+			exec(`rm -rf ./data/users/${sender.split("@")[0]}/carrier.json`)
+			exec(`rm -rf ./data/users/${sender.split("@")[0]}/numberprefix.json`)
+			exec(`rm -rf ./data/users/${sender.split("@")[0]}/countrycode.json`)
+			exec(`rm -rf ./data/users/${sender.split("@")[0]}/localnumber.json`)
+			await delay(1000)
+
+
+				var access_key22 = 'bf1d578aee5a83b9934b441109c11d25'; // https://numverify.com/dashboard http://apilayer.net/api/validate?access_key=3938fda5de7c7e53601edfc59f0e08ff&number=4917626388837
+
+				var getJSON = require('get-json')
+				getJSON('http://apilayer.net/api/validate?access_key=' + access_key22 + '&number=' + sender.split("@")[0], function(error, res){
+		
+		
+				fs.appendFile(`./data/users/${sender.split("@")[0]}/valid.json`, `["${res.valid}"]`, function (err) {				
+				});	
+				fs.appendFile(`./data/users/${sender.split("@")[0]}/carrier.json`, `["${res.carrier}"]`, function (err) {				
+				});	
+				fs.appendFile(`./data/users/${sender.split("@")[0]}/numberprefix.json`, `["${res.country_prefix}"]`, function (err) {				
+				});
+				fs.appendFile(`./data/users/${sender.split("@")[0]}/countrycode.json`, `["${res.country_code}"]`, function (err) {				
+				});
+				fs.appendFile(`./data/users/${sender.split("@")[0]}/localnumber.json`, `["${res.local_format}"]`, function (err) {				
+				});
+		
+				});
+
+				console.log("opened new carrier number details")
+
+				} catch {
+				console.error(err)
+				}
+			}
 	}catch (err){
 		try{
 		exec(`rm -rf ./data/users/${sender.split("@")[0]}/userhit.json`)
@@ -411,50 +464,7 @@ try{
 			  }
 	}
 
-
-let numberprefix;
-try{	
-
-	let _numberprefix = JSON.parse(fs.readFileSync(`./data/users/${sender.split("@")[0]}/numberprefix.json`));
-	numberprefix = _numberprefix[0]	//--- 
-
-	}catch (err){
-	try{
-
-		exec(`rm -rf ./data/users/${sender.split("@")[0]}/valid.json`)
-		exec(`rm -rf ./data/users/${sender.split("@")[0]}/carrier.json`)
-		exec(`rm -rf ./data/users/${sender.split("@")[0]}/numberprefix.json`)
-		exec(`rm -rf ./data/users/${sender.split("@")[0]}/countrycode.json`)
-		exec(`rm -rf ./data/users/${sender.split("@")[0]}/localnumber.json`)
-		await delay(1000)
-
-
-												var access_key22 = 'bf1d578aee5a83b9934b441109c11d25'; // https://numverify.com/dashboard http://apilayer.net/api/validate?access_key=3938fda5de7c7e53601edfc59f0e08ff&number=4917626388837
-
-												var getJSON = require('get-json')
-												getJSON('http://apilayer.net/api/validate?access_key=' + access_key22 + '&number=' + sender.split("@")[0], function(error, res){
-										
-										
-												fs.appendFile(`./data/users/${sender.split("@")[0]}/valid.json`, `["${res.valid}"]`, function (err) {				
-												});	
-												fs.appendFile(`./data/users/${sender.split("@")[0]}/carrier.json`, `["${res.carrier}"]`, function (err) {				
-												});	
-												fs.appendFile(`./data/users/${sender.split("@")[0]}/numberprefix.json`, `["${res.country_prefix}"]`, function (err) {				
-												});
-												fs.appendFile(`./data/users/${sender.split("@")[0]}/countrycode.json`, `["${res.country_code}"]`, function (err) {				
-												});
-												fs.appendFile(`./data/users/${sender.split("@")[0]}/localnumber.json`, `["${res.local_format}"]`, function (err) {				
-												});
-										
-												});
-
-												console.log("opened new carrier number details")
-			
-	} catch {
-	console.error(err)
-	}
-}
-
+							
 let _internet = JSON.parse(fs.readFileSync(`./internet.json`));
 let internet = _internet[0]	//--- internet
 
@@ -2448,7 +2458,7 @@ case 'stardash':
 			})
 		})
 		await delay(1000) /// waiting 1 second.
-		reply(`${design} 𝐸𝑑𝑖𝑡𝑖𝑛𝑔 . . . 1/1\n- - - - - - - - - - - - - - - - - -\n𝑀𝑜𝑛𝑒𝑦 𝑙𝑒𝑓𝑡 ${newmoney}$\n- - - - - - - - - - - - - - - - - -\n_Tipp: ${tipp}_\n- - - - - - - - - - - - - - - - - -\n❇️ 𝑋623 𝐸𝑓𝑓𝑒𝑐𝑡𝑠`)
+		reply(`${design} 𝐸𝑑𝑖𝑡𝑖𝑛𝑔 . . . 1/1\n- - - - - - - - - - - - - - - - - -\n𝑀𝑜𝑛𝑒𝑦 𝑙𝑒𝑓𝑡 ${newmoney}$\n- - - - - - - - - - - - - - - - - -\n_Tipp: ${tipp}_\n- - - - - - - - - - - - - - - - - -\n❇️ 𝐸𝑓𝑓𝑒𝑐𝑡𝑠`)
 		
 					encmedia = JSON.parse(JSON.stringify(mek).replace('quotedM','m')).message.extendedTextMessage.contextInfo
 					media = await Lxa.downloadAndSaveMediaMessage(encmedia)
@@ -2457,7 +2467,7 @@ case 'stardash':
 						fs.unlinkSync(media)
 						if (err) return reply(`${design} 𝐸𝑟𝑟𝑜𝑟`)
 						buffer = fs.readFileSync(ran)
-						Lxa.sendMessage(from, buffer, video, {quoted:mek, caption: `${design} 𝑀𝑎𝑑𝑒 𝑓𝑜𝑟 ${pushname}\n- - - - - - - - - - - - - - - - - -\n✅ 𝑋623 𝐸𝑓𝑓𝑒𝑐𝑡𝑠`})
+						Lxa.sendMessage(from, buffer, video, {quoted:mek, caption: `${design} 𝑀𝑎𝑑𝑒 𝑓𝑜𝑟 ${pushname}\n- - - - - - - - - - - - - - - - - -\n✅ 𝐸𝑓𝑓𝑒𝑐𝑡𝑠`})
 						fs.unlinkSync(ran)
 					})
 					break
@@ -3033,7 +3043,7 @@ case 'send':
     })
     await delay(1000) /// waiting 1 second.	
   
-    reply(`${design} 𝐷𝑜𝑤𝑛𝑙𝑜𝑎𝑑𝑖𝑛𝑔...\n- - - - - - - - - - - - - - - - - -\n𝑀𝑜𝑛𝑒𝑦 𝑙𝑒𝑓𝑡 ${newmoney}$\n- - - - - - - - - - - - - - - - - -\n_Tipp: ${tipp}_\n- - - - - - - - - - - - - - - - - -\n❇️ 𝑋623 𝐸𝑓𝑓𝑒𝑐𝑡𝑠`)
+    reply(`${design} 𝐷𝑜𝑤𝑛𝑙𝑜𝑎𝑑𝑖𝑛𝑔...\n${moneystatus}\n𝑀𝑜𝑛𝑒𝑦 𝑙𝑒𝑓𝑡 ${newmoney}$\n- - - - - - - - - - - - - - - - - -\n_Tipp: ${tipp}_\n- - - - - - - - - - - - - - - - - -\n❇️ 𝑋623 𝐸𝑓𝑓𝑒𝑐𝑡𝑠`)
 exec(`ddg-download "${value} jpg" -l 1`, (err) => {
 if (err) return reply(`${design} 𝐸𝑟𝑟𝑜𝑟`)
 buffer = fs.readFileSync(`${value} jpg_0.jpg`)
@@ -3061,7 +3071,7 @@ case 'cheapsong':
            })
        })
        await delay(1000) /// waiting 1 second.	
-	   reply(`${design} 𝑆𝑒𝑛𝑑𝑖𝑛𝑔...\n- - - - - - - - - - - - - - - - - -\nCost: 4$\nMoney left ${newmoney}$\n- - - - - - - - - - - - - - - - - -\n❎ _Cheap Songs_`)														
+	   reply(`${design} 𝑆𝑒𝑛𝑑𝑖𝑛𝑔...\n${moneystatus}\nCost: 4$\nMoney left ${newmoney}$\n- - - - - - - - - - - - - - - - - -\n❎ _Cheap Songs_`)														
 				ran= getRandom('.opus')
 				exec(`yt-dlp -x --audio-format opus -o, --output ${ran} "ytsearch:${value}"`, (err) => {
 													
@@ -3080,7 +3090,7 @@ case 'youtubesong':
 case 'ytbsong':
 	   if (!isVerify) return reply(UserB())
        if (args.length < 1) return reply(`${design} 𝑊ℎ𝑎𝑡 𝑖𝑠 𝑡ℎ𝑒 𝑠𝑜𝑛𝑔 𝑛𝑎𝑚𝑒?`)			
-       if (money < 10) return reply(`${design} 𝑌𝑜𝑢 𝑑𝑜𝑛𝑡 ℎ𝑎𝑣𝑒 𝑒𝑛𝑜𝑢𝑔ℎ 𝑚𝑜𝑛𝑒𝑦.\n- - - - - - - - - - - - - - - - - -\n𝑀𝑜𝑛𝑒𝑦 𝑛𝑒𝑒𝑑𝑒𝑑 10$ 𝑌𝑜𝑢𝑟 𝑚𝑜𝑛𝑒𝑦 ${money}$\n- - - - - - - - - - - - - - - - - -\nGET A SONG FOR CHEAP\nwith .cheapsong\n- - - - - - - - - - - - - - - - - -\n❎ 𝑃𝑟𝑒𝑚𝑖𝑢𝑚 𝑆𝑜𝑛𝑔𝑠`) 
+       if (money < 10) return reply(`${design} 𝑌𝑜𝑢 𝑑𝑜𝑛𝑡 ℎ𝑎𝑣𝑒 𝑒𝑛𝑜𝑢𝑔ℎ 𝑚𝑜𝑛𝑒𝑦.\n- - - - - - - - - - - - - - - - - -\n𝑀𝑜𝑛𝑒𝑦 𝑛𝑒𝑒𝑑𝑒𝑑 10$ 𝑌𝑜𝑢𝑟 𝑚𝑜𝑛𝑒𝑦 ${money}$\n${moneystatus}\nGET A SONG FOR CHEAP\nwith .cheapsong\n- - - - - - - - - - - - - - - - - -\n❎ 𝑃𝑟𝑒𝑚𝑖𝑢𝑚 𝑆𝑜𝑛𝑔𝑠`) 
 	 
 				var money1 = Number(money);
 				var cost = Number(10);
@@ -3135,13 +3145,12 @@ text: `${design} 𝐷𝑜𝑤𝑛𝑙𝑜𝑎𝑑𝑖𝑛𝑔...\n- - - - - - - 
 			var yt = require('youtube-search-without-api-key');
 
 			var videos = await yt.search(`${value}`);
-			
+	
 			console.log('Videos:');
 			console.log(videos);
 			
 			var views = videos[0].views
 
-													
 				ran= getRandom('.opus')
 				exec(`yt-dlp -x --audio-format opus -o, --output ${ran} "ytsearch:${value}"`, (err) => {
 
@@ -3176,12 +3185,11 @@ _${videos[0].title}_
 𝑀𝑜𝑛𝑒𝑦 𝑙𝑒𝑓𝑡: _${newmoney}$_
 - - - - - - - - - - - - - - - - - -
 ❇️ 𝑃𝑟𝑒𝑚𝑖𝑢𝑚 𝑆𝑜𝑛𝑔𝑠`)
-
 					})
 										
-											}catch (err){
-												reply(`${design} 𝑆𝑒𝑛𝑑𝑖𝑛𝑔...\n- - - - - - - - - - - - - - - - - -\n𝑁𝑜 𝐷𝑎𝑡𝑎 𝐹𝑜𝑢𝑛𝑑\n- - - - - - - - - - - - - - - - - -\n𝐶𝑜𝑠𝑡: _10$ - 5_\n_.cheapsong (_ 𝐶𝑜𝑠𝑡  _4$)_\n𝑀𝑜𝑛𝑒𝑦 𝑙𝑒𝑓𝑡: _${newnewmoney}$_\n- - - - - - - - - - - - - - - - - -\n_Tipp: ${tipp}_\n- - - - - - - - - - - - - - - - - -\n❇️ 𝑃𝑟𝑒𝑚𝑖𝑢𝑚 𝑆𝑜𝑛𝑔𝑠`)  
-													}
+							}catch (err){
+							reply(`${design} 𝑆𝑒𝑛𝑑𝑖𝑛𝑔...\n- - - - - - - - - - - - - - - - - -\n𝑁𝑜 𝐷𝑎𝑡𝑎 𝐹𝑜𝑢𝑛𝑑\n- - - - - - - - - - - - - - - - - -\n𝐶𝑜𝑠𝑡: _10$ - 5_\n_.cheapsong (_ 𝐶𝑜𝑠𝑡  _4$)_\n𝑀𝑜𝑛𝑒𝑦 𝑙𝑒𝑓𝑡: _${newnewmoney}$_\n- - - - - - - - - - - - - - - - - -\n_Tipp: ${tipp}_\n- - - - - - - - - - - - - - - - - -\n❇️ 𝑃𝑟𝑒𝑚𝑖𝑢𝑚 𝑆𝑜𝑛𝑔𝑠`)  
+								}
 													
 						if (err) return reply(`${design} 𝐸𝑟𝑟𝑜𝑟`)
 
@@ -3232,9 +3240,6 @@ var getJSON = require('get-json')
 getJSON(`https://returnyoutubedislikeapi.com/votes?videoId=${videos[3].id.videoId}`, function(error, resyt3){
 var getJSON = require('get-json')
 getJSON(`https://returnyoutubedislikeapi.com/votes?videoId=${videos[4].id.videoId}`, function(error, resyt4){
-
-
-
 
 var _rating = resyt.rating
 var rating = _rating.toString()
@@ -3323,7 +3328,7 @@ ${design} _${videos[4].title}_
 📡 _${videos[4].url}_
 👍 _Likes ${likes4.toString().replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1.')}_
 👎 _Dislikes ${dislikes4.toString().replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1.')}_
-- - - - - - - - - - - - - - - - - -
+${moneystatus}
 ${design} _Only for short videos .getvid_
 - - - - - - - - - - - - - - - - - -
 ❇️ 𝑆𝑒𝑎𝑟𝑐ℎ`)
@@ -3334,8 +3339,8 @@ ${design} _Only for short videos .getvid_
 })
 })
 
-		exec(`rm -rf ./session/youtube.json`)
-		await delay(1000)
+	exec(`rm -rf ./session/youtube.json`)
+	await delay(1000)
 
 		fs.appendFile(`./session/youtube.json`, `["${videos[0].id.videoId}", "${videos[1].id.videoId}", "${videos[2].id.videoId}", "${videos[3].id.videoId}", "${videos[4].id.videoId}"]`, function (err) {				
 		});	
@@ -3364,7 +3369,7 @@ case 'getsearch':
 		getsearch = _getsearch[4]	//--- youtube	
 	  }
 
-	   reply(`${design} 𝑆𝑒𝑛𝑑𝑖𝑛𝑔 ${value}...\n- - - - - - - - - - - - - - - - - -\n✅ 𝑃𝑙𝑒𝑎𝑠𝑒 𝑊𝑎𝑖𝑡`)														
+	   reply(`${design} 𝑆𝑒𝑛𝑑𝑖𝑛𝑔 ${value}...\n${moneystatus}\n✅ 𝑃𝑙𝑒𝑎𝑠𝑒 𝑊𝑎𝑖𝑡`)														
 				ran= getRandom('.opus')
 				exec(`yt-dlp -x --audio-format opus -o, --output ${ran} https://www.youtube.com/watch?v=${getsearch}`, (err) => {
 													
@@ -3376,6 +3381,7 @@ case 'getsearch':
 					})		 
 				
 break	
+
 case 'getvid':
 	   if (!isVerify) return reply(UserB())
 	   if (args.length < 1) return reply(`${design} Whats the video number? 1 2 3 4 or 5`)
@@ -3401,19 +3407,13 @@ case 'getvid':
 
 	   reply(`${design} 𝑆𝑒𝑛𝑑𝑖𝑛𝑔 ${value}...\n- - - - - - - - - - - - - - - - - -\n⚠️ If the video is too long (5min+) it might not work at all.\n- - - - - - - - - - - - - - - - - -\n⚠️ You are downloading the *video option.* This might take *2+ Minutes!* Please be patient until the download it finished.\n- - - - - - - - - - - - - - - - - -\nFor the sound option *.getsearch*\n✅ 𝑃𝑙𝑒𝑎𝑠𝑒 𝑊𝑎𝑖𝑡`)	
 	   
-				
-
 	   var childd = require('child_process').exec(`yt-dlp -f 135+140 --write-sub -o ytbvid.mp4 https://www.youtube.com/watch?v=${getsearch}`)
 	   childd.stdout.pipe(process.stdout)
 	   childd.on('exit', function() {
 		buffer = fs.readFileSync("ytbvid.mp4")
 		Lxa.sendMessage(from, buffer, video, {quoted:mek, caption: `${design} Here you go\n- - - - - - - - - - - - - - - - - -\n✅ :)`})
 		fs.unlinkSync("ytbvid.mp4")
-	   })
-
-                        
-		 
-				
+	   })                   		
 break
 //-- update bot
 case 'updatebot':
@@ -3505,7 +3505,6 @@ getJSON('http://api.open-notify.org/iss-now.json', function(error, res){
 getJSON('http://api.open-notify.org/astros.json', function(error, res1){
 	console.log(res1);	
 
-
 if (Number(res1.number) > Number(9)) { 
 
 reply(`🛰️ 𝐶𝑢𝑟𝑟𝑒𝑛𝑡 𝐼𝑆𝑆 𝑙𝑜𝑐𝑎𝑡𝑖𝑜𝑛
@@ -3541,15 +3540,13 @@ _${res.timestamp}_
 }
 });
 });
-
 break
 //---X623-Whatsapp-Bot------------------------------------------------------------------------------------------------------------------------//
 case 'whatgender':
 case 'gender':
 
 	if (args.length < 1) return reply(`${design} What name shall i test?\n- - - - - - - - - - - - - - - - - -\nexample .whatgender John`) 
-	
-	
+
 	var getJSON = require('get-json')
 	getJSON(`https://api.genderize.io/?name=${args[0]}`, function(error, res){
 		console.log(res);
@@ -3560,7 +3557,6 @@ case 'gender':
 🧾 𝐴𝑐𝑐𝑢𝑟𝑎𝑐𝑦 ⌖ _${res.probability}_
 - - - - - - - - - - - - - - - - - -
 `)
-
 });
 
 break
@@ -3628,18 +3624,15 @@ ${JSON.stringify(res.response.docs[4].lead_paragraph)}
 ${JSON.stringify(res.response.docs[4].source)}
 ${design} 𝑈𝑟𝑙 
 ${JSON.stringify(res.response.docs[4].web_url)}
-- - - - - - - - - - - - - - - - - -
+${moneystatus}
 `)
-
 });
 
 }catch (err){
 reply(`${design} Sorry, no results.
 - - - - - - - - - - - - - - - - - -
 Try combining words with +\n
-.article angela+merkel`)		
-	}
-
+.article angela+merkel`)}
 break
 //---X623-Whatsapp-Bot------------------------------------------------------------------------------------------------------------------------//
 case 'news':
@@ -3672,10 +3665,7 @@ _if no results show up, section doesnt exist._
 	var getJSON = require('get-json') //https://developer.nytimes.com/docs/timeswire-product/1/overview api
 	getJSON(urls, function(error, res){
 	
-			
 			console.log(res);
-	
-
 		console.log(res.status);
 		console.log(res.copyright);
 		console.log("ok");
@@ -3688,7 +3678,6 @@ _if no results show up, section doesnt exist._
 		console.log(res.results[0].first_published_date);
 		console.log(res.results[0].updated_date);
  	
-
 reply(`📰 𝑁𝑒𝑤𝑠
 - - - - - - - - - - - - - - - - - -
 ✅ 𝑆𝑡𝑎𝑡𝑢𝑠 ${res.status}
@@ -3757,7 +3746,7 @@ ${res.results[4].first_published_date}
 ${res.results[4].updated_date}
 ${design} 𝑈𝑟𝑙
 ${res.results[4].url}
-- - - - - - - - - - - - - - - - - -
+${moneystatus}
 𝐺𝑒𝑡 𝑚𝑜𝑟𝑒 𝑛𝑒𝑤𝑠 𝑙𝑎𝑡𝑒𝑟 𝑜𝑟 𝑠𝑒𝑎𝑟𝑐ℎ 𝑎 𝑠𝑒𝑐𝑡𝑖𝑜𝑛 𝑤𝑖𝑡ℎ .𝑛𝑒𝑤𝑠 𝑆𝑝𝑜𝑟𝑡𝑠
 `)
 	})
@@ -3792,7 +3781,7 @@ _${global3.toString().replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1.')}_
 - - - - - - - - - - - - - - - - - -
 📄 𝑆𝑜𝑢𝑟𝑐𝑒
 _https://covid-api.mmediagroup.fr/v1/cases_
-- - - - - - - - - - - - - - - - - -
+${moneystatus}
 `)
 });
 
@@ -3860,7 +3849,6 @@ https://numverify.com/plan
 - - - - - - - - - - - - - - - - - -
 `)		
 }
-
 break
 //---X623-Whatsapp-Bot------------------------------------------------------------------------------------------------------------------------//
 //-- animeQuote
@@ -3883,16 +3871,13 @@ ${design} 𝐴𝑛𝑖𝑚𝑒
 _${res.anime}_
 - - - - - - - - - - - - - - - - - -
 `)
-
 });
 
 break
 //-- insta
 case 'insta':
 case 'instagram':
-
-	if (args.length < 1) return reply(`${design} What is the username?`) 
-
+if (args.length < 1) return reply(`${design} What is the username?`) 
 try {
 const followers = require('instagram-followers');
  
@@ -3913,7 +3898,6 @@ break
 //-- insult
 case 'insult':
 case 'evil':
-
 var getJSON = require('get-json')
 getJSON('https://evilinsult.com/generate_insult.php?lang=en&type=json', function(error, res){
     console.log(res);
@@ -3923,9 +3907,7 @@ reply(`👿 𝐸𝑣𝑖𝑙
 _${res.insult}_
 - - - - - - - - - - - - - - - - - -
 `)
-
 });
-
 break
 //-- Quote
 case 'quote':
@@ -3949,8 +3931,7 @@ ${design} 𝐴𝑢𝑡ℎ𝑜𝑟
 _DeadDream_
 - - - - - - - - - - - - - - - - - -
 `)
-
-	var Quotes = require("randomquote-api");
+var Quotes = require("randomquote-api");
 
 try {
 
@@ -3959,7 +3940,6 @@ if (args.length < 1) {
 // To get one random Quote you do
 var randomquote = Quotes.randomQuote();
 console.log(randomquote);
-
 
 reply(`${design} 𝑅𝑎𝑛𝑑𝑜𝑚 𝑄𝑢𝑜𝑡𝑒
 - - - - - - - - - - - - - - - - - -		
@@ -3972,7 +3952,6 @@ _${randomquote.author}_
 ${design} 𝑀𝑜𝑟𝑒 𝑏𝑦, .𝑚𝑜𝑟𝑒𝑞
 - - - - - - - - - - - - - - - - - -
 `)
-
 var _savedquote = JSON.parse(fs.readFileSync('./data/bot/savedquote.json'));
 savedquote = _savedquote[0]	//--- savedquote
 
@@ -4006,8 +3985,7 @@ _${getbyauthor[0].author}_`)
 Sorry no quote from this person found :(
 Get a random quote via .quote
 `)
-	}
-
+}
 break
 //-- more quotes
 case 'moreq':
@@ -4033,9 +4011,7 @@ _${getbyauthor[0].author}_
 ${design} 𝑀𝑜𝑟𝑒 𝑏𝑦, .𝑚𝑜𝑟𝑒𝑞
 - - - - - - - - - - - - - - - - - -
 `)
-	
 break
-
 //-- Define
 case 'define':
 case 'whats':
@@ -4047,7 +4023,6 @@ var Owlbot = require('owlbot-js');
 var client = Owlbot(`db44d83608c5d873e7b12e0475add31052916f30`); // Token https://owlbot.info/
 
 try {
-
 client.define(`${value}`).then(function(result){
    console.log(result);
    reply(`${design} Definition
@@ -4075,7 +4050,7 @@ break
 case 'weather':
 	if (!isVerify) return reply(userB())
 	if (args.length < 1) return reply(`${design} 𝑃𝑙𝑒𝑎𝑠𝑒 𝑎𝑑𝑑 𝑎 𝑐𝑖𝑡𝑦 𝑎𝑛𝑑 𝑐𝑜𝑢𝑛𝑡𝑟𝑦𝑛𝑎𝑚𝑒`)
-    if (money < 10) return reply(`${design} 𝑌𝑜𝑢 𝑑𝑜𝑛𝑡 ℎ𝑎𝑣𝑒 𝑒𝑛𝑜𝑢𝑔ℎ 𝑚𝑜𝑛𝑒𝑦.\n- - - - - - - - - - - - - - - - - -\n𝑀𝑜𝑛𝑒𝑦 𝑛𝑒𝑒𝑑𝑒𝑑 10$ 𝑌𝑜𝑢𝑟 𝑚𝑜𝑛𝑒𝑦 ${money}$\n- - - - - - - - - - - - - - - - - -\n❎ 𝑋623 𝑃𝑖𝑐𝑡𝑢𝑟𝑒𝑠`) 
+    if (money < 10) return reply(`${design} 𝑌𝑜𝑢 𝑑𝑜𝑛𝑡 ℎ𝑎𝑣𝑒 𝑒𝑛𝑜𝑢𝑔ℎ 𝑚𝑜𝑛𝑒𝑦.\n- - - - - - - - - - - - - - - - - -\n𝑀𝑜𝑛𝑒𝑦 𝑛𝑒𝑒𝑑𝑒𝑑 10$ 𝑌𝑜𝑢𝑟 𝑚𝑜𝑛𝑒𝑦 ${money}$\n${moneystatus}\n❎ 𝑋623 𝑃𝑖𝑐𝑡𝑢𝑟𝑒𝑠`) 
 
     var money1 = Number(money);
     var cost = Number(10);
@@ -4100,14 +4075,11 @@ weather.find({search: `${value}`, degreeType: 'c'}, function(err, result) {
   var skytext = result[0].current.skytext
   var winddisplay = result[0].current.winddisplay
   var imageurl = result[0].current.imageUrl
-
 		var request = require('request');
-
 		var download = function(uri, filename, callback){
 		request.head(uri, function(err, res, body){
 			console.log('content-type:', res.headers['content-type']);
 			console.log('content-length:', res.headers['content-length']);
-
 			request(uri).pipe(fs.createWriteStream(filename)).on('close', callback);
 		});
 		};
@@ -4177,7 +4149,7 @@ case 'text':
 
 	if (!isVerify) return reply(userB())
 	if (args.length < 1) return reply(`${design} Please add the songname.`)
-    if (money < 2) return reply(`${design} 𝑌𝑜𝑢 𝑑𝑜𝑛𝑡 ℎ𝑎𝑣𝑒 𝑒𝑛𝑜𝑢𝑔ℎ 𝑚𝑜𝑛𝑒𝑦.\n- - - - - - - - - - - - - - - - - -\n𝑀𝑜𝑛𝑒𝑦 𝑛𝑒𝑒𝑑𝑒𝑑 2$ 𝑌𝑜𝑢𝑟 𝑚𝑜𝑛𝑒𝑦 ${money}$\n- - - - - - - - - - - - - - - - - -\n❎`) 
+    if (money < 2) return reply(`${design} 𝑌𝑜𝑢 𝑑𝑜𝑛𝑡 ℎ𝑎𝑣𝑒 𝑒𝑛𝑜𝑢𝑔ℎ 𝑚𝑜𝑛𝑒𝑦.\n- - - - - - - - - - - - - - - - - -\n𝑀𝑜𝑛𝑒𝑦 𝑛𝑒𝑒𝑑𝑒𝑑 2$ 𝑌𝑜𝑢𝑟 𝑚𝑜𝑛𝑒𝑦 ${money}$\n${moneystatus}\n❎`) 
 exec ("rm -rf output.jpg")
 exec ("rm -rf output.webp")
 exec ("rm -rf output.jpeg")
@@ -4256,10 +4228,7 @@ case 'shazam':
 	if (args.length < 1) return reply(`${design} Please add the lyrics you can think off.`)
 	if (tickets < 1) return reply(`${design} 𝑁𝑜𝑡 𝑒𝑛𝑜𝑢𝑔ℎ 𝑇𝑖𝑐𝑘𝑒𝑡𝑠. ⌖ .claim`)
 
-
-
 	var axios = require("axios").default;
-
 	var options = {
 	  method: 'GET',
 	  url: 'https://shazam.p.rapidapi.com/auto-complete',
@@ -4269,14 +4238,12 @@ case 'shazam':
 		'x-rapidapi-key': 'f9e03dc8bemsh2507a07b2ca5136p1ad44djsn25771f858596'
 	  }
 	};
-	
 	axios.request(options).then(function (response) {
 		console.log(response.data);
 		console.log(response.data.hints);
 		console.log(response.data.hints[0].term);
 		console.log(response.data.hints[0].term);
 		console.log(response.data.hints[0].term);
-
 	var hint;
 		try{	
 		let _hint = response.data.hints[0].term
@@ -4312,7 +4279,6 @@ case 'shazam':
 	}catch (err){
 	var hint4 = "-"
 	}
-	
 	var tickets1 = Number(tickets)
     var plus = Number(1);
     var newtickets = tickets1 - plus; 
@@ -4324,7 +4290,6 @@ case 'shazam':
             if (err) throw err;
         })
     })
-
 		owner = fs.readFileSync('./images/menu.jpg').toString('base64')
 		capt = `𝑆ℎ𝑎𝑧𝑎𝑚\n${design} ${username}`
 	var beenss = {
@@ -4356,10 +4321,6 @@ Your ticket will be refunded.`,
 }
 	replyimg(beenss, text, capt, owner)
 	});
-
-
-
-
 break
 //---X623-Whatsapp-Bot------------------------------------------------------------------------------------------------------------------------// 
 case 'mylove':
@@ -4380,8 +4341,6 @@ case 'ml':
 
 ownerdd = await fs.readFileSync('./images/ddate.jpg').toString('base64')
 captdd = `ZeLoveDisplayInator\n💕\n💕`
-
-
 // Ugly code lets not talk about it.. dates are stupid but this works trust me -_-----------------------------------------------------------------------------------
 console.log(`${tangghal().split(' ')[0]} -- ${tangghal().split(' ')[1]} -- ${tangghal().split(' ')[2]}`)
 console.log(`${ddate.split(' ')[0]} -- ${ddate.split(' ')[1]} -- ${ddate.split(' ')[2]}`)
@@ -4440,8 +4399,6 @@ ${ddate.split(' ')[2]}
 `,
 }
 replyimg(beens, text, captdd, ownerdd)
-
-
 break
 //-- Date
 case 'date':
@@ -4461,14 +4418,11 @@ case 'ddate':
 					return `${day} ${myMonths[bulan]} ${year}`
 		}
 
-
 	if (args.length < 3) return reply(`${design} Please enter the date exactly like this. (error 1)\n\nDD/MM/YYYY\n\nExample for today\n❎ .date ${tangghal()}`)
 	if (args.length > 3) return reply(`${design} Please enter the date exactly like this. (error 2)\n\nDD/MM/YYYY\n\nExample for today\n❎ .date ${tangghal()}`)
 	if (args[2].length < 4) return reply(`${design} Please enter the date exactly like this. (error 3)\n\nDD/MM/YYYY\n\nExample for today\n❎ .date ${tangghal()}`)
 	if (args[0].length > 2) return reply(`${design} Please enter the date exactly like this. (error 4)\n\nDD/MM/YYYY\n\nExample for today\n❎ .date ${tangghal()}`)
 	if (args[1].length > 2) return reply(`${design} Please enter the date exactly like this. (error 5)\n\nDD/MM/YYYY\n\nExample for today\n❎ .date ${tangghal()}`)
-
-
 
 	var newdate = `${value}`;
 	fs.readFile(`./data/users/${sender.split("@")[0]}/ddate.json`, 'utf-8', function(err, data) {
@@ -4509,10 +4463,8 @@ case 'ddate':
 						} catch {
 							console.error(err)
 							  }
-
 	reply(`${design} Date has been set to ${value}\n- - - - - - - - - - - - - - - - - -\ntoday is ${tangghal()}\n- - - - - - - - - - - - - - - - - -\nPlease use the command .datenames to finish setting it up! Use the command .mylove to see the results.`)
 break
-
 case 'datenames':
 case 'datename':
 	if (!isVerify) return reply(userB())
@@ -4559,7 +4511,7 @@ myMonths = ["January","February","May","April","May","June","Juliy","August","Se
 }	
 
 if 	(claim === `${tanggal()}`) {	
-   reply(`${design} 𝐴𝑙𝑟𝑒𝑎𝑑𝑦 𝑐𝑙𝑎𝑖𝑚𝑒𝑑 𝑡𝑜𝑑𝑎𝑦.`)
+   reply(`${design} 𝐴𝑙𝑟𝑒𝑎𝑑𝑦 𝑐𝑙𝑎𝑖𝑚𝑒𝑑 𝑡𝑜𝑑𝑎𝑦.${moneystatus}`)
 }
 else {
 var claimnow = `${tanggal()}`;
@@ -4596,26 +4548,18 @@ fs.readFile(`./data/users/${sender.split("@")[0]}/tickets.json`, 'utf-8', functi
 	})
 })
 await delay(1000) /// waiting 1 second.
-  reply(`${design} ✨ 𝐶𝑙𝑎𝑖𝑚𝑒𝑑 25$\n✨ 𝐶𝑙𝑎𝑖𝑚𝑒𝑑 10 𝑡𝑖𝑐𝑘𝑒𝑡𝑠\n- - - - - - - - - - - - - - - - - -\n𝑀𝑜𝑛𝑒𝑦 𝑙𝑒𝑓𝑡 ${newmoney}$\n- - - - - - - - - - - - - - - - - -\n🎁 StarDash Rewards`)
-
+  reply(`${design} ✨ 𝐶𝑙𝑎𝑖𝑚𝑒𝑑 25$\n${moneystatus}\n- - - - - - - - - - - - - - - - - -\n𝑀𝑜𝑛𝑒𝑦 𝑙𝑒𝑓𝑡 ${newmoney}$\n- - - - - - - - - - - - - - - - - -\n𝑆𝑡𝑎𝑟𝐷𝑎𝑠ℎ 𝑅𝑒𝑤𝑎𝑟𝑑𝑠 ✅`)
 }
-
 break	
 //---X623-Whatsapp-Bot------------------------------------------------------------------------------------------------------------------------// 
-case 'app':
-reply(`${design} Hey. Here is the newest version of the app.\n- - - - - - - - - - - - - - - - - -\nPlease enter this code in the app to proceed. It must exactly be the same\n- - - - - - - - - - - - - - - - - -\ncode:`)
-await delay(1000) /// waiting 1 second.
-reply(`${sender.split("@")[0]}`)
-break
-
 case 'getcode':
+	if (!isVerify) return reply(userB())
 	reply(`${design} Hi. Please copy the code and paste it into the app. Code:`)
 	await delay(1000) /// waiting 1 second.
 	reply(`${sender.split("@")[0]}`)
-
 break
-
 case 'starclaim':
+if (!isVerify) return reply(userB())
 var getJSON = require('get-json')
 getJSON(`https://api.countapi.xyz/hit/namespace/stardashappreward1istest1${sender.split("@")[0]}`, function(error, res){
 
@@ -4634,14 +4578,11 @@ appreward = res.value
 				fs.writeFile(`./data/users/${sender.split("@")[0]}/money.json`, newValue, 'utf-8', function(err, data) {
 					if (err) throw err;
 				})
-			})
-			
-
+			})	
 			// get money
-			reply(`${design} YAY. You Earned ${newmoney}$\n- - - - - - - - - - - - - - - - - -\nNewmoney: ${newnewmoney}`)
-	
+			reply(`🦄 𝑌𝑎𝑦𝑦 𝑦𝑜𝑢 𝑔𝑜𝑡 ${newmoney}$\n- - - - - - - - - - - - - - - - - -\n𝑈𝑟 𝑛𝑒𝑤 𝑀𝑜𝑛𝑒𝑦: ${newnewmoney}$\n- - - - - - - - - - - - - - - - - -\n𝐻𝑎𝑣𝑒 𝑓𝑢𝑛 𝑠𝑝𝑒𝑛𝑑𝑖𝑛𝑔 ✅`)
 		} else {
-			reply(`${design} Please open the app and watch an ad to claim money.`)
+			reply(`🦄 𝑃𝑙𝑒𝑎𝑠𝑒 𝑜𝑝𝑒𝑛 𝑡ℎ𝑒 𝑆𝑡𝑎𝑟𝐷𝑎𝑠ℎ 𝐴𝑝𝑝 𝑡𝑜 𝑐𝑙𝑎𝑖𝑚 𝑚𝑜𝑛𝑒𝑦. 𝑈𝑛𝑖𝑐𝑜𝑟𝑛 𝑤𝑖𝑙𝑙 𝑏𝑒 𝑤𝑎𝑖𝑡𝑖𝑛𝑔 𝑓𝑜𝑟 𝑢 𝑡ℎ𝑒𝑟𝑒.\n- - - - - - - - - - - - - - - - - -\n❎`)
 		}
 })
 await delay(1000) /// waiting 1 second.
@@ -4654,9 +4595,6 @@ fs.readFile(`./data/users/${sender.split("@")[0]}/appclaim.json`, 'utf-8', funct
 		if (err) throw err;
 	})
 })
-	
-
-
 break
 //---X623-Whatsapp-Bot----------------------------------------------------------------------------------------------------------------------
 //-- save picture as sticker
@@ -4667,7 +4605,7 @@ case 'saveimage':
   if (!isVerify) return reply(UserB())	  
   if (!isQuotedImage)  return  reply(`${design} 𝑃𝑙𝑒𝑎𝑠𝑒 𝑡𝑎𝑔 𝑎𝑛 𝑖𝑚𝑎𝑔𝑒`)
 	   
-  if (money < 22) return reply(`${design} 𝑌𝑜𝑢 𝑑𝑜𝑛𝑡 ℎ𝑎𝑣𝑒 𝑒𝑛𝑜𝑢𝑔ℎ 𝑚𝑜𝑛𝑒𝑦.\n- - - - - - - - - - - - - - - - - -\n𝑀𝑜𝑛𝑒𝑦 𝑛𝑒𝑒𝑑𝑒𝑑 22$ 𝑌𝑜𝑢𝑟 𝑚𝑜𝑛𝑒𝑦 ${money}$\n- - - - - - - - - - - - - - - - - -\n❎ 𝑋623 𝑆𝑡𝑖𝑐𝑘𝑒𝑟𝑠`) 
+  if (money < 22) return reply(`${design} 𝑌𝑜𝑢 𝑑𝑜𝑛𝑡 ℎ𝑎𝑣𝑒 𝑒𝑛𝑜𝑢𝑔ℎ 𝑚𝑜𝑛𝑒𝑦.\n- - - - - - - - - - - - - - - - - -\n𝑀𝑜𝑛𝑒𝑦 𝑛𝑒𝑒𝑑𝑒𝑑 22$ 𝑌𝑜𝑢𝑟 𝑚𝑜𝑛𝑒𝑦 ${money}$\n- - - - - - - - - - - - - - - - - -\n❎ 𝑆𝑡𝑖𝑐𝑘𝑒𝑟𝑠`) 
 
   var money1 = Number(money);
   var cost = Number(22);
@@ -4694,8 +4632,7 @@ case 'saveimage':
 					})
 					await delay(1000) /// waiting 1 second.
 
-		 
-		  reply(`${design} 𝑆𝑎𝑣𝑒𝑑 𝑠𝑢𝑐𝑐𝑒𝑠𝑠𝑓𝑢𝑙𝑙𝑦.\n𝐺𝑒𝑡 𝑢𝑟 𝑠𝑎𝑣𝑒𝑑 𝑠𝑡𝑖𝑐𝑘𝑒𝑟 𝑤𝑖𝑡ℎ .𝑚𝑦𝑠𝑡𝑖𝑐𝑘𝑒𝑟\n- - - - - - - - - - - - - - - - - -\n𝑀𝑜𝑛𝑒𝑦 𝑙𝑒𝑓𝑡 ${newmoney}$\n- - - - - - - - - - - - - - - - - -\n❎ 𝑋623 𝑆𝑡𝑖𝑐𝑘𝑒𝑟𝑠`)
+		  reply(`${design} 𝑆𝑎𝑣𝑒𝑑 𝑠𝑢𝑐𝑐𝑒𝑠𝑠𝑓𝑢𝑙𝑙𝑦.\n𝐺𝑒𝑡 𝑢𝑟 𝑠𝑎𝑣𝑒𝑑 𝑠𝑡𝑖𝑐𝑘𝑒𝑟 𝑤𝑖𝑡ℎ .𝑚𝑦𝑠𝑡𝑖𝑐𝑘𝑒𝑟\n- - - - - - - - - - - - - - - - - -\n𝑀𝑜𝑛𝑒𝑦 𝑙𝑒𝑓𝑡 ${newmoney}$\n- - - - - - - - - - - - - - - - - -\n❎ 𝑆𝑡𝑖𝑐𝑘𝑒𝑟𝑠`)
   
 	break
 //-- save audio
@@ -4705,7 +4642,7 @@ case 'savesong':
 case 'addsong':
   if (!isVerify) return reply(UserB())	  
   if (!isQuotedAudio)  return  reply(`${design} 𝑃𝑙𝑒𝑎𝑠𝑒 𝑡𝑎𝑔 𝑎𝑛 𝑎𝑢𝑑𝑖𝑜`)
-  if (money < 22) return reply(`${design} 𝑌𝑜𝑢 𝑑𝑜𝑛𝑡 ℎ𝑎𝑣𝑒 𝑒𝑛𝑜𝑢𝑔ℎ 𝑚𝑜𝑛𝑒𝑦.\n- - - - - - - - - - - - - - - - - -\n𝑀𝑜𝑛𝑒𝑦 𝑛𝑒𝑒𝑑𝑒𝑑 22$ 𝑌𝑜𝑢𝑟 𝑚𝑜𝑛𝑒𝑦 ${money}$\n- - - - - - - - - - - - - - - - - -\n❎ 𝑋623 𝑆𝑜𝑛𝑔𝑠`) 
+  if (money < 22) return reply(`${design} 𝑌𝑜𝑢 𝑑𝑜𝑛𝑡 ℎ𝑎𝑣𝑒 𝑒𝑛𝑜𝑢𝑔ℎ 𝑚𝑜𝑛𝑒𝑦.\n- - - - - - - - - - - - - - - - - -\n𝑀𝑜𝑛𝑒𝑦 𝑛𝑒𝑒𝑑𝑒𝑑 22$ 𝑌𝑜𝑢𝑟 𝑚𝑜𝑛𝑒𝑦 ${money}$\n- - - - - - - - - - - - - - - - - -\n❎ 𝑆𝑜𝑛𝑔𝑠`) 
 
   var money1 = Number(money);
   var cost = Number(22);
@@ -4730,7 +4667,7 @@ case 'addsong':
 				exec(`mv ${media} ./data/users/${sender.split("@")[0]}/song.opus`)
 				await delay(1000) /// waiting 1 second.					
 
-  reply(`${design} 𝑆𝑎𝑣𝑒𝑑 𝑠𝑢𝑐𝑐𝑒𝑠𝑠𝑓𝑢𝑙𝑙𝑦.\n𝐺𝑒𝑡 𝑢𝑟 𝑠𝑎𝑣𝑒𝑑 𝑠𝑜𝑛𝑔 𝑤𝑖𝑡ℎ .𝑚𝑦𝑠𝑜𝑛𝑔\n- - - - - - - - - - - - - - - - - -\n𝑀𝑜𝑛𝑒𝑦 𝑙𝑒𝑓𝑡 ${newmoney}$\n- - - - - - - - - - - - - - - - - -\n❎ 𝑋623 𝑆𝑜𝑛𝑔𝑠`) 
+  reply(`${design} 𝑆𝑎𝑣𝑒𝑑 𝑠𝑢𝑐𝑐𝑒𝑠𝑠𝑓𝑢𝑙𝑙𝑦.\n𝐺𝑒𝑡 𝑢𝑟 𝑠𝑎𝑣𝑒𝑑 𝑠𝑜𝑛𝑔 𝑤𝑖𝑡ℎ .𝑚𝑦𝑠𝑜𝑛𝑔\n- - - - - - - - - - - - - - - - - -\n𝑀𝑜𝑛𝑒𝑦 𝑙𝑒𝑓𝑡 ${newmoney}$\n- - - - - - - - - - - - - - - - - -\n❎ 𝑆𝑜𝑛𝑔𝑠`) 
   
 break	
 //-- mysticker
@@ -4738,9 +4675,8 @@ case 'mysticker':
 case 'mys':
   if (!isVerify) return reply(UserB())
 					buffer = fs.readFileSync(`./data/users/${sender.split("@")[0]}/sticker.webp`)
-					Lxa.sendMessage(from, buffer, sticker, {quoted:mek})
-											
-			break			
+					Lxa.sendMessage(from, buffer, sticker, {quoted:mek})								
+	break			
 //-- myaudio
 case 'myaudio':
 case 'audio':
@@ -4756,7 +4692,7 @@ case 'slots':
 case 'slot':
 	if (!isVerify) return reply(userB())
 	if (!isGroup) return reply(group())
-    if (money < 9) return reply(`${design} 𝑁𝑜𝑡 𝑒𝑛𝑜𝑢𝑔ℎ 𝑇𝑖𝑐𝑘𝑒𝑡𝑠. ⌖ .claim`)
+    if (money < 9) return reply(`${design} 𝑁𝑜𝑡 𝑒𝑛𝑜𝑢𝑔ℎ 𝑇𝑖𝑐𝑘𝑒𝑡𝑠. ⌖ .claim${moneystatus}`)
     const slot1 = _slot[Math.floor(Math.random() * _slot.length)]
     const slot2 = _slot[Math.floor(Math.random() * _slot.length)]
     const slot3 = _slot[Math.floor(Math.random() * _slot.length)]
@@ -4774,8 +4710,6 @@ case 'slot':
 
 if ((slot1 == slot2) && slot2 == slot3) {	
 
-
-
         var price = Number(jackpot);
         var newcash = price + cash; 
         fs.readFile(`./data/users/${sender.split("@")[0]}/money.json`, 'utf-8', function(err, data) {
@@ -4786,7 +4720,6 @@ if ((slot1 == slot2) && slot2 == slot3) {
                 console.log('Done!');
             })
         })
-    
                 await delay(3000) /// waiting 1 second.
 
 				var price = Number(1);
@@ -4797,10 +4730,8 @@ if ((slot1 == slot2) && slot2 == slot3) {
 						if (err) throw err;
 						console.log('Done!');
 					})
-				})
-			
+				})			
 						await delay(2000) /// waiting 1 second.
-
 						var _jackpot = JSON.parse(fs.readFileSync('./session/jackpot.json'));	
 						var jackpot1 = _jackpot[0]	//--- jackpot
 
@@ -4820,13 +4751,9 @@ if ((slot1 == slot2) && slot2 == slot3) {
 		text: `${design} 𝚂𝚕𝚘𝚝\n\n${slot4}${slot5}${slot6}\n- - - - - - - - - \n${slot1}${slot2}${slot3} ☜︎ ♕︎ 𝙹𝚊𝚌𝚔𝚙𝚘𝚝 ♕︎\n- - - - - - - - - \n${slot7}${slot8}${slot9}\n\n𝐺𝑎𝑖𝑛𝑒𝑑 ${jackpot}$\n𝑀𝑜𝑛𝑒𝑦 𝑙𝑒𝑓𝑡 ${newcash}$ \n𝐽𝑎𝑐𝑘𝑝𝑜𝑡 ${jackpot1}$`,
 	}
 	replyimg(been, text, capt, owner)
-
 	await delay(3000)
-
 }
-
 else if (slot1 == slot2) {	
-
 	var price = Number(jackpot);
 	var newcash = price - Number(15); 
 	fs.readFile(`./session/jackpot.json`, 'utf-8', function(err, data) {
@@ -4837,7 +4764,6 @@ else if (slot1 == slot2) {
 			console.log('Done!');
 		})
 	})
-
 			await delay(2000) /// waiting 1 second.
 			var _jackpot = JSON.parse(fs.readFileSync('./session/jackpot.json'));	
 			var jackpot1 = _jackpot[0]	//--- jackpot
@@ -4979,10 +4905,7 @@ else {
 			console.log('Done!');
 		})
 	})
-
-
 			await delay(2000) /// waiting 1 second.
-
 			var price1 = Number(9);
 			var newcash1 = cash - price1; 
 			fs.readFile(`./data/users/${sender.split("@")[0]}/money.json`, 'utf-8', function(err, data) {
@@ -5019,8 +4942,6 @@ replyimg(been, text, capt, owner)
 }
 
 //---- Set winner
-
-//-- Winner
 //-- Winner
 var winner1;
 try{
@@ -5081,7 +5002,6 @@ fs.appendFile(`./session/winner3.json`, `["${xp}", "${pushname}", "${status}"]`,
 }
 
  else {} 
-
 break
 //---X623-Whatsapp-Bot------------------------------------------------------------------------------------------------------------------------// 
 //--- List admin gruppe
@@ -5576,7 +5496,9 @@ case 'makier':
 			mentions(teks, members_id, true)
 			break				
 //---X623-Whatsapp-Bot------------------------------------------------------------------------------------------------------------------------//
-
+case 'app':
+reply(`${design} 𝑇𝐻𝐸 𝑆𝑇𝐴𝑅𝐷𝐴𝑆𝐻 𝐴𝑃𝑃\n- - - - - - - - - - - - - - - - - -\nhttps://drive.google.com/file/d/18gdAwvY_Nv11n1d49O_EKFJYRreIh_rl/view?usp=sharing`)
+break
 //---X623-Whatsapp-Bot------------------------------------------------------------------------------------------------------------------------//   
 //--- Feed
 case 'feed':
@@ -5585,7 +5507,6 @@ case 'feed':
 	case 'me':
 
 	if (!isVerify) return reply(userB())
-
     var cmdlenght
 	try {
 		var _cmdhit = JSON.parse(fs.readFileSync(`./data/users/${sender.split("@")[0]}/userhit.json`));
@@ -5670,9 +5591,6 @@ api.batteryStatus()
    .then(function (stats) {
      // ...
 	 console.log(stats)
-
-	 
-
 	 if (Number(stats.percentage) > Number(85)) {
 		var energy = "╎╎╎╎╎"
 		}
@@ -5689,7 +5607,6 @@ api.batteryStatus()
 			var energy = "╎"
 			}
 
-
 	weather.find({search: `${userlocation}`, degreeType: 'c'}, function(err, result) {
 		if(err) console.log(err);
 		var cityName = result[0].location.name
@@ -5699,7 +5616,6 @@ api.batteryStatus()
 		var imageurl = result[0].current.imageUrl
 	  
 			  var request = require('request');
-	  
 			  var download = function(uri, filename, callback){
 			  request.head(uri, function(err, res, body){
 				  console.log('content-type:', res.headers['content-type']);
@@ -5757,16 +5673,7 @@ ${tempSymbol} ${skytext} ${temperature}°C
 ⌖ ${cmdlenght}
 𝐺𝑙𝑜𝑏𝑎𝑙 𝑇𝑜𝑡𝑎𝑙 𝐶𝑜𝑚𝑚𝑎𝑛𝑑𝑠 
 ⌖ ${stardashhitmenu}
-- - - - - - - - - - - - - - - - - -
-📡 𝑌𝑜𝑢𝑟 𝐶𝑎𝑟𝑟𝑖𝑒𝑟
-${carrier}
-- - - - - - - - - - - - - - - - - -
-${design} _StarDash App Version 1.3.0_
-*NEW:* RANDOM ANIME QUOTES
-*NEW:* ABOUT PAGE
-*NEW:* YTB PAGE
-*NEW:* GET FREE MONEY
-https://drive.google.com/file/d/18gdAwvY_Nv11n1d49O_EKFJYRreIh_rl/view?usp=sharing
+${moneystatus}
 - - - - - - - - - - - - - - - - - -
 𝐵𝑜𝑡 ⌖ ${stats.percentage}% ${energy} 
 _${stats.status}_
@@ -5849,10 +5756,7 @@ if ((xp > 100) && xp < 500) {
 
 	}
 	else {}
-
-
-
-	break 
+break 
 //---X623-Whatsapp-Bot------------------------------------------------------------------------------------------------------------------------// 
 //-- Stickerpack
 case 'setstickerpack': 
@@ -6000,7 +5904,6 @@ case 'age':
 		await delay(1000) /// waiting 1 second.
 										
 					var newage = args[0];
-
 					fs.readFile(`./data/users/${sender.split("@")[0]}/age.json`, 'utf-8', function(err, data) {
 						if (err) throw err;	
 						var newValue = data.replace(`${age}`, newage);	
@@ -6032,7 +5935,6 @@ case 'email':
 					await delay(1000) /// waiting 1 second.
 
 			reply(`${design} 𝐶ℎ𝑎𝑛𝑔𝑒𝑑 𝐸𝑚𝑎𝑖𝑙 𝑡𝑜 ${args[0]}\n- - - - - - - - - - - - - - - - - -\n𝑆𝑡𝑎𝑟𝐷𝑎𝑠ℎ 𝑀𝑎𝑖𝑙 `)
-		
 						var nodemailer = require('nodemailer');
 						var transporter = nodemailer.createTransport({
 						  host: 'smtp.gmail.com',
