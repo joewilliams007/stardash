@@ -15,9 +15,6 @@
 
 
 
-
-
-
 //---X623-Whatsapp-Bot------------------------------------------------------------------------------------------------------------------------//
 //-- Whatsapp Connecting
 const {
@@ -50,9 +47,7 @@ const {color, bgcolor} = require('./fs/color');
 const {fetchJson, fetchText} = require('./fs/fetcher');
 const {recognize} = require('./fs/ocr');
 const {_wait, getBuffer, h2k, generateMessageID, getGroupAdmins, getRandom, start, success, close } = require('./fs/functions');
-
-
-//-- Modules k
+//-- Modules 
 const fs = require('fs');
 const moment = require('moment-timezone');
 const {exec} = require('child_process');
@@ -68,7 +63,6 @@ const path = require('path');
 const {removeBackgroundFromImageFile} = require('remove.bg');
 var nodemailer = require('nodemailer');
 var weather = require('weather-js');
-
 //-- Data
 const up = JSON.parse(fs.readFileSync('./data/bot/setting.json'));
 const _welcom = JSON.parse(fs.readFileSync('./data/bot/welcom.json'));
@@ -715,12 +709,12 @@ if (!isGroup && isCmd) console.log(color('[𝚂𝚝𝚊𝚛𝙳𝚊𝚜𝚑 ♕�
 //--Private Chat-Log-Konsole
 if (isGroup && isCmd) console.log(color('[𝚂𝚝𝚊𝚛𝙳𝚊𝚜𝚑 ♕︎]','aqua'), "GC", color(command, "green"), "from", (sender.split('@')[0]), "in", (groupName), args.length)
 //-- Status
-var prem_ = '𝚞𝚜𝚎𝚛'
+var prem_ = 'user'
 			if (isPrem) {
-			prem_ = '𝑃𝑟𝑜'
+			prem_ = 'Pro'
 			} 
 			if (isOwner) {
-			prem_ = '𝙾𝚠𝚗𝚎𝚛'
+			prem_ = 'Owner'
 			}
 var Welcome_ = 'Off'
 			if (isWelcom) {
