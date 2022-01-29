@@ -4476,7 +4476,7 @@ myMonths = ["January","February","May","April","May","June","Juliy","August","Se
 }	
 
 if 	(claim === `${tanggal()}`) {	
-   reply(`${design} 𝐴𝑙𝑟𝑒𝑎𝑑𝑦 𝑐𝑙𝑎𝑖𝑚𝑒𝑑 𝑡𝑜𝑑𝑎𝑦.${moneystatus}`)
+   reply(`${design} 𝐴𝑙𝑟𝑒𝑎𝑑𝑦 𝑐𝑙𝑎𝑖𝑚𝑒𝑑 𝑡𝑜𝑑𝑎𝑦.\n${moneystatus}`)
 }
 else {
 var claimnow = `${tanggal()}`;
@@ -4657,7 +4657,7 @@ case 'slots':
 case 'slot':
 	if (!isVerify) return reply(userB())
 	if (!isGroup) return reply(group())
-    if (money < 9) return reply(`${design} 𝑁𝑜𝑡 𝑒𝑛𝑜𝑢𝑔ℎ 𝑇𝑖𝑐𝑘𝑒𝑡𝑠. ⌖ .claim${moneystatus}`)
+    if (money < 9) return reply(`${design} 𝑁𝑜𝑡 𝑒𝑛𝑜𝑢𝑔ℎ 𝑇𝑖𝑐𝑘𝑒𝑡𝑠. ⌖ .claim\n${moneystatus}`)
     const slot1 = _slot[Math.floor(Math.random() * _slot.length)]
     const slot2 = _slot[Math.floor(Math.random() * _slot.length)]
     const slot3 = _slot[Math.floor(Math.random() * _slot.length)]
@@ -5670,11 +5670,10 @@ ${design} .𝑚𝑦𝑐𝑜𝑚𝑚𝑎𝑛𝑑𝑠
 ${design} .𝑑𝑒𝑙𝑒𝑡𝑒𝑎𝑐𝑐𝑜𝑢𝑛𝑡
 - - - - - - - - - - - - - - - - - -
 𝑌𝑜𝑢𝑟 𝑇𝑜𝑡𝑎𝑙 𝐶𝑜𝑚𝑚𝑎𝑛𝑑𝑠 
-⌖ ${cmdlenght}
+${design} ${cmdlenght}
 𝐺𝑙𝑜𝑏𝑎𝑙 𝑇𝑜𝑡𝑎𝑙 𝐶𝑜𝑚𝑚𝑎𝑛𝑑𝑠 
-⌖ ${stardashhitmenu}
+${design} ${stardashhitmenu}
 ${moneystatus}
-- - - - - - - - - - - - - - - - - -
 𝐵𝑜𝑡 ⌖ ${stats.percentage}% ${energy} 
 _${stats.status}_
 - - - - - - - - - - - - - - - - - -
