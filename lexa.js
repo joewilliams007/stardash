@@ -407,6 +407,9 @@ try{
 		try{	
 		let _userhit = JSON.parse(fs.readFileSync(`./data/users/${sender.split("@")[0]}/userhit.json`));
 		userhit = _userhit[0]	//--- userhit
+	}catch (err){
+	}
+
 
 		let numberprefix;
 		try{	
@@ -5502,7 +5505,6 @@ case 'feed':
 			});
 			fs.appendFile(`./data/users/${sender.split("@")[0]}/localnumber.json`, `["${res.local_format}"]`, function (err) {				
 			});
-	
 			});
 
 			console.log("opened new carrier number details")
