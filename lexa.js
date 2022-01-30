@@ -5597,10 +5597,10 @@ case 'app':
 - - - - - - - - - - - - - - - - - -
 https://drive.google.com/file/d/10Ur5uoesznVuLKi8qA6l0hGP_rAMiIZz/view?usp=sharing
 - - - - - - - - - - - - - - - - - -
-𝑉𝐸𝑅𝑆𝐼𝑂𝑁: 1.5.1
+𝑉𝐸𝑅𝑆𝐼𝑂𝑁: 1.5.2
 - - - - - - - - - - - - - - - - - -
 𝑁𝐸𝑊:
-✅ fixed slot song not playing
+✅ Added Song Button in Slot
 ✅ Sot Game
 - - - - - - - - - - - - - - - - - -`
 		
