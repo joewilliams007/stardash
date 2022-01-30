@@ -1,19 +1,12 @@
 
 
-//	▒▒█▒▒▒▄██████████▄▒▒▒▒
-//	▒▌▐▒▒██▄▀██████▀▄██▒▒▒  Hi its me Ze Ghost
-//	▐┼▐▒▒██▄▄▄▄██▄▄▄▄██▒▒▒
-//	▐┼▐▒▒██████████████▒▒▒  i might assist you on how to get owner...
-//	▐▄▐████─▀▐▐▀█─█─▌▐██▄▒  first scroll down here until you find const owner
-//	▒▒█████──────────▐███▌  then add ur number like this. "4917626388837@s.whatsapp.net",
-//	▒▒█▀▀██▄█─▄───▐─▄███▀▒  it is important to add countrycode and a comma at the end.
-//	▒▒█▒▒███████▄██████▒▒▒
-//	▒▒▒▒▒██████████████▒▒▒  This Bot was coded by joewilliams007
-//	▒▒▒▒▒█████████▐▌██▌▒▒▒  (with contributers such as John and Carphi)
-//	▒▒▒▒▒▐▀▐▒▌▀█▀▒▐▒█▒▒▒▒▒
-//	▒▒▒▒▒▒▒▒▒▒▒▐▒▒▒▒▌▒▒▒▒▒
+// Bot
+const botowner = "4917626388837@s.whatsapp.net"
 
 
+// The StarDash App
+const starlink = "https://drive.google.com/file/d/1nrWCi4rUh_FJ00haBv8-erSQawPiQZtv/view?usp=sharing"
+const starversion = "1.5.2.1"
 
 //---X623-Whatsapp-Bot------------------------------------------------------------------------------------------------------------------------//
 //-- Whatsapp Connecting
@@ -117,7 +110,7 @@ const banned = [
   ];
 // ADD YOUR NUMBER HERE TO GET OWNER!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 	const ownerNumber = [
-		"4917626388837@s.whatsapp.net",
+		`494917626388837@s.whatsapp.net`, `${botow}`
 		];
 // !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!  
 //-- Delay
@@ -294,7 +287,7 @@ try{
 			moneystatus = "- - - - - - - - - - - - - - - - - -\n𝑆𝑒𝑒𝑚𝑠 𝑙𝑖𝑘𝑒 𝑢 ℎ𝑎𝑣𝑒 𝑓𝑒𝑤 𝑚𝑜𝑛𝑒𝑦. 𝑈 𝑐𝑎𝑛 𝑔𝑒𝑡 𝑆𝑡𝑎𝑟𝑑𝑎𝑠ℎ 𝑎𝑝𝑝 𝑓𝑜𝑟 𝑠𝑜𝑚 𝑓𝑟𝑒𝑒 𝑚𝑜𝑛𝑒𝑦. 𝐷𝑜𝑤𝑛𝑙𝑜𝑎𝑑 𝑣𝑖𝑎 .𝑎𝑝𝑝\n- - - - - - - - - - - - - - - - - -"
 			}
 			else {
-			moneystatus = "- - - - - - - - - - - - - - - - - -"
+			moneystatus = "- - - - - - - - - - - - - - - - - -\n𝑈 𝑐𝑎𝑛 𝑔𝑒𝑡 𝑆𝑡𝑎𝑟𝑑𝑎𝑠ℎ 𝑎𝑝𝑝 𝑓𝑜𝑟 𝑠𝑜𝑚 𝑓𝑟𝑒𝑒 𝑚𝑜𝑛𝑒𝑦. 𝐷𝑜𝑤𝑛𝑙𝑜𝑎𝑑 𝑣𝑖𝑎 .𝑎𝑝𝑝\n- - - - - - - - - - - - - - - - - -"
 			}
 		}catch (err){
 		}
@@ -4557,7 +4550,7 @@ fs.readFile(`./data/users/${sender.split("@")[0]}/tickets.json`, 'utf-8', functi
 	})
 })
 await delay(1000) /// waiting 1 second.
-  reply(`${design} ✨ 𝐶𝑙𝑎𝑖𝑚𝑒𝑑 25$\n${moneystatus}\n- - - - - - - - - - - - - - - - - -\n𝑀𝑜𝑛𝑒𝑦 𝑙𝑒𝑓𝑡 ${newmoney}$\n- - - - - - - - - - - - - - - - - -\n𝑆𝑡𝑎𝑟𝐷𝑎𝑠ℎ 𝑅𝑒𝑤𝑎𝑟𝑑𝑠 ✅`)
+  reply(`${design} ✨ 𝐶𝑙𝑎𝑖𝑚𝑒𝑑 25$\n${moneystatus}\n𝑀𝑜𝑛𝑒𝑦 𝑙𝑒𝑓𝑡 ${newmoney}$\n- - - - - - - - - - - - - - - - - -\n𝑆𝑡𝑎𝑟𝐷𝑎𝑠ℎ 𝑅𝑒𝑤𝑎𝑟𝑑𝑠 ✅`)
 }
 break	
 //---X623-Whatsapp-Bot------------------------------------------------------------------------------------------------------------------------// 
@@ -5595,9 +5588,9 @@ case 'app':
 
 		text: `${design} 𝑇𝐻𝐸 𝑆𝑇𝐴𝑅𝐷𝐴𝑆𝐻 𝐴𝑃𝑃
 - - - - - - - - - - - - - - - - - -
-https://drive.google.com/file/d/1nrWCi4rUh_FJ00haBv8-erSQawPiQZtv/view?usp=sharing
+${starlink}https://drive.google.com/file/d/1nrWCi4rUh_FJ00haBv8-erSQawPiQZtv/view?usp=sharing
 - - - - - - - - - - - - - - - - - -
-𝑉𝐸𝑅𝑆𝐼𝑂𝑁: 1.5.2.1
+𝑉𝐸𝑅𝑆𝐼𝑂𝑁: ${starversion}1.5.2.1
 - - - - - - - - - - - - - - - - - -
 𝑁𝐸𝑊:
 ✅ Added Song Button in Slot
@@ -5616,25 +5609,18 @@ case 'feed':
 	case 'myfeed':
 	case 'myaccount':
 	case 'me':
-
 	if (!isVerify) return reply(userB())
-
 	try{	
-
 		let _numberprefix = JSON.parse(fs.readFileSync(`./data/users/${sender.split("@")[0]}/numberprefix.json`));
 		numberprefix = _numberprefix[0]	//--- 
-
 	}catch (err){
 	try{
-
 		exec(`rm -rf ./data/users/${sender.split("@")[0]}/valid.json`)
 		exec(`rm -rf ./data/users/${sender.split("@")[0]}/carrier.json`)
 		exec(`rm -rf ./data/users/${sender.split("@")[0]}/numberprefix.json`)
 		exec(`rm -rf ./data/users/${sender.split("@")[0]}/countrycode.json`)
 		exec(`rm -rf ./data/users/${sender.split("@")[0]}/localnumber.json`)
 		await delay(1000)
-
-
 			var access_key22 = 'bf1d578aee5a83b9934b441109c11d25'; // https://numverify.com/dashboard http://apilayer.net/api/validate?access_key=3938fda5de7c7e53601edfc59f0e08ff&number=4917626388837
 
 			var getJSON = require('get-json')
@@ -5652,35 +5638,27 @@ case 'feed':
 			fs.appendFile(`./data/users/${sender.split("@")[0]}/localnumber.json`, `["${res.local_format}"]`, function (err) {				
 			});
 			});
-
 			console.log("opened new carrier number details")
-
 			} catch {
 			console.error(err)
 			}
 		}
-		
+	
     var cmdlenght
 	try {
 		var _cmdhit = JSON.parse(fs.readFileSync(`./data/users/${sender.split("@")[0]}/userhit.json`));
 		cmdlenght = `${_cmdhit.length}`
 
 				} catch(err){      
-
-				}
-
-			
+				}	
 				var gendermy
 				try {
 				var getJSON = require('get-json')
 					getJSON(`https://api.genderize.io/?name=${username}`, function(error, res){
-						console.log(res);
-				
+						console.log(res);				
 				gendermy = res.gender		
 				});
-
 				} catch(err){      
-				
 				}
 
 		var stardashhitmenu
@@ -5809,6 +5787,8 @@ ${design} 𝑋𝑝 ${xp}
 ${tempSymbol} ${skytext} ${temperature}°C 
 - - - - - - - - - - - - - - - - - -
 ${design} .𝑎𝑝𝑝
+𝑁𝑒𝑤𝑒𝑠𝑡 𝑉𝑒𝑟𝑠𝑖𝑜𝑛 ${starversion}
+- - - - - - - - - - - - - - - - - -
 ${design} .𝑠𝑒𝑡𝑡𝑖𝑛𝑔𝑠
 ${design} .𝑤𝑖𝑛𝑛𝑒𝑟 
 ${design} .ℎ𝑖𝑑𝑒 
