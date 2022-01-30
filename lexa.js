@@ -4654,14 +4654,14 @@ reply(`🦄 𝑌𝑎𝑦𝑦 𝑦𝑜𝑢 𝑔𝑜𝑡 ${newmoney}$
 - - - - - - - - - - - - - - - - - -
 𝐻𝑎𝑣𝑒 𝑓𝑢𝑛 𝑠𝑝𝑒𝑛𝑑𝑖𝑛𝑔 ✅`)
 //---SlotApp------------------------------------------------------------------------------------------------------------------------//
-			})
-		})
-	})
 			await delay(1000) /// waiting 1 second.
 //---SlotApp------------------------------------------------------------------------------------------------------------------------//
 			var newlostclaim = Number(lostreward) + Number(1)
 			var newsmallwinclaim = Number(smallwinreward) + Number(1)
 			var newjackpotclaim = Number(jackpotreward) + Number(1)
+		})
+	})
+})
 //---SlotApp------------------------------------------------------------------------------------------------------------------------//
 			fs.readFile(`./data/users/${sender.split("@")[0]}/lostclaim.json`, 'utf-8', function(err, data) {
 				if (err) throw err;
