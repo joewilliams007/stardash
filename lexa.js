@@ -4621,7 +4621,7 @@ smallwinreward = res2.value
 //---SlotApp------------------------------------------------------------------------------------------------------------------------//
 			//lost
 			var lostgain = Number(lostreward) - Number(lostclaim)
-			var lostcost = Number(9);
+			var lostcost = Number(12);
 			var lostnewmoney = lostgain * lostcost; 
 			//SmallWin
 			var smallwingain = Number(smallwinreward) - Number(smallwinclaim)
