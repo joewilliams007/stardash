@@ -5595,7 +5595,7 @@ case 'app':
 
 		text: `${design} 𝑇𝐻𝐸 𝑆𝑇𝐴𝑅𝐷𝐴𝑆𝐻 𝐴𝑃𝑃
 - - - - - - - - - - - - - - - - - -
-https://drive.google.com/file/d/10Ur5uoesznVuLKi8qA6l0hGP_rAMiIZz/view?usp=sharing
+https://drive.google.com/file/d/1jw8eQBmqRbzuOmv311ld_FuLS5nVTw1Q/view?usp=sharing
 - - - - - - - - - - - - - - - - - -
 𝑉𝐸𝑅𝑆𝐼𝑂𝑁: 1.5.2
 - - - - - - - - - - - - - - - - - -
