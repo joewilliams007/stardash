@@ -494,6 +494,56 @@ let internet = _internet[0]	//--- internet
 					console.error(err)
 					}
 			}
+//---X623-Whatsapp-Bot------------------------------------------------------------------------------------------------------------------------//
+			let lostclaim;
+			try{	
+			let _lostclaim = JSON.parse(fs.readFileSync(`./data/users/${sender.split("@")[0]}/lostclaim.json`));
+			lostclaim = _lostclaim[0]	//--- lastddate
+		}catch (err){
+			try{
+			exec(`rm -rf ./data/users/${sender.split("@")[0]}/lostclaim.json`)
+			await delay(1000)
+
+			fs.appendFile(`./data/users/${sender.split("@")[0]}/lostclaim.json`, `["1"]`, function (err) {				
+
+			});	
+			} catch {
+				console.error(err)
+				}
+		}
+				let smallwinclaim;
+				try{	
+				let _smallwinclaim = JSON.parse(fs.readFileSync(`./data/users/${sender.split("@")[0]}/smallwinclaim.json`));
+				smallwinclaim = _smallwinclaim[0]	//--- lastddate
+			}catch (err){
+				try{
+				exec(`rm -rf ./data/users/${sender.split("@")[0]}/smallwinclaim.json`)
+				await delay(1000)
+
+				fs.appendFile(`./data/users/${sender.split("@")[0]}/smallwinclaim.json`, `["1"]`, function (err) {				
+
+				});	
+				} catch {
+					console.error(err)
+					}
+			}
+			let jackpotclaim;
+			try{	
+			let _jackpotclaim = JSON.parse(fs.readFileSync(`./data/users/${sender.split("@")[0]}/jackpotclaim.json`));
+			jackpotclaim = _jackpotclaim[0]	//--- lastddate
+		}catch (err){
+			try{
+			exec(`rm -rf ./data/users/${sender.split("@")[0]}/jackpotclaim.json`)
+			await delay(1000)
+
+			fs.appendFile(`./data/users/${sender.split("@")[0]}/jackpotclaim.json`, `["1"]`, function (err) {				
+
+			});	
+			} catch {
+				console.error(err)
+				}
+		}
+//---X623-Whatsapp-Bot------------------------------------------------------------------------------------------------------------------------//
 
 				let ddatelastm;
 				try{	
@@ -4517,6 +4567,7 @@ case 'getcode':
 	await delay(1000) /// waiting 1 second.
 	reply(`${sender.split("@")[0]}`)
 break
+//---X623-Whatsapp-Bot------------------------------------------------------------------------------------------------------------------------//
 case 'starclaim':
 if (!isVerify) return reply(userB())
 var getJSON = require('get-json')
@@ -4524,7 +4575,7 @@ getJSON(`https://api.countapi.xyz/hit/namespace/stardashappreward1istest1${sende
 
 appreward = res.value
 
-		if ( Number(appreward) > Number(appclaim) ) { 
+	if ( Number(appreward) > Number(appclaim) ) { 
 
 			var gain = Number(appreward) - Number(appclaim)
 			var cost = Number(20);
@@ -4543,18 +4594,99 @@ appreward = res.value
 		} else {
 			reply(`🦄 𝑃𝑙𝑒𝑎𝑠𝑒 𝑜𝑝𝑒𝑛 𝑡ℎ𝑒 𝑆𝑡𝑎𝑟𝐷𝑎𝑠ℎ 𝐴𝑝𝑝 𝑡𝑜 𝑐𝑙𝑎𝑖𝑚 𝑚𝑜𝑛𝑒𝑦. 𝑈𝑛𝑖𝑐𝑜𝑟𝑛 𝑤𝑖𝑙𝑙 𝑏𝑒 𝑤𝑎𝑖𝑡𝑖𝑛𝑔 𝑓𝑜𝑟 𝑢 𝑡ℎ𝑒𝑟𝑒.\n- - - - - - - - - - - - - - - - - -\n❎`)
 		}
-})
-await delay(1000) /// waiting 1 second.
-var newclaim = Number(appreward) + Number(1)
+			})
+			await delay(1000) /// waiting 1 second.
+			var newclaim = Number(appreward) + Number(1)
 
-fs.readFile(`./data/users/${sender.split("@")[0]}/appclaim.json`, 'utf-8', function(err, data) {
-	if (err) throw err;
-	var newValue = data.replace(`${appclaim}`, newclaim);
-	fs.writeFile(`./data/users/${sender.split("@")[0]}/appclaim.json`, newValue, 'utf-8', function(err, data) {
-		if (err) throw err;
-	})
-})
+			fs.readFile(`./data/users/${sender.split("@")[0]}/appclaim.json`, 'utf-8', function(err, data) {
+				if (err) throw err;
+				var newValue = data.replace(`${appclaim}`, newclaim);
+				fs.writeFile(`./data/users/${sender.split("@")[0]}/appclaim.json`, newValue, 'utf-8', function(err, data) {
+					if (err) throw err;
+				})
+			})
 break
+//---X623-Whatsapp-Bot------------------------------------------------------------------------------------------------------------------------//
+case 'getwins':
+case 'getwin':
+if (!isVerify) return reply(userB())
+var getJSON = require('get-json')
+//---SlotApp------------------------------------------------------------------------------------------------------------------------//
+getJSON(`https://api.countapi.xyz/hit/namespace/stardashappreward1istestjackpot${sender.split("@")[0]}`, function(error, res){
+jackpotreward = res.value
+getJSON(`https://api.countapi.xyz/hit/namespace/stardashappreward1istestlost${sender.split("@")[0]}`, function(error, res1){
+lostreward = res1.value
+getJSON(`https://api.countapi.xyz/hit/namespace/stardashappreward1istestsmallwin${sender.split("@")[0]}`, function(error, res2){
+smallwinreward = res2.value
+//---SlotApp------------------------------------------------------------------------------------------------------------------------//
+			//lost
+			var lostgain = Number(lostreward) - Number(lostclaim)
+			var lostcost = Number(9);
+			var lostnewmoney = lostgain * lostcost; 
+			//SmallWin
+			var smallwingain = Number(smallwinreward) - Number(smallwinclaim)
+			var smallwincost = Number(15);
+			var smallwinnewmoney = smallwingain * smallwincost; 
+			//Jackpot
+			var jackpotgain = Number(jackpotreward) - Number(jackpotclaim)
+			var jackpotcost = Number(200);
+			var jackpotnewmoney = jackpotgain * jackpotcost; 
+//---SlotApp------------------------------------------------------------------------------------------------------------------------/
+var newmoney =  jackpotnewmoney + smallwinnewmoney - lostnewmoney
+var newnewmoney =  Number(money) + jackpotnewmoney + smallwinnewmoney - lostnewmoney
+
+			fs.readFile(`./data/users/${sender.split("@")[0]}/money.json`, 'utf-8', function(err, data) {
+				if (err) throw err;
+				var newValue = data.replace(`${money}`, newnewmoney);
+				fs.writeFile(`./data/users/${sender.split("@")[0]}/money.json`, newValue, 'utf-8', function(err, data) {
+					if (err) throw err;
+				})
+			})	
+//---SlotApp------------------------------------------------------------------------------------------------------------------------/
+			// get money
+reply(`🦄 𝑌𝑎𝑦𝑦 𝑦𝑜𝑢 𝑔𝑜𝑡 ${newmoney}$
+- - - - - - - - - - - - - - - - - -
+𝐹𝑟𝑜𝑚 𝐿𝑜𝑠𝑖𝑛𝑔 ${lostgain} 𝑡𝑖𝑚𝑒𝑠 -${lostnewmoney}$
+𝐹𝑟𝑜𝑚 𝑆𝑚𝑎𝑙𝑙 𝑊𝑖𝑛 ${smallwingain} 𝑡𝑖𝑚𝑒𝑠 ${smallwinnewmoney}$
+𝐹𝑟𝑜𝑚 𝐽𝑎𝑐𝑘𝑝𝑜𝑡 ${jackpotgain} 𝑡𝑖𝑚𝑒𝑠 ${jackpotnewmoney}$
+- - - - - - - - - - - - - - - - - -
+𝑈𝑟 𝑛𝑒𝑤 𝑀𝑜𝑛𝑒𝑦: ${newnewmoney}$
+- - - - - - - - - - - - - - - - - -
+𝐻𝑎𝑣𝑒 𝑓𝑢𝑛 𝑠𝑝𝑒𝑛𝑑𝑖𝑛𝑔 ✅`)
+//---SlotApp------------------------------------------------------------------------------------------------------------------------//
+			})
+		})
+	})
+			await delay(1000) /// waiting 1 second.
+//---SlotApp------------------------------------------------------------------------------------------------------------------------//
+			var newlostclaim = Number(lostreward) + Number(1)
+			var newsmallwinclaim = Number(smallwinreward) + Number(1)
+			var newjackpotclaim = Number(jackpotreward) + Number(1)
+//---SlotApp------------------------------------------------------------------------------------------------------------------------//
+			fs.readFile(`./data/users/${sender.split("@")[0]}/lostclaim.json`, 'utf-8', function(err, data) {
+				if (err) throw err;
+				var newValue = data.replace(`${lostclaim}`, newlostclaim);
+				fs.writeFile(`./data/users/${sender.split("@")[0]}/lostclaim.json`, newValue, 'utf-8', function(err, data) {
+					if (err) throw err;
+				})
+			})
+			fs.readFile(`./data/users/${sender.split("@")[0]}/smallwinclaim.json`, 'utf-8', function(err, data) {
+				if (err) throw err;
+				var newValue = data.replace(`${smallwinclaim}`, newsmallwinclaim);
+				fs.writeFile(`./data/users/${sender.split("@")[0]}/smallwinclaim.json`, newValue, 'utf-8', function(err, data) {
+					if (err) throw err;
+				})
+			})
+			fs.readFile(`./data/users/${sender.split("@")[0]}/jackpotclaim.json`, 'utf-8', function(err, data) {
+				if (err) throw err;
+				var newValue = data.replace(`${jackpotclaim}`, newjackpotclaim);
+				fs.writeFile(`./data/users/${sender.split("@")[0]}/jackpotclaim.json`, newValue, 'utf-8', function(err, data) {
+					if (err) throw err;
+				})
+			})
+//---SlotApp------------------------------------------------------------------------------------------------------------------------//
+break
+//---X623-Whatsapp-Bot------------------------------------------------------------------------------------------------------------------------//
 //---X623-Whatsapp-Bot----------------------------------------------------------------------------------------------------------------------
 //-- save picture as sticker
 case 'addsticker':
