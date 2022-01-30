@@ -290,7 +290,7 @@ try{
 
 		let moneystatus
 		try{
-			if (Number(money) < 50) {
+			if (Number(money) < 120) {
 			moneystatus = "- - - - - - - - - - - - - - - - - -\n𝑆𝑒𝑒𝑚𝑠 𝑙𝑖𝑘𝑒 𝑢 ℎ𝑎𝑣𝑒 𝑓𝑒𝑤 𝑚𝑜𝑛𝑒𝑦. 𝑈 𝑐𝑎𝑛 𝑔𝑒𝑡 𝑆𝑡𝑎𝑟𝑑𝑎𝑠ℎ 𝑎𝑝𝑝 𝑓𝑜𝑟 𝑠𝑜𝑚 𝑓𝑟𝑒𝑒 𝑚𝑜𝑛𝑒𝑦. 𝐷𝑜𝑤𝑛𝑙𝑜𝑎𝑑 𝑣𝑖𝑎 .𝑎𝑝𝑝\n- - - - - - - - - - - - - - - - - -"
 			}
 			else {
@@ -5474,7 +5474,7 @@ https://drive.google.com/file/d/1F5OyGcL2NLUUt6ic9zNjGbN8yEh5qesK/view?usp=shari
 - - - - - - - - - - - - - - - - - -`
 		
 }
-replyimg(been, text, capt, owner)
+replyimg(beenneeee, text, capt, owner)
 
 
 
