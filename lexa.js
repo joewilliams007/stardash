@@ -4621,7 +4621,7 @@ smallwinreward = res2.value
 //---SlotApp------------------------------------------------------------------------------------------------------------------------//
 			//lost
 			var lostgain = Number(lostreward) - Number(lostclaim)
-			var lostcost = Number(9);
+			var lostcost = Number(6);
 			var lostnewmoney = lostgain * lostcost; 
 			//SmallWin
 			var smallwingain = Number(smallwinreward) - Number(smallwinclaim)
@@ -5595,13 +5595,13 @@ case 'app':
 
 		text: `${design} 𝑇𝐻𝐸 𝑆𝑇𝐴𝑅𝐷𝐴𝑆𝐻 𝐴𝑃𝑃
 - - - - - - - - - - - - - - - - - -
-https://drive.google.com/file/d/1F5OyGcL2NLUUt6ic9zNjGbN8yEh5qesK/view?usp=sharing
+https://drive.google.com/file/d/1W05jXORbShJ_ZfBWPazhnH20wBV3btQ-/view?usp=sharing
 - - - - - - - - - - - - - - - - - -
-𝑉𝐸𝑅𝑆𝐼𝑂𝑁: 1.4.0
+𝑉𝐸𝑅𝑆𝐼𝑂𝑁: 1.5.0
 - - - - - - - - - - - - - - - - - -
 𝑁𝐸𝑊:
 ✅ fixed bugs
-✅ cute animation after claim
+✅ Sot Game
 - - - - - - - - - - - - - - - - - -`
 		
 }
