@@ -5,7 +5,7 @@ const botowner = "4917626388837@s.whatsapp.net"
 
 
 // The StarDash App
-const starlink = "https://drive.google.com/file/d/1NbeRQabkbmtEmK12q_mqYkWKZIWumYoL/view?usp=sharing"
+const starlink = "https://drive.google.com/file/d/1IWps4ayGrPAkdp3xM1LBQnBhob18nug5/view?usp=sharing"
 const starversion = "1.6"
 const newApp = `✅ Change Design\n✅ More Sounds\n✅ Save Number in app`
 
