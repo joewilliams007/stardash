@@ -5,8 +5,9 @@ const botowner = "4917626388837@s.whatsapp.net"
 
 
 // The StarDash App
-const starlink = "https://drive.google.com/file/d/1mfLtvchvW5uTv2iY-fMYhDer2px0xew-/view?usp=sharing"
-const starversion = "1.5.3"
+const starlink = "https://drive.google.com/file/d/1NbeRQabkbmtEmK12q_mqYkWKZIWumYoL/view?usp=sharing"
+const starversion = "1.6"
+const newApp = `✅ Change Design\n✅ More Sounds\n✅ Save Number in app`
 
 //---X623-Whatsapp-Bot------------------------------------------------------------------------------------------------------------------------//
 //-- Whatsapp Connecting
@@ -4584,7 +4585,7 @@ appreward = res.value
 				})
 			})	
 			// get money
-			reply(`🦄 𝑌𝑎𝑦𝑦 𝑦𝑜𝑢 𝑔𝑜𝑡 ${newmoney}$\n- - - - - - - - - - - - - - - - - -\n𝑈𝑟 𝑛𝑒𝑤 𝑀𝑜𝑛𝑒𝑦: ${newnewmoney}$\n- - - - - - - - - - - - - - - - - -\n𝐻𝑎𝑣𝑒 𝑓𝑢𝑛 𝑠𝑝𝑒𝑛𝑑𝑖𝑛𝑔 ✅`)
+			reply(`🦄 𝑌𝑎𝑦𝑦 𝑦𝑜𝑢 𝑔𝑜𝑡 ${newmoney}$\n- - - - - - - - - - - - - - - - - -\n𝑈𝑟 𝑛𝑒𝑤 𝑀𝑜𝑛𝑒𝑦: ${newnewmoney}$\n- - - - - - - - - - - - - - - - - -\n𝐻𝑎𝑣𝑒 𝑦𝑜𝑢 𝑢𝑝𝑑𝑎𝑡𝑒𝑑 𝑦𝑒𝑡\n𝑡𝑜 𝑡ℎ𝑒 𝑛𝑒𝑤𝑒𝑠𝑡 𝑉𝑒𝑟𝑠𝑖𝑜𝑛?\n${starversion}\n𝐷𝑜𝑤𝑛𝑙𝑜𝑎𝑑 𝑣𝑖𝑎 .𝑎𝑝𝑝\n- - - - - - - - - - - - - - - - - -\n𝐻𝑎𝑣𝑒 𝑓𝑢𝑛 𝑠𝑝𝑒𝑛𝑑𝑖𝑛𝑔 ✅`)
 		} else {
 			reply(`🦄 𝑃𝑙𝑒𝑎𝑠𝑒 𝑜𝑝𝑒𝑛 𝑡ℎ𝑒 𝑆𝑡𝑎𝑟𝐷𝑎𝑠ℎ 𝐴𝑝𝑝 𝑡𝑜 𝑐𝑙𝑎𝑖𝑚 𝑚𝑜𝑛𝑒𝑦. 𝑈𝑛𝑖𝑐𝑜𝑟𝑛 𝑤𝑖𝑙𝑙 𝑏𝑒 𝑤𝑎𝑖𝑡𝑖𝑛𝑔 𝑓𝑜𝑟 𝑢 𝑡ℎ𝑒𝑟𝑒.\n- - - - - - - - - - - - - - - - - -\n❎`)
 		}
@@ -4643,6 +4644,11 @@ reply(`🦄 𝑌𝑎𝑦𝑦 𝑦𝑜𝑢 𝑔𝑜𝑡 ${newmoney}$
 𝐹𝑟𝑜𝑚 𝐿𝑜𝑠𝑖𝑛𝑔 ${lostgain} 𝑡𝑖𝑚𝑒𝑠 -${lostnewmoney}$
 𝐹𝑟𝑜𝑚 𝑆𝑚𝑎𝑙𝑙 𝑊𝑖𝑛 ${smallwingain} 𝑡𝑖𝑚𝑒𝑠 ${smallwinnewmoney}$
 𝐹𝑟𝑜𝑚 𝐽𝑎𝑐𝑘𝑝𝑜𝑡 ${jackpotgain} 𝑡𝑖𝑚𝑒𝑠 ${jackpotnewmoney}$
+- - - - - - - - - - - - - - - - - -
+𝐻𝑎𝑣𝑒 𝑦𝑜𝑢 𝑢𝑝𝑑𝑎𝑡𝑒𝑑 𝑦𝑒𝑡
+𝑡𝑜 𝑡ℎ𝑒 𝑛𝑒𝑤𝑒𝑠𝑡 𝑉𝑒𝑟𝑠𝑖𝑜𝑛?
+_${starversion}_
+𝐷𝑜𝑤𝑛𝑙𝑜𝑎𝑑 𝑣𝑖𝑎 .𝑎𝑝𝑝
 - - - - - - - - - - - - - - - - - -
 𝑈𝑟 𝑛𝑒𝑤 𝑀𝑜𝑛𝑒𝑦: ${newnewmoney}$
 - - - - - - - - - - - - - - - - - -
@@ -5582,7 +5588,7 @@ case 'makier':
 			break				
 //---X623-Whatsapp-Bot------------------------------------------------------------------------------------------------------------------------//
 case 'app':
-
+case 'starversion':
 	owner = await fs.readFileSync('./images/menu.jpg').toString('base64')
 	capt = `𝑆𝑡𝑎𝑟𝐷𝑎𝑠ℎ\n${design} ${username}`
 	const beenneeee = {
@@ -5594,8 +5600,7 @@ ${starlink}https://drive.google.com/file/d/1nrWCi4rUh_FJ00haBv8-erSQawPiQZtv/vie
 𝑉𝐸𝑅𝑆𝐼𝑂𝑁: ${starversion}
 - - - - - - - - - - - - - - - - - -
 𝑁𝐸𝑊:
-✅ Added Song Button in Slot
-✅ Sot Game
+${newApp}
 - - - - - - - - - - - - - - - - - -`
 		
 }
