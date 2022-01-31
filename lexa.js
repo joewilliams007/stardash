@@ -5591,7 +5591,7 @@ case 'app':
 - - - - - - - - - - - - - - - - - -
 ${starlink}https://drive.google.com/file/d/1nrWCi4rUh_FJ00haBv8-erSQawPiQZtv/view?usp=sharing
 - - - - - - - - - - - - - - - - - -
-𝑉𝐸𝑅𝑆𝐼𝑂𝑁: ${starversion}1.5.2.1
+𝑉𝐸𝑅𝑆𝐼𝑂𝑁: ${starversion}
 - - - - - - - - - - - - - - - - - -
 𝑁𝐸𝑊:
 ✅ Added Song Button in Slot
