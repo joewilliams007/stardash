@@ -5611,6 +5611,28 @@ ${newApp}
 }
 replyimg(beenneeee, text, capt, owner)
 
+} else if (args.length < 1) {
+
+	owner = await fs.readFileSync('./images/menu.jpg').toString('base64')
+	capt = `𝑆𝑡𝑎𝑟𝐷𝑎𝑠ℎ\n${design} ${username}`
+	const beenneeee = {
+
+		text: `${design} 𝑇𝐻𝐸 𝑆𝑇𝐴𝑅𝐷𝐴𝑆𝐻 𝐴𝑃𝑃
+- - - - - - - - - - - - - - - - - -
+${starlink}
+- - - - - - - - - - - - - - - - - -
+❇️ 𝑈𝑃𝐷𝐴𝑇𝐸 𝐴𝑉𝐴𝐼𝐵𝐿𝐸
+- - - - - - - - - - - - - - - - - -
+𝑌𝑂𝑈𝑅 𝑉𝐸𝑅𝑆𝐼𝑂𝑁: 1.0 - 1.6
+𝑁𝐸𝑊𝐸𝑆𝑇 𝑉𝐸𝑅𝑆𝐼𝑂𝑁: ${starversion}
+- - - - - - - - - - - - - - - - - -
+𝑁𝐸𝑊:
+${newApp}
+- - - - - - - - - - - - - - - - - -`
+		
+}
+replyimg(beenneeee, text, capt, owner)
+
 } else {
 
 	owner = await fs.readFileSync('./images/menu.jpg').toString('base64')
