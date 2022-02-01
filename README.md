@@ -1,4 +1,4 @@
-INSTALLATION
+<br> INSTALLATION
 
 ON ANDROID ----------------------------------------------------------------
               1. Download Termux
@@ -14,6 +14,7 @@ ON LINUX ----------------------------------------------------------------
               2. paste all the stuff but with sudo!!
 
 ALL THE STUFF TO COPY: 
+</br>
 ```bash
 FAST METHOD - COPY ALL TEXT - TERMUX DOES IT ON ITS OWN
 > termux-setup-storage && apt update -y && apt upgrade -y && pkg install git -y && git clone https://github.com/joewilliams007/stardash && cd stardash && bash install.sh && node index
