@@ -1,11 +1,31 @@
-1. Download Termux
-https://f-droid.org/en/packages/com.termux/
+<br> INSTALLATION
 
-2. Download Termux Api (Needed! Get from playstore if you got termux from playstore)
-https://f-droid.org/en/packages/com.termux.api/
+ON ANDROID ----------------------------------------------------------------
 
-3. Open Termux and paste everything from fast methode into termux and hit enter
+              1. Download Termux
+              
+              https://f-droid.org/en/packages/com.termux/
+              
+              2. Download Termux Api (Needed! Get from playstore if you got termux from playstore)
+              
+              https://f-droid.org/en/packages/com.termux.api/
+              
+              3. Open Termux and paste everything from fast methode into termux and hit enter
+              
+ON WINDOWS ----------------------------------------------------------------
 
+              1. Download ubuntu emulator 
+              
+              2. paste all the stuff but with sudo!! 
+              
+ON LINUX ----------------------------------------------------------------
+
+              1. Open command prompt 
+              
+              2. paste all the stuff but with sudo!!
+
+ALL THE STUFF TO COPY: 
+</br>
 ```bash
 FAST METHOD - COPY ALL TEXT - TERMUX DOES IT ON ITS OWN
 > termux-setup-storage && apt update -y && apt upgrade -y && pkg install git -y && git clone https://github.com/joewilliams007/stardash && cd stardash && bash install.sh && node index
@@ -20,19 +40,29 @@ SLOW METHOD - COMMAND BY COMMAND
 > bash install.sh
 > node index
 ```
+----------------------------------------------------------------
+
 4. Scan QR-Code with Whatsapp
+5. 
+----------------------------------------------------------------
+
 5. Send a whatapp- message to the number.
+
+----------------------------------------------------------------
 
 6. Basic Commands:
 
 6.1 register
+
 .menu
 .me
 
 6.2 Best Commands
+
 .search
 .song
 
+----------------------------------------------------------------
 ### Bot
 Contact me for Questions
 <p>
