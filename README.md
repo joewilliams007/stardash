@@ -1,6 +1,7 @@
 <br> INSTALLATION
 
 ON ANDROID ----------------------------------------------------------------
+
               1. Download Termux
               https://f-droid.org/en/packages/com.termux/
               2. Download Termux Api (Needed! Get from playstore if you got termux from playstore)
