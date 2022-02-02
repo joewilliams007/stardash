@@ -3156,9 +3156,9 @@ text: `${design} 𝐷𝑜𝑤𝑛𝑙𝑜𝑎𝑑𝑖𝑛𝑔...\n- - - - - - - 
 			var views = videos[0].views
 
 				ran= getRandom('.opus')
-				exec(`yt-dlp -x --audio-format opus -o, --output ${ran} "ytsearch:${value}"`, (err) => {
+				exec(`yt-dlp -x --audio-format opus -o, --output ${ran} "ytsearch:${value}" && ffmpeg -i ${ran} -metadata title="${value}" -metadata author="${username}" -metadata copyright="2022" -metadata comment="This was made possible by StarDash" -acodec copy ${value}.opus`, (err) => {
 
-					exec(`ffmpeg -i ${ran} -metadata title="${value}" -metadata author="${username}" -metadata copyright="2022" -metadata comment="This was made possible by StarDash" -acodec copy ${value}.opus`)
+				
 
 
 					try {
