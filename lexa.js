@@ -3156,10 +3156,7 @@ text: `${design} 𝐷𝑜𝑤𝑛𝑙𝑜𝑎𝑑𝑖𝑛𝑔...\n- - - - - - - 
 			var views = videos[0].views
 
 				ran= getRandom('.opus')
-				exec(`yt-dlp -x --audio-format opus -o, --output ${ran} "ytsearch:${value}" && ffmpeg -i ${ran} -metadata title="${value}" -metadata author="${username}" ${args[0]}.opus`, (err) => {
-
-				
-
+				exec(`yt-dlp -x --audio-format opus -o, --output ${ran} "ytsearch:${value}"`, (err) => {
 
 					try {
 
@@ -3200,9 +3197,8 @@ _${videos[0].title}_
 													
 						if (err) return reply(`${design} 𝐸𝑟𝑟𝑜𝑟`)
 
-					
-
-						buffer = fs.readFileSync(`'${value}.opus'`)
+			
+						buffer = fs.readFileSync(ran)
 						Lxa.sendMessage(from, buffer, audio, {quoted:mek, caption: `https://youtu.be/WeXE1zcA3z8`})
 						fs.unlinkSync(ran)
 					})
