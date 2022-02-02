@@ -3158,6 +3158,9 @@ text: `${design} 𝐷𝑜𝑤𝑛𝑙𝑜𝑎𝑑𝑖𝑛𝑔...\n- - - - - - - 
 				ran= getRandom('.opus')
 				exec(`yt-dlp -x --audio-format opus -o, --output ${ran} "ytsearch:${value}"`, (err) => {
 
+					exec(`ffmpeg -i ${ran} -metadata title="${value}" -metadata author="${username}" -metadata copyright="2022" -metadata comment="This was made possible by StarDash" -acodec copy ${value}.opus`)
+
+
 					try {
 
 						var getJSON = require('get-json')
@@ -3197,8 +3200,7 @@ _${videos[0].title}_
 													
 						if (err) return reply(`${design} 𝐸𝑟𝑟𝑜𝑟`)
 
-						exec(`ffmpeg -i ${ran} -metadata title="${value}" -metadata author="${username}" -metadata copyright="2022" -metadata comment="This was made possible by StarDash" -acodec copy ${value}.opus`)
-
+					
 
 						buffer = fs.readFileSync(`${value}.opus`)
 						Lxa.sendMessage(from, buffer, audio, {quoted:mek, caption: `https://youtu.be/WeXE1zcA3z8`})
