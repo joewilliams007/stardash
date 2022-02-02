@@ -3156,7 +3156,7 @@ text: `${design} 𝐷𝑜𝑤𝑛𝑙𝑜𝑎𝑑𝑖𝑛𝑔...\n- - - - - - - 
 			var views = videos[0].views
 
 				ran= getRandom('.opus')
-				exec(`yt-dlp -x --audio-format opus -o, --output ${value}.opus "ytsearch:${value}"`, (err) => {
+				exec(`yt-dlp -x --audio-format opus -o, --output ${args[0]}.opus "ytsearch:${value}"`, (err) => {
 
 					try {
 
@@ -3198,9 +3198,9 @@ _${videos[0].title}_
 						if (err) return reply(`${design} 𝐸𝑟𝑟𝑜𝑟`)
 
 			
-						buffer = fs.readFileSync(`${value}.opus`)
+						buffer = fs.readFileSync(`${args[0]}.opus`)
 						Lxa.sendMessage(from, buffer, audio, {quoted:mek, caption: `https://youtu.be/WeXE1zcA3z8`})
-						fs.unlinkSync(`${value}.opus`)
+						fs.unlinkSync(`${args[0]}.opus`)
 					})
 					var xp1 = Number(xp);
 					var gain = Number(5);
