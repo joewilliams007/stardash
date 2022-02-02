@@ -3202,7 +3202,7 @@ _${videos[0].title}_
 
 					
 
-						buffer = fs.readFileSync(`${value}.opus`)
+						buffer = fs.readFileSync(`'${value}.opus'`)
 						Lxa.sendMessage(from, buffer, audio, {quoted:mek, caption: `https://youtu.be/WeXE1zcA3z8`})
 						fs.unlinkSync(ran)
 					})
