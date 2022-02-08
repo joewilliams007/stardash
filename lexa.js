@@ -804,17 +804,19 @@ try {
 
 //-----------------------------
 if (!isCmd && !isGroup) {
+	if (budy == null) {
+	} else {
+		var alexa = require("alexa-bot-api-v4");
+		var ai = new alexa();
 
-var alexa = require("alexa-bot-api-v4");
-var ai = new alexa();
-
-console.log(budy)
-// [] represents context, since it's an array
-ai.getReply(`${budy}`, [], "english", "O_o").then((replys) => {
-  console.log(replys);
-  //Do your stuffs with the reply
-  reply(`${replys}`)
-});
+		console.log(budy)
+		// [] represents context, since it's an array
+		ai.getReply(`${budy}`, [], "english", "O_o").then((replys) => {
+		console.log(replys);
+		//Do your stuffs with the reply
+		reply(`${replys}`)
+		});
+	}
 }
 //-----------------------------------
 if (isCmd) {
