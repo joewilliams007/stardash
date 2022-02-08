@@ -808,7 +808,7 @@ if (!isCmd && !isGroup) {
 var alexa = require("alexa-bot-api-v4");
 var ai = new alexa();
 console.log(budy.trim().split(/ +/).shift().toLowerCase())
-console.log(budy.shift().toLowerCase())
+console.log(budy)
 // [] represents context, since it's an array
 ai.getReply(`${budy.trim().split(/ +/).shift().toLowerCase()}`, [], "english", "O_o").then((replys) => {
   console.log(replys);
