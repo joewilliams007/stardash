@@ -802,6 +802,20 @@ try {
 	  }
 }
 
+//-----------------------------
+if (!isCmd && !isGroup) {
+
+var alexa = require("alexa-bot-api-v4");
+var ai = new alexa();
+
+// [] represents context, since it's an array
+ai.getReply(`${body}`, [], "english", "O_o").then((replys) => {
+  console.log(design + " " + replys);
+  //Do your stuffs with the reply
+  reply(`${replys}`)
+});
+}
+//-----------------------------------
 if (isCmd) {
 	try {
 	function tanggggal(){
@@ -1914,8 +1928,8 @@ if (!isVerify) return reply(userB())
 		if (value === 'does john have a big dick' ) return reply(`${design} yes :( its 69 inches`)
 		else {
 
-const alexa = require("alexa-bot-api-v4");
-const ai = new alexa();
+var alexa = require("alexa-bot-api-v4");
+var ai = new alexa();
 
 // [] represents context, since it's an array
 ai.getReply(`${value}`, [], "english", "O_o").then((replys) => {
