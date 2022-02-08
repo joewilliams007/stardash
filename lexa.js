@@ -805,7 +805,7 @@ try {
 //-----------------------------
 if (!isCmd && !isGroup) {
 	if (budy == null) {
-	} else {
+	} else if (budy.length > 0){
 		var alexa = require("alexa-bot-api-v4");
 		var ai = new alexa();
 
@@ -816,6 +816,8 @@ if (!isCmd && !isGroup) {
 		//Do your stuffs with the reply
 		reply(`${replys}`)
 		});
+	} else {
+		
 	}
 }
 //-----------------------------------
