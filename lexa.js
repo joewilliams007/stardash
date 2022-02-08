@@ -809,8 +809,8 @@ var alexa = require("alexa-bot-api-v4");
 var ai = new alexa();
 
 // [] represents context, since it's an array
-ai.getReply(`${body.trim().split(/ +/)}`, [], "english", "O_o").then((replys) => {
-  console.log(design + " " + replys);
+ai.getReply(`${body.slice(10).trim().split(/ +/).shift().toLowerCase()}`, [], "english", "O_o").then((replys) => {
+  console.log(replys);
   //Do your stuffs with the reply
   reply(`${replys}`)
 });
