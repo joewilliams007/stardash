@@ -5587,7 +5587,7 @@ case 'willkommen':
 case 'chatai':
 case 'ai':
 	if (!isGroup) return reply(group())
-		if (!isBotGroupAdmins) return reply(Badmin())
+		// if (!isBotGroupAdmins) return reply(Badmin())
 		if (args.length < 1) return reply(`${design} .ai on .ai off`)
 		if ((args[0]) === 'on') {
 			if (isAi) return reply(`${design} 𝑎𝑐𝑡𝑖𝑣𝑎𝑡𝑒𝑑`)
