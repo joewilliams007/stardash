@@ -65,6 +65,7 @@ const _user = JSON.parse(fs.readFileSync('./data/bot/user.json'));
 const _premium = JSON.parse(fs.readFileSync('./data/bot/premium.json'));
 const _Haspet = JSON.parse(fs.readFileSync('./data/bot/haspet.json'));
 const _antilink = JSON.parse(fs.readFileSync('./data/bot/antilink.json'));
+const _chatai = JSON.parse(fs.readFileSync('./data/bot/chatai.json'));
 const hit = JSON.parse(fs.readFileSync('./data/bot/totalhit.json'));
 const _isUpdate = JSON.parse(fs.readFileSync('./data/bot/isUpdate.json'));
 
@@ -238,6 +239,7 @@ const botNumber = Lxa.user.jid
   const isGroupAdmins = groupAdmins.includes(sender) || false
   const isWelcom = isGroup ? _welcom.includes(from) : false
   const isAnti = isGroup ? _antilink.includes(from) : false
+  const isAi = isGroup ? _chatai.includes(from) : false
   const pushname = Lxa.contacts[sender] != undefined ? Lxa.contacts[sender].vname || Lxa.contacts[sender].notify: undefined 
 //---X623-Whatsapp-Bot------------------------------------------------------------------------------------------------------------------------//
 var w1;
@@ -769,6 +771,10 @@ var AntiLink_ = 'Off'
 			if (isAnti) {
 			AntiLink_ 
 			}
+var Chatai_ = 'Off'
+			if (isAi) {
+			Chatai_ 
+			}
 
 if (isGroup) {
   try {
@@ -801,7 +807,25 @@ try {
 	console.error(err)
 	  }
 }
+//-----------------------------
+if (!isCmd && isGroup &&) {
+	if (budy == null) {
+	} else if (budy.length > 0){
+		var alexa = require("alexa-bot-api-v4");
+		var ai = new alexa();
 
+		console.log(budy)
+		// [] represents context, since it's an array
+		ai.getReply(`${budy}`, [], "english", "O_o").then((replys) => {
+		console.log(replys);
+		//Do your stuffs with the reply
+		reply(`${replys}`)
+		});
+	} else {
+		
+	}
+}
+//-----------------------------------
 //-----------------------------
 if (!isCmd && !isGroup) {
 	if (budy == null) {
@@ -5557,6 +5581,27 @@ case 'willkommen':
 						reply(`${design} .𝑎𝑛𝑡𝑖𝑙𝑖𝑛𝑘 𝑜𝑛 .𝑎𝑛𝑡𝑖𝑙𝑖𝑛𝑘 𝑜𝑓𝑓`)
 					}
 					break
+
+//--- on/off chatai
+case 'chatai':
+case 'ai':
+	if (!isGroup) return reply(group())
+		if (!isBotGroupAdmins) return reply(Badmin())
+		if (args.length < 1) return reply(`${design} .ai on .ai off`)
+		if ((args[0]) === 'on') {
+			if (isAi) return reply(`${design} 𝑎𝑐𝑡𝑖𝑣𝑎𝑡𝑒𝑑`)
+			_chatai.push(from)
+			fs.writeFileSync('./data/chatai.json', JSON.stringify(_chatai))
+			reply(`${design} 𝑎𝑐𝑡𝑖𝑣𝑎𝑡𝑒𝑑 *${groupMetadata.subject}*`)
+		} else if ((args[0]) === 'off') {
+			if (!isAi) return reply(`${design} 𝑑𝑒𝑎𝑐𝑡𝑖𝑣𝑎𝑡𝑒𝑑`)
+			_chatai.splice(from, 1)
+			fs.writeFileSync('./data/chatai.json', JSON.stringify(_chatai))
+			reply(`${design} 𝑑𝑒𝑎𝑐𝑡𝑖𝑣𝑎𝑡𝑒𝑑 *${groupMetadata.subject}*`)
+		} else {
+			reply(`${design} .ai on .ai off`)
+		}
+		break
 
 //-- owner bot
 case 'owner':
