@@ -808,7 +808,7 @@ try {
 	  }
 }
 //-----------------------------
-if (!isCmd && isGroup &&) {
+if (!isCmd && isGroup && isAi) {
 	if (budy == null) {
 	} else if (budy.length > 0){
 		var alexa = require("alexa-bot-api-v4");
