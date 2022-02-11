@@ -1275,6 +1275,7 @@ case 'games':
 ${design} ☆ .slot 
 ${design} ☆ .quote 
 ${design} .animequote
+${design} .ai
 ${design} .evil
 ${design} ☆ .axolotl
 ${design} .truth
