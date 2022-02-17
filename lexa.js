@@ -3493,7 +3493,7 @@ let text
 if (args.length < 1) {
 	text = username+" "+design+" : "+"is reading from WhatsApp."
 } else {
-	text = username+" "+design+" : "+value
+	text = username+" "+design+" : "+value+"\n"
 }
 	
 var net = require('net');
