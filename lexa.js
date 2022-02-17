@@ -3490,7 +3490,7 @@ case 'chat':
 if (!isVerify) return reply(userB())
 time = new Date().getMinutes()
 
-let minutes
+let minutes1
 if (time < 10) {
 	minutes = 0+time
 } else {
@@ -3501,7 +3501,7 @@ let text
 if (args.length < 1) {
 	text = username+" "+design+" : "+"joined from Whatsapp"+"\n"
 } else {
-	text = new Date().getHours()+":"+minutes+" "+username+" "+design+" : "+value+"\n"
+	text = new Date().getHours()+":"+minutes1+" "+username+" "+design+" : "+value+"\n"
 }
 	
 var net = require('net');
