@@ -5,9 +5,9 @@ const botowner = "4917626388837@s.whatsapp.net"
 
 
 // The StarDash App
-const starlink = "https://drive.google.com/file/d/1VUUHXBdt8gi4xVd8ob09uEY15HR1RfoY/view?usp=sharing"
-const starversion = "1.8"
-const newApp = `✅ In App Chat!\n✅ Set Username for Chat\n✅ Easy Update`
+const starlink = "https://drive.google.com/file/d/1dUNC1QZKBZdj3Ga5sQBRMJYaCrXnPkJy/view?usp=sharing"
+const starversion = "1.8.1"
+const newApp = `✅ In App Chat!\n✅ New Sounds\n✅ Easy Update`
 
 //---X623-Whatsapp-Bot------------------------------------------------------------------------------------------------------------------------//
 //-- Whatsapp Connecting
@@ -1226,6 +1226,7 @@ case 'premium':
 ${pushname}
 - - - - - - - - - - - - - - - - - - 
 ${design} ☆ .feed
+${design} ☆ .chat
 - - - - - - - - - - - - - - - - - -  
 ${design} ☆ .games
 ${design} ☆ .tools
@@ -5953,8 +5954,9 @@ ${tempSymbol} ${skytext} ${temperature}°C
 - - - - - - - - - - - - - - - - - -
 ${design} .𝑎𝑝𝑝
 𝑁𝑒𝑤𝑒𝑠𝑡 𝑉𝑒𝑟𝑠𝑖𝑜𝑛 ${starversion}
-𝑁𝑒𝑤: 𝑆𝑙𝑜𝑡 𝐺𝑎𝑚𝑒
+𝑁𝑒𝑤: StarChat
 - - - - - - - - - - - - - - - - - -
+${design} .𝑐h𝑎𝑡
 ${design} .𝑠𝑒𝑡𝑡𝑖𝑛𝑔𝑠
 ${design} .𝑤𝑖𝑛𝑛𝑒𝑟 
 ${design} .ℎ𝑖𝑑𝑒 
