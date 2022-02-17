@@ -1226,6 +1226,8 @@ case 'premium':
 ${pushname}
 - - - - - - - - - - - - - - - - - - 
 ${design} ☆ .feed
+${design} ☆ .chat
+${design} ☆ .chat hi
 - - - - - - - - - - - - - - - - - -  
 ${design} ☆ .games
 ${design} ☆ .tools
@@ -3510,6 +3512,9 @@ client.on('data', function(data) {
 - - - - - - - - - - - - - - - - - -		
 ${text.replace(/\n/g,"")}
 ${data}
+- - - - - - - - - - - - - - - - - -
+_Chat is also in StarDash App!
+Download with .app_
 - - - - - - - - - - - - - - - - - -`)
 });
 
