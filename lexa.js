@@ -946,8 +946,7 @@ if 	(Number(ddyears) > Number(ddatelasty)) {
 		})
 	})
 
-var beens = {
-text: `𝑇𝑜𝑑𝑎𝑦 𝑖𝑠 𝑎 𝑠𝑝𝑒𝑐𝑖𝑎𝑙 𝑑𝑎𝑦!
+	reply(`𝑇𝑜𝑑𝑎𝑦 𝑖𝑠 𝑎 𝑠𝑝𝑒𝑐𝑖𝑎𝑙 𝑑𝑎𝑦!
  
 ${ddate1} and ${ddate2} are today 
 ${ddyears} Years Together!!!
@@ -965,9 +964,7 @@ together!
 ${ddate.split(' ')[0]}
 ${ddate.split(' ')[1]}
 ${ddate.split(' ')[2]}
-`,
-}
-replyimg(beens, text, captdd, ownerdd)
+`)
 }
 
 if 	(Number(ddmonths) > Number(ddatelastm)) {
@@ -1016,8 +1013,8 @@ if 	((Number(dddays) > Number(ddatelastd)) && Number(dddays) === Number(100) || 
 		})
 	})
 
-var beens = {
-text: `𝑇𝑜𝑑𝑎𝑦 𝑖𝑠 𝑎 𝑠𝑝𝑒𝑐𝑖𝑎𝑙 𝑑𝑎𝑦!
+
+	reply(`𝑇𝑜𝑑𝑎𝑦 𝑖𝑠 𝑎 𝑠𝑝𝑒𝑐𝑖𝑎𝑙 𝑑𝑎𝑦!
  
 ${ddate1} and ${ddate2} are today 
 ${dddays} days Together!!!
@@ -1035,10 +1032,8 @@ together!
 ${ddate.split(' ')[0]}
 ${ddate.split(' ')[1]}
 ${ddate.split(' ')[2]}
-`,
-}
-replyimg(beens, text, captdd, ownerdd)
-}
+`
+
 
 
 } catch {
@@ -1220,8 +1215,8 @@ case 'premium':
 
 	owner = await fs.readFileSync('./images/menu.jpg').toString('base64')
 	capt = `𝑆𝑡𝑎𝑟𝐷𝑎𝑠ℎ\n${design} ${username}`
-	var beens = {
-	text: `𝑀𝑒𝑛𝑢 ☁️
+	
+		reply( `𝑀𝑒𝑛𝑢 ☁️
 - - - - - - - - - - - - - - - - - - 
 ${pushname}
 - - - - - - - - - - - - - - - - - - 
@@ -1240,17 +1235,12 @@ ${design} .admin
 ${design} .owners
 - - - - - - - - - - - - - - - - - - 
 𝑌𝑜𝑢𝑟 𝑀𝑜𝑛𝑒𝑦 ⌖ _${money}$_
-`,
-}
-replyimg(beens, text, capt, owner)
+`)
 
 break
 case 'star':
     if (!isVerify) return reply(userB(prefix))
-	owner = await fs.readFileSync('./images/menu.jpg').toString('base64')
-	capt = `𝑆𝑡𝑎𝑟𝐷𝑎𝑠ℎ\n${design} ${username}`
-	var beens = {
-	text: `𝑆𝑡𝑎𝑟𝑃𝑖𝑐𝑡𝑢𝑟𝑒 ✨
+	reply(`𝑆𝑡𝑎𝑟𝑃𝑖𝑐𝑡𝑢𝑟𝑒 ✨
 - - - - - - - - - - - - - - - - - - 
 ${pushname}
 - - - - - - - - - - - - - - - - - -    
@@ -1260,9 +1250,7 @@ ${design} .sp
 ${design} .mysp
 - - - - - - - - - - - - - - - - - - 
 _𝑌𝑜𝑢𝑟 𝑀𝑜𝑛𝑒𝑦 ⌖ ${money}$_
-`,
-}
-replyimg(beens, text, capt, owner)
+`)
 
 	 break
 case 'games':
@@ -1308,10 +1296,7 @@ replyimg(beens, text, capt, owner)
 
 case 'tools':
     if (!isVerify) return reply(userB(prefix))
-	owner = await fs.readFileSync('./images/menu.jpg').toString('base64')
-	capt = `𝑆𝑡𝑎𝑟𝐷𝑎𝑠ℎ\n${design} ${username}`
-	var beens = {
-text: `𝑇𝑜𝑜𝑙𝑠 
+	reply(`𝑇𝑜𝑜𝑙𝑠 
 - - - - - - - - - - - - - - - - - - 
 ⌖ ${pushname}
 - - - - - - - - - - - - - - - - - -    
@@ -1344,9 +1329,7 @@ ${design} .symbol
 ${design} .restart
 - - - - - - - - - - - - - - - - - - 
 𝑌𝑜𝑢𝑟 𝑀𝑜𝑛𝑒𝑦 ⌖ _${money}$_
-`,
-}
-replyimg(beens, text, capt, owner)
+`)
 
 	 break  
      
@@ -1393,10 +1376,7 @@ replyimg(beens, text, capt, owner)
 case 'settings':
 case 'setting':
     if (!isVerify) return reply(userB(prefix))
-	owner = await fs.readFileSync('./images/menu.jpg').toString('base64')
-	capt = `𝑆𝑡𝑎𝑟𝐷𝑎𝑠ℎ\n${design} ${username}`
-	var beens = {
-text: `𝑆𝑒𝑡𝑡𝑖𝑛𝑔𝑠 ⚙️
+	reply(`𝑆𝑒𝑡𝑡𝑖𝑛𝑔𝑠 ⚙️
 - - - - - - - - - - - - - - - - - - 
 ⌖ ${pushname}
 ⌖ ${id}
@@ -1426,11 +1406,9 @@ ${design} .design
 ℹ️ For Account Design.
 - - - - - - - - - - - - - - - - - - 
 _𝑌𝑜𝑢𝑟 𝑀𝑜𝑛𝑒𝑦 ⌖ ${money}$_
-`,
-}
-replyimg(beens, text, capt, owner)
+`)
 
-	 break  
+break  
 case 'admin':
      if (!isVerify) return reply(userB(prefix))
      if (!isBotGroupAdmins) return reply(`${design} 𝑂𝑛𝑙𝑦𝐹𝑜𝑟𝐴𝑑𝑚𝑖𝑛𝑠`)
@@ -1750,16 +1728,11 @@ case 'getsong':
 						var lyrics = await firstSong.lyrics();
 					//	console.log("Lyrics of the Song:\n", lyrics, "\n");
 					
-						owner = fs.readFileSync('./images/menu.jpg').toString('base64')
-						capt = `𝐿𝑦𝑟𝑖𝑐𝑠\n${design} ${username}`
-					var beenss = {
-					text: `${design} 𝐿𝑦𝑟𝑖𝑐𝑠
+					reply(`${design} 𝐿𝑦𝑟𝑖𝑐𝑠
 - - - - - - - - - - - - - - - - - - 
 ${lyrics}
 - - - - - - - - - - - - - - - - - - 
-`,
-					}
-					replyimg(beenss, text, capt, owner)
+`)
 					}catch (err){
 					}
 						
@@ -3168,12 +3141,7 @@ case 'ytbsong':
 		var lyrics = await firstSong.lyrics();
 	//	console.log("Lyrics of the Song:\n", lyrics, "\n");
 	
-		owner = fs.readFileSync('./images/menu.jpg').toString('base64')
-		capt = `𝐿𝑦𝑟𝑖𝑐𝑠\n${design} ${username}`
-	var beenss = {
-text: `${design} 𝐷𝑜𝑤𝑛𝑙𝑜𝑎𝑑𝑖𝑛𝑔...\n- - - - - - - - - - - - - - - - - -\ninfo- while the song is loading you can view the lyrics. If they dont belong to the song, i hope the song atleast is the correct one. Next time you can give more information about the song to get better results. Huge thanks to the genius lyric API and the yt-dlp team for making this possible. Also a big shoutout to the song creaters though. Have fun enoying the song!\n- - - - - - - - - - - - - - - - - -\n𝐿𝑦𝑟𝑖𝑐𝑠\n- - - - - - - - - - - - - - - - - -\n${lyrics}\n- - - - - - - - - - - - - - - - - -\n𝐶𝑜𝑠𝑡: _10$_\n_.cheapsong (_ 𝐶𝑜𝑠𝑡  _4$)_\n𝑀𝑜𝑛𝑒𝑦 𝑙𝑒𝑓𝑡: _${newmoney}$_\n- - - - - - - - - - - - - - - - - -\n❇️ 𝑃𝑟𝑒𝑚𝑖𝑢𝑚 𝑆𝑜𝑛𝑔𝑠`,
-	}
-	replyimg(beenss, text, capt, owner)
+	reply( `${design} 𝐷𝑜𝑤𝑛𝑙𝑜𝑎𝑑𝑖𝑛𝑔...\n- - - - - - - - - - - - - - - - - -\ninfo- while the song is loading you can view the lyrics. If they dont belong to the song, i hope the song atleast is the correct one. Next time you can give more information about the song to get better results. Huge thanks to the genius lyric API and the yt-dlp team for making this possible. Also a big shoutout to the song creaters though. Have fun enoying the song!\n- - - - - - - - - - - - - - - - - -\n𝐿𝑦𝑟𝑖𝑐𝑠\n- - - - - - - - - - - - - - - - - -\n${lyrics}\n- - - - - - - - - - - - - - - - - -\n𝐶𝑜𝑠𝑡: _10$_\n_.cheapsong (_ 𝐶𝑜𝑠𝑡  _4$)_\n𝑀𝑜𝑛𝑒𝑦 𝑙𝑒𝑓𝑡: _${newmoney}$_\n- - - - - - - - - - - - - - - - - -\n❇️ 𝑃𝑟𝑒𝑚𝑖𝑢𝑚 𝑆𝑜𝑛𝑔𝑠`)
 	}catch (err){
 		reply(`${design} 𝐷𝑜𝑤𝑛𝑙𝑜𝑎𝑑𝑖𝑛𝑔...\n- - - - - - - - - - - - - - - - - -\n𝑁𝑜 𝑙𝑦𝑟𝑖𝑐𝑠 𝑤𝑒𝑟𝑒 𝑓𝑜𝑢𝑛𝑑\n- - - - - - - - - - - - - - - - - -\n_You got refunded 5$_\n- - - - - - - - - - - - - - - - - -\n❇️ 𝑃𝑟𝑒𝑚𝑖𝑢𝑚 𝑆𝑜𝑛𝑔𝑠`)  
 
@@ -4283,26 +4251,15 @@ await delay(1000) /// waiting 1 second.
 	const lyrics = await firstSong.lyrics();
 //	console.log("Lyrics of the Song:\n", lyrics, "\n");
 
-	owner = fs.readFileSync('./images/menu.jpg').toString('base64')
-	capt = `𝐿𝑦𝑟𝑖𝑐𝑠\n${design} ${username}`
-var beenss = {
-text: `${design} 𝐿𝑦𝑟𝑖𝑐𝑠
+reply( `${design} 𝐿𝑦𝑟𝑖𝑐𝑠
 - - - - - - - - - - - - - - - - - - 
 ${lyrics}
 - - - - - - - - - - - - - - - - - - 
-𝑚𝑜𝑛𝑒𝑦 𝑙𝑒𝑓𝑡 ${newmoney}$`,
-}
-replyimg(beenss, text, capt, owner)
+𝑚𝑜𝑛𝑒𝑦 𝑙𝑒𝑓𝑡 ${newmoney}$`)
 }catch (err){
-	owner = fs.readFileSync('./images/menu.jpg').toString('base64')
-	capt = `𝐿𝑦𝑟𝑖𝑐𝑠\\n${design} ${username}`
-var beenss = {
-text: `${design} 𝐿𝑦𝑟𝑖𝑐𝑠
+	reply(`${design} 𝐿𝑦𝑟𝑖𝑐𝑠
 - - - - - - - - - - - - - - - - - - 
-Sorry no such song was found. `,
-}
-replyimg(beenss, text, capt, owner)
-}
+Sorry no such song was found. `)
 
 
 
@@ -4376,10 +4333,7 @@ case 'shazam':
             if (err) throw err;
         })
     })
-		owner = fs.readFileSync('./images/menu.jpg').toString('base64')
-		capt = `𝑆ℎ𝑎𝑧𝑎𝑚\n${design} ${username}`
-	var beenss = {
-	text: `${design} 𝑆ℎ𝑎𝑧𝑎𝑚
+	reply(`${design} 𝑆ℎ𝑎𝑧𝑎𝑚
 - - - - - - - - - - - - - - - - - - 
 _${hint}_
 - - - - - - - - - - - - - - - - - -
@@ -4388,24 +4342,17 @@ _${hint2}_
 _${hint3}_
 _${hint4}_
 - - - - - - - - - - - - - - - - - -
-𝑇𝑖𝑐𝑘𝑒𝑡𝑠 𝑙𝑒𝑓𝑡 ${newtickets}`,
-}
-	replyimg(beenss, text, capt, owner)
+𝑇𝑖𝑐𝑘𝑒𝑡𝑠 𝑙𝑒𝑓𝑡 ${newtickets}`)
 
 
 
 
 	}).catch(function (error) {
 		console.error(error);
-		owner = fs.readFileSync('./images/menu.jpg').toString('base64')
-		capt = `𝑆ℎ𝑎𝑧𝑎𝑚\n${design} ${username}`
-	var beenss = {
-	text: `${design} 𝑆ℎ𝑎𝑧𝑎𝑚
+		reply(`${design} 𝑆ℎ𝑎𝑧𝑎𝑚
 - - - - - - - - - - - - - - - - - - 
 Sorry no song was found. 
-Your ticket will be refunded.`,
-}
-	replyimg(beenss, text, capt, owner)
+Your ticket will be refunded.`)
 	});
 break
 //---X623-Whatsapp-Bot------------------------------------------------------------------------------------------------------------------------// 
@@ -4460,8 +4407,7 @@ var minutes = hours * Number(60);
 var seconds = minutes * Number(60);
 // Thx for ignoring -------------------------------------------------------------------------------------------------------------------------------------------------
 
-var beens = {
-text: `${design} ${ddate1} and ${ddate2} are today 
+reply(`${design} ${ddate1} and ${ddate2} are today 
 
 ${ddyears} years 
 - - - - - Or - - - - - 💕
@@ -4482,9 +4428,7 @@ together!
 ${ddate.split(' ')[0]} 
 ${ddate.split(' ')[1]} 
 ${ddate.split(' ')[2]}
-`,
-}
-replyimg(beens, text, captdd, ownerdd)
+`)
 break
 //-- Date
 case 'date':
@@ -4916,13 +4860,7 @@ if ((slot1 == slot2) && slot2 == slot3) {
                 if (err) throw err;
             })
         })
-		owner = await fs.readFileSync('./images/menu.jpg').toString('base64')
-		capt = `𝑆𝑡𝑎𝑟𝐷𝑎𝑠ℎ\n${design} ${username}`
-		const been = {
-
-		text: `${design} 𝚂𝚕𝚘𝚝\n\n${slot4}${slot5}${slot6}\n- - - - - - - - - \n${slot1}${slot2}${slot3} ☜︎ ♕︎ 𝙹𝚊𝚌𝚔𝚙𝚘𝚝 ♕︎\n- - - - - - - - - \n${slot7}${slot8}${slot9}\n\n𝐺𝑎𝑖𝑛𝑒𝑑 ${jackpot}$\n𝑀𝑜𝑛𝑒𝑦 𝑙𝑒𝑓𝑡 ${newcash}$ \n𝐽𝑎𝑐𝑘𝑝𝑜𝑡 ${jackpot1}$`,
-	}
-	replyimg(been, text, capt, owner)
+		reply(`${design} 𝚂𝚕𝚘𝚝\n\n${slot4}${slot5}${slot6}\n- - - - - - - - - \n${slot1}${slot2}${slot3} ☜︎ ♕︎ 𝙹𝚊𝚌𝚔𝚙𝚘𝚝 ♕︎\n- - - - - - - - - \n${slot7}${slot8}${slot9}\n\n𝐺𝑎𝑖𝑛𝑒𝑑 ${jackpot}$\n𝑀𝑜𝑛𝑒𝑦 𝑙𝑒𝑓𝑡 ${newcash}$ \n𝐽𝑎𝑐𝑘𝑝𝑜𝑡 ${jackpot1}$`)
 	await delay(3000)
 }
 else if (slot1 == slot2) {	
@@ -4962,12 +4900,7 @@ else if (slot1 == slot2) {
 			if (err) throw err;
 		})
 	})
-	owner = await fs.readFileSync('./images/menu.jpg').toString('base64')
-	capt = `𝑆𝑡𝑎𝑟𝐷𝑎𝑠ℎ\n${design} ${username}`
-	const been = {
-	text: `${design} 𝚂𝚕𝚘𝚝\n\n${slot4}${slot5}${slot6}\n- - - - - - - - - \n${slot1}${slot2}${slot3} ☜︎ 𝚂𝚖𝚊𝚕𝚕 𝚠𝚒𝚗 ♕︎\n- - - - - - - - - \n${slot7}${slot8}${slot9}\n\n𝐺𝑎𝑖𝑛𝑒𝑑 15$\n𝑀𝑜𝑛𝑒𝑦 𝑙𝑒𝑓𝑡 ${newcash}$\n𝐽𝑎𝑐𝑘𝑝𝑜𝑡 ${jackpot1}$`,
-}
-replyimg(been, text, capt, owner)
+	reply(`${design} 𝚂𝚕𝚘𝚝\n\n${slot4}${slot5}${slot6}\n- - - - - - - - - \n${slot1}${slot2}${slot3} ☜︎ 𝚂𝚖𝚊𝚕𝚕 𝚠𝚒𝚗 ♕︎\n- - - - - - - - - \n${slot7}${slot8}${slot9}\n\n𝐺𝑎𝑖𝑛𝑒𝑑 15$\n𝑀𝑜𝑛𝑒𝑦 𝑙𝑒𝑓𝑡 ${newcash}$\n𝐽𝑎𝑐𝑘𝑝𝑜𝑡 ${jackpot1}$`)
 }
 
 else if (slot2 == slot3) {	
@@ -5058,12 +4991,7 @@ else if (slot1 == slot3) {
 		})
 	})
 
-	owner = await fs.readFileSync('./images/menu.jpg').toString('base64')
-	capt = `𝑆𝑡𝑎𝑟𝐷𝑎𝑠ℎ\n${design} ${username}`
-	const been = {
-	text: `${design} 𝚂𝚕𝚘𝚝\n\n${slot4}${slot5}${slot6}\n- - - - - - - - - \n${slot1}${slot2}${slot3} ☜︎ 𝚂𝚖𝚊𝚕𝚕 𝚠𝚒𝚗 ♕︎\n- - - - - - - - - \n${slot7}${slot8}${slot9}\n\n𝐺𝑎𝑖𝑛𝑒𝑑 15$\n𝑀𝑜𝑛𝑒𝑦 𝑙𝑒𝑓𝑡 ${newcash}$\n𝐽𝑎𝑐𝑘𝑝𝑜𝑡 ${jackpot1}$`,
-}
-replyimg(been, text, capt, owner)
+	reply(`${design} 𝚂𝚕𝚘𝚝\n\n${slot4}${slot5}${slot6}\n- - - - - - - - - \n${slot1}${slot2}${slot3} ☜︎ 𝚂𝚖𝚊𝚕𝚕 𝚠𝚒𝚗 ♕︎\n- - - - - - - - - \n${slot7}${slot8}${slot9}\n\n𝐺𝑎𝑖𝑛𝑒𝑑 15$\n𝑀𝑜𝑛𝑒𝑦 𝑙𝑒𝑓𝑡 ${newcash}$\n𝐽𝑎𝑐𝑘𝑝𝑜𝑡 ${jackpot1}$`)
 }
 else {	
 
@@ -5105,12 +5033,7 @@ else {
 			if (err) throw err;
 		})
 	})	
-	owner = await fs.readFileSync('./images/menu.jpg').toString('base64')
-	capt = `𝑆𝑡𝑎𝑟𝐷𝑎𝑠ℎ\n${design} ${username}`
-	const been = {
-	text: `${design} 𝚂𝚕𝚘𝚝\n\n${slot4}${slot5}${slot6}\n- - - - - - - - - \n${slot1}${slot2}${slot3} ☜︎ 𝙽𝚘 𝚠𝚒𝚗 ♕︎\n- - - - - - - - - \n${slot7}${slot8}${slot9}\n\n𝐿𝑜𝑠𝑡 9$\n𝑀𝑜𝑛𝑒𝑦 𝑙𝑒𝑓𝑡 ${newwwww}$\n𝐽𝑎𝑐𝑘𝑝𝑜𝑡 ${jackpot1}$`,
-}
-replyimg(been, text, capt, owner) 
+	reply(`${design} 𝚂𝚕𝚘𝚝\n\n${slot4}${slot5}${slot6}\n- - - - - - - - - \n${slot1}${slot2}${slot3} ☜︎ 𝙽𝚘 𝚠𝚒𝚗 ♕︎\n- - - - - - - - - \n${slot7}${slot8}${slot9}\n\n𝐿𝑜𝑠𝑡 9$\n𝑀𝑜𝑛𝑒𝑦 𝑙𝑒𝑓𝑡 ${newwwww}$\n𝐽𝑎𝑐𝑘𝑝𝑜𝑡 ${jackpot1}$`)
 }
 
 //---- Set winner
@@ -5648,13 +5571,8 @@ case 'besitzer':
     nomor = '4917626388837@s.whatsapp.net'
     owner = await fs.readFileSync('./images/menu.jpg').toString('base64')
     capt = "𝙲𝚑𝚒𝚕𝚕𝚘𝚌𝚝𝚒 ✯"
-    const been = {
-    text: `@${nomor.split("@")[0]} 𝑇ℎ𝑖𝑠 𝑖𝑠 𝑚𝑦 𝑜𝑤𝑛𝑒𝑟. 𝐶ℎ𝑎𝑡 𝑤𝑖𝑡ℎ ℎ𝑖𝑚 𝑖𝑓 𝑦𝑜𝑢 𝑤𝑎𝑛𝑡.`,
-  contextInfo: {
-mentionedJid: [nomor]
-  }
-}
-replyimg(been, text, capt, owner)
+    reply(`@${nomor.split("@")[0]} 𝑇ℎ𝑖𝑠 𝑖𝑠 𝑚𝑦 𝑜𝑤𝑛𝑒𝑟. 𝐶ℎ𝑎𝑡 𝑤𝑖𝑡ℎ ℎ𝑖𝑚 𝑖𝑓 𝑦𝑜𝑢 𝑤𝑎𝑛𝑡.`)
+
 break	
 //--clear all messages
 case 'clearchat':
@@ -5694,11 +5612,7 @@ case 'starversion':
 
 if (args[0] < starversion) {
 
-	owner = await fs.readFileSync('./images/menu.jpg').toString('base64')
-	capt = `𝑆𝑡𝑎𝑟𝐷𝑎𝑠ℎ\n${design} ${username}`
-	const beenneeee = {
-
-		text: `${design} 𝑇𝐻𝐸 𝑆𝑇𝐴𝑅𝐷𝐴𝑆𝐻 𝐴𝑃𝑃
+	reply(`${design} 𝑇𝐻𝐸 𝑆𝑇𝐴𝑅𝐷𝐴𝑆𝐻 𝐴𝑃𝑃
 - - - - - - - - - - - - - - - - - -
 ${starlink}
 - - - - - - - - - - - - - - - - - -
@@ -5709,18 +5623,11 @@ ${starlink}
 - - - - - - - - - - - - - - - - - -
 𝑁𝐸𝑊:
 ${newApp}
-- - - - - - - - - - - - - - - - - -`
-		
-}
-replyimg(beenneeee, text, capt, owner)
+- - - - - - - - - - - - - - - - - -`)
 
 } else if (args.length < 1) {
 
-	owner = await fs.readFileSync('./images/menu.jpg').toString('base64')
-	capt = `𝑆𝑡𝑎𝑟𝐷𝑎𝑠ℎ\n${design} ${username}`
-	const beenneeee = {
-
-		text: `${design} 𝑇𝐻𝐸 𝑆𝑇𝐴𝑅𝐷𝐴𝑆𝐻 𝐴𝑃𝑃
+	reply( `${design} 𝑇𝐻𝐸 𝑆𝑇𝐴𝑅𝐷𝐴𝑆𝐻 𝐴𝑃𝑃
 - - - - - - - - - - - - - - - - - -
 ${starlink}
 - - - - - - - - - - - - - - - - - -
@@ -5731,10 +5638,7 @@ ${starlink}
 - - - - - - - - - - - - - - - - - -
 𝑁𝐸𝑊:
 ${newApp}
-- - - - - - - - - - - - - - - - - -`
-		
-}
-replyimg(beenneeee, text, capt, owner)
+- - - - - - - - - - - - - - - - - -`)
 
 } else {
 
@@ -5934,10 +5838,7 @@ api.batteryStatus()
 			  var tempSymbol = "🔥"
 			  }
 	
-nomor = '4917626388837@s.whatsapp.net'
-capt = `⍟ ʕ•ᴥ•ʔ\n${design} ${username} ⍟ ${prem_}`
-const been1 = {
-    text: `⍟ ${pushname}
+			  reply(`⍟ ${pushname}
 ⍟ ${status}
 ⍟ ${prem_}
 - - - - - - - - - - - - - - - - - -
@@ -5974,12 +5875,7 @@ _${stats.status}_
 - - - - - - - - - - - - - - - - - -
 𝑠𝑖𝑛𝑐𝑒 ${accdate}
 
-${isclaim}`,
-contextInfo: {
-mentionedJid: [nomor]
-}
-}
-replyimg(been1, text, capt, owner)
+${isclaim}`)
 
 });
 })
