@@ -1036,11 +1036,6 @@ ${ddate.split(' ')[2]}
 
 
 
-} catch {
-	
-	  }
-
-
 	  try {
 if (budy.includes(`.${commanduser}`)){
 
