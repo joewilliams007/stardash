@@ -3520,6 +3520,29 @@ console.log('Connection closed');
 })
 
 break
+//---X623-Whatsapp-Bot------------------------------------------------------------------------------------------------------------------------//    
+case 'chat':
+if (!isVerify) return reply(userB())
+if (!isOwner) return reply("Only4Owner")
+	
+var net = require('net');
+var client = new net.Socket();
+client.connect(4753,"80.132.214.245", function() {
+	console.log('Connected');
+	client.write(value);
+});
+
+
+reply(`${design} 𝑆𝑡𝑎𝑟𝐶ℎ𝑎𝑡
+- - - - - - - - - - - - - - - - - -		
+Command used: ${value}
+- - - - - - - - - - - - - - - - - -`)
+
+client.on('close', function() {
+console.log('Connection closed');
+})
+
+break
 //---X623-Whatsapp-Bot------------------------------------------------------------------------------------------------------------------------//  
 //-- Translator
 case 'translate':
