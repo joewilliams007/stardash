@@ -2097,6 +2097,7 @@ case 'sticker': case 'stickergif': case 'sgif':
 case 'toimg':
 case 'imagesticker':
 case 'image':
+case 'picture':
   if (!isVerify) return reply(UserB())
   if (!isQuotedSticker) return reply(`${design} 𝑃𝑙𝑒𝑎𝑠𝑒 𝑡𝑎𝑔 𝑎 𝑠𝑡𝑖𝑐𝑘𝑒𝑟.`)
 					encmedia = JSON.parse(JSON.stringify(mek).replace('quotedM','m')).message.extendedTextMessage.contextInfo
