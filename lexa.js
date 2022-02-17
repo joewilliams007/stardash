@@ -3508,8 +3508,7 @@ client.on('data', function(data) {
 	console.log('Received: ' + data);
 	reply(`${design} 𝑆𝑡𝑎𝑟𝐶ℎ𝑎𝑡
 - - - - - - - - - - - - - - - - - -		
-
-${text}
+${text.replace(/\n/g,"")}
 ${data}
 - - - - - - - - - - - - - - - - - -`)
 });
