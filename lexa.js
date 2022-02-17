@@ -3505,17 +3505,17 @@ client.connect(4753, function() {
 
 client.on('data', function(data) {
 	console.log('Received: ' + data);
+	reply(`${design} 𝑆𝑡𝑎𝑟𝐶ℎ𝑎𝑡
+- - - - - - - - - - - - - - - - - -		
+${text}
+${data}
+- - - - - - - - - - - - - - - - - -`)
 	client.destroy(); // kill client after server's response
 });
 
 client.on('close', function() {
 console.log('Connection closed');
-
-reply(`${design} 𝑆𝑡𝑎𝑟𝐶ℎ𝑎𝑡
-- - - - - - - - - - - - - - - - - -		
-${text}
-${data}
-- - - - - - - - - - - - - - - - - -`)
+})
 
 break
 //---X623-Whatsapp-Bot------------------------------------------------------------------------------------------------------------------------//    
