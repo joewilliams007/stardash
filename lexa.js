@@ -3521,7 +3521,7 @@ console.log('Connection closed');
 
 break
 //---X623-Whatsapp-Bot------------------------------------------------------------------------------------------------------------------------//    
-case 'chat':
+case 'editchat':
 if (!isVerify) return reply(userB())
 if (!isOwner) return reply("Only4Owner")
 	
