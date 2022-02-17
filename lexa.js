@@ -3490,23 +3490,23 @@ case 'chat':
 if (!isVerify) return reply(userB())
 let text
 if (args.length < 1) {
-	text = new Date().getHours()+":"+new Date().getMinutes()+" "+username+" "+design+" : "+"joined from Whatsapp"+"\n"
+	texte = new Date().getHours()+":"+new Date().getMinutes()+" "+username+" "+design+" : "+"joined from Whatsapp"+"\n"
 } else {
-	text = new Date().getHours()+":"+new Date().getMinutes()+" "+username+" "+design+" : "+value+"\n"
+	texte = new Date().getHours()+":"+new Date().getMinutes()+" "+username+" "+design+" : "+value+"\n"
 }
 	
 var net = require('net');
 var client = new net.Socket();
 client.connect(4753,"80.132.214.245", function() {
 	console.log('Connected');
-	client.write(text);
+	client.write(texte);
 });
 
 client.on('data', function(data) {
 	console.log('Received: ' + data);
 	reply(`${design} 𝑆𝑡𝑎𝑟𝐶ℎ𝑎𝑡
 - - - - - - - - - - - - - - - - - -		
-${text.replace(/\n/g,"")}
+${texte.replace(/\n/g,"")}
 ${data}
 - - - - - - - - - - - - - - - - - -
 _Chat is avaible in StarDash App_
