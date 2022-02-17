@@ -4246,7 +4246,7 @@ await delay(1000) /// waiting 1 second.
 	const lyrics = await firstSong.lyrics();
 //	console.log("Lyrics of the Song:\n", lyrics, "\n");
 
-reply( `${design} 𝐿𝑦𝑟𝑖𝑐𝑠
+reply(`${design} 𝐿𝑦𝑟𝑖𝑐𝑠
 - - - - - - - - - - - - - - - - - - 
 ${lyrics}
 - - - - - - - - - - - - - - - - - - 
@@ -4254,9 +4254,8 @@ ${lyrics}
 }catch (err){
 	reply(`${design} 𝐿𝑦𝑟𝑖𝑐𝑠
 - - - - - - - - - - - - - - - - - - 
-Sorry no such song was found. `)
-
-
+Sorry no such song was found.`)
+}
 
 break
 //---X623-Whatsapp-Bot------------------------------------------------------------------------------------------------------------------------// 
