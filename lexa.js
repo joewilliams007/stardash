@@ -3489,11 +3489,12 @@ case 'restart':
 case 'chat':
 if (!isVerify) return reply(userB())
 
+
 let text
 if (args.length < 1) {
 	text = username+" "+design+" : "+"joined from Whatsapp"+"\n"
 } else {
-	text = username+" "+design+" : "+value+"\n"
+	text = Date().getHours()+":"+Date().getMinutes()+" "+username+" "+design+" : "+value+"\n"
 }
 	
 var net = require('net');
