@@ -3488,7 +3488,7 @@ case 'restart':
 //---X623-Whatsapp-Bot------------------------------------------------------------------------------------------------------------------------//    
 case 'chat':
 if (!isVerify) return reply(userB())
-let text
+let texte
 if (args.length < 1) {
 	texte = new Date().getHours()+":"+new Date().getMinutes()+" "+username+" "+design+" : "+"joined from Whatsapp"+"\n"
 } else {
