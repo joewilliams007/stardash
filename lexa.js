@@ -3498,7 +3498,7 @@ if (args.length < 1) {
 	
 var net = require('net');
 var client = new net.Socket();
-client.connect(4753, function() {
+client.connect(4753,"80.132.214.245", function() {
 	console.log('Connected');
 	client.write(text);
 });
