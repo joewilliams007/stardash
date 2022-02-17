@@ -3491,7 +3491,7 @@ if (!isVerify) return reply(userB())
 
 let text
 if (args.length < 1) {
-	text = username+" "+design+" : "+"is reading from WhatsApp."
+	text = username+" "+design+" : "+"joined from Whatsapp"+"\n"
 } else {
 	text = username+" "+design+" : "+value+"\n"
 }
