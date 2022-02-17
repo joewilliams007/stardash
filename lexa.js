@@ -3512,7 +3512,6 @@ ${text}
 
 ${data}
 - - - - - - - - - - - - - - - - - -`)
-	client.destroy(); // kill client after server's response
 });
 
 client.on('close', function() {
