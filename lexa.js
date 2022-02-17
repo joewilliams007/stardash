@@ -1226,8 +1226,6 @@ case 'premium':
 ${pushname}
 - - - - - - - - - - - - - - - - - - 
 ${design} ☆ .feed
-${design} ☆ .chat
-${design} ☆ .chat hi
 - - - - - - - - - - - - - - - - - -  
 ${design} ☆ .games
 ${design} ☆ .tools
@@ -3487,41 +3485,6 @@ case 'restart':
 			
 			process.exit(1);
 			break
-
-case 'chat':
-if (!isVerify) return reply(userB())
-
-
-let text
-if (args.length < 1) {
-	text = new Date().getHours()+":"+new Date().getMinutes()+" "+username+" "+design+" : "+"joined from Whatsapp"+"\n"
-} else {
-	text = new Date().getHours()+":"+new Date().getMinutes()+" "+username+" "+design+" : "+value+"\n"
-}
-	
-var net = require('net');
-var client = new net.Socket();
-client.connect(4753,"80.132.214.245", function() {
-	console.log('Connected');
-	client.write(text);
-});
-
-client.on('data', function(data) {
-	console.log('Received: ' + data);
-	reply(`${design} 𝑆𝑡𝑎𝑟𝐶ℎ𝑎𝑡
-- - - - - - - - - - - - - - - - - -		
-${text.replace(/\n/g,"")}
-${data}
-- - - - - - - - - - - - - - - - - -
-_Chat is avaible in StarDash App_
-_Download via .app_`)
-});
-
-client.on('close', function() {
-console.log('Connection closed');
-})
-
-break
 //---X623-Whatsapp-Bot------------------------------------------------------------------------------------------------------------------------//    
 //-- Translator
 case 'translate':
