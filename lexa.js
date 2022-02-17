@@ -1032,7 +1032,7 @@ together!
 ${ddate.split(' ')[0]}
 ${ddate.split(' ')[1]}
 ${ddate.split(' ')[2]}
-`
+`)
 
 
 
