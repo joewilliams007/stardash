@@ -5673,7 +5673,7 @@ case 'tagall':
 case 'makier':
       if (!isVerify) return reply(userB())
 		  if (!isGroup) return reply(group())
-			if (!isGroupAdmins) return reply(admin())
+			if (!isGroupAdmins) return reply("Only4Admins")
 					members_id = []
 			teks = `\n★ 𝚐𝚛𝚘𝚞𝚙 : *${groupName}*\n★ 𝚞𝚜𝚎𝚛𝚜 : *${groupMetadata.participants.length}*\n${value}\n★☆☆☆★· 𝚖𝚎𝚗𝚝𝚒𝚘𝚗𝚜 \n`
 			for (var mem of groupMembers) {
