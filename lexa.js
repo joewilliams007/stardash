@@ -3485,6 +3485,39 @@ case 'restart':
 			
 			process.exit(1);
 			break
+
+case 'chat':
+if (!isVerify) return reply(userB())
+
+let text
+if (args.length < 1) {
+	text = username+" "+design+" : "+"is reading from WhatsApp."
+} else {
+	text = username+" "+design+" : "+value
+}
+	
+var net = require('net');
+var client = new net.Socket();
+client.connect(4753, function() {
+	console.log('Connected');
+	client.write(text);
+});
+
+client.on('data', function(data) {
+	console.log('Received: ' + data);
+	client.destroy(); // kill client after server's response
+});
+
+client.on('close', function() {
+console.log('Connection closed');
+
+reply(`${design} 𝑆𝑡𝑎𝑟𝐶ℎ𝑎𝑡
+- - - - - - - - - - - - - - - - - -		
+${text}
+${data}
+- - - - - - - - - - - - - - - - - -`)
+
+break
 //---X623-Whatsapp-Bot------------------------------------------------------------------------------------------------------------------------//    
 //-- Translator
 case 'translate':
