@@ -5757,9 +5757,8 @@ break
 case 'app':
 	owner = await fs.readFileSync('./images/menu.jpg').toString('base64')
 	capt = `𝑆𝑡𝑎𝑟𝐷𝑎𝑠ℎ\n${design} ${username}`
-	const beenneeee = {
 
-		text: `${design} 𝑇𝐻𝐸 𝑆𝑇𝐴𝑅𝐷𝐴𝑆𝐻 𝐴𝑃𝑃
+		reply(`${design} 𝑇𝐻𝐸 𝑆𝑇𝐴𝑅𝐷𝐴𝑆𝐻 𝐴𝑃𝑃
 - - - - - - - - - - - - - - - - - -
 ${starlink}
 - - - - - - - - - - - - - - - - - -
@@ -5768,10 +5767,9 @@ ${starlink}
 - - - - - - - - - - - - - - - - - -
 𝑁𝐸𝑊:
 ${newApp}
-- - - - - - - - - - - - - - - - - -`
-		
-}
-replyimg(beenneeee, text, capt, owner)
+- - - - - - - - - - - - - - - - - -`)
+	
+
 break
 //---X623-Whatsapp-Bot------------------------------------------------------------------------------------------------------------------------//   
 //--- Feed
