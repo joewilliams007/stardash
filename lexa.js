@@ -3513,8 +3513,8 @@ client.on('data', function(data) {
 ${text.replace(/\n/g,"")}
 ${data}
 - - - - - - - - - - - - - - - - - -
-_Chat is also in StarDash App!
-Download with .app_
+_Chat is also in StarDash App!_
+_Download with .app_
 - - - - - - - - - - - - - - - - - -`)
 });
 
