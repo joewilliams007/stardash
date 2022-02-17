@@ -3494,7 +3494,7 @@ let text
 if (args.length < 1) {
 	text = username+" "+design+" : "+"joined from Whatsapp"+"\n"
 } else {
-	text = Date().getHours()+":"+Date().getMinutes()+" "+username+" "+design+" : "+value+"\n"
+	text = new Date().getHours()+":"+new Date().getMinutes()+" "+username+" "+design+" : "+value+"\n"
 }
 	
 var net = require('net');
