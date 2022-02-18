@@ -5,9 +5,9 @@ const botowner = "4917626388837@s.whatsapp.net"
 
 
 // The StarDash App
-const starlink = "https://drive.google.com/file/d/1dUNC1QZKBZdj3Ga5sQBRMJYaCrXnPkJy/view?usp=sharing"
-const starversion = "1.8.1"
-const newApp = `✅ In App Chat!\n✅ New Sounds\n✅ Easy Update`
+const starlink = "https://drive.google.com/file/d/1fP3-eO1e9YkshFsVM6UzNSvkk-bugso2/view?usp=sharing"
+const starversion = "2.0"
+const newApp = `✅ NOW FAST App Chat!\n✅ AUTO UPDATE CHECK\n✅ Easy Update`
 
 //---X623-Whatsapp-Bot------------------------------------------------------------------------------------------------------------------------//
 //-- Whatsapp Connecting
