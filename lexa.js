@@ -1443,7 +1443,7 @@ ${design} .kick
 ${design} .promote 
 ${design} .demote
 ${design} .tagall
-${design} .add
+${design} .addnumber
 ${design} .link
 ${design} .leave 
 ${design} .antilink
@@ -5312,7 +5312,9 @@ case 'reset':
 //---X623-Whatsapp-Bot------------------------------------------------------------------------------------------------------------------------// 
 //--- Add member
 case 'add':
-				    if (!isVerify) return reply(userB())
+	case 'olamide':
+		case 'addnumber':
+							    if (!isVerify) return reply(userB())
 					if (!isGroup) return reply(group())
 			
 					if (!isBotGroupAdmins) return reply(Badmin())
