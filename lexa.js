@@ -5,9 +5,9 @@ const botowner = "4917626388837@s.whatsapp.net"
 
 
 // The StarDash App
-const starlink = "https://drive.google.com/file/d/1yMc3YvHERMO4oHIiky_h-yswlu_I5YXQ/view?usp=sharing"
-const starversion = "2.0"
-const newApp = `✅ NOW FAST App Chat!\n✅ AUTO UPDATE CHECK\n✅ Easy Update`
+const starlink = "https://drive.google.com/file/d/1fqXnHOWEn_K31FRH3NcAfXWGGIro8AHl/view?usp=sharing"
+const starversion = "210"
+const newApp = `✅ Jackpot-Win sends message to Chat!\n- - - - - - - - - - - - - - - - - -\n✅ NOW FAST App Chat!\n✅ AUTO UPDATE CHECK\n✅ Easy Update`
 
 //---X623-Whatsapp-Bot------------------------------------------------------------------------------------------------------------------------//
 //-- Whatsapp Connecting
