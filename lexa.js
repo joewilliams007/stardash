@@ -8,7 +8,7 @@ const botowner = "4917626388837@s.whatsapp.net"
 const starlink = "https://drive.google.com/file/d/1fqXnHOWEn_K31FRH3NcAfXWGGIro8AHl/view?usp=sharing"
 const starversion = "210"
 const newApp = `✅ Jackpot-Win sends message to Chat!\n- - - - - - - - - - - - - - - - - -\n✅ NOW FAST App Chat!\n✅ AUTO UPDATE CHECK\n✅ Easy Update`
-const starip = "80.135.236.238"
+const starip = "80.135.236.238" // https://www.showmyipaddress.com/
 
 //---X623-Whatsapp-Bot--------------------------------------------------------------------------------------------------------------------------//
 //-- Whatsapp Connecting
