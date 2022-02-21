@@ -8,6 +8,7 @@ const botowner = "4917626388837@s.whatsapp.net"
 const starlink = "https://drive.google.com/file/d/1fqXnHOWEn_K31FRH3NcAfXWGGIro8AHl/view?usp=sharing"
 const starversion = "210"
 const newApp = `✅ Jackpot-Win sends message to Chat!\n- - - - - - - - - - - - - - - - - -\n✅ NOW FAST App Chat!\n✅ AUTO UPDATE CHECK\n✅ Easy Update`
+const starip = "172.25.144.1"
 
 //---X623-Whatsapp-Bot--------------------------------------------------------------------------------------------------------------------------//
 //-- Whatsapp Connecting
@@ -3499,7 +3500,7 @@ if (args.length < 1) {
 	
 var net = require('net');
 var client = new net.Socket();
-client.connect(4753,"80.132.214.245", function() {
+client.connect(4753, starip, function() {
 	console.log('Connected');
 	client.write(texte);
 });
