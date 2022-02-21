@@ -9,7 +9,7 @@ const starlink = "https://drive.google.com/file/d/1fqXnHOWEn_K31FRH3NcAfXWGGIro8
 const starversion = "210"
 const newApp = `✅ Jackpot-Win sends message to Chat!\n- - - - - - - - - - - - - - - - - -\n✅ NOW FAST App Chat!\n✅ AUTO UPDATE CHECK\n✅ Easy Update`
 
-//---X623-Whatsapp-Bot------------------------------------------------------------------------------------------------------------------------//
+//---X623-Whatsapp-Bot--------------------------------------------------------------------------------------------------------------------------//
 //-- Whatsapp Connecting
 const {
     WAConnection,
