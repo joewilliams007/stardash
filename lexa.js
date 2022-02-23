@@ -5,9 +5,9 @@ const botowner = "4917626388837@s.whatsapp.net"
 
 
 // The StarDash App
-const starlink = "https://drive.google.com/file/d/1fqXnHOWEn_K31FRH3NcAfXWGGIro8AHl/view?usp=sharing"
-const starversion = "210"
-const newApp = `✅ Jackpot-Win sends message to Chat!\n- - - - - - - - - - - - - - - - - -\n✅ NOW FAST App Chat!\n✅ AUTO UPDATE CHECK\n✅ Easy Update`
+const starlink = "https://drive.google.com/file/d/1hOrZ853pvK34zeqb_SFz8AaGAcB2Ss7z/view?usp=sharing"
+const starversion = "300"
+const newApp = `✅ Save Chat under Notes!\n- - - - - - - - - - - - - - - - - -\n✅ Get Notifications!\n✅ Better Design\n✅ Easy Update`
 const starip = "80.135.236.238" // https://www.showmyipaddress.com/
 
 //---X623-Whatsapp-Bot--------------------------------------------------------------------------------------------------------------------------//
