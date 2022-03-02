@@ -3479,7 +3479,6 @@ if (!isVerify) return reply(UserB())
     })		
 await delay(6000) /// waiting 2 second		
 	process.exit(1);
-	break
 case 'restart':
 		if (!isVerify) return reply(UserB())		
 			   reply('✅ 𝐵𝑜𝑡 𝑟𝑒𝑠𝑡𝑎𝑟𝑡𝑠 𝑖𝑛 𝑠𝑜𝑚𝑒 𝑠𝑒𝑐𝑜𝑛𝑑𝑠.')
@@ -3487,8 +3486,8 @@ case 'restart':
 			   await delay(2000) /// waiting 2 second.
 			
 			process.exit(1);
-			break
-/*/---X623-Whatsapp-Bot------------------------------------------------------------------------------------------------------------------------//    
+
+//---X623-Whatsapp-Bot------------------------------------------------------------------------------------------------------------------------//    
 case 'chat':
 
 if (!isVerify) return reply(userB())
@@ -3501,7 +3500,7 @@ if (args.length < 1) {
 	
 var net = require('net');
 var client = new net.Socket();
-client.connect(4753, starip, function() {
+client.connect(2226, starip, function() {
 	console.log('Connected');
 	client.write(texte);
 });
@@ -3521,63 +3520,9 @@ client.on('close', function() {
 console.log('Connection closed');
 })
 
-break*/
-//---X623-Whatsapp-Bot------------------------------------------------------------------------------------------------------------------------//    
-case 'chat':
-
-if (!isVerify) return reply(userB())
-let texte
-if (args.length < 1) {
-	texte = new Date().getHours()+":"+new Date().getMinutes()+" "+username+" "+design+" : "+"joined from Whatsapp"+"\n"
-} else {
-	texte = new Date().getHours()+":"+new Date().getMinutes()+" "+username+" "+design+" : "+value+"\n"
-}
-	
-// get Messages
-var net = require('net');
-var client = new net.Socket();
-client.connect(2224, starip, function() {
-	console.log('Connected');
-});
-
-let data1
-client.on('data', function(data) {
-	console.log('Received: ' + data);
-	data1 = data
-});
-
-client.on('close', function() {
-console.log('Connection closed');
-})
-
-// Send Message
-		var client1 = new net.Socket();
-		client1.connect(2225, starip, function() {
-			console.log('Connected');
-			client1.write(texte);
-		});
-
-
-		client1.on('close', function() {
-		console.log('Connection closed');
-		})
-
-					
-
-
-					//	buffer = fs.readFileSync("newImg.jpg")
-					reply(`${design} 𝑆𝑡𝑎𝑟𝐶ℎ𝑎𝑡
-- - - - - - - - - - - - - - - - - -		
-${texte.replace(/\n/g,"")}
-${data1}
-- - - - - - - - - - - - - - - - - -
-_Chat is avaible in StarDash App_
-_Download via .app_`)
-
-			
-				
-
 break
+//---X623-Whatsapp-Bot------------------------------------------------------------------------------------------------------------------------//    
+
 //---X623-Whatsapp-Bot------------------------------------------------------------------------------------------------------------------------//    
 case 'editchat':
 if (!isVerify) return reply(userB())
