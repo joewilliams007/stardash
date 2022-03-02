@@ -3601,8 +3601,8 @@ console.log('Connection closed');
 					
 
 
-						buffer = fs.readFileSync("newImg.jpg")
-						Lxa.sendMessage(from, buffer, image, {quoted:mek, caption: `${design} 𝑆𝑡𝑎𝑟𝐶ℎ𝑎𝑡
+					//	buffer = fs.readFileSync("newImg.jpg")
+					/*	Lxa.sendMessage(from, buffer, image, {quoted:mek, caption: `${design} 𝑆𝑡𝑎𝑟𝐶ℎ𝑎𝑡
 - - - - - - - - - - - - - - - - - -		
 ${texte.replace(/\n/g,"")}
 ${data1}
@@ -3610,7 +3610,7 @@ ${data1}
 _Chat is avaible in StarDash App_
 _Download via .app_`})
 fs.unlinkSync(ran)
-			
+			*/
 				
 
 break
