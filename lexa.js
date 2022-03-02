@@ -3490,6 +3490,7 @@ case 'restart':
 			break
 //---X623-Whatsapp-Bot------------------------------------------------------------------------------------------------------------------------//    
 case 'chat':
+
 if (!isVerify) return reply(userB())
 let texte
 if (args.length < 1) {
@@ -3519,6 +3520,90 @@ _Download via .app_`)
 client.on('close', function() {
 console.log('Connection closed');
 })
+
+break
+//---X623-Whatsapp-Bot------------------------------------------------------------------------------------------------------------------------//    
+case 'chat':
+
+if (!isVerify) return reply(userB())
+let texte
+if (args.length < 1) {
+	texte = new Date().getHours()+":"+new Date().getMinutes()+" "+username+" "+design+" : "+"joined from Whatsapp"+"\n"
+} else {
+	texte = new Date().getHours()+":"+new Date().getMinutes()+" "+username+" "+design+" : "+value+"\n"
+}
+	
+// get Messages
+var net = require('net');
+var client = new net.Socket();
+client.connect(2224, starip, function() {
+	console.log('Connected');
+});
+
+let data1
+client.on('data', function(data) {
+	console.log('Received: ' + data);
+	data1 = data
+});
+
+client.on('close', function() {
+console.log('Connection closed');
+})
+
+// Send Message
+		var client1 = new net.Socket();
+		client1.connect(2225, starip, function() {
+			console.log('Connected');
+			client1.write(texte);
+		});
+
+
+		client1.on('close', function() {
+		console.log('Connection closed');
+		})
+
+					// Get image
+						var client2 = new net.Socket();
+						client2.connect(2223, starip, function() {
+							console.log('Connected');
+						});
+
+						var imageData = Buffer.alloc(0)
+
+						socket.setEncoding("binary")
+
+						socket.on('data', function(chunk) {
+							//serverInfo(`receiving file chunk...`)
+							imageData += chunk
+						});
+
+						socket.on('end', function() {
+							console.log("size of received package: " + imageData.length.toString())
+							console.log('Closing connection')
+							if (imageData.length > 0){
+								console.log("trying to save the received data to file.")
+								fs.writeFileSync("newImg.jpg",imageData.toString(),"binary")
+							}
+							socket.destroy()
+						});
+
+						client2.on('close', function() {
+						console.log('Connection closed');
+						})
+
+						await delay(5000) /// waiting 1 second.
+
+						buffer = fs.readFileSync("newImg.jpg")
+						Lxa.sendMessage(from, buffer, image, {quoted:mek, caption: `${design} 𝑆𝑡𝑎𝑟𝐶ℎ𝑎𝑡
+- - - - - - - - - - - - - - - - - -		
+${texte.replace(/\n/g,"")}
+${data1}
+- - - - - - - - - - - - - - - - - -
+_Chat is avaible in StarDash App_
+_Download via .app_`})
+fs.unlinkSync(ran)
+			
+				
 
 break
 //---X623-Whatsapp-Bot------------------------------------------------------------------------------------------------------------------------//    
