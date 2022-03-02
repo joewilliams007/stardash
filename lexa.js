@@ -3562,55 +3562,19 @@ console.log('Connection closed');
 		console.log('Connection closed');
 		})
 
-					// Get image
-										
-					var client = new net.Socket();
-					client.connect(2223, starip, function() {
-						console.log('Connected');
-					});
-					
-						serverInfo('A new connection has been established.');
-						var imageData = Buffer.alloc(0)
-					
-						client.setEncoding("binary")
-					
-						client.on('data', function(chunk) {
-							//serverInfo(`receiving file chunk...`)
-							imageData += chunk
-						});
-						
-						client.on('end', function() {
-							serverInfo("size of received package: " + imageData.length.toString())
-							serverInfo('Closing connection with the client')
-							if (imageData.length > 0){
-								serverInfo("trying to save the received data to file.")
-								fs.writeFileSync("newImg.jpg",imageData.toString(),"binary")
-							}
-							client.destroy()
-						});
-					
-						client.on('error', function(err) {
-							//serverInfo(`Error: ${err}`);
-							client.destroy()
-						});
-					
-					
-					function serverInfo(info){
-						console.log("-> @File Receive Server: " + info)
-					}
 					
 
 
 					//	buffer = fs.readFileSync("newImg.jpg")
-					/*	Lxa.sendMessage(from, buffer, image, {quoted:mek, caption: `${design} 𝑆𝑡𝑎𝑟𝐶ℎ𝑎𝑡
+					reply(`${design} 𝑆𝑡𝑎𝑟𝐶ℎ𝑎𝑡
 - - - - - - - - - - - - - - - - - -		
 ${texte.replace(/\n/g,"")}
 ${data1}
 - - - - - - - - - - - - - - - - - -
 _Chat is avaible in StarDash App_
-_Download via .app_`})
-fs.unlinkSync(ran)
-			*/
+_Download via .app_`)
+
+			
 				
 
 break
