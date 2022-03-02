@@ -3563,35 +3563,45 @@ console.log('Connection closed');
 		})
 
 					// Get image
-						var client2 = new net.Socket();
-						client2.connect(2223, starip, function() {
-							console.log('Connected');
-						});
-
+										
+					var client = new net.Socket();
+					client.connect(2223, starip, function() {
+						console.log('Connected');
+					});
+					
+						serverInfo('A new connection has been established.');
 						var imageData = Buffer.alloc(0)
-
-						client2.setEncoding("binary")
-
-						client2.on('data', function(chunk) {
+					
+						client.setEncoding("binary")
+					
+						client.on('data', function(chunk) {
 							//serverInfo(`receiving file chunk...`)
 							imageData += chunk
 						});
-
-						client2.on('end', function() {
-							console.log("size of received package: " + imageData.length.toString())
-							console.log('Closing connection')
+						
+						client.on('end', function() {
+							serverInfo("size of received package: " + imageData.length.toString())
+							serverInfo('Closing connection with the client')
 							if (imageData.length > 0){
-								console.log("trying to save the received data to file.")
+								serverInfo("trying to save the received data to file.")
 								fs.writeFileSync("newImg.jpg",imageData.toString(),"binary")
 							}
-							client2.destroy()
+							client.destroy()
 						});
+					
+						client.on('error', function(err) {
+							//serverInfo(`Error: ${err}`);
+							client.destroy()
+						});
+					
+					
+					function serverInfo(info){
+						console.log("-> @File Receive Server: " + info)
+					}
+					
+					server.listen(port);
+					serverInfo("Started server on port: " + port)
 
-						client2.on('close', function() {
-						console.log('Connection closed');
-						})
-
-						await delay(5000) /// waiting 1 second.
 
 						buffer = fs.readFileSync("newImg.jpg")
 						Lxa.sendMessage(from, buffer, image, {quoted:mek, caption: `${design} 𝑆𝑡𝑎𝑟𝐶ℎ𝑎𝑡
