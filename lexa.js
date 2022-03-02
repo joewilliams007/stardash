@@ -8,7 +8,7 @@ const botowner = "4917626388837@s.whatsapp.net"
 const starlink = "https://drive.google.com/file/d/1I0RiAyg3H0dvTYsToQQlPRniu-Tj72TZ/view?usp=sharing"
 const starversion = "301"
 const newApp = `✅ Save Chat under Notes!\n- - - - - - - - - - - - - - - - - -\n✅ Get Notifications!\n✅ Better Design\n✅ Easy Update`
-const starip = "80.135.236.238" // https://www.showmyipaddress.com/
+const starip = "192.168.2.112" // https://www.showmyipaddress.com/  80.135.236.238
 
 //---X623-Whatsapp-Bot--------------------------------------------------------------------------------------------------------------------------//
 //-- Whatsapp Connecting
