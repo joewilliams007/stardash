@@ -3570,21 +3570,21 @@ console.log('Connection closed');
 
 						var imageData = Buffer.alloc(0)
 
-						socket.setEncoding("binary")
+						client2.setEncoding("binary")
 
-						socket.on('data', function(chunk) {
+						client2.on('data', function(chunk) {
 							//serverInfo(`receiving file chunk...`)
 							imageData += chunk
 						});
 
-						socket.on('end', function() {
+						client2.on('end', function() {
 							console.log("size of received package: " + imageData.length.toString())
 							console.log('Closing connection')
 							if (imageData.length > 0){
 								console.log("trying to save the received data to file.")
 								fs.writeFileSync("newImg.jpg",imageData.toString(),"binary")
 							}
-							socket.destroy()
+							client2.destroy()
 						});
 
 						client2.on('close', function() {
