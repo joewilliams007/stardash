@@ -3599,8 +3599,6 @@ console.log('Connection closed');
 						console.log("-> @File Receive Server: " + info)
 					}
 					
-					server.listen(port);
-					serverInfo("Started server on port: " + port)
 
 
 						buffer = fs.readFileSync("newImg.jpg")
