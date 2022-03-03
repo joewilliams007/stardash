@@ -5,7 +5,7 @@ const botowner = "4917626388837@s.whatsapp.net"
 
 
 // The StarDash App
-const starlink = "https://drive.google.com/file/d/1Ye94HztzENni6A1zQf7RoNVpY8-Qi3DD/view?usp=sharing"
+const starlink = "https://drive.google.com/file/d/1tGNwZQcAQoTqgAaZodDzNwOWblYhJQcv/view?usp=sharing"
 const starversion = "310"
 const newApp = `✅ Send youtube links in chat!\n✅ Copy last message in chat\n✅ Changelog\n✅ Settings Page\n✅ Stylish design\n- - - - - - - - - - - - - - - - - -\n✅ Get Notifications!\n✅ Better Design\n✅ Easy Update`
 const starip = "80.135.236.238" // 192.168.2.112 https://www.showmyipaddress.com/  80.135.236.238
