@@ -3,7 +3,6 @@
 // Bot
 const botowner = "4917626388837@s.whatsapp.net"
 
-
 // The StarDash App
 const starlink = "https://drive.google.com/file/d/1yeiDDVvHvQK2_KkPglPvvqLb4bb1zuW_/view?usp=sharing"
 const starversion = "310"
@@ -2525,6 +2524,7 @@ case 'stardash':
 					
 					case'color':
 					case'colour':
+
 					encmedia = JSON.parse(JSON.stringify(mek).replace('quotedM','m')).message.extendedTextMessage.contextInfo
 media = await Lxa.downloadAndSaveMediaMessage(encmedia)
 					
@@ -5376,6 +5376,7 @@ case 'kick':
 					if (!isGroup) return reply(group())
 					if (!isGroupAdmins) return reply(admin())
 					if (!isBotGroupAdmins) return reply(Badmin())
+					if (args.length > 2) return reply(`C a n o n l y k i c k 1 p e r s o n`)
 					if (mek.message.extendedTextMessage === undefined || mek.message.extendedTextMessage === null) return reply('⌯   ﹝𝚃𝚊𝚐 𝚝𝚊𝚛𝚐𝚎𝚝.﹞')
 					mentioned = mek.message.extendedTextMessage.contextInfo.mentionedJid
 					if (mentioned.length > 1) {
