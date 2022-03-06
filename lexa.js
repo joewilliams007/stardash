@@ -156,7 +156,10 @@ myMonths = ["Jan","Feb","March","April","May","Jun","Jul","Aug","Sept","Octob","
 //---X623-Whatsapp-Bot------------------------------------------------------------------------------------------------------------------------//
 //--Whatsapp start connect ...
 async function starts() {
-	const Lxa = new WAConnection()
+	const Lxa = WAConnection({
+		        // can provide additional config here
+				printQRInTerminal: true
+			})
 	Lxa.logger.level = 'warn'
 //	Lxa.version = [2, 2140, 6];
 	Lxa.on('qr', () => {
