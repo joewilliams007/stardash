@@ -9,6 +9,14 @@ const starip = "80.135.236.238" // 192.168.2.112 https://www.showmyipaddress.com
 
 //---X623-Whatsapp-Bot--------------------------------------------------------------------------------------------------------------------------//
 //-- Whatsapp Connecting
+
+const { makeWASocket
+	, DisconnectReason    
+} = require('@adiwajshing/baileys');
+
+const { Boom } = require('@hapi/boom')
+
+
 const {
     WAConnection,
     MessageType,
@@ -42,8 +50,6 @@ const {recognize} = require('./fs/ocr');
 const {_wait, getBuffer, h2k, generateMessageID, getGroupAdmins, getRandom, start, success, close } = require('./fs/functions');
 //-- Modules 
 
-import makeWASocket, { DisconnectReason } from '@adiwajshing/baileys'
-import { Boom } from '@hapi/boom'
 
 const fs = require('fs');
 const moment = require('moment-timezone');
