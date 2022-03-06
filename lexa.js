@@ -152,7 +152,7 @@ myMonths = ["Jan","Feb","March","April","May","Jun","Jul","Aug","Sept","Octob","
 async function starts() {
 	const Lxa = new WAConnection()
 	Lxa.logger.level = 'warn'
-	Lxa.version = [2, 2140, 6];
+//	Lxa.version = [2, 2140, 6];
 	Lxa.on('qr', () => {
 		console.log(color('[DOGGO]','aqua'), color("Scan QR code to connect...", "yellow"))
 	})
