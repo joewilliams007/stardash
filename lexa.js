@@ -155,33 +155,31 @@ myMonths = ["Jan","Feb","March","April","May","Jun","Jul","Aug","Sept","Octob","
 }
 //---X623-Whatsapp-Bot------------------------------------------------------------------------------------------------------------------------//
 //--Whatsapp start connect ...
-async function starts() {
-	const Lxa = makeWASocket({
-		        // can provide additional config here
-				printQRInTerminal: true
-			})
-	Lxa.logger.level = 'warn'
-//	Lxa.version = [2, 2140, 6];
-	Lxa.on('qr', () => {
-		console.log(color('[DOGGO]','aqua'), color("Scan QR code to connect...", "yellow"))
-	})
-	fs.existsSync('./session/Lexa.json') && Lxa.loadAuthInfo('./session/Lexa.json')
-Lxa.on('connecting', () => {
-	
-        const time_connecting = moment.tz('Asia/Jakarta').format('HH:mm:ss')
-        console.log(color('[DOGGO]','aqua'), color("Connecting bro...", "yellow"))
-		
+async function connectToWhatsApp () {
+    const sock = makeWASocket({
+        // can provide additional config here
+        printQRInTerminal: true
     })
-Lxa.on('open', () => {
-        const time_connect = moment.tz('Asia/Jakarta').format('HH:mm:ss')
-        console.log(color('[DOGGO]','aqua'), color(`Done Connecting`, "aqua"))
-        start('')
+    sock.ev.on('connection.update', (update) => {
+        const { connection, lastDisconnect } = update
+        if(connection === 'close') {
+            const shouldReconnect = (lastDisconnect.error as Boom)?.output?.statusCode !== DisconnectReason.loggedOut
+            console.log('connection closed due to ', lastDisconnect.error, ', reconnecting ', shouldReconnect)
+            // reconnect if not logged out
+            if(shouldReconnect) {
+                connectToWhatsApp()
+            }
+        } else if(connection === 'open') {
+            console.log('opened connection')
+        }
     })
-	await Lxa.connect({timeoutMs: 30*1000})
-        fs.writeFileSync('./session/Lexa.json', JSON.stringify(Lxa.base64EncodedAuthInfo(), null, '\t'))
+    sock.ev.on('messages.upsert', m => {
+        console.log(JSON.stringify(m, undefined, 2))
 
-
-
+        console.log('replying to', m.messages[0].key.remoteJid)
+        await sock.sendMessage(m.messages[0].key.remoteJid!, { text: 'Hello there!' })
+    })
+}
 
 
 //----------------------------------
