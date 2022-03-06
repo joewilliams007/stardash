@@ -155,7 +155,7 @@ myMonths = ["Jan","Feb","March","April","May","Jun","Jul","Aug","Sept","Octob","
 }
 //---X623-Whatsapp-Bot------------------------------------------------------------------------------------------------------------------------//
 //--Whatsapp start connect ...
-async function connectToWhatsApp () {
+async function starts () {
     const sock = makeWASocket({
         // can provide additional config here
         printQRInTerminal: true
@@ -179,7 +179,7 @@ async function connectToWhatsApp () {
         console.log('replying to', m.messages[0].key.remoteJid)
 
     })
-}
+
 
 
 //----------------------------------
