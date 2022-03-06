@@ -156,7 +156,7 @@ myMonths = ["Jan","Feb","March","April","May","Jun","Jul","Aug","Sept","Octob","
 //---X623-Whatsapp-Bot------------------------------------------------------------------------------------------------------------------------//
 //--Whatsapp start connect ...
 async function starts() {
-	const Lxa = WAConnection({
+	const Lxa = makeWASocket({
 		        // can provide additional config here
 				printQRInTerminal: true
 			})
