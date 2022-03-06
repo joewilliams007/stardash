@@ -1,5 +1,3 @@
-
-
 // Bot
 const botowner = "4917626388837@s.whatsapp.net"
 
@@ -43,6 +41,10 @@ const {fetchJson, fetchText} = require('./fs/fetcher');
 const {recognize} = require('./fs/ocr');
 const {_wait, getBuffer, h2k, generateMessageID, getGroupAdmins, getRandom, start, success, close } = require('./fs/functions');
 //-- Modules 
+
+import makeWASocket, { DisconnectReason } from '@adiwajshing/baileys'
+import { Boom } from '@hapi/boom'
+
 const fs = require('fs');
 const moment = require('moment-timezone');
 const {exec} = require('child_process');
@@ -148,7 +150,7 @@ myMonths = ["Jan","Feb","March","April","May","Jun","Jul","Aug","Sept","Octob","
 			return `${thisDay}, ${day} - ${myMonths[bulan]} - ${year}`
 }
 //---X623-Whatsapp-Bot------------------------------------------------------------------------------------------------------------------------//
-//--Whatsapp start connect ...
+/*--Whatsapp start connect ...
 async function starts() {
 	const Lxa = new WAConnection()
 	Lxa.logger.level = 'warn'
@@ -170,6 +172,33 @@ Lxa.on('open', () => {
     })
 	await Lxa.connect({timeoutMs: 30*1000})
         fs.writeFileSync('./session/Lexa.json', JSON.stringify(Lxa.base64EncodedAuthInfo(), null, '\t'))
+*/
+//------------
+
+async function starts() {
+    const Lxa = makeWASocket({
+        // can provide additional config here
+        printQRInTerminal: true
+    })
+    Lxa.on('connection.update', (update) => {
+        const { connection, lastDisconnect } = update
+        if(connection === 'close') {
+            console.log('connection closed due to ', lastDisconnect.error, ', reconnecting ', shouldReconnect)
+            // reconnect if not logged out
+            if(shouldReconnect) {
+                connectToWhatsApp()
+            }
+        } else if(connection === 'open') {
+			const time_connect = moment.tz('Asia/Jakarta').format('HH:mm:ss')
+			console.log(color('[DOGGO]','aqua'), color(`Done Connecting`, "aqua"))
+			start('')
+        }
+    })
+}
+
+
+
+//----------------------------------
 
 Lxa.on('group-participants-update', async (anu) => {
 		if (!_welcom.includes(anu.jid)) return
