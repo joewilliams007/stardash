@@ -1,3 +1,5 @@
+
+
 // Bot
 const botowner = "4917626388837@s.whatsapp.net"
 
@@ -9,12 +11,6 @@ const starip = "80.135.236.238" // 192.168.2.112 https://www.showmyipaddress.com
 
 //---X623-Whatsapp-Bot--------------------------------------------------------------------------------------------------------------------------//
 //-- Whatsapp Connecting
-
-const makeWASocket = require('@adiwajshing/baileys');
-const DisconnectReason = require('@adiwajshing/baileys');  
-
-
-
 const {
     WAConnection,
     MessageType,
@@ -47,8 +43,6 @@ const {fetchJson, fetchText} = require('./fs/fetcher');
 const {recognize} = require('./fs/ocr');
 const {_wait, getBuffer, h2k, generateMessageID, getGroupAdmins, getRandom, start, success, close } = require('./fs/functions');
 //-- Modules 
-
-
 const fs = require('fs');
 const moment = require('moment-timezone');
 const {exec} = require('child_process');
@@ -155,34 +149,27 @@ myMonths = ["Jan","Feb","March","April","May","Jun","Jul","Aug","Sept","Octob","
 }
 //---X623-Whatsapp-Bot------------------------------------------------------------------------------------------------------------------------//
 //--Whatsapp start connect ...
-async function starts () {
-    const sock = makeWASocket({
-        // can provide additional config here
-        printQRInTerminal: true
+async function starts() {
+	const Lxa = new WAConnection()
+	Lxa.logger.level = 'warn'
+//	Lxa.version = [2, 2140, 6];
+	Lxa.on('qr', () => {
+		console.log(color('[DOGGO]','aqua'), color("Scan QR code to connect...", "yellow"))
+	})
+	fs.existsSync('./session/Lexa.json') && Lxa.loadAuthInfo('./session/Lexa.json')
+Lxa.on('connecting', () => {
+	
+        const time_connecting = moment.tz('Asia/Jakarta').format('HH:mm:ss')
+        console.log(color('[DOGGO]','aqua'), color("Connecting bro...", "yellow"))
+		
     })
-    sock.ev.on('connection.update', (update) => {
-        const { connection, lastDisconnect } = update
-        if(connection === 'close') {
-            const shouldReconnect = (lastDisconnect.error)?.output?.statusCode !== DisconnectReason.loggedOut
-            console.log('connection closed due to ', lastDisconnect.error, ', reconnecting ', shouldReconnect)
-            // reconnect if not logged out
-            if(shouldReconnect) {
-                connectToWhatsApp()
-            }
-        } else if(connection === 'open') {
-            console.log('opened connection')
-        }
+Lxa.on('open', () => {
+        const time_connect = moment.tz('Asia/Jakarta').format('HH:mm:ss')
+        console.log(color('[DOGGO]','aqua'), color(`Done Connecting`, "aqua"))
+        start('')
     })
-    sock.ev.on('messages.upsert', m => {
-        console.log(JSON.stringify(m, undefined, 2))
-
-        console.log('replying to', m.messages[0].key.remoteJid)
-
-    })
-
-
-
-//----------------------------------
+	await Lxa.connect({timeoutMs: 30*1000})
+        fs.writeFileSync('./session/Lexa.json', JSON.stringify(Lxa.base64EncodedAuthInfo(), null, '\t'))
 
 Lxa.on('group-participants-update', async (anu) => {
 		if (!_welcom.includes(anu.jid)) return
