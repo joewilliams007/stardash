@@ -10,11 +10,9 @@ const starip = "80.135.236.238" // 192.168.2.112 https://www.showmyipaddress.com
 //---X623-Whatsapp-Bot--------------------------------------------------------------------------------------------------------------------------//
 //-- Whatsapp Connecting
 
-const { makeWASocket
-	, DisconnectReason    
-} = require('@adiwajshing/baileys');
+const makeWASocket = require('@adiwajshing/baileys');
+const DisconnectReason = require('@adiwajshing/baileys');  
 
-const { Boom } = require('@hapi/boom')
 
 
 const {
