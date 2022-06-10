@@ -153,6 +153,7 @@ async function starts() {
 	const Lxa = new WAConnection()
 	Lxa.logger.level = 'warn'
 	Lxa.version = [2, 2119, 6];
+
 	Lxa.on('qr', () => {
 		console.log(color('[DOGGO]','aqua'), color("Scan QR code to connect...", "yellow"))
 	})
