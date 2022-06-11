@@ -1308,7 +1308,7 @@ replyimg(beens, text, capt, owner)
 
 case 'tools':
     if (!isVerify) return reply(userB(prefix))
-	owner = await fs.readFileSync('./images/menu.jpg').toString('base64')
+	owner = await fs.readFileSync('./s/menu.jpg').toString('base64')
 	capt = `𝑆𝑡𝑎𝑟𝐷𝑎𝑠ℎ\n${design} ${username}`
 	var beens = {
 text: `𝑇𝑜𝑜𝑙𝑠 
