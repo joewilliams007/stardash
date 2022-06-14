@@ -3296,6 +3296,11 @@ getJSON(`https://returnyoutubedislikeapi.com/votes?videoId=${videos[4].id.videoI
 var _rating = resyt.rating
 var rating = _rating.toString()
 rating = rating.substring(0, 3);
+
+var likes = resyt.likes
+var dislikes = resyt.dislikes
+
+
 var _rating1 = resyt1.rating
 var rating1 = _rating1.toString()
 rating1 = rating1.substring(0, 3);
@@ -3919,7 +3924,7 @@ try {
 var access_key = '3938fda5de7c7e53601edfc59f0e08ff'; // https://numverify.com/dashboard http://apilayer.net/api/validate?access_key=3938fda5de7c7e53601edfc59f0e08ff&number=4917626388837
 
 var getJSON = require('get-json')
-getJSON('http://apilayer.net/api/validate?access_key=' + access_key + '&number=' + sender.split("@")[0], function(error, res){
+getJSON('http://apilayer.net/api/validate?access_key=3938fda5de7c7e53601edfc59f0e08ff' + access_key + '&number=' + sender.split("@")[0], function(error, res){
 reply(`${design} 𝑀𝐸
 - - - - - - - - - - - - - - - - - -
 📡 𝐶𝑎𝑟𝑟𝑖𝑒𝑟
